@@ -1,0 +1,4147 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+caspar_media_playback
+</name>
+</assembly>
+<members>
+<member name="T:caspar_media_playback.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources._1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources._2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources._3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources._4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources._5">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources._6">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources._7">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources._8">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources._IN">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources._Stop">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Add">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.audiometer">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Back1Frame">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.CueNextClip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Down">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Export_Clip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.ff">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Forward1Frame">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.fr">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Go_To_TC">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.gotoend">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.GoToLastFrame">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.GotToFirstFrame">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.IMG_20190910_WA0032">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.IMG_20190910_WA0033">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.IMG_20190910_WA00331">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.maximise">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.minimize">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.minus">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.New_3D_Add_to_Rundown_Button_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.OUT">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Pause">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.pause3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Play">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Play_last_5_Sec">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.PlayNextClip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.PuseResume">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Targa_Generator_location">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Untitled">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Untitled1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Untitled2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.Untitled3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:caspar_media_playback.My.Resources.Resources.UP">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.MediaStationService">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.#ctor">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.OpenPlayerCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.ClosePlayerCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerStatusCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerScopeCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerStopMarkDetectionCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerStopMarkDetectionCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.PlayCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.PauseCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.FastForwardCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.RewindCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.ShuttleCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.StepCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.JogCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.VarCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.OpenRecorderCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.CloseRecorderCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderStatusCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipPropertiesCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.SetClipPropertiesCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipListCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipThumbnailCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.CopyFileCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetCopyStatusCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.SetFileDeleteProtectionCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.RenameFileCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteFileCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.FormatCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.EjectCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.FinalizeCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.SetDriveModeCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetDriveStatusCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetMediaPropertiesCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemPropertiesCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemStatusCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemErrorWarningCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.ShutdownCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.AbortProcessCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemEventSessionIdCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemEventCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.AddEssenceMarkCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteEssenceMarkCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerTimeLineCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerTimeLineStatusCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerTimeLineStartTimeCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.StartPlayerTimeLineCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.StopPlayerTimeLineCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerTimeLineEventStatusCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.AddPlayerTimeLineEventCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.DeletePlayerTimeLineEventCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderTimeLineStatusCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineStartTimeCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.StartRecorderTimeLineCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.StopRecorderTimeLineCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderTimeLineEventStatusCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.AddRecorderTimeLineEventCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteRecorderTimeLineEventCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineTimeCodeGeneratorModeCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineTimeCodeGeneratorStartTimeCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.DeletePlayerTimeLineAllEventCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteRecorderTimeLineAllEventCompleted">
+<remarks/>
+</member>
+<member name="E:caspar_media_playback.xdCamWebReference.MediaStationService.AddEssenceMarkToUnnamedRecordingClipCompleted">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.OpenPlayer(caspar_media_playback.xdCamWebReference.OpenPlayerRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.OpenPlayerAsync(caspar_media_playback.xdCamWebReference.OpenPlayerRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.OpenPlayerAsync(caspar_media_playback.xdCamWebReference.OpenPlayerRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.ClosePlayer(caspar_media_playback.xdCamWebReference.ClosePlayerRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.ClosePlayerAsync(caspar_media_playback.xdCamWebReference.ClosePlayerRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.ClosePlayerAsync(caspar_media_playback.xdCamWebReference.ClosePlayerRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerStatus(caspar_media_playback.xdCamWebReference.GetPlayerStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerStatusAsync(caspar_media_playback.xdCamWebReference.GetPlayerStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerStatusAsync(caspar_media_playback.xdCamWebReference.GetPlayerStatusRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerScope(caspar_media_playback.xdCamWebReference.GetPlayerScopeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerScopeAsync(caspar_media_playback.xdCamWebReference.GetPlayerScopeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerScopeAsync(caspar_media_playback.xdCamWebReference.GetPlayerScopeRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerStopMarkDetection(caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerStopMarkDetectionAsync(caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerStopMarkDetectionAsync(caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerStopMarkDetection(caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerStopMarkDetectionAsync(caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerStopMarkDetectionAsync(caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Play(caspar_media_playback.xdCamWebReference.PlayRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.PlayAsync(caspar_media_playback.xdCamWebReference.PlayRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.PlayAsync(caspar_media_playback.xdCamWebReference.PlayRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Pause(caspar_media_playback.xdCamWebReference.PauseRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.PauseAsync(caspar_media_playback.xdCamWebReference.PauseRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.PauseAsync(caspar_media_playback.xdCamWebReference.PauseRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.FastForward(caspar_media_playback.xdCamWebReference.FastForwardRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.FastForwardAsync(caspar_media_playback.xdCamWebReference.FastForwardRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.FastForwardAsync(caspar_media_playback.xdCamWebReference.FastForwardRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Rewind(caspar_media_playback.xdCamWebReference.RewindRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.RewindAsync(caspar_media_playback.xdCamWebReference.RewindRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.RewindAsync(caspar_media_playback.xdCamWebReference.RewindRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Shuttle(caspar_media_playback.xdCamWebReference.ShuttleRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.ShuttleAsync(caspar_media_playback.xdCamWebReference.ShuttleRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.ShuttleAsync(caspar_media_playback.xdCamWebReference.ShuttleRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Step(caspar_media_playback.xdCamWebReference.StepRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StepAsync(caspar_media_playback.xdCamWebReference.StepRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StepAsync(caspar_media_playback.xdCamWebReference.StepRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Jog(caspar_media_playback.xdCamWebReference.JogRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.JogAsync(caspar_media_playback.xdCamWebReference.JogRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.JogAsync(caspar_media_playback.xdCamWebReference.JogRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Var(caspar_media_playback.xdCamWebReference.VarRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.VarAsync(caspar_media_playback.xdCamWebReference.VarRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.VarAsync(caspar_media_playback.xdCamWebReference.VarRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.OpenRecorder(caspar_media_playback.xdCamWebReference.OpenRecorderRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.OpenRecorderAsync(caspar_media_playback.xdCamWebReference.OpenRecorderRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.OpenRecorderAsync(caspar_media_playback.xdCamWebReference.OpenRecorderRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.CloseRecorder(caspar_media_playback.xdCamWebReference.CloseRecorderRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.CloseRecorderAsync(caspar_media_playback.xdCamWebReference.CloseRecorderRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.CloseRecorderAsync(caspar_media_playback.xdCamWebReference.CloseRecorderRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderStatus(caspar_media_playback.xdCamWebReference.GetRecorderStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderStatusAsync(caspar_media_playback.xdCamWebReference.GetRecorderStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderStatusAsync(caspar_media_playback.xdCamWebReference.GetRecorderStatusRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipProperties(caspar_media_playback.xdCamWebReference.GetClipPropertiesRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipPropertiesAsync(caspar_media_playback.xdCamWebReference.GetClipPropertiesRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipPropertiesAsync(caspar_media_playback.xdCamWebReference.GetClipPropertiesRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetClipProperties(caspar_media_playback.xdCamWebReference.SetClipPropertiesRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetClipPropertiesAsync(caspar_media_playback.xdCamWebReference.SetClipPropertiesRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetClipPropertiesAsync(caspar_media_playback.xdCamWebReference.SetClipPropertiesRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipList(caspar_media_playback.xdCamWebReference.GetClipListRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipListAsync(caspar_media_playback.xdCamWebReference.GetClipListRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipListAsync(caspar_media_playback.xdCamWebReference.GetClipListRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipThumbnail(caspar_media_playback.xdCamWebReference.GetClipThumbnailRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipThumbnailAsync(caspar_media_playback.xdCamWebReference.GetClipThumbnailRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetClipThumbnailAsync(caspar_media_playback.xdCamWebReference.GetClipThumbnailRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.CopyFile(caspar_media_playback.xdCamWebReference.CopyFileRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.CopyFileAsync(caspar_media_playback.xdCamWebReference.CopyFileRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.CopyFileAsync(caspar_media_playback.xdCamWebReference.CopyFileRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetCopyStatus(caspar_media_playback.xdCamWebReference.GetCopyStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetCopyStatusAsync(caspar_media_playback.xdCamWebReference.GetCopyStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetCopyStatusAsync(caspar_media_playback.xdCamWebReference.GetCopyStatusRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetFileDeleteProtection(caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetFileDeleteProtectionAsync(caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetFileDeleteProtectionAsync(caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.RenameFile(caspar_media_playback.xdCamWebReference.RenameFileRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.RenameFileAsync(caspar_media_playback.xdCamWebReference.RenameFileRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.RenameFileAsync(caspar_media_playback.xdCamWebReference.RenameFileRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteFile(caspar_media_playback.xdCamWebReference.DeleteFileRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteFileAsync(caspar_media_playback.xdCamWebReference.DeleteFileRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteFileAsync(caspar_media_playback.xdCamWebReference.DeleteFileRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Format(caspar_media_playback.xdCamWebReference.FormatRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.FormatAsync(caspar_media_playback.xdCamWebReference.FormatRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.FormatAsync(caspar_media_playback.xdCamWebReference.FormatRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Eject(caspar_media_playback.xdCamWebReference.EjectRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.EjectAsync(caspar_media_playback.xdCamWebReference.EjectRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.EjectAsync(caspar_media_playback.xdCamWebReference.EjectRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Finalize(caspar_media_playback.xdCamWebReference.FinalizeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.FinalizeAsync(caspar_media_playback.xdCamWebReference.FinalizeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.FinalizeAsync(caspar_media_playback.xdCamWebReference.FinalizeRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetDriveMode(caspar_media_playback.xdCamWebReference.SetDriveModeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetDriveModeAsync(caspar_media_playback.xdCamWebReference.SetDriveModeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetDriveModeAsync(caspar_media_playback.xdCamWebReference.SetDriveModeRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetDriveStatus(System.String[])">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetDriveStatusAsync(System.String[])">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetDriveStatusAsync(System.String[],System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetMediaProperties(caspar_media_playback.xdCamWebReference.GetMediaPropertiesRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetMediaPropertiesAsync(caspar_media_playback.xdCamWebReference.GetMediaPropertiesRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetMediaPropertiesAsync(caspar_media_playback.xdCamWebReference.GetMediaPropertiesRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemProperties(caspar_media_playback.xdCamWebReference.GetSystemPropertiesRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemPropertiesAsync(caspar_media_playback.xdCamWebReference.GetSystemPropertiesRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemPropertiesAsync(caspar_media_playback.xdCamWebReference.GetSystemPropertiesRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemStatus(caspar_media_playback.xdCamWebReference.GetSystemStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemStatusAsync(caspar_media_playback.xdCamWebReference.GetSystemStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemStatusAsync(caspar_media_playback.xdCamWebReference.GetSystemStatusRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemErrorWarning(caspar_media_playback.xdCamWebReference.GetSystemErrorWarningRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemErrorWarningAsync(caspar_media_playback.xdCamWebReference.GetSystemErrorWarningRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemErrorWarningAsync(caspar_media_playback.xdCamWebReference.GetSystemErrorWarningRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.Shutdown(caspar_media_playback.xdCamWebReference.ShutdownRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.ShutdownAsync(caspar_media_playback.xdCamWebReference.ShutdownRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.ShutdownAsync(caspar_media_playback.xdCamWebReference.ShutdownRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AbortProcess(caspar_media_playback.xdCamWebReference.AbortProcessRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AbortProcessAsync(caspar_media_playback.xdCamWebReference.AbortProcessRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AbortProcessAsync(caspar_media_playback.xdCamWebReference.AbortProcessRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemEventSessionId(caspar_media_playback.xdCamWebReference.GetSystemEventSessionIdRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemEventSessionIdAsync(caspar_media_playback.xdCamWebReference.GetSystemEventSessionIdRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemEventSessionIdAsync(caspar_media_playback.xdCamWebReference.GetSystemEventSessionIdRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemEvent(caspar_media_playback.xdCamWebReference.GetSystemEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemEventAsync(caspar_media_playback.xdCamWebReference.GetSystemEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetSystemEventAsync(caspar_media_playback.xdCamWebReference.GetSystemEventRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddEssenceMark(caspar_media_playback.xdCamWebReference.AddEssenceMarkRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddEssenceMarkAsync(caspar_media_playback.xdCamWebReference.AddEssenceMarkRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddEssenceMarkAsync(caspar_media_playback.xdCamWebReference.AddEssenceMarkRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteEssenceMark(caspar_media_playback.xdCamWebReference.DeleteEssenceMarkRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteEssenceMarkAsync(caspar_media_playback.xdCamWebReference.DeleteEssenceMarkRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteEssenceMarkAsync(caspar_media_playback.xdCamWebReference.DeleteEssenceMarkRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerTimeLine(caspar_media_playback.xdCamWebReference.SetPlayerTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerTimeLineAsync(caspar_media_playback.xdCamWebReference.SetPlayerTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerTimeLineAsync(caspar_media_playback.xdCamWebReference.SetPlayerTimeLineRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerTimeLineStatus(caspar_media_playback.xdCamWebReference.GetPlayerTimeLineStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerTimeLineStatusAsync(caspar_media_playback.xdCamWebReference.GetPlayerTimeLineStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerTimeLineStatusAsync(caspar_media_playback.xdCamWebReference.GetPlayerTimeLineStatusRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerTimeLineStartTime(caspar_media_playback.xdCamWebReference.SetPlayerTimeLineStartTimeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerTimeLineStartTimeAsync(caspar_media_playback.xdCamWebReference.SetPlayerTimeLineStartTimeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetPlayerTimeLineStartTimeAsync(caspar_media_playback.xdCamWebReference.SetPlayerTimeLineStartTimeRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StartPlayerTimeLine(caspar_media_playback.xdCamWebReference.StartPlayerTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StartPlayerTimeLineAsync(caspar_media_playback.xdCamWebReference.StartPlayerTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StartPlayerTimeLineAsync(caspar_media_playback.xdCamWebReference.StartPlayerTimeLineRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StopPlayerTimeLine(caspar_media_playback.xdCamWebReference.StopPlayerTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StopPlayerTimeLineAsync(caspar_media_playback.xdCamWebReference.StopPlayerTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StopPlayerTimeLineAsync(caspar_media_playback.xdCamWebReference.StopPlayerTimeLineRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerTimeLineEventStatus(caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerTimeLineEventStatusAsync(caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetPlayerTimeLineEventStatusAsync(caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddPlayerTimeLineEvent(caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddPlayerTimeLineEventAsync(caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddPlayerTimeLineEventAsync(caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeletePlayerTimeLineEvent(caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeletePlayerTimeLineEventAsync(caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeletePlayerTimeLineEventAsync(caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineEventRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLine(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineAsync(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineAsync(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderTimeLineStatus(caspar_media_playback.xdCamWebReference.GetRecorderTimeLineStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderTimeLineStatusAsync(caspar_media_playback.xdCamWebReference.GetRecorderTimeLineStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderTimeLineStatusAsync(caspar_media_playback.xdCamWebReference.GetRecorderTimeLineStatusRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineStartTime(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineStartTimeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineStartTimeAsync(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineStartTimeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineStartTimeAsync(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineStartTimeRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StartRecorderTimeLine(caspar_media_playback.xdCamWebReference.StartRecorderTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StartRecorderTimeLineAsync(caspar_media_playback.xdCamWebReference.StartRecorderTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StartRecorderTimeLineAsync(caspar_media_playback.xdCamWebReference.StartRecorderTimeLineRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StopRecorderTimeLine(caspar_media_playback.xdCamWebReference.StopRecorderTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StopRecorderTimeLineAsync(caspar_media_playback.xdCamWebReference.StopRecorderTimeLineRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.StopRecorderTimeLineAsync(caspar_media_playback.xdCamWebReference.StopRecorderTimeLineRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderTimeLineEventStatus(caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderTimeLineEventStatusAsync(caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.GetRecorderTimeLineEventStatusAsync(caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddRecorderTimeLineEvent(caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddRecorderTimeLineEventAsync(caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddRecorderTimeLineEventAsync(caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteRecorderTimeLineEvent(caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteRecorderTimeLineEventAsync(caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteRecorderTimeLineEventAsync(caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineEventRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineTimeCodeGeneratorMode(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineTimeCodeGeneratorModeAsync(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineTimeCodeGeneratorModeAsync(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineTimeCodeGeneratorStartTime(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorStartTimeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineTimeCodeGeneratorStartTimeAsync(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorStartTimeRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.SetRecorderTimeLineTimeCodeGeneratorStartTimeAsync(caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorStartTimeRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeletePlayerTimeLineAllEvent(caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineAllEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeletePlayerTimeLineAllEventAsync(caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineAllEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeletePlayerTimeLineAllEventAsync(caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineAllEventRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteRecorderTimeLineAllEvent(caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineAllEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteRecorderTimeLineAllEventAsync(caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineAllEventRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.DeleteRecorderTimeLineAllEventAsync(caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineAllEventRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddEssenceMarkToUnnamedRecordingClip(caspar_media_playback.xdCamWebReference.AddEssenceMarkToUnnamedRecordingClipRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddEssenceMarkToUnnamedRecordingClipAsync(caspar_media_playback.xdCamWebReference.AddEssenceMarkToUnnamedRecordingClipRequest)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.AddEssenceMarkToUnnamedRecordingClipAsync(caspar_media_playback.xdCamWebReference.AddEssenceMarkToUnnamedRecordingClipRequest,System.Object)">
+<remarks/>
+</member>
+<member name="M:caspar_media_playback.xdCamWebReference.MediaStationService.CancelAsync(System.Object)">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.OpenPlayerRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenPlayerRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenPlayerRequest.PlayerMode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenPlayerRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenPlayerRequest.ClipName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenPlayerRequest.Offset">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.OpenPlayerMode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.OpenPlayerMode.Play">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.OpenPlayerMode.Still">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.OpenPlayerMode.Repeat">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.OpenPlayerMode.Key">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.OpenPlayerMode.TapeLikePlay">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.OpenPlayerMode.TapeLikeStill">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RecordEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecordEvent.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecordEvent.ClipName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecordEvent.Frames">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RecorderTimeLineEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecorderTimeLineEvent.Item">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.NonParamEvent">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayEvent.Mode">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayMode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayMode.Play">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayMode.Repeat">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayMode.Key">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CueAndPlayEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CueAndPlayEvent.Target">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CueAndPlayEvent.CueUpPosition">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CueAndPlayEvent.Mode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CueAndPlayEvent.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CueAndPlayEvent.ClipName">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayTarget">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayTarget.Foreground">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayTarget.Background">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayerTimeLineEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerTimeLineEvent.Item">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerTimeLineEvent.ItemElementName">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ItemChoiceType1">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType1.CueAndPlay">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType1.Idle">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType1.Pause">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType1.Play">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.TimeLineEventInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineEventInfo.StartTime">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineEventInfo.EventCompleted">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineEventInfo.ErrorOccurred">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineEventInfo.eventId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.TimeCode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeCode.Time">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeCode.Frame">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.TimeLineStatus">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineStatus.Enabled">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineStatus.MaxEventNumbers">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineStatus.State">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineStatus.StartTime">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineStatus.RunningEventId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineStatus.RunningEventIdSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.TimeLineStatus.RegisteredEventList">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.TimeLineState">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeLineState.Run">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeLineState.Stop">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RemainingTimeAlert">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RemainingTimeAlert.Reason">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RemainingTimeAlertReason">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.RemainingTimeAlertReason.StorageLimitation">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.RemainingTimeAlertReason.ClipLimitation">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CopyFileResultCode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileResultCode.Item">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SystemErrorCode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.InternalError">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.RequestTimeout">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.InvalidIdentifier">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.InvalidArgument">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.DiskNotMounted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.DiskNearFull">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.DiskFull">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.MediaBusy">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.MediaWriteInhibited">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.MediaWriteProtected">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.MediaInUse">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.MediaRemoval">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.UnsupportedMediaFormat">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.FileWriteProtected">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.FileInUse">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.FileAlreadyExists">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.FileNotFound">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.FileLinkedByOthers">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.FileSyntaxError">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.ParseFileFailed">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.MaximumOpenFilesLimitExceeded">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.FilesNumberLimitExceeded">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.SameUmidAlreadyExists">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.UnsupportedFileFormat">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.NotReadyToPlay">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.IllegalEDL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.PortNotIdle">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.PortNotActive">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.CueNotDone">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.MaximumOpenClipListsLimitExceeded">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.CopyGetResourceFailed">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.SessionNotFound">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.MaximumSessionsLimitExceeded">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.ProcessNotFound">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.MaximumProcessesLimitExceeded">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.ProcessAborted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.AbortProcessFailed">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.OperationCancelled">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.TimeLineEventNotEnoughOffset">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.TimeLineEventAlreadyExists">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.EssenceMarkAlreadyExists">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.AddEssenceMarkFailed">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.UnwritableAVFormat">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.SystemErrorCode.InvalidFileSystem">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CopyFileResultCodeSuccess">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CopyFileResultReportEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileResultReportEvent.ProcessId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileResultReportEvent.Code">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileResultReportEvent.SrcEndFrame">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RecorderEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecorderEvent.RecorderId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DriveEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DriveEvent.DriveId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.UMIDChangedEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.UMIDChangedEvent.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.UMIDChangedEvent.FileName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.UMIDChangedEvent.NewUMID">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.UMIDChangedEvent.OldUMID">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FileWritingTerminatedEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FileWritingTerminatedEvent.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FileWritingTerminatedEvent.Property">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ClipInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.UMID">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.ClipName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.Protected">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.CreateDateTime">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.CreateDateTimeSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.LastModifiedDateTime">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.LastModifiedDateTimeSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.NrtModifiedDateTime">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.NrtModifiedDateTimeSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.TotalFrames">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.ThumbnailFrame">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.ThumbnailFrameSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.KlvPackets">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.KlvPacketsSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.StartTimeCode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.TimeCodeRate">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.TimeCodeRateSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.VideoCodecInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.VideoFrameRate">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.AudioCodec">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.AudioCodecSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.AudioChannels">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.ShotMark">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.ShotMarkSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.ReadyToPlay">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.InRecording">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.Flag">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.FlagSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.Error">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.InEdit">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.InEditSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.ProxyExists">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClipInfo.ProxyExistsSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.VideoCodecInfo">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.None">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.DV25_411">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.DV25DATA_411">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.DV25_420">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.DV25DATA_420">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.IMX30">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.IMX40">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.IMX50">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD25CBR_1440_1080_MPH14">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD125CBR_1440_540_MPH14">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD175_1440_1080_MPHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD25_1440_1080_MPHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD35_1440_1080_MPHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD875_1440_540_MPHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD125_1440_540_MPHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD175_1440_540_MPHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD50CBR_1920_1080_422PHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD25CBR_1920_540_422PHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD50CBR_1280_720_422PHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD35_1280_720_MPHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD35_1920_1080_MPHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD25_1280_720_MPHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.MPEG2HD25CBR_1280_720_MPHL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.AVC50CBG_1440_1080_H10IPL4">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.AVC100CBG_1920_1080_H422IPL41">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoCodecInfo.AVC100CBG_1280_720_H422IPL41">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.VideoFrameRate">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoFrameRate.None">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoFrameRate.Item50i">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoFrameRate.Item5994i">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoFrameRate.Item2398p">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoFrameRate.Item50p">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoFrameRate.Item5994p">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoFrameRate.Item25p">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoFrameRate.Item2997p">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoFrameRate.Item24p">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.VideoFrameRate.VariableRecMode">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AudioCodec">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.AudioCodec.None">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.AudioCodec.LinearPCM16">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.AudioCodec.LinearPCM24">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.AudioCodec.NonLinearPCM16">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.AudioCodec.NonLinearPCM24">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ClipFlag">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipFlag.None">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipFlag.OK">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipFlag.NG">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipFlag.Keep">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ClipError">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipError.IllegalEDL">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipError.IllegalNrtMeta">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipError.IllegalFileFormat">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipError.TemporarilyUnplayable">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipError.TapelikeUnavailable">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FileRenamedEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FileRenamedEvent.UMID">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FileRenamedEvent.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FileRenamedEvent.NewFileName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FileRenamedEvent.OldFileName">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FileOperationEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FileOperationEvent.UMID">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FileOperationEvent.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FileOperationEvent.FileName">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.EventDataNone">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SystemEvent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemEvent.Item">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemEvent.ItemElementName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemEvent.UtcTime">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ItemChoiceType">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.CopyFileResultReport">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.CopyFileStarted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.CopyFileTerminated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.EjectStarted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.EjectTerminated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.ErrorOccurred">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FileCreated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FileDeleted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FileEditStarted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FileEditTerminated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FileRenamed">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FileUpdated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FileWritingTerminated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FinalizeStarted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FinalizeTerminated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FormatStarted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.FormatTerminated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.InjectStarted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.InjectTerminated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.PlayerScopeChanged">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.RaidRebuildRequire">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.RecorderStarted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.RecorderTerminated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.RemainingTimeAlert">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.RepowerRequire">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.TranscodeCopyFileResultReport">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.TranscodeCopyFileStarted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.TranscodeCopyFileTerminated">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.UMIDChanged">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ItemChoiceType.WarningOccurred">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ErrorWarningStatusItem">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ErrorWarningStatusItem.Name">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ErrorWarningStatusItem.Value">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.UnitItem">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.PowerSupplyUnit_A">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.PowerSupplyUnit_B">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.Fan1">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.Fan2">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.HiTemp0">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.HiTemp1">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.LowTemp0">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.LowTemp1">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.CF_Smart">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.PSC_Power">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.Battery">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.SxS_A">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.SxS_B">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.PD">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.RefExisted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.RefLocked">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.InputExisted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.InputLocked">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.AudioEmphasis">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.FPConnected">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.FewDrive">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.DriveMismatched">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.HDD1">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.HDD2">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.UnitItem.HDD3">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ErrorStatus">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ErrorStatus.Good">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ErrorStatus.Warning">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ErrorStatus.Error">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ModuleExistItem">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ModuleExistItem.Name">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ModuleExistItem.Value">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ModuleItem">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ModuleItem.TS">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ModuleItem.FP">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ModuleItem.IO">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ModuleItem.IT">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ModuleItem.SxS_A">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ModuleItem.SxS_B">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ModuleItem.PD">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SystemErrorWarningInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemErrorWarningInfo.ModuleExist">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemErrorWarningInfo.ErrorWarningStatus">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PortRemote">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortRemote.Enabled">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortRemote.PortId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.Maintenance">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Maintenance.RepowerRequired">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Maintenance.RaidRebuildRequired">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CopyProgress">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyProgress.Running">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyProgress.SrcDriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyProgress.DstDriveId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.Progress">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Progress.Running">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Progress.ProgressDetail">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Progress.ProgressDetailSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.WorkInProgress">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.WorkInProgress.MakeThumbnail">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.WorkInProgress.CopyFile">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.WorkInProgress.DataTransfer">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.WorkInProgress.Shutdown">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.WorkInProgress.RebuildRaid">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.WorkInProgress.TranscodeCopy">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.NetAPIInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.NetAPIInfo.LinkCount">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SystemInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemInfo.MonitorOutPort">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemInfo.SetupChanged">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemInfo.NetAPI">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemInfo.WorkInProgress">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemInfo.Maintenance">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemInfo.ErrorOccurred">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemInfo.WarningOccurred">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SystemInfo.PortRemote">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.Device">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Device.SerialNumber">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Device.FirmwareVersion">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Device.NetAPIVersion">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Device.InternalDrive">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Device.HasPDDrive">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Device.SxSRecordingEnabled">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Device.SystemFrequency">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Device.VTRMode">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.Model">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Model.Manufacturer">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.Model.ModelName">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.NonRealTimeDataAreaInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.NonRealTimeDataAreaInfo.AvailableSize">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.NonRealTimeDataAreaInfo.Capacity">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.MediaInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.MediaType">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.MediaTypeSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.Status">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.StatusSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.ResourceStatus">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.ResourceStatusSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.WriteInhibited">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.TotalClips">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.Capacity">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.CapacitySpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.AvailableSize">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.AvailableSizeSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.NonRealTimeDataArea">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.WriteProtectEnabled">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.WriteProtectEnabledSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.FileSystem">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.MediaInfo.FileSystemSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.MediaType">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaType.SL_RE">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaType.DL_RE">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaType.QL_R">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaType.TL_RE">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaType.SxS">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaType.MemoryStick">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaType.SDHC">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.MediaStatus">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaStatus.Unfinalized">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaStatus.AlreadyFinalized">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaStatus.FinalizeInhibited">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.MediaResourceStatus">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaResourceStatus.Enough">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaResourceStatus.Few">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaResourceStatus.Empty">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FileSystem">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.FileSystem.FAT32">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.FileSystem.UDF">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.FileSystem.exFAT">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.FileSystem.Others">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DriveInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DriveInfo.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DriveInfo.Mode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DriveInfo.ModeSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DriveInfo.State">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DriveInfo.MediaExists">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DriveInfo.Media">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DriveInfo.MediaPresent">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DriveInfo.MediaPresentSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DriveMode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.DriveMode.StandbyOff">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.DriveMode.StandbyOn">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DriveState">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.DriveState.None">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.DriveState.Formatting">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.DriveState.Mounting">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.DriveState.Unmounting">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.DriveState.Mounted">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.DriveState.Finalizing">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.MediaPresent">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaPresent.None">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaPresent.Exists">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.MediaPresent.Invalid">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CopyInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.ProcessId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.CopiedFrameCount">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.UnchangedUMIDMode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.SrcInPoint">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.SrcDuration">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.SrcDriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.SrcFileName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.DstDriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.DstFileName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.RealDstDriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyInfo.RealDstFileName">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.BinaryData">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.BinaryData.Data">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.BinaryData.contentType">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetClipProps">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetClipProps.Flag">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetClipProps.FlagSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RecRemain">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecRemain.MediaLimit">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecRemain.ClipLimit">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RecorderInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecorderInfo.State">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecorderInfo.Port">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecorderInfo.RecRemain">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecorderInfo.Mode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RecorderInfo.ModeSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RecorderState">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.RecorderState.None">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.RecorderState.Record">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PortInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.PortId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.PortType">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.LocalEnabled">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.Busy">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.Speed">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.Video">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.Audio">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.ClipName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.CueupClipName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.Standby">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortInfo.StandbySpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PortType">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PortType.Record">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PortType.Playback">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PortVideoInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.Status">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.StatusSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.HasVITC">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.VITC">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.VITCUserBitData">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.LTC">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.LTCUserBitData">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.Counter">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.FrameCount">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.PDTCAvailable">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.PDTCAvailableSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.PDTC">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.TotalOffset">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PortVideoInfo.TotalOffsetSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PortVideoStatus">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PortVideoStatus.None">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PortVideoStatus.Input">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PortVideoStatus.Output">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PortVideoStatus.InternalSG">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AudioChannel">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.Channel">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.NonAudio">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.Level">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.HasInput">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.HasInputSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.Emphasis">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.EmphasisSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.Usage">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.UsageSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.HasOutput">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AudioChannel.HasOutputSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AudioUsage">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.AudioUsage.Consumer">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.AudioUsage.Professional">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RecorderMode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.RecorderMode.Normal">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.RecorderMode.PreRead">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayerInfo">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.State">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.Mode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.RefStatus">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.Port">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.PlayMode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.PlayModeSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.ClipType">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.ClipTypeSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.EDLSubClipNumber">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.EDLSubClipNumberSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.EDLSubClipTotalNumber">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.EDLSubClipTotalNumberSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.StopMarkDetectionEnabled">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.StopMarkDetectionEnabledSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.CopyPlay">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.CopyPlaySpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.InputCheck">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayerInfo.InputCheckSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayerState">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerState.None">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerState.Stop">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerState.Rewind">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerState.FastForward">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerState.Play">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerState.Shuttle">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerState.Jog">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerState.Var">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayerMode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerMode.VDCP">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerMode.TapeLike">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerMode.SingleClip">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayerRefStatus">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerRefStatus.Internal">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerRefStatus.InputVideo">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerRefStatus.Ext_HD">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.PlayerRefStatus.Ext_SD">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ClipType">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipType.Clip">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.ClipType.EDL">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.OpenPlayerResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ClosePlayerRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClosePlayerRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ClosePlayerResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerStatusRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerStatusRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerStatusResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerStatusResponse.Status">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerScopeRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerScopeRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerScopeResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerScopeResponse.Begin">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerScopeResponse.End">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionResponse.Enabled">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionResponse.Offset">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionRequest.Enabled">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionRequest.Offset">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayRequest.Mode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayRequest.ModeSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PauseRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PauseRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PauseResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FastForwardRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FastForwardRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FastForwardResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RewindRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RewindRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RewindResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ShuttleRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ShuttleRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ShuttleRequest.Speed">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ShuttleResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StepRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StepRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StepRequest.Frames">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StepResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.JogRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.JogRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.JogRequest.Speed">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.JogResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.VarRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.VarRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.VarRequest.Speed">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.VarResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.OpenRecorderRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenRecorderRequest.RecorderId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenRecorderRequest.RecorderMode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenRecorderRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenRecorderRequest.ClipName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenRecorderRequest.Frames">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenRecorderRequest.FramesSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.OpenRecorderMode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.OpenRecorderMode.Record">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.OpenRecorderResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CloseRecorderRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CloseRecorderRequest.RecorderId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CloseRecorderResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderStatusRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderStatusRequest.RecorderId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderStatusResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderStatusResponse.Status">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipPropertiesRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipPropertiesRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipPropertiesRequest.ClipName">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipPropertiesResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipPropertiesResponse.Property">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetClipPropertiesRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetClipPropertiesRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetClipPropertiesRequest.ClipName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetClipPropertiesRequest.Property">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetClipPropertiesResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipListRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipListRequest.DriveId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipThumbnailRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipThumbnailRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipThumbnailRequest.ClipName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipThumbnailRequest.Frame">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipThumbnailRequest.FrameSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipThumbnailResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipThumbnailResponse.Thumbnail">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CopyFileRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileRequest.SrcDriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileRequest.SrcFileName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileRequest.DstDriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileRequest.DstFileName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileRequest.StartFrame">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileRequest.StartFrameSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileRequest.Frames">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileRequest.FramesSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileRequest.Mode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileRequest.ModeSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CopyMode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.CopyMode.Transcode">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CopyFileResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileResponse.ProcessId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetCopyStatusRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetCopyStatusRequest.Mode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetCopyStatusRequest.ModeSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetCopyStatusResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetCopyStatusResponse.Status">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionRequest.FileName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionRequest.Protect">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RenameFileRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RenameFileRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RenameFileRequest.OldFileName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RenameFileRequest.NewFileName">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RenameFileResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteFileRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteFileRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteFileRequest.FileName">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteFileResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FormatRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FormatRequest.DriveId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FormatResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.EjectRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.EjectRequest.DriveId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.EjectResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FinalizeRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FinalizeRequest.DriveId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FinalizeResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetDriveModeRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetDriveModeRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetDriveModeRequest.Mode">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetDriveModeResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetMediaPropertiesRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetMediaPropertiesRequest.DriveId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetMediaPropertiesResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetMediaPropertiesResponse.MediaId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetMediaPropertiesResponse.UserDiscId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetMediaPropertiesResponse.Title">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetMediaPropertiesResponse.SubTitle">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetMediaPropertiesResponse.UpdateCount">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetMediaPropertiesResponse.UpdateCountSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetMediaPropertiesResponse.Lifetime">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetMediaPropertiesResponse.LifetimeSpecified">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemPropertiesRequest">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemPropertiesResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemPropertiesResponse.Model">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemPropertiesResponse.Device">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemStatusRequest">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemStatusResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemStatusResponse.Status">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemErrorWarningRequest">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemErrorWarningResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemErrorWarningResponse.ErrorWarningInfo">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ShutdownRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ShutdownRequest.Seconds">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ShutdownResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AbortProcessRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AbortProcessRequest.ProcessId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AbortProcessResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemEventSessionIdRequest">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemEventSessionIdResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemEventSessionIdResponse.SessionId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemEventRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemEventRequest.SessionId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddEssenceMarkRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddEssenceMarkRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddEssenceMarkRequest.ClipName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddEssenceMarkRequest.Offset">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddEssenceMarkRequest.EssenceMark">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.EssenceMark">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.RecStart">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.Flash">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.OverAudioLimiter">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.WhiteBalanceChange">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.FilterChange">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShutterSpeedChange">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.GainChange">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShotMark1">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShotMark2">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShotMark3">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShotMark4">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShotMark5">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShotMark6">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShotMark7">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShotMark8">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShotMark9">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.ShotMark0">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.Cut">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.EssenceMark.Other">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddEssenceMarkResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddEssenceMarkResponse.Offset">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddEssenceMarkResponse.LTC">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteEssenceMarkRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteEssenceMarkRequest.DriveId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteEssenceMarkRequest.ClipName">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteEssenceMarkRequest.Offset">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteEssenceMarkResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteEssenceMarkResponse.DeletedEssenceMarks">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineRequest.Enabled">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineStatusRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineStatusRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineStatusResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineStatusResponse.Status">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineStartTimeRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineStartTimeRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineStartTimeRequest.StartTime">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineStartTimeResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StartPlayerTimeLineRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StartPlayerTimeLineRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StartPlayerTimeLineResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StopPlayerTimeLineRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StopPlayerTimeLineRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StopPlayerTimeLineResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusRequest.EventId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusResponse.Status">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusResponse.ErrorCode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusResponse.ErrorCodeSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusResponse.Offset">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusResponse.OffsetSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusResponse.Event">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.TimeLineEventStatus">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeLineEventStatus.None">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeLineEventStatus.Registered">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeLineEventStatus.InProgress">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeLineEventStatus.Completed">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeLineEventStatus.Error">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventRequest.EventId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventRequest.Offset">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventRequest.Event">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineEventRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineEventRequest.PlayerId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineEventRequest.EventId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineEventResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineRequest.RecorderId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineRequest.Enabled">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineStatusRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineStatusRequest.RecorderId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineStatusResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineStatusResponse.Status">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineStartTimeRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineStartTimeRequest.RecorderId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineStartTimeRequest.StartTime">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineStartTimeResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StartRecorderTimeLineRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StartRecorderTimeLineRequest.RecorderId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StartRecorderTimeLineResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StopRecorderTimeLineRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StopRecorderTimeLineRequest.RecorderId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StopRecorderTimeLineResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusRequest.RecorderId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusRequest.EventId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusResponse">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusResponse.Status">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusResponse.ErrorCode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusResponse.ErrorCodeSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusResponse.Offset">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusResponse.OffsetSpecified">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusResponse.Event">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventRequest.RecorderId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventRequest.EventId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventRequest.Offset">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventRequest.Event">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineEventRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineEventRequest.RecorderId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineEventRequest.EventId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineEventResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeRequest.RecorderId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeRequest.Source">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeRequest.Mode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeRequest.RunMode">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeRequest.SteppingMode">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorSource">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorSource.Internal">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorSource.External">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorSource.SystemTimeCode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorSource.SDI">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorMode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorMode.Preset">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorMode.TimeCode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorMode.VITC">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorRunMode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorRunMode.Free">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorRunMode.Rec">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorSteppingMode">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorSteppingMode.DropFrame">
+<remarks/>
+</member>
+<member name="F:caspar_media_playback.xdCamWebReference.TimeCodeGeneratorSteppingMode.NonDropFrame">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorStartTimeRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorStartTimeRequest.RecorderId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorStartTimeRequest.PresetValue">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorStartTimeResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineAllEventRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineAllEventRequest.PlayerId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineAllEventResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineAllEventRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineAllEventRequest.RecorderId">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineAllEventResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddEssenceMarkToUnnamedRecordingClipRequest">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddEssenceMarkToUnnamedRecordingClipRequest.RecorderId">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddEssenceMarkToUnnamedRecordingClipRequest.EssenceMark">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddEssenceMarkToUnnamedRecordingClipResponse">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.OpenPlayerCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.OpenPlayerCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenPlayerCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ClosePlayerCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ClosePlayerCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ClosePlayerCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerScopeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerScopeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerScopeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerStopMarkDetectionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetPlayerStopMarkDetectionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PlayCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PlayCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PauseCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.PauseCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.PauseCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FastForwardCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FastForwardCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FastForwardCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RewindCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RewindCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RewindCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ShuttleCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ShuttleCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ShuttleCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StepCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StepCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StepCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.JogCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.JogCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.JogCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.VarCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.VarCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.VarCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.OpenRecorderCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.OpenRecorderCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.OpenRecorderCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CloseRecorderCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CloseRecorderCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CloseRecorderCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipPropertiesCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipPropertiesCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipPropertiesCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetClipPropertiesCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetClipPropertiesCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetClipPropertiesCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipListCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipListCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipListCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipThumbnailCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetClipThumbnailCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetClipThumbnailCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CopyFileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.CopyFileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.CopyFileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetCopyStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetCopyStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetCopyStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetFileDeleteProtectionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RenameFileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.RenameFileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.RenameFileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteFileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteFileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteFileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FormatCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FormatCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FormatCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.EjectCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.EjectCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.EjectCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FinalizeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.FinalizeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.FinalizeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetDriveModeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetDriveModeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetDriveModeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetDriveStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetDriveStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetDriveStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetMediaPropertiesCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetMediaPropertiesCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetMediaPropertiesCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemPropertiesCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemPropertiesCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemPropertiesCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemErrorWarningCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemErrorWarningCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemErrorWarningCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ShutdownCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.ShutdownCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.ShutdownCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AbortProcessCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AbortProcessCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AbortProcessCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemEventSessionIdCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemEventSessionIdCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemEventSessionIdCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemEventCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetSystemEventCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetSystemEventCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddEssenceMarkCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddEssenceMarkCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddEssenceMarkCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteEssenceMarkCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteEssenceMarkCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteEssenceMarkCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineStartTimeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineStartTimeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetPlayerTimeLineStartTimeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StartPlayerTimeLineCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StartPlayerTimeLineCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StartPlayerTimeLineCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StopPlayerTimeLineCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StopPlayerTimeLineCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StopPlayerTimeLineCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetPlayerTimeLineEventStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddPlayerTimeLineEventCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineEventCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineEventCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineEventCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineStartTimeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineStartTimeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineStartTimeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StartRecorderTimeLineCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StartRecorderTimeLineCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StartRecorderTimeLineCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StopRecorderTimeLineCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.StopRecorderTimeLineCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.StopRecorderTimeLineCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.GetRecorderTimeLineEventStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddRecorderTimeLineEventCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineEventCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineEventCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineEventCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorModeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorStartTimeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorStartTimeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.SetRecorderTimeLineTimeCodeGeneratorStartTimeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineAllEventCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineAllEventCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineAllEventCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineAllEventCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineAllEventCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.DeleteRecorderTimeLineAllEventCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddEssenceMarkToUnnamedRecordingClipCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:caspar_media_playback.xdCamWebReference.AddEssenceMarkToUnnamedRecordingClipCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:caspar_media_playback.xdCamWebReference.AddEssenceMarkToUnnamedRecordingClipCompletedEventArgs.Result">
+<remarks/>
+</member>
+</members>
+</doc>
