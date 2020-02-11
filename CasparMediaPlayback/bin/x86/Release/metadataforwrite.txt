@@ -1,0 +1,12 @@
+;FFMETADATA1
+publisher=Ninja Tune
+track=1
+album=Ninja Tuna
+lyrics-Added Using IDTE- ID3 Tag Editor-=No Lyrics Found
+album_artist=Mr. Scruff
+title=Kalimba
+genre=Electronic
+composer=A. Carthy and A. Kingslow
+artist=Bhandare jee
+date=2008
+encoder=Lavf57.2.100
