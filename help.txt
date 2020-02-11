@@ -1,0 +1,34 @@
+Install from CasparMediaPlaybackSetup\Release\setup.exe
+This will install a client to run from decsktop icon CMP.
+It will also install example template in c:/casparcg/ with a folder name cmp and media in c:/casparcg/_media 
+
+Requirement to run this client
+
+Windows 10 64bit
+DotNet 4.8 https://drive.google.com/open?id=1NjyVAxZN4ntp9UIFEtRj27_2FLC5ugcw
+Vlc 32bit version http://get.videolan.org/vlc/2.2.1/win32/vlc-2.2.1-win32.exe
+
+Lattest version of this client can be found at http://casparcg.com/forum/viewtopic.php?f=5&t=783#p4193
+
+Csparcg Server can be found at http://builds.casparcg.com/
+
+Casparcg Template Generator can be found at http://sourceforge.net/projects/casparcg/files/CasparCG_Template_Generator/
+Casparcg FT Generator can be found at http://sourceforge.net/projects/casparcg/files/CasparCG_Template_Generator/Old%20versions/
+
+Server 2.07 and 2.1beta2 requires nvidea graphics card having open gl 3.0 or heigher support.
+Server 2.3 requires nvidea graphics card having open gl 4.5 or heigher support.
+
+Drag or double click from cliplist and drop to playlist.
+Drag from windows explorer to playlist.
+
+Templates are installed in c:/casparcg/CMP
+So If template folder is other than c:/casparcg then copy this folder and paste in your template folder. your template folder might be at D:\CasparCG Server 2.0.3\server\templates.
+So after copying it should look like  D:\CasparCG Server 2.0\server\templates\CMP.
+
+This application has been developed with screen resolution 1920x1080. So for best experience this resolution is recommended.
+
+casparcg Server screen will not come in the space designated for it in the rihgt side of the client if server and client are on different computers.
+Write the name of the screen consumer to come in its place.
+
+For any help send me teamviwer id and password or call/watsup  +917738187885
+
