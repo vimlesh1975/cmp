@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtimagescrollidea.Text" xml:space="preserve">
+    <value>The idea is to use this for credit rolls. Create a long list in Photoshop; style it anyway you'd like, turn off the background layer and save the file as a PNG in media folder .
+ If you need to make any edits, just open the original PSD file and then save as a new PNG
+Adobe Flash also can export a png file. File export - export image -- type-- png  include --full document size-- save in media folder.
+If Screen resolution is 720x576 then  for horizontal scroll image must be of height =576 and width&gt;720. And for vertical scroll width=720 and height&gt;576</value>
+  </data>
+  <data name="txtimagescrollwiki.Text" xml:space="preserve">
+    <value>Wiki
+Image Scroll Can be used with the LOADBG, LOAD and PLAY commands.
+ MY_FILE SPEED [speed:int] BLUR [blur:int] PREMULTIPLY PROGRESSIVE
+The Image Scroll displays bitmap images with and without alpha channel in the same manner as the Image Producer but also scrolls the image if it is larger than the consumer resolution. This feature was released in CasparCG Server 2.0.3.
+AMCP Parameters
+SPEED
+SPEED [speed:int]
+Specifies the speed in pixels per frame/field, negative numbering will reverse the scroll direction.
+Example: If the Caspar consumer, is set to an output format of 1920 x 1080 and we have an image with a resolution of 1920 x 4000 in our media folder called test_scroll, the image can be made to scroll vertically from bottom to top on channel 1 layer 2 at 5 pixels per frame speed by entering:
+PLAY 1-2 test_scroll SPEED 5
+If we wish to scroll the image from top to bottom, we can do this by putting a negative speed entry in, the command below does exactly the same as the one above but will scroll the image down the screen instead of up at 5 pixels per frame speed.
+PLAY 1-2 test_scroll SPEED -5
+BLUR
+BLUR [blur:int]
+Specifies how much motion blur should be applied to the image. Make sure that you give CasparCG Server enough time to process the image; we recommend you use this with LOADBG.
+Example:
+PLAY 1-2 test_scroll SPEED 5 BLUR 50
+PREMULTIPLY
+PREMULTIPLY
+Premultiplies images with straight alpha channel against black. Example:
+PLAY 1-2 test_scroll PREMULTIPLY
+PROGRESSIVE
+PROGRESSIVE
+When using an interlaced video format, Caspar will use field rate motion based on the speed value, if progressive frame based motion is desirable then Caspar's default behaviour can be adjusted by adding this argument onto the command.
+Example:
+PLAY 1-2 test_scroll SPEED 5 PROGRESSIVE
+Recommendations for smooth scrolling
+    For interlaced video formats always use an even speed value (2, 4, 8, 10 etc). The reason for this is that otherwise the image will loose half of its vertical resolution while scrolling. This is only important when scrolling vertically though (credit rolls for example.)
+    For interlaced video scrolling vertically, avoid thin horisontal and sharp details, because it will flicker during scrolling.
+    Apply a slight motion blur in the direction where the image is supposed to be scrolled, this will reduce the flickering effect but loose some detail. This can be done by CasparCG Server on loading the image via the BLUR parameter but it will add to the load time (filtering speed is related to the number of pixels to blur.) Another way of doing it is to apply a directional blur into the image itself, for example the "Motion Blur" filter in Photoshop.
+    Images are sometimes stored with straight alpha by image editors. If so the PREMULTIPLY parameter must be given in order for CasparCG Server to perform as expected when rendering.
+    For progressive video formats the speed value can have uneven values or even values without a problem with vertical resolution.
+    Don't use decimal speed values unless 1 pixel per frame/field is too fast, because the brightness of details in the image might appear to change when the image is placed with subpixel accuracy between two pixels. 
+Examples of scrolling commands
+If you are using the video format 1080i5000 and have created a bitmap image with the exact width of 1920 pixels (and a height more than 1080 pixels) called cred_1080.tga you can write:
+PLAY 1 cred_1080 SPEED 6
+...or if the TGA image is not stored with premultiplied alpha:
+PLAY 1 cred_1080 SPEED 6 PREMULTIPLY
+If you get too much interline jitter during scrolling of sharp details you can add a BLUR value of, for example, 4 pixels:
+PLAY 1 cred_1080 SPEED 6 PREMULTIPLY BLUR 4
+If you want a film-like, choppy motion, but keep the same total scrolling duration (since the movement now occurs onlyfpstimes per second instead of 50 times per second) the speed is doubled to appear to scroll in the same speed:
+PLAY 1 cred_1080 SPEED 12 PREMULTIPLY BLUR 4 PROGRESSIVE
+If the performance overhead of the motion blur is to high to be able to start the credits on time, consider doing a LOADBG in good time before and then just PLAY when the time comes:
+LOADBG 1 cred_1080 SPEED 12 PREMULTIPLY BLUR 4 PROGRESSIVE
+PLAY 1
+For horizontal crawler/ticker, the same techniques applies, but the image file needs to be exactly 1080 pixels high instead of 1920 pixels wide.</value>
+  </data>
+</root>
