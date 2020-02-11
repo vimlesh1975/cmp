@@ -1,0 +1,1716 @@
+02.07.12
+Made this client with only a datagrid having playlist.
+
+23.07.12
+Added file open, save and schedule facility
+
+18.09.12
+It supports sub folder, space in file name, embedded casparcg window, play, pause, resume, next, add clip, insert clip, delete clip, playlist open, save and schedule at future time.
+
+20.09.12
+Clip Start_time and clip move up, down, copy, paste , cue has been implemented.
+
+22.09.12
+Start time now shows only time. Remaining time in hours, minutes and seconds has been done.
+
+
+23.09.12
+Clip Window and drag drop has been addded.
+
+27.09.12
+1. Clip search has been added.
+2. Drog from cliplist and drop to any cell
+3. Clip colors.
+4. Recorder has been added.
+
+29.09.12
+1. Space in recording filename supported.
+2. Loop After playlist ends.
+3.Graphics template window. Select and play graphics.
+4. Horizontal Scroll, vertical scroll, Scroll Speed, font size, font name, font color, Strip color.
+
+30.09.12
+
+1. Clip momentarily freezes before next clip. Now OK.
+2.Template search was not working. Now OK.
+3. Separate font for every scroll and template done.
+4. Channel no added for selection.
+5. Embedded audio done for adding decklink consumer at run time. (remove input button)
+6. Layer no selection for templates. At a time any no of templates can be played.
+7. Out casparcg window button added.
+
+08-10-12
+1.Seeking a clip is done.
+2.Playlist enable disable has been added in playlist menu. Adding clips while playlist running can be done.
+3.While selecting channel 1 and getting clip duration. load 1-1 was there so freez in channel 1. Now corrected.
+4.Template next button was renamed to Next Step
+5.Scroll text changes its fonts when changing text. Now ok.
+6.Scroll text hide after clock.
+7.Vertical roll was too left and too right, Now ok.
+8.Clip mix 12 was added.
+
+14-10-12
+
+1.Seeking was not working properly.Now OK. Time will also be shown. Audio also will be scratched.(Now play command has been used instead of load.)
+2.Stop button only stops video. Stop all button is added as separate button.
+3.Closing the form will not stop anything on line.
+4.Dropping a clip in playlist will show the duration of the clip.
+5.Getting clip duration will not show any freeze frame. Because it is played in layer 0 and with opacity 0.
+6.After every start of new clip in playlist, Start time will adjust. So if new clip is inserted, Start time will be updated.
+7.Start playlist will also get all clip duration.
+
+27-10-12
+1. Audio montitoring added.
+
+29-10-12
+1. Audio monitoring changed because earlier was not working properly.
+
+30-10-12
+1. Seeking was done with load command. Because play command was not looking good.
+
+02-11-12
+Sub Clip making and playing done.
+
+
+03.11.12
+Rearangement of objects changes was done.
+current frame number showing
+
+09.11.12
+Added checkbox
+remaining time and start time made uneditable
+Directly fill the name of clip name.
+
+19.11.12
+1. Extra recording parameter text added.
+2. Check box to scroll left to right for horizontal scroll.
+3. Now Playing filename has been added.
+4. Any AMCP command button added. So that we can test something.
+5. Playlist name can be seen at title.
+6. Template update button has been added.
+
+03.12.12
+
+Double digit clock is done.
+Mixer command for video effect is done. Blend mode will only work when enabled in config file.
+Check box has been given for hiding module.
+Invoke method has been added for playing templates.
+Each module has been give a separate color.
+
+05.12.12
+
+Modules can be moved.
+
+09.12.12
+
+1. Selecting template will list four caspartextfields available in template.
+ And all labels will be added in invoke combobox.
+2. Video layer for clip playback. 
+3. Video layer for template playback
+4. Playlist lock checkbox
+5. Delete clip button
+
+14.12.12
+
+1. Added SWF player.
+
+16.12.12
+
+1. Upgraded to vs.net 2010
+
+23.12.12
+
+1. Put new svt.caspar.dll in place of old.
+
+25.12.12
+
+1. Replaced template code for msxml2
+
+01.01.13
+
+1. Added breaking news and scroll client. Developed in Ahmedabad for Assembly election. Clock developed by Rajeev Gopinathan, E. A. Ahmedabad.
+
+06.01.13
+
+1. Added radio button to select module. 
+2. Added Oneline and twoline super.
+
+07.01.13
+
+1. Added powerpoint Module.
+
+08.01.13
+1. Font name and size for changing fonts of many modules data.
+
+09.01.13
+1. Rearrangement of modules.
+2. Stop will disable all timer
+3. casparcg window in on startup
+
+10.01.13
+1. Media folder for powerpoint set to get from info paths.
+
+11.01.13
+1. Added Vision Mixer Module
+
+12.01.13
+1. Rearranged casparcg window as end frame was not showing. Size also increased.
+2. Removed font setdata from cg mdule.
+
+13.01.13
+1. Added Response in AMCP module.
+
+17.01.13
+1. Added transition and loop option in player.
+2.AMCP command added with miscellaneous commands combo box and response window.
+
+23.01.13
+1. Slow Motion
+
+26.01.13
+1. Logo Module
+
+02.02.13
+
+1. No need to be font folder in c:/casparcg/cspar_media_playe_template
+2. Oneliner paste was not working. Now  ok.
+3. Font change in vs, hs1, hs2 was not chaging the text font. Now ok.
+
+
+07.02.13
+
+If no clip is selected and click start playlist; It was hanging, Now OK.
+
+10.02.13
+
+Vertical scroll, Horizontal scroll1, Horizontal scroll2 has been corrected.
+
+15.02.13
+
+Added datagridview in place of textboxes for template data.
+Added Test button for testing one button click.
+
+22.02.13
+
+1.Removed camera as default movie for template preview window. It was causing the application crash.
+2.Added a 16:9 checkbox for carsparcg window. Now default size is 4:3.
+3.Off Air Logger clock template added.
+4.Rundown added in template module.
+
+
+23.02.13
+1.Rundown folder added
+2.Template preview corrected if template path is not in c:/casparcg\
+
+28.02.13
+
+1. Big add buuton to rundown.
+2. Current row will be next to added row of rundown automatically.
+
+03.03.13
+
+3. No clip selected error corrected.
+4. Playlsist item made not sortable
+5. Playlist culumns not reordarable.
+
+05.03.13
+Getclipduration sub changed
+Adjusttimeofstart sub changed
+
+reply to thread
+1. If no clip is selected the subroutine simply exits. It is checked with every playlist related action.
+2. and 4. Current playlist is based on current row and next row of playlist datagrid.This is creating this problem.
+3. Coulum rearrangement and reordering has been disabled
+5.6.7. Now Clip duration has a new column. And new subroutine has been written for getclipsduration and adjusttimeofplaylist.
+
+12.03.13
+
+1. txtsearchtemplate.Text = "" done because if something is in search, that time application was hanging.
+2. New powerpoint file added
+3. All image and swf file shifted to my data. So that cutting the template folder will not affect horizontal scroll1 etc.
+
+17.03.13
+
+1. Added decklink live on playlist.
+2. if subclip was added in playlist then blank rows were showing duration of that subclip. now ok.
+3. Vision Mixer program was corrected for decklink input. Now space in filename will not be supported in this module.
+4. Point 2 and 4 of jvargentina has been solved.
+
+24.03.13
+1. Added off air logger
+2. Added automatic playback of templates for clips.
+
+31.03.13
+1. Camera template corrected for x=0, y=0 and removed all textual notifications.
+
+13.04.13
+
+1. Slow motion added.
+
+14.04.13
+Slow Motion improved.
+
+
+19.04.13
+Vision Mixer improved.
+Single frame forward and single frame backward button added.
+
+21.04.13
+
+Automatic template playback done with new row of template rundown.
+
+24.04.13
+
+Replaced all mediapath with fullmediapath. Sub clips can be saved and read from media directory.
+Now showing at buttom all path directory.
+Thumbnail directory corrected.
+
+04.05.13
+
+1. Image scroller has been added. When installed Two Photoshop and png files(horizontal and vertical) are copied to c:/casparcg/_media folder.
+These files should be put in media folder and the image scroller can be tried.
+
+2. OSC Montor for Caspar CG Server 2.1 has been tried. Try only with server 2.1
+
+19.05.13
+
+1. This program copies some media files to c:/casparcg/_media. But if media directiory is different then we have to copy manually. So Copy example media button does the same on clicking.
+
+2. Copy example templates button does the same for templates.
+
+3. We often experiment with changing the config file. This button will make this task easy.
+
+4. After changing the config file we require restarting of server for changes to take effect. This button will make this task easy.
+
+5. New multichannel audio feature can be tested with the audio test button.
+
+6. Osc monitor has been added with TCP and UDP combo box.
+
+20.05.13
+
+1. tmrduration interval was changed from 250 to 200. Because there aws clip skipping problem. Now OK.
+
+2. All paths and there opening button were added in utility module.
+
+29.05.13
+
+1. More paths added in utility. And datagrid was used in place of label.
+2. Directshow usb camera, streaming producer, Chroma key was added.
+3. Stop info timer button addded.
+
+02.06.13
+
+1. tmrduration interval was set 500
+2. Streaming consumer was added.
+
+
+
+23.06.13
+
+1. All modules have been arranged with different video layers. So that every element can be applied mixer command separately.
+2. FPS was added in playlist. So that duration calculation of clips is according to FPS of channel.
+3. New commands added in AMCP combo box as kill, restart,  add 1 image filename, add 1 file filename separate_key.
+4. Many more internal changes.
+
+10.07.13
+
+1. Breaking news update interval was expodsed to user interface.
+2. Roll template was 25fps. It was modified to 50FPS.
+3. Timer was added for wait for 3 second when changeover of clip has been occured.
+ This has been done so that skipping os clip should not occur. It was observed that skipping was occuring while changeover and it was due to info c 1-1 response commimg late.
+4. Mixer module has been given channel width and height, so that we can apply mixer command according to channel. earlier it was hard coded to 768x576
+5. Added counter for time remaining of running clip.
+
+16.07.13
+1. Weather module added.
+
+29.07.13
+1. Cricket, cricket players old record, badminton, Hockey was added.
+2. Cliplist was replaced with Clipgrid and used mediainfo to find out duration of clip in clipgrid.
+
+07.08.13
+1. Icon for CMP.
+2. PNG added in powerpoint.
+
+09.09.13
+1. Added label to rumdown.
+2. Center cut and letter box option added in mixer module.
+
+
+15.09.13
+1. Added extra option in recording module -s 768x576 so that ntsc recording can be done.
+2. Sheduled recording added.
+3. Time added at top right.
+4. RSS feed added.
+
+
+27.09.13
+1. Autoread and autoupdate in RSS feed
+2. Removed error when newlinw was there in rss feed string
+
+29.09.13
+1. Corrected some error to save label name in template rundown.
+2. Added some more amcp command in amcp module.
+3. Default transition mode CUT in powerpoint.
+
+02.10.13
+1. Added a code for enumerating capture devices in utility module.
+2. Rss feed form data was linked to setting.
+
+04.10.13
+1. Added info timer disable at startup beacause it was giving info command without playing anything.
+2. Added layer no. for rss feed in mixer vido layer combo box.
+3. Changes some code in shedule recording. Because while opening a file cell value was assuming as 1 january 1.
+
+12.10.13
+1. All settings fields were linked with setting of project. Reset setting button was added.
+
+23.10.13
+1. Players old record client was linked to database.
+
+24.10.13
+1. Hockey client was linked to database.
+
+30.10.13
+1. Removed the size calculation through mediainfo dll beacause it was affecting clip search
+2. Added a checkbox for recording single clip in recorder.
+3. Shedule recording save was not working on 24 hrs method, so 13hrs was being saved as 1. Now ok.
+
+02.11.13
+
+1. Recording Module and off air logger module--File Name, duration and size of recording file will be shown. Locate button will locate the file being recorded.
+2. Utility module datagridview made not sortable.
+
+10.11.13
+1 Twitter and facebook added.
+
+13.11.13
+ 1. Added a button to load key from d drive ky.txt file for facebook and twitter key fields.
+
+ 27.11.13
+ 1. Labels were added to show version information of server, flash and template host.
+ 2. Trackbarseek_mousedown event was added to disable tmrduration.
+	Trackbarseek_mouseupevent was added to enable tmrduration.
+	This enabled a smooth seeking.
+
+30.11.13
+1. Playlist and template modules needed more space. So maximize and minimize buttons are added.
+
+08.12.13
+1. Base64 encodeds string can be send from utility module.
+2. Horizontal scroll2 has been coded for sending base64 coded text value. 
+It will be useful for urdu scroll and multi language scroll. 
+It will be also useful for scrolling text in any language without changing or embedding the font in flash.
+
+15.12.13
+1. HTML module.
+
+18.12.13
+2. Play with VLC
+
+19.12.13
+3. Changed coding for media list with extension.
+
+20.12.13
+1. Cue, Play, preview from clipgrid also.
+2. Mouse hover for media info.
+3. Check files in playlist and mark red.
+
+25.12.13
+1. Enter key for clipsearch.
+2. Cip search made case insensative.
+3. Playlist default row 50
+
+04.01.14
+1. Removed Mediainfo for mousehover. it was not very much required.
+2. Filled clip duration in playlist from cligrid.
+
+05.01.14
+1. In playlist, File save will save the clip duration also. Then file open will fill the clip duration cell.
+2. Removed get clip duration button.
+
+06.01.14
+1. Search clip moved to a new thread. So that application will not hang.
+2. Test button moved to a new thread. So that application will not hang.
+3. 
+4. Playlist file_name colum was made not editable.
+
+08.01.14
+1. Double click in clipgrids for clips to insert in playlist.
+2. Changed insert before to insert after.
+
+09.01.14
+1. Code for insert if row is 1st row.
+
+10.01.14
+1. Added free space label in recoeder and off air logger.
+
+02.02.14
+1. Athletics client.
+2. HTML client
+
+
+05.02.14
+1. Asrunlog creation added.
+2. Added remove and add buttons for consumer so that we can just preview output on screen consumer.
+
+09.02.14
+1. Added insert END button to stop a playlist. It plays black color and disables the tmrnextclip timer.
+2. Added disconnect button.
+
+25.02.14
+1. Added add output and remove output button.
+
+26.02.14
+1. Corrected the add otput code for embedded audio.
+
+08.03.14
+1. Removed "fill key value" button for facebook and twitter key to facebook group box.
+
+09.03.14
+1. Added base64 in horizontal scroll and vertical scroll.
+
+14.03.14
+1. vertical scroll has been changed to roll selected text.
+
+17.03.14
+1. Addded election module.
+
+21.03.14
+1. Changed code to send clip name without extension. Now playlist will run in all version of server.
+
+23.03.14
+1. Added netstream= nothing for disconnect.
+
+31.03.14
+
+1. New election form
+
+06.04.14
+1. Election form removed.
+2. Changed the breaking news template beacause invoke command was not working.
+
+11.04.14
+1. template module was added four loader and default data for testing purpose.
+
+12.04.14
+1. Template data was modified to multiline value.
+
+14.04.14
+1. Added dgvanytemplate cell double click to open a file name for purpose of loader value.
+
+18.04.14
+1. Html scroller added.
+
+20.04.14
+1. Rss feed was added with table number numeric box to read rss data from website. If data is not as we want we should try changing its value.
+
+23.0414
+1. Timer to time was stopining for ever if stop all is clicked. Now it is ok.
+
+24.04.14
+1. Directshow producer is available in normal build. So indicated it in utility module.
+
+28.04.14
+1. Moved usefull commands from utility to front page.
+
+30.04.14
+1. Remove output will remove both decklink  1 and 2. And Bluefish 1 and 2.
+   Add output will add both decklink 2 and bluefish 2 for key only.
+
+02.05.14
+
+1. By changing the cmbfontforall value only value column's font  of dgvanytemplate will change.
+2. Added some filter options in mixer module.
+
+04.05.14
+1. Changed setup for release.
+
+11.05.14
+1. Added indianess checkbox in osc monitor.
+
+13.05.14
+1. Added OSC method for file name remaining time. etc.
+
+17.05.14
+1. Added elction client
+2. Added save facility in mixer module.
+
+25.05.14
+1. Added shedule template.
+
+290514
+1.Twitter search option added
+
+300514
+1. Added more osc information in osc module.
+
+310514
+1. Template search was removed from text change event. It will be done now with ENTER Key press.
+
+01.06.14
+1. Template list will now not be capitalised.
+
+05.06.14
+1. Added keyboard shortcut for playlist and template module. It is equivalent to standard SVT's casparcg client.
+
+10.06.14
+1. Vertical scroll-- if nothing is selected then everything in content will scroll.
+
+16.06.14
+1. Shortcuts like official client of SVT (F1, F2 etc) for playing clips and templates has been added.
+2. RS422 vtr control added. It controls vtr for play, stop, rewind, etc functions of VTR. It will help while recording VTR signal in casparcg. Decklink sdi card has inbuilt RS422 port.
+
+04.07.14
+1.Default template host cg20.fth.pal added in setup.
+2.Modified utility module for new server 2.07 b2.
+3.Modified rss feed for google hindi news.
+
+06.07.14
+1. Streaming producer works with server 2.07 beta2. So link of comunity build removed from utility module.
+2. Copy example template will also copy default template host cg20.fth.pal in template foder.
+3. F7 will be shortcut for invoke command in template module.
+4. Song subtitling client added.
+
+10.07.14
+1. Added width factor for song subtitling.
+2. RSS module default table changed to 3.
+3. RSS template default font changed to dv-ot bhima.
+4. Added loop parameter in utility audio test button.
+5. Added quotation for filename in vision mixer source1 button. Also added loop parameter for source1 button.
+
+16.07.14
+1. Added add and remove screen button on front page.
+2. Corrected osc audio recieve from DBFS to dBFS.
+
+18.07.14
+1. In utility module channel layout parameter quoted in "".
+2. OSC was added with 16 channel audio.
+
+19.07.14
+1. Added multimodule check box to enable more than one module at same time.
+
+24.07.14
+1. Corrected meassage "casparcg is not running" dialogue if server is on remote computer.
+2. Added insert decklink.
+3. Changed breaking news template for unicode support. Font is dv-ot bhima.
+
+06.08.14
+1. Added [HTML] for html module.
+
+09.08.14
+1. Text file duration corrected when searching the clip in clip grid.
+2. Default info method is now OSC.
+3. Clip was skipping when OSC was selected when start playlist. Now corrected by enabling the tmrfornotskipping. 
+4. Template module default value change to "instance name" in place of "value of instance name"
+5. All module made resizeable and movable by some other code. But work only after mutimodule checkbox is eanabled.
+
+10.08.14
+1. Added close button on every module which will hide it.
+
+18.08.14
+1. Added "create png image" button which will create a png image in media directory.
+
+25.08.14
+1. Changed default label name of template for AddToRundown to template name.
+2. Added "add to playlist checkbox" to add png image by button "create png image".
+3. Removed menu strip from playlist to save space.
+
+26.08.14
+1. Added "play next clip" button.
+2. Added some functionality of vertical scroll to work with Contour_Shuttle_v2.11.
+
+28.08.14
+1. Added Resume 1-1 in AMCP combobox list.
+
+29.08.14
+1. Added Initial position of vertical scrolloption from center or from buttom.
+
+30.08.14
+1. Added next, previous, first, last item in vs to work as teleprompter.
+
+02.9.14
+1. Corrected the "play in vlc" menu command, as it was for 32bit process only and also sometimes not working due to "/" in file name.
+2. removed refereshmediafilesforimagescroll from connecttocasparcg routine as it was causing delay in connecting server when uch files are there in media folder.
+
+03.09.04
+1. Of air logger was added some more information like free space, total space, days remaining.
+
+06.09.14
+1. With new CFE3 casparcg window was not comming in pannel, so some code was changed.
+
+07.09.14
+1. Added CG2 for maximum 13 line captions.
+
+08.09.14
+1. Added space in filename support for "create png" button.
+2. Automatic name incriment for filename for "create png" button.
+3. Added deletefilesoal() if recordind via shedulerecording.
+
+09.09.14
+1. "Create png" button's monor code change.
+
+15.09.14
+1. TT client added.
+2. Clip grid column resize was done.
+3. Clip column header double click was causing to add 1st row clip to playlist. It was coreected. 'Pointed by zaffer
+
+17.09.14
+1. Mixer anchor and Mixer rotation was added in mixer module.
+2. "Get status of mixer" button added in mixer module. 'Pointed by zaffer
+
+20.09.14
+1. Mixer "get status" can get all status without thread sleeping for 150 millisecond.
+
+21.09.14
+1. Start time was wrong if file was of duration more than 1 hr. Actualy it was calculating 360 second for 1 hr. Now corrected. 'Pointed by zaffer
+2. HS2 text change was causing font reset. Now corrected. 'Pointed by zaffer
+
+22.09.14
+1. Added DIAG button on front page to open a casparcg diagnostic window.
+
+24.09.14
+1. Removed threading.sleep(150) from getpaths and getversions as it was working without it.
+
+26.09.14
+1. Added perspective in mixer module.
+
+27.09.14
+1. Added crop and mipmap in mixer module.
+2. Drag drop or double click to add clips in playlist will now adjust strt_time of playlist. 'Pointed by zaffer
+
+01.10.14
+1. Clip in playlist movedown or moveup will now adjust strt_time of playlist. 'Pointed by zaffer
+
+03.10.14
+1. Mixer settings linked to application level setting. Double click will reset the values to its default value.
+
+04.10.14
+1. Now copy clip and delete clip will also adjust the starttime in playlist.
+
+06.10.14
+1. Playlist datetime at startup will be now. It will show correct time in playlist when clicked to adjust according to this.
+2. Deleting or adding clip above runnig clip will now not disturb playlist. 'Pointed by onurkizmaz
+
+20.10.14
+1. Changed election software.
+
+25.10.14
+1. Changed football templates. Hide all the lusofonia logos.
+2. Modified breaking news for category breaking news. 'Request by  hanuman.mallela
+3. Templates have been cleared with unused materials. It saved 100 MB size.
+
+26.10.14
+1. Modification in htmlscroller and client. Javascript instead of marquee for scrolling.
+
+27.10.14
+1.  Modification in htmlscroller and client. Base64 for encoding and decoding data.
+
+29.10.14
+1. Added quiz client and template. 'Request by  hanuman.mallela
+
+02.11.14
+1. Added SRT player client. It may be usefull also for adding caption on video at predefined time automatically.
+
+15.11.14
+1. Modified quiz client and template.
+
+06.12.14
+1. Added base64 in htmlscroller.
+
+07.12.14
+1. Added different types of timers.
+2. Added a new row to modules.
+3. Rearranged modules.
+
+09.12.14
+1. Modified TT client to act as badminton client also.
+
+12.12.14
+1. Modified playlist to give command filename with extension name. So will require lattest version of server.
+3. Playlist filename colum can be edited and so can be written filename directly.
+4. Total playlist duration and remianing playlist duration added in plalist client. Suggested by thanosmos.
+5. Oneline and twoline has been modified for unicode fonts. Suggested by hanuman.mallela.
+
+13.12.14
+1. Adde a colum follow duration so that if checked it will not switch to next clip uptill that duration.
+It will be usefull for decklink input, http:// pages and streaming producers. Suggested by ilgas.
+
+14.12.14
+1. Next clip will be now play in play mode i.e. not in loadbg auto mode.
+Because in case of html or decklink producers there is no end of clip.
+2. Default decklink insert will add a duration of 15 sec and follow duration checked for testing purpose. It can be modified.
+
+15.12.14
+1. Added INFO THREADS and INFO QUEUES command to amcp client.
+2. Added now playing, comming up next and back in time template for playlist. suggested by dkctv.
+3. Added functionality in powerpoint to run automatically in 5 second. It will enable to run all slides from current position in 5 sec interval. suggested by dkctv
+
+19.12.14
+1. Added channge fill key device as decklink duo was changing its device number.
+22.12.14
+1. Added lawn tennis in tt client.
+2. Removed the separate templates for badminton and used blank plates , then send a loader for game logo from client.
+
+28.12.14
+1. Modified lawn tennis as winner caption flag was showing wrong flag.
+2. Modified the position template for vertical position.
+
+03.01.15
+1. Files of duration more than 1 hr was showing second value as zero. Now added a dll fileinfodot.dll which corrects this problem. Reported by Jaffer.
+
+04.01.15
+1. Double clicking dgvclips was placing the file in same row of playlist. Now corrected and it will place the file in next row. Reported by Jaffer.
+2. File save and open in playlist extended to save and open newly added follow duration column value.
+3. Added radio button  for football and hockey in football client.
+4. Added game logo and event logo in cg2. If not required blk.png can be selected.
+
+08.01.15
+1. Added some hindi breaking news and scroll files preapared and used by cg operators DDK Mumbai.
+
+09.1.15
+1. Modified athletics datagrid for perfect sorting. Defined columns to be decimal.
+
+11.01.15
+1. Added animation checkbox in cg2.
+
+30.01.15
+1. Added SD and HD on main form. This was a solution for trailing black in anomation also. Solution given by DDK Chennai.
+2. Removed default directory for swf player. 
+10.02.15
+1. Added osc reported FPS to calculate remaining time to osc mehtod of info.
+
+11.02.15
+1. Removed hockey client.
+2. Removed Athletics client.
+3. Added games client.
+
+14.02.15
+1. Removed TT client medal ceremony and templates.
+
+15.02.15
+1. Freeze first thee columns in game clients datagrid.
+
+17.02.15
+1. Moved cricket and TT client to Games client.
+2. Added insert playlist button to insert playlist from current row.
+
+21.02.15
+1. Added thumbnail option button if required or not. Suggested by sfichera
+2. Hide all templates embedded "national games 2015".
+3. If subclip text file is there in playlist thumbnail was not showing, corrected it.
+
+05.03.15
+1. Moved time code from SRT player to casparcg window.
+2. Added bullet in scroll template.
+
+07.03.15
+1. In ball client; timer was going to negative after zero in countdown. Corrected it.
+
+08.03.15
+1. Removed a bug where if decklink input was there in file; playlist was not opening fully. Reported by Ben Paul.
+
+14.03.15
+1. Added a treeview for clip grid. Suggested by Ben Paul.
+
+21.03.15
+1. Trimmer with vlc client has been added.
+
+31.03.15
+1.Added a preview client to see casparcg output. It is usefull when server is on remote computer. It uses udp streaming and then playing in VLC activex plugine.
+
+01.04.15
+1. Osc server was not working for remote client. Modified osc server code to recieve osc from remote client.
+
+06.04.15 
+1. Cricket client and template was modied for add team logo event logo.
+
+08.04.15
+1. Playlist open and refresh template was not showing thumbnal of textfile subclips. corrected.
+2. Deckling in playlist was not openning perfectly by playlist insert method. corrected.
+
+12.04.15
+1. Added a synch record for ingest from VTR in exact timecode duration.
+
+16.04.15
+1. Added code in search clip to sort by Name column automatically.
+
+24.04.15
+1. Added a streaming module.
+
+25.04.15
+1. tmrgettc and tmrsynchrecord was modified to be 40ms so that every frame will be read.
+2. Added support for custom parameter defined in template in template module.
+
+02.05.15
+1. FCP MAc creates hidden files on network drives.So Modified the code for clipsearch to not show hidden files.
+
+05.05.15
+1. Adde a UDP Chat client to comumnicate to other client. This would be usefull for standby client.
+
+07.05.15
+1. Upgraded this project to VB.net 2013.Total size of this project reduced by 30MB
+
+09.05.15
+1. Added animation checkbox for template module.
+
+14.05.15
+
+1. Center cut setting mixer fill -.14 0 1.27 1
+2. Animatin for hd van mixer fill .12 0 .76 1
+3. Put forward slash in savefile name in trimmer
+
+20.05.15
+1. Check files added in playlist which will check playlist files at interval of 10 seconds. And if not available it will show red.
+
+21.05.15
+1. Treeview shorted. Expand to node(0) only
+
+26.05.15
+1. More space for clipname in clipgrid.
+
+27.05.15
+1. Added fps in clipgrid
+
+28.05.15
+1. Added player tools for playing from clipgrid.
+
+29.05.15
+1. Added a button to change the url for youtubr full screen video in html module.
+
+20.06.15
+1. Added cut clip button in trimmer to export a new clip with in and out point.
+
+30.06.15
+1. In Trimmer:- Added video codec and audio codec combo box to recencode. Also added decklink player without casparcg.
+
+02.07.15
+1. Added clip join interface in trimmer module.
+
+24.07.15
+1. Made modules bringtofront for multimodule.
+
+
+25.07.15
+1. Added openintrimmer button which will open the recorded file in trimmer.'Sugested by Mithali Das.
+2. Added total duration and trimmed duration in trimmer.'Sugested by Mithali Das.
+
+26.07.15
+1. Gbquize was added in resize code.
+
+27.07.15
+1. if checkbox for play in playlist is checkchanged then starttimeofplaylist adjusts.'Sugested by S R Kulkarni.
+
+28.07.15
+1. Insert end after playlist will now freeze at last frame in the playlist and disable the playlist facility(Will not go to next clip.)
+2. Now starttimeofplaylist will adjust only for below current clip and not before current clip.
+3. Remove input button will now add decklink  faithfully. 1 second delay has been introduced between stop playing decklink and adding output to decklink.
+4. Show input button will now start OSC so that audio level will show on casparcg window.
+5. Decklink number combo box has been added in recorder.
+
+29.07.15
+1. Added Boxing Client in games ball tab.' Requirement in Pune KikBoxing.
+
+02.08.15
+1. Clip not having duration in clipgrid will now show duration in playlist.
+2. Added support for 4K cards (Input and output at same time).'Sugested by Gaudia
+
+04.08.15
+1. Added "/" in clipsearch text so that we can write directly the name of file to be searched.
+2. Replaced black with end for insert end command.'Sugested by S R Kulkarni.
+3. Added GotoEnd buttons in trimmer and casparcg window.'Sugested by S R Kulkarni.
+
+08.08.15
+1. Added "play from" in and "play from" out point. 'Sugested by S R Kulkarni.
+2. Added description.title for file name when playlist is loaded in trimmer.
+
+10.08.15
+1. Added seek 1 for play commands to avoid lip-sync out problem of trimmed clip. 'Pointed out by Anita Katware.
+
+11.08.15
+1. Removed a bug where when we  while plaing playlist add a blank row in beetween clips and focus that row, clip switch to next clip. 'Pointed out by Manoj Shelke.
+
+13.08.15
+1. Playlist not switching to next clip when leftduration is 0.0.'Pointed out by Rajshri Rajurkar
+
+14.08.15
+1. Added play last 8 second button to verify end frames.
+2. Removed open_trimmed_clip button from trimmer as it had very less actual use.
+3. Rss feed template font changed from dvotbhima to _sans to support latin words.
+4. Save playlist button enabled after open playlist.
+
+15.08.15
+1. Changed nextclipofplaylist parameter from 0.7 to 1.0. Now no freez at last frame. 'Suggested by Mark van leest
+
+16.08.15
+1. Trimmer load playlist corrected where extra files were being played from media folder.
+
+17.08.15
+1. Added Video modes to games casparcg windows.
+2. Corrected code whrere casparcg.exe was written in place of casparcg for "casparcg in" command in games client.
+3. Added a opacity numeric box to change the opacity of strip in hs1. 'Suggested by Ben Paul
+
+18.08.15
+1. Audio meter changed to show -40dBFs to 0 dBFs
+2. Template rundown clolumn 0 font linked to main font.
+
+19.08.15
+1. More audio labels added.
+2. Corrected a mistake where when after starting playlist, if a clip is selected before "end"; tmrnextclipofplaylist disable.' pointed out by Shyam Masurkar
+ 
+ 20.08.15
+ 1. Added mixer volume and mastervolume value upto level 50 to mixer module. ' Suggested by V. L. Bhandare
+
+22.08.15
+1. Addded pause on load in vlctrimmer.' Suggested by S R Kulkarni
+
+24.08.15
+1. Added audio level setting for each clip in playlist. ' Suggested by funkytwig
+
+25.08.15
+1. Added resize option(Aspect ratio conversion) in playlist. Setting is in mixer module. ' Suggested by funkytwig
+
+28.08.15
+1. Audio level meter now adjusts with 16:9 check box.
+
+31.08.15
+1. Removed moving background from mixer module.
+2. Addjusted the preview window as per casparcg window.
+
+01.09.15
+1. Changed some code of recording, reduced width of transition column.
+
+03.09.15
+1. Removed some bugs. Save subclip button of trimmer,FPS of a text file, duration of a text file while double click in clipgrid.
+
+05.09.15
+1. Added GoToTC in trimmer. 'Suggested by R T Rajurkar.
+
+08.09.15
+1. Added channelinfo for viewing layer number and producer/consumer in a datagrid.' Suggested by R S upadhye and forum memeber onurkizmaz.
+
+
+12.09.15
+1. Modified "play last 8 second" to "playlast 5 second".
+
+18.09.15
+1. Added code for getting number of channels and populate cmbchannel accordingly when connected.
+2. Added alpha preview.
+3. Same connect button will act as disconnect button. Disconnect button removed.
+
+19.09.15
+1. Added default name (original name + _cut1) for subclip.
+
+27.09.15
+1. Removed media_type, frame rare, size and creation date from clipgrid.
+2. Added fileinformation form for clips. it is available in right click menu on playlist an clipgrid.
+3. Now search clip will search onnly in folder selected. So it is fast now.
+
+01.10.15
+1. Added metadata reader and writer.
+
+10.10.15
+1. Cleaned vertical scroll.
+
+12.10.15
+1.Added file save in vertical scroll. Pause resume in single button, Speed and pause-resume side by side.
+
+14.10.15
+1. Added checkbox in utility for sending seek 1 from playlist. It was introduced to overcome the lipsync out problem of trimmed clips.
+
+18.10.15
+1.Added background worker for clipsearch. Now form will not hang while clip searching.
+2. Added progress bar for clip export in trimmer module. Now no separate ffmpeg window will open. 
+
+19.10.15
+1. Put default bitrate for offairlogger and recording as 1Mbps and 8Mbps respectively.
+
+21.10.15
+1. Added a checkbox in utility to send file for playing with or without extesion. It will be usefull for server 2.1 and image files which are not played.
+
+24.10.15
+1. Added a clipgrid selection change event so that selecting a row will show get duration of the clip.
+2. Removed unused references.
+
+30.10.15
+1. Added clipsearch, facebook and twitter in background worker.
+
+02.11.15
+1. Corrected a code where a video file was not following follow duration when duration was given less than its duration.
+
+07.11.15
+1. Added proxy generator, hd to sd convertion and sd to hd convertion in trimmer. Maximise the trimmer module to see it.
+
+10.11.15
+1. Added Trimmer, Transcoder, Proxy generator, SD to HD and HD to sd Converter.
+
+25.11.15
+Added a timer to caspacrg scrubbing for smooth scrubbing. It has timer interval setting in utility module.
+
+28.11.15
+1. Added FFMBC to convert hd file to xdcam hd422 file which can be written to xdcam disc.
+
+29.11.15
+1. Added ffmpeg to convert sd file to hd and then pipe this to make xdcam hd422 file. Resulting file then can be opened in sony contenet browser and written in xdcam disk.
+
+12.12.15
+1. Changed oneliner and twoliner templates.
+2. Added ffmpeg module. Logo can be inserted while transcoding.
+
+13.12.15
+1. Added logo placing in trimmer module.
+
+18.12.15
+1. Added style information in html scroll so that bottom horizontal scroll if hidden. Suggested by forum member michel.
+
+19.12.15
+1. Added lattest ffmpeg 64bit.
+2. Added aac as default audio codec for transcoder, proxy and logo.
+
+22.12.15
+1. Removed default checked to send filename without extension. because some files from news were not working without extension. Error was that file was not found. For server version 2.1 it will need to check it.
+2. Timer interval for tmrfornotskipping has been changed from 3 sec to 6 sec. because files of 10GB (half hour 50mbps) from snfs were taking time to load.
+3. Corrected the codes where there was no gap between play 1-1 and filename.
+
+24.12.15
+1. Added loadbg for playlist.
+2. Modified the code for youtube stream for pix_fmt as per forum memeber Mick_b.
+3. Removed clippause button and added this funtionality to resume button.
+
+
+29.12.15
+1. Added loadbg for startlaylist also. Made it as default.
+
+3012.15
+1. Clip resume button was not working properly with big files, so threadsleep of 150ms was added to read the info 1-1 response.
+2. Duration calculation of clip while double click or drag drop by mediainfolib done.
+
+02.01.16
+1. Mooved seek frame before filename in trimmer so that trimming is with anywhere to anywhere. Earlier it was giving error if start frame is not 0.
+2. Unchecked seek 1 checkbox form utlity because it seems lip synch out is sloved in trimming.
+3. Centercut changed to -0.16, 0.0, 1.33, 1.00, because black output was comming out.
+4. getmixerstatus was uncommented threading sleep(150), because sometimes status was not comming properly.
+5. clipResumecommand was changed because server 2.1 was not sending clip status.
+
+05.01.16
+1. Addded ipauseplay=2 for trackbaarseekso that when seeked then plaupause button sends play command.
+
+09.01.16
+1. Enabled trackbar seek by default.
+2. watch folder program.
+
+14.01.16
+1. Added batch capture in watch folder module.
+
+15.01.16
+1. Added check box in utility module to play next clip 10 second in loop in played from clipgrid. This feature is for next clip preview.
+
+
+25.02.16
+1. Added games2
+
+01.03.16
+1. Power point added  to insert blk png while exporting png image.
+2. MAM added play in vlc and file information button.
+
+08.03.16
+1. Added video to png sequence, sequence to video, add audio to video and multi stream audio to single styream audiom.
+
+09.03.16
+1.Added number of processors in MAM. And some code changes.
+
+10.03.16
+1. Removed ffmpeg because it is now present in MAM.
+2. Checked filenamewithout extension by default. So that server 2.1 can be checked.
+
+12.03.16
+1. Changed oneliner and twoliner template text fields to tlf text.
+2. added configure for alpha video recording in recording module. it will put mov as container and -vcodec  qtrlr as video codec.
+
+13.03.16
+1. Modified Scroll and breaking news text to tlf text. Now urdu can be shown correctly.
+
+18.03.16
+1.added a button in recorder to configure recorder to record video with alpha. It puts wrapper as mov and -vocodec as qtrle. The rejultind recoded file has alpha information and when imported in nle it keys itself properly.
+
+19.03.16
+1. Added Vs2 for vertical scroll with static template having tlf textfield. only speed can be changed. All language is supported.
+2. Added slow motion 2 for slow motion in server 2.1.
+
+24.03.06
+1. Addeda procedure at startup which will check if media and template folder are in place or not. if not it will copy cmp folder to template folder and media files in media folder.
+
+01.04.16
+1. Added word search in twitter.
+
+16.04.16
+1. Added time adjust in template rundown sheduler.
+
+25.04.16
+1. Changed some name of templates amd also changed some template location.
+
+26.04.16
+1. Added template name combo box in oneliner and twoliner. It will enable user to use there template to this client.
+
+27.04.16
+1. Added some templates in onliner and twoliner.
+2. Cleared ffmpeg output text box in batch transcode after each file transcode. It was causing slowness.
+
+03.05.16
+1. Added color to clipgrid play buttons so that last clicked button will be green.
+2. added call 1-1 loop 1 and call 1-1 loop 0 to amcp module.
+
+22.05.16
+1. Channel name will be shown in title of main window.
+2. Casparcg window can be brought in in recorder window.
+
+24.05.16
+1. Added droped shadow to roll and crawl templates as suggested in the forum.
+2. Lock playlist grid will lock gbplayer also.
+
+03.06.06
+1. Changed 0 as channel number to 1.
+
+10.06.16
+1. Added "not recording" caption when not recording in 'recording' and 'off air logger' module.
+
+26.07.16
+1. Added -g 1 option in recording for perfect trimming. 
+
+28.07.16
+1. Playlist and template module when minimized will come to original position.
+2. Added hd to centercut sd mov transcoding profile in MAM.
+
+01.08.16
+1. Added link of server 2.1 in slow motion 2.1
+
+07.08.16
+1. Added one maore tabe between duration and file name in asrunlog file.
+2. Added logic for cued clip row in playlist to get green.
+
+08.08.16
+1. Added nos of tweets option in tweeter module.
+09.08.16
+1. Added transcoding profile for dvcpro50.
+
+14.08.16
+1. Added "manually add" button in rss feed so that it can be used as normal scroll.
+2. Added Search for batch transcoder datagrid.
+
+19.08.16
+1. Added system audio control in recording module so that which channels should we hear from system speaker.
+2. Added replace function to new mixer commands to replace "," with "." so that in the countries where decimal is writeen as comma, mixer command should go correctly.
+
+01.09.16
+1. Added clip countdown timer in clipgridplayback. it will play a template on next channel which shows the remaining duration of a clip on channel.
+
+06.09.16
+1. Added a remote logging module which is useful for server 2.1 where server is on Remote PC.
+
+090916
+1. modified hd to center cut sd for dvcpro file in MAM.
+
+15.09.16
+1. Added yadif filter button on casparcg windows to remove jitter/interlacing error.
+
+16.09.16
+1. Added new colum named filter in playlist.
+2. Added full screen button for playlist to get fulscreen.
+3. Now playlist will be saved as chr(2) separated value instead of comma(,).
+
+20.09.16
+1. Subroutine fo rplaycommand, removed rdoinfo and rdoosc, hide button for many groupboxes, code changes for scrubbing to use filename from osc and not from playlist.
+14.10.16
+1. VDCP Controller added.
+2. VDCP Controller updated to use variable length ID.
+
+10.11.16
+1. Removed timed event.
+
+11.11.16
+1. Added Embumxf in MAM.
+
+12.11.16
+1. Removed stop info timer buttom.
+2. Added "casparcg in" command to "add screen" button.
+
+14.11.16
+1.Added ebumxf folder in build.
+
+20.11.16
+1. Updated vdcpcontroller with file open, save facility.
+2. Added a setting clipsfrom filesystem or server radio buttons in utility so that we can choose clipsearch method.
+
+24.11.16
+1. Added a watemarking module.
+2. updated VDCP Controller was added.
+
+25.11.16
+1. Water marking template was modified to look like embossing.
+
+30.11.16
+1. Removed gbcg and added ucCG1
+2. Removed gbWaterMarking and added cuWaterMarking1.
+
+03.12.16
+1. Removed gbHtml and added ucHTML1
+2. Removed gbChannelInfo and added ucChannelInfo1
+3. Replaced gboneliner with ucOneLiner1
+4. Replaced gbTwoLiner with ucTwoLiner1
+5. Replaced gbcg2 with ucCG21
+6. Replaced gbScroll with ucScroll1
+7. Replaced gbBreakinNews with ucBreakingNews1.
+8. Replaced gbTimers with ucTimers1.
+9. Replaced gbsrtplayer with ucSrtPlayer1.
+10. Replaced gbPreview with ucPreview1.
+11. Replaced gbStreaming with ucStreaming1.
+12. Replaced gbRemotrLogging with ucRemoteLogging1.
+13. Replaced gbSlowMotion2 with ucSM21
+14. Replaced gbLogo with ucLogo1
+15. Replaced gbSwfPlayer with ucSwfPlayer1
+16. Replaced gbRssFeed with ucRssFeed1.
+
+04.12.16
+Replaced following modules groupboxes with usercontroles
+1. Weather
+2. Twitter
+3. Facebook
+4. HS1
+5. HS2
+6. Qiuz
+
+10.12.16
+Replaced following modules groupboxes with usercontroles
+1. html scroller
+2. Trimmer
+3. Template
+
+12.12.16
+Replaced following modules groupboxes with usercontroles
+1. Recorder
+2. Off Air Logger
+3. Utility
+4. Slow Motion
+5. Casparcg Window
+
+17.12.16
+1. Replaced rest groupboxes with usercontrolles.
+
+18.12.16
+1. Rempved usercontrols from design time and placed at startup.
+
+19.12.16
+1. Added Menu control for main application.
+
+20.12.16
+1. Removed usercontrols from loading at startup which is neccessary only for test software command.
+2. Added Playlist setting Module.
+
+26.12.165
+1. Playlist converted to usercontrol.
+2. OSC was already converted to use rcontrol but not used because it was slow. Now it was ok as user control. So it is used now.
+
+30.12.16
+1. Added PlayFromAnywhre module.
+
+03.01.17
+1. Added loop in PlayFromAnywhre.
+2. Refresh button will now remove existing control and add new so that control refreses fully.
+
+06.01.17
+1. Added a tcpserver project in the solution.
+2. Added atcpserver radiobutton in playlist setting module which will give folders and file list including symlinked folder.As server doesn't give symlinked folder list, It is usefull when server is on remote PC and we have symlinked folder. 
+
+18.01.17
+1. Added autoplay=true for youtube video to play automatically.
+29.01.17
+1. Added two channel recording and trimming client.
+
+01.02.17
+1. Election module tally datagrid was added click event to browse image.
+2. Tooltip was added in new recorder and caspracg window. These were already present but disappeared afeter grouboxes were converted to module.
+
+03.2.17
+1. Modified html scroller so that special charactors can also be shown. Hindi scroll was making trailing effect. Adding 1 at last solves this problem.
+
+13.03.17
+1. Many improvements and bug fixes.
+
+30.03.17
+1. Added Open Dalet Playlist in playlist right click menu.
+
+02.04.17
+1. Added recording profile, video codec, audio codec selection in recorder.
+2. Added font in utility module. Usefull for server 2.1.
+
+03.04.17
+1. Changed audio codec to pcm_s16, -channel_count 4, format mxf_d10, color matrix bt601 pal, dar 4:3 etc to comply with standard IMX files.
+2. Added audio reset to 1 in casparcg window.
+
+18.04.17
+1. Added drag drop from file explorer to trimmer and casparcg window.
+
+26.04.17
+1. Some code changes in OSC module corrected the overnight freeze problem.
+
+30.04.17.
+1. Segmentation datagrid in Trimmer module.
+
+06.05.17
+1.Multi line data in template rundown was not opening correctly.--- Corrected.
+2.Added template directory in cg1and cg2 so that user can use his own templates.
+
+07.05.17
+1.Font changing from main font combo box of some modules.
+
+12.05.17
+1. Removed focus from startplaylist button, so that enter button shoud not click it again.
+2. Playlist filename colum font is changed to "Arial Black" for better look. Its size can be changed from main forms font size numeric box.
+
+22.06.17
+1. Added file based template scheduling in playlist.
+2. Added new instance in other module which starts a new intance of this client, then in playlist setting we can set it for required channel.
+
+28.06.17
+1. Added command scheduler module.
+2. Changes default video bitrate to 750kb so that streaming is good now.
+3. Added -acodec aac -strict -2 -ar 48000 so that audio cracking solved in streaming.
+
+
+12.07.17
+1. Modified code in trimmer to work more efficiently with sub clips (text files).
+2. Removed trimmer menu from other modules and placed on top so that it can be used more efficiently.
+3. Removed new instance menu from top menu.
+
+15.07.17
+1. Added timecode in place of frame number in segmentation datagrid.
+
+17.07.17
+1. Added code "filebrowserdialog.dereferencelinks = false" in trimmer to return symlinked path while openning a file from symlinked folder.
+
+28.07.17
+1. Added colors in Playlist. for this there is a program type column in playlist.
+
+11.08.17
+1. If File in media folder is still being copied it will no show in clipgrid search.
+2. Other modules regrouped.
+
+12.08.17
+1. Added application exit code because sometimes even after program closed, process was still running in task manager.
+
+18.08.17
+1. Audio bar added in 4 channel recoder and trimmer. Now by default no recoder will show. We need to add recoder from menu.
+
+25.08.17
+1. Application upgraded to vs 2017 and target framewok 4.6.1.
+
+12.09.17
+If we put audio 8ch in config and nothing in channel playout then server 2.1 records xdcamhd422 file.
+
+19.09.17
+Added Anamorpphic profile in transcoding profile. Corrected letterbox and centercut setting in playlist setting. Added scale from center in mixer.
+
+22.09.17
+Playlist row header now shows row number also.
+
+26.09.17
+Seek parameter in ffmpeg before file does fast transcoding. All seek parameter done before file name. Without scaling transcoded anamprphic file has edge shawtooth effect. Added scaling parameter in anamorphic transcoding.
+
+07.10.17
+After four channel configuration audio fluttering and lip sync out was observed. Added -minrate and -maxrate equal to bitrate in record. It records file in given bitrate compulsorily.
+
+11.10.17
+1. Replaced general trimmer from trimmer module with newtrimmer. This will avoide code duplication.
+
+19.10.17
+1. Added some generaly used casparcg config file in "tools- casparcg configuration" menu.
+
+04.12.17
+1. Playlist has been added with a new clolumn which will display graphic as back in timer. Duration of this back in timer can be set in playlist setting module.
+
+19.12.17
+1. Playlist has been added a new column to add AMCP Commnads. Every clip can have its associated AMCP command. AMCP commands can be separated with double comma (,,).
+
+
+20.12.17
+1. Insert playlist was not adding new added columns in playlist. Corrected.
+
+21.12.17
+1. Replaced old ffmpeg 3.3 with new 3.4.1
+
+27.12.17
+1. News playback from clipgrid sends file name on next channel. Server 2.1 sometimes was not showing online clip name on cue. So Selected clip name would show now on next channel instead of cued clip.
+
+03.01.18
+1. Added IMX filter because there was black bar on top in files are of IMX.
+2. Added mixxer crop in html scroll to meet user demand.
+3. Added context menu for playlist to insert crop filter for IMX files.
+
+04.01.18
+1. Play 1-1 and loadbg 1-1 then pause 1-1 and play 1-1 causing loaded bg clip to play on air. Now last play 1-1 changed to resume 1-1. Problem solved.
+2. h264_nvenc codec result was not good. So replaced with libx264.
+3. Master volume variable was changed upto 4 in casparcg window.
+
+10.01-18
+1. Added Create Png usercontrole and added it to game2. It will make easy to generate Png file of games template.
+
+17.01.18
+1. Added 196 county flags and sample png files for ENG coverage in mydata folder.
+
+22.01.18
+1. Checked progressive in image scroll as it gives paused frame non flickering.
+
+24.01.18
+1. Added transcode with logo in transcoding profile.
+
+29.01.18
+1. Modified watermarking template to show unicode charactors.
+2. Added watemarking png folder in mydata.
+
+12.02.18
+1. Removed seek 1 checkbox from playlist setting. it was introduced because sometimes there was lip sunc out in trimmed files from ffmpeg. This check box prevented this.
+2. Added possibilty to play udp, tcp, rtsp etc streams in playlist.
+
+
+21.02.18
+1. Removed separate button for pause/resume from image scroller and added single button for this.
+
+24.02.18
+1. Added config file for four chanel player, 8 audio for server 2.07 and 8 audio for server 2.1 beta 2
+2. Removed "seek 1"  from play single clip.
+
+ 03.03.18
+1. Added "dBFS Meter 16 channel" in other modules menu.
+
+22.03.18
+1. Modified template and code for cricket software.
+2. Batch Transcode will now create directory structure for source directory.
+
+23.03.18
+1. Added support for server 2.2 in OSC module. Added two new rows.
+2. Calculation of frames from time in OSC module.
+
+25.03.18
+1. Added support for server 2.2 for seeking to frames.
+2. Playing filename parameter was taken from new osc information.
+
+27.03.18
+1. Added support for server 2.2 for remove file recording in general recording and off air looger.
+2. Added 1kHz tone file.
+3. Added more columns in osc module for 16 ch audio.
+4. Added code to display audio for server 2.2
+
+11.04.18
+1. Time template time was not updating, now corrected.
+2. Sakal Marathi font is added in installer.
+
+12.04.18
+1. Function key will not work if playlist is locked.
+2. Transparancy of breaking news template is removed.
+3. Time template default language for month is english.
+
+21.04.18
+1. Modified the code for playing text file sub clip correctly in server 2.2. Because in server 2.2 seek and lentgh parameter should be twice of earlier.
+
+23.04.18
+1. Modified the code for playing text file sub clip correctly in server 2.2. from clipgrid also.
+
+08.05.18
+1. Added lattest ffmpeg 4.0
+
+10.05.18
+1. Added default media files in setup.
+
+07.06.18
+1. Added help file in help menu.
+
+24.06.18
+1. Added a html template in oneliner.
+
+
+
+11.07.18
+1. Files can be dragged from anywhere and dropped to playlist.
+2. Added restart server from config file in tools menu.
+
+02.08.18
+1. Added all modules in custome module right click menu.
+
+
+04.08.18
+1. Added template location textbox in all modules so that modified template with new name can be played.
+2. All modules are now available in custom module right click menu.
+3. Overall look of CMP improved.
+4. Server 2.2 files can be listed in clipgrid and template module.
+
+
+09.08.18
+1. Added checkbox stayonselectedclip in playlist setting, so that clip insertion by double clicking in clip grid is ok when changeover to next clip.
+2. Added deinterlaced checkbox in playfrom clipgrid tools.
+
+
+11.08.18
+1. Added media directory constant in powerpoint.
+
+13.09.18
+Added some good teplate in cmp folder
+Added sql connection also in Myqltest
+
+15.09.18
+Added stf class in breaking news.
+Added show as breaking news in rss module.
+Removed clock from scroll and added it to breaking news.
+
+16.09.18
+1. Removed TCP Server because it was not working in windows 10.
+2. Added countdown timer for future program in timers module.
+
+
+
+01.10.18
+1. Added html vertical scroll in html scroll module.
+
+02.10.18
+1. Identified the reason of more data in html scroll refuse to scroll. It was crlf in content. While sending data Replaced all 
+newline with <br />
+space with xxx
+' with yyy
+" with zzz
+and then  after recieving changed back to original.
+
+03.10.18
+1. Identified the reason for garbase while base64 in html template. It was atob function not working properly with unicode. Put new code for that.
+2. After identifying all above problem correctd the html oneliner, html twoliner, and html vertical scroll.
+
+04.10.18
+1. Added right click menu in playlist for change all transition to wipe, slide, mix, cut or push.
+2. Added pause to false in start plaulist method so that pause will work after start playlist.
+3. Implemented Shuttle pro v2 for html vertical scroll.
+4. Added utf-8 tag to sqlTocasparcg html template so that unicode font is working now.
+
+06.10.18
+1. Improved system audio module.
+2. Added separate mysql server setting in mysql test module so that testing is easy.
+
+10.10.18
+1. Updated OSC code to work with srver 2.2 beta9. Now will not work with earlier than beta 9.
+
+06.11.18
+1. Added new module html template.
+
+11.11.18
+1. Removed modsg and modng and added the codes in mdlcmp1
+
+14.11.18
+1. Added variable delay in play and update command for html template. it works without error in server 2.1
+
+16.11.18
+1. Script for clearing all data in html template
+<script>
+ document.addEventListener("DOMContentLoaded", function(event) {
+var ccg = document.querySelectorAll('[id^="ccg"]');
+  var i;
+  for (i = 0; i < ccg.length; i++) 
+  {
+    document.getElementById(ccg[i].id).innerHTML = "";
+    document.getElementById(ccg[i].id).src = null;
+  
+  }
+   });
+</script>
+
+
+17.11.18
+1. Script works better   
+initially document.getElementById(ccg[i].id).style.display = "none";
+and after update
+ document.getElementById(restorestring(str1)).style.display = "block"
+
+18.11.18
+1. Added /channel/1/stage/layer/1/foreground/file/stime in osc for segment time
+
+
+17.12.18
+1. Code for menustrip dropdown when in parrent pannel.
+2. Replaced all toolstrip with menustrip in CMP. So that dropdown should work with same code when parrented .
+
+18.12.18
+1. Added 4 channel form to open four channels of CMP in TABs.
+2. Added call 1-6 speed 0 for image scroll for server 2.1 so that pause is flicker free.
+
+20.12.18
+1. Playlist, template and html template look was made better while maximising and minimising.
+2. Added 'clip playback' menu in other modules- news. It will maximize the playlist and position it to left so that we can play from clipgrid.
+
+
+27.12.18
+1.Four channel tab will set channel number automatically.
+
+07.01.19 
+1. Slow motion improvement Added recorder.
+
+08.01.19 
+Added cliplist in SM
+
+09.01.19 
+1. Rearranged menu in CMP.
+
+ 15.01.19 
+ 1. When end was there in playlist as currow and next clip is played manually  whithin 5 sec playlist functionality do not stop. This was correted. Reporeted by forum member @Hylkewolf
+ 2. Server 2.1 sends each files as indivisual , no folder name. So only root folder was listed in cliplist. Added code to correct this. 
+ 
+
+ 22.01.19
+ 1. Server 2.2 or 2.3 code was not working properly, corrected.
+ 2. 4 Channel form In point if clicked twice it stopped to work, Corrected.
+ 3. Template list from server 2.2 and 2.3 works now.
+
+09.02.19
+1. File list from server 2.2 and 2.3 works now.
+15.02.16
+1. Set default osc port 6251 for song subtitling. Now it is working fine.
+
+16.02.19
+1. Added default media files in setup.
+2. Added fed in and fed out in animation method in frmsg2016.
+3. Added devis cup in games4.
+
+17.02.19
+1. Added buttons for audio L_to_Both and R_to_Both in utility module.
+
+20.02.19
+1. Audio testing buttons are shifted to 16 channel dBFS meter.
+
+03.03.19
+1. screen.colorDepth was added in all html cricket template to know if is ruuning in casparcg or google chrome. 
+2. Mixer command for opacity 0 was removed.
+3. All flash template for cricket was removed.
+
+13.03.19
+1. Vision mixer module was improved.
+
+14.03.19
+1. SDtoXdcam profile was not working for trimming and batch transcoding beacause special code for piping to ffmbc. Now corrected.
+
+20.03.19
+1. New buttonsgiven by Phillip Martin were used in casparcg window and vision mixer module.
+
+30.03.19
+1. Election data update form was created.
+
+06.04.19
+1. Election form was added in CMP as a new folder with election project. Election Module was removed from CMP.
+
+
+14.09.19
+1. mp3 audio only can be recored in server 2.1
+2. wav file can be recorded in server2.3
+
+
+
+
+
+
+
+
+
