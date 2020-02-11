@@ -1,0 +1,3287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://www.w3.org/2005/05/xmlmime" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:xmime="http://www.w3.org/2005/05/xmlmime" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation">
+      <xs:import schemaLocation="http://www.w3.org/2005/05/xmlmime" namespace="http://www.w3.org/2005/05/xmlmime" />
+      <xs:simpleType name="Identifier">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="64" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ProcessIdentifier">
+        <xs:restriction base="xs:unsignedInt" />
+      </xs:simpleType>
+      <xs:complexType name="BinaryData">
+        <xs:sequence>
+          <xs:element name="Data" type="xs:base64Binary" />
+        </xs:sequence>
+        <xs:attribute ref="xmime:contentType" />
+      </xs:complexType>
+      <xs:complexType name="TimeCode">
+        <xs:sequence>
+          <xs:element name="Time" type="xs:time" />
+          <xs:element name="Frame" type="xs:unsignedInt" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="BasicUniqueMaterialIdentifier">
+        <xs:restriction base="xs:hexBinary">
+          <xs:maxLength value="32" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ExtendedUniqueMatrialIdentifier">
+        <xs:restriction base="xs:hexBinary">
+          <xs:maxLength value="64" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="FileName">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="64" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="SystemErrorCode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="InternalError" />
+          <xs:enumeration value="RequestTimeout" />
+          <xs:enumeration value="InvalidIdentifier" />
+          <xs:enumeration value="InvalidArgument" />
+          <xs:enumeration value="DiskNotMounted" />
+          <xs:enumeration value="DiskNearFull" />
+          <xs:enumeration value="DiskFull" />
+          <xs:enumeration value="MediaBusy" />
+          <xs:enumeration value="MediaWriteInhibited" />
+          <xs:enumeration value="MediaWriteProtected" />
+          <xs:enumeration value="MediaInUse" />
+          <xs:enumeration value="MediaRemoval" />
+          <xs:enumeration value="UnsupportedMediaFormat" />
+          <xs:enumeration value="FileWriteProtected" />
+          <xs:enumeration value="FileInUse" />
+          <xs:enumeration value="FileAlreadyExists" />
+          <xs:enumeration value="FileNotFound" />
+          <xs:enumeration value="FileLinkedByOthers" />
+          <xs:enumeration value="FileSyntaxError" />
+          <xs:enumeration value="ParseFileFailed" />
+          <xs:enumeration value="MaximumOpenFilesLimitExceeded" />
+          <xs:enumeration value="FilesNumberLimitExceeded" />
+          <xs:enumeration value="SameUmidAlreadyExists" />
+          <xs:enumeration value="UnsupportedFileFormat" />
+          <xs:enumeration value="NotReadyToPlay" />
+          <xs:enumeration value="IllegalEDL" />
+          <xs:enumeration value="PortNotIdle" />
+          <xs:enumeration value="PortNotActive" />
+          <xs:enumeration value="CueNotDone" />
+          <xs:enumeration value="MaximumOpenClipListsLimitExceeded" />
+          <xs:enumeration value="CopyGetResourceFailed" />
+          <xs:enumeration value="SessionNotFound" />
+          <xs:enumeration value="MaximumSessionsLimitExceeded" />
+          <xs:enumeration value="ProcessNotFound" />
+          <xs:enumeration value="MaximumProcessesLimitExceeded" />
+          <xs:enumeration value="ProcessAborted" />
+          <xs:enumeration value="AbortProcessFailed" />
+          <xs:enumeration value="OperationCancelled" />
+          <xs:enumeration value="TimeLineEventNotEnoughOffset" />
+          <xs:enumeration value="TimeLineEventAlreadyExists" />
+          <xs:enumeration value="EssenceMarkAlreadyExists" />
+          <xs:enumeration value="AddEssenceMarkFailed" />
+          <xs:enumeration value="UnwritableAVFormat" />
+          <xs:enumeration value="InvalidFileSystem" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="Fault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ErrorCode" type="tns:SystemErrorCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OpenPlayerRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier">
+              <xs:annotation>
+                <xs:documentation>Player_1, ...</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="PlayerMode" type="tns:OpenPlayerMode" />
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element name="ClipName" type="tns:FileName" />
+            <xs:element name="Offset" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OpenPlayerResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="OpenPlayerMode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Play" />
+          <xs:enumeration value="Still" />
+          <xs:enumeration value="Repeat" />
+          <xs:enumeration value="Key" />
+          <xs:enumeration value="TapeLikePlay" />
+          <xs:enumeration value="TapeLikeStill" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="ClosePlayerRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ClosePlayerResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayerStatusRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayerStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Status" type="tns:PlayerInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="PlayerInfo">
+        <xs:sequence>
+          <xs:element name="State" type="tns:PlayerState" />
+          <xs:element name="Mode" type="tns:PlayerMode" />
+          <xs:element name="RefStatus" type="tns:PlayerRefStatus" />
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="Port" type="tns:PortInfo" />
+          <xs:element minOccurs="0" name="PlayMode" type="tns:PlayMode" />
+          <xs:element minOccurs="0" name="ClipType" type="tns:ClipType" />
+          <xs:element minOccurs="0" name="EDLSubClipNumber" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="EDLSubClipTotalNumber" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="StopMarkDetectionEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CopyPlay" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InputCheck" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="PlayerState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="Stop" />
+          <xs:enumeration value="Rewind" />
+          <xs:enumeration value="FastForward" />
+          <xs:enumeration value="Play" />
+          <xs:enumeration value="Shuttle" />
+          <xs:enumeration value="Jog" />
+          <xs:enumeration value="Var" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="PlayerMode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="VDCP" />
+          <xs:enumeration value="TapeLike" />
+          <xs:enumeration value="SingleClip" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="PlayerRefStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Internal" />
+          <xs:enumeration value="InputVideo" />
+          <xs:enumeration value="Ext_HD" />
+          <xs:enumeration value="Ext_SD" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ClipType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Clip" />
+          <xs:enumeration value="EDL" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="PortInfo">
+        <xs:sequence>
+          <xs:element name="PortId" type="tns:Identifier">
+            <xs:annotation>
+              <xs:documentation>Port_1, Port_2, ...</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="PortType" type="tns:PortType" />
+          <xs:element name="LocalEnabled" type="xs:boolean" />
+          <xs:element name="Busy" type="xs:boolean" />
+          <xs:element name="Speed" type="xs:float" />
+          <xs:element minOccurs="0" name="Video" type="tns:PortVideoInfo" />
+          <xs:element minOccurs="0" name="Audio" type="tns:PortAudioInfo" />
+          <xs:element minOccurs="0" name="DriveId" type="tns:Identifier" />
+          <xs:element minOccurs="0" name="ClipName" type="tns:FileName" />
+          <xs:element minOccurs="0" name="CueupClipName" type="tns:FileName" />
+          <xs:element minOccurs="0" name="Standby" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="PortType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Record">
+            <xs:annotation>
+              <xs:documentation>Rec Port</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Playback">
+            <xs:annotation>
+              <xs:documentation>PB Port</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="PortVideoInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Status" type="tns:PortVideoStatus">
+            <xs:annotation>
+              <xs:documentation>Video Input (Rec port)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="HasVITC" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>VITC In (Rec port)/ VITC Out (PB port)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="VITC" type="tns:TimeCode" />
+          <xs:element minOccurs="0" name="VITCUserBitData" type="xs:hexBinary" />
+          <xs:element name="LTC" type="tns:TimeCode" />
+          <xs:element name="LTCUserBitData" type="xs:hexBinary" />
+          <xs:element name="Counter" type="tns:TimeCode" />
+          <xs:element name="FrameCount" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="PDTCAvailable" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>use PB port only.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="PDTC" type="tns:TimeCode" />
+          <xs:element minOccurs="0" name="TotalOffset" type="xs:unsignedInt" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="PortVideoStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:documentation>Video Input = False</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Input">
+            <xs:annotation>
+              <xs:documentation>Video Input = True</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Output" />
+          <xs:enumeration value="InternalSG">
+            <xs:annotation>
+              <xs:documentation>Internal SG on</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="PortAudioInfo">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="AudioChannel" type="tns:AudioChannel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AudioChannel">
+        <xs:sequence>
+          <xs:element name="Channel" type="xs:unsignedInt" />
+          <xs:element name="NonAudio" type="xs:boolean" />
+          <xs:element name="Level" type="xs:int" />
+          <xs:element minOccurs="0" name="HasInput" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>use REC port only.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Emphasis" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>use REC port only.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Usage" type="tns:AudioUsage">
+            <xs:annotation>
+              <xs:documentation>use REC port only.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="HasOutput" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>use PB port only</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="AudioUsage">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Consumer" />
+          <xs:enumeration value="Professional" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="GetPlayerScopeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayerScopeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Begin" type="tns:BasicUniqueMaterialIdentifier" />
+            <xs:element name="End" type="tns:BasicUniqueMaterialIdentifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayerStopMarkDetectionRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayerStopMarkDetectionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Enabled" type="xs:boolean" />
+            <xs:element name="Offset" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetPlayerStopMarkDetectionRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element name="Enabled" type="xs:boolean" />
+            <xs:element name="Offset" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetPlayerStopMarkDetectionResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PlayRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element minOccurs="0" name="Mode" type="tns:PlayMode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PlayResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="PlayMode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Play" />
+          <xs:enumeration value="Repeat" />
+          <xs:enumeration value="Key" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="PauseRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PauseResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FastForwardRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FastForwardResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RewindRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RewindResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ShuttleRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element name="Speed" type="xs:float" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ShuttleResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StepRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element name="Frames" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StepResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="JogRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element name="Speed" type="xs:float" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="JogResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VarRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element name="Speed" type="xs:float" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VarResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OpenRecorderRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier">
+              <xs:annotation>
+                <xs:documentation>Recorder_1, ...</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="RecorderMode" type="tns:OpenRecorderMode" />
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element minOccurs="0" name="ClipName" type="tns:FileName" />
+            <xs:element minOccurs="0" name="Frames" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OpenRecorderResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="OpenRecorderMode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Record" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="CloseRecorderRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CloseRecorderResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecorderStatusRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecorderStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Status" type="tns:RecorderInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="RecorderInfo">
+        <xs:sequence>
+          <xs:element name="State" type="tns:RecorderState" />
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="Port" type="tns:PortInfo" />
+          <xs:element minOccurs="0" name="RecRemain" type="tns:RecRemain" />
+          <xs:element minOccurs="0" name="Mode" type="tns:RecorderMode" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="RecorderState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="Record" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="RecRemain">
+        <xs:sequence>
+          <xs:element name="MediaLimit" type="xs:boolean" />
+          <xs:element name="ClipLimit" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="RecorderMode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Normal" />
+          <xs:enumeration value="PreRead" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="GetClipListRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetClipListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Clip" type="tns:ClipInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetClipPropertiesRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element name="ClipName" type="tns:FileName" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetClipPropertiesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Property" type="tns:ClipInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ClipInfo">
+        <xs:sequence>
+          <xs:element name="UMID" type="tns:BasicUniqueMaterialIdentifier" />
+          <xs:element name="ClipName" type="tns:FileName" />
+          <xs:element name="Protected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreateDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastModifiedDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NrtModifiedDateTime" type="xs:dateTime" />
+          <xs:element name="TotalFrames" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="ThumbnailFrame" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="KlvPackets" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="StartTimeCode" type="tns:TimeCode" />
+          <xs:element minOccurs="0" name="TimeCodeRate" type="xs:unsignedInt" />
+          <xs:element name="VideoCodecInfo" type="tns:VideoCodecInfo" />
+          <xs:element name="VideoFrameRate" type="tns:VideoFrameRate" />
+          <xs:element minOccurs="0" name="AudioCodec" type="tns:AudioCodec" />
+          <xs:element name="AudioChannels" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="ShotMark" type="xs:boolean" />
+          <xs:element name="ReadyToPlay" type="xs:boolean" />
+          <xs:element name="InRecording" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Flag" type="tns:ClipFlag" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Error" type="tns:ClipError" />
+          <xs:element minOccurs="0" name="InEdit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProxyExists" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="VideoCodecInfo">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="DV25_411" />
+          <xs:enumeration value="DV25DATA_411" />
+          <xs:enumeration value="DV25_420" />
+          <xs:enumeration value="DV25DATA_420" />
+          <xs:enumeration value="IMX30" />
+          <xs:enumeration value="IMX40" />
+          <xs:enumeration value="IMX50" />
+          <xs:enumeration value="MPEG2HD25CBR_1440_1080_MP@H-14" />
+          <xs:enumeration value="MPEG2HD12.5CBR_1440_540_MP@H-14" />
+          <xs:enumeration value="MPEG2HD17.5_1440_1080_MP@HL" />
+          <xs:enumeration value="MPEG2HD25_1440_1080_MP@HL" />
+          <xs:enumeration value="MPEG2HD35_1440_1080_MP@HL" />
+          <xs:enumeration value="MPEG2HD8.75_1440_540_MP@HL" />
+          <xs:enumeration value="MPEG2HD12.5_1440_540_MP@HL" />
+          <xs:enumeration value="MPEG2HD17.5_1440_540_MP@HL" />
+          <xs:enumeration value="MPEG2HD50CBR_1920_1080_422P@HL" />
+          <xs:enumeration value="MPEG2HD25CBR_1920_540_422P@HL" />
+          <xs:enumeration value="MPEG2HD50CBR_1280_720_422P@HL" />
+          <xs:enumeration value="MPEG2HD35_1280_720_MP@HL" />
+          <xs:enumeration value="MPEG2HD35_1920_1080_MP@HL" />
+          <xs:enumeration value="MPEG2HD25_1280_720_MP@HL" />
+          <xs:enumeration value="MPEG2HD25CBR_1280_720_MP@HL" />
+          <xs:enumeration value="AVC50CBG_1440_1080_H10IPL4" />
+          <xs:enumeration value="AVC100CBG_1920_1080_H422IPL41" />
+          <xs:enumeration value="AVC100CBG_1280_720_H422IPL41" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="VideoFrameRate">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="50i" />
+          <xs:enumeration value="59.94i" />
+          <xs:enumeration value="23.98p" />
+          <xs:enumeration value="50p" />
+          <xs:enumeration value="59.94p" />
+          <xs:enumeration value="25p" />
+          <xs:enumeration value="29.97p" />
+          <xs:enumeration value="24p" />
+          <xs:enumeration value="VariableRecMode" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="AudioCodec">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="LinearPCM16" />
+          <xs:enumeration value="LinearPCM24" />
+          <xs:enumeration value="NonLinearPCM16" />
+          <xs:enumeration value="NonLinearPCM24" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ClipFlag">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="OK" />
+          <xs:enumeration value="NG" />
+          <xs:enumeration value="Keep" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ClipError">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="IllegalEDL" />
+          <xs:enumeration value="IllegalNrtMeta" />
+          <xs:enumeration value="IllegalFileFormat" />
+          <xs:enumeration value="TemporarilyUnplayable" />
+          <xs:enumeration value="TapelikeUnavailable" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="SetClipPropertiesRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element name="ClipName" type="tns:FileName" />
+            <xs:element name="Property" type="tns:SetClipProps" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetClipPropertiesResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="SetClipProps">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Flag" type="tns:ClipFlag" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetClipThumbnailRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element name="ClipName" type="tns:FileName" />
+            <xs:element minOccurs="0" name="Frame" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetClipThumbnailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Thumbnail" type="tns:BinaryData" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CopyFileRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SrcDriveId" type="tns:Identifier" />
+            <xs:element name="SrcFileName" type="tns:FileName" />
+            <xs:element name="DstDriveId" type="tns:Identifier" />
+            <xs:element minOccurs="0" name="DstFileName" type="tns:FileName" />
+            <xs:element minOccurs="0" name="StartFrame" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Frames" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Mode" type="tns:CopyMode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CopyFileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ProcessId" type="tns:ProcessIdentifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="CopyMode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Transcode" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="GetCopyStatusRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Mode" type="tns:CopyMode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCopyStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Status" type="tns:CopyInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="CopyInfo">
+        <xs:sequence>
+          <xs:element name="ProcessId" type="tns:ProcessIdentifier" />
+          <xs:element name="CopiedFrameCount" type="xs:unsignedInt" />
+          <xs:element name="UnchangedUMIDMode" type="xs:boolean" />
+          <xs:element name="SrcInPoint" type="xs:unsignedInt" />
+          <xs:element name="SrcDuration" type="xs:unsignedInt" />
+          <xs:element name="SrcDriveId" type="tns:Identifier" />
+          <xs:element name="SrcFileName" type="tns:FileName" />
+          <xs:element name="DstDriveId" type="tns:Identifier" />
+          <xs:element name="DstFileName" type="tns:FileName" />
+          <xs:element name="RealDstDriveId" type="tns:Identifier" />
+          <xs:element name="RealDstFileName" type="tns:FileName" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SetFileDeleteProtectionRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element name="FileName" type="tns:FileName" />
+            <xs:element name="Protect" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetFileDeleteProtectionResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RenameFileRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element name="OldFileName" type="tns:FileName" />
+            <xs:element name="NewFileName" type="tns:FileName" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RenameFileResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteFileRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element name="FileName" type="tns:FileName" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteFileResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FormatRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FormatResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EjectRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EjectResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FinalizeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FinalizeResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetDriveModeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element name="Mode" type="tns:DriveMode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetDriveModeResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDriveStatusRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="DriveId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDriveStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="Status" type="tns:DriveInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="DriveInfo">
+        <xs:sequence>
+          <xs:element name="DriveId" type="tns:Identifier">
+            <xs:annotation>
+              <xs:documentation>InternalDrive, SxS_A, SxS_B, PD_ProAV, PD_BPAV, PD_XDROOT, USBDrive</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Mode" type="tns:DriveMode">
+            <xs:annotation>
+              <xs:documentation>use professional disc only.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="State" type="tns:DriveState" />
+          <xs:element name="MediaExists" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Media" type="tns:MediaInfo">
+            <xs:annotation>
+              <xs:documentation>Exist</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="MediaPresent" type="tns:MediaPresent" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="MediaPresent">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="Exists" />
+          <xs:enumeration value="Invalid" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="DriveMode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="StandbyOff" />
+          <xs:enumeration value="StandbyOn" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="DriveState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="Formatting" />
+          <xs:enumeration value="Mounting" />
+          <xs:enumeration value="Unmounting" />
+          <xs:enumeration value="Mounted" />
+          <xs:enumeration value="Finalizing" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="MediaInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MediaType" type="tns:MediaType">
+            <xs:annotation>
+              <xs:documentation />
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Status" type="tns:MediaStatus">
+            <xs:annotation>
+              <xs:documentation>use write once media only.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ResourceStatus" type="tns:MediaResourceStatus">
+            <xs:annotation>
+              <xs:documentation>use write once media only.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="WriteInhibited" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>REC Inhibit</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="TotalClips" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="Capacity" type="xs:unsignedLong" />
+          <xs:element minOccurs="0" name="AvailableSize" type="xs:unsignedLong" />
+          <xs:element minOccurs="0" name="NonRealTimeDataArea" type="tns:NonRealTimeDataAreaInfo">
+            <xs:annotation>
+              <xs:documentation>use professional disc only.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="WriteProtectEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FileSystem" type="tns:FileSystem" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="MediaType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SL_RE">
+            <xs:annotation>
+              <xs:documentation>Single Layer 23.3GB Read Write Media (SL-RE)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="DL_RE">
+            <xs:annotation>
+              <xs:documentation>Double Layer 50GB Read Write Media (DL-RE)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="QL_R">
+            <xs:annotation>
+              <xs:documentation>Quad Layer 128GB Write Once Media (QL_R)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="TL_RE">
+            <xs:annotation>
+              <xs:documentation>Triple Layer 100GB Read Write Media (TL_RE)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="SxS" />
+          <xs:enumeration value="MemoryStick" />
+          <xs:enumeration value="SDHC" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="MediaStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Unfinalized" />
+          <xs:enumeration value="AlreadyFinalized" />
+          <xs:enumeration value="FinalizeInhibited" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="MediaResourceStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Enough" />
+          <xs:enumeration value="Few" />
+          <xs:enumeration value="Empty" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="NonRealTimeDataAreaInfo">
+        <xs:sequence>
+          <xs:element name="AvailableSize" type="xs:unsignedLong" />
+          <xs:element name="Capacity" type="xs:unsignedLong" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="FileSystem">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="FAT32" />
+          <xs:enumeration value="UDF" />
+          <xs:enumeration value="exFAT" />
+          <xs:enumeration value="Others" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="GetMediaPropertiesRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMediaPropertiesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MediaId" type="tns:Identifier" />
+            <xs:element minOccurs="0" name="UserDiscId" type="tns:Identifier" />
+            <xs:element minOccurs="0" name="Title" type="xs:string" />
+            <xs:element minOccurs="0" name="SubTitle" type="xs:string" />
+            <xs:element minOccurs="0" name="UpdateCount" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Lifetime" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSystemPropertiesRequest">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSystemPropertiesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Model" type="tns:Model" />
+            <xs:element name="Device" type="tns:Device" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Model">
+        <xs:sequence>
+          <xs:element name="Manufacturer" type="xs:string" />
+          <xs:element name="ModelName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Device">
+        <xs:sequence>
+          <xs:element name="SerialNumber" type="xs:string" />
+          <xs:element name="FirmwareVersion" type="xs:string" />
+          <xs:element name="NetAPIVersion" type="xs:string" />
+          <xs:element name="InternalDrive" type="xs:string" />
+          <xs:element name="HasPDDrive" type="xs:boolean" />
+          <xs:element name="SxSRecordingEnabled" type="xs:boolean" />
+          <xs:element name="SystemFrequency" type="xs:string" />
+          <xs:element name="VTRMode" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetSystemStatusRequest">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSystemStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Status" type="tns:SystemInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="SystemInfo">
+        <xs:sequence>
+          <xs:element name="MonitorOutPort" type="tns:Identifier" />
+          <xs:element name="SetupChanged" type="xs:boolean" />
+          <xs:element name="NetAPI" type="tns:NetAPIInfo" />
+          <xs:element name="WorkInProgress" type="tns:WorkInProgress" />
+          <xs:element name="Maintenance" type="tns:Maintenance" />
+          <xs:element name="ErrorOccurred" type="xs:boolean" />
+          <xs:element name="WarningOccurred" type="xs:boolean" />
+          <xs:element maxOccurs="unbounded" name="PortRemote" type="tns:PortRemote" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NetAPIInfo">
+        <xs:sequence>
+          <xs:element name="LinkCount" type="xs:unsignedInt" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WorkInProgress">
+        <xs:sequence>
+          <xs:element name="MakeThumbnail" type="tns:Progress" />
+          <xs:element name="CopyFile" type="tns:CopyProgress" />
+          <xs:element name="DataTransfer" type="tns:Progress" />
+          <xs:element name="Shutdown" type="tns:Progress" />
+          <xs:element name="RebuildRaid" type="tns:Progress" />
+          <xs:element minOccurs="0" name="TranscodeCopy" type="tns:CopyProgress" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Progress">
+        <xs:sequence>
+          <xs:element name="Running" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>process state</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ProgressDetail" type="xs:unsignedInt">
+            <xs:annotation>
+              <xs:documentation>0 - 100 %</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CopyProgress">
+        <xs:sequence>
+          <xs:element name="Running" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>process state</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="SrcDriveId" type="tns:Identifier" />
+          <xs:element minOccurs="0" name="DstDriveId" type="tns:Identifier" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Maintenance">
+        <xs:sequence>
+          <xs:element name="RepowerRequired" type="xs:boolean" />
+          <xs:element name="RaidRebuildRequired" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SystemErrorWarningInfo">
+        <xs:sequence>
+          <xs:element name="ModuleExist" type="tns:ModuleExist" />
+          <xs:element name="ErrorWarningStatus" type="tns:ErrorWarningStatus" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ModuleExist">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="Module" type="tns:ModuleExistItem" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PortRemote">
+        <xs:sequence>
+          <xs:element name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+        <xs:attribute name="PortId" type="tns:Identifier" use="required" />
+      </xs:complexType>
+      <xs:element name="GetSystemErrorWarningRequest">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSystemErrorWarningResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ErrorWarningInfo" type="tns:SystemErrorWarningInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ErrorWarningStatus">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="Unit" type="tns:ErrorWarningStatusItem" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ModuleExistItem">
+        <xs:simpleContent>
+          <xs:extension base="xs:boolean">
+            <xs:attribute name="Name" type="tns:ModuleItem" use="required" />
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+      <xs:simpleType name="ModuleItem">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="TS" />
+          <xs:enumeration value="FP" />
+          <xs:enumeration value="IO" />
+          <xs:enumeration value="IT" />
+          <xs:enumeration value="SxS_A" />
+          <xs:enumeration value="SxS_B" />
+          <xs:enumeration value="PD" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="ErrorWarningStatusItem">
+        <xs:simpleContent>
+          <xs:extension base="tns:ErrorStatus">
+            <xs:attribute name="Name" type="tns:UnitItem" use="required" />
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+      <xs:simpleType name="UnitItem">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="PowerSupplyUnit_A" />
+          <xs:enumeration value="PowerSupplyUnit_B" />
+          <xs:enumeration value="Fan1" />
+          <xs:enumeration value="Fan2" />
+          <xs:enumeration value="HiTemp0" />
+          <xs:enumeration value="HiTemp1" />
+          <xs:enumeration value="LowTemp0" />
+          <xs:enumeration value="LowTemp1" />
+          <xs:enumeration value="CF_Smart" />
+          <xs:enumeration value="PSC_Power" />
+          <xs:enumeration value="Battery" />
+          <xs:enumeration value="SxS_A" />
+          <xs:enumeration value="SxS_B" />
+          <xs:enumeration value="PD" />
+          <xs:enumeration value="RefExisted" />
+          <xs:enumeration value="RefLocked" />
+          <xs:enumeration value="InputExisted" />
+          <xs:enumeration value="InputLocked" />
+          <xs:enumeration value="AudioEmphasis" />
+          <xs:enumeration value="FPConnected" />
+          <xs:enumeration value="FewDrive" />
+          <xs:enumeration value="DriveMismatched" />
+          <xs:enumeration value="HDD1" />
+          <xs:enumeration value="HDD2" />
+          <xs:enumeration value="HDD3" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ErrorStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Good" />
+          <xs:enumeration value="Warning" />
+          <xs:enumeration value="Error" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="ShutdownRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Seconds" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ShutdownResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AbortProcessRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ProcessId" type="tns:ProcessIdentifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AbortProcessResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSystemEventSessionIdRequest">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSystemEventSessionIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SessionId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSystemEventRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SessionId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSystemEventResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Event" type="tns:SystemEvent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="SystemEvent">
+        <xs:choice>
+          <xs:element name="ErrorOccurred" type="tns:EventDataNone" />
+          <xs:element name="WarningOccurred" type="tns:EventDataNone" />
+          <xs:element name="RepowerRequire" type="tns:EventDataNone" />
+          <xs:element name="RaidRebuildRequire" type="tns:EventDataNone" />
+          <xs:element name="FileCreated" type="tns:FileOperationEvent" />
+          <xs:element name="FileUpdated" type="tns:FileOperationEvent" />
+          <xs:element name="FileRenamed" type="tns:FileRenamedEvent" />
+          <xs:element name="FileDeleted" type="tns:FileOperationEvent" />
+          <xs:element name="FileWritingTerminated" type="tns:FileWritingTerminatedEvent" />
+          <xs:element name="UMIDChanged" type="tns:UMIDChangedEvent" />
+          <xs:element name="InjectStarted" type="tns:DriveEvent" />
+          <xs:element name="InjectTerminated" type="tns:DriveEvent" />
+          <xs:element name="EjectStarted" type="tns:DriveEvent" />
+          <xs:element name="EjectTerminated" type="tns:DriveEvent" />
+          <xs:element name="FormatStarted" type="tns:DriveEvent" />
+          <xs:element name="FormatTerminated" type="tns:DriveEvent" />
+          <xs:element name="FinalizeStarted" type="tns:DriveEvent" />
+          <xs:element name="FinalizeTerminated" type="tns:DriveEvent" />
+          <xs:element name="RecorderStarted" type="tns:RecorderEvent" />
+          <xs:element name="RecorderTerminated" type="tns:RecorderEvent" />
+          <xs:element name="CopyFileStarted" type="tns:EventDataNone" />
+          <xs:element name="CopyFileTerminated" type="tns:EventDataNone" />
+          <xs:element name="CopyFileResultReport" type="tns:CopyFileResultReportEvent" />
+          <xs:element name="TranscodeCopyFileStarted" type="tns:EventDataNone" />
+          <xs:element name="TranscodeCopyFileTerminated" type="tns:EventDataNone" />
+          <xs:element name="TranscodeCopyFileResultReport" type="tns:CopyFileResultReportEvent" />
+          <xs:element name="RemainingTimeAlert" type="tns:RemainingTimeAlert" />
+          <xs:element name="PlayerScopeChanged" type="tns:EventDataNone" />
+          <xs:element name="FileEditStarted" type="tns:FileOperationEvent" />
+          <xs:element name="FileEditTerminated" type="tns:FileOperationEvent" />
+        </xs:choice>
+        <xs:attribute name="UtcTime" type="xs:dateTime" use="required" />
+      </xs:complexType>
+      <xs:complexType name="EventDataNone">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="FileOperationEvent">
+        <xs:sequence>
+          <xs:element name="UMID" type="tns:BasicUniqueMaterialIdentifier" />
+          <xs:element name="DriveId" type="tns:Identifier" />
+          <xs:element name="FileName" type="tns:FileName" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="FileRenamedEvent">
+        <xs:sequence>
+          <xs:element name="UMID" type="tns:BasicUniqueMaterialIdentifier" />
+          <xs:element name="DriveId" type="tns:Identifier" />
+          <xs:element name="NewFileName" type="tns:FileName" />
+          <xs:element name="OldFileName" type="tns:FileName" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UMIDChangedEvent">
+        <xs:sequence>
+          <xs:element name="DriveId" type="tns:Identifier" />
+          <xs:element name="FileName" type="tns:FileName" />
+          <xs:element name="NewUMID" type="tns:BasicUniqueMaterialIdentifier" />
+          <xs:element name="OldUMID" type="tns:BasicUniqueMaterialIdentifier" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="FileWritingTerminatedEvent">
+        <xs:sequence>
+          <xs:element name="DriveId" type="tns:Identifier" />
+          <xs:element name="Property" type="tns:ClipInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DriveEvent">
+        <xs:sequence>
+          <xs:element name="DriveId" type="tns:Identifier" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RecorderEvent">
+        <xs:sequence>
+          <xs:element name="RecorderId" type="tns:Identifier" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RemainingTimeAlert">
+        <xs:sequence>
+          <xs:element name="Reason" type="tns:RemainingTimeAlertReason" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="RemainingTimeAlertReason">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="StorageLimitation" />
+          <xs:enumeration value="ClipLimitation" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="CopyFileResultCode">
+        <xs:choice>
+          <xs:element name="Success">
+            <xs:complexType>
+              <xs:sequence />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Failure" type="tns:SystemErrorCode" />
+        </xs:choice>
+      </xs:complexType>
+      <xs:complexType name="CopyFileResultReportEvent">
+        <xs:sequence>
+          <xs:element name="ProcessId" type="tns:ProcessIdentifier" />
+          <xs:element name="Code" type="tns:CopyFileResultCode" />
+          <xs:element name="SrcEndFrame" type="xs:unsignedInt" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AddEssenceMarkRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element name="ClipName" type="tns:FileName" />
+            <xs:element name="Offset" type="xs:unsignedInt" />
+            <xs:element name="EssenceMark" type="tns:EssenceMark" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddEssenceMarkResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Offset" type="xs:unsignedInt" />
+            <xs:element name="LTC" type="tns:TimeCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="EssenceMark">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="RecStart" />
+          <xs:enumeration value="Flash" />
+          <xs:enumeration value="OverAudioLimiter" />
+          <xs:enumeration value="WhiteBalanceChange" />
+          <xs:enumeration value="FilterChange" />
+          <xs:enumeration value="ShutterSpeedChange" />
+          <xs:enumeration value="GainChange" />
+          <xs:enumeration value="ShotMark1" />
+          <xs:enumeration value="ShotMark2" />
+          <xs:enumeration value="ShotMark3" />
+          <xs:enumeration value="ShotMark4" />
+          <xs:enumeration value="ShotMark5" />
+          <xs:enumeration value="ShotMark6" />
+          <xs:enumeration value="ShotMark7" />
+          <xs:enumeration value="ShotMark8" />
+          <xs:enumeration value="ShotMark9" />
+          <xs:enumeration value="ShotMark0" />
+          <xs:enumeration value="Cut" />
+          <xs:enumeration value="Other" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="AddEssenceMarkToUnnamedRecordingClipRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+            <xs:element name="EssenceMark" type="tns:EssenceMark" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddEssenceMarkToUnnamedRecordingClipResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteEssenceMarkRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DriveId" type="tns:Identifier" />
+            <xs:element name="ClipName" type="tns:FileName" />
+            <xs:element maxOccurs="unbounded" name="Offset" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteEssenceMarkResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DeletedEssenceMarks" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="TimeLineEventIdentifier">
+        <xs:restriction base="xs:unsignedInt" />
+      </xs:simpleType>
+      <xs:element name="SetPlayerTimeLineRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element name="Enabled" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetPlayerTimeLineResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayerTimeLineStatusRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayerTimeLineStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Status" type="tns:TimeLineStatus" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="TimeLineStatus">
+        <xs:sequence>
+          <xs:element name="Enabled" type="xs:boolean" />
+          <xs:element name="MaxEventNumbers" type="xs:unsignedInt" />
+          <xs:element name="State" type="tns:TimeLineState" />
+          <xs:element minOccurs="0" name="StartTime" type="tns:TimeCode" />
+          <xs:element minOccurs="0" name="RunningEventId" type="tns:TimeLineEventIdentifier" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="RegisteredEventList" type="tns:TimeLineEventInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="TimeLineState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Run" />
+          <xs:enumeration value="Stop" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="TimeLineEventInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StartTime" type="tns:TimeCode" />
+          <xs:element name="EventCompleted" type="xs:boolean" />
+          <xs:element name="ErrorOccurred" type="xs:boolean" />
+        </xs:sequence>
+        <xs:attribute name="eventId" type="tns:TimeLineEventIdentifier" use="required" />
+      </xs:complexType>
+      <xs:element name="SetPlayerTimeLineStartTimeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element name="StartTime" type="tns:TimeCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetPlayerTimeLineStartTimeResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StartPlayerTimeLineRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StartPlayerTimeLineResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StopPlayerTimeLineRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StopPlayerTimeLineResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayerTimeLineEventStatusRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element name="EventId" type="tns:TimeLineEventIdentifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPlayerTimeLineEventStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Status" type="tns:TimeLineEventStatus" />
+            <xs:element minOccurs="0" name="ErrorCode" type="tns:SystemErrorCode" />
+            <xs:element minOccurs="0" name="Offset" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Event" type="tns:PlayerTimeLineEvent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="TimeLineEventStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="Registered" />
+          <xs:enumeration value="InProgress" />
+          <xs:enumeration value="Completed" />
+          <xs:enumeration value="Error" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="AddPlayerTimeLineEventRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element name="EventId" type="tns:TimeLineEventIdentifier" />
+            <xs:element name="Offset" type="xs:unsignedInt" />
+            <xs:element name="Event" type="tns:PlayerTimeLineEvent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPlayerTimeLineEventResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="PlayerTimeLineEvent">
+        <xs:choice>
+          <xs:element name="Idle" type="tns:NonParamEvent" />
+          <xs:element name="CueAndPlay" type="tns:CueAndPlayEvent" />
+          <xs:element name="Play" type="tns:PlayEvent" />
+          <xs:element name="Pause" type="tns:NonParamEvent" />
+        </xs:choice>
+      </xs:complexType>
+      <xs:complexType name="NonParamEvent">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="CueAndPlayEvent">
+        <xs:sequence>
+          <xs:element name="Target" type="tns:PlayTarget" />
+          <xs:element name="CueUpPosition" type="xs:unsignedInt" />
+          <xs:element name="Mode" type="tns:OpenPlayerMode" />
+          <xs:element name="DriveId" type="tns:Identifier" />
+          <xs:element name="ClipName" type="tns:FileName" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="PlayTarget">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Foreground" />
+          <xs:enumeration value="Background" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="PlayEvent">
+        <xs:sequence>
+          <xs:element name="Mode" type="tns:PlayMode" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DeletePlayerTimeLineEventRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+            <xs:element name="EventId" type="tns:TimeLineEventIdentifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePlayerTimeLineEventResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePlayerTimeLineAllEventRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PlayerId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePlayerTimeLineAllEventResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetRecorderTimeLineRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+            <xs:element name="Enabled" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetRecorderTimeLineResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecorderTimeLineStatusRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecorderTimeLineStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Status" type="tns:TimeLineStatus" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetRecorderTimeLineStartTimeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+            <xs:element name="StartTime" type="tns:TimeCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetRecorderTimeLineStartTimeResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StartRecorderTimeLineRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StartRecorderTimeLineResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StopRecorderTimeLineRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StopRecorderTimeLineResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecorderTimeLineEventStatusRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+            <xs:element name="EventId" type="tns:TimeLineEventIdentifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRecorderTimeLineEventStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Status" type="tns:TimeLineEventStatus" />
+            <xs:element minOccurs="0" name="ErrorCode" type="tns:SystemErrorCode" />
+            <xs:element minOccurs="0" name="Offset" type="xs:unsignedInt" />
+            <xs:element minOccurs="0" name="Event" type="tns:RecorderTimeLineEvent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRecorderTimeLineEventRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+            <xs:element name="EventId" type="tns:TimeLineEventIdentifier" />
+            <xs:element name="Offset" type="xs:unsignedInt" />
+            <xs:element name="Event" type="tns:RecorderTimeLineEvent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRecorderTimeLineEventResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="RecorderTimeLineEvent">
+        <xs:choice>
+          <xs:element name="Idle" type="tns:NonParamEvent" />
+          <xs:element name="Record" type="tns:RecordEvent" />
+        </xs:choice>
+      </xs:complexType>
+      <xs:complexType name="RecordEvent">
+        <xs:sequence>
+          <xs:element name="DriveId" type="tns:Identifier" />
+          <xs:element name="ClipName" type="tns:FileName" />
+          <xs:element name="Frames" type="xs:unsignedInt" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DeleteRecorderTimeLineEventRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+            <xs:element name="EventId" type="tns:TimeLineEventIdentifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteRecorderTimeLineEventResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteRecorderTimeLineAllEventRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteRecorderTimeLineAllEventResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetRecorderTimeLineTimeCodeGeneratorModeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+            <xs:element name="Source" type="tns:TimeCodeGeneratorSource" />
+            <xs:element name="Mode" type="tns:TimeCodeGeneratorMode" />
+            <xs:element name="RunMode" type="tns:TimeCodeGeneratorRunMode" />
+            <xs:element name="SteppingMode" type="tns:TimeCodeGeneratorSteppingMode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetRecorderTimeLineTimeCodeGeneratorModeResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="TimeCodeGeneratorSource">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Internal" />
+          <xs:enumeration value="External" />
+          <xs:enumeration value="SystemTimeCode" />
+          <xs:enumeration value="SDI" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="TimeCodeGeneratorMode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Preset" />
+          <xs:enumeration value="TimeCode" />
+          <xs:enumeration value="VITC" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="TimeCodeGeneratorRunMode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Free" />
+          <xs:enumeration value="Rec" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="TimeCodeGeneratorSteppingMode">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="DropFrame" />
+          <xs:enumeration value="NonDropFrame" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="SetRecorderTimeLineTimeCodeGeneratorStartTimeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecorderId" type="tns:Identifier" />
+            <xs:element name="PresetValue" type="tns:TimeCode" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetRecorderTimeLineTimeCodeGeneratorStartTimeResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="OpenPlayerRequestMessage">
+    <wsdl:part name="parameter" element="tns:OpenPlayerRequest" />
+  </wsdl:message>
+  <wsdl:message name="OpenPlayerResponseMessage">
+    <wsdl:part name="parameter" element="tns:OpenPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="fault" element="tns:Fault" />
+  </wsdl:message>
+  <wsdl:message name="ClosePlayerRequestMessage">
+    <wsdl:part name="parameter" element="tns:ClosePlayerRequest" />
+  </wsdl:message>
+  <wsdl:message name="ClosePlayerResponseMessage">
+    <wsdl:part name="parameter" element="tns:ClosePlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="PlayRequestMessage">
+    <wsdl:part name="parameter" element="tns:PlayRequest" />
+  </wsdl:message>
+  <wsdl:message name="PlayResponseMessage">
+    <wsdl:part name="parameter" element="tns:PlayResponse" />
+  </wsdl:message>
+  <wsdl:message name="PauseRequestMessage">
+    <wsdl:part name="parameter" element="tns:PauseRequest" />
+  </wsdl:message>
+  <wsdl:message name="PauseResponseMessage">
+    <wsdl:part name="parameter" element="tns:PauseResponse" />
+  </wsdl:message>
+  <wsdl:message name="FastForwardRequestMessage">
+    <wsdl:part name="parameter" element="tns:FastForwardRequest" />
+  </wsdl:message>
+  <wsdl:message name="FastForwardResponseMessage">
+    <wsdl:part name="parameter" element="tns:FastForwardResponse" />
+  </wsdl:message>
+  <wsdl:message name="RewindRequestMessage">
+    <wsdl:part name="parameter" element="tns:RewindRequest" />
+  </wsdl:message>
+  <wsdl:message name="RewindResponseMessage">
+    <wsdl:part name="parameter" element="tns:RewindResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShuttleRequestMessage">
+    <wsdl:part name="parameter" element="tns:ShuttleRequest" />
+  </wsdl:message>
+  <wsdl:message name="ShuttleResponseMessage">
+    <wsdl:part name="parameter" element="tns:ShuttleResponse" />
+  </wsdl:message>
+  <wsdl:message name="StepRequestMessage">
+    <wsdl:part name="parameter" element="tns:StepRequest" />
+  </wsdl:message>
+  <wsdl:message name="StepResponseMessage">
+    <wsdl:part name="parameter" element="tns:StepResponse" />
+  </wsdl:message>
+  <wsdl:message name="JogRequestMessage">
+    <wsdl:part name="parameter" element="tns:JogRequest" />
+  </wsdl:message>
+  <wsdl:message name="JogResponseMessage">
+    <wsdl:part name="parameter" element="tns:JogResponse" />
+  </wsdl:message>
+  <wsdl:message name="VarRequestMessage">
+    <wsdl:part name="parameter" element="tns:VarRequest" />
+  </wsdl:message>
+  <wsdl:message name="VarResponseMessage">
+    <wsdl:part name="parameter" element="tns:VarResponse" />
+  </wsdl:message>
+  <wsdl:message name="OpenRecorderRequestMessage">
+    <wsdl:part name="parameter" element="tns:OpenRecorderRequest" />
+  </wsdl:message>
+  <wsdl:message name="OpenRecorderResponseMessage">
+    <wsdl:part name="parameter" element="tns:OpenRecorderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseRecorderRequestMessage">
+    <wsdl:part name="parameter" element="tns:CloseRecorderRequest" />
+  </wsdl:message>
+  <wsdl:message name="CloseRecorderResponseMessage">
+    <wsdl:part name="parameter" element="tns:CloseRecorderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileRequestMessage">
+    <wsdl:part name="parameter" element="tns:CopyFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileResponseMessage">
+    <wsdl:part name="parameter" element="tns:CopyFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetFileDeleteProtectionRequestMessage">
+    <wsdl:part name="parameter" element="tns:SetFileDeleteProtectionRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetFileDeleteProtectionResponseMessage">
+    <wsdl:part name="parameter" element="tns:SetFileDeleteProtectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RenameFileRequestMessage">
+    <wsdl:part name="parameter" element="tns:RenameFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="RenameFileResponseMessage">
+    <wsdl:part name="parameter" element="tns:RenameFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileRequestMessage">
+    <wsdl:part name="parameter" element="tns:DeleteFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileResponseMessage">
+    <wsdl:part name="parameter" element="tns:DeleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClipListRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetClipListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetClipListResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetClipListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClipPropertiesRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetClipPropertiesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetClipPropertiesResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetClipPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetClipPropertiesRequestMessage">
+    <wsdl:part name="parameter" element="tns:SetClipPropertiesRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetClipPropertiesResponseMessage">
+    <wsdl:part name="parameter" element="tns:SetClipPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClipThumbnailRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetClipThumbnailRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetClipThumbnailResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetClipThumbnailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemPropertiesRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetSystemPropertiesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemPropertiesResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetSystemPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemStatusRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetSystemStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemStatusResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetSystemStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDriveStatusRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetDriveStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetDriveStatusResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetDriveStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMediaPropertiesRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetMediaPropertiesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetMediaPropertiesResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetMediaPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerStatusRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetPlayerStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerStatusResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetPlayerStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerScopeRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetPlayerScopeRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerScopeResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetPlayerScopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerStopMarkDetectionRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetPlayerStopMarkDetectionRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerStopMarkDetectionResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetPlayerStopMarkDetectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPlayerStopMarkDetectionRequestMessage">
+    <wsdl:part name="parameter" element="tns:SetPlayerStopMarkDetectionRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetPlayerStopMarkDetectionResponseMessage">
+    <wsdl:part name="parameter" element="tns:SetPlayerStopMarkDetectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecorderStatusRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetRecorderStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetRecorderStatusResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetRecorderStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemErrorWarningRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetSystemErrorWarningRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemErrorWarningResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetSystemErrorWarningResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemEventSessionIdRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetSystemEventSessionIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemEventSessionIdResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetSystemEventSessionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemEventRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetSystemEventRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemEventResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetSystemEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShutdownRequestMessage">
+    <wsdl:part name="parameter" element="tns:ShutdownRequest" />
+  </wsdl:message>
+  <wsdl:message name="ShutdownResponseMessage">
+    <wsdl:part name="parameter" element="tns:ShutdownResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbortProcessRequestMessage">
+    <wsdl:part name="parameter" element="tns:AbortProcessRequest" />
+  </wsdl:message>
+  <wsdl:message name="AbortProcessResponseMessage">
+    <wsdl:part name="parameter" element="tns:AbortProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="FormatRequestMessage">
+    <wsdl:part name="parameter" element="tns:FormatRequest" />
+  </wsdl:message>
+  <wsdl:message name="FormatResponseMessage">
+    <wsdl:part name="parameter" element="tns:FormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="EjectRequestMessage">
+    <wsdl:part name="parameter" element="tns:EjectRequest" />
+  </wsdl:message>
+  <wsdl:message name="EjectResponseMessage">
+    <wsdl:part name="parameter" element="tns:EjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetDriveModeRequestMessage">
+    <wsdl:part name="parameter" element="tns:SetDriveModeRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetDriveModeResponseMessage">
+    <wsdl:part name="parameter" element="tns:SetDriveModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeRequestMessage">
+    <wsdl:part name="parameter" element="tns:FinalizeRequest" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeResponseMessage">
+    <wsdl:part name="parameter" element="tns:FinalizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCopyStatusRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetCopyStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetCopyStatusResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetCopyStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEssenceMarkRequestMessage">
+    <wsdl:part name="parameter" element="tns:AddEssenceMarkRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddEssenceMarkResponseMessage">
+    <wsdl:part name="parameter" element="tns:AddEssenceMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEssenceMarkRequestMessage">
+    <wsdl:part name="parameter" element="tns:DeleteEssenceMarkRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEssenceMarkRespnseMessage">
+    <wsdl:part name="parameter" element="tns:DeleteEssenceMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPlayerTimeLineRequestMessage">
+    <wsdl:part name="parameter" element="tns:SetPlayerTimeLineRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetPlayerTimeLineResponseMessage">
+    <wsdl:part name="parameter" element="tns:SetPlayerTimeLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerTimeLineStatusRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetPlayerTimeLineStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerTimeLineStatusResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetPlayerTimeLineStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPlayerTimeLineStartTimeRequestMessage">
+    <wsdl:part name="parameter" element="tns:SetPlayerTimeLineStartTimeRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetPlayerTimeLineStartTimeResponseMessage">
+    <wsdl:part name="parameter" element="tns:SetPlayerTimeLineStartTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartPlayerTimeLineRequestMessage">
+    <wsdl:part name="parameter" element="tns:StartPlayerTimeLineRequest" />
+  </wsdl:message>
+  <wsdl:message name="StartPlayerTimeLineResponseMessage">
+    <wsdl:part name="parameter" element="tns:StartPlayerTimeLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="StopPlayerTimeLineRequestMessage">
+    <wsdl:part name="parameter" element="tns:StopPlayerTimeLineRequest" />
+  </wsdl:message>
+  <wsdl:message name="StopPlayerTimeLineResponseMessage">
+    <wsdl:part name="parameter" element="tns:StopPlayerTimeLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerTimeLineEventStatusRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetPlayerTimeLineEventStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerTimeLineEventStatusResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetPlayerTimeLineEventStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPlayerTimeLineEventRequestMessage">
+    <wsdl:part name="parameter" element="tns:AddPlayerTimeLineEventRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddPlayerTimeLineEventResponseMessage">
+    <wsdl:part name="parameter" element="tns:AddPlayerTimeLineEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePlayerTimeLineEventRequestMessage">
+    <wsdl:part name="parameter" element="tns:DeletePlayerTimeLineEventRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeletePlayerTimeLineEventResponseMessage">
+    <wsdl:part name="parameter" element="tns:DeletePlayerTimeLineEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetRecorderTimeLineRequestMessage">
+    <wsdl:part name="parameter" element="tns:SetRecorderTimeLineRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetRecorderTimeLineResponseMessage">
+    <wsdl:part name="parameter" element="tns:SetRecorderTimeLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecorderTimeLineStatusRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetRecorderTimeLineStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetRecorderTimeLineStatusResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetRecorderTimeLineStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetRecorderTimeLineStartTimeRequestMessage">
+    <wsdl:part name="parameter" element="tns:SetRecorderTimeLineStartTimeRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetRecorderTimeLineStartTimeResponseMessage">
+    <wsdl:part name="parameter" element="tns:SetRecorderTimeLineStartTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartRecorderTimeLineRequestMessage">
+    <wsdl:part name="parameter" element="tns:StartRecorderTimeLineRequest" />
+  </wsdl:message>
+  <wsdl:message name="StartRecorderTimeLineResponseMessage">
+    <wsdl:part name="parameter" element="tns:StartRecorderTimeLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="StopRecorderTimeLineRequestMessage">
+    <wsdl:part name="parameter" element="tns:StopRecorderTimeLineRequest" />
+  </wsdl:message>
+  <wsdl:message name="StopRecorderTimeLineResponseMessage">
+    <wsdl:part name="parameter" element="tns:StopRecorderTimeLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecorderTimeLineEventStatusRequestMessage">
+    <wsdl:part name="parameter" element="tns:GetRecorderTimeLineEventStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetRecorderTimeLineEventStatusResponseMessage">
+    <wsdl:part name="parameter" element="tns:GetRecorderTimeLineEventStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddRecorderTimeLineEventRequestMessage">
+    <wsdl:part name="parameter" element="tns:AddRecorderTimeLineEventRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddRecorderTimeLineEventResponseMessage">
+    <wsdl:part name="parameter" element="tns:AddRecorderTimeLineEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecorderTimeLineEventRequestMessage">
+    <wsdl:part name="parameter" element="tns:DeleteRecorderTimeLineEventRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecorderTimeLineEventResponseMessage">
+    <wsdl:part name="parameter" element="tns:DeleteRecorderTimeLineEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetRecorderTimeLineTimeCodeGeneratorModeRequestMessage">
+    <wsdl:part name="parameter" element="tns:SetRecorderTimeLineTimeCodeGeneratorModeRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetRecorderTimeLineTimeCodeGeneratorModeResponseMessage">
+    <wsdl:part name="parameter" element="tns:SetRecorderTimeLineTimeCodeGeneratorModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetRecorderTimeLineTimeCodeGeneratorStartTimeRequestMessasge">
+    <wsdl:part name="parameter" element="tns:SetRecorderTimeLineTimeCodeGeneratorStartTimeRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetRecorderTimeLineTimeCodeGeneratorStartTimeResponseMessage">
+    <wsdl:part name="parameter" element="tns:SetRecorderTimeLineTimeCodeGeneratorStartTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePlayerTimeLineAllEventRequestMessage">
+    <wsdl:part name="parameter" element="tns:DeletePlayerTimeLineAllEventRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeletePlayerTimeLineAllEventResponseMessage">
+    <wsdl:part name="parameter" element="tns:DeletePlayerTimeLineAllEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecorderTimeLineAllEventRequestMessage">
+    <wsdl:part name="parameter" element="tns:DeleteRecorderTimeLineAllEventRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecorderTimeLineAllEventResponseMessage">
+    <wsdl:part name="parameter" element="tns:DeleteRecorderTimeLineAllEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEssenceMarkToUnnamedRecordingClipRequestMessage">
+    <wsdl:part name="parameter" element="tns:AddEssenceMarkToUnnamedRecordingClipRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddEssenceMarkToUnnamedRecordingClipResponseMessage">
+    <wsdl:part name="parameter" element="tns:AddEssenceMarkToUnnamedRecordingClipResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MediaStationPortType">
+    <wsdl:operation name="OpenPlayer">
+      <wsdl:documentation>The OpenPlayer command opens the Player to play back the specified Clip. OpenPlayer has two modes to open the Player: Playing mode to play back the Clip immediately from the start timecode and Still mode to output the still picture of the start timecode.</wsdl:documentation>
+      <wsdl:input message="tns:OpenPlayerRequestMessage" />
+      <wsdl:output message="tns:OpenPlayerResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClosePlayer">
+      <wsdl:documentation>The ClosePlayer command closes the Player. And all the binded ports will be closed.</wsdl:documentation>
+      <wsdl:input message="tns:ClosePlayerRequestMessage" />
+      <wsdl:output message="tns:ClosePlayerResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStatus">
+      <wsdl:documentation>The GetPlayerStatus command gets the current player status.</wsdl:documentation>
+      <wsdl:input message="tns:GetPlayerStatusRequestMessage" />
+      <wsdl:output message="tns:GetPlayerStatusResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerScope">
+      <wsdl:input message="tns:GetPlayerScopeRequestMessage" />
+      <wsdl:output message="tns:GetPlayerScopeResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStopMarkDetection">
+      <wsdl:input message="tns:GetPlayerStopMarkDetectionRequestMessage" />
+      <wsdl:output message="tns:GetPlayerStopMarkDetectionResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerStopMarkDetection">
+      <wsdl:input message="tns:SetPlayerStopMarkDetectionRequestMessage" />
+      <wsdl:output message="tns:SetPlayerStopMarkDetectionResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Play">
+      <wsdl:documentation>The Play command plays the Clip in the specified Player.</wsdl:documentation>
+      <wsdl:input message="tns:PlayRequestMessage" />
+      <wsdl:output message="tns:PlayResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pause">
+      <wsdl:documentation>The Pause command pauses the Clip in the specified Player.</wsdl:documentation>
+      <wsdl:input message="tns:PauseRequestMessage" />
+      <wsdl:output message="tns:PauseResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FastForward">
+      <wsdl:documentation>The FastFoward command fast forwards the Clip in the specified Player at a speed set in the unit.</wsdl:documentation>
+      <wsdl:input message="tns:FastForwardRequestMessage" />
+      <wsdl:output message="tns:FastForwardResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rewind">
+      <wsdl:documentation>The Rewind command rewinds the Clip in the specified Player at a speed set in the unit.</wsdl:documentation>
+      <wsdl:input message="tns:RewindRequestMessage" />
+      <wsdl:output message="tns:RewindResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Shuttle">
+      <wsdl:documentation>The Shuttle command fast forwards  or rewinds the Clip in the specified Player at a specified speed.</wsdl:documentation>
+      <wsdl:input message="tns:ShuttleRequestMessage" />
+      <wsdl:output message="tns:ShuttleResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Step">
+      <wsdl:documentation>The Step command forwards or rewinds the same number of Clips in the specified Player as the number of specified frames.</wsdl:documentation>
+      <wsdl:input message="tns:StepRequestMessage" />
+      <wsdl:output message="tns:StepResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Jog">
+      <wsdl:documentation>The Jog command plays back the Clip in the specified Player at a specified speed.</wsdl:documentation>
+      <wsdl:input message="tns:JogRequestMessage" />
+      <wsdl:output message="tns:JogResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Var">
+      <wsdl:documentation>The Var command plays back the Clip in the specified Player at a specified speed.</wsdl:documentation>
+      <wsdl:input message="tns:VarRequestMessage" />
+      <wsdl:output message="tns:VarResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OpenRecorder">
+      <wsdl:documentation>The OpenRecorder command opens the Recorder to record video.</wsdl:documentation>
+      <wsdl:input message="tns:OpenRecorderRequestMessage" />
+      <wsdl:output message="tns:OpenRecorderResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseRecorder">
+      <wsdl:documentation>The CloseRecorder command closes the Recorder. And all the binded ports will be closed.</wsdl:documentation>
+      <wsdl:input message="tns:CloseRecorderRequestMessage" />
+      <wsdl:output message="tns:CloseRecorderResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecorderStatus">
+      <wsdl:documentation>The GetRecorderStatus command gets the current recorder status.</wsdl:documentation>
+      <wsdl:input message="tns:GetRecorderStatusRequestMessage" />
+      <wsdl:output message="tns:GetRecorderStatusResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClipProperties">
+      <wsdl:documentation>The GetClipProperties command gets the clip information from the specified drive. If FileList is specified, the command gets the clip information specified by FileList. On the other hand, if no FileList is specified, the command gets the same amout of property information as that of specified by Number.</wsdl:documentation>
+      <wsdl:input message="tns:GetClipPropertiesRequestMessage" />
+      <wsdl:output message="tns:GetClipPropertiesResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClipProperties">
+      <wsdl:documentation>The SetClipProperties command sets the clip information on the specified drive. </wsdl:documentation>
+      <wsdl:input message="tns:SetClipPropertiesRequestMessage" />
+      <wsdl:output message="tns:SetClipPropertiesResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClipList">
+      <wsdl:documentation>GetClipList command gets the clip list from the specified drive.</wsdl:documentation>
+      <wsdl:input message="tns:GetClipListRequestMessage" />
+      <wsdl:output message="tns:GetClipListResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClipThumbnail">
+      <wsdl:documentation>The GetClipThumbnail command gets the ClipThumbnail from the specified Clip.</wsdl:documentation>
+      <wsdl:input message="tns:GetClipThumbnailRequestMessage" />
+      <wsdl:output message="tns:GetClipThumbnailResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <wsdl:documentation>The ImportFile command imports Clips or EDL File in the recording media into the internal storage. If no file name is specified in FileList, the command imports all target File in the recording media. On the other hand, if a file name is specified, the command imports only the specified file.</wsdl:documentation>
+      <wsdl:input message="tns:CopyFileRequestMessage" />
+      <wsdl:output message="tns:CopyFileResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCopyStatus">
+      <wsdl:input message="tns:GetCopyStatusRequestMessage" />
+      <wsdl:output message="tns:GetCopyStatusResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFileDeleteProtection">
+      <wsdl:documentation>The SetFileDeleteProtection command sets the permission or prohibition of operation to the specified file.</wsdl:documentation>
+      <wsdl:input message="tns:SetFileDeleteProtectionRequestMessage" />
+      <wsdl:output message="tns:SetFileDeleteProtectionResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameFile">
+      <wsdl:documentation>The RenameFile command renames the specified Clip or EDL.</wsdl:documentation>
+      <wsdl:input message="tns:RenameFileRequestMessage" />
+      <wsdl:output message="tns:RenameFileResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:documentation>The RemoveFile command removes the specified Clip or EDL file. Note that if no file name is specified in FileList, the command removes all the Clips and EDL File in the specified drive.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteFileRequestMessage" />
+      <wsdl:output message="tns:DeleteFileResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Format">
+      <wsdl:documentation>The Format command formats the specified dirve.</wsdl:documentation>
+      <wsdl:input message="tns:FormatRequestMessage" />
+      <wsdl:output message="tns:FormatResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eject">
+      <wsdl:documentation>The Eject command ejects the recording media in the specified drive.</wsdl:documentation>
+      <wsdl:input message="tns:EjectRequestMessage" />
+      <wsdl:output message="tns:EjectResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Finalize">
+      <wsdl:input message="tns:FinalizeRequestMessage" />
+      <wsdl:output message="tns:FinalizeResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDriveMode">
+      <wsdl:documentation>The SetStandby command stands by the specified drive.</wsdl:documentation>
+      <wsdl:input message="tns:SetDriveModeRequestMessage" />
+      <wsdl:output message="tns:SetDriveModeResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDriveStatus">
+      <wsdl:documentation>The GetDriveStatus command gets the current storage status.</wsdl:documentation>
+      <wsdl:input message="tns:GetDriveStatusRequestMessage" />
+      <wsdl:output message="tns:GetDriveStatusResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaProperties">
+      <wsdl:input message="tns:GetMediaPropertiesRequestMessage" />
+      <wsdl:output message="tns:GetMediaPropertiesResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemProperties">
+      <wsdl:input message="tns:GetSystemPropertiesRequestMessage" />
+      <wsdl:output message="tns:GetSystemPropertiesResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemStatus">
+      <wsdl:documentation>The GetSystemStatus command gets the current system status.</wsdl:documentation>
+      <wsdl:input message="tns:GetSystemStatusRequestMessage" />
+      <wsdl:output message="tns:GetSystemStatusResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemErrorWarning">
+      <wsdl:documentation>The GetErrorReport command gets the current error status.</wsdl:documentation>
+      <wsdl:input message="tns:GetSystemErrorWarningRequestMessage" />
+      <wsdl:output message="tns:GetSystemErrorWarningResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Shutdown">
+      <wsdl:documentation>The Shutdown command shutdown the system.</wsdl:documentation>
+      <wsdl:input message="tns:ShutdownRequestMessage" />
+      <wsdl:output message="tns:ShutdownResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortProcess">
+      <wsdl:documentation>The AbortProcess command aborts the process specified by ProcessID.</wsdl:documentation>
+      <wsdl:input message="tns:AbortProcessRequestMessage" />
+      <wsdl:output message="tns:AbortProcessResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemEventSessionId">
+      <wsdl:input message="tns:GetSystemEventSessionIdRequestMessage" />
+      <wsdl:output message="tns:GetSystemEventSessionIdResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemEvent">
+      <wsdl:documentation>The GetSystemEvent command gets the system events.</wsdl:documentation>
+      <wsdl:input message="tns:GetSystemEventRequestMessage" />
+      <wsdl:output message="tns:GetSystemEventResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEssenceMark">
+      <wsdl:input message="tns:AddEssenceMarkRequestMessage" />
+      <wsdl:output message="tns:AddEssenceMarkResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEssenceMark">
+      <wsdl:input message="tns:DeleteEssenceMarkRequestMessage" />
+      <wsdl:output message="tns:DeleteEssenceMarkRespnseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerTimeLine">
+      <wsdl:input message="tns:SetPlayerTimeLineRequestMessage" />
+      <wsdl:output message="tns:SetPlayerTimeLineResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerTimeLineStatus">
+      <wsdl:input message="tns:GetPlayerTimeLineStatusRequestMessage" />
+      <wsdl:output message="tns:GetPlayerTimeLineStatusResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerTimeLineStartTime">
+      <wsdl:input message="tns:SetPlayerTimeLineStartTimeRequestMessage" />
+      <wsdl:output message="tns:SetPlayerTimeLineStartTimeResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartPlayerTimeLine">
+      <wsdl:input message="tns:StartPlayerTimeLineRequestMessage" />
+      <wsdl:output message="tns:StartPlayerTimeLineResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopPlayerTimeLine">
+      <wsdl:input message="tns:StopPlayerTimeLineRequestMessage" />
+      <wsdl:output message="tns:StopPlayerTimeLineResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerTimeLineEventStatus">
+      <wsdl:input message="tns:GetPlayerTimeLineEventStatusRequestMessage" />
+      <wsdl:output message="tns:GetPlayerTimeLineEventStatusResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayerTimeLineEvent">
+      <wsdl:input message="tns:AddPlayerTimeLineEventRequestMessage" />
+      <wsdl:output message="tns:AddPlayerTimeLineEventResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerTimeLineEvent">
+      <wsdl:input message="tns:DeletePlayerTimeLineEventRequestMessage" />
+      <wsdl:output message="tns:DeletePlayerTimeLineEventResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRecorderTimeLine">
+      <wsdl:input message="tns:SetRecorderTimeLineRequestMessage" />
+      <wsdl:output message="tns:SetRecorderTimeLineResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecorderTimeLineStatus">
+      <wsdl:input message="tns:GetRecorderTimeLineStatusRequestMessage" />
+      <wsdl:output message="tns:GetRecorderTimeLineStatusResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRecorderTimeLineStartTime">
+      <wsdl:input message="tns:SetRecorderTimeLineStartTimeRequestMessage" />
+      <wsdl:output message="tns:SetRecorderTimeLineStartTimeResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartRecorderTimeLine">
+      <wsdl:input message="tns:StartRecorderTimeLineRequestMessage" />
+      <wsdl:output message="tns:StartRecorderTimeLineResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopRecorderTimeLine">
+      <wsdl:input message="tns:StopRecorderTimeLineRequestMessage" />
+      <wsdl:output message="tns:StopRecorderTimeLineResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecorderTimeLineEventStatus">
+      <wsdl:input message="tns:GetRecorderTimeLineEventStatusRequestMessage" />
+      <wsdl:output message="tns:GetRecorderTimeLineEventStatusResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRecorderTimeLineEvent">
+      <wsdl:input message="tns:AddRecorderTimeLineEventRequestMessage" />
+      <wsdl:output message="tns:AddRecorderTimeLineEventResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecorderTimeLineEvent">
+      <wsdl:input message="tns:DeleteRecorderTimeLineEventRequestMessage" />
+      <wsdl:output message="tns:DeleteRecorderTimeLineEventResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRecorderTimeLineTimeCodeGeneratorMode">
+      <wsdl:input message="tns:SetRecorderTimeLineTimeCodeGeneratorModeRequestMessage" />
+      <wsdl:output message="tns:SetRecorderTimeLineTimeCodeGeneratorModeResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRecorderTimeLineTimeCodeGeneratorStartTime">
+      <wsdl:input message="tns:SetRecorderTimeLineTimeCodeGeneratorStartTimeRequestMessasge" />
+      <wsdl:output message="tns:SetRecorderTimeLineTimeCodeGeneratorStartTimeResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerTimeLineAllEvent">
+      <wsdl:input message="tns:DeletePlayerTimeLineAllEventRequestMessage" />
+      <wsdl:output message="tns:DeletePlayerTimeLineAllEventResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecorderTimeLineAllEvent">
+      <wsdl:input message="tns:DeleteRecorderTimeLineAllEventRequestMessage" />
+      <wsdl:output message="tns:DeleteRecorderTimeLineAllEventResponseMessage" />
+      <wsdl:fault name="fault" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEssenceMarkToUnnamedRecordingClip">
+      <wsdl:input message="tns:AddEssenceMarkToUnnamedRecordingClipRequestMessage" />
+      <wsdl:output message="tns:AddEssenceMarkToUnnamedRecordingClipResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MediaStationBinding" type="tns:MediaStationPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="OpenPlayer">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/OpenPlayer" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePlayer">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/ClosePlayer" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStatus">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetPlayerStatus" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerScope">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetPlayerScope" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStopMarkDetection">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetPlayerStopMarkDetection" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerStopMarkDetection">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/SetPlayerStopMarkDetection" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Play">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/Play" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Pause">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/Pause" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FastForward">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/FastForward" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Rewind">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/Rewind" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Shuttle">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/Shuttle" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Step">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/Step" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Jog">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/Jog" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Var">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/Var" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OpenRecorder">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/OpenRecorder" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseRecorder">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/CloseRecorder" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecorderStatus">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetRecorderStatus" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetClipProperties">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetClipProperties" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetClipProperties">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/SetClipProperties" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetClipList">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetClipList" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetClipThumbnail">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetClipThumbnail" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/CopyFile" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCopyStatus">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetCopyStatus" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetFileDeleteProtection">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/SetFileDeleteProtection" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RenameFile">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/RenameFile" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/DeleteFile" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Format">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/Format" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Eject">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/Eject" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Finalize">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/Finalize" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetDriveMode">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/SetDriveMode" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDriveStatus">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetDriveStatus" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaProperties">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetMediaProperties" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemProperties">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetSystemProperties" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemStatus">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetSystemStatus" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemErrorWarning">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetSystemErrorWarning" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Shutdown">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/AbortShutdown" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AbortProcess">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/AbortProcess" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemEventSessionId">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetSystemEventSessionId" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemEvent">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetSystemEvent" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddEssenceMark">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/AddEssenceMark" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEssenceMark">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/DeleteEssenceMark" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerTimeLine">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/SetPlayerTimeLine" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerTimeLineStatus">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetPlayerTimeLineStatus" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerTimeLineStartTime">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/SetPlayerTimeLineStartTime" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StartPlayerTimeLine">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/StartPlayerTimeLine" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StopPlayerTimeLine">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/StopPlayerTimeLine" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayerTimeLineEvent">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/AddPlayerTimeLineEvent" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerTimeLineEvent">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/DeletePlayerTimeLineEvent" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetRecorderTimeLine">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/SetRecorderTimeLine" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecorderTimeLineStatus">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetRecorderTimeLineStatus" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetRecorderTimeLineStartTime">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/SetRecorderTimeLineStartTime" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StartRecorderTimeLine">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/StartRecorderTimeLine" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StopRecorderTimeLine">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/StopRecorderTimeLine" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddRecorderTimeLineEvent">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/AddRecorderTimeLineEvent" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecorderTimeLineEvent">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/DeleteRecorderTimeLineEvent" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetRecorderTimeLineTimeCodeGeneratorMode">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/SetRecorderTimeLineTimeCodeGenerator" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetRecorderTimeLineTimeCodeGeneratorStartTime">
+      <soap12:operation soapAction="urn:#NewOperation" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerTimeLineEventStatus">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetPlayerTimeLineEventStatus" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecorderTimeLineEventStatus">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/GetRecorderTimeLineEventStatus" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerTimeLineAllEvent">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/DeletePlayerTimeLineAllEvent" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecorderTimeLineAllEvent">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/DeleteRecorderTimeLineAllEvent" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap12:fault use="literal" name="fault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddEssenceMarkToUnnamedRecordingClip">
+      <soap12:operation soapAction="http://xmlns.sony.net/professional/wsdl/xdcam/2011/06/mediastation/AddEssenceMarkToUnnamedRecordingClip" soapActionRequired="true" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MediaStationService">
+    <wsdl:port name="MediaStationPort" binding="tns:MediaStationBinding">
+      <soap12:address location="http://192.168.1.54/webservice/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
