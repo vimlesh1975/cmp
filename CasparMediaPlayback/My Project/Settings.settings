@@ -1,0 +1,944 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="rss" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://news.google.com/news?pz=1&amp;cf=all&amp;ned=hi_in&amp;hl=hi&amp;output=rss</Value>
+    </Setting>
+    <Setting Name="rss_delimeter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">   *   </Value>
+    </Setting>
+    <Setting Name="rss_update_interval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10000</Value>
+    </Setting>
+    <Setting Name="rss_speed" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="decklink_live" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="rsstitle" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="rssdescription" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="txtsearchtemplate" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cmbfonttemplate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Calibri</Value>
+    </Setting>
+    <Setting Name="txtsearch" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cmbrecordformat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mp4</Value>
+    </Setting>
+    <Setting Name="txtfilename" Type="System.String" Scope="User">
+      <Value Profile="(Default)">test</Value>
+    </Setting>
+    <Setting Name="txtextrarecordoptions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-codec:v mpeg4 -g 1 -alternate_scan 1</Value>
+    </Setting>
+    <Setting Name="txtleftlogo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Casparcg\mydata\left\clock1.swf</Value>
+    </Setting>
+    <Setting Name="txtrightlogo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Casparcg\mydata\right\Royal.jpg</Value>
+    </Setting>
+    <Setting Name="txtmiddle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Casparcg\mydata\middle\MovieBackground1.swf</Value>
+    </Setting>
+    <Setting Name="cmdstripcolor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">DarkGreen</Value>
+    </Setting>
+    <Setting Name="lblstripcolor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0x005500</Value>
+    </Setting>
+    <Setting Name="lblcolor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0xFFFF00</Value>
+    </Setting>
+    <Setting Name="cmbfonths1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Times New Roman</Value>
+    </Setting>
+    <Setting Name="chkclock" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="chkltrhs1" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="txtcrawl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Welcome To Doordarshan . This is Horizonal scroll line 1 testing. All are welcome to contribute.</Value>
+    </Setting>
+    <Setting Name="txtrsstimerinterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10000</Value>
+    </Setting>
+    <Setting Name="nrssspeed" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="cmbrssvideoflashlayer" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">76</Value>
+    </Setting>
+    <Setting Name="chkautomaticreadrss" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="chkrsstitle" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="chkrssdescription" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="chkautomaticupdaterss" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="txtinterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3600</Value>
+    </Setting>
+    <Setting Name="txtbitrate" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="cmbvideolayerfortemplate" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">96</Value>
+    </Setting>
+    <Setting Name="cmblayertemplate" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">96</Value>
+    </Setting>
+    <Setting Name="nsize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">35</Value>
+    </Setting>
+    <Setting Name="nspeed" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="ny" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">510</Value>
+    </Setting>
+    <Setting Name="cmblayerhs1" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">36</Value>
+    </Setting>
+    <Setting Name="lblstripcolor2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0x005500</Value>
+    </Setting>
+    <Setting Name="lblcolor2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0xFFFF00</Value>
+    </Setting>
+    <Setting Name="cmdstripcolor2" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">DarkGreen</Value>
+    </Setting>
+    <Setting Name="cmdcolor2" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Yellow</Value>
+    </Setting>
+    <Setting Name="cmblayerhs2" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">31</Value>
+    </Setting>
+    <Setting Name="ny2" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">410</Value>
+    </Setting>
+    <Setting Name="chkclock2" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="nsize2" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">35</Value>
+    </Setting>
+    <Setting Name="nspeed2" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="cmbfonths2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Impact</Value>
+    </Setting>
+    <Setting Name="chkltrhs2" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="nsizeV" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">35</Value>
+    </Setting>
+    <Setting Name="nspeedV" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1.1</Value>
+    </Setting>
+    <Setting Name="cmbfontvs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Impact</Value>
+    </Setting>
+    <Setting Name="txtcrawlv" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Overall In-charge
+MUKESH SHARMA
+
+Producers
+Ravi Deep
+Sandeep Sood
+
+Assistant in Production 
+Vijay Bhingarde
+Yohan Samuel
+Falgun Limbachiye
+Priti Sawant
+
+Presenters 
+Milind Wagle
+Akshay Maurya
+Mona Pahuja
+Charu Priya
+
+Commentator (Marathi)
+Prasanna Sant
+
+Show Co-ordinators
+Shrikala Hattangady
+Prajyoti Manda
+Sandhya Pujari
+Santoshi Pawar
+
+Audio-Video Clips
+Vishwajit Walunje
+Amit Agarkar
+Yogesh Chavan
+Shivaji Gangawane
+
+Editors
+Mrutyunjay Wadhwane
+Siddhesh Chindarkar
+Bhushan Gandhi
+
+Graphics and Captions
+Vimlesh Kumar
+Sachin Binaram
+
+Acknowledgements
+MIT Group of Institution, Pune
+
+Director of Photography
+R.N. S. Reddy
+
+Camera 
+Pradeep Chakravorthy
+N. Venkata Raman
+Vijay Sharma
+Chindananda Murthy
+Sridhar Raj  Urs
+Arun Wilson
+B.M. Rajshekar
+Venkata Raghavan
+K.S. Ravidra
+Maruti Rao
+
+Jib Cameramen
+Bhagesh Sharma
+Pankaj Sharma
+Deepak Jhadavkar
+
+Video Asst.
+Nirmal Sahoo
+Sushant Bansode
+
+
+ENG Teams
+VM
+V.R. Kulkarni
+
+CCU
+Rajendra Deshmukh
+Shankar Renuse
+Vilas Nanijkar
+
+Audio 
+Jayesh Wavhal (OB Van)
+Sadanand Pednekar(Stadium/Commmentator)
+
+EVS
+Vijay Hadap
+Peter Mahindraraj
+
+VTR
+Manoj Shelake
+
+OB Maintenance
+Nitin Patravale
+
+Technicians
+Dinesh Kolhatkar
+L V Gavade
+
+Helpers 
+Shailesh Waghdhare
+Prakash Kharade
+
+Technical Director
+V. Muppudathi
+
+Producers 
+Vidut Shah
+Ashwani Kumar
+Sanjay Karnik
+Pradeep Chakraworthy
+Sridhar Raj urs
+
+Sound
+Hemant Ramarao
+
+Lighting Asstt.
+Sanjay
+Sripad
+Shashi
+
+Drivers
+Iqbal Sangrar
+Dilip Girase
+Kishor Pawaskar
+Prakash Surve
+Narayan Shetty
+Mayur Kadam
+Sanjay Gabaji
+Nandkumar Mistry
+
+First Draw 
+Thailand v/s Egypt
+Japan v/ Korea
+Indonesia V/s Srilanka
+Vietnam v/s Hongkong
+India-(Nirma) v/s Russian
+Malaysia v/s India (VJTI)
+Egypt v/s Fiji
+Korea V/s Mongolia
+Srilanka v/s Nepal
+Honkong v/s Bangladesh
+Russia v/s Iran
+Indai VJTI v/s Kazakhstan
+Fiji v/s Thailand
+Mongolia v/s Japan
+Nepal V/s Indonesia
+Bangladesh v/s vietnam
+Iran v/s India (Nirma)
+kazakhstan V/s Malaysia
+
+Bangladesh 
+Chittagong University of Engineering and Technology 
+
+Egypt 
+Helwan University
+
+Fiji 
+University of the South Pacific
+
+Hong Kong
+Hong Kong University of Science and Technology
+
+India 
+Nirma University
+Veermata Jijabai Technological Institute
+
+Indonesia 
+Institut Teknologi Sepuluh Nopember
+
+Iran 
+Bahonar University
+
+Japan
+Nagoya Institute of Technology
+
+Kazakhstan
+International IT University
+
+Rep of Korea
+Kwangwoon University
+
+Malaysia
+Universiti Teknologi Malaysia
+
+Mongolia
+Mongolian University of Science and Technology
+
+Nepal
+Tribhuvan University (IOE)
+
+Russia
+Don State Technical University
+
+Sri Lanka
+University of Peradeniya
+
+Thailand
+Dhurakijpundit University
+
+Vietnam
+Lac Hong University
+
+</Value>
+    </Setting>
+    <Setting Name="lblcolorV" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0xFFFF00</Value>
+    </Setting>
+    <Setting Name="cmdcolorV" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Yellow</Value>
+    </Setting>
+    <Setting Name="cmblayervs" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">26</Value>
+    </Setting>
+    <Setting Name="cmbalign" Type="System.String" Scope="User">
+      <Value Profile="(Default)">center</Value>
+    </Setting>
+    <Setting Name="cmbmediaforaudiotest" Type="System.String" Scope="User">
+      <Value Profile="(Default)">go1080p25</Value>
+    </Setting>
+    <Setting Name="cmbchannel_layout" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smpte:L R C LFE Ls Rs</Value>
+    </Setting>
+    <Setting Name="txtlayerproducer1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">play 1-21 go1080p25 loop</Value>
+    </Setting>
+    <Setting Name="txtlayerproducer2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">play 1-2 route://1-1</Value>
+    </Setting>
+    <Setting Name="txtplaycolorbar" Type="System.String" Scope="User">
+      <Value Profile="(Default)">play 1-22 color_bar</Value>
+    </Setting>
+    <Setting Name="txtchannelproducer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">play 2-1 route://1</Value>
+    </Setting>
+    <Setting Name="txtchromakey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MIXER 1-22 CHROMA</Value>
+    </Setting>
+    <Setting Name="cmbchromacolor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BLUE</Value>
+    </Setting>
+    <Setting Name="nchromathresholdcenter" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.1</Value>
+    </Setting>
+    <Setting Name="nchromaspread" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.04</Value>
+    </Setting>
+    <Setting Name="txtchromamixerclear" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mixer 1 clear</Value>
+    </Setting>
+    <Setting Name="txtstreamingproducer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">play 1-1 "http://localhost:8080/"</Value>
+    </Setting>
+    <Setting Name="txtdirectshowproducer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">play 1-1</Value>
+    </Setting>
+    <Setting Name="cmbcapturedevices" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cmbvideolayerformixer" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="txtvideowidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">768</Value>
+    </Setting>
+    <Setting Name="txtvideoheight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">576</Value>
+    </Setting>
+    <Setting Name="nmixermastervolume" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1.0</Value>
+    </Setting>
+    <Setting Name="chkmovingbackground" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="txtanyamcpcommand" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Play 1-1 go1080p25 loop
+cg 1-2 add 2 cmp/cg_template/clock 1</Value>
+    </Setting>
+    <Setting Name="cmbMiscellaneous" Type="System.String" Scope="User">
+      <Value Profile="(Default)">info 1-1</Value>
+    </Setting>
+    <Setting Name="lblfilenameamcp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Default File</Value>
+    </Setting>
+    <Setting Name="cmbflashlayerforswf" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">16</Value>
+    </Setting>
+    <Setting Name="txtbreakingnewstag0" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xf0</Value>
+    </Setting>
+    <Setting Name="txtbreakingnewsvalue0" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Breaking News</Value>
+    </Setting>
+    <Setting Name="txtbreakingnewstag1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xf1</Value>
+    </Setting>
+    <Setting Name="txtbreakingnewsvalue1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Breaking News</Value>
+    </Setting>
+    <Setting Name="txtbreakingnewstag2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xf2</Value>
+    </Setting>
+    <Setting Name="txtbreakingnewsupdateinterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4000</Value>
+    </Setting>
+    <Setting Name="cmblayerbreakingnews" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">46</Value>
+    </Setting>
+    <Setting Name="txtdelemeterforscroll" Type="System.String" Scope="User">
+      <Value Profile="(Default)">   *   </Value>
+    </Setting>
+    <Setting Name="cmblayerscroll" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">51</Value>
+    </Setting>
+    <Setting Name="nspeedscroll" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2.5</Value>
+    </Setting>
+    <Setting Name="cmblayertime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">56</Value>
+    </Setting>
+    <Setting Name="cmblayeronelinesuper" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">61</Value>
+    </Setting>
+    <Setting Name="cmblayertwolinesuper" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">66</Value>
+    </Setting>
+    <Setting Name="cmbtransitionforppt" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CUT</Value>
+    </Setting>
+    <Setting Name="rdojpg" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="png" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ntransitiondurationforppt" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="cmbtweentypeforppt" Type="System.String" Scope="User">
+      <Value Profile="(Default)">easenone</Value>
+    </Setting>
+    <Setting Name="cmblayervideoforppt" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">11</Value>
+    </Setting>
+    <Setting Name="cmbdirectionforppt" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LEFT</Value>
+    </Setting>
+    <Setting Name="txttwolinecenter1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Next Program</Value>
+    </Setting>
+    <Setting Name="txttwolinecenter2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Discovery of India(Jawaharlal Nehru)</Value>
+    </Setting>
+    <Setting Name="txtthreelinecenter1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A</Value>
+    </Setting>
+    <Setting Name="txtthreelinecenter2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DDK MUMBAI</Value>
+    </Setting>
+    <Setting Name="txtthreelinecenter3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PRESENTATION</Value>
+    </Setting>
+    <Setting Name="txtfourlinecenter1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A</Value>
+    </Setting>
+    <Setting Name="txtfourlinecenter2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DDK Mumbai</Value>
+    </Setting>
+    <Setting Name="txtfourlinecenter3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Presentation</Value>
+    </Setting>
+    <Setting Name="txtfourlinecenter4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Live from Mumbai</Value>
+    </Setting>
+    <Setting Name="txttopleft" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Live From Mumbai</Value>
+    </Setting>
+    <Setting Name="txttopright" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Recorded</Value>
+    </Setting>
+    <Setting Name="txtlivephonein1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Vimlesh Kumar from Mumbai</Value>
+    </Setting>
+    <Setting Name="txtlivephonein2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Suresh Paswan from Patna </Value>
+    </Setting>
+    <Setting Name="cmbsource1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">decklink 1</Value>
+    </Setting>
+    <Setting Name="cmbsource2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">decklink 2</Value>
+    </Setting>
+    <Setting Name="cmbsource3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">decklink 3</Value>
+    </Setting>
+    <Setting Name="cmbsource4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">decklink 4</Value>
+    </Setting>
+    <Setting Name="cmbtransition" Type="System.String" Scope="User">
+      <Value Profile="(Default)">slide</Value>
+    </Setting>
+    <Setting Name="ntransitionduration" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="cmbtweentype" Type="System.String" Scope="User">
+      <Value Profile="(Default)">easenone</Value>
+    </Setting>
+    <Setting Name="cmbdirection" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RIGHT</Value>
+    </Setting>
+    <Setting Name="txtplaydecklinksm" Type="System.String" Scope="User">
+      <Value Profile="(Default)">play 1 decklink 1</Value>
+    </Setting>
+    <Setting Name="txtrecordforslowmotion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">add 1 replay test-replay</Value>
+    </Setting>
+    <Setting Name="txtplayforslowmotion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">play 2-1 test-replay</Value>
+    </Setting>
+    <Setting Name="txtstoprecordforslowmotion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">remove 1 replay</Value>
+    </Setting>
+    <Setting Name="txtmarkin1" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="txtmarkin2" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="txtmarkin3" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="txtmarkin4" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="txtslowmotionmaxframe" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10000</Value>
+    </Setting>
+    <Setting Name="cmbslowmotionrecordquality" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">90</Value>
+    </Setting>
+    <Setting Name="cmbslowmotionrecordsubsampling" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">422</Value>
+    </Setting>
+    <Setting Name="nlogox" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">592</Value>
+    </Setting>
+    <Setting Name="nlogoy" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="nlogowidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">160</Value>
+    </Setting>
+    <Setting Name="nlogoheight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="txtlogolocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Casparcg\mydata\logo\time.png</Value>
+    </Setting>
+    <Setting Name="lbllogofilename" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Default file</Value>
+    </Setting>
+    <Setting Name="cmbflashlayerforlogo" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">41</Value>
+    </Setting>
+    <Setting Name="cmbliveoal" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="chkshowtimeofl" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="txtfilelengthofl" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1800</Value>
+    </Setting>
+    <Setting Name="txtbitrateofl" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="cmbfileformateoal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">cmbfileformateoal</Value>
+    </Setting>
+    <Setting Name="txtextraoptionoal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-x264opts tff=1 -vf setdar=4/3</Value>
+    </Setting>
+    <Setting Name="txtmediadirectoryoal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">H:/casparcg/_media</Value>
+    </Setting>
+    <Setting Name="txtdatetodeleteoal" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+    <Setting Name="lblshedulerecordingplaylist" Type="System.String" Scope="User">
+      <Value Profile="(Default)">filename=default</Value>
+    </Setting>
+    <Setting Name="cmbimageforimagescroll" Type="System.String" Scope="User">
+      <Value Profile="(Default)">vertical</Value>
+    </Setting>
+    <Setting Name="cmbimagescrollspeed" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="cmbimagescrollblur" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="cmblayervideoforimage" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="chkPREMULTIPLY" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="chkPROGRESSIVE" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="cmbtransporttype" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Udp</Value>
+    </Setting>
+    <Setting Name="cmboscport" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6250</Value>
+    </Setting>
+    <Setting Name="cmbfontsforall" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Font</Value>
+    </Setting>
+    <Setting Name="txthost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="txtport" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5250</Value>
+    </Setting>
+    <Setting Name="cmblayervideo" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="cmbweathericon1videolayer" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">71</Value>
+    </Setting>
+    <Setting Name="chktemplateforvideo" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="txtaddtemplate" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="txtremovetemplate" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="cmblive" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="chkplaylistlock" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="cmbchannel" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="txtcrawl2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Welcome To Doordarshan . This is Horizonal scroll line 2 testing. All are welcome to contribute.</Value>
+    </Setting>
+    <Setting Name="DateTimePicker1" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2014-10-03</Value>
+    </Setting>
+    <Setting Name="txtfps" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="nfontsizeforall" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="chkaspectratio" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="txthockeyip" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="txthockeyport" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5250</Value>
+    </Setting>
+    <Setting Name="txtporip" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="txtporport" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5250</Value>
+    </Setting>
+    <Setting Name="chksinglecliprecord" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="txthostnamebadminton" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="txtportbadminton" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5250</Value>
+    </Setting>
+    <Setting Name="cmblayertwitter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">81</Value>
+    </Setting>
+    <Setting Name="cmblayerfacebook" Type="System.String" Scope="User">
+      <Value Profile="(Default)">86</Value>
+    </Setting>
+    <Setting Name="txtgraphfacebook" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://graph.facebook.com/</Value>
+    </Setting>
+    <Setting Name="txtquery" Type="System.String" Scope="User">
+      <Value Profile="(Default)">feed?id=casparcg</Value>
+    </Setting>
+    <Setting Name="txturlhtml" Type="System.String" Scope="User">
+      <Value Profile="(Default)">file:///C:/casparcg/CMP/games/HtmlCricket/cricket_bottom_score/gwd_preview_cricket_bottom_score/index.html</Value>
+    </Setting>
+    <Setting Name="cmblayerhtml" Type="System.String" Scope="User">
+      <Value Profile="(Default)">101</Value>
+    </Setting>
+    <Setting Name="txtcasparcgwindowtitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Screen consumer [1|PAL]</Value>
+    </Setting>
+    <Setting Name="nVolume" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nopacity" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nbrightness" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nSaturation" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nContrast" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nclipx" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nclipy" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nclipxsclae" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nclipyscale" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nmin_input" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nmax_input" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ngamma" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nmin_output" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nmax_output" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nfillx" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nfilly" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nfillwidth" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nfillheight" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nanchorx" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nanchory" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nrotationz" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ncroptlx" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ncroptly" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ncropbrx" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ncropbry" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nperspectivetlx" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nperspectivetly" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nperspectivetrx" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nperspectivetry" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nperspectivebrx" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nperspectivebry" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="nperspectiveblx" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nperspectivebly" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="txtConsumerkey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="txtConsumersecret" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="txtAccesstokentwitter" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="txtAccesstokensecret" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="txtaccesstoken" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cmbcasparcgwindowtitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Screen consumer [1|PAL]</Value>
+    </Setting>
+    <Setting Name="cmbchanneltext" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="cmblayervideo1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="txtstreamingcosumer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ADD 1 STREAM udp://localhost:5004 -codec:v libx264 -tune:v zerolatency -preset:v ultrafast -crf 25 -format mpegts -vf scale=240:180</Value>
+    </Setting>
+    <Setting Name="cmblayerosd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">106</Value>
+    </Setting>
+    <Setting Name="nnewspeed" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">2.5</Value>
+    </Setting>
+    <Setting Name="newdelemterforscrollandclock" Type="System.String" Scope="User">
+      <Value Profile="(Default)">   *   </Value>
+    </Setting>
+    <Setting Name="chkcapitalised" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="txtsqlserver" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost\sqlexpress</Value>
+    </Setting>
+    <Setting Name="txtsqluser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">hp</Value>
+    </Setting>
+    <Setting Name="txtsqlpassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ddkm</Value>
+    </Setting>
+    <Setting Name="txtsqldatabase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">lto</Value>
+    </Setting>
+    <Setting Name="txtsqlport" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3306</Value>
+    </Setting>
+    <Setting Name="nopacitylogo" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1.0</Value>
+    </Setting>
+    <Setting Name="cmblayerSqlhtml" Type="System.String" Scope="User">
+      <Value Profile="(Default)">201</Value>
+    </Setting>
+    <Setting Name="cmdcolor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Yellow</Value>
+    </Setting>
+    <Setting Name="Vborercolor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="labelcolorborderv" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0xFF0000</Value>
+    </Setting>
+    <Setting Name="xdcamusername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="xdcampassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xds-pd1000</Value>
+    </Setting>
+    <Setting Name="xdcamaddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://192.168.1.54/webservice/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
