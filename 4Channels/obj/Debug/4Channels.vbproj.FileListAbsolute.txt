@@ -1,0 +1,12 @@
+D:\software\4Channels\bin\Debug\4Channels.exe.config
+D:\software\4Channels\bin\Debug\4Channels.exe
+D:\software\4Channels\bin\Debug\4Channels.pdb
+D:\software\4Channels\bin\Debug\4Channels.xml
+D:\software\4Channels\obj\Debug\4Channels.vbprojAssemblyReference.cache
+D:\software\4Channels\obj\Debug\_4Channels.frm4channle.resources
+D:\software\4Channels\obj\Debug\_4Channels.Resources.resources
+D:\software\4Channels\obj\Debug\4Channels.vbproj.GenerateResource.cache
+D:\software\4Channels\obj\Debug\4Channels.vbproj.CoreCompileInputs.cache
+D:\software\4Channels\obj\Debug\4Channels.exe
+D:\software\4Channels\obj\Debug\4Channels.xml
+D:\software\4Channels\obj\Debug\4Channels.pdb
