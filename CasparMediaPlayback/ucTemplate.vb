@@ -846,7 +846,7 @@ Public Class ucTemplate
 
         picanytemplate.CallFunction(str)
 
-        If ((CasparDevice.IsConnected = False) Or (ServerVersion = 2.3)) Then
+        If ((CasparDevice.IsConnected = False) Or (ServerVersion = 2.3) Or (ServerVersion = 2.4)) Then
             Dim str2 = "<invoke name='GetDescription' returntype='xml'><arguments><array><property id='0'><number>8</number></property></array></arguments></invoke>"
             Thread.Sleep(1000)
             picanytemplate.CallFunction(str2)
@@ -857,7 +857,7 @@ Public Class ucTemplate
     Private Sub picanytemplate_FlashCall(sender As Object, e As _IShockwaveFlashEvents_FlashCallEvent) Handles picanytemplate.FlashCall
         On Error Resume Next
 
-        If ((CasparDevice.IsConnected = False) Or (ServerVersion = 2.3)) Then
+        If ((CasparDevice.IsConnected = False) Or (ServerVersion = 2.3) Or (ServerVersion = 2.4)) Then
             If (e.request.Contains("OnTemplateDescription")) Then
                 Dim xmlString As String = (Replace(Replace(Replace(e.request, "&lt;", "<"), "&gt;", ">"), "&quot;", """"))
 

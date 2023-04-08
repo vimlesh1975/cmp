@@ -32,9 +32,10 @@ Partial Class ucTemplate
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbtemplate = New System.Windows.Forms.GroupBox()
+        Me.cmdOnlyUpdatePreview = New System.Windows.Forms.Button()
         Me.cmdUpdatePreview = New System.Windows.Forms.Button()
         Me.picanytemplate = New AxShockwaveFlashObjects.AxShockwaveFlash()
         Me.chkLBand = New System.Windows.Forms.CheckBox()
@@ -70,15 +71,8 @@ Partial Class ucTemplate
         Me.playtsrundown = New System.Windows.Forms.Button()
         Me.stoptsrundown = New System.Windows.Forms.Button()
         Me.dgvrundown = New System.Windows.Forms.DataGridView()
-        Me.Label = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.V = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.T = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Data = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmdaddtorundown = New System.Windows.Forms.Button()
         Me.dgvanytemplate = New System.Windows.Forms.DataGridView()
-        Me.InstanceName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Value = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.cmbvideolayerfortemplate = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -100,9 +94,15 @@ Partial Class ucTemplate
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cmdOnlyUpdatePreview = New System.Windows.Forms.Button()
+        Me.Label = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.V = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.T = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Data = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InstanceName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Value = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbtemplate.SuspendLayout()
         CType(Me.picanytemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbrundown.SuspendLayout()
@@ -147,9 +147,18 @@ Partial Class ucTemplate
         Me.gbtemplate.TabStop = False
         Me.gbtemplate.Text = " "
         '
+        'cmdOnlyUpdatePreview
+        '
+        Me.cmdOnlyUpdatePreview.Location = New System.Drawing.Point(1087, 55)
+        Me.cmdOnlyUpdatePreview.Name = "cmdOnlyUpdatePreview"
+        Me.cmdOnlyUpdatePreview.Size = New System.Drawing.Size(92, 23)
+        Me.cmdOnlyUpdatePreview.TabIndex = 647
+        Me.cmdOnlyUpdatePreview.Text = "Update Preview"
+        Me.cmdOnlyUpdatePreview.UseVisualStyleBackColor = True
+        '
         'cmdUpdatePreview
         '
-        Me.cmdUpdatePreview.Location = New System.Drawing.Point(1020, 59)
+        Me.cmdUpdatePreview.Location = New System.Drawing.Point(991, 55)
         Me.cmdUpdatePreview.Name = "cmdUpdatePreview"
         Me.cmdUpdatePreview.Size = New System.Drawing.Size(92, 23)
         Me.cmdUpdatePreview.TabIndex = 646
@@ -169,7 +178,7 @@ Partial Class ucTemplate
         'chkLBand
         '
         Me.chkLBand.AutoSize = True
-        Me.chkLBand.Location = New System.Drawing.Point(888, 56)
+        Me.chkLBand.Location = New System.Drawing.Point(784, 42)
         Me.chkLBand.Name = "chkLBand"
         Me.chkLBand.Size = New System.Drawing.Size(133, 17)
         Me.chkLBand.TabIndex = 643
@@ -178,7 +187,7 @@ Partial Class ucTemplate
         '
         'txtLBand
         '
-        Me.txtLBand.Location = New System.Drawing.Point(695, 56)
+        Me.txtLBand.Location = New System.Drawing.Point(695, 60)
         Me.txtLBand.Name = "txtLBand"
         Me.txtLBand.Size = New System.Drawing.Size(187, 20)
         Me.txtLBand.TabIndex = 642
@@ -510,39 +519,6 @@ Partial Class ucTemplate
         Me.dgvrundown.Size = New System.Drawing.Size(680, 430)
         Me.dgvrundown.TabIndex = 370
         '
-        'Label
-        '
-        Me.Label.HeaderText = "Label"
-        Me.Label.Name = "Label"
-        Me.Label.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Label.Width = 180
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Template"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'V
-        '
-        Me.V.HeaderText = "V"
-        Me.V.Name = "V"
-        Me.V.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.V.Width = 30
-        '
-        'T
-        '
-        Me.T.HeaderText = "T"
-        Me.T.Name = "T"
-        Me.T.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.T.Width = 30
-        '
-        'Data
-        '
-        Me.Data.HeaderText = "Data"
-        Me.Data.Name = "Data"
-        Me.Data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
         'cmdaddtorundown
         '
         Me.cmdaddtorundown.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -587,21 +563,6 @@ Partial Class ucTemplate
         Me.dgvanytemplate.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvanytemplate.Size = New System.Drawing.Size(490, 788)
         Me.dgvanytemplate.TabIndex = 369
-        '
-        'InstanceName
-        '
-        Me.InstanceName.HeaderText = "Instance/Label Name"
-        Me.InstanceName.Name = "InstanceName"
-        Me.InstanceName.Width = 105
-        '
-        'Value
-        '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Value.DefaultCellStyle = DataGridViewCellStyle6
-        Me.Value.HeaderText = "Value"
-        Me.Value.Name = "Value"
-        Me.Value.Width = 290
         '
         'Column4
         '
@@ -789,6 +750,12 @@ Partial Class ucTemplate
         Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.DataGridViewTextBoxColumn4.Width = 30
         '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Template"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.HeaderText = "Instance/Label Name"
@@ -804,14 +771,47 @@ Partial Class ucTemplate
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.Width = 290
         '
-        'cmdOnlyUpdatePreview
+        'Label
         '
-        Me.cmdOnlyUpdatePreview.Location = New System.Drawing.Point(1112, 59)
-        Me.cmdOnlyUpdatePreview.Name = "cmdOnlyUpdatePreview"
-        Me.cmdOnlyUpdatePreview.Size = New System.Drawing.Size(92, 23)
-        Me.cmdOnlyUpdatePreview.TabIndex = 647
-        Me.cmdOnlyUpdatePreview.Text = "Update Preview"
-        Me.cmdOnlyUpdatePreview.UseVisualStyleBackColor = True
+        Me.Label.HeaderText = "Label"
+        Me.Label.Name = "Label"
+        Me.Label.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Label.Width = 180
+        '
+        'V
+        '
+        Me.V.HeaderText = "V"
+        Me.V.Name = "V"
+        Me.V.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.V.Width = 30
+        '
+        'T
+        '
+        Me.T.HeaderText = "T"
+        Me.T.Name = "T"
+        Me.T.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.T.Width = 30
+        '
+        'Data
+        '
+        Me.Data.HeaderText = "Data"
+        Me.Data.Name = "Data"
+        Me.Data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'InstanceName
+        '
+        Me.InstanceName.HeaderText = "Instance/Label Name"
+        Me.InstanceName.Name = "InstanceName"
+        Me.InstanceName.Width = 105
+        '
+        'Value
+        '
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Value.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Value.HeaderText = "Value"
+        Me.Value.Name = "Value"
+        Me.Value.Width = 290
         '
         'ucTemplate
         '
