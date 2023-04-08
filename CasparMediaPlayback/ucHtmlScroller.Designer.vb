@@ -25,7 +25,22 @@ Partial Class ucHtmlScroller
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucHtmlScroller))
         Me.gbhtmlscroller = New System.Windows.Forms.GroupBox()
+        Me.chkFlip = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.cmdshowhtmlscroll = New System.Windows.Forms.Button()
         Me.cmdpauseresumehtmlscrollerhorizontal = New System.Windows.Forms.Button()
+        Me.nyhtmlscroll = New System.Windows.Forms.NumericUpDown()
+        Me.Label163 = New System.Windows.Forms.Label()
+        Me.nyhtmlscrollticker = New System.Windows.Forms.NumericUpDown()
+        Me.Label190 = New System.Windows.Forms.Label()
+        Me.chkltrhtmlscroll = New System.Windows.Forms.CheckBox()
+        Me.cmdstripcolorhtmlscroll = New System.Windows.Forms.Button()
+        Me.Label162 = New System.Windows.Forms.Label()
+        Me.Label161 = New System.Windows.Forms.Label()
+        Me.pichtmlscroller = New System.Windows.Forms.PictureBox()
+        Me.Label155 = New System.Windows.Forms.Label()
+        Me.cmdFlip2ndChannel = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cmdfilehtmlscroll = New System.Windows.Forms.Button()
         Me.cmdstopcrawlhtmlscroll = New System.Windows.Forms.Button()
@@ -36,6 +51,17 @@ Partial Class ucHtmlScroller
         Me.Label157 = New System.Windows.Forms.Label()
         Me.cmbfonthtmlscroll = New System.Windows.Forms.ComboBox()
         Me.Label164 = New System.Windows.Forms.Label()
+        Me.chkbase64htmlscroller = New System.Windows.Forms.CheckBox()
+        Me.cmblayerhtmlscroll = New System.Windows.Forms.ComboBox()
+        Me.Label159 = New System.Windows.Forms.Label()
+        Me.gbcropmixer = New System.Windows.Forms.GroupBox()
+        Me.ncropbrx = New System.Windows.Forms.NumericUpDown()
+        Me.Label189 = New System.Windows.Forms.Label()
+        Me.Label194 = New System.Windows.Forms.Label()
+        Me.ncroptlx = New System.Windows.Forms.NumericUpDown()
+        Me.Label200 = New System.Windows.Forms.Label()
+        Me.Label198 = New System.Windows.Forms.Label()
+        Me.cmdresetcropmixer = New System.Windows.Forms.Button()
         Me.Label160 = New System.Windows.Forms.Label()
         Me.cmdcolorhtmlscroll = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -53,56 +79,30 @@ Partial Class ucHtmlScroller
         Me.txthtmlscollerTemplatevertical = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txthtmlscollerTemplate = New System.Windows.Forms.TextBox()
-        Me.gbcropmixer = New System.Windows.Forms.GroupBox()
-        Me.ncropbrx = New System.Windows.Forms.NumericUpDown()
-        Me.Label189 = New System.Windows.Forms.Label()
-        Me.Label194 = New System.Windows.Forms.Label()
-        Me.ncroptlx = New System.Windows.Forms.NumericUpDown()
-        Me.Label200 = New System.Windows.Forms.Label()
-        Me.Label198 = New System.Windows.Forms.Label()
-        Me.cmdresetcropmixer = New System.Windows.Forms.Button()
-        Me.chkbase64htmlscroller = New System.Windows.Forms.CheckBox()
-        Me.nyhtmlscrollticker = New System.Windows.Forms.NumericUpDown()
-        Me.Label190 = New System.Windows.Forms.Label()
-        Me.Label155 = New System.Windows.Forms.Label()
-        Me.pichtmlscroller = New System.Windows.Forms.PictureBox()
-        Me.cmdstripcolorhtmlscroll = New System.Windows.Forms.Button()
         Me.Label158 = New System.Windows.Forms.Label()
-        Me.chkltrhtmlscroll = New System.Windows.Forms.CheckBox()
-        Me.cmblayerhtmlscroll = New System.Windows.Forms.ComboBox()
-        Me.Label159 = New System.Windows.Forms.Label()
-        Me.Label161 = New System.Windows.Forms.Label()
-        Me.Label162 = New System.Windows.Forms.Label()
-        Me.nyhtmlscroll = New System.Windows.Forms.NumericUpDown()
-        Me.Label163 = New System.Windows.Forms.Label()
-        Me.cmdshowhtmlscroll = New System.Windows.Forms.Button()
         Me.txtcrawlhtmlscroll = New System.Windows.Forms.TextBox()
-        Me.txtFlip2ndChannel = New System.Windows.Forms.TextBox()
-        Me.cmdFlip2ndChannel = New System.Windows.Forms.Button()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.gbhtmlscroller.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.nyhtmlscroll, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nyhtmlscrollticker, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pichtmlscroller, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.nspeedhtmlscroll, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nsizehtmlscroll, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbcropmixer.SuspendLayout()
         CType(Me.ncropbrx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ncroptlx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nyhtmlscrollticker, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pichtmlscroller, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nyhtmlscroll, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gbhtmlscroller
         '
         Me.gbhtmlscroller.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gbhtmlscroller.Controls.Add(Me.chkFlip)
         Me.gbhtmlscroller.Controls.Add(Me.Button1)
         Me.gbhtmlscroller.Controls.Add(Me.GroupBox3)
         Me.gbhtmlscroller.Controls.Add(Me.cmdFlip2ndChannel)
-        Me.gbhtmlscroller.Controls.Add(Me.txtFlip2ndChannel)
         Me.gbhtmlscroller.Controls.Add(Me.GroupBox2)
         Me.gbhtmlscroller.Controls.Add(Me.Label4)
         Me.gbhtmlscroller.Controls.Add(Me.GroupBox1)
@@ -117,6 +117,59 @@ Partial Class ucHtmlScroller
         Me.gbhtmlscroller.TabStop = False
         Me.gbhtmlscroller.Text = " "
         '
+        'chkFlip
+        '
+        Me.chkFlip.AutoSize = True
+        Me.chkFlip.Location = New System.Drawing.Point(680, 41)
+        Me.chkFlip.Name = "chkFlip"
+        Me.chkFlip.Size = New System.Drawing.Size(42, 17)
+        Me.chkFlip.TabIndex = 751
+        Me.chkFlip.Text = "Flip"
+        Me.chkFlip.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(895, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(10, 892)
+        Me.Button1.TabIndex = 750
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.GroupBox3.Controls.Add(Me.cmdshowhtmlscroll)
+        Me.GroupBox3.Controls.Add(Me.cmdpauseresumehtmlscrollerhorizontal)
+        Me.GroupBox3.Controls.Add(Me.nyhtmlscroll)
+        Me.GroupBox3.Controls.Add(Me.Label163)
+        Me.GroupBox3.Controls.Add(Me.nyhtmlscrollticker)
+        Me.GroupBox3.Controls.Add(Me.Label190)
+        Me.GroupBox3.Controls.Add(Me.chkltrhtmlscroll)
+        Me.GroupBox3.Controls.Add(Me.cmdstripcolorhtmlscroll)
+        Me.GroupBox3.Controls.Add(Me.Label162)
+        Me.GroupBox3.Controls.Add(Me.Label161)
+        Me.GroupBox3.Controls.Add(Me.pichtmlscroller)
+        Me.GroupBox3.Controls.Add(Me.Label155)
+        Me.GroupBox3.Location = New System.Drawing.Point(910, 232)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(253, 175)
+        Me.GroupBox3.TabIndex = 749
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Horozontal Scroll"
+        '
+        'cmdshowhtmlscroll
+        '
+        Me.cmdshowhtmlscroll.BackColor = System.Drawing.Color.Green
+        Me.cmdshowhtmlscroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdshowhtmlscroll.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdshowhtmlscroll.Location = New System.Drawing.Point(2, 19)
+        Me.cmdshowhtmlscroll.Name = "cmdshowhtmlscroll"
+        Me.cmdshowhtmlscroll.Size = New System.Drawing.Size(76, 58)
+        Me.cmdshowhtmlscroll.TabIndex = 262
+        Me.cmdshowhtmlscroll.Text = "Start"
+        Me.cmdshowhtmlscroll.UseVisualStyleBackColor = False
+        '
         'cmdpauseresumehtmlscrollerhorizontal
         '
         Me.cmdpauseresumehtmlscrollerhorizontal.BackColor = System.Drawing.Color.Yellow
@@ -127,6 +180,111 @@ Partial Class ucHtmlScroller
         Me.cmdpauseresumehtmlscrollerhorizontal.TabIndex = 739
         Me.cmdpauseresumehtmlscrollerhorizontal.Text = "Pause / Resume"
         Me.cmdpauseresumehtmlscrollerhorizontal.UseVisualStyleBackColor = False
+        '
+        'nyhtmlscroll
+        '
+        Me.nyhtmlscroll.Location = New System.Drawing.Point(84, 80)
+        Me.nyhtmlscroll.Maximum = New Decimal(New Integer() {4000, 0, 0, 0})
+        Me.nyhtmlscroll.Minimum = New Decimal(New Integer() {4000, 0, 0, -2147483648})
+        Me.nyhtmlscroll.Name = "nyhtmlscroll"
+        Me.nyhtmlscroll.Size = New System.Drawing.Size(41, 20)
+        Me.nyhtmlscroll.TabIndex = 273
+        Me.nyhtmlscroll.Value = New Decimal(New Integer() {87, 0, 0, 0})
+        '
+        'Label163
+        '
+        Me.Label163.AutoSize = True
+        Me.Label163.Location = New System.Drawing.Point(3, 82)
+        Me.Label163.Name = "Label163"
+        Me.Label163.Size = New System.Drawing.Size(81, 13)
+        Me.Label163.TabIndex = 271
+        Me.Label163.Text = "Strip Y  Position"
+        '
+        'nyhtmlscrollticker
+        '
+        Me.nyhtmlscrollticker.Location = New System.Drawing.Point(93, 106)
+        Me.nyhtmlscrollticker.Maximum = New Decimal(New Integer() {4000, 0, 0, 0})
+        Me.nyhtmlscrollticker.Minimum = New Decimal(New Integer() {4000, 0, 0, -2147483648})
+        Me.nyhtmlscrollticker.Name = "nyhtmlscrollticker"
+        Me.nyhtmlscrollticker.Size = New System.Drawing.Size(41, 20)
+        Me.nyhtmlscrollticker.TabIndex = 728
+        Me.nyhtmlscrollticker.Value = New Decimal(New Integer() {87, 0, 0, 0})
+        '
+        'Label190
+        '
+        Me.Label190.AutoSize = True
+        Me.Label190.Location = New System.Drawing.Point(4, 108)
+        Me.Label190.Name = "Label190"
+        Me.Label190.Size = New System.Drawing.Size(90, 13)
+        Me.Label190.TabIndex = 727
+        Me.Label190.Text = "Ticker Y  Position"
+        '
+        'chkltrhtmlscroll
+        '
+        Me.chkltrhtmlscroll.AutoSize = True
+        Me.chkltrhtmlscroll.Location = New System.Drawing.Point(160, 19)
+        Me.chkltrhtmlscroll.Name = "chkltrhtmlscroll"
+        Me.chkltrhtmlscroll.Size = New System.Drawing.Size(88, 17)
+        Me.chkltrhtmlscroll.TabIndex = 356
+        Me.chkltrhtmlscroll.Text = "Left To Right"
+        Me.chkltrhtmlscroll.UseVisualStyleBackColor = True
+        '
+        'cmdstripcolorhtmlscroll
+        '
+        Me.cmdstripcolorhtmlscroll.BackColor = System.Drawing.Color.Purple
+        Me.cmdstripcolorhtmlscroll.ForeColor = System.Drawing.Color.Yellow
+        Me.cmdstripcolorhtmlscroll.Location = New System.Drawing.Point(173, 67)
+        Me.cmdstripcolorhtmlscroll.Name = "cmdstripcolorhtmlscroll"
+        Me.cmdstripcolorhtmlscroll.Size = New System.Drawing.Size(59, 23)
+        Me.cmdstripcolorhtmlscroll.TabIndex = 361
+        Me.cmdstripcolorhtmlscroll.Text = "color"
+        Me.cmdstripcolorhtmlscroll.UseVisualStyleBackColor = False
+        '
+        'Label162
+        '
+        Me.Label162.AutoSize = True
+        Me.Label162.Location = New System.Drawing.Point(178, 51)
+        Me.Label162.Name = "Label162"
+        Me.Label162.Size = New System.Drawing.Size(54, 13)
+        Me.Label162.TabIndex = 274
+        Me.Label162.Text = "Strip color"
+        '
+        'Label161
+        '
+        Me.Label161.AutoSize = True
+        Me.Label161.Location = New System.Drawing.Point(58, 176)
+        Me.Label161.Name = "Label161"
+        Me.Label161.Size = New System.Drawing.Size(0, 13)
+        Me.Label161.TabIndex = 276
+        '
+        'pichtmlscroller
+        '
+        Me.pichtmlscroller.ImageLocation = "C:\Casparcg\mydata\html\dd.png"
+        Me.pichtmlscroller.InitialImage = CType(resources.GetObject("pichtmlscroller.InitialImage"), System.Drawing.Image)
+        Me.pichtmlscroller.Location = New System.Drawing.Point(174, 122)
+        Me.pichtmlscroller.Name = "pichtmlscroller"
+        Me.pichtmlscroller.Size = New System.Drawing.Size(54, 42)
+        Me.pichtmlscroller.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pichtmlscroller.TabIndex = 363
+        Me.pichtmlscroller.TabStop = False
+        '
+        'Label155
+        '
+        Me.Label155.AutoSize = True
+        Me.Label155.Location = New System.Drawing.Point(180, 106)
+        Me.Label155.Name = "Label155"
+        Me.Label155.Size = New System.Drawing.Size(33, 13)
+        Me.Label155.TabIndex = 364
+        Me.Label155.Text = "Bullet"
+        '
+        'cmdFlip2ndChannel
+        '
+        Me.cmdFlip2ndChannel.Location = New System.Drawing.Point(680, 12)
+        Me.cmdFlip2ndChannel.Name = "cmdFlip2ndChannel"
+        Me.cmdFlip2ndChannel.Size = New System.Drawing.Size(146, 23)
+        Me.cmdFlip2ndChannel.TabIndex = 748
+        Me.cmdFlip2ndChannel.Text = "Show on Second Channel"
+        Me.cmdFlip2ndChannel.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -146,7 +304,7 @@ Partial Class ucHtmlScroller
         Me.GroupBox2.Controls.Add(Me.gbcropmixer)
         Me.GroupBox2.Controls.Add(Me.Label160)
         Me.GroupBox2.Controls.Add(Me.cmdcolorhtmlscroll)
-        Me.GroupBox2.Location = New System.Drawing.Point(949, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(906, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(250, 214)
         Me.GroupBox2.TabIndex = 746
@@ -236,6 +394,119 @@ Partial Class ucHtmlScroller
         Me.Label164.Size = New System.Drawing.Size(0, 13)
         Me.Label164.TabIndex = 270
         '
+        'chkbase64htmlscroller
+        '
+        Me.chkbase64htmlscroller.AutoSize = True
+        Me.chkbase64htmlscroller.Location = New System.Drawing.Point(182, 114)
+        Me.chkbase64htmlscroller.Name = "chkbase64htmlscroller"
+        Me.chkbase64htmlscroller.Size = New System.Drawing.Size(62, 17)
+        Me.chkbase64htmlscroller.TabIndex = 729
+        Me.chkbase64htmlscroller.Text = "Base64"
+        Me.chkbase64htmlscroller.UseVisualStyleBackColor = True
+        '
+        'cmblayerhtmlscroll
+        '
+        Me.cmblayerhtmlscroll.FormattingEnabled = True
+        Me.cmblayerhtmlscroll.Items.AddRange(New Object() {"210", "211", "212", "213", "214"})
+        Me.cmblayerhtmlscroll.Location = New System.Drawing.Point(187, 142)
+        Me.cmblayerhtmlscroll.Name = "cmblayerhtmlscroll"
+        Me.cmblayerhtmlscroll.Size = New System.Drawing.Size(59, 21)
+        Me.cmblayerhtmlscroll.TabIndex = 322
+        Me.cmblayerhtmlscroll.Text = "210"
+        '
+        'Label159
+        '
+        Me.Label159.AutoSize = True
+        Me.Label159.Location = New System.Drawing.Point(150, 145)
+        Me.Label159.Name = "Label159"
+        Me.Label159.Size = New System.Drawing.Size(20, 13)
+        Me.Label159.TabIndex = 321
+        Me.Label159.Text = "VL"
+        '
+        'gbcropmixer
+        '
+        Me.gbcropmixer.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.gbcropmixer.Controls.Add(Me.ncropbrx)
+        Me.gbcropmixer.Controls.Add(Me.Label189)
+        Me.gbcropmixer.Controls.Add(Me.Label194)
+        Me.gbcropmixer.Controls.Add(Me.ncroptlx)
+        Me.gbcropmixer.Controls.Add(Me.Label200)
+        Me.gbcropmixer.Controls.Add(Me.Label198)
+        Me.gbcropmixer.Controls.Add(Me.cmdresetcropmixer)
+        Me.gbcropmixer.Location = New System.Drawing.Point(134, 6)
+        Me.gbcropmixer.Name = "gbcropmixer"
+        Me.gbcropmixer.Size = New System.Drawing.Size(110, 97)
+        Me.gbcropmixer.TabIndex = 730
+        Me.gbcropmixer.TabStop = False
+        Me.gbcropmixer.Text = "Crop"
+        '
+        'ncropbrx
+        '
+        Me.ncropbrx.DecimalPlaces = 2
+        Me.ncropbrx.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.ncropbrx.Location = New System.Drawing.Point(28, 69)
+        Me.ncropbrx.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
+        Me.ncropbrx.Name = "ncropbrx"
+        Me.ncropbrx.Size = New System.Drawing.Size(46, 20)
+        Me.ncropbrx.TabIndex = 427
+        Me.ncropbrx.Value = Global.caspar_media_playback.My.MySettings.Default.ncropbrx
+        '
+        'Label189
+        '
+        Me.Label189.AutoSize = True
+        Me.Label189.Location = New System.Drawing.Point(29, 53)
+        Me.Label189.Name = "Label189"
+        Me.Label189.Size = New System.Drawing.Size(35, 13)
+        Me.Label189.TabIndex = 433
+        Me.Label189.Text = " Right"
+        '
+        'Label194
+        '
+        Me.Label194.AutoSize = True
+        Me.Label194.Location = New System.Drawing.Point(10, 73)
+        Me.Label194.Name = "Label194"
+        Me.Label194.Size = New System.Drawing.Size(14, 13)
+        Me.Label194.TabIndex = 424
+        Me.Label194.Text = "X"
+        '
+        'ncroptlx
+        '
+        Me.ncroptlx.DecimalPlaces = 2
+        Me.ncroptlx.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.ncroptlx.Location = New System.Drawing.Point(25, 28)
+        Me.ncroptlx.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
+        Me.ncroptlx.Name = "ncroptlx"
+        Me.ncroptlx.Size = New System.Drawing.Size(46, 20)
+        Me.ncroptlx.TabIndex = 417
+        Me.ncroptlx.Value = Global.caspar_media_playback.My.MySettings.Default.ncroptlx
+        '
+        'Label200
+        '
+        Me.Label200.AutoSize = True
+        Me.Label200.Location = New System.Drawing.Point(9, 32)
+        Me.Label200.Name = "Label200"
+        Me.Label200.Size = New System.Drawing.Size(14, 13)
+        Me.Label200.TabIndex = 408
+        Me.Label200.Text = "X"
+        '
+        'Label198
+        '
+        Me.Label198.AutoSize = True
+        Me.Label198.Location = New System.Drawing.Point(29, 13)
+        Me.Label198.Name = "Label198"
+        Me.Label198.Size = New System.Drawing.Size(25, 13)
+        Me.Label198.TabIndex = 418
+        Me.Label198.Text = "Left"
+        '
+        'cmdresetcropmixer
+        '
+        Me.cmdresetcropmixer.Location = New System.Drawing.Point(77, 28)
+        Me.cmdresetcropmixer.Name = "cmdresetcropmixer"
+        Me.cmdresetcropmixer.Size = New System.Drawing.Size(21, 58)
+        Me.cmdresetcropmixer.TabIndex = 407
+        Me.cmdresetcropmixer.Text = "R"
+        Me.cmdresetcropmixer.UseVisualStyleBackColor = True
+        '
         'Label160
         '
         Me.Label160.AutoSize = True
@@ -279,7 +550,7 @@ Partial Class ucHtmlScroller
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.cmdStartFromButtom)
         Me.GroupBox1.Controls.Add(Me.txthtmlscollerTemplatevertical)
-        Me.GroupBox1.Location = New System.Drawing.Point(955, 413)
+        Me.GroupBox1.Location = New System.Drawing.Point(912, 413)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(252, 474)
         Me.GroupBox1.TabIndex = 737
@@ -417,150 +688,6 @@ Partial Class ucHtmlScroller
         Me.txthtmlscollerTemplate.TabIndex = 732
         Me.txthtmlscollerTemplate.Text = "file:///C:/casparcg/mydata/html/htmlscroller.html"
         '
-        'gbcropmixer
-        '
-        Me.gbcropmixer.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.gbcropmixer.Controls.Add(Me.ncropbrx)
-        Me.gbcropmixer.Controls.Add(Me.Label189)
-        Me.gbcropmixer.Controls.Add(Me.Label194)
-        Me.gbcropmixer.Controls.Add(Me.ncroptlx)
-        Me.gbcropmixer.Controls.Add(Me.Label200)
-        Me.gbcropmixer.Controls.Add(Me.Label198)
-        Me.gbcropmixer.Controls.Add(Me.cmdresetcropmixer)
-        Me.gbcropmixer.Location = New System.Drawing.Point(134, 6)
-        Me.gbcropmixer.Name = "gbcropmixer"
-        Me.gbcropmixer.Size = New System.Drawing.Size(110, 97)
-        Me.gbcropmixer.TabIndex = 730
-        Me.gbcropmixer.TabStop = False
-        Me.gbcropmixer.Text = "Crop"
-        '
-        'ncropbrx
-        '
-        Me.ncropbrx.DecimalPlaces = 2
-        Me.ncropbrx.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
-        Me.ncropbrx.Location = New System.Drawing.Point(28, 69)
-        Me.ncropbrx.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
-        Me.ncropbrx.Name = "ncropbrx"
-        Me.ncropbrx.Size = New System.Drawing.Size(46, 20)
-        Me.ncropbrx.TabIndex = 427
-        Me.ncropbrx.Value = Global.caspar_media_playback.My.MySettings.Default.ncropbrx
-        '
-        'Label189
-        '
-        Me.Label189.AutoSize = True
-        Me.Label189.Location = New System.Drawing.Point(29, 53)
-        Me.Label189.Name = "Label189"
-        Me.Label189.Size = New System.Drawing.Size(35, 13)
-        Me.Label189.TabIndex = 433
-        Me.Label189.Text = " Right"
-        '
-        'Label194
-        '
-        Me.Label194.AutoSize = True
-        Me.Label194.Location = New System.Drawing.Point(10, 73)
-        Me.Label194.Name = "Label194"
-        Me.Label194.Size = New System.Drawing.Size(14, 13)
-        Me.Label194.TabIndex = 424
-        Me.Label194.Text = "X"
-        '
-        'ncroptlx
-        '
-        Me.ncroptlx.DecimalPlaces = 2
-        Me.ncroptlx.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
-        Me.ncroptlx.Location = New System.Drawing.Point(25, 28)
-        Me.ncroptlx.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
-        Me.ncroptlx.Name = "ncroptlx"
-        Me.ncroptlx.Size = New System.Drawing.Size(46, 20)
-        Me.ncroptlx.TabIndex = 417
-        Me.ncroptlx.Value = Global.caspar_media_playback.My.MySettings.Default.ncroptlx
-        '
-        'Label200
-        '
-        Me.Label200.AutoSize = True
-        Me.Label200.Location = New System.Drawing.Point(9, 32)
-        Me.Label200.Name = "Label200"
-        Me.Label200.Size = New System.Drawing.Size(14, 13)
-        Me.Label200.TabIndex = 408
-        Me.Label200.Text = "X"
-        '
-        'Label198
-        '
-        Me.Label198.AutoSize = True
-        Me.Label198.Location = New System.Drawing.Point(29, 13)
-        Me.Label198.Name = "Label198"
-        Me.Label198.Size = New System.Drawing.Size(25, 13)
-        Me.Label198.TabIndex = 418
-        Me.Label198.Text = "Left"
-        '
-        'cmdresetcropmixer
-        '
-        Me.cmdresetcropmixer.Location = New System.Drawing.Point(77, 28)
-        Me.cmdresetcropmixer.Name = "cmdresetcropmixer"
-        Me.cmdresetcropmixer.Size = New System.Drawing.Size(21, 58)
-        Me.cmdresetcropmixer.TabIndex = 407
-        Me.cmdresetcropmixer.Text = "R"
-        Me.cmdresetcropmixer.UseVisualStyleBackColor = True
-        '
-        'chkbase64htmlscroller
-        '
-        Me.chkbase64htmlscroller.AutoSize = True
-        Me.chkbase64htmlscroller.Location = New System.Drawing.Point(182, 114)
-        Me.chkbase64htmlscroller.Name = "chkbase64htmlscroller"
-        Me.chkbase64htmlscroller.Size = New System.Drawing.Size(62, 17)
-        Me.chkbase64htmlscroller.TabIndex = 729
-        Me.chkbase64htmlscroller.Text = "Base64"
-        Me.chkbase64htmlscroller.UseVisualStyleBackColor = True
-        '
-        'nyhtmlscrollticker
-        '
-        Me.nyhtmlscrollticker.Location = New System.Drawing.Point(93, 106)
-        Me.nyhtmlscrollticker.Maximum = New Decimal(New Integer() {4000, 0, 0, 0})
-        Me.nyhtmlscrollticker.Minimum = New Decimal(New Integer() {4000, 0, 0, -2147483648})
-        Me.nyhtmlscrollticker.Name = "nyhtmlscrollticker"
-        Me.nyhtmlscrollticker.Size = New System.Drawing.Size(41, 20)
-        Me.nyhtmlscrollticker.TabIndex = 728
-        Me.nyhtmlscrollticker.Value = New Decimal(New Integer() {87, 0, 0, 0})
-        '
-        'Label190
-        '
-        Me.Label190.AutoSize = True
-        Me.Label190.Location = New System.Drawing.Point(4, 108)
-        Me.Label190.Name = "Label190"
-        Me.Label190.Size = New System.Drawing.Size(90, 13)
-        Me.Label190.TabIndex = 727
-        Me.Label190.Text = "Ticker Y  Position"
-        '
-        'Label155
-        '
-        Me.Label155.AutoSize = True
-        Me.Label155.Location = New System.Drawing.Point(180, 106)
-        Me.Label155.Name = "Label155"
-        Me.Label155.Size = New System.Drawing.Size(33, 13)
-        Me.Label155.TabIndex = 364
-        Me.Label155.Text = "Bullet"
-        '
-        'pichtmlscroller
-        '
-        Me.pichtmlscroller.ImageLocation = "C:\Casparcg\mydata\html\dd.png"
-        Me.pichtmlscroller.InitialImage = CType(resources.GetObject("pichtmlscroller.InitialImage"), System.Drawing.Image)
-        Me.pichtmlscroller.Location = New System.Drawing.Point(174, 122)
-        Me.pichtmlscroller.Name = "pichtmlscroller"
-        Me.pichtmlscroller.Size = New System.Drawing.Size(54, 42)
-        Me.pichtmlscroller.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pichtmlscroller.TabIndex = 363
-        Me.pichtmlscroller.TabStop = False
-        '
-        'cmdstripcolorhtmlscroll
-        '
-        Me.cmdstripcolorhtmlscroll.BackColor = System.Drawing.Color.Purple
-        Me.cmdstripcolorhtmlscroll.ForeColor = System.Drawing.Color.Yellow
-        Me.cmdstripcolorhtmlscroll.Location = New System.Drawing.Point(173, 67)
-        Me.cmdstripcolorhtmlscroll.Name = "cmdstripcolorhtmlscroll"
-        Me.cmdstripcolorhtmlscroll.Size = New System.Drawing.Size(59, 23)
-        Me.cmdstripcolorhtmlscroll.TabIndex = 361
-        Me.cmdstripcolorhtmlscroll.Text = "color"
-        Me.cmdstripcolorhtmlscroll.UseVisualStyleBackColor = False
-        '
         'Label158
         '
         Me.Label158.AutoSize = True
@@ -573,83 +700,6 @@ Partial Class ucHtmlScroller
         Me.Label158.Text = "If Content is not comming properly-" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Copy the content to notepad++ and Then copy " &
     "from there and paste here"
         '
-        'chkltrhtmlscroll
-        '
-        Me.chkltrhtmlscroll.AutoSize = True
-        Me.chkltrhtmlscroll.Location = New System.Drawing.Point(160, 19)
-        Me.chkltrhtmlscroll.Name = "chkltrhtmlscroll"
-        Me.chkltrhtmlscroll.Size = New System.Drawing.Size(88, 17)
-        Me.chkltrhtmlscroll.TabIndex = 356
-        Me.chkltrhtmlscroll.Text = "Left To Right"
-        Me.chkltrhtmlscroll.UseVisualStyleBackColor = True
-        '
-        'cmblayerhtmlscroll
-        '
-        Me.cmblayerhtmlscroll.FormattingEnabled = True
-        Me.cmblayerhtmlscroll.Items.AddRange(New Object() {"210", "211", "212", "213", "214"})
-        Me.cmblayerhtmlscroll.Location = New System.Drawing.Point(187, 142)
-        Me.cmblayerhtmlscroll.Name = "cmblayerhtmlscroll"
-        Me.cmblayerhtmlscroll.Size = New System.Drawing.Size(59, 21)
-        Me.cmblayerhtmlscroll.TabIndex = 322
-        Me.cmblayerhtmlscroll.Text = "210"
-        '
-        'Label159
-        '
-        Me.Label159.AutoSize = True
-        Me.Label159.Location = New System.Drawing.Point(150, 145)
-        Me.Label159.Name = "Label159"
-        Me.Label159.Size = New System.Drawing.Size(20, 13)
-        Me.Label159.TabIndex = 321
-        Me.Label159.Text = "VL"
-        '
-        'Label161
-        '
-        Me.Label161.AutoSize = True
-        Me.Label161.Location = New System.Drawing.Point(58, 176)
-        Me.Label161.Name = "Label161"
-        Me.Label161.Size = New System.Drawing.Size(0, 13)
-        Me.Label161.TabIndex = 276
-        '
-        'Label162
-        '
-        Me.Label162.AutoSize = True
-        Me.Label162.Location = New System.Drawing.Point(178, 51)
-        Me.Label162.Name = "Label162"
-        Me.Label162.Size = New System.Drawing.Size(54, 13)
-        Me.Label162.TabIndex = 274
-        Me.Label162.Text = "Strip color"
-        '
-        'nyhtmlscroll
-        '
-        Me.nyhtmlscroll.Location = New System.Drawing.Point(84, 80)
-        Me.nyhtmlscroll.Maximum = New Decimal(New Integer() {4000, 0, 0, 0})
-        Me.nyhtmlscroll.Minimum = New Decimal(New Integer() {4000, 0, 0, -2147483648})
-        Me.nyhtmlscroll.Name = "nyhtmlscroll"
-        Me.nyhtmlscroll.Size = New System.Drawing.Size(41, 20)
-        Me.nyhtmlscroll.TabIndex = 273
-        Me.nyhtmlscroll.Value = New Decimal(New Integer() {87, 0, 0, 0})
-        '
-        'Label163
-        '
-        Me.Label163.AutoSize = True
-        Me.Label163.Location = New System.Drawing.Point(3, 82)
-        Me.Label163.Name = "Label163"
-        Me.Label163.Size = New System.Drawing.Size(81, 13)
-        Me.Label163.TabIndex = 271
-        Me.Label163.Text = "Strip Y  Position"
-        '
-        'cmdshowhtmlscroll
-        '
-        Me.cmdshowhtmlscroll.BackColor = System.Drawing.Color.Green
-        Me.cmdshowhtmlscroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdshowhtmlscroll.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cmdshowhtmlscroll.Location = New System.Drawing.Point(2, 19)
-        Me.cmdshowhtmlscroll.Name = "cmdshowhtmlscroll"
-        Me.cmdshowhtmlscroll.Size = New System.Drawing.Size(76, 58)
-        Me.cmdshowhtmlscroll.TabIndex = 262
-        Me.cmdshowhtmlscroll.Text = "Start"
-        Me.cmdshowhtmlscroll.UseVisualStyleBackColor = False
-        '
         'txtcrawlhtmlscroll
         '
         Me.txtcrawlhtmlscroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -657,87 +707,40 @@ Partial Class ucHtmlScroller
         Me.txtcrawlhtmlscroll.Multiline = True
         Me.txtcrawlhtmlscroll.Name = "txtcrawlhtmlscroll"
         Me.txtcrawlhtmlscroll.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtcrawlhtmlscroll.Size = New System.Drawing.Size(925, 784)
+        Me.txtcrawlhtmlscroll.Size = New System.Drawing.Size(885, 784)
         Me.txtcrawlhtmlscroll.TabIndex = 261
         Me.txtcrawlhtmlscroll.Text = resources.GetString("txtcrawlhtmlscroll.Text")
-        '
-        'txtFlip2ndChannel
-        '
-        Me.txtFlip2ndChannel.Location = New System.Drawing.Point(596, 11)
-        Me.txtFlip2ndChannel.Multiline = True
-        Me.txtFlip2ndChannel.Name = "txtFlip2ndChannel"
-        Me.txtFlip2ndChannel.Size = New System.Drawing.Size(159, 32)
-        Me.txtFlip2ndChannel.TabIndex = 747
-        Me.txtFlip2ndChannel.Text = "Play 2-210 route://1-210" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "mixer 2-210 fill 1 0 -1 1"
-        '
-        'cmdFlip2ndChannel
-        '
-        Me.cmdFlip2ndChannel.Location = New System.Drawing.Point(761, 14)
-        Me.cmdFlip2ndChannel.Name = "cmdFlip2ndChannel"
-        Me.cmdFlip2ndChannel.Size = New System.Drawing.Size(137, 23)
-        Me.cmdFlip2ndChannel.TabIndex = 748
-        Me.cmdFlip2ndChannel.Text = "Filp on Second Channel"
-        Me.cmdFlip2ndChannel.UseVisualStyleBackColor = True
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.GroupBox3.Controls.Add(Me.cmdshowhtmlscroll)
-        Me.GroupBox3.Controls.Add(Me.cmdpauseresumehtmlscrollerhorizontal)
-        Me.GroupBox3.Controls.Add(Me.nyhtmlscroll)
-        Me.GroupBox3.Controls.Add(Me.Label163)
-        Me.GroupBox3.Controls.Add(Me.nyhtmlscrollticker)
-        Me.GroupBox3.Controls.Add(Me.Label190)
-        Me.GroupBox3.Controls.Add(Me.chkltrhtmlscroll)
-        Me.GroupBox3.Controls.Add(Me.cmdstripcolorhtmlscroll)
-        Me.GroupBox3.Controls.Add(Me.Label162)
-        Me.GroupBox3.Controls.Add(Me.Label161)
-        Me.GroupBox3.Controls.Add(Me.pichtmlscroller)
-        Me.GroupBox3.Controls.Add(Me.Label155)
-        Me.GroupBox3.Location = New System.Drawing.Point(953, 232)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(253, 175)
-        Me.GroupBox3.TabIndex = 749
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Horozontal Scroll"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(937, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(10, 892)
-        Me.Button1.TabIndex = 750
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'ucHtmlScroller
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1221, 918)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbhtmlscroller)
         Me.HideOnClose = True
+        Me.KeyPreview = True
         Me.Name = "ucHtmlScroller"
         Me.Text = "HTML Scroller"
         Me.gbhtmlscroller.ResumeLayout(False)
         Me.gbhtmlscroller.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.nyhtmlscroll, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nyhtmlscrollticker, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pichtmlscroller, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.nspeedhtmlscroll, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nsizehtmlscroll, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbcropmixer.ResumeLayout(False)
         Me.gbcropmixer.PerformLayout()
         CType(Me.ncropbrx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ncroptlx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nyhtmlscrollticker, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pichtmlscroller, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nyhtmlscroll, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -795,7 +798,7 @@ Partial Class ucHtmlScroller
     Friend WithEvents chkShuttlePro As CheckBox
     Friend WithEvents cmdpauseresumehtmlscrollerhorizontal As Button
     Friend WithEvents cmdFlip2ndChannel As Button
-    Friend WithEvents txtFlip2ndChannel As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents chkFlip As CheckBox
 End Class

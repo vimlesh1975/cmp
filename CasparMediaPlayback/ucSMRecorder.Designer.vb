@@ -25,6 +25,7 @@ Partial Class ucSMRecorder
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucSMRecorder))
         Me.gbrecording = New System.Windows.Forms.GroupBox()
+        Me.chkUseShuttleProV2 = New System.Windows.Forms.CheckBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbChannelDestination = New System.Windows.Forms.ComboBox()
         Me.cmdPlay = New System.Windows.Forms.Button()
@@ -33,7 +34,7 @@ Partial Class ucSMRecorder
         Me.cmdcloseRecorder = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlrecording = New System.Windows.Forms.Panel()
-        Me.cmbcasparcgwindowtitlerecording = New System.Windows.Forms.ComboBox()
+        Me.cmbscreenConsumres = New System.Windows.Forms.ComboBox()
         Me.cmdoutcasparcgwindowrecording = New System.Windows.Forms.Button()
         Me.cmdshowcasparcgwindowrecording = New System.Windows.Forms.Button()
         Me.Label233 = New System.Windows.Forms.Label()
@@ -71,6 +72,7 @@ Partial Class ucSMRecorder
         'gbrecording
         '
         Me.gbrecording.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.gbrecording.Controls.Add(Me.chkUseShuttleProV2)
         Me.gbrecording.Controls.Add(Me.Label6)
         Me.gbrecording.Controls.Add(Me.cmbChannelDestination)
         Me.gbrecording.Controls.Add(Me.cmdPlay)
@@ -79,7 +81,7 @@ Partial Class ucSMRecorder
         Me.gbrecording.Controls.Add(Me.cmdcloseRecorder)
         Me.gbrecording.Controls.Add(Me.Label2)
         Me.gbrecording.Controls.Add(Me.pnlrecording)
-        Me.gbrecording.Controls.Add(Me.cmbcasparcgwindowtitlerecording)
+        Me.gbrecording.Controls.Add(Me.cmbscreenConsumres)
         Me.gbrecording.Controls.Add(Me.cmdoutcasparcgwindowrecording)
         Me.gbrecording.Controls.Add(Me.cmdshowcasparcgwindowrecording)
         Me.gbrecording.Controls.Add(Me.Label233)
@@ -115,6 +117,16 @@ Partial Class ucSMRecorder
         Me.gbrecording.TabIndex = 178
         Me.gbrecording.TabStop = False
         Me.gbrecording.Text = "Recording"
+        '
+        'chkUseShuttleProV2
+        '
+        Me.chkUseShuttleProV2.AutoSize = True
+        Me.chkUseShuttleProV2.Location = New System.Drawing.Point(189, 241)
+        Me.chkUseShuttleProV2.Name = "chkUseShuttleProV2"
+        Me.chkUseShuttleProV2.Size = New System.Drawing.Size(112, 17)
+        Me.chkUseShuttleProV2.TabIndex = 1214
+        Me.chkUseShuttleProV2.Text = "Use ShuttlePro v2"
+        Me.chkUseShuttleProV2.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -191,15 +203,14 @@ Partial Class ucSMRecorder
         Me.pnlrecording.Size = New System.Drawing.Size(235, 176)
         Me.pnlrecording.TabIndex = 157
         '
-        'cmbcasparcgwindowtitlerecording
+        'cmbscreenConsumres
         '
-        Me.cmbcasparcgwindowtitlerecording.FormattingEnabled = True
-        Me.cmbcasparcgwindowtitlerecording.Items.AddRange(New Object() {"Screen consumer [1|PAL]", "Screen consumer [2|PAL]", "Screen consumer [3|PAL]", "Screen consumer [4|PAL]", "Screen consumer [1|NTSC]", "Screen consumer [1|1080i5000]", "Screen consumer [2|1080i5000]", "Screen consumer [3|1080i5000]", "Screen consumer [4|1080i5000]", "Screen consumer [1|1080i5994]", "Screen consumer [1|1080i6000]", "Screen consumer [1|1080p2398]", "Screen consumer [1|1080p2400]", "Screen consumer [1|1080p2500]", "Screen consumer [1|1080p2997]", "Screen consumer [1|1080p3000]", "Screen consumer [1|1080p5000]", "Screen consumer [1|1080p5994]", "Screen consumer [1|1080p6000]", "Screen consumer [1|1556p2398]", "Screen consumer [1|1556p2400]", "Screen consumer [1|1556p2500]", "Screen consumer [1|2160p2398]", "Screen consumer [1|2160p2400]", "Screen consumer [1|2160p2500]", "Screen consumer [1| 2160p2997]", "Screen consumer [1|2160p3000]", "Screen consumer [1|576p2500]", "Screen consumer [1|720p2398]", "Screen consumer [1|720p2400]", "Screen consumer [1|720p2500]", "Screen consumer [1|720p2997]", "Screen consumer [1|720p3000]", "Screen consumer [1|720p5000]", "Screen consumer [1|720p5994]", "Screen consumer [1|720p6000]"})
-        Me.cmbcasparcgwindowtitlerecording.Location = New System.Drawing.Point(296, 47)
-        Me.cmbcasparcgwindowtitlerecording.Name = "cmbcasparcgwindowtitlerecording"
-        Me.cmbcasparcgwindowtitlerecording.Size = New System.Drawing.Size(150, 21)
-        Me.cmbcasparcgwindowtitlerecording.TabIndex = 733
-        Me.cmbcasparcgwindowtitlerecording.Text = "Screen consumer [1|PAL]"
+        Me.cmbscreenConsumres.FormattingEnabled = True
+        Me.cmbscreenConsumres.Location = New System.Drawing.Point(296, 47)
+        Me.cmbscreenConsumres.Name = "cmbscreenConsumres"
+        Me.cmbscreenConsumres.Size = New System.Drawing.Size(150, 21)
+        Me.cmbscreenConsumres.TabIndex = 733
+        Me.cmbscreenConsumres.Text = "Screen consumer [1|PAL]"
         '
         'cmdoutcasparcgwindowrecording
         '
@@ -411,7 +422,7 @@ Partial Class ucSMRecorder
         'cmdlooprecord
         '
         Me.cmdlooprecord.BackColor = System.Drawing.Color.Red
-        Me.cmdlooprecord.Location = New System.Drawing.Point(13, 237)
+        Me.cmdlooprecord.Location = New System.Drawing.Point(7, 237)
         Me.cmdlooprecord.Name = "cmdlooprecord"
         Me.cmdlooprecord.Size = New System.Drawing.Size(73, 23)
         Me.cmdlooprecord.TabIndex = 139
@@ -429,7 +440,7 @@ Partial Class ucSMRecorder
         '
         'cmdstoplooprecord
         '
-        Me.cmdstoplooprecord.Location = New System.Drawing.Point(92, 237)
+        Me.cmdstoplooprecord.Location = New System.Drawing.Point(89, 237)
         Me.cmdstoplooprecord.Name = "cmdstoplooprecord"
         Me.cmdstoplooprecord.Size = New System.Drawing.Size(93, 23)
         Me.cmdstoplooprecord.TabIndex = 140
@@ -492,7 +503,7 @@ Partial Class ucSMRecorder
     End Sub
     Friend WithEvents gbrecording As System.Windows.Forms.GroupBox
     Friend WithEvents pnlrecording As System.Windows.Forms.Panel
-    Friend WithEvents cmbcasparcgwindowtitlerecording As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbscreenConsumres As System.Windows.Forms.ComboBox
     Friend WithEvents cmdoutcasparcgwindowrecording As System.Windows.Forms.Button
     Friend WithEvents cmdshowcasparcgwindowrecording As System.Windows.Forms.Button
     Friend WithEvents Label233 As System.Windows.Forms.Label
@@ -531,4 +542,5 @@ Partial Class ucSMRecorder
     Friend WithEvents Label6 As Label
     Friend WithEvents cmbChannelDestination As ComboBox
     Friend WithEvents cmdPlay As Button
+    Friend WithEvents chkUseShuttleProV2 As CheckBox
 End Class

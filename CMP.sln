@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31825.309
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CMP", "CasparMediaPlayback\CMP.vbproj", "{5B8EAB40-3F9F-4F39-8D7A-85B57EA67CE7}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CMPSetup", "CasparMediaPlaybackSetup\CasparMediaPlaybackSetup.vdproj", "{091E3B41-2563-4103-86D6-78413C09B547}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B8EAB40-3F9F-4F39-8D7A-85B57EA67CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8EAB40-3F9F-4F39-8D7A-85B57EA67CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8EAB40-3F9F-4F39-8D7A-85B57EA67CE7}.Debug|x86.ActiveCfg = Debug|x86
+		{5B8EAB40-3F9F-4F39-8D7A-85B57EA67CE7}.Debug|x86.Build.0 = Debug|x86
+		{5B8EAB40-3F9F-4F39-8D7A-85B57EA67CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8EAB40-3F9F-4F39-8D7A-85B57EA67CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B8EAB40-3F9F-4F39-8D7A-85B57EA67CE7}.Release|x86.ActiveCfg = Release|x86
+		{5B8EAB40-3F9F-4F39-8D7A-85B57EA67CE7}.Release|x86.Build.0 = Release|x86
+		{091E3B41-2563-4103-86D6-78413C09B547}.Debug|Any CPU.ActiveCfg = Debug
+		{091E3B41-2563-4103-86D6-78413C09B547}.Debug|Any CPU.Build.0 = Debug
+		{091E3B41-2563-4103-86D6-78413C09B547}.Debug|x86.ActiveCfg = Debug
+		{091E3B41-2563-4103-86D6-78413C09B547}.Debug|x86.Build.0 = Debug
+		{091E3B41-2563-4103-86D6-78413C09B547}.Release|Any CPU.ActiveCfg = Release
+		{091E3B41-2563-4103-86D6-78413C09B547}.Release|Any CPU.Build.0 = Release
+		{091E3B41-2563-4103-86D6-78413C09B547}.Release|x86.ActiveCfg = Release
+		{091E3B41-2563-4103-86D6-78413C09B547}.Release|x86.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5B904EB-F1E3-4F0D-97EA-44C0081C730D}
+	EndGlobalSection
+EndGlobal

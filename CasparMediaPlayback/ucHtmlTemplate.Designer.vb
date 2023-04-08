@@ -35,6 +35,11 @@ Partial Class ucHtmlTemplate
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbtemplate = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.chkRCCTemplate = New System.Windows.Forms.CheckBox()
+        Me.chkLBand = New System.Windows.Forms.CheckBox()
+        Me.txtLBand = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.chkanimatetemplate = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtupdatedelay = New System.Windows.Forms.TextBox()
@@ -99,7 +104,9 @@ Partial Class ucHtmlTemplate
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cmdStopAnimation = New System.Windows.Forms.Button()
         Me.gbtemplate.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.gbrundown.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvrundown, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,6 +116,10 @@ Partial Class ucHtmlTemplate
         'gbtemplate
         '
         Me.gbtemplate.BackColor = System.Drawing.Color.LightGreen
+        Me.gbtemplate.Controls.Add(Me.GroupBox1)
+        Me.gbtemplate.Controls.Add(Me.chkLBand)
+        Me.gbtemplate.Controls.Add(Me.txtLBand)
+        Me.gbtemplate.Controls.Add(Me.Label3)
         Me.gbtemplate.Controls.Add(Me.chkanimatetemplate)
         Me.gbtemplate.Controls.Add(Me.Label1)
         Me.gbtemplate.Controls.Add(Me.txtupdatedelay)
@@ -138,6 +149,55 @@ Partial Class ucHtmlTemplate
         Me.gbtemplate.TabIndex = 425
         Me.gbtemplate.TabStop = False
         Me.gbtemplate.Text = " "
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.LimeGreen
+        Me.GroupBox1.Controls.Add(Me.cmdStopAnimation)
+        Me.GroupBox1.Controls.Add(Me.chkRCCTemplate)
+        Me.GroupBox1.Location = New System.Drawing.Point(1049, 80)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(121, 65)
+        Me.GroupBox1.TabIndex = 1179
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "RCC Template"
+        '
+        'chkRCCTemplate
+        '
+        Me.chkRCCTemplate.AutoSize = True
+        Me.chkRCCTemplate.Location = New System.Drawing.Point(6, 19)
+        Me.chkRCCTemplate.Name = "chkRCCTemplate"
+        Me.chkRCCTemplate.Size = New System.Drawing.Size(95, 17)
+        Me.chkRCCTemplate.TabIndex = 1180
+        Me.chkRCCTemplate.Text = "RCC Template"
+        Me.chkRCCTemplate.UseVisualStyleBackColor = True
+        '
+        'chkLBand
+        '
+        Me.chkLBand.AutoSize = True
+        Me.chkLBand.Location = New System.Drawing.Point(910, 127)
+        Me.chkLBand.Name = "chkLBand"
+        Me.chkLBand.Size = New System.Drawing.Size(133, 17)
+        Me.chkLBand.TabIndex = 1178
+        Me.chkLBand.Text = "Apply L band Squeeze"
+        Me.chkLBand.UseVisualStyleBackColor = True
+        '
+        'txtLBand
+        '
+        Me.txtLBand.Location = New System.Drawing.Point(721, 125)
+        Me.txtLBand.Name = "txtLBand"
+        Me.txtLBand.Size = New System.Drawing.Size(183, 20)
+        Me.txtLBand.TabIndex = 1177
+        Me.txtLBand.Text = "fill 0.18 0 0.82 0.83 25 easeoutexpo"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(718, 109)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(84, 13)
+        Me.Label3.TabIndex = 1176
+        Me.Label3.Text = "L Band squeeze"
         '
         'chkanimatetemplate
         '
@@ -569,7 +629,7 @@ Partial Class ucHtmlTemplate
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvanytemplate.DefaultCellStyle = DataGridViewCellStyle7
         Me.dgvanytemplate.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.dgvanytemplate.Location = New System.Drawing.Point(711, 107)
+        Me.dgvanytemplate.Location = New System.Drawing.Point(711, 148)
         Me.dgvanytemplate.Name = "dgvanytemplate"
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
@@ -579,13 +639,14 @@ Partial Class ucHtmlTemplate
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvanytemplate.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
-        Me.dgvanytemplate.Size = New System.Drawing.Size(503, 801)
+        Me.dgvanytemplate.Size = New System.Drawing.Size(493, 760)
         Me.dgvanytemplate.TabIndex = 369
         '
         'InstanceName
         '
         Me.InstanceName.HeaderText = "Instance/Label Name"
         Me.InstanceName.Name = "InstanceName"
+        Me.InstanceName.Width = 90
         '
         'Value
         '
@@ -594,7 +655,7 @@ Partial Class ucHtmlTemplate
         Me.Value.DefaultCellStyle = DataGridViewCellStyle6
         Me.Value.HeaderText = "Value"
         Me.Value.Name = "Value"
-        Me.Value.Width = 295
+        Me.Value.Width = 270
         '
         'Column4
         '
@@ -607,7 +668,7 @@ Partial Class ucHtmlTemplate
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(477, 14)
+        Me.Label10.Location = New System.Drawing.Point(598, 13)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(63, 13)
         Me.Label10.TabIndex = 368
@@ -616,18 +677,18 @@ Partial Class ucHtmlTemplate
         'cmbinvoke
         '
         Me.cmbinvoke.FormattingEnabled = True
-        Me.cmbinvoke.Items.AddRange(New Object() {"gotoandplaylabel('in')", "gotoandplaylabel('out')", "gotoandplaylabel('loop')", "gotoandplaylabel('stop')", "gotoandplaylabel('label-1')", "Next", "pause", "resume"})
-        Me.cmbinvoke.Location = New System.Drawing.Point(237, 12)
+        Me.cmbinvoke.Items.AddRange(New Object() {"gotoandplaylabel('in')", "gotoandplaylabel('out')", "gotoandplaylabel('loop')", "gotoandplaylabel('stop')", "gotoandplaylabel('label-1')", "Next", "pause", "resume", "document.getElementById('ccgf0').innerHTML='Suresh&nbsp;Kumar'"})
+        Me.cmbinvoke.Location = New System.Drawing.Point(158, 11)
         Me.cmbinvoke.Name = "cmbinvoke"
-        Me.cmbinvoke.Size = New System.Drawing.Size(145, 21)
+        Me.cmbinvoke.Size = New System.Drawing.Size(363, 21)
         Me.cmbinvoke.TabIndex = 366
-        Me.cmbinvoke.Text = "next()"
+        Me.cmbinvoke.Text = "document.getElementById('ccgf0').innerHTML='Suresh&nbsp;Kumar'"
         '
         'cmdinvoke
         '
-        Me.cmdinvoke.Location = New System.Drawing.Point(388, 12)
+        Me.cmdinvoke.Location = New System.Drawing.Point(522, 10)
         Me.cmdinvoke.Name = "cmdinvoke"
-        Me.cmdinvoke.Size = New System.Drawing.Size(79, 21)
+        Me.cmdinvoke.Size = New System.Drawing.Size(76, 21)
         Me.cmdinvoke.TabIndex = 365
         Me.cmdinvoke.Text = "Call Function"
         Me.cmdinvoke.UseVisualStyleBackColor = True
@@ -646,7 +707,7 @@ Partial Class ucHtmlTemplate
         '
         Me.cmblayertemplate.FormattingEnabled = True
         Me.cmblayertemplate.Items.AddRange(New Object() {"21", "22", "23", "24", "25", "26", "27", "28", "29", "30"})
-        Me.cmblayertemplate.Location = New System.Drawing.Point(546, 11)
+        Me.cmblayertemplate.Location = New System.Drawing.Point(664, 9)
         Me.cmblayertemplate.Name = "cmblayertemplate"
         Me.cmblayertemplate.Size = New System.Drawing.Size(40, 21)
         Me.cmblayertemplate.TabIndex = 291
@@ -667,7 +728,7 @@ Partial Class ucHtmlTemplate
         '
         Me.txtsearchtemplate.Location = New System.Drawing.Point(6, 13)
         Me.txtsearchtemplate.Name = "txtsearchtemplate"
-        Me.txtsearchtemplate.Size = New System.Drawing.Size(166, 20)
+        Me.txtsearchtemplate.Size = New System.Drawing.Size(91, 20)
         Me.txtsearchtemplate.TabIndex = 302
         '
         'lsttemplate
@@ -685,7 +746,7 @@ Partial Class ucHtmlTemplate
         '
         'cmdclipsearchtemplate
         '
-        Me.cmdclipsearchtemplate.Location = New System.Drawing.Point(178, 12)
+        Me.cmdclipsearchtemplate.Location = New System.Drawing.Point(99, 12)
         Me.cmdclipsearchtemplate.Name = "cmdclipsearchtemplate"
         Me.cmdclipsearchtemplate.Size = New System.Drawing.Size(53, 22)
         Me.cmdclipsearchtemplate.TabIndex = 303
@@ -766,18 +827,33 @@ Partial Class ucHtmlTemplate
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.Width = 290
         '
+        'cmdStopAnimation
+        '
+        Me.cmdStopAnimation.BackColor = System.Drawing.Color.Red
+        Me.cmdStopAnimation.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdStopAnimation.ForeColor = System.Drawing.Color.White
+        Me.cmdStopAnimation.Location = New System.Drawing.Point(6, 35)
+        Me.cmdStopAnimation.Name = "cmdStopAnimation"
+        Me.cmdStopAnimation.Size = New System.Drawing.Size(109, 24)
+        Me.cmdStopAnimation.TabIndex = 1180
+        Me.cmdStopAnimation.Text = "Stop Animation"
+        Me.cmdStopAnimation.UseVisualStyleBackColor = False
+        '
         'ucHtmlTemplate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1227, 927)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbtemplate)
         Me.HideOnClose = True
         Me.Name = "ucHtmlTemplate"
         Me.Text = "HTML Template"
         Me.gbtemplate.ResumeLayout(False)
         Me.gbtemplate.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.gbrundown.ResumeLayout(False)
         Me.gbrundown.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
@@ -852,4 +928,10 @@ Partial Class ucHtmlTemplate
     Friend WithEvents InstanceName As DataGridViewTextBoxColumn
     Friend WithEvents Value As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewImageColumn
+    Friend WithEvents chkLBand As CheckBox
+    Friend WithEvents txtLBand As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents chkRCCTemplate As CheckBox
+    Friend WithEvents cmdStopAnimation As Button
 End Class

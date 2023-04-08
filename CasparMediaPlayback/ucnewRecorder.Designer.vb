@@ -30,7 +30,7 @@ Partial Class ucnewRecorder
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ProgressBar1 = New VerticalProgressBar.VerticalProgressBar()
         Me.pnlrecording = New System.Windows.Forms.Panel()
-        Me.cmbcasparcgwindowtitlerecording = New System.Windows.Forms.ComboBox()
+        Me.cmbcasparcgwindowtitle = New System.Windows.Forms.ComboBox()
         Me.cmdoutcasparcgwindowrecording = New System.Windows.Forms.Button()
         Me.cmdshowcasparcgwindowrecording = New System.Windows.Forms.Button()
         Me.Label233 = New System.Windows.Forms.Label()
@@ -76,7 +76,7 @@ Partial Class ucnewRecorder
         Me.gbrecording.Controls.Add(Me.Label2)
         Me.gbrecording.Controls.Add(Me.ProgressBar1)
         Me.gbrecording.Controls.Add(Me.pnlrecording)
-        Me.gbrecording.Controls.Add(Me.cmbcasparcgwindowtitlerecording)
+        Me.gbrecording.Controls.Add(Me.cmbcasparcgwindowtitle)
         Me.gbrecording.Controls.Add(Me.cmdoutcasparcgwindowrecording)
         Me.gbrecording.Controls.Add(Me.cmdshowcasparcgwindowrecording)
         Me.gbrecording.Controls.Add(Me.Label233)
@@ -172,15 +172,14 @@ Partial Class ucnewRecorder
         Me.pnlrecording.Size = New System.Drawing.Size(235, 176)
         Me.pnlrecording.TabIndex = 157
         '
-        'cmbcasparcgwindowtitlerecording
+        'cmbcasparcgwindowtitle
         '
-        Me.cmbcasparcgwindowtitlerecording.FormattingEnabled = True
-        Me.cmbcasparcgwindowtitlerecording.Items.AddRange(New Object() {"Screen consumer [1|PAL]", "Screen consumer [2|PAL]", "Screen consumer [3|PAL]", "Screen consumer [4|PAL]", "Screen consumer [1|NTSC]", "Screen consumer [1|1080i5000]", "Screen consumer [1|1080i5994]", "Screen consumer [1|1080i6000]", "Screen consumer [1|1080p2398]", "Screen consumer [1|1080p2400]", "Screen consumer [1|1080p2500]", "Screen consumer [1|1080p2997]", "Screen consumer [1|1080p3000]", "Screen consumer [1|1080p5000]", "Screen consumer [1|1080p5994]", "Screen consumer [1|1080p6000]", "Screen consumer [1|1556p2398]", "Screen consumer [1|1556p2400]", "Screen consumer [1|1556p2500]", "Screen consumer [1|2160p2398]", "Screen consumer [1|2160p2400]", "Screen consumer [1|2160p2500]", "Screen consumer [1| 2160p2997]", "Screen consumer [1|2160p3000]", "Screen consumer [1|576p2500]", "Screen consumer [1|720p2398]", "Screen consumer [1|720p2400]", "Screen consumer [1|720p2500]", "Screen consumer [1|720p2997]", "Screen consumer [1|720p3000]", "Screen consumer [1|720p5000]", "Screen consumer [1|720p5994]", "Screen consumer [1|720p6000]"})
-        Me.cmbcasparcgwindowtitlerecording.Location = New System.Drawing.Point(294, 82)
-        Me.cmbcasparcgwindowtitlerecording.Name = "cmbcasparcgwindowtitlerecording"
-        Me.cmbcasparcgwindowtitlerecording.Size = New System.Drawing.Size(150, 21)
-        Me.cmbcasparcgwindowtitlerecording.TabIndex = 733
-        Me.cmbcasparcgwindowtitlerecording.Text = "Screen consumer [1|PAL]"
+        Me.cmbcasparcgwindowtitle.FormattingEnabled = True
+        Me.cmbcasparcgwindowtitle.Location = New System.Drawing.Point(294, 82)
+        Me.cmbcasparcgwindowtitle.Name = "cmbcasparcgwindowtitle"
+        Me.cmbcasparcgwindowtitle.Size = New System.Drawing.Size(150, 21)
+        Me.cmbcasparcgwindowtitle.TabIndex = 733
+        Me.cmbcasparcgwindowtitle.Text = " "
         '
         'cmdoutcasparcgwindowrecording
         '
@@ -500,7 +499,7 @@ Partial Class ucnewRecorder
     End Sub
     Friend WithEvents gbrecording As System.Windows.Forms.GroupBox
     Friend WithEvents pnlrecording As System.Windows.Forms.Panel
-    Friend WithEvents cmbcasparcgwindowtitlerecording As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbcasparcgwindowtitle As System.Windows.Forms.ComboBox
     Friend WithEvents cmdoutcasparcgwindowrecording As System.Windows.Forms.Button
     Friend WithEvents cmdshowcasparcgwindowrecording As System.Windows.Forms.Button
     Friend WithEvents Label233 As System.Windows.Forms.Label

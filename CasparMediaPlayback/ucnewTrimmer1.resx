@@ -120,8 +120,8 @@
   <data name="vlc1.VlcLibDirectory" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAABdTeXN0ZW0uSU8uRGlyZWN0b3J5SW5mbwIAAAAMT3JpZ2luYWxQ
-        YXRoCEZ1bGxQYXRoAQEGAgAAADBDOlxjYXNwYXJjZ1xteWRhdGFcdmxjXHZsYy0yLjIuMS13aW4zMlx2
-        bGMtMi4yLjEJAgAAAAs=
+        YXRoCEZ1bGxQYXRoAQEGAgAAADBDOlxjYXNwYXJjZ1xteWRhdGFcdmxjXHZsYy0yLjIuOC13aW4zMlx2
+        bGMtMi4yLjgJAgAAAAs=
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -146,6 +146,32 @@
   <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>277, 9</value>
   </metadata>
+  <data name="cmdbackTenframetrimmer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAARCAIAAACn2JBZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAb1JREFUOE99k73LgVEYxo8dRRaDwd+gDDaSKCmbRVksJh/FIEWhDBYTgxL/iDKI
+        QVkoKbuFyEfh9d6v+3ac8zjP+xt0znVfrufqPOdhTx1+XtBGB43hvyz4PZ/Pi8XiO5Qrx+NxtVrhWpHF
+        fbPZLBgMptNp3HK4YTKZ+Hy+crmMW3Wvy+XSbDZtNhtjLJPJkCoAfWu1mtlsBkO1WkXxk/V4PHABdUKh
+        EJiQXC4HInThdcbjsd/vpzFj9XoddanX6XSCh1itVnK9wCzkcDiUSiWsw1FkwdO8Xi/NGTMYDLjIZrNo
+        GA6HHo8HRREpa7/fVyoVi8VCQ5lCobDb7YrFoslkIknmk7VcLl0uF6q8i0gkEnG73bRR8cnabrfwUjVH
+        IJJIJMBgNBpp/4X2vKbTaTgcpqFMPp8Hw2g0CgQCJMlIWfiyb7dbq9Wy2+1kecPP/nq9NhoNvHQi2l4c
+        +GJisZh4cOKdAObzeTQapdkLRRa/ikC/33c6nWgVs9Bzv9/b7bbD4UCDbi/OZrNJJpNgTaVSJMms1+t4
+        PA4GuL2oKLL+PpZ3x8Fg0Ol0cM0RDd1ut9fr4Vq3F0f8pxKaPp+//Qgabux5RP0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="cmdforwardtenframetrimmer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAARCAIAAACn2JBZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAbpJREFUOE+Fk7/LQVEYx68dRRaDwd+gDDaSKCmbRVksJtxikKJQBouJQYl/RBnE
+        oCyUlN1C5Ef59X7f93ne073uxWd6zvf53u859/Qc6ang8Xhw9QYYPng4a7lcHg4HqrVuKPP5/HQ6UU2i
+        Fs4qlUo+n288HtNS+0E6nQ4Gg9PplJa6iZxVqVQkSTKbzdVqlfZ/IZPJwGCz2RqNxvl8ZlUNZ9VqNVgJ
+        v98/Go1Ix/50BFmWuS1JoVBIHPB+v1MBdLIADlgsFvf7PXWBMgtYrVb8yvF45PYf+lmEx+MZDAZkyGaz
+        JBoMBiqA1+sVfwA+ZQGTyVQoFLbbbT6fZ0mNxWIpl8u73e57FuF2uyORCC8UiDO6XK7FYvE9y2g0YmIS
+        iQSvNeByYdhsNl+yAoHAcDiEIZfLsaQmHA5PJhMKeZuFUarX65fLhQzi7gV2u73ZbF6vV3RpbvSzotHo
+        bDajFqGcCVxTLBbDq+LeP69ZDoej1WrdbjeItBshspxOZ6/XY1Xt4SxMJnzxeHy1WpHyQiqVgiGZTK7X
+        a5Y0cFa32+10OlT/vhrN02232/1+n2pdA+As3Z7g3ccqns8fy5Eabj5nOr0AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="cmdforwardoneframetrimmer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAARCAIAAACn2JBZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -209,6 +235,12 @@
   </metadata>
   <metadata name="tmrtrimmer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 3</value>
+  </metadata>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>277, 9</value>
+  </metadata>
+  <metadata name="bwforexportclip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>376, 9</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>81</value>

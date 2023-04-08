@@ -23,10 +23,10 @@ Partial Class ucMAM
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucMAM))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucMAM))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lstSourceDirectory = New System.Windows.Forms.ListBox()
@@ -47,6 +47,23 @@ Partial Class ucMAM
         Me.cmdopendestinationdirectoryproxy = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.FFMPEG = New System.Windows.Forms.TabPage()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.txtdistinationalphavideo = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.txtfirstfile = New System.Windows.Forms.TextBox()
+        Me.cmdopenfirstfile = New System.Windows.Forms.Button()
+        Me.cmdScreenRecorderwithSystemAudio = New System.Windows.Forms.Button()
+        Me.txtOutputToDecklink = New System.Windows.Forms.TextBox()
+        Me.cmdOutputToDecklink = New System.Windows.Forms.Button()
+        Me.txtScreenRecorderwirhSystemAudio = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.cmdScreenRecorderwithMicrophone = New System.Windows.Forms.Button()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.cmdrecord = New System.Windows.Forms.Button()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.txtrecord = New System.Windows.Forms.TextBox()
+        Me.txtScreenRecorderwithmicrophone = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.cmdFFMpeg = New System.Windows.Forms.Button()
         Me.txtFFMpeg = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -86,7 +103,6 @@ Partial Class ucMAM
         Me.cmdvideotosequencemam = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.cmdsequencetovideomam = New System.Windows.Forms.Button()
-        Me.txtsequencetovideomam = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.EbuCoreMetadata = New System.Windows.Forms.TabPage()
         Me.gbmetadata = New System.Windows.Forms.GroupBox()
@@ -101,6 +117,8 @@ Partial Class ucMAM
         Me.cmdwritemetadata = New System.Windows.Forms.Button()
         Me.cmdreadmetadata = New System.Windows.Forms.Button()
         Me.dgvmetadata = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CopyandProxyProgram = New System.Windows.Forms.TabPage()
         Me.BatchTranscoder = New System.Windows.Forms.TabPage()
         Me.txtffmpegoutput = New System.Windows.Forms.TextBox()
@@ -116,6 +134,7 @@ Partial Class ucMAM
         Me.Label11 = New System.Windows.Forms.Label()
         Me.lblexportclipinfobt = New System.Windows.Forms.Label()
         Me.dgvtranscoder = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.cmdstoptranscoding = New System.Windows.Forms.Button()
         Me.txtdestinationdirectorybt = New System.Windows.Forms.TextBox()
@@ -157,6 +176,13 @@ Partial Class ucMAM
         Me.labelclips = New System.Windows.Forms.Label()
         Me.txtsearchclip = New System.Windows.Forms.TextBox()
         Me.dgvclips = New System.Windows.Forms.DataGridView()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.cdmDesinationDirectoryyt = New System.Windows.Forms.Button()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.txtDesinationDirectoryyt = New System.Windows.Forms.TextBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.txtYTurl = New System.Windows.Forms.TextBox()
+        Me.cmdDownloadyoutubeVideo = New System.Windows.Forms.Button()
         Me.bwforexportclipbt = New System.ComponentModel.BackgroundWorker()
         Me.fswalias2 = New System.IO.FileSystemWatcher()
         Me.fsw = New System.IO.FileSystemWatcher()
@@ -165,19 +191,10 @@ Partial Class ucMAM
         Me.lblplayinvlc = New System.Windows.Forms.Label()
         Me.cmdshowfileinformation = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.cmdrecord = New System.Windows.Forms.Button()
-        Me.txtrecord = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.cmdOutputToDecklink = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtOutputToDecklink = New System.Windows.Forms.TextBox()
+        Me.UcTranscodingProfile1 = New caspar_media_playback.ucTranscodingProfile()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UcTranscodingProfile1 = New caspar_media_playback.ucTranscodingProfile()
         Me.TabControl1.SuspendLayout()
         Me.FFMPEG.SuspendLayout()
         Me.EbuCoreMetadata.SuspendLayout()
@@ -189,6 +206,7 @@ Partial Class ucMAM
         Me.WatchFolder.SuspendLayout()
         Me.gbdatatablesetting.SuspendLayout()
         CType(Me.dgvclips, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
         CType(Me.fswalias2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fsw, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fswalias1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -358,19 +376,31 @@ Partial Class ucMAM
         Me.TabControl1.Controls.Add(Me.CopyandProxyProgram)
         Me.TabControl1.Controls.Add(Me.BatchTranscoder)
         Me.TabControl1.Controls.Add(Me.WatchFolder)
+        Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Location = New System.Drawing.Point(6, 19)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(820, 926)
+        Me.TabControl1.Size = New System.Drawing.Size(775, 926)
         Me.TabControl1.TabIndex = 490
         '
         'FFMPEG
         '
+        Me.FFMPEG.Controls.Add(Me.Label35)
+        Me.FFMPEG.Controls.Add(Me.txtdistinationalphavideo)
+        Me.FFMPEG.Controls.Add(Me.Label34)
+        Me.FFMPEG.Controls.Add(Me.txtfirstfile)
+        Me.FFMPEG.Controls.Add(Me.cmdopenfirstfile)
+        Me.FFMPEG.Controls.Add(Me.cmdScreenRecorderwithSystemAudio)
         Me.FFMPEG.Controls.Add(Me.txtOutputToDecklink)
         Me.FFMPEG.Controls.Add(Me.cmdOutputToDecklink)
+        Me.FFMPEG.Controls.Add(Me.txtScreenRecorderwirhSystemAudio)
         Me.FFMPEG.Controls.Add(Me.Label10)
+        Me.FFMPEG.Controls.Add(Me.cmdScreenRecorderwithMicrophone)
+        Me.FFMPEG.Controls.Add(Me.Label33)
         Me.FFMPEG.Controls.Add(Me.cmdrecord)
+        Me.FFMPEG.Controls.Add(Me.Label24)
         Me.FFMPEG.Controls.Add(Me.txtrecord)
+        Me.FFMPEG.Controls.Add(Me.txtScreenRecorderwithmicrophone)
         Me.FFMPEG.Controls.Add(Me.Label9)
         Me.FFMPEG.Controls.Add(Me.cmdFFMpeg)
         Me.FFMPEG.Controls.Add(Me.txtFFMpeg)
@@ -411,21 +441,181 @@ Partial Class ucMAM
         Me.FFMPEG.Controls.Add(Me.cmdvideotosequencemam)
         Me.FFMPEG.Controls.Add(Me.Label21)
         Me.FFMPEG.Controls.Add(Me.cmdsequencetovideomam)
-        Me.FFMPEG.Controls.Add(Me.txtsequencetovideomam)
         Me.FFMPEG.Controls.Add(Me.Label20)
         Me.FFMPEG.Location = New System.Drawing.Point(4, 22)
         Me.FFMPEG.Name = "FFMPEG"
         Me.FFMPEG.Padding = New System.Windows.Forms.Padding(3)
-        Me.FFMPEG.Size = New System.Drawing.Size(812, 900)
+        Me.FFMPEG.Size = New System.Drawing.Size(767, 900)
         Me.FFMPEG.TabIndex = 3
         Me.FFMPEG.Text = "FFMPEG"
         Me.FFMPEG.UseVisualStyleBackColor = True
         '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(439, 316)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(79, 13)
+        Me.Label35.TabIndex = 859
+        Me.Label35.Text = "Destination File"
+        '
+        'txtdistinationalphavideo
+        '
+        Me.txtdistinationalphavideo.Location = New System.Drawing.Point(440, 334)
+        Me.txtdistinationalphavideo.Name = "txtdistinationalphavideo"
+        Me.txtdistinationalphavideo.Size = New System.Drawing.Size(231, 20)
+        Me.txtdistinationalphavideo.TabIndex = 858
+        Me.txtdistinationalphavideo.Text = "c:/casparcg/_media/video1.mov"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(30, 319)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(45, 13)
+        Me.Label34.TabIndex = 857
+        Me.Label34.Text = "First File"
+        '
+        'txtfirstfile
+        '
+        Me.txtfirstfile.Location = New System.Drawing.Point(5, 336)
+        Me.txtfirstfile.Name = "txtfirstfile"
+        Me.txtfirstfile.Size = New System.Drawing.Size(321, 20)
+        Me.txtfirstfile.TabIndex = 856
+        Me.txtfirstfile.Text = "c:/casparcg/mydata/png/test00001.png"
+        '
+        'cmdopenfirstfile
+        '
+        Me.cmdopenfirstfile.Location = New System.Drawing.Point(332, 332)
+        Me.cmdopenfirstfile.Name = "cmdopenfirstfile"
+        Me.cmdopenfirstfile.Size = New System.Drawing.Size(102, 25)
+        Me.cmdopenfirstfile.TabIndex = 855
+        Me.cmdopenfirstfile.Text = "Open First File"
+        Me.cmdopenfirstfile.UseVisualStyleBackColor = True
+        '
+        'cmdScreenRecorderwithSystemAudio
+        '
+        Me.cmdScreenRecorderwithSystemAudio.Location = New System.Drawing.Point(695, 96)
+        Me.cmdScreenRecorderwithSystemAudio.Name = "cmdScreenRecorderwithSystemAudio"
+        Me.cmdScreenRecorderwithSystemAudio.Size = New System.Drawing.Size(64, 46)
+        Me.cmdScreenRecorderwithSystemAudio.TabIndex = 854
+        Me.cmdScreenRecorderwithSystemAudio.Text = "Convert"
+        Me.cmdScreenRecorderwithSystemAudio.UseVisualStyleBackColor = True
+        '
+        'txtOutputToDecklink
+        '
+        Me.txtOutputToDecklink.Location = New System.Drawing.Point(8, 645)
+        Me.txtOutputToDecklink.Multiline = True
+        Me.txtOutputToDecklink.Name = "txtOutputToDecklink"
+        Me.txtOutputToDecklink.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtOutputToDecklink.Size = New System.Drawing.Size(681, 48)
+        Me.txtOutputToDecklink.TabIndex = 848
+        Me.txtOutputToDecklink.Text = "c:/casparcg/mydata/goa/FFmpeg/bin/ffmpeg.exe -i udp://238.1.1.3:2000?pkt_size=131" &
+    "6  -fflags nobuffer -tune zerolatency -f decklink -s 720x576 -pix_fmt uyvy422 -r" &
+    " 25 ""DeckLink Duo (1)"""
+        '
+        'cmdOutputToDecklink
+        '
+        Me.cmdOutputToDecklink.Location = New System.Drawing.Point(696, 645)
+        Me.cmdOutputToDecklink.Name = "cmdOutputToDecklink"
+        Me.cmdOutputToDecklink.Size = New System.Drawing.Size(64, 48)
+        Me.cmdOutputToDecklink.TabIndex = 847
+        Me.cmdOutputToDecklink.Text = "Convert"
+        Me.cmdOutputToDecklink.UseVisualStyleBackColor = True
+        '
+        'txtScreenRecorderwirhSystemAudio
+        '
+        Me.txtScreenRecorderwirhSystemAudio.Location = New System.Drawing.Point(8, 96)
+        Me.txtScreenRecorderwirhSystemAudio.Multiline = True
+        Me.txtScreenRecorderwirhSystemAudio.Name = "txtScreenRecorderwirhSystemAudio"
+        Me.txtScreenRecorderwirhSystemAudio.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtScreenRecorderwirhSystemAudio.Size = New System.Drawing.Size(678, 46)
+        Me.txtScreenRecorderwirhSystemAudio.TabIndex = 853
+        Me.txtScreenRecorderwirhSystemAudio.Text = resources.GetString("txtScreenRecorderwirhSystemAudio.Text")
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(12, 629)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(171, 13)
+        Me.Label10.TabIndex = 845
+        Me.Label10.Text = "FFMPEG Output To Decklink"
+        '
+        'cmdScreenRecorderwithMicrophone
+        '
+        Me.cmdScreenRecorderwithMicrophone.Location = New System.Drawing.Point(695, 27)
+        Me.cmdScreenRecorderwithMicrophone.Name = "cmdScreenRecorderwithMicrophone"
+        Me.cmdScreenRecorderwithMicrophone.Size = New System.Drawing.Size(64, 46)
+        Me.cmdScreenRecorderwithMicrophone.TabIndex = 851
+        Me.cmdScreenRecorderwithMicrophone.Text = "Convert"
+        Me.cmdScreenRecorderwithMicrophone.UseVisualStyleBackColor = True
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(10, 80)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(331, 13)
+        Me.Label33.TabIndex = 852
+        Me.Label33.Text = "Screen Recorder With System Audio  (00:00:10) Duration"
+        '
+        'cmdrecord
+        '
+        Me.cmdrecord.Location = New System.Drawing.Point(695, 577)
+        Me.cmdrecord.Name = "cmdrecord"
+        Me.cmdrecord.Size = New System.Drawing.Size(64, 48)
+        Me.cmdrecord.TabIndex = 844
+        Me.cmdrecord.Text = "Convert"
+        Me.cmdrecord.UseVisualStyleBackColor = True
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(10, 11)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(317, 13)
+        Me.Label24.TabIndex = 849
+        Me.Label24.Text = "Screen Recorder With Microphone (00:00:10) Duration"
+        '
+        'txtrecord
+        '
+        Me.txtrecord.Location = New System.Drawing.Point(5, 577)
+        Me.txtrecord.Multiline = True
+        Me.txtrecord.Name = "txtrecord"
+        Me.txtrecord.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtrecord.Size = New System.Drawing.Size(681, 48)
+        Me.txtrecord.TabIndex = 843
+        Me.txtrecord.Text = resources.GetString("txtrecord.Text")
+        '
+        'txtScreenRecorderwithmicrophone
+        '
+        Me.txtScreenRecorderwithmicrophone.Location = New System.Drawing.Point(8, 27)
+        Me.txtScreenRecorderwithmicrophone.Multiline = True
+        Me.txtScreenRecorderwithmicrophone.Name = "txtScreenRecorderwithmicrophone"
+        Me.txtScreenRecorderwithmicrophone.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtScreenRecorderwithmicrophone.Size = New System.Drawing.Size(678, 46)
+        Me.txtScreenRecorderwithmicrophone.TabIndex = 850
+        Me.txtScreenRecorderwithmicrophone.Text = resources.GetString("txtScreenRecorderwithmicrophone.Text")
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(11, 561)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(280, 13)
+        Me.Label9.TabIndex = 842
+        Me.Label9.Text = "FFMPEG continuous Record 10 second duration"
+        '
         'cmdFFMpeg
         '
-        Me.cmdFFMpeg.Location = New System.Drawing.Point(742, 234)
+        Me.cmdFFMpeg.Location = New System.Drawing.Point(695, 380)
         Me.cmdFFMpeg.Name = "cmdFFMpeg"
-        Me.cmdFFMpeg.Size = New System.Drawing.Size(64, 124)
+        Me.cmdFFMpeg.Size = New System.Drawing.Size(64, 109)
         Me.cmdFFMpeg.TabIndex = 841
         Me.cmdFFMpeg.Text = "Convert"
         Me.cmdFFMpeg.UseVisualStyleBackColor = True
@@ -433,11 +623,11 @@ Partial Class ucMAM
         'txtFFMpeg
         '
         Me.txtFFMpeg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFFMpeg.Location = New System.Drawing.Point(6, 234)
+        Me.txtFFMpeg.Location = New System.Drawing.Point(6, 380)
         Me.txtFFMpeg.Multiline = True
         Me.txtFFMpeg.Name = "txtFFMpeg"
         Me.txtFFMpeg.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtFFMpeg.Size = New System.Drawing.Size(702, 124)
+        Me.txtFFMpeg.Size = New System.Drawing.Size(681, 109)
         Me.txtFFMpeg.TabIndex = 840
         Me.txtFFMpeg.Text = resources.GetString("txtFFMpeg.Text")
         '
@@ -445,7 +635,7 @@ Partial Class ucMAM
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(5, 218)
+        Me.Label8.Location = New System.Drawing.Point(5, 364)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(52, 13)
         Me.Label8.TabIndex = 839
@@ -453,7 +643,7 @@ Partial Class ucMAM
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(742, 382)
+        Me.Button1.Location = New System.Drawing.Point(695, 508)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(64, 48)
         Me.Button1.TabIndex = 838
@@ -462,11 +652,11 @@ Partial Class ucMAM
         '
         'txtffplay
         '
-        Me.txtffplay.Location = New System.Drawing.Point(5, 382)
+        Me.txtffplay.Location = New System.Drawing.Point(5, 508)
         Me.txtffplay.Multiline = True
         Me.txtffplay.Name = "txtffplay"
         Me.txtffplay.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtffplay.Size = New System.Drawing.Size(702, 48)
+        Me.txtffplay.Size = New System.Drawing.Size(681, 48)
         Me.txtffplay.TabIndex = 837
         Me.txtffplay.Text = "c:/casparcg/mydata/ffmpeg/ffplay.exe udp://238.1.1.3:2000?pkt_size=1316 -ast 0"
         '
@@ -474,7 +664,7 @@ Partial Class ucMAM
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(12, 366)
+        Me.Label5.Location = New System.Drawing.Point(12, 492)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 13)
         Me.Label5.TabIndex = 836
@@ -483,7 +673,7 @@ Partial Class ucMAM
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(162, 150)
+        Me.Label3.Location = New System.Drawing.Point(162, 304)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(144, 13)
         Me.Label3.TabIndex = 835
@@ -491,7 +681,7 @@ Partial Class ucMAM
         '
         'cmdFfmbcTargetTranscoding
         '
-        Me.cmdFfmbcTargetTranscoding.Location = New System.Drawing.Point(742, 795)
+        Me.cmdFfmbcTargetTranscoding.Location = New System.Drawing.Point(695, 847)
         Me.cmdFfmbcTargetTranscoding.Name = "cmdFfmbcTargetTranscoding"
         Me.cmdFfmbcTargetTranscoding.Size = New System.Drawing.Size(64, 40)
         Me.cmdFfmbcTargetTranscoding.TabIndex = 834
@@ -500,11 +690,11 @@ Partial Class ucMAM
         '
         'txtFfmbcTargetTranscoding
         '
-        Me.txtFfmbcTargetTranscoding.Location = New System.Drawing.Point(5, 792)
+        Me.txtFfmbcTargetTranscoding.Location = New System.Drawing.Point(5, 850)
         Me.txtFfmbcTargetTranscoding.Multiline = True
         Me.txtFfmbcTargetTranscoding.Name = "txtFfmbcTargetTranscoding"
         Me.txtFfmbcTargetTranscoding.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtFfmbcTargetTranscoding.Size = New System.Drawing.Size(702, 55)
+        Me.txtFfmbcTargetTranscoding.Size = New System.Drawing.Size(681, 35)
         Me.txtFfmbcTargetTranscoding.TabIndex = 833
         Me.txtFfmbcTargetTranscoding.Text = "c:/casparcg/mydata/ffmbc/ffmbc-0.7.4-x64.exe -y -i c:/casparcg/_media/kabhi_kabhi" &
     ".mp4 -tff -target dvcpro50 c:/casparcg/_media/kabhi_kabhi_dvcpro50.mov"
@@ -513,7 +703,7 @@ Partial Class ucMAM
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(12, 766)
+        Me.Label6.Location = New System.Drawing.Point(12, 833)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(154, 13)
         Me.Label6.TabIndex = 832
@@ -521,7 +711,7 @@ Partial Class ucMAM
         '
         'cmdvideohd
         '
-        Me.cmdvideohd.Location = New System.Drawing.Point(742, 25)
+        Me.cmdvideohd.Location = New System.Drawing.Point(695, 179)
         Me.cmdvideohd.Name = "cmdvideohd"
         Me.cmdvideohd.Size = New System.Drawing.Size(64, 54)
         Me.cmdvideohd.TabIndex = 831
@@ -532,7 +722,7 @@ Partial Class ucMAM
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(12, 3)
+        Me.Label29.Location = New System.Drawing.Point(12, 157)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(116, 15)
         Me.Label29.TabIndex = 830
@@ -541,7 +731,7 @@ Partial Class ucMAM
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(523, 30)
+        Me.Label30.Location = New System.Drawing.Point(523, 184)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(52, 13)
         Me.Label30.TabIndex = 829
@@ -550,7 +740,7 @@ Partial Class ucMAM
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(308, 25)
+        Me.Label31.Location = New System.Drawing.Point(308, 179)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(92, 13)
         Me.Label31.TabIndex = 828
@@ -559,7 +749,7 @@ Partial Class ucMAM
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(12, 25)
+        Me.Label32.Location = New System.Drawing.Point(12, 179)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(60, 13)
         Me.Label32.TabIndex = 827
@@ -567,7 +757,7 @@ Partial Class ucMAM
         '
         'txtsourcefileforalphavideosd
         '
-        Me.txtsourcefileforalphavideosd.Location = New System.Drawing.Point(5, 43)
+        Me.txtsourcefileforalphavideosd.Location = New System.Drawing.Point(5, 197)
         Me.txtsourcefileforalphavideosd.Name = "txtsourcefileforalphavideosd"
         Me.txtsourcefileforalphavideosd.Size = New System.Drawing.Size(234, 20)
         Me.txtsourcefileforalphavideosd.TabIndex = 825
@@ -575,7 +765,7 @@ Partial Class ucMAM
         '
         'txtdestinationfolderforhd
         '
-        Me.txtdestinationfolderforhd.Location = New System.Drawing.Point(299, 46)
+        Me.txtdestinationfolderforhd.Location = New System.Drawing.Point(299, 200)
         Me.txtdestinationfolderforhd.Name = "txtdestinationfolderforhd"
         Me.txtdestinationfolderforhd.Size = New System.Drawing.Size(166, 20)
         Me.txtdestinationfolderforhd.TabIndex = 826
@@ -583,7 +773,7 @@ Partial Class ucMAM
         '
         'txtfilenameforhd
         '
-        Me.txtfilenameforhd.Location = New System.Drawing.Point(526, 46)
+        Me.txtfilenameforhd.Location = New System.Drawing.Point(526, 200)
         Me.txtfilenameforhd.Name = "txtfilenameforhd"
         Me.txtfilenameforhd.Size = New System.Drawing.Size(145, 20)
         Me.txtfilenameforhd.TabIndex = 824
@@ -591,7 +781,7 @@ Partial Class ucMAM
         '
         'cmddestinationfolderforhd
         '
-        Me.cmddestinationfolderforhd.Location = New System.Drawing.Point(471, 46)
+        Me.cmddestinationfolderforhd.Location = New System.Drawing.Point(471, 200)
         Me.cmddestinationfolderforhd.Name = "cmddestinationfolderforhd"
         Me.cmddestinationfolderforhd.Size = New System.Drawing.Size(47, 25)
         Me.cmddestinationfolderforhd.TabIndex = 823
@@ -600,7 +790,7 @@ Partial Class ucMAM
         '
         'cmdvideosd
         '
-        Me.cmdvideosd.Location = New System.Drawing.Point(245, 43)
+        Me.cmdvideosd.Location = New System.Drawing.Point(245, 197)
         Me.cmdvideosd.Name = "cmdvideosd"
         Me.cmdvideosd.Size = New System.Drawing.Size(48, 25)
         Me.cmdvideosd.TabIndex = 822
@@ -610,7 +800,7 @@ Partial Class ucMAM
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(523, 100)
+        Me.Label28.Location = New System.Drawing.Point(523, 254)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(52, 13)
         Me.Label28.TabIndex = 820
@@ -619,7 +809,7 @@ Partial Class ucMAM
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(669, 100)
+        Me.Label27.Location = New System.Drawing.Point(542, 241)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(71, 13)
         Me.Label27.TabIndex = 819
@@ -628,7 +818,7 @@ Partial Class ucMAM
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(326, 91)
+        Me.Label26.Location = New System.Drawing.Point(326, 245)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(92, 13)
         Me.Label26.TabIndex = 818
@@ -637,7 +827,7 @@ Partial Class ucMAM
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(12, 91)
+        Me.Label25.Location = New System.Drawing.Point(12, 245)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(60, 13)
         Me.Label25.TabIndex = 817
@@ -645,7 +835,7 @@ Partial Class ucMAM
         '
         'txtsourcefileforalphavideo
         '
-        Me.txtsourcefileforalphavideo.Location = New System.Drawing.Point(5, 109)
+        Me.txtsourcefileforalphavideo.Location = New System.Drawing.Point(5, 263)
         Me.txtsourcefileforalphavideo.Name = "txtsourcefileforalphavideo"
         Me.txtsourcefileforalphavideo.Size = New System.Drawing.Size(234, 20)
         Me.txtsourcefileforalphavideo.TabIndex = 815
@@ -653,7 +843,7 @@ Partial Class ucMAM
         '
         'txtdestinationfolderforalphaimage
         '
-        Me.txtdestinationfolderforalphaimage.Location = New System.Drawing.Point(299, 112)
+        Me.txtdestinationfolderforalphaimage.Location = New System.Drawing.Point(299, 266)
         Me.txtdestinationfolderforalphaimage.Name = "txtdestinationfolderforalphaimage"
         Me.txtdestinationfolderforalphaimage.Size = New System.Drawing.Size(166, 20)
         Me.txtdestinationfolderforalphaimage.TabIndex = 816
@@ -661,7 +851,7 @@ Partial Class ucMAM
         '
         'txtfilenameforimage
         '
-        Me.txtfilenameforimage.Location = New System.Drawing.Point(526, 116)
+        Me.txtfilenameforimage.Location = New System.Drawing.Point(526, 270)
         Me.txtfilenameforimage.Name = "txtfilenameforimage"
         Me.txtfilenameforimage.Size = New System.Drawing.Size(140, 20)
         Me.txtfilenameforimage.TabIndex = 814
@@ -669,7 +859,7 @@ Partial Class ucMAM
         '
         'cmddestinationfolderforalphaimage
         '
-        Me.cmddestinationfolderforalphaimage.Location = New System.Drawing.Point(471, 112)
+        Me.cmddestinationfolderforalphaimage.Location = New System.Drawing.Point(471, 266)
         Me.cmddestinationfolderforalphaimage.Name = "cmddestinationfolderforalphaimage"
         Me.cmddestinationfolderforalphaimage.Size = New System.Drawing.Size(47, 25)
         Me.cmddestinationfolderforalphaimage.TabIndex = 813
@@ -678,7 +868,7 @@ Partial Class ucMAM
         '
         'cmdvideoforimage
         '
-        Me.cmdvideoforimage.Location = New System.Drawing.Point(245, 109)
+        Me.cmdvideoforimage.Location = New System.Drawing.Point(245, 263)
         Me.cmdvideoforimage.Name = "cmdvideoforimage"
         Me.cmdvideoforimage.Size = New System.Drawing.Size(48, 25)
         Me.cmdvideoforimage.TabIndex = 812
@@ -689,7 +879,7 @@ Partial Class ucMAM
         '
         Me.cmbcodecforalpha.FormattingEnabled = True
         Me.cmbcodecforalpha.Items.AddRange(New Object() {"tga", "png"})
-        Me.cmbcodecforalpha.Location = New System.Drawing.Point(672, 116)
+        Me.cmbcodecforalpha.Location = New System.Drawing.Point(619, 243)
         Me.cmbcodecforalpha.Name = "cmbcodecforalpha"
         Me.cmbcodecforalpha.Size = New System.Drawing.Size(52, 21)
         Me.cmbcodecforalpha.TabIndex = 811
@@ -697,7 +887,7 @@ Partial Class ucMAM
         '
         'cmdaudioinsinglestream
         '
-        Me.cmdaudioinsinglestream.Location = New System.Drawing.Point(742, 710)
+        Me.cmdaudioinsinglestream.Location = New System.Drawing.Point(695, 779)
         Me.cmdaudioinsinglestream.Name = "cmdaudioinsinglestream"
         Me.cmdaudioinsinglestream.Size = New System.Drawing.Size(64, 46)
         Me.cmdaudioinsinglestream.TabIndex = 810
@@ -706,11 +896,11 @@ Partial Class ucMAM
         '
         'txtaudioinsinglestream
         '
-        Me.txtaudioinsinglestream.Location = New System.Drawing.Point(5, 710)
+        Me.txtaudioinsinglestream.Location = New System.Drawing.Point(5, 777)
         Me.txtaudioinsinglestream.Multiline = True
         Me.txtaudioinsinglestream.Name = "txtaudioinsinglestream"
         Me.txtaudioinsinglestream.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtaudioinsinglestream.Size = New System.Drawing.Size(702, 48)
+        Me.txtaudioinsinglestream.Size = New System.Drawing.Size(681, 48)
         Me.txtaudioinsinglestream.TabIndex = 809
         Me.txtaudioinsinglestream.Text = resources.GetString("txtaudioinsinglestream.Text")
         '
@@ -718,7 +908,7 @@ Partial Class ucMAM
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(12, 694)
+        Me.Label23.Location = New System.Drawing.Point(12, 763)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(238, 13)
         Me.Label23.TabIndex = 808
@@ -726,7 +916,7 @@ Partial Class ucMAM
         '
         'cmdaddingaudiotracktovideomam
         '
-        Me.cmdaddingaudiotracktovideomam.Location = New System.Drawing.Point(742, 644)
+        Me.cmdaddingaudiotracktovideomam.Location = New System.Drawing.Point(695, 715)
         Me.cmdaddingaudiotracktovideomam.Name = "cmdaddingaudiotracktovideomam"
         Me.cmdaddingaudiotracktovideomam.Size = New System.Drawing.Size(64, 33)
         Me.cmdaddingaudiotracktovideomam.TabIndex = 807
@@ -735,11 +925,11 @@ Partial Class ucMAM
         '
         'txtaddingaudiotracktovideomam
         '
-        Me.txtaddingaudiotracktovideomam.Location = New System.Drawing.Point(5, 641)
+        Me.txtaddingaudiotracktovideomam.Location = New System.Drawing.Point(5, 712)
         Me.txtaddingaudiotracktovideomam.Multiline = True
         Me.txtaddingaudiotracktovideomam.Name = "txtaddingaudiotracktovideomam"
         Me.txtaddingaudiotracktovideomam.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtaddingaudiotracktovideomam.Size = New System.Drawing.Size(702, 46)
+        Me.txtaddingaudiotracktovideomam.Size = New System.Drawing.Size(681, 46)
         Me.txtaddingaudiotracktovideomam.TabIndex = 806
         Me.txtaddingaudiotracktovideomam.Text = resources.GetString("txtaddingaudiotracktovideomam.Text")
         '
@@ -747,7 +937,7 @@ Partial Class ucMAM
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(12, 625)
+        Me.Label22.Location = New System.Drawing.Point(12, 696)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(166, 13)
         Me.Label22.TabIndex = 805
@@ -755,7 +945,7 @@ Partial Class ucMAM
         '
         'cmdvideotosequencemam
         '
-        Me.cmdvideotosequencemam.Location = New System.Drawing.Point(742, 100)
+        Me.cmdvideotosequencemam.Location = New System.Drawing.Point(695, 254)
         Me.cmdvideotosequencemam.Name = "cmdvideotosequencemam"
         Me.cmdvideotosequencemam.Size = New System.Drawing.Size(64, 37)
         Me.cmdvideotosequencemam.TabIndex = 804
@@ -766,7 +956,7 @@ Partial Class ucMAM
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(6, 69)
+        Me.Label21.Location = New System.Drawing.Point(6, 223)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(132, 15)
         Me.Label21.TabIndex = 802
@@ -774,29 +964,18 @@ Partial Class ucMAM
         '
         'cmdsequencetovideomam
         '
-        Me.cmdsequencetovideomam.Location = New System.Drawing.Point(742, 166)
+        Me.cmdsequencetovideomam.Location = New System.Drawing.Point(695, 320)
         Me.cmdsequencetovideomam.Name = "cmdsequencetovideomam"
         Me.cmdsequencetovideomam.Size = New System.Drawing.Size(64, 39)
         Me.cmdsequencetovideomam.TabIndex = 801
         Me.cmdsequencetovideomam.Text = "Convert"
         Me.cmdsequencetovideomam.UseVisualStyleBackColor = True
         '
-        'txtsequencetovideomam
-        '
-        Me.txtsequencetovideomam.Location = New System.Drawing.Point(5, 166)
-        Me.txtsequencetovideomam.Multiline = True
-        Me.txtsequencetovideomam.Name = "txtsequencetovideomam"
-        Me.txtsequencetovideomam.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtsequencetovideomam.Size = New System.Drawing.Size(702, 39)
-        Me.txtsequencetovideomam.TabIndex = 800
-        Me.txtsequencetovideomam.Text = "c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y -i c:/casparcg/mydata/png/test%5d.png -vc" &
-    "odec png c:/casparcg/_media/video1.mov"
-        '
         'Label20
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(8, 150)
+        Me.Label20.Location = New System.Drawing.Point(8, 304)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(148, 13)
         Me.Label20.TabIndex = 483
@@ -808,7 +987,7 @@ Partial Class ucMAM
         Me.EbuCoreMetadata.Location = New System.Drawing.Point(4, 22)
         Me.EbuCoreMetadata.Name = "EbuCoreMetadata"
         Me.EbuCoreMetadata.Padding = New System.Windows.Forms.Padding(3)
-        Me.EbuCoreMetadata.Size = New System.Drawing.Size(812, 900)
+        Me.EbuCoreMetadata.Size = New System.Drawing.Size(767, 900)
         Me.EbuCoreMetadata.TabIndex = 4
         Me.EbuCoreMetadata.Text = "Ebu Core Metadata"
         Me.EbuCoreMetadata.UseVisualStyleBackColor = True
@@ -959,6 +1138,18 @@ Partial Class ucMAM
         Me.dgvmetadata.Size = New System.Drawing.Size(524, 344)
         Me.dgvmetadata.TabIndex = 0
         '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.HeaderText = "Field"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.Width = 150
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Value"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.Width = 300
+        '
         'CopyandProxyProgram
         '
         Me.CopyandProxyProgram.Controls.Add(Me.cmdopendestinationdirectory)
@@ -982,7 +1173,7 @@ Partial Class ucMAM
         Me.CopyandProxyProgram.Location = New System.Drawing.Point(4, 22)
         Me.CopyandProxyProgram.Name = "CopyandProxyProgram"
         Me.CopyandProxyProgram.Padding = New System.Windows.Forms.Padding(3)
-        Me.CopyandProxyProgram.Size = New System.Drawing.Size(812, 900)
+        Me.CopyandProxyProgram.Size = New System.Drawing.Size(767, 900)
         Me.CopyandProxyProgram.TabIndex = 0
         Me.CopyandProxyProgram.Text = "Copy and Proxy Program"
         Me.CopyandProxyProgram.UseVisualStyleBackColor = True
@@ -1011,7 +1202,7 @@ Partial Class ucMAM
         Me.BatchTranscoder.Location = New System.Drawing.Point(4, 22)
         Me.BatchTranscoder.Name = "BatchTranscoder"
         Me.BatchTranscoder.Padding = New System.Windows.Forms.Padding(3)
-        Me.BatchTranscoder.Size = New System.Drawing.Size(812, 900)
+        Me.BatchTranscoder.Size = New System.Drawing.Size(767, 900)
         Me.BatchTranscoder.TabIndex = 1
         Me.BatchTranscoder.Text = "Batch Transcoder"
         Me.BatchTranscoder.UseVisualStyleBackColor = True
@@ -1132,6 +1323,12 @@ Partial Class ucMAM
         Me.dgvtranscoder.Size = New System.Drawing.Size(500, 377)
         Me.dgvtranscoder.TabIndex = 792
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "File"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 400
+        '
         'Column2
         '
         Me.Column2.FalseValue = "0"
@@ -1212,7 +1409,7 @@ Partial Class ucMAM
         Me.WatchFolder.Location = New System.Drawing.Point(4, 22)
         Me.WatchFolder.Name = "WatchFolder"
         Me.WatchFolder.Padding = New System.Windows.Forms.Padding(3)
-        Me.WatchFolder.Size = New System.Drawing.Size(812, 900)
+        Me.WatchFolder.Size = New System.Drawing.Size(767, 900)
         Me.WatchFolder.TabIndex = 2
         Me.WatchFolder.Text = "Watch Folder"
         Me.WatchFolder.UseVisualStyleBackColor = True
@@ -1528,6 +1725,75 @@ Partial Class ucMAM
         Me.dgvclips.Size = New System.Drawing.Size(619, 200)
         Me.dgvclips.TabIndex = 480
         '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.cdmDesinationDirectoryyt)
+        Me.TabPage1.Controls.Add(Me.Label37)
+        Me.TabPage1.Controls.Add(Me.txtDesinationDirectoryyt)
+        Me.TabPage1.Controls.Add(Me.Label36)
+        Me.TabPage1.Controls.Add(Me.txtYTurl)
+        Me.TabPage1.Controls.Add(Me.cmdDownloadyoutubeVideo)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(767, 900)
+        Me.TabPage1.TabIndex = 5
+        Me.TabPage1.Text = "Youtube Downloader"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'cdmDesinationDirectoryyt
+        '
+        Me.cdmDesinationDirectoryyt.Location = New System.Drawing.Point(589, 38)
+        Me.cdmDesinationDirectoryyt.Name = "cdmDesinationDirectoryyt"
+        Me.cdmDesinationDirectoryyt.Size = New System.Drawing.Size(28, 23)
+        Me.cdmDesinationDirectoryyt.TabIndex = 805
+        Me.cdmDesinationDirectoryyt.Text = ".."
+        Me.cdmDesinationDirectoryyt.UseVisualStyleBackColor = True
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(398, 22)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(92, 13)
+        Me.Label37.TabIndex = 803
+        Me.Label37.Text = "Destination Folder"
+        '
+        'txtDesinationDirectoryyt
+        '
+        Me.txtDesinationDirectoryyt.Enabled = False
+        Me.txtDesinationDirectoryyt.Location = New System.Drawing.Point(359, 39)
+        Me.txtDesinationDirectoryyt.Name = "txtDesinationDirectoryyt"
+        Me.txtDesinationDirectoryyt.Size = New System.Drawing.Size(223, 20)
+        Me.txtDesinationDirectoryyt.TabIndex = 804
+        Me.txtDesinationDirectoryyt.Text = "c:/casparcg/_media/"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(3, 20)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(98, 13)
+        Me.Label36.TabIndex = 2
+        Me.Label36.Text = "You Tube Video url"
+        '
+        'txtYTurl
+        '
+        Me.txtYTurl.Location = New System.Drawing.Point(6, 36)
+        Me.txtYTurl.Name = "txtYTurl"
+        Me.txtYTurl.Size = New System.Drawing.Size(330, 20)
+        Me.txtYTurl.TabIndex = 1
+        Me.txtYTurl.Text = "https://www.youtube.com/watch?v=NETaVaclK_E"
+        '
+        'cmdDownloadyoutubeVideo
+        '
+        Me.cmdDownloadyoutubeVideo.Location = New System.Drawing.Point(623, 38)
+        Me.cmdDownloadyoutubeVideo.Name = "cmdDownloadyoutubeVideo"
+        Me.cmdDownloadyoutubeVideo.Size = New System.Drawing.Size(138, 23)
+        Me.cmdDownloadyoutubeVideo.TabIndex = 0
+        Me.cmdDownloadyoutubeVideo.Text = "Download Yoytube Video"
+        Me.cmdDownloadyoutubeVideo.UseVisualStyleBackColor = True
+        '
         'bwforexportclipbt
         '
         Me.bwforexportclipbt.WorkerSupportsCancellation = True
@@ -1552,7 +1818,7 @@ Partial Class ucMAM
         '
         'cmdplayinvlc
         '
-        Me.cmdplayinvlc.Location = New System.Drawing.Point(839, 634)
+        Me.cmdplayinvlc.Location = New System.Drawing.Point(783, 864)
         Me.cmdplayinvlc.Name = "cmdplayinvlc"
         Me.cmdplayinvlc.Size = New System.Drawing.Size(94, 23)
         Me.cmdplayinvlc.TabIndex = 807
@@ -1562,7 +1828,7 @@ Partial Class ucMAM
         'lblplayinvlc
         '
         Me.lblplayinvlc.AutoSize = True
-        Me.lblplayinvlc.Location = New System.Drawing.Point(845, 660)
+        Me.lblplayinvlc.Location = New System.Drawing.Point(787, 888)
         Me.lblplayinvlc.Name = "lblplayinvlc"
         Me.lblplayinvlc.Size = New System.Drawing.Size(54, 13)
         Me.lblplayinvlc.TabIndex = 807
@@ -1570,7 +1836,7 @@ Partial Class ucMAM
         '
         'cmdshowfileinformation
         '
-        Me.cmdshowfileinformation.Location = New System.Drawing.Point(939, 632)
+        Me.cmdshowfileinformation.Location = New System.Drawing.Point(883, 864)
         Me.cmdshowfileinformation.Name = "cmdshowfileinformation"
         Me.cmdshowfileinformation.Size = New System.Drawing.Size(118, 23)
         Me.cmdshowfileinformation.TabIndex = 808
@@ -1592,65 +1858,13 @@ Partial Class ucMAM
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = " "
         '
-        'cmdrecord
+        'UcTranscodingProfile1
         '
-        Me.cmdrecord.Location = New System.Drawing.Point(742, 451)
-        Me.cmdrecord.Name = "cmdrecord"
-        Me.cmdrecord.Size = New System.Drawing.Size(64, 48)
-        Me.cmdrecord.TabIndex = 844
-        Me.cmdrecord.Text = "Convert"
-        Me.cmdrecord.UseVisualStyleBackColor = True
-        '
-        'txtrecord
-        '
-        Me.txtrecord.Location = New System.Drawing.Point(5, 451)
-        Me.txtrecord.Multiline = True
-        Me.txtrecord.Name = "txtrecord"
-        Me.txtrecord.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtrecord.Size = New System.Drawing.Size(702, 48)
-        Me.txtrecord.TabIndex = 843
-        Me.txtrecord.Text = resources.GetString("txtrecord.Text")
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(11, 435)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(280, 13)
-        Me.Label9.TabIndex = 842
-        Me.Label9.Text = "FFMPEG continuous Record 10 second duration"
-        '
-        'cmdOutputToDecklink
-        '
-        Me.cmdOutputToDecklink.Location = New System.Drawing.Point(743, 538)
-        Me.cmdOutputToDecklink.Name = "cmdOutputToDecklink"
-        Me.cmdOutputToDecklink.Size = New System.Drawing.Size(64, 48)
-        Me.cmdOutputToDecklink.TabIndex = 847
-        Me.cmdOutputToDecklink.Text = "Convert"
-        Me.cmdOutputToDecklink.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(12, 522)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(171, 13)
-        Me.Label10.TabIndex = 845
-        Me.Label10.Text = "FFMPEG Output To Decklink"
-        '
-        'txtOutputToDecklink
-        '
-        Me.txtOutputToDecklink.Location = New System.Drawing.Point(8, 538)
-        Me.txtOutputToDecklink.Multiline = True
-        Me.txtOutputToDecklink.Name = "txtOutputToDecklink"
-        Me.txtOutputToDecklink.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtOutputToDecklink.Size = New System.Drawing.Size(702, 48)
-        Me.txtOutputToDecklink.TabIndex = 848
-        Me.txtOutputToDecklink.Text = "c:/casparcg/mydata/goa/FFmpeg/bin/ffmpeg.exe -i udp://238.1.1.3:2000?pkt_size=131" &
-    "6  -fflags nobuffer -tune zerolatency -f decklink -s 720x576 -pix_fmt uyvy422 -r" &
-    " 25 ""DeckLink Duo (1)"""
+        Me.UcTranscodingProfile1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcTranscodingProfile1.Location = New System.Drawing.Point(782, 40)
+        Me.UcTranscodingProfile1.Name = "UcTranscodingProfile1"
+        Me.UcTranscodingProfile1.Size = New System.Drawing.Size(387, 803)
+        Me.UcTranscodingProfile1.TabIndex = 0
         '
         'DataGridViewTextBoxColumn1
         '
@@ -1670,38 +1884,13 @@ Partial Class ucMAM
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.Width = 600
         '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.HeaderText = "Field"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.Width = 150
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.HeaderText = "Value"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.Width = 300
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "File"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 400
-        '
-        'UcTranscodingProfile1
-        '
-        Me.UcTranscodingProfile1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcTranscodingProfile1.Location = New System.Drawing.Point(832, 44)
-        Me.UcTranscodingProfile1.Name = "UcTranscodingProfile1"
-        Me.UcTranscodingProfile1.Size = New System.Drawing.Size(387, 582)
-        Me.UcTranscodingProfile1.TabIndex = 0
-        '
         'ucMAM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1229, 964)
+        Me.ClientSize = New System.Drawing.Size(1225, 938)
         Me.Controls.Add(Me.GroupBox1)
         Me.HideOnClose = True
         Me.Name = "ucMAM"
@@ -1723,6 +1912,8 @@ Partial Class ucMAM
         Me.gbdatatablesetting.ResumeLayout(False)
         Me.gbdatatablesetting.PerformLayout()
         CType(Me.dgvclips, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         CType(Me.fswalias2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fsw, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fswalias1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1809,7 +2000,6 @@ Partial Class ucMAM
     Friend WithEvents lblplayinvlc As System.Windows.Forms.Label
     Friend WithEvents cmdshowfileinformation As System.Windows.Forms.Button
     Friend WithEvents FFMPEG As System.Windows.Forms.TabPage
-    Friend WithEvents txtsequencetovideomam As System.Windows.Forms.TextBox
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents cmdsequencetovideomam As System.Windows.Forms.Button
     Friend WithEvents cmdvideotosequencemam As System.Windows.Forms.Button
@@ -1882,4 +2072,22 @@ Partial Class ucMAM
     Friend WithEvents cmdOutputToDecklink As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents txtOutputToDecklink As TextBox
+    Friend WithEvents cmdScreenRecorderwithMicrophone As Button
+    Friend WithEvents txtScreenRecorderwithmicrophone As TextBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents cmdScreenRecorderwithSystemAudio As Button
+    Friend WithEvents txtScreenRecorderwirhSystemAudio As TextBox
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents txtfirstfile As TextBox
+    Friend WithEvents cmdopenfirstfile As Button
+    Friend WithEvents Label35 As Label
+    Friend WithEvents txtdistinationalphavideo As TextBox
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents Label36 As Label
+    Friend WithEvents txtYTurl As TextBox
+    Friend WithEvents cmdDownloadyoutubeVideo As Button
+    Friend WithEvents cdmDesinationDirectoryyt As Button
+    Friend WithEvents Label37 As Label
+    Friend WithEvents txtDesinationDirectoryyt As TextBox
 End Class

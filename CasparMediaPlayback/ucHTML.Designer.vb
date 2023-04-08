@@ -24,6 +24,11 @@ Partial Class ucHTML
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.gbhtml = New System.Windows.Forms.GroupBox()
+        Me.cmdplayliveyoutube = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtliveyoutubeurl = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.txtm3u8 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtDebugPort = New System.Windows.Forms.TextBox()
         Me.cdOpenremoteDebugging = New System.Windows.Forms.Button()
@@ -52,14 +57,39 @@ Partial Class ucHTML
         Me.cmdstophtml = New System.Windows.Forms.Button()
         Me.lblurlhtml = New System.Windows.Forms.Label()
         Me.txturlhtml = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.chkmute = New System.Windows.Forms.CheckBox()
+        Me.chkAutoplay = New System.Windows.Forms.CheckBox()
+        Me.txtFacebookvideoURl = New System.Windows.Forms.TextBox()
+        Me.cmdPlayfacebook = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txthttpfbContainer = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.chkMutehttp = New System.Windows.Forms.CheckBox()
+        Me.chkautoplayhttp = New System.Windows.Forms.CheckBox()
+        Me.cmdunmutehttp = New System.Windows.Forms.Button()
+        Me.cmdmutehttp = New System.Windows.Forms.Button()
+        Me.cmdresumehttp = New System.Windows.Forms.Button()
+        Me.cmdpausehttp = New System.Windows.Forms.Button()
+        Me.txtfburlhttpmethod = New System.Windows.Forms.TextBox()
+        Me.cmdplayhttpmethod = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.gbhtml.SuspendLayout()
         Me.gbNewYouTube.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbhtml
         '
         Me.gbhtml.BackColor = System.Drawing.Color.MistyRose
+        Me.gbhtml.Controls.Add(Me.cmdplayliveyoutube)
+        Me.gbhtml.Controls.Add(Me.Label8)
+        Me.gbhtml.Controls.Add(Me.txtliveyoutubeurl)
+        Me.gbhtml.Controls.Add(Me.Button3)
+        Me.gbhtml.Controls.Add(Me.txtm3u8)
         Me.gbhtml.Controls.Add(Me.Label5)
         Me.gbhtml.Controls.Add(Me.txtDebugPort)
         Me.gbhtml.Controls.Add(Me.cdOpenremoteDebugging)
@@ -74,10 +104,57 @@ Partial Class ucHTML
         Me.gbhtml.Controls.Add(Me.txturlhtml)
         Me.gbhtml.Location = New System.Drawing.Point(4, 6)
         Me.gbhtml.Name = "gbhtml"
-        Me.gbhtml.Size = New System.Drawing.Size(576, 484)
+        Me.gbhtml.Size = New System.Drawing.Size(576, 883)
         Me.gbhtml.TabIndex = 630
         Me.gbhtml.TabStop = False
         Me.gbhtml.Text = " "
+        '
+        'cmdplayliveyoutube
+        '
+        Me.cmdplayliveyoutube.BackColor = System.Drawing.Color.Green
+        Me.cmdplayliveyoutube.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdplayliveyoutube.ForeColor = System.Drawing.Color.White
+        Me.cmdplayliveyoutube.Location = New System.Drawing.Point(454, 626)
+        Me.cmdplayliveyoutube.Name = "cmdplayliveyoutube"
+        Me.cmdplayliveyoutube.Size = New System.Drawing.Size(100, 41)
+        Me.cmdplayliveyoutube.TabIndex = 749
+        Me.cmdplayliveyoutube.Text = "Play to casparcg"
+        Me.cmdplayliveyoutube.UseVisualStyleBackColor = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(8, 524)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(514, 13)
+        Me.Label8.TabIndex = 748
+        Me.Label8.Text = "Paste here URL of Youlibe Live video -> Click the button to get the m3u8 address." &
+    " -> Click Play to casparcg"
+        '
+        'txtliveyoutubeurl
+        '
+        Me.txtliveyoutubeurl.Location = New System.Drawing.Point(10, 554)
+        Me.txtliveyoutubeurl.Name = "txtliveyoutubeurl"
+        Me.txtliveyoutubeurl.Size = New System.Drawing.Size(354, 20)
+        Me.txtliveyoutubeurl.TabIndex = 747
+        Me.txtliveyoutubeurl.Text = "https://www.youtube.com/watch?v=rAcumJtxkW4"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(385, 553)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(169, 23)
+        Me.Button3.TabIndex = 746
+        Me.Button3.Text = "Get m3u8 of Youlibe Live video"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'txtm3u8
+        '
+        Me.txtm3u8.Location = New System.Drawing.Point(8, 579)
+        Me.txtm3u8.Multiline = True
+        Me.txtm3u8.Name = "txtm3u8"
+        Me.txtm3u8.Size = New System.Drawing.Size(440, 242)
+        Me.txtm3u8.TabIndex = 745
         '
         'Label5
         '
@@ -360,12 +437,204 @@ Partial Class ucHTML
         Me.txturlhtml.TabIndex = 624
         Me.txturlhtml.Text = Global.caspar_media_playback.My.MySettings.Default.txturlhtml
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox1.Controls.Add(Me.chkmute)
+        Me.GroupBox1.Controls.Add(Me.chkAutoplay)
+        Me.GroupBox1.Controls.Add(Me.txtFacebookvideoURl)
+        Me.GroupBox1.Controls.Add(Me.cmdPlayfacebook)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Location = New System.Drawing.Point(586, 6)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(576, 128)
+        Me.GroupBox1.TabIndex = 745
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = " "
+        '
+        'chkmute
+        '
+        Me.chkmute.AutoSize = True
+        Me.chkmute.Location = New System.Drawing.Point(329, 79)
+        Me.chkmute.Name = "chkmute"
+        Me.chkmute.Size = New System.Drawing.Size(50, 17)
+        Me.chkmute.TabIndex = 637
+        Me.chkmute.Text = "Mute"
+        Me.chkmute.UseVisualStyleBackColor = True
+        '
+        'chkAutoplay
+        '
+        Me.chkAutoplay.AutoSize = True
+        Me.chkAutoplay.Location = New System.Drawing.Point(238, 78)
+        Me.chkAutoplay.Name = "chkAutoplay"
+        Me.chkAutoplay.Size = New System.Drawing.Size(67, 17)
+        Me.chkAutoplay.TabIndex = 636
+        Me.chkAutoplay.Text = "Autoplay"
+        Me.chkAutoplay.UseVisualStyleBackColor = True
+        '
+        'txtFacebookvideoURl
+        '
+        Me.txtFacebookvideoURl.Location = New System.Drawing.Point(10, 46)
+        Me.txtFacebookvideoURl.Name = "txtFacebookvideoURl"
+        Me.txtFacebookvideoURl.Size = New System.Drawing.Size(478, 20)
+        Me.txtFacebookvideoURl.TabIndex = 635
+        Me.txtFacebookvideoURl.Text = "https://www.facebook.com/milaap/videos/596132680948284"
+        '
+        'cmdPlayfacebook
+        '
+        Me.cmdPlayfacebook.BackColor = System.Drawing.Color.Green
+        Me.cmdPlayfacebook.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdPlayfacebook.ForeColor = System.Drawing.Color.White
+        Me.cmdPlayfacebook.Location = New System.Drawing.Point(41, 84)
+        Me.cmdPlayfacebook.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cmdPlayfacebook.Name = "cmdPlayfacebook"
+        Me.cmdPlayfacebook.Size = New System.Drawing.Size(77, 26)
+        Me.cmdPlayfacebook.TabIndex = 627
+        Me.cmdPlayfacebook.Text = "Play"
+        Me.cmdPlayfacebook.UseVisualStyleBackColor = False
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(16, 21)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(110, 13)
+        Me.Label14.TabIndex = 625
+        Me.Label14.Text = "Facebook Video URL"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox2.Controls.Add(Me.txthttpfbContainer)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.chkMutehttp)
+        Me.GroupBox2.Controls.Add(Me.chkautoplayhttp)
+        Me.GroupBox2.Controls.Add(Me.cmdunmutehttp)
+        Me.GroupBox2.Controls.Add(Me.cmdmutehttp)
+        Me.GroupBox2.Controls.Add(Me.cmdresumehttp)
+        Me.GroupBox2.Controls.Add(Me.cmdpausehttp)
+        Me.GroupBox2.Controls.Add(Me.txtfburlhttpmethod)
+        Me.GroupBox2.Controls.Add(Me.cmdplayhttpmethod)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Location = New System.Drawing.Point(586, 140)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(576, 265)
+        Me.GroupBox2.TabIndex = 746
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "HTTP Method"
+        '
+        'txthttpfbContainer
+        '
+        Me.txthttpfbContainer.Location = New System.Drawing.Point(187, 23)
+        Me.txthttpfbContainer.Name = "txthttpfbContainer"
+        Me.txthttpfbContainer.Size = New System.Drawing.Size(228, 20)
+        Me.txthttpfbContainer.TabIndex = 642
+        Me.txthttpfbContainer.Text = "http://localhost/cmpweb/fb/fb1.html"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(8, 26)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(155, 13)
+        Me.Label7.TabIndex = 641
+        Me.Label7.Text = "HTTP Server and Container file"
+        '
+        'chkMutehttp
+        '
+        Me.chkMutehttp.AutoSize = True
+        Me.chkMutehttp.Location = New System.Drawing.Point(343, 153)
+        Me.chkMutehttp.Name = "chkMutehttp"
+        Me.chkMutehttp.Size = New System.Drawing.Size(50, 17)
+        Me.chkMutehttp.TabIndex = 638
+        Me.chkMutehttp.Text = "Mute"
+        Me.chkMutehttp.UseVisualStyleBackColor = True
+        '
+        'chkautoplayhttp
+        '
+        Me.chkautoplayhttp.AutoSize = True
+        Me.chkautoplayhttp.Location = New System.Drawing.Point(248, 153)
+        Me.chkautoplayhttp.Name = "chkautoplayhttp"
+        Me.chkautoplayhttp.Size = New System.Drawing.Size(67, 17)
+        Me.chkautoplayhttp.TabIndex = 640
+        Me.chkautoplayhttp.Text = "Autoplay"
+        Me.chkautoplayhttp.UseVisualStyleBackColor = True
+        '
+        'cmdunmutehttp
+        '
+        Me.cmdunmutehttp.Location = New System.Drawing.Point(295, 205)
+        Me.cmdunmutehttp.Name = "cmdunmutehttp"
+        Me.cmdunmutehttp.Size = New System.Drawing.Size(75, 23)
+        Me.cmdunmutehttp.TabIndex = 639
+        Me.cmdunmutehttp.Text = "Unmute"
+        Me.cmdunmutehttp.UseVisualStyleBackColor = True
+        '
+        'cmdmutehttp
+        '
+        Me.cmdmutehttp.Location = New System.Drawing.Point(214, 205)
+        Me.cmdmutehttp.Name = "cmdmutehttp"
+        Me.cmdmutehttp.Size = New System.Drawing.Size(75, 23)
+        Me.cmdmutehttp.TabIndex = 638
+        Me.cmdmutehttp.Text = "Mute"
+        Me.cmdmutehttp.UseVisualStyleBackColor = True
+        '
+        'cmdresumehttp
+        '
+        Me.cmdresumehttp.Location = New System.Drawing.Point(133, 205)
+        Me.cmdresumehttp.Name = "cmdresumehttp"
+        Me.cmdresumehttp.Size = New System.Drawing.Size(75, 23)
+        Me.cmdresumehttp.TabIndex = 637
+        Me.cmdresumehttp.Text = "Resume"
+        Me.cmdresumehttp.UseVisualStyleBackColor = True
+        '
+        'cmdpausehttp
+        '
+        Me.cmdpausehttp.Location = New System.Drawing.Point(52, 205)
+        Me.cmdpausehttp.Name = "cmdpausehttp"
+        Me.cmdpausehttp.Size = New System.Drawing.Size(75, 23)
+        Me.cmdpausehttp.TabIndex = 636
+        Me.cmdpausehttp.Text = "Pause"
+        Me.cmdpausehttp.UseVisualStyleBackColor = True
+        '
+        'txtfburlhttpmethod
+        '
+        Me.txtfburlhttpmethod.Location = New System.Drawing.Point(10, 122)
+        Me.txtfburlhttpmethod.Name = "txtfburlhttpmethod"
+        Me.txtfburlhttpmethod.Size = New System.Drawing.Size(478, 20)
+        Me.txtfburlhttpmethod.TabIndex = 635
+        Me.txtfburlhttpmethod.Text = "https://www.facebook.com/milaap/videos/596132680948284"
+        '
+        'cmdplayhttpmethod
+        '
+        Me.cmdplayhttpmethod.BackColor = System.Drawing.Color.Green
+        Me.cmdplayhttpmethod.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdplayhttpmethod.ForeColor = System.Drawing.Color.White
+        Me.cmdplayhttpmethod.Location = New System.Drawing.Point(41, 160)
+        Me.cmdplayhttpmethod.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cmdplayhttpmethod.Name = "cmdplayhttpmethod"
+        Me.cmdplayhttpmethod.Size = New System.Drawing.Size(77, 26)
+        Me.cmdplayhttpmethod.TabIndex = 627
+        Me.cmdplayhttpmethod.Text = "Play"
+        Me.cmdplayhttpmethod.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(16, 97)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(110, 13)
+        Me.Label6.TabIndex = 625
+        Me.Label6.Text = "Facebook Video URL"
+        '
         'ucHTML
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(583, 493)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.gbhtml)
         Me.HideOnClose = True
         Me.Name = "ucHTML"
@@ -375,6 +644,10 @@ Partial Class ucHTML
         Me.gbNewYouTube.ResumeLayout(False)
         Me.gbNewYouTube.PerformLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -407,4 +680,27 @@ Partial Class ucHTML
     Friend WithEvents cdOpenremoteDebugging As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents txtDebugPort As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents txtFacebookvideoURl As TextBox
+    Friend WithEvents cmdPlayfacebook As Button
+    Friend WithEvents Label14 As Label
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents txtfburlhttpmethod As TextBox
+    Friend WithEvents cmdplayhttpmethod As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents cmdunmutehttp As Button
+    Friend WithEvents cmdmutehttp As Button
+    Friend WithEvents cmdresumehttp As Button
+    Friend WithEvents cmdpausehttp As Button
+    Friend WithEvents chkmute As CheckBox
+    Friend WithEvents chkAutoplay As CheckBox
+    Friend WithEvents chkMutehttp As CheckBox
+    Friend WithEvents chkautoplayhttp As CheckBox
+    Friend WithEvents txthttpfbContainer As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtliveyoutubeurl As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents txtm3u8 As TextBox
+    Friend WithEvents cmdplayliveyoutube As Button
 End Class

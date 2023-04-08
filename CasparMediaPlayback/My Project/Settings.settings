@@ -39,16 +39,16 @@
       <Value Profile="(Default)">test</Value>
     </Setting>
     <Setting Name="txtextrarecordoptions" Type="System.String" Scope="User">
-      <Value Profile="(Default)">-codec:v mpeg4 -g 1 -alternate_scan 1</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="txtleftlogo" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Casparcg\mydata\left\clock1.swf</Value>
+      <Value Profile="(Default)">file:///C:/Casparcg/mydata/left/clock1.swf</Value>
     </Setting>
     <Setting Name="txtrightlogo" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Casparcg\mydata\right\Royal.jpg</Value>
+      <Value Profile="(Default)">file:///C:/Casparcg/mydata/right/Royal.jpg</Value>
     </Setting>
     <Setting Name="txtmiddle" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Casparcg\mydata\middle\MovieBackground1.swf</Value>
+      <Value Profile="(Default)">file:///C:/Casparcg/mydata/middle/MovieBackground1.swf</Value>
     </Setting>
     <Setting Name="cmdstripcolor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">DarkGreen</Value>
@@ -614,7 +614,7 @@ cg 1-2 add 2 cmp/cg_template/clock 1</Value>
       <Value Profile="(Default)">120</Value>
     </Setting>
     <Setting Name="txtlogolocation" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Casparcg\mydata\logo\time.png</Value>
+      <Value Profile="(Default)">file:///C:/Casparcg/mydata/logo/time.png</Value>
     </Setting>
     <Setting Name="lbllogofilename" Type="System.String" Scope="User">
       <Value Profile="(Default)">Default file</Value>
@@ -638,7 +638,7 @@ cg 1-2 add 2 cmp/cg_template/clock 1</Value>
       <Value Profile="(Default)">cmbfileformateoal</Value>
     </Setting>
     <Setting Name="txtextraoptionoal" Type="System.String" Scope="User">
-      <Value Profile="(Default)">-x264opts tff=1 -vf setdar=4/3</Value>
+      <Value Profile="(Default)">-s 1280:720</Value>
     </Setting>
     <Setting Name="txtmediadirectoryoal" Type="System.String" Scope="User">
       <Value Profile="(Default)">H:/casparcg/_media</Value>
@@ -893,7 +893,7 @@ cg 1-2 add 2 cmp/cg_template/clock 1</Value>
       <Value Profile="(Default)">106</Value>
     </Setting>
     <Setting Name="nnewspeed" Type="System.Decimal" Scope="User">
-      <Value Profile="(Default)">2.5</Value>
+      <Value Profile="(Default)">2.0</Value>
     </Setting>
     <Setting Name="newdelemterforscrollandclock" Type="System.String" Scope="User">
       <Value Profile="(Default)">   *   </Value>
@@ -937,8 +937,8 @@ cg 1-2 add 2 cmp/cg_template/clock 1</Value>
     <Setting Name="xdcampassword" Type="System.String" Scope="User">
       <Value Profile="(Default)">xds-pd1000</Value>
     </Setting>
-    <Setting Name="xdcamaddress" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://192.168.1.54/webservice/</Value>
+    <Setting Name="xdcamaddress1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://192.168.20.54/webservice/</Value>
     </Setting>
   </Settings>
 </SettingsFile>

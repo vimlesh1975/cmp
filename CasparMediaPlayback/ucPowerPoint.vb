@@ -7,11 +7,13 @@ Public Class ucPowerPoint
     End Sub
     Private Sub cmdstarPowerPointoutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstarPowerPointoutput.Click
         On Error Resume Next
-        If rdojpg.Checked Then
-            strpowerpoint = "play " & g_int_ChannelNumber & "-" & cmblayervideoforppt.Text & " jpg" & g_int_ChannelNumber & " " & cmbtransitionforppt.Text & " " & ntransitiondurationforppt.Value & " " & cmbtweentypeforppt.Text & " " & cmbdirectionforppt.Text
-        Else
-            strpowerpoint = "play " & g_int_ChannelNumber & "-" & cmblayervideoforppt.Text & " png" & g_int_ChannelNumber & " " & cmbtransitionforppt.Text & " " & ntransitiondurationforppt.Value & " " & cmbtweentypeforppt.Text & " " & cmbdirectionforppt.Text
-        End If
+        'If rdojpg.Checked Then
+        '    strpowerpoint = "play " & g_int_ChannelNumber & "-" & cmblayervideoforppt.Text & " jpg" & g_int_ChannelNumber & " " & cmbtransitionforppt.Text & " " & ntransitiondurationforppt.Value & " " & cmbtweentypeforppt.Text & " " & cmbdirectionforppt.Text
+        'Else
+        '    strpowerpoint = "play " & g_int_ChannelNumber & "-" & cmblayervideoforppt.Text & " png" & g_int_ChannelNumber & " " & cmbtransitionforppt.Text & " " & ntransitiondurationforppt.Value & " " & cmbtweentypeforppt.Text & " " & cmbdirectionforppt.Text
+        'End If
+        strpowerpoint = "play " & g_int_ChannelNumber & "-" & cmblayervideoforppt.Text & " png" & g_int_ChannelNumber & " " & cmbtransitionforppt.Text & " " & ntransitiondurationforppt.Value & " " & cmbtweentypeforppt.Text & " " & cmbdirectionforppt.Text
+
         CasparDevice.SendString(strpowerpoint)
         addfilesytemwatcherforpowerpoint()
     End Sub
@@ -23,8 +25,9 @@ Public Class ucPowerPoint
     End Sub
 
     Sub filemodified(ByVal sender As Object, ByVal e As FileSystemEventArgs)
-        'On Error Resume Next
-        If e.Name = "jpg" & g_int_ChannelNumber & ".jpg" Or e.Name = "png" & g_int_ChannelNumber & ".png" Then
+        On Error Resume Next
+        'If e.Name = "jpg" & g_int_ChannelNumber & ".jpg" Or e.Name = "png" & g_int_ChannelNumber & ".png" Then
+        If e.Name = "png" & g_int_ChannelNumber & ".png" Then
             SendString(NetStream, strpowerpoint & vbCrLf)
         End If
     End Sub

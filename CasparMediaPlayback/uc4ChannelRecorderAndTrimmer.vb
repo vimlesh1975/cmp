@@ -6,7 +6,7 @@
             .cmbdecklinkforrecording.Text = .chnumber
             .txtfilename.Text = "test" & .chnumber
             .Label2.Text = "Channel " & .chnumber
-            .cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & .chnumber & "|PAL]"
+            .cmbcasparcgwindowtitle.Text = "Screen consumer [" & .chnumber & "|PAL]"
             .oscstartandregister(.chnumber, .oscportnumber)
         End With
         Dim rs1 = New clsResizeableControlnew(UcnewRecorder1)
@@ -17,7 +17,7 @@
             .cmbdecklinkforrecording.Text = .chnumber
             .txtfilename.Text = "test" & .chnumber
             .Label2.Text = "Channel " & .chnumber
-            .cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & .chnumber & "|PAL]"
+            .cmbcasparcgwindowtitle.Text = "Screen consumer [" & .chnumber & "|PAL]"
             .oscstartandregister(.chnumber, .oscportnumber)
         End With
         Dim rs2 = New clsResizeableControlnew(UcnewRecorder2)
@@ -28,7 +28,7 @@
             .cmbdecklinkforrecording.Text = .chnumber
             .txtfilename.Text = "test" & .chnumber
             .Label2.Text = "Channel " & .chnumber
-            .cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & .chnumber & "|PAL]"
+            .cmbcasparcgwindowtitle.Text = "Screen consumer [" & .chnumber & "|PAL]"
             .oscstartandregister(.chnumber, .oscportnumber)
         End With
         Dim rs3 = New clsResizeableControlnew(UcnewRecorder3)
@@ -39,7 +39,7 @@
             .cmbdecklinkforrecording.Text = .chnumber
             .txtfilename.Text = "test" & .chnumber
             .Label2.Text = "Channel " & .chnumber
-            .cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & .chnumber & "|PAL]"
+            .cmbcasparcgwindowtitle.Text = "Screen consumer [" & .chnumber & "|PAL]"
             .oscstartandregister(.chnumber, .oscportnumber)
         End With
         Dim rs4 = New clsResizeableControlnew(UcnewRecorder4)

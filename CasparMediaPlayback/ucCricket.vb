@@ -827,8 +827,8 @@ Public Class ucCricket
         openimage("C:\casparcg\mydata\games\Team_Logo\", sender)
     End Sub
 
-    Private Sub txtrun_TextChanged(sender As Object, e As EventArgs) Handles txtrun.TextChanged, txtwicket.TextChanged
-        txttotalbatsmanvalue.Text = txtrun.Text & "/" & txtwicket.Text
+    Private Sub txtrun_TextChanged(sender As Object, e As EventArgs) Handles txtrun.TextChanged, txtwicket.TextChanged, txtextrabatmanvalue.TextChanged
+        txttotalbatsmanvalue.Text = Val(txtrun.Text) + Val(txtextrabatmanvalue.Text) & "/" & txtwicket.Text
     End Sub
 
     Private Sub txtover_TextChanged(sender As Object, e As EventArgs) Handles txtover.TextChanged
@@ -1194,5 +1194,9 @@ Public Class ucCricket
 
     Private Sub Cmdhide_Click(sender As Object, e As EventArgs)
         Me.Hide()
+    End Sub
+
+    Private Sub txttotalextra_TextChanged(sender As Object, e As EventArgs) Handles txttotalextra.TextChanged
+
     End Sub
 End Class

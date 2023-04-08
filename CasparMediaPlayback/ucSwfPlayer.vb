@@ -13,7 +13,7 @@
         On Error Resume Next
 
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            picswf.Movie = picofd.FileName
+            picswf.Movie = "file:///" & Replace(picofd.FileName, "\", "/")
         End If
     End Sub
 

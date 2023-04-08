@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.3.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -200,7 +200,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("-codec:v mpeg4 -g 1 -alternate_scan 1")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property txtextrarecordoptions() As String
             Get
                 Return CType(Me("txtextrarecordoptions"),String)
@@ -212,7 +212,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\Casparcg\mydata\left\clock1.swf")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("file:///C:/Casparcg/mydata/left/clock1.swf")>  _
         Public Property txtleftlogo() As String
             Get
                 Return CType(Me("txtleftlogo"),String)
@@ -224,7 +224,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\Casparcg\mydata\right\Royal.jpg")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("file:///C:/Casparcg/mydata/right/Royal.jpg")>  _
         Public Property txtrightlogo() As String
             Get
                 Return CType(Me("txtrightlogo"),String)
@@ -236,7 +236,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\Casparcg\mydata\middle\MovieBackground1.swf")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("file:///C:/Casparcg/mydata/middle/MovieBackground1.swf")>  _
         Public Property txtmiddle() As String
             Get
                 Return CType(Me("txtmiddle"),String)
@@ -1722,7 +1722,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\Casparcg\mydata\logo\time.png")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("file:///C:/Casparcg/mydata/logo/time.png")>  _
         Public Property txtlogolocation() As String
             Get
                 Return CType(Me("txtlogolocation"),String)
@@ -1818,7 +1818,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("-x264opts tff=1 -vf setdar=4/3")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("-s 1280:720")>  _
         Public Property txtextraoptionoal() As String
             Get
                 Return CType(Me("txtextraoptionoal"),String)
@@ -2742,7 +2742,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("2.5")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2.0")>  _
         Public Property nnewspeed() As Decimal
             Get
                 Return CType(Me("nnewspeed"),Decimal)
@@ -2922,13 +2922,13 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.1.54/webservice/")>  _
-        Public Property xdcamaddress() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("http://192.168.20.54/webservice/")>  _
+        Public Property xdcamaddress1() As String
             Get
-                Return CType(Me("xdcamaddress"),String)
+                Return CType(Me("xdcamaddress1"),String)
             End Get
             Set
-                Me("xdcamaddress") = value
+                Me("xdcamaddress1") = value
             End Set
         End Property
     End Class

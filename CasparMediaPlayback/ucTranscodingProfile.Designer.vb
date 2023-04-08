@@ -22,11 +22,28 @@ Partial Class ucTranscodingProfile
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucTranscodingProfile))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.txtnumberofprocessors = New System.Windows.Forms.TextBox()
         Me.lblnumberofprocessors = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtExtraCrop = New System.Windows.Forms.TextBox()
+        Me.rdoHDblacktoHDoverBlurVideo = New System.Windows.Forms.RadioButton()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtBoxSize = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtTotalSize = New System.Windows.Forms.TextBox()
+        Me.cmdBorderColor = New System.Windows.Forms.Button()
+        Me.nborderwidth = New System.Windows.Forms.NumericUpDown()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.rdoSDtoSDoverBlurVideo = New System.Windows.Forms.RadioButton()
+        Me.cmdOpenLogo = New System.Windows.Forms.Button()
+        Me.vlcLogo = New Vlc.DotNet.Forms.VlcControl()
+        Me.txtFPS = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.rdoanytoAnamorphicXDcamHD422Mxf = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbextension5 = New System.Windows.Forms.ComboBox()
         Me.rdoTranscodeWithLogo = New System.Windows.Forms.RadioButton()
@@ -36,7 +53,6 @@ Partial Class ucTranscodingProfile
         Me.Label254 = New System.Windows.Forms.Label()
         Me.nlogoheightforexport = New System.Windows.Forms.NumericUpDown()
         Me.nlogowidthforexport = New System.Windows.Forms.NumericUpDown()
-        Me.piclogoforexport = New System.Windows.Forms.PictureBox()
         Me.nlogoyposition = New System.Windows.Forms.NumericUpDown()
         Me.nlogoxposition = New System.Windows.Forms.NumericUpDown()
         Me.cmbbitrate5 = New System.Windows.Forms.ComboBox()
@@ -83,11 +99,13 @@ Partial Class ucTranscodingProfile
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmbextensioncustom = New System.Windows.Forms.ComboBox()
         Me.txtoptionstrimmercustom = New System.Windows.Forms.TextBox()
+        Me.ckkUseSuffix = New System.Windows.Forms.CheckBox()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.nborderwidth, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vlcLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nlogoheightforexport, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nlogowidthforexport, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piclogoforexport, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nlogoyposition, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nlogoxposition, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ntranscodeinmp4bitratehevc, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,6 +117,7 @@ Partial Class ucTranscodingProfile
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.GroupBox3.Controls.Add(Me.ckkUseSuffix)
         Me.GroupBox3.Controls.Add(Me.Label24)
         Me.GroupBox3.Controls.Add(Me.txtnumberofprocessors)
         Me.GroupBox3.Controls.Add(Me.lblnumberofprocessors)
@@ -106,14 +125,14 @@ Partial Class ucTranscodingProfile
         Me.GroupBox3.Controls.Add(Me.GroupBox2)
         Me.GroupBox3.Location = New System.Drawing.Point(4, 5)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(379, 571)
+        Me.GroupBox3.Size = New System.Drawing.Size(379, 795)
         Me.GroupBox3.TabIndex = 806
         Me.GroupBox3.TabStop = False
         '
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(8, 547)
+        Me.Label24.Location = New System.Drawing.Point(8, 773)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(128, 13)
         Me.Label24.TabIndex = 814
@@ -121,7 +140,7 @@ Partial Class ucTranscodingProfile
         '
         'txtnumberofprocessors
         '
-        Me.txtnumberofprocessors.Location = New System.Drawing.Point(140, 544)
+        Me.txtnumberofprocessors.Location = New System.Drawing.Point(140, 770)
         Me.txtnumberofprocessors.Name = "txtnumberofprocessors"
         Me.txtnumberofprocessors.Size = New System.Drawing.Size(29, 20)
         Me.txtnumberofprocessors.TabIndex = 813
@@ -130,7 +149,7 @@ Partial Class ucTranscodingProfile
         'lblnumberofprocessors
         '
         Me.lblnumberofprocessors.AutoSize = True
-        Me.lblnumberofprocessors.Location = New System.Drawing.Point(11, 526)
+        Me.lblnumberofprocessors.Location = New System.Drawing.Point(11, 752)
         Me.lblnumberofprocessors.Name = "lblnumberofprocessors"
         Me.lblnumberofprocessors.Size = New System.Drawing.Size(112, 13)
         Me.lblnumberofprocessors.TabIndex = 812
@@ -138,6 +157,22 @@ Partial Class ucTranscodingProfile
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Controls.Add(Me.txtExtraCrop)
+        Me.GroupBox1.Controls.Add(Me.rdoHDblacktoHDoverBlurVideo)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.txtBoxSize)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.txtTotalSize)
+        Me.GroupBox1.Controls.Add(Me.cmdBorderColor)
+        Me.GroupBox1.Controls.Add(Me.nborderwidth)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.rdoSDtoSDoverBlurVideo)
+        Me.GroupBox1.Controls.Add(Me.cmdOpenLogo)
+        Me.GroupBox1.Controls.Add(Me.vlcLogo)
+        Me.GroupBox1.Controls.Add(Me.txtFPS)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.rdoanytoAnamorphicXDcamHD422Mxf)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.cmbextension5)
         Me.GroupBox1.Controls.Add(Me.rdoTranscodeWithLogo)
@@ -147,7 +182,6 @@ Partial Class ucTranscodingProfile
         Me.GroupBox1.Controls.Add(Me.Label254)
         Me.GroupBox1.Controls.Add(Me.nlogoheightforexport)
         Me.GroupBox1.Controls.Add(Me.nlogowidthforexport)
-        Me.GroupBox1.Controls.Add(Me.piclogoforexport)
         Me.GroupBox1.Controls.Add(Me.nlogoyposition)
         Me.GroupBox1.Controls.Add(Me.nlogoxposition)
         Me.GroupBox1.Controls.Add(Me.cmbbitrate5)
@@ -188,15 +222,162 @@ Partial Class ucTranscodingProfile
         Me.GroupBox1.Controls.Add(Me.rdoSDtoXDcamHD422Mxf)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(362, 402)
+        Me.GroupBox1.Size = New System.Drawing.Size(362, 585)
         Me.GroupBox1.TabIndex = 776
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Transcoding Profiles"
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(212, 101)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(56, 13)
+        Me.Label13.TabIndex = 1213
+        Me.Label13.Text = "Extra Crop"
+        '
+        'txtExtraCrop
+        '
+        Me.txtExtraCrop.Location = New System.Drawing.Point(271, 98)
+        Me.txtExtraCrop.Name = "txtExtraCrop"
+        Me.txtExtraCrop.Size = New System.Drawing.Size(39, 20)
+        Me.txtExtraCrop.TabIndex = 1212
+        Me.txtExtraCrop.Text = "0"
+        '
+        'rdoHDblacktoHDoverBlurVideo
+        '
+        Me.rdoHDblacktoHDoverBlurVideo.AutoSize = True
+        Me.rdoHDblacktoHDoverBlurVideo.Location = New System.Drawing.Point(12, 147)
+        Me.rdoHDblacktoHDoverBlurVideo.Name = "rdoHDblacktoHDoverBlurVideo"
+        Me.rdoHDblacktoHDoverBlurVideo.Size = New System.Drawing.Size(254, 17)
+        Me.rdoHDblacktoHDoverBlurVideo.TabIndex = 1211
+        Me.rdoHDblacktoHDoverBlurVideo.Text = "HD with black pillar box to HD over Blured Video"
+        Me.rdoHDblacktoHDoverBlurVideo.UseVisualStyleBackColor = True
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(141, 126)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(48, 13)
+        Me.Label12.TabIndex = 1210
+        Me.Label12.Text = "Box Size"
+        '
+        'txtBoxSize
+        '
+        Me.txtBoxSize.Location = New System.Drawing.Point(196, 123)
+        Me.txtBoxSize.Name = "txtBoxSize"
+        Me.txtBoxSize.Size = New System.Drawing.Size(66, 20)
+        Me.txtBoxSize.TabIndex = 1209
+        Me.txtBoxSize.Text = "1350:1080"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(12, 126)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(54, 13)
+        Me.Label11.TabIndex = 1208
+        Me.Label11.Text = "Total Size"
+        '
+        'txtTotalSize
+        '
+        Me.txtTotalSize.Location = New System.Drawing.Point(69, 120)
+        Me.txtTotalSize.Name = "txtTotalSize"
+        Me.txtTotalSize.Size = New System.Drawing.Size(66, 20)
+        Me.txtTotalSize.TabIndex = 1207
+        Me.txtTotalSize.Text = "1920:1080"
+        '
+        'cmdBorderColor
+        '
+        Me.cmdBorderColor.BackColor = System.Drawing.Color.Red
+        Me.cmdBorderColor.ForeColor = System.Drawing.Color.White
+        Me.cmdBorderColor.Location = New System.Drawing.Point(129, 94)
+        Me.cmdBorderColor.Name = "cmdBorderColor"
+        Me.cmdBorderColor.Size = New System.Drawing.Size(75, 23)
+        Me.cmdBorderColor.TabIndex = 1206
+        Me.cmdBorderColor.Text = "Border Color"
+        Me.cmdBorderColor.UseVisualStyleBackColor = False
+        '
+        'nborderwidth
+        '
+        Me.nborderwidth.Location = New System.Drawing.Point(85, 96)
+        Me.nborderwidth.Name = "nborderwidth"
+        Me.nborderwidth.Size = New System.Drawing.Size(38, 20)
+        Me.nborderwidth.TabIndex = 1205
+        Me.nborderwidth.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(13, 98)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(69, 13)
+        Me.Label8.TabIndex = 1204
+        Me.Label8.Text = "Border Width"
+        '
+        'rdoSDtoSDoverBlurVideo
+        '
+        Me.rdoSDtoSDoverBlurVideo.AutoSize = True
+        Me.rdoSDtoSDoverBlurVideo.Location = New System.Drawing.Point(9, 68)
+        Me.rdoSDtoSDoverBlurVideo.Name = "rdoSDtoSDoverBlurVideo"
+        Me.rdoSDtoSDoverBlurVideo.Size = New System.Drawing.Size(158, 17)
+        Me.rdoSDtoSDoverBlurVideo.TabIndex = 1203
+        Me.rdoSDtoSDoverBlurVideo.Text = "SD to HD over Blured Video"
+        Me.rdoSDtoSDoverBlurVideo.UseVisualStyleBackColor = True
+        '
+        'cmdOpenLogo
+        '
+        Me.cmdOpenLogo.Location = New System.Drawing.Point(243, 508)
+        Me.cmdOpenLogo.Name = "cmdOpenLogo"
+        Me.cmdOpenLogo.Size = New System.Drawing.Size(75, 36)
+        Me.cmdOpenLogo.TabIndex = 1202
+        Me.cmdOpenLogo.Text = "Open Logo"
+        Me.cmdOpenLogo.UseVisualStyleBackColor = True
+        '
+        'vlcLogo
+        '
+        Me.vlcLogo.BackColor = System.Drawing.Color.Black
+        Me.vlcLogo.Location = New System.Drawing.Point(149, 504)
+        Me.vlcLogo.Name = "vlcLogo"
+        Me.vlcLogo.Size = New System.Drawing.Size(87, 61)
+        Me.vlcLogo.Spu = -1
+        Me.vlcLogo.TabIndex = 1201
+        Me.vlcLogo.Text = "VlcControl1"
+        Me.vlcLogo.VlcLibDirectory = CType(resources.GetObject("vlcLogo.VlcLibDirectory"), System.IO.DirectoryInfo)
+        Me.vlcLogo.VlcMediaplayerOptions = Nothing
+        '
+        'txtFPS
+        '
+        Me.txtFPS.Location = New System.Drawing.Point(267, 41)
+        Me.txtFPS.Name = "txtFPS"
+        Me.txtFPS.Size = New System.Drawing.Size(32, 20)
+        Me.txtFPS.TabIndex = 835
+        Me.txtFPS.Text = "25"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(234, 43)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(27, 13)
+        Me.Label7.TabIndex = 834
+        Me.Label7.Text = "FPS"
+        '
+        'rdoanytoAnamorphicXDcamHD422Mxf
+        '
+        Me.rdoanytoAnamorphicXDcamHD422Mxf.AutoSize = True
+        Me.rdoanytoAnamorphicXDcamHD422Mxf.Location = New System.Drawing.Point(9, 41)
+        Me.rdoanytoAnamorphicXDcamHD422Mxf.Name = "rdoanytoAnamorphicXDcamHD422Mxf"
+        Me.rdoanytoAnamorphicXDcamHD422Mxf.Size = New System.Drawing.Size(220, 17)
+        Me.rdoanytoAnamorphicXDcamHD422Mxf.TabIndex = 833
+        Me.rdoanytoAnamorphicXDcamHD422Mxf.Text = "Any to Anamorphic XDCAM HD 422 MXF"
+        Me.rdoanytoAnamorphicXDcamHD422Mxf.UseVisualStyleBackColor = True
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(245, 311)
+        Me.Label6.Location = New System.Drawing.Point(245, 481)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(53, 13)
         Me.Label6.TabIndex = 832
@@ -206,7 +387,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbextension5.FormattingEnabled = True
         Me.cmbextension5.Items.AddRange(New Object() {".avi", ".mp4", ".ogg", ".mxf", ".mov", ".mkv", ".mpg", ".mts", ".dv"})
-        Me.cmbextension5.Location = New System.Drawing.Point(299, 307)
+        Me.cmbextension5.Location = New System.Drawing.Point(299, 477)
         Me.cmbextension5.Name = "cmbextension5"
         Me.cmbextension5.Size = New System.Drawing.Size(56, 21)
         Me.cmbextension5.TabIndex = 831
@@ -215,7 +396,7 @@ Partial Class ucTranscodingProfile
         'rdoTranscodeWithLogo
         '
         Me.rdoTranscodeWithLogo.AutoSize = True
-        Me.rdoTranscodeWithLogo.Location = New System.Drawing.Point(10, 289)
+        Me.rdoTranscodeWithLogo.Location = New System.Drawing.Point(10, 459)
         Me.rdoTranscodeWithLogo.Name = "rdoTranscodeWithLogo"
         Me.rdoTranscodeWithLogo.Size = New System.Drawing.Size(121, 17)
         Me.rdoTranscodeWithLogo.TabIndex = 830
@@ -225,7 +406,7 @@ Partial Class ucTranscodingProfile
         'Label251
         '
         Me.Label251.AutoSize = True
-        Me.Label251.Location = New System.Drawing.Point(186, 338)
+        Me.Label251.Location = New System.Drawing.Point(88, 509)
         Me.Label251.Name = "Label251"
         Me.Label251.Size = New System.Drawing.Size(14, 13)
         Me.Label251.TabIndex = 829
@@ -234,7 +415,7 @@ Partial Class ucTranscodingProfile
         'Label252
         '
         Me.Label252.AutoSize = True
-        Me.Label252.Location = New System.Drawing.Point(120, 337)
+        Me.Label252.Location = New System.Drawing.Point(22, 508)
         Me.Label252.Name = "Label252"
         Me.Label252.Size = New System.Drawing.Size(14, 13)
         Me.Label252.TabIndex = 828
@@ -243,7 +424,7 @@ Partial Class ucTranscodingProfile
         'Label253
         '
         Me.Label253.AutoSize = True
-        Me.Label253.Location = New System.Drawing.Point(185, 360)
+        Me.Label253.Location = New System.Drawing.Point(87, 531)
         Me.Label253.Name = "Label253"
         Me.Label253.Size = New System.Drawing.Size(15, 13)
         Me.Label253.TabIndex = 827
@@ -252,7 +433,7 @@ Partial Class ucTranscodingProfile
         'Label254
         '
         Me.Label254.AutoSize = True
-        Me.Label254.Location = New System.Drawing.Point(116, 363)
+        Me.Label254.Location = New System.Drawing.Point(18, 534)
         Me.Label254.Name = "Label254"
         Me.Label254.Size = New System.Drawing.Size(18, 13)
         Me.Label254.TabIndex = 826
@@ -260,7 +441,7 @@ Partial Class ucTranscodingProfile
         '
         'nlogoheightforexport
         '
-        Me.nlogoheightforexport.Location = New System.Drawing.Point(204, 358)
+        Me.nlogoheightforexport.Location = New System.Drawing.Point(106, 529)
         Me.nlogoheightforexport.Maximum = New Decimal(New Integer() {4000, 0, 0, 0})
         Me.nlogoheightforexport.Name = "nlogoheightforexport"
         Me.nlogoheightforexport.Size = New System.Drawing.Size(37, 20)
@@ -269,27 +450,16 @@ Partial Class ucTranscodingProfile
         '
         'nlogowidthforexport
         '
-        Me.nlogowidthforexport.Location = New System.Drawing.Point(140, 358)
+        Me.nlogowidthforexport.Location = New System.Drawing.Point(42, 529)
         Me.nlogowidthforexport.Maximum = New Decimal(New Integer() {4000, 0, 0, 0})
         Me.nlogowidthforexport.Name = "nlogowidthforexport"
         Me.nlogowidthforexport.Size = New System.Drawing.Size(45, 20)
         Me.nlogowidthforexport.TabIndex = 824
         Me.nlogowidthforexport.Value = New Decimal(New Integer() {75, 0, 0, 0})
         '
-        'piclogoforexport
-        '
-        Me.piclogoforexport.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.piclogoforexport.ImageLocation = "c:\casparcg\_media\sd_frame.png"
-        Me.piclogoforexport.Location = New System.Drawing.Point(247, 334)
-        Me.piclogoforexport.Name = "piclogoforexport"
-        Me.piclogoforexport.Size = New System.Drawing.Size(95, 61)
-        Me.piclogoforexport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.piclogoforexport.TabIndex = 823
-        Me.piclogoforexport.TabStop = False
-        '
         'nlogoyposition
         '
-        Me.nlogoyposition.Location = New System.Drawing.Point(204, 335)
+        Me.nlogoyposition.Location = New System.Drawing.Point(106, 506)
         Me.nlogoyposition.Maximum = New Decimal(New Integer() {4000, 0, 0, 0})
         Me.nlogoyposition.Name = "nlogoyposition"
         Me.nlogoyposition.Size = New System.Drawing.Size(37, 20)
@@ -298,7 +468,7 @@ Partial Class ucTranscodingProfile
         '
         'nlogoxposition
         '
-        Me.nlogoxposition.Location = New System.Drawing.Point(140, 334)
+        Me.nlogoxposition.Location = New System.Drawing.Point(42, 505)
         Me.nlogoxposition.Maximum = New Decimal(New Integer() {4000, 0, 0, 0})
         Me.nlogoxposition.Name = "nlogoxposition"
         Me.nlogoxposition.Size = New System.Drawing.Size(45, 20)
@@ -309,7 +479,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbbitrate5.FormattingEnabled = True
         Me.cmbbitrate5.Items.AddRange(New Object() {"0.5", "1.0", "1.5", "2.0", "3", "4", "5", "6", "7", "8", "9", "10", "15", "20", "25", "30", "35", "40", "45", "50"})
-        Me.cmbbitrate5.Location = New System.Drawing.Point(195, 308)
+        Me.cmbbitrate5.Location = New System.Drawing.Point(195, 478)
         Me.cmbbitrate5.Name = "cmbbitrate5"
         Me.cmbbitrate5.Size = New System.Drawing.Size(46, 21)
         Me.cmbbitrate5.TabIndex = 819
@@ -318,7 +488,7 @@ Partial Class ucTranscodingProfile
         'cmbaudiocodec5
         '
         Me.cmbaudiocodec5.FormattingEnabled = True
-        Me.cmbaudiocodec5.Location = New System.Drawing.Point(108, 307)
+        Me.cmbaudiocodec5.Location = New System.Drawing.Point(108, 477)
         Me.cmbaudiocodec5.Name = "cmbaudiocodec5"
         Me.cmbaudiocodec5.Size = New System.Drawing.Size(76, 21)
         Me.cmbaudiocodec5.Sorted = True
@@ -328,7 +498,7 @@ Partial Class ucTranscodingProfile
         'cmbvideocodec5
         '
         Me.cmbvideocodec5.FormattingEnabled = True
-        Me.cmbvideocodec5.Location = New System.Drawing.Point(17, 307)
+        Me.cmbvideocodec5.Location = New System.Drawing.Point(17, 477)
         Me.cmbvideocodec5.Name = "cmbvideocodec5"
         Me.cmbvideocodec5.Size = New System.Drawing.Size(88, 21)
         Me.cmbvideocodec5.Sorted = True
@@ -339,7 +509,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbbitrate.FormattingEnabled = True
         Me.cmbbitrate.Items.AddRange(New Object() {"0.5", "1.0", "1.5", "2.0", "3", "4", "5", "6", "7", "8", "9", "10", "15", "20", "25", "30", "35", "40", "45", "50"})
-        Me.cmbbitrate.Location = New System.Drawing.Point(195, 267)
+        Me.cmbbitrate.Location = New System.Drawing.Point(195, 433)
         Me.cmbbitrate.Name = "cmbbitrate"
         Me.cmbbitrate.Size = New System.Drawing.Size(46, 21)
         Me.cmbbitrate.TabIndex = 815
@@ -348,7 +518,7 @@ Partial Class ucTranscodingProfile
         'cmbaudiocodec
         '
         Me.cmbaudiocodec.FormattingEnabled = True
-        Me.cmbaudiocodec.Location = New System.Drawing.Point(110, 267)
+        Me.cmbaudiocodec.Location = New System.Drawing.Point(110, 433)
         Me.cmbaudiocodec.Name = "cmbaudiocodec"
         Me.cmbaudiocodec.Size = New System.Drawing.Size(76, 21)
         Me.cmbaudiocodec.Sorted = True
@@ -358,7 +528,7 @@ Partial Class ucTranscodingProfile
         'cmbvideocodec
         '
         Me.cmbvideocodec.FormattingEnabled = True
-        Me.cmbvideocodec.Location = New System.Drawing.Point(17, 267)
+        Me.cmbvideocodec.Location = New System.Drawing.Point(17, 433)
         Me.cmbvideocodec.Name = "cmbvideocodec"
         Me.cmbvideocodec.Size = New System.Drawing.Size(88, 21)
         Me.cmbvideocodec.Sorted = True
@@ -368,7 +538,7 @@ Partial Class ucTranscodingProfile
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(246, 271)
+        Me.Label4.Location = New System.Drawing.Point(246, 437)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 13)
         Me.Label4.TabIndex = 809
@@ -378,7 +548,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbextensioncodecbased.FormattingEnabled = True
         Me.cmbextensioncodecbased.Items.AddRange(New Object() {".avi", ".mp4", ".ogg", ".mxf", ".mov", ".mkv", ".mpg", ".mts", ".dv"})
-        Me.cmbextensioncodecbased.Location = New System.Drawing.Point(300, 267)
+        Me.cmbextensioncodecbased.Location = New System.Drawing.Point(300, 433)
         Me.cmbextensioncodecbased.Name = "cmbextensioncodecbased"
         Me.cmbextensioncodecbased.Size = New System.Drawing.Size(56, 21)
         Me.cmbextensioncodecbased.TabIndex = 808
@@ -387,7 +557,7 @@ Partial Class ucTranscodingProfile
         'rdoCodecBased
         '
         Me.rdoCodecBased.AutoSize = True
-        Me.rdoCodecBased.Location = New System.Drawing.Point(9, 247)
+        Me.rdoCodecBased.Location = New System.Drawing.Point(9, 413)
         Me.rdoCodecBased.Name = "rdoCodecBased"
         Me.rdoCodecBased.Size = New System.Drawing.Size(89, 17)
         Me.rdoCodecBased.TabIndex = 807
@@ -397,7 +567,7 @@ Partial Class ucTranscodingProfile
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(188, 110)
+        Me.Label2.Location = New System.Drawing.Point(188, 265)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 13)
         Me.Label2.TabIndex = 805
@@ -405,7 +575,7 @@ Partial Class ucTranscodingProfile
         '
         'ntranscodeinmp4bitratehevc
         '
-        Me.ntranscodeinmp4bitratehevc.Location = New System.Drawing.Point(260, 107)
+        Me.ntranscodeinmp4bitratehevc.Location = New System.Drawing.Point(260, 262)
         Me.ntranscodeinmp4bitratehevc.Minimum = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.ntranscodeinmp4bitratehevc.Name = "ntranscodeinmp4bitratehevc"
         Me.ntranscodeinmp4bitratehevc.Size = New System.Drawing.Size(50, 20)
@@ -415,7 +585,7 @@ Partial Class ucTranscodingProfile
         'rdoTrancodemp4hevc
         '
         Me.rdoTrancodemp4hevc.AutoSize = True
-        Me.rdoTrancodemp4hevc.Location = New System.Drawing.Point(7, 105)
+        Me.rdoTrancodemp4hevc.Location = New System.Drawing.Point(7, 260)
         Me.rdoTrancodemp4hevc.Name = "rdoTrancodemp4hevc"
         Me.rdoTrancodemp4hevc.Size = New System.Drawing.Size(180, 17)
         Me.rdoTrancodemp4hevc.TabIndex = 804
@@ -426,7 +596,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbformatforhdtoAnamorphicdv.FormattingEnabled = True
         Me.cmbformatforhdtoAnamorphicdv.Items.AddRange(New Object() {"vcd", "dvd", "dvcpro", "dvcpro50", "dvcprohd", "imx30", "imx50", "xdcamhd422"})
-        Me.cmbformatforhdtoAnamorphicdv.Location = New System.Drawing.Point(142, 205)
+        Me.cmbformatforhdtoAnamorphicdv.Location = New System.Drawing.Point(142, 360)
         Me.cmbformatforhdtoAnamorphicdv.Name = "cmbformatforhdtoAnamorphicdv"
         Me.cmbformatforhdtoAnamorphicdv.Size = New System.Drawing.Size(101, 21)
         Me.cmbformatforhdtoAnamorphicdv.TabIndex = 803
@@ -435,7 +605,7 @@ Partial Class ucTranscodingProfile
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(245, 209)
+        Me.Label1.Location = New System.Drawing.Point(245, 364)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(53, 13)
         Me.Label1.TabIndex = 802
@@ -445,7 +615,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbextensionhdtoAnamprphicdv.FormattingEnabled = True
         Me.cmbextensionhdtoAnamprphicdv.Items.AddRange(New Object() {".avi", ".mp4", ".ogg", ".mxf", ".mov", ".mkv", ".mpg", ".mts", ".dv"})
-        Me.cmbextensionhdtoAnamprphicdv.Location = New System.Drawing.Point(299, 207)
+        Me.cmbextensionhdtoAnamprphicdv.Location = New System.Drawing.Point(299, 362)
         Me.cmbextensionhdtoAnamprphicdv.Name = "cmbextensionhdtoAnamprphicdv"
         Me.cmbextensionhdtoAnamprphicdv.Size = New System.Drawing.Size(56, 21)
         Me.cmbextensionhdtoAnamprphicdv.TabIndex = 801
@@ -454,7 +624,7 @@ Partial Class ucTranscodingProfile
         'rdoHDtoAnamorphicmov
         '
         Me.rdoHDtoAnamorphicmov.AutoSize = True
-        Me.rdoHDtoAnamorphicmov.Location = New System.Drawing.Point(8, 206)
+        Me.rdoHDtoAnamorphicmov.Location = New System.Drawing.Point(8, 361)
         Me.rdoHDtoAnamorphicmov.Name = "rdoHDtoAnamorphicmov"
         Me.rdoHDtoAnamorphicmov.Size = New System.Drawing.Size(130, 17)
         Me.rdoHDtoAnamorphicmov.TabIndex = 800
@@ -465,7 +635,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbformatforhdtoLetterBoxdv.FormattingEnabled = True
         Me.cmbformatforhdtoLetterBoxdv.Items.AddRange(New Object() {"vcd", "dvd", "dvcpro", "dvcpro50", "dvcprohd", "imx30", "imx50", "xdcamhd422"})
-        Me.cmbformatforhdtoLetterBoxdv.Location = New System.Drawing.Point(142, 180)
+        Me.cmbformatforhdtoLetterBoxdv.Location = New System.Drawing.Point(142, 335)
         Me.cmbformatforhdtoLetterBoxdv.Name = "cmbformatforhdtoLetterBoxdv"
         Me.cmbformatforhdtoLetterBoxdv.Size = New System.Drawing.Size(101, 21)
         Me.cmbformatforhdtoLetterBoxdv.TabIndex = 799
@@ -474,7 +644,7 @@ Partial Class ucTranscodingProfile
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(245, 184)
+        Me.Label34.Location = New System.Drawing.Point(245, 339)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(53, 13)
         Me.Label34.TabIndex = 798
@@ -484,7 +654,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbextensionhdtoLetterBoxdv.FormattingEnabled = True
         Me.cmbextensionhdtoLetterBoxdv.Items.AddRange(New Object() {".avi", ".mp4", ".ogg", ".mxf", ".mov", ".mkv", ".mpg", ".mts", ".dv"})
-        Me.cmbextensionhdtoLetterBoxdv.Location = New System.Drawing.Point(299, 182)
+        Me.cmbextensionhdtoLetterBoxdv.Location = New System.Drawing.Point(299, 337)
         Me.cmbextensionhdtoLetterBoxdv.Name = "cmbextensionhdtoLetterBoxdv"
         Me.cmbextensionhdtoLetterBoxdv.Size = New System.Drawing.Size(56, 21)
         Me.cmbextensionhdtoLetterBoxdv.TabIndex = 797
@@ -493,7 +663,7 @@ Partial Class ucTranscodingProfile
         'rdoHDtoLetterBoxSDmov
         '
         Me.rdoHDtoLetterBoxSDmov.AutoSize = True
-        Me.rdoHDtoLetterBoxSDmov.Location = New System.Drawing.Point(8, 183)
+        Me.rdoHDtoLetterBoxSDmov.Location = New System.Drawing.Point(8, 338)
         Me.rdoHDtoLetterBoxSDmov.Name = "rdoHDtoLetterBoxSDmov"
         Me.rdoHDtoLetterBoxSDmov.Size = New System.Drawing.Size(125, 17)
         Me.rdoHDtoLetterBoxSDmov.TabIndex = 796
@@ -503,7 +673,7 @@ Partial Class ucTranscodingProfile
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(187, 84)
+        Me.Label33.Location = New System.Drawing.Point(187, 239)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(70, 13)
         Me.Label33.TabIndex = 790
@@ -511,7 +681,7 @@ Partial Class ucTranscodingProfile
         '
         'ntranscodeinmp4bitrate
         '
-        Me.ntranscodeinmp4bitrate.Location = New System.Drawing.Point(261, 81)
+        Me.ntranscodeinmp4bitrate.Location = New System.Drawing.Point(261, 236)
         Me.ntranscodeinmp4bitrate.Minimum = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.ntranscodeinmp4bitrate.Name = "ntranscodeinmp4bitrate"
         Me.ntranscodeinmp4bitrate.Size = New System.Drawing.Size(50, 20)
@@ -522,7 +692,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbformatforhdtocentercutdv.FormattingEnabled = True
         Me.cmbformatforhdtocentercutdv.Items.AddRange(New Object() {"vcd", "dvd", "dvcpro", "dvcpro50", "dvcprohd", "imx30", "imx50", "xdcamhd422"})
-        Me.cmbformatforhdtocentercutdv.Location = New System.Drawing.Point(142, 155)
+        Me.cmbformatforhdtocentercutdv.Location = New System.Drawing.Point(142, 310)
         Me.cmbformatforhdtocentercutdv.Name = "cmbformatforhdtocentercutdv"
         Me.cmbformatforhdtocentercutdv.Size = New System.Drawing.Size(101, 21)
         Me.cmbformatforhdtocentercutdv.TabIndex = 794
@@ -531,7 +701,7 @@ Partial Class ucTranscodingProfile
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(245, 159)
+        Me.Label10.Location = New System.Drawing.Point(245, 314)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(53, 13)
         Me.Label10.TabIndex = 793
@@ -541,7 +711,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbextensionhdtocentercutdv.FormattingEnabled = True
         Me.cmbextensionhdtocentercutdv.Items.AddRange(New Object() {".avi", ".mp4", ".ogg", ".mxf", ".mov", ".mkv", ".mpg", ".mts", ".dv"})
-        Me.cmbextensionhdtocentercutdv.Location = New System.Drawing.Point(299, 157)
+        Me.cmbextensionhdtocentercutdv.Location = New System.Drawing.Point(299, 312)
         Me.cmbextensionhdtocentercutdv.Name = "cmbextensionhdtocentercutdv"
         Me.cmbextensionhdtocentercutdv.Size = New System.Drawing.Size(56, 21)
         Me.cmbextensionhdtocentercutdv.TabIndex = 792
@@ -551,7 +721,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbformatedvcpro50.FormattingEnabled = True
         Me.cmbformatedvcpro50.Items.AddRange(New Object() {"vcd", "dvd", "dvcpro", "dvcpro50", "dvcprohd", "imx30", "imx50", "xdcamhd422"})
-        Me.cmbformatedvcpro50.Location = New System.Drawing.Point(142, 230)
+        Me.cmbformatedvcpro50.Location = New System.Drawing.Point(142, 385)
         Me.cmbformatedvcpro50.Name = "cmbformatedvcpro50"
         Me.cmbformatedvcpro50.Size = New System.Drawing.Size(101, 21)
         Me.cmbformatedvcpro50.TabIndex = 791
@@ -560,7 +730,7 @@ Partial Class ucTranscodingProfile
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(245, 235)
+        Me.Label3.Location = New System.Drawing.Point(245, 390)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 790
@@ -570,7 +740,7 @@ Partial Class ucTranscodingProfile
         '
         Me.cmbextensiondvcpro50.FormattingEnabled = True
         Me.cmbextensiondvcpro50.Items.AddRange(New Object() {".avi", ".mp4", ".ogg", ".mxf", ".mov", ".mkv", ".mpg", ".mts", ".dv"})
-        Me.cmbextensiondvcpro50.Location = New System.Drawing.Point(299, 231)
+        Me.cmbextensiondvcpro50.Location = New System.Drawing.Point(299, 386)
         Me.cmbextensiondvcpro50.Name = "cmbextensiondvcpro50"
         Me.cmbextensiondvcpro50.Size = New System.Drawing.Size(56, 21)
         Me.cmbextensiondvcpro50.TabIndex = 789
@@ -579,7 +749,7 @@ Partial Class ucTranscodingProfile
         'rdodvcpro50dv
         '
         Me.rdodvcpro50dv.AutoSize = True
-        Me.rdodvcpro50dv.Location = New System.Drawing.Point(9, 230)
+        Me.rdodvcpro50dv.Location = New System.Drawing.Point(9, 385)
         Me.rdodvcpro50dv.Name = "rdodvcpro50dv"
         Me.rdodvcpro50dv.Size = New System.Drawing.Size(70, 17)
         Me.rdodvcpro50dv.TabIndex = 783
@@ -589,7 +759,7 @@ Partial Class ucTranscodingProfile
         'rdoHDtoCenterCutSDmov
         '
         Me.rdoHDtoCenterCutSDmov.AutoSize = True
-        Me.rdoHDtoCenterCutSDmov.Location = New System.Drawing.Point(8, 158)
+        Me.rdoHDtoCenterCutSDmov.Location = New System.Drawing.Point(8, 313)
         Me.rdoHDtoCenterCutSDmov.Name = "rdoHDtoCenterCutSDmov"
         Me.rdoHDtoCenterCutSDmov.Size = New System.Drawing.Size(127, 17)
         Me.rdoHDtoCenterCutSDmov.TabIndex = 782
@@ -599,7 +769,7 @@ Partial Class ucTranscodingProfile
         'rdoNX5CameraMTSHDtoCenterCutSDmpg
         '
         Me.rdoNX5CameraMTSHDtoCenterCutSDmpg.AutoSize = True
-        Me.rdoNX5CameraMTSHDtoCenterCutSDmpg.Location = New System.Drawing.Point(8, 133)
+        Me.rdoNX5CameraMTSHDtoCenterCutSDmpg.Location = New System.Drawing.Point(8, 288)
         Me.rdoNX5CameraMTSHDtoCenterCutSDmpg.Name = "rdoNX5CameraMTSHDtoCenterCutSDmpg"
         Me.rdoNX5CameraMTSHDtoCenterCutSDmpg.Size = New System.Drawing.Size(236, 17)
         Me.rdoNX5CameraMTSHDtoCenterCutSDmpg.TabIndex = 781
@@ -609,7 +779,7 @@ Partial Class ucTranscodingProfile
         'rdoTrancodemp4
         '
         Me.rdoTrancodemp4.AutoSize = True
-        Me.rdoTrancodemp4.Location = New System.Drawing.Point(8, 80)
+        Me.rdoTrancodemp4.Location = New System.Drawing.Point(8, 235)
         Me.rdoTrancodemp4.Name = "rdoTrancodemp4"
         Me.rdoTrancodemp4.Size = New System.Drawing.Size(138, 17)
         Me.rdoTrancodemp4.TabIndex = 780
@@ -620,7 +790,7 @@ Partial Class ucTranscodingProfile
         '
         Me.rdoCustomTranscode.AutoSize = True
         Me.rdoCustomTranscode.Checked = True
-        Me.rdoCustomTranscode.Location = New System.Drawing.Point(8, 378)
+        Me.rdoCustomTranscode.Location = New System.Drawing.Point(10, 562)
         Me.rdoCustomTranscode.Name = "rdoCustomTranscode"
         Me.rdoCustomTranscode.Size = New System.Drawing.Size(114, 17)
         Me.rdoCustomTranscode.TabIndex = 779
@@ -631,7 +801,7 @@ Partial Class ucTranscodingProfile
         'rdoHDtoXDCAMHD422mxfwithFFMBC
         '
         Me.rdoHDtoXDCAMHD422mxfwithFFMBC.AutoSize = True
-        Me.rdoHDtoXDCAMHD422mxfwithFFMBC.Location = New System.Drawing.Point(8, 58)
+        Me.rdoHDtoXDCAMHD422mxfwithFFMBC.Location = New System.Drawing.Point(8, 213)
         Me.rdoHDtoXDCAMHD422mxfwithFFMBC.Name = "rdoHDtoXDCAMHD422mxfwithFFMBC"
         Me.rdoHDtoXDCAMHD422mxfwithFFMBC.Size = New System.Drawing.Size(210, 17)
         Me.rdoHDtoXDCAMHD422mxfwithFFMBC.TabIndex = 778
@@ -641,7 +811,7 @@ Partial Class ucTranscodingProfile
         'rdoHD1920x1080tosdCenterCutmxf
         '
         Me.rdoHD1920x1080tosdCenterCutmxf.AutoSize = True
-        Me.rdoHD1920x1080tosdCenterCutmxf.Location = New System.Drawing.Point(8, 38)
+        Me.rdoHD1920x1080tosdCenterCutmxf.Location = New System.Drawing.Point(8, 193)
         Me.rdoHD1920x1080tosdCenterCutmxf.Name = "rdoHD1920x1080tosdCenterCutmxf"
         Me.rdoHD1920x1080tosdCenterCutmxf.Size = New System.Drawing.Size(195, 17)
         Me.rdoHD1920x1080tosdCenterCutmxf.TabIndex = 777
@@ -653,21 +823,22 @@ Partial Class ucTranscodingProfile
         Me.rdoSDtoXDcamHD422Mxf.AutoSize = True
         Me.rdoSDtoXDcamHD422Mxf.Location = New System.Drawing.Point(8, 18)
         Me.rdoSDtoXDcamHD422Mxf.Name = "rdoSDtoXDcamHD422Mxf"
-        Me.rdoSDtoXDcamHD422Mxf.Size = New System.Drawing.Size(198, 17)
+        Me.rdoSDtoXDcamHD422Mxf.Size = New System.Drawing.Size(242, 17)
         Me.rdoSDtoXDcamHD422Mxf.TabIndex = 774
-        Me.rdoSDtoXDcamHD422Mxf.Text = "SD to XDCAM HD 422 50i PAL MXF"
+        Me.rdoSDtoXDcamHD422Mxf.Text = "SD to pillar box XDCAM HD 422 50i PAL MXF"
         Me.rdoSDtoXDcamHD422Mxf.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.GroupBox2.Controls.Add(Me.GroupBox4)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.cmbextensioncustom)
         Me.GroupBox2.Controls.Add(Me.txtoptionstrimmercustom)
-        Me.GroupBox2.Location = New System.Drawing.Point(5, 416)
+        Me.GroupBox2.Location = New System.Drawing.Point(5, 601)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(362, 107)
+        Me.GroupBox2.Size = New System.Drawing.Size(362, 150)
         Me.GroupBox2.TabIndex = 783
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Custom Trancoding options"
@@ -737,10 +908,22 @@ Partial Class ucTranscodingProfile
         Me.txtoptionstrimmercustom.Location = New System.Drawing.Point(9, 46)
         Me.txtoptionstrimmercustom.Multiline = True
         Me.txtoptionstrimmercustom.Name = "txtoptionstrimmercustom"
-        Me.txtoptionstrimmercustom.Size = New System.Drawing.Size(347, 56)
+        Me.txtoptionstrimmercustom.Size = New System.Drawing.Size(347, 98)
         Me.txtoptionstrimmercustom.TabIndex = 768
         Me.txtoptionstrimmercustom.Text = " -vcodec mpeg2video -acodec pcm_s24le -r 25 -s 1920x1080 -ar 48000 -b:v 50000k -a" &
     "lternate_scan 1"
+        '
+        'ckkUseSuffix
+        '
+        Me.ckkUseSuffix.AutoSize = True
+        Me.ckkUseSuffix.Checked = True
+        Me.ckkUseSuffix.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ckkUseSuffix.Location = New System.Drawing.Point(218, 769)
+        Me.ckkUseSuffix.Name = "ckkUseSuffix"
+        Me.ckkUseSuffix.Size = New System.Drawing.Size(116, 17)
+        Me.ckkUseSuffix.TabIndex = 815
+        Me.ckkUseSuffix.Text = "Use Suffix in Name"
+        Me.ckkUseSuffix.UseVisualStyleBackColor = True
         '
         'ucTranscodingProfile
         '
@@ -749,14 +932,15 @@ Partial Class ucTranscodingProfile
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Controls.Add(Me.GroupBox3)
         Me.Name = "ucTranscodingProfile"
-        Me.Size = New System.Drawing.Size(387, 579)
+        Me.Size = New System.Drawing.Size(387, 803)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.nborderwidth, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vlcLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nlogoheightforexport, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nlogowidthforexport, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piclogoforexport, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nlogoyposition, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nlogoxposition, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ntranscodeinmp4bitratehevc, System.ComponentModel.ISupportInitialize).EndInit()
@@ -815,7 +999,6 @@ Partial Class ucTranscodingProfile
     Friend WithEvents cmbvideocodec5 As ComboBox
     Friend WithEvents nlogoheightforexport As NumericUpDown
     Friend WithEvents nlogowidthforexport As NumericUpDown
-    Friend WithEvents piclogoforexport As PictureBox
     Friend WithEvents nlogoyposition As NumericUpDown
     Friend WithEvents nlogoxposition As NumericUpDown
     Friend WithEvents rdoTranscodeWithLogo As RadioButton
@@ -830,4 +1013,21 @@ Partial Class ucTranscodingProfile
     Friend WithEvents cmbextensioncodecbased As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents cmbextension5 As ComboBox
+    Friend WithEvents txtFPS As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents rdoanytoAnamorphicXDcamHD422Mxf As RadioButton
+    Friend WithEvents cmdOpenLogo As Button
+    Friend WithEvents vlcLogo As Vlc.DotNet.Forms.VlcControl
+    Friend WithEvents rdoSDtoSDoverBlurVideo As RadioButton
+    Friend WithEvents nborderwidth As NumericUpDown
+    Friend WithEvents Label8 As Label
+    Friend WithEvents cmdBorderColor As Button
+    Friend WithEvents Label12 As Label
+    Friend WithEvents txtBoxSize As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtTotalSize As TextBox
+    Friend WithEvents rdoHDblacktoHDoverBlurVideo As RadioButton
+    Friend WithEvents Label13 As Label
+    Friend WithEvents txtExtraCrop As TextBox
+    Friend WithEvents ckkUseSuffix As CheckBox
 End Class

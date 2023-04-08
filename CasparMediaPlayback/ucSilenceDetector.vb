@@ -33,7 +33,7 @@ Public Class ucSilenceDetector
             defaultPlaybackDevice.SetMuteAsync(False)
             defaultPlaybackDevice.SetVolumeAsync(100)
             Dim startInfo As New ProcessStartInfo
-            startInfo.FileName = "C:\casparcg\mydata\vlc\vlc-2.2.1-win32\vlc-2.2.1\vlc.exe"
+            startInfo.FileName = vlcplayerpath() ' "C:\casparcg\mydata\vlc\vlc-2.2.1-win32\vlc-2.2.1\vlc.exe"
             startInfo.Arguments = "c:\casparcg\_media\tone.mp4 --directx-volume=2 --loop"
             Process.Start(startInfo)
         End If
@@ -44,9 +44,19 @@ Public Class ucSilenceDetector
         If chkSwitchTo2ndInput.Checked Then
             CasparDevice.SendString(txtSecondSource.Text)
         End If
+
         chkSilenceDetect.Checked = False
         tmrSilenceDetect.Enabled = False
         aa = 1
+
+        If chkSendCustomCommand.Checked Then
+            CasparDevice.SendString(txtCustomCommand.Text)
+            If chkEnableSilenceDetectionAgain.Checked Then
+                chkSilenceDetect.Checked = True
+                tmrSilenceDetect.Enabled = True
+            End If
+        End If
+
     End Sub
     Private Sub cmdhideSilenceDetector_Click(sender As Object, e As EventArgs) 
         Me.Hide()

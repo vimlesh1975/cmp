@@ -4,6 +4,149 @@
         <name>Google.Api.Gax.Rest</name>
     </assembly>
     <members>
+        <member name="T:Google.Api.Gax.Rest.ClientBuilderBase`1">
+            <summary>
+            Base class for API-specific builders.
+            </summary>
+            <typeparam name="TClient">The type of client created by this builder.</typeparam>
+        </member>
+        <member name="P:Google.Api.Gax.Rest.ClientBuilderBase`1.CredentialsPath">
+            <summary>
+            The path to the credentials file to use, or null if credentials are being provided in a different way.
+            The resulting credential is automatically scoped with the default scopes for the API.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Gax.Rest.ClientBuilderBase`1.JsonCredentials">
+            <summary>
+            The credentials to use as a JSON string, or null if credentials are being provided in a different way.
+            The resulting credential is automatically scoped with the default scopes for the API.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Gax.Rest.ClientBuilderBase`1.ApplicationName">
+            <summary>
+            A custom application name to use for this client, or null to use the default application name.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Gax.Rest.ClientBuilderBase`1.BaseUri">
+            <summary>
+            A custom base URI for the service, or null to use the default URI.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Gax.Rest.ClientBuilderBase`1.Credential">
+            <summary>
+            The credential to use for authentication. This cannot be specified alongside other authentication properties.
+            Note that scopes are not automatically applied to this credential; if a scoped credential is required, the
+            scoping must be applied by the calling code.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Gax.Rest.ClientBuilderBase`1.ApiKey">
+            <summary>
+            An API key to use instead of a regular credential. If this is non-null and no other credentials are supplied,
+            it will be used as the only credentials. If other credentials are supplied (such as through <see cref="P:Google.Api.Gax.Rest.ClientBuilderBase`1.CredentialsPath"/>)
+            then the two values will both be used together.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Gax.Rest.ClientBuilderBase`1.QuotaProject">
+            <summary>
+            The GCP project ID that should be used for quota and billing purposes.
+            May be null.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Gax.Rest.ClientBuilderBase`1.HttpClientFactory">
+            <summary>
+            An <see cref="T:Google.Apis.Http.IHttpClientFactory"/> that will be used to obtain
+            <see cref="T:Google.Apis.Http.ConfigurableHttpClient"/> for making API Http calls.
+            May be null, in which case an <see cref="T:Google.Apis.Http.HttpClientFactory"/>
+            will be used.
+            </summary>
+            <remarks>
+            If you want to use custom HTTP clients, for instance, if you need to set a proxy,
+            you may do so by either
+            <list type="bullet">
+            <item>
+            Extending <see cref="T:Google.Apis.Http.HttpClientFactory"/>. Refer to
+            <see cref="T:Google.Apis.Http.HttpClientFactory" /> documentation for more information.
+            </item>
+            <item>
+            On .NET Core 2.1 and above, using <see cref="T:Google.Apis.Http.HttpClientFromMessageHandlerFactory"/>
+            in combination with <code>System.Net.Http.IHttpClientFactory</code>. Refer to
+            <see cref="T:Google.Apis.Http.HttpClientFromMessageHandlerFactory"/> documentation and
+            https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests
+            for more information.
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.#ctor">
+            <summary>
+            Creates a new instance with no settings.
+            </summary>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.Validate">
+            <summary>
+            Validates that the builder is in a consistent state for building. For example, it's invalid to call
+            <see cref="M:Google.Api.Gax.Rest.ClientBuilderBase`1.Build"/> on an instance which has both JSON credentials and a credentials path specified.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">The builder is in an invalid state.</exception>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.ValidateAtMostOneNotNull(System.String,System.Object[])">
+            <summary>
+            Validates that at most one of the given values is not null.
+            </summary>
+            <param name="message">The message if the condition is violated.</param>
+            <param name="values">The values to check for nullity.</param>
+            <exception cref="T:System.InvalidOperationException">More than one value is null.</exception>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.CreateServiceInitializer">
+            <summary>
+            Creates an initializer for the service. This method does not perform any validation.
+            </summary>
+            <returns>An initializer for the service.</returns>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.CreateServiceInitializerAsync(System.Threading.CancellationToken)">
+            <summary>
+            Creates an initializer for the service asynchronously. This method does not perform any validation.
+            </summary>
+            <returns>An initializer for the service.</returns>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.GetHttpClientInitializer">
+            <summary>
+            Obtains credentials synchronously. Override this method in a concrete builder type if more
+            credential mechanisms are supported.
+            </summary>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.GetHttpClientInitializerAsync(System.Threading.CancellationToken)">
+            <summary>
+            Obtains credentials asynchronously. Override this method in a concrete builder type if more
+            credential mechanisms are supported.
+            </summary>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.GetScopedCredentialProvider">
+            <summary>
+            Returns the scoped credential provider for this builder.
+            </summary>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.GetDefaultApplicationName">
+            <summary>
+            Returns the default application name, used if no custom name is otherwise specified.
+            </summary>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.Build">
+            <summary>
+            Builds the resulting client.
+            </summary>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ClientBuilderBase`1.BuildAsync(System.Threading.CancellationToken)">
+            <summary>
+            Builds the resulting client asynchronously.
+            </summary>
+        </member>
+        <member name="T:Google.Api.Gax.Rest.ClientBuilderBase`1.ExtraHeadersInitializer">
+            <summary>
+            Class to be used to set the quota project on request headers when
+            an ApiKey is being used for authentication instead of a credential.
+            </summary>
+        </member>
         <member name="T:Google.Api.Gax.Rest.PageManagerExtensions">
             <summary>
             Extension methods on IPageManager, just to avoid repetitive code.
@@ -67,8 +210,14 @@
         <member name="M:Google.Api.Gax.Rest.RestPagedAsyncEnumerable`3.ReadPageAsync(System.Int32,System.Threading.CancellationToken)">
             <inheritdoc/>
         </member>
-        <member name="M:Google.Api.Gax.Rest.RestPagedAsyncEnumerable`3.GetEnumerator">
+        <member name="M:Google.Api.Gax.Rest.RestPagedAsyncEnumerable`3.GetAsyncEnumerator(System.Threading.CancellationToken)">
             <inheritdoc/>
+        </member>
+        <member name="T:Google.Api.Gax.Rest.ResourceEnumerator`3">
+            <summary>
+            Class to effectively perform SelectMany on the pages, extracting resources.
+            This allows us to avoid taking a dependency on System.Linq.Async.
+            </summary>
         </member>
         <member name="T:Google.Api.Gax.Rest.ResponseAsyncEnumerable`3">
             <summary>
@@ -78,10 +227,7 @@
             <typeparam name="TResponse">The API response type.</typeparam>
             <typeparam name="TResource">The resource type contained within the response.</typeparam>
         </member>
-        <member name="M:Google.Api.Gax.Rest.ResponseAsyncEnumerable`3.GetEnumerator">
-            <inheritdoc />
-        </member>
-        <member name="M:Google.Api.Gax.Rest.ResponseAsyncEnumerable`3.System#Collections#Generic#IAsyncEnumerable{TResponse}#GetEnumerator">
+        <member name="M:Google.Api.Gax.Rest.ResponseAsyncEnumerable`3.GetAsyncEnumerator(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="T:Google.Api.Gax.Rest.RestPagedEnumerable`3">
@@ -116,11 +262,11 @@
         </member>
         <member name="F:Google.Api.Gax.Rest.ScopedCredentialProvider._lazyScopedDefaultCredentials">
             <summary>
-            Lazily-created task to retrieve the default application channel credentials. Once completed, this
-            task can be used whenever channel credentials are required. The returned task always runs in the
+            Lazily-created task to retrieve the default application credentials. Once completed, this
+            task can be used whenever credentials are required. The returned task always runs in the
             thread pool, so its result can be used synchronously from synchronous methods without risk of deadlock.
-            The same channel credentials are used by all pools. The field is initialized in the constructor, as it uses
-            _scopes, and you can't refer to an instance field within an instance field initializer.
+            The field is initialized in the constructor, as it uses _scopes,
+            and you can't refer to an instance field within an instance field initializer.
             </summary>
         </member>
         <member name="M:Google.Api.Gax.Rest.ScopedCredentialProvider.#ctor(System.Collections.Generic.IEnumerable{System.String})">
@@ -138,14 +284,21 @@
             <returns>A task representing the asynchronous operation. The result of the task
             is the scoped credentials.</returns>
         </member>
-        <member name="M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential)">
+        <member name="M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential,System.Threading.CancellationToken)">
             <summary>
             Asynchronously returns credentials with the scopes applied if required.
             </summary>
             <param name="credentials">Existing credentials, if any. This may be null,
             in which case the default application credentials will be used.</param>
+            <param name="cancellationToken">A cancellation token for the operation.</param>
             <returns>A task representing the asynchronous operation. The result of the task
             is the scoped credentials.</returns>
+        </member>
+        <member name="M:Google.Api.Gax.Rest.ScopedCredentialProvider.WithCancellationToken``1(System.Threading.Tasks.Task{``0},System.Threading.CancellationToken)">
+            <summary>
+            Returns a task which can be cancelled by the given cancellation token, but otherwise observes the original
+            task's state. This does *not* cancel any work that the original task was doing, and should be used carefully.
+            </summary>
         </member>
         <member name="T:Google.Api.Gax.Rest.UserAgentHelper">
             <summary>
@@ -158,13 +311,6 @@
             </summary>
             <param name="type">The type to extract the version number from.</param>
             <returns>A user agent value.</returns>
-        </member>
-        <member name="M:Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier(System.Type)">
-            <summary>
-            Creates a request modifier which sets the Google-specific version header in HTTP requests.
-            </summary>
-            <param name="type">The type to extract the version number from.</param>
-            <returns>A request modifier.</returns>
         </member>
     </members>
 </doc>

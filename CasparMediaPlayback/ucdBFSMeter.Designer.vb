@@ -69,6 +69,26 @@ Partial Class ucdBFSMeter
         Me.cmbchannel_layout = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.cmdMix = New System.Windows.Forms.Button()
+        Me.cmdOnly_L = New System.Windows.Forms.Button()
+        Me.cmdOnly_R = New System.Windows.Forms.Button()
+        Me.tbAudioControl0 = New System.Windows.Forms.TrackBar()
+        Me.cmbAudioControl0 = New System.Windows.Forms.ComboBox()
+        Me.cmbAudioControl1 = New System.Windows.Forms.ComboBox()
+        Me.tbAudioControl1 = New System.Windows.Forms.TrackBar()
+        Me.cmbAudioControl3 = New System.Windows.Forms.ComboBox()
+        Me.tbAudioControl3 = New System.Windows.Forms.TrackBar()
+        Me.cmbAudioControl2 = New System.Windows.Forms.ComboBox()
+        Me.cmbAudioControl7 = New System.Windows.Forms.ComboBox()
+        Me.tbAudioControl7 = New System.Windows.Forms.TrackBar()
+        Me.cmbAudioControl6 = New System.Windows.Forms.ComboBox()
+        Me.cmbAudioControl5 = New System.Windows.Forms.ComboBox()
+        Me.tbAudioControl5 = New System.Windows.Forms.TrackBar()
+        Me.cmbAudioControl4 = New System.Windows.Forms.ComboBox()
+        Me.tbAudioControl2 = New System.Windows.Forms.TrackBar()
+        Me.tbAudioControl4 = New System.Windows.Forms.TrackBar()
+        Me.tbAudioControl6 = New System.Windows.Forms.TrackBar()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.DBFS_Meter1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DBFS_Meter2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DBFS_Meter3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,6 +105,15 @@ Partial Class ucdBFSMeter
         CType(Me.DBFS_Meter14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DBFS_Meter15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DBFS_Meter16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbAudioControl0, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbAudioControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbAudioControl3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbAudioControl7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbAudioControl5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbAudioControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbAudioControl4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbAudioControl6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DBFS_Meter1
@@ -472,7 +501,7 @@ Partial Class ucdBFSMeter
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(13, 356)
+        Me.Label17.Location = New System.Drawing.Point(13, 404)
         Me.Label17.MaximumSize = New System.Drawing.Size(150, 0)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(149, 26)
@@ -481,17 +510,17 @@ Partial Class ucdBFSMeter
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(9, 385)
+        Me.TextBox1.Location = New System.Drawing.Point(9, 433)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox1.Size = New System.Drawing.Size(187, 189)
+        Me.TextBox1.Size = New System.Drawing.Size(461, 481)
         Me.TextBox1.TabIndex = 741
         Me.TextBox1.Text = resources.GetString("TextBox1.Text")
         '
         'cmdL_to_Both
         '
-        Me.cmdL_to_Both.Location = New System.Drawing.Point(559, 355)
+        Me.cmdL_to_Both.Location = New System.Drawing.Point(988, 399)
         Me.cmdL_to_Both.Name = "cmdL_to_Both"
         Me.cmdL_to_Both.Size = New System.Drawing.Size(96, 22)
         Me.cmdL_to_Both.TabIndex = 740
@@ -500,7 +529,7 @@ Partial Class ucdBFSMeter
         '
         'cmdR_to_Both
         '
-        Me.cmdR_to_Both.Location = New System.Drawing.Point(559, 379)
+        Me.cmdR_to_Both.Location = New System.Drawing.Point(988, 423)
         Me.cmdR_to_Both.Name = "cmdR_to_Both"
         Me.cmdR_to_Both.Size = New System.Drawing.Size(96, 22)
         Me.cmdR_to_Both.TabIndex = 739
@@ -509,7 +538,7 @@ Partial Class ucdBFSMeter
         '
         'cmdrefreshmediaforaudiotest
         '
-        Me.cmdrefreshmediaforaudiotest.Location = New System.Drawing.Point(14, 324)
+        Me.cmdrefreshmediaforaudiotest.Location = New System.Drawing.Point(483, 360)
         Me.cmdrefreshmediaforaudiotest.Name = "cmdrefreshmediaforaudiotest"
         Me.cmdrefreshmediaforaudiotest.Size = New System.Drawing.Size(89, 23)
         Me.cmdrefreshmediaforaudiotest.TabIndex = 735
@@ -520,17 +549,17 @@ Partial Class ucdBFSMeter
         '
         Me.cmbmediaforaudiotest.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "cmbmediaforaudiotest", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.cmbmediaforaudiotest.FormattingEnabled = True
-        Me.cmbmediaforaudiotest.Location = New System.Drawing.Point(109, 326)
+        Me.cmbmediaforaudiotest.Location = New System.Drawing.Point(578, 362)
         Me.cmbmediaforaudiotest.Name = "cmbmediaforaudiotest"
-        Me.cmbmediaforaudiotest.Size = New System.Drawing.Size(255, 21)
+        Me.cmbmediaforaudiotest.Size = New System.Drawing.Size(194, 21)
         Me.cmbmediaforaudiotest.TabIndex = 738
         Me.cmbmediaforaudiotest.Text = Global.caspar_media_playback.My.MySettings.Default.cmbmediaforaudiotest
         '
         'cmdaudiotest
         '
-        Me.cmdaudiotest.Location = New System.Drawing.Point(580, 326)
+        Me.cmdaudiotest.Location = New System.Drawing.Point(989, 362)
         Me.cmdaudiotest.Name = "cmdaudiotest"
-        Me.cmdaudiotest.Size = New System.Drawing.Size(75, 23)
+        Me.cmdaudiotest.Size = New System.Drawing.Size(95, 23)
         Me.cmdaudiotest.TabIndex = 737
         Me.cmdaudiotest.Text = "Audio Test"
         Me.cmdaudiotest.UseVisualStyleBackColor = True
@@ -540,7 +569,7 @@ Partial Class ucdBFSMeter
         Me.cmbchannel_layout.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "cmbchannel_layout", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.cmbchannel_layout.FormattingEnabled = True
         Me.cmbchannel_layout.Items.AddRange(New Object() {"mono:C", "stereo:L R", "dts:C L R Ls Rs LFE", "dolbye:L R C LFE Ls Rs Lmix Rmix", "dolbydigital:L C R Ls Rs LFE", "smpte:L R C LFE Ls Rs", "passthru", "", "", "matrix", "film", "ebu_r123_8a", "ebu_r123_8b", "8ch", "16ch"})
-        Me.cmbchannel_layout.Location = New System.Drawing.Point(370, 327)
+        Me.cmbchannel_layout.Location = New System.Drawing.Point(778, 362)
         Me.cmbchannel_layout.Name = "cmbchannel_layout"
         Me.cmbchannel_layout.Size = New System.Drawing.Size(205, 21)
         Me.cmbchannel_layout.TabIndex = 736
@@ -549,7 +578,7 @@ Partial Class ucdBFSMeter
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(228, 356)
+        Me.Label18.Location = New System.Drawing.Point(505, 391)
         Me.Label18.MaximumSize = New System.Drawing.Size(150, 0)
         Me.Label18.MinimumSize = New System.Drawing.Size(150, 25)
         Me.Label18.Name = "Label18"
@@ -559,20 +588,254 @@ Partial Class ucdBFSMeter
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(225, 389)
+        Me.TextBox2.Location = New System.Drawing.Point(479, 433)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox2.Size = New System.Drawing.Size(185, 189)
+        Me.TextBox2.Size = New System.Drawing.Size(503, 481)
         Me.TextBox2.TabIndex = 743
         Me.TextBox2.Text = resources.GetString("TextBox2.Text")
+        '
+        'cmdMix
+        '
+        Me.cmdMix.Location = New System.Drawing.Point(988, 451)
+        Me.cmdMix.Name = "cmdMix"
+        Me.cmdMix.Size = New System.Drawing.Size(96, 22)
+        Me.cmdMix.TabIndex = 745
+        Me.cmdMix.Text = "Audio Mix"
+        Me.cmdMix.UseVisualStyleBackColor = True
+        '
+        'cmdOnly_L
+        '
+        Me.cmdOnly_L.Location = New System.Drawing.Point(988, 479)
+        Me.cmdOnly_L.Name = "cmdOnly_L"
+        Me.cmdOnly_L.Size = New System.Drawing.Size(96, 22)
+        Me.cmdOnly_L.TabIndex = 746
+        Me.cmdOnly_L.Text = "Audio Only_L"
+        Me.cmdOnly_L.UseVisualStyleBackColor = True
+        '
+        'cmdOnly_R
+        '
+        Me.cmdOnly_R.Location = New System.Drawing.Point(988, 507)
+        Me.cmdOnly_R.Name = "cmdOnly_R"
+        Me.cmdOnly_R.Size = New System.Drawing.Size(96, 22)
+        Me.cmdOnly_R.TabIndex = 747
+        Me.cmdOnly_R.Text = "Audio Only_R"
+        Me.cmdOnly_R.UseVisualStyleBackColor = True
+        '
+        'tbAudioControl0
+        '
+        Me.tbAudioControl0.BackColor = System.Drawing.SystemColors.Control
+        Me.tbAudioControl0.Location = New System.Drawing.Point(26, 13)
+        Me.tbAudioControl0.Margin = New System.Windows.Forms.Padding(0)
+        Me.tbAudioControl0.Name = "tbAudioControl0"
+        Me.tbAudioControl0.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.tbAudioControl0.Size = New System.Drawing.Size(45, 254)
+        Me.tbAudioControl0.TabIndex = 748
+        Me.tbAudioControl0.TickFrequency = 10
+        Me.tbAudioControl0.Value = 10
+        '
+        'cmbAudioControl0
+        '
+        Me.cmbAudioControl0.FormattingEnabled = True
+        Me.cmbAudioControl0.Items.AddRange(New Object() {"c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"})
+        Me.cmbAudioControl0.Location = New System.Drawing.Point(14, 270)
+        Me.cmbAudioControl0.Name = "cmbAudioControl0"
+        Me.cmbAudioControl0.Size = New System.Drawing.Size(45, 21)
+        Me.cmbAudioControl0.TabIndex = 749
+        Me.cmbAudioControl0.Text = "c0"
+        '
+        'cmbAudioControl1
+        '
+        Me.cmbAudioControl1.FormattingEnabled = True
+        Me.cmbAudioControl1.Items.AddRange(New Object() {"c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"})
+        Me.cmbAudioControl1.Location = New System.Drawing.Point(71, 270)
+        Me.cmbAudioControl1.Name = "cmbAudioControl1"
+        Me.cmbAudioControl1.Size = New System.Drawing.Size(45, 21)
+        Me.cmbAudioControl1.TabIndex = 751
+        Me.cmbAudioControl1.Text = "c1"
+        '
+        'tbAudioControl1
+        '
+        Me.tbAudioControl1.BackColor = System.Drawing.SystemColors.Control
+        Me.tbAudioControl1.Location = New System.Drawing.Point(80, 13)
+        Me.tbAudioControl1.Margin = New System.Windows.Forms.Padding(0)
+        Me.tbAudioControl1.Name = "tbAudioControl1"
+        Me.tbAudioControl1.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.tbAudioControl1.Size = New System.Drawing.Size(45, 254)
+        Me.tbAudioControl1.TabIndex = 750
+        Me.tbAudioControl1.TickFrequency = 10
+        Me.tbAudioControl1.Value = 10
+        '
+        'cmbAudioControl3
+        '
+        Me.cmbAudioControl3.FormattingEnabled = True
+        Me.cmbAudioControl3.Items.AddRange(New Object() {"c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"})
+        Me.cmbAudioControl3.Location = New System.Drawing.Point(187, 270)
+        Me.cmbAudioControl3.Name = "cmbAudioControl3"
+        Me.cmbAudioControl3.Size = New System.Drawing.Size(45, 21)
+        Me.cmbAudioControl3.TabIndex = 755
+        Me.cmbAudioControl3.Text = "c3"
+        '
+        'tbAudioControl3
+        '
+        Me.tbAudioControl3.BackColor = System.Drawing.SystemColors.Control
+        Me.tbAudioControl3.Location = New System.Drawing.Point(197, 13)
+        Me.tbAudioControl3.Margin = New System.Windows.Forms.Padding(0)
+        Me.tbAudioControl3.Name = "tbAudioControl3"
+        Me.tbAudioControl3.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.tbAudioControl3.Size = New System.Drawing.Size(45, 254)
+        Me.tbAudioControl3.TabIndex = 754
+        Me.tbAudioControl3.TickFrequency = 10
+        Me.tbAudioControl3.Value = 10
+        '
+        'cmbAudioControl2
+        '
+        Me.cmbAudioControl2.FormattingEnabled = True
+        Me.cmbAudioControl2.Items.AddRange(New Object() {"c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"})
+        Me.cmbAudioControl2.Location = New System.Drawing.Point(130, 270)
+        Me.cmbAudioControl2.Name = "cmbAudioControl2"
+        Me.cmbAudioControl2.Size = New System.Drawing.Size(45, 21)
+        Me.cmbAudioControl2.TabIndex = 753
+        Me.cmbAudioControl2.Text = "c2"
+        '
+        'cmbAudioControl7
+        '
+        Me.cmbAudioControl7.FormattingEnabled = True
+        Me.cmbAudioControl7.Items.AddRange(New Object() {"c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"})
+        Me.cmbAudioControl7.Location = New System.Drawing.Point(410, 270)
+        Me.cmbAudioControl7.Name = "cmbAudioControl7"
+        Me.cmbAudioControl7.Size = New System.Drawing.Size(45, 21)
+        Me.cmbAudioControl7.TabIndex = 763
+        Me.cmbAudioControl7.Text = "c7"
+        '
+        'tbAudioControl7
+        '
+        Me.tbAudioControl7.BackColor = System.Drawing.SystemColors.Control
+        Me.tbAudioControl7.Location = New System.Drawing.Point(420, 13)
+        Me.tbAudioControl7.Margin = New System.Windows.Forms.Padding(0)
+        Me.tbAudioControl7.Name = "tbAudioControl7"
+        Me.tbAudioControl7.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.tbAudioControl7.Size = New System.Drawing.Size(45, 254)
+        Me.tbAudioControl7.TabIndex = 762
+        Me.tbAudioControl7.TickFrequency = 10
+        Me.tbAudioControl7.Value = 10
+        '
+        'cmbAudioControl6
+        '
+        Me.cmbAudioControl6.FormattingEnabled = True
+        Me.cmbAudioControl6.Items.AddRange(New Object() {"c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"})
+        Me.cmbAudioControl6.Location = New System.Drawing.Point(353, 270)
+        Me.cmbAudioControl6.Name = "cmbAudioControl6"
+        Me.cmbAudioControl6.Size = New System.Drawing.Size(45, 21)
+        Me.cmbAudioControl6.TabIndex = 761
+        Me.cmbAudioControl6.Text = "c6"
+        '
+        'cmbAudioControl5
+        '
+        Me.cmbAudioControl5.FormattingEnabled = True
+        Me.cmbAudioControl5.Items.AddRange(New Object() {"c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"})
+        Me.cmbAudioControl5.Location = New System.Drawing.Point(294, 270)
+        Me.cmbAudioControl5.Name = "cmbAudioControl5"
+        Me.cmbAudioControl5.Size = New System.Drawing.Size(45, 21)
+        Me.cmbAudioControl5.TabIndex = 759
+        Me.cmbAudioControl5.Text = "c5"
+        '
+        'tbAudioControl5
+        '
+        Me.tbAudioControl5.BackColor = System.Drawing.SystemColors.Control
+        Me.tbAudioControl5.Location = New System.Drawing.Point(304, 13)
+        Me.tbAudioControl5.Margin = New System.Windows.Forms.Padding(0)
+        Me.tbAudioControl5.Name = "tbAudioControl5"
+        Me.tbAudioControl5.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.tbAudioControl5.Size = New System.Drawing.Size(45, 254)
+        Me.tbAudioControl5.TabIndex = 758
+        Me.tbAudioControl5.TickFrequency = 10
+        Me.tbAudioControl5.Value = 10
+        '
+        'cmbAudioControl4
+        '
+        Me.cmbAudioControl4.FormattingEnabled = True
+        Me.cmbAudioControl4.Items.AddRange(New Object() {"c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"})
+        Me.cmbAudioControl4.Location = New System.Drawing.Point(237, 270)
+        Me.cmbAudioControl4.Name = "cmbAudioControl4"
+        Me.cmbAudioControl4.Size = New System.Drawing.Size(45, 21)
+        Me.cmbAudioControl4.TabIndex = 757
+        Me.cmbAudioControl4.Text = "c4"
+        '
+        'tbAudioControl2
+        '
+        Me.tbAudioControl2.BackColor = System.Drawing.SystemColors.Control
+        Me.tbAudioControl2.Location = New System.Drawing.Point(134, 13)
+        Me.tbAudioControl2.Margin = New System.Windows.Forms.Padding(0)
+        Me.tbAudioControl2.Name = "tbAudioControl2"
+        Me.tbAudioControl2.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.tbAudioControl2.Size = New System.Drawing.Size(45, 254)
+        Me.tbAudioControl2.TabIndex = 764
+        Me.tbAudioControl2.TickFrequency = 10
+        Me.tbAudioControl2.Value = 10
+        '
+        'tbAudioControl4
+        '
+        Me.tbAudioControl4.BackColor = System.Drawing.SystemColors.Control
+        Me.tbAudioControl4.Location = New System.Drawing.Point(246, 13)
+        Me.tbAudioControl4.Margin = New System.Windows.Forms.Padding(0)
+        Me.tbAudioControl4.Name = "tbAudioControl4"
+        Me.tbAudioControl4.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.tbAudioControl4.Size = New System.Drawing.Size(45, 254)
+        Me.tbAudioControl4.TabIndex = 765
+        Me.tbAudioControl4.TickFrequency = 10
+        Me.tbAudioControl4.Value = 10
+        '
+        'tbAudioControl6
+        '
+        Me.tbAudioControl6.BackColor = System.Drawing.SystemColors.Control
+        Me.tbAudioControl6.Location = New System.Drawing.Point(366, 13)
+        Me.tbAudioControl6.Margin = New System.Windows.Forms.Padding(0)
+        Me.tbAudioControl6.Name = "tbAudioControl6"
+        Me.tbAudioControl6.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.tbAudioControl6.Size = New System.Drawing.Size(45, 254)
+        Me.tbAudioControl6.TabIndex = 766
+        Me.tbAudioControl6.TickFrequency = 10
+        Me.tbAudioControl6.Value = 10
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightSalmon
+        Me.GroupBox1.Controls.Add(Me.tbAudioControl6)
+        Me.GroupBox1.Controls.Add(Me.tbAudioControl4)
+        Me.GroupBox1.Controls.Add(Me.tbAudioControl2)
+        Me.GroupBox1.Controls.Add(Me.cmbAudioControl7)
+        Me.GroupBox1.Controls.Add(Me.tbAudioControl7)
+        Me.GroupBox1.Controls.Add(Me.cmbAudioControl6)
+        Me.GroupBox1.Controls.Add(Me.cmbAudioControl5)
+        Me.GroupBox1.Controls.Add(Me.tbAudioControl5)
+        Me.GroupBox1.Controls.Add(Me.cmbAudioControl4)
+        Me.GroupBox1.Controls.Add(Me.cmbAudioControl3)
+        Me.GroupBox1.Controls.Add(Me.tbAudioControl3)
+        Me.GroupBox1.Controls.Add(Me.cmbAudioControl2)
+        Me.GroupBox1.Controls.Add(Me.cmbAudioControl1)
+        Me.GroupBox1.Controls.Add(Me.tbAudioControl1)
+        Me.GroupBox1.Controls.Add(Me.cmbAudioControl0)
+        Me.GroupBox1.Controls.Add(Me.tbAudioControl0)
+        Me.GroupBox1.Location = New System.Drawing.Point(644, 13)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(497, 296)
+        Me.GroupBox1.TabIndex = 767
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "For Server 2.3"
         '
         'ucdBFSMeter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.MistyRose
-        Me.ClientSize = New System.Drawing.Size(659, 585)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.cmdOnly_R)
+        Me.Controls.Add(Me.cmdOnly_L)
+        Me.Controls.Add(Me.cmdMix)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label17)
@@ -635,6 +898,16 @@ Partial Class ucdBFSMeter
         CType(Me.DBFS_Meter14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DBFS_Meter15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DBFS_Meter16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbAudioControl0, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbAudioControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbAudioControl3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbAudioControl7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbAudioControl5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbAudioControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbAudioControl4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbAudioControl6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -684,4 +957,24 @@ Partial Class ucdBFSMeter
     Friend WithEvents cmbchannel_layout As ComboBox
     Friend WithEvents Label18 As Label
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents cmdMix As Button
+    Friend WithEvents cmdOnly_L As Button
+    Friend WithEvents cmdOnly_R As Button
+    Friend WithEvents tbAudioControl0 As TrackBar
+    Friend WithEvents cmbAudioControl0 As ComboBox
+    Friend WithEvents cmbAudioControl1 As ComboBox
+    Friend WithEvents tbAudioControl1 As TrackBar
+    Friend WithEvents cmbAudioControl3 As ComboBox
+    Friend WithEvents tbAudioControl3 As TrackBar
+    Friend WithEvents cmbAudioControl2 As ComboBox
+    Friend WithEvents cmbAudioControl7 As ComboBox
+    Friend WithEvents tbAudioControl7 As TrackBar
+    Friend WithEvents cmbAudioControl6 As ComboBox
+    Friend WithEvents cmbAudioControl5 As ComboBox
+    Friend WithEvents tbAudioControl5 As TrackBar
+    Friend WithEvents cmbAudioControl4 As ComboBox
+    Friend WithEvents tbAudioControl2 As TrackBar
+    Friend WithEvents tbAudioControl4 As TrackBar
+    Friend WithEvents tbAudioControl6 As TrackBar
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

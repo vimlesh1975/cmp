@@ -1,6 +1,9 @@
 ﻿Imports System.IO
+Imports System.Runtime.InteropServices
 Public Class Form1
     Dim savefilename As String = "C:\casparcg\mydata\composition\test1.txt"
+    <DllImport("winmm.dll")> Private Shared Function waveOutSetVolume(ByVal hwo As IntPtr, ByVal dwVolume As UInteger) As UInteger
+    End Function
     Public Structure ElementInfo
         Public Property Type1 As String
         Public Property url1 As String
@@ -278,6 +281,14 @@ Public Class Form1
         If aa.ShowDialog = DialogResult.OK Then
             savefilename = aa.FileName
             cmdSaveFile.PerformClick()
+        End If
+    End Sub
+
+    Private Sub chkMuteAudio_CheckedChanged(sender As Object, e As EventArgs) Handles chkMuteAudio.CheckedChanged
+        If chkMuteAudio.Checked Then
+            waveOutSetVolume(IntPtr.Zero, 0)
+        Else
+            waveOutSetVolume(IntPtr.Zero, CUInt(UShort.MaxValue))
         End If
     End Sub
 End Class

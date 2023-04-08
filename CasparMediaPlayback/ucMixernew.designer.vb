@@ -137,6 +137,7 @@ Partial Class ucMixernew
         Me.cmdbrightness = New System.Windows.Forms.Button()
         Me.cmdopacity = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
+        Me.cmdVerticalMobileToFullScreen = New System.Windows.Forms.Button()
         Me.gbMixer.SuspendLayout()
         Me.gbScalefromCenter.SuspendLayout()
         CType(Me.nscalexfromCenter, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -188,6 +189,7 @@ Partial Class ucMixernew
         'gbMixer
         '
         Me.gbMixer.BackColor = System.Drawing.Color.Wheat
+        Me.gbMixer.Controls.Add(Me.cmdVerticalMobileToFullScreen)
         Me.gbMixer.Controls.Add(Me.gbScalefromCenter)
         Me.gbMixer.Controls.Add(Me.nmixermastervolume)
         Me.gbMixer.Controls.Add(Me.gbcropmixer)
@@ -1386,6 +1388,15 @@ Partial Class ucMixernew
         Me.Label31.TabIndex = 373
         Me.Label31.Text = "Opacity"
         '
+        'cmdVerticalMobileToFullScreen
+        '
+        Me.cmdVerticalMobileToFullScreen.Location = New System.Drawing.Point(483, 466)
+        Me.cmdVerticalMobileToFullScreen.Name = "cmdVerticalMobileToFullScreen"
+        Me.cmdVerticalMobileToFullScreen.Size = New System.Drawing.Size(75, 55)
+        Me.cmdVerticalMobileToFullScreen.TabIndex = 715
+        Me.cmdVerticalMobileToFullScreen.Text = "Vertical Mobile To FullScreen"
+        Me.cmdVerticalMobileToFullScreen.UseVisualStyleBackColor = True
+        '
         'ucMixernew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1567,4 +1578,5 @@ Partial Class ucMixernew
     Friend WithEvents nscalexfromCenter As NumericUpDown
     Friend WithEvents nscaleyfromCenter As NumericUpDown
     Friend WithEvents cmdResetScalefromCenter As Button
+    Friend WithEvents cmdVerticalMobileToFullScreen As Button
 End Class

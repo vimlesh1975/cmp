@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="DeletePlayerTimeLineAllEventResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>caspar_media_playback.xdCamWebReference.DeletePlayerTimeLineAllEventResponse, Web References.xdCamWebReference.Reference.vb.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>XdcamSoapClient.XdcamWebReference.DeletePlayerTimeLineAllEventResponse, Web References.XdcamWebReference.Reference.vb.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

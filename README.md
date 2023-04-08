@@ -1,2 +1,0 @@
-# cmp
-casparcg client

@@ -87,4 +87,61 @@
         On Error Resume Next
         SendString(NetStream, txtStopTestSignal.Text & vbCrLf)
     End Sub
+
+    Private Sub cmdsendytstreaming23_Click(sender As Object, e As EventArgs) Handles cmdsendytstreaming23.Click
+        On Error Resume Next
+        CasparDevice.SendString(txtcommandytstreaming23.Text & " " & txtaddressytstreaming23.Text & "/" & txtapplicationameytstreaming23.Text & "/" & txtstreamnameytstreaming23.Text & " " & txtoptionsytstreaming23.Text)
+
+    End Sub
+
+    Private Sub cmdstopytstreaming23_Click(sender As Object, e As EventArgs) Handles cmdstopytstreaming23.Click
+        CasparDevice.SendString("remove " & Mid(txtcommandytstreaming23.Text, 4) & " " & txtaddressytstreaming23.Text & "/" & txtapplicationameytstreaming23.Text & "/" & txtstreamnameytstreaming23.Text)
+
+    End Sub
+
+    Private Sub cmdsendfbstreaming23_Click(sender As Object, e As EventArgs) Handles cmdsendfbstreaming23.Click
+        On Error Resume Next
+        CasparDevice.SendString(txtcommandfbstreaming23.Text & " " & txtaddressfbstreaming23.Text & txtstreamnamefbstreaming23.Text & " " & txtoptionsfbstreaming23.Text)
+
+    End Sub
+
+    Private Sub cmdstopfbstreaming23_Click(sender As Object, e As EventArgs) Handles cmdstopfbstreaming23.Click
+        On Error Resume Next
+        CasparDevice.SendString("remove " & Mid(txtcommandfbstreaming23.Text, 4) & " " & txtaddressfbstreaming23.Text & txtstreamnamefbstreaming23.Text)
+
+    End Sub
+
+    Private Sub cmdsendpipe_Click(sender As Object, e As EventArgs) Handles cmdsendpipe.Click
+        On Error Resume Next
+        CasparDevice.SendString(txtcommandpipe.Text)
+
+    End Sub
+
+    Private Sub cmdstoppipe_Click(sender As Object, e As EventArgs) Handles cmdstoppipe.Click
+        On Error Resume Next
+        CasparDevice.SendString(txtremovepipe.Text)
+    End Sub
+
+    Private Sub cmduseinffmpeg_Click(sender As Object, e As EventArgs) Handles cmduseinffmpeg.Click
+        On Error Resume Next
+
+        Dim ff As String = "/K " & txtuseinffmpeg.Text 'c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y -i " & """" & txtsourcefileforalphavideosd.Text & """" & " -vcodec qtrle -vf scale=1920:1080 " & """" & txtdestinationfolderforhd.Text & txtfilenameforhd.Text & """" & ".mov"
+        Process.Start("CMD", ff)
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Process.Start(LinkLabel1.Text)
+    End Sub
+
+    Private Sub cmdsendIGstreaming_Click(sender As Object, e As EventArgs) Handles cmdsendIGstreaming.Click
+        On Error Resume Next
+        CasparDevice.SendString(txtcommandIGstreaming.Text & " " & txtaddressIGstreaming.Text & txtstreamnameIGstreaming.Text & " " & txtoptionsIGstreaming.Text)
+
+    End Sub
+
+    Private Sub cmdstopIGstreaming_Click(sender As Object, e As EventArgs) Handles cmdstopIGstreaming.Click
+        On Error Resume Next
+        CasparDevice.SendString("remove " & Mid(txtcommandIGstreaming.Text, 4) & " " & txtaddressIGstreaming.Text & txtstreamnameIGstreaming.Text)
+
+    End Sub
 End Class

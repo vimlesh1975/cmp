@@ -34,13 +34,16 @@ Partial Class ucOneLiner
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gboneliner = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.chkPlayFromTraslatedGrigRCC = New System.Windows.Forms.CheckBox()
+        Me.cmdRCCPlayer1 = New System.Windows.Forms.Button()
+        Me.cmdRCCStop1 = New System.Windows.Forms.Button()
         Me.cmdGetLanguage = New System.Windows.Forms.Button()
         Me.chkPlayFromTraslatedGrigFlash = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cmblanguage = New System.Windows.Forms.ComboBox()
         Me.cmdTranslate = New System.Windows.Forms.Button()
         Me.dgvonelinesuperTranslated = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtvariable1 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,6 +55,7 @@ Partial Class ucOneLiner
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmdfittextoneliner = New System.Windows.Forms.Button()
         Me.chkPlayFromTraslatedGrigHTML = New System.Windows.Forms.CheckBox()
         Me.Strip = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -83,13 +87,17 @@ Partial Class ucOneLiner
         Me.downtsoneliner = New System.Windows.Forms.Button()
         Me.addtsoneliner = New System.Windows.Forms.Button()
         Me.dgvonelinesuper = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colTranslate = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.cmdonelinesuperplay = New System.Windows.Forms.Button()
         Me.cmdonelinesupernext = New System.Windows.Forms.Button()
         Me.cmdonelinesuperstop = New System.Windows.Forms.Button()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtTemplatename = New System.Windows.Forms.TextBox()
         Me.gboneliner.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         CType(Me.dgvonelinesuperTranslated, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -104,6 +112,7 @@ Partial Class ucOneLiner
         'gboneliner
         '
         Me.gboneliner.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.gboneliner.Controls.Add(Me.GroupBox2)
         Me.gboneliner.Controls.Add(Me.cmdGetLanguage)
         Me.gboneliner.Controls.Add(Me.chkPlayFromTraslatedGrigFlash)
         Me.gboneliner.Controls.Add(Me.Label3)
@@ -128,10 +137,59 @@ Partial Class ucOneLiner
         Me.gboneliner.Controls.Add(Me.cmdonelinesuperstop)
         Me.gboneliner.Location = New System.Drawing.Point(3, 3)
         Me.gboneliner.Name = "gboneliner"
-        Me.gboneliner.Size = New System.Drawing.Size(660, 605)
+        Me.gboneliner.Size = New System.Drawing.Size(664, 734)
         Me.gboneliner.TabIndex = 536
         Me.gboneliner.TabStop = False
         Me.gboneliner.Text = " "
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Azure
+        Me.GroupBox2.Controls.Add(Me.txtTemplatename)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.chkPlayFromTraslatedGrigRCC)
+        Me.GroupBox2.Controls.Add(Me.cmdRCCPlayer1)
+        Me.GroupBox2.Controls.Add(Me.cmdRCCStop1)
+        Me.GroupBox2.Location = New System.Drawing.Point(5, 606)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(649, 128)
+        Me.GroupBox2.TabIndex = 750
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "RCC Player"
+        '
+        'chkPlayFromTraslatedGrigRCC
+        '
+        Me.chkPlayFromTraslatedGrigRCC.AutoSize = True
+        Me.chkPlayFromTraslatedGrigRCC.Location = New System.Drawing.Point(92, 19)
+        Me.chkPlayFromTraslatedGrigRCC.Name = "chkPlayFromTraslatedGrigRCC"
+        Me.chkPlayFromTraslatedGrigRCC.Size = New System.Drawing.Size(144, 17)
+        Me.chkPlayFromTraslatedGrigRCC.TabIndex = 750
+        Me.chkPlayFromTraslatedGrigRCC.Text = "Play from Translated Grid"
+        Me.chkPlayFromTraslatedGrigRCC.UseVisualStyleBackColor = True
+        '
+        'cmdRCCPlayer1
+        '
+        Me.cmdRCCPlayer1.BackColor = System.Drawing.Color.Green
+        Me.cmdRCCPlayer1.ForeColor = System.Drawing.Color.White
+        Me.cmdRCCPlayer1.Location = New System.Drawing.Point(7, 18)
+        Me.cmdRCCPlayer1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cmdRCCPlayer1.Name = "cmdRCCPlayer1"
+        Me.cmdRCCPlayer1.Size = New System.Drawing.Size(47, 53)
+        Me.cmdRCCPlayer1.TabIndex = 748
+        Me.cmdRCCPlayer1.Text = "Play"
+        Me.cmdRCCPlayer1.UseVisualStyleBackColor = False
+        '
+        'cmdRCCStop1
+        '
+        Me.cmdRCCStop1.BackColor = System.Drawing.Color.Red
+        Me.cmdRCCStop1.ForeColor = System.Drawing.Color.White
+        Me.cmdRCCStop1.Location = New System.Drawing.Point(5, 73)
+        Me.cmdRCCStop1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cmdRCCStop1.Name = "cmdRCCStop1"
+        Me.cmdRCCStop1.Size = New System.Drawing.Size(47, 49)
+        Me.cmdRCCStop1.TabIndex = 749
+        Me.cmdRCCStop1.Text = "Stop"
+        Me.cmdRCCStop1.UseVisualStyleBackColor = False
         '
         'cmdGetLanguage
         '
@@ -220,16 +278,6 @@ Partial Class ucOneLiner
         Me.dgvonelinesuperTranslated.Size = New System.Drawing.Size(545, 191)
         Me.dgvonelinesuperTranslated.TabIndex = 726
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.Frozen = True
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Oneline Super"
-        Me.DataGridViewTextBoxColumn1.MinimumWidth = 600
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DataGridViewTextBoxColumn1.Width = 600
-        '
         'txtvariable1
         '
         Me.txtvariable1.Location = New System.Drawing.Point(98, 39)
@@ -302,6 +350,7 @@ Partial Class ucOneLiner
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.PowderBlue
+        Me.GroupBox1.Controls.Add(Me.cmdfittextoneliner)
         Me.GroupBox1.Controls.Add(Me.chkPlayFromTraslatedGrigHTML)
         Me.GroupBox1.Controls.Add(Me.Strip)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -317,12 +366,21 @@ Partial Class ucOneLiner
         Me.GroupBox1.Controls.Add(Me.cmbfonthtmloneliner)
         Me.GroupBox1.Controls.Add(Me.nsizehtmloneliner)
         Me.GroupBox1.Controls.Add(Me.Label160)
-        Me.GroupBox1.Location = New System.Drawing.Point(5, 480)
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 454)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(649, 117)
+        Me.GroupBox1.Size = New System.Drawing.Size(649, 143)
         Me.GroupBox1.TabIndex = 723
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "HTML Template"
+        '
+        'cmdfittextoneliner
+        '
+        Me.cmdfittextoneliner.Location = New System.Drawing.Point(577, 60)
+        Me.cmdfittextoneliner.Name = "cmdfittextoneliner"
+        Me.cmdfittextoneliner.Size = New System.Drawing.Size(65, 23)
+        Me.cmdfittextoneliner.TabIndex = 747
+        Me.cmdfittextoneliner.Text = "Fit Text"
+        Me.cmdfittextoneliner.UseVisualStyleBackColor = True
         '
         'chkPlayFromTraslatedGrigHTML
         '
@@ -371,7 +429,7 @@ Partial Class ucOneLiner
         'Label162
         '
         Me.Label162.AutoSize = True
-        Me.Label162.Location = New System.Drawing.Point(159, 17)
+        Me.Label162.Location = New System.Drawing.Point(151, 17)
         Me.Label162.Name = "Label162"
         Me.Label162.Size = New System.Drawing.Size(54, 13)
         Me.Label162.TabIndex = 739
@@ -382,7 +440,7 @@ Partial Class ucOneLiner
         Me.cmdstripcolorhtmloneliner.BackColor = System.Drawing.Color.Purple
         Me.cmdstripcolorhtmloneliner.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdstripcolorhtmloneliner.ForeColor = System.Drawing.Color.Yellow
-        Me.cmdstripcolorhtmloneliner.Location = New System.Drawing.Point(218, 17)
+        Me.cmdstripcolorhtmloneliner.Location = New System.Drawing.Point(210, 17)
         Me.cmdstripcolorhtmloneliner.Name = "cmdstripcolorhtmloneliner"
         Me.cmdstripcolorhtmloneliner.Size = New System.Drawing.Size(59, 23)
         Me.cmdstripcolorhtmloneliner.TabIndex = 740
@@ -486,7 +544,7 @@ Partial Class ucOneLiner
         '
         Me.cmdonelinesuperplayhtml.BackColor = System.Drawing.Color.Green
         Me.cmdonelinesuperplayhtml.ForeColor = System.Drawing.Color.White
-        Me.cmdonelinesuperplayhtml.Location = New System.Drawing.Point(595, 11)
+        Me.cmdonelinesuperplayhtml.Location = New System.Drawing.Point(595, 5)
         Me.cmdonelinesuperplayhtml.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdonelinesuperplayhtml.Name = "cmdonelinesuperplayhtml"
         Me.cmdonelinesuperplayhtml.Size = New System.Drawing.Size(47, 53)
@@ -507,7 +565,7 @@ Partial Class ucOneLiner
         '
         Me.cmdonelinesuperstophtml.BackColor = System.Drawing.Color.Red
         Me.cmdonelinesuperstophtml.ForeColor = System.Drawing.Color.White
-        Me.cmdonelinesuperstophtml.Location = New System.Drawing.Point(595, 64)
+        Me.cmdonelinesuperstophtml.Location = New System.Drawing.Point(595, 89)
         Me.cmdonelinesuperstophtml.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdonelinesuperstophtml.Name = "cmdonelinesuperstophtml"
         Me.cmdonelinesuperstophtml.Size = New System.Drawing.Size(47, 49)
@@ -673,16 +731,6 @@ Partial Class ucOneLiner
         Me.dgvonelinesuper.Size = New System.Drawing.Size(547, 187)
         Me.dgvonelinesuper.TabIndex = 510
         '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.Frozen = True
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Oneline Super"
-        Me.DataGridViewTextBoxColumn3.MinimumWidth = 400
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DataGridViewTextBoxColumn3.Width = 400
-        '
         'colTranslate
         '
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -732,6 +780,16 @@ Partial Class ucOneLiner
         Me.cmdonelinesuperstop.Text = "Stop"
         Me.cmdonelinesuperstop.UseVisualStyleBackColor = False
         '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.Frozen = True
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Oneline Super"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 600
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn1.Width = 600
+        '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.Frozen = True
@@ -742,18 +800,48 @@ Partial Class ucOneLiner
         Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.DataGridViewTextBoxColumn2.Width = 600
         '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.Frozen = True
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Oneline Super"
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 400
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn3.Width = 400
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(79, 58)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(80, 13)
+        Me.Label4.TabIndex = 751
+        Me.Label4.Text = "Template name"
+        '
+        'txtTemplatename
+        '
+        Me.txtTemplatename.Location = New System.Drawing.Point(165, 55)
+        Me.txtTemplatename.Name = "txtTemplatename"
+        Me.txtTemplatename.Size = New System.Drawing.Size(139, 20)
+        Me.txtTemplatename.TabIndex = 752
+        Me.txtTemplatename.Text = "oneliner"
+        '
         'ucOneLiner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(668, 612)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gboneliner)
         Me.HideOnClose = True
         Me.Name = "ucOneLiner"
         Me.Text = "OneLiner"
         Me.gboneliner.ResumeLayout(False)
         Me.gboneliner.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         CType(Me.dgvonelinesuperTranslated, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -825,4 +913,11 @@ Partial Class ucOneLiner
     Friend WithEvents cmdGetLanguage As Button
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents colTranslate As DataGridViewButtonColumn
+    Friend WithEvents cmdfittextoneliner As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents cmdRCCPlayer1 As Button
+    Friend WithEvents cmdRCCStop1 As Button
+    Friend WithEvents chkPlayFromTraslatedGrigRCC As CheckBox
+    Friend WithEvents txtTemplatename As TextBox
+    Friend WithEvents Label4 As Label
 End Class

@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="caspar_media_playback.exe.manifest" size="34756">
+    <dependentAssembly dependencyType="install" codebase="caspar_media_playback.exe.manifest" size="38660">
       <assemblyIdentity name="caspar_media_playback.exe" version="2.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>J0SO5/Se+NgaPa+zuPfNvYLRpveEUpv+seDRTICN+T8=</dsig:DigestValue>
+        <dsig:DigestValue>+yvk2GByqoamnxCQB77VPo8JGWyN8aa53i11jO7nR2o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

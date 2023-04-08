@@ -36,11 +36,13 @@ Partial Class ucCG2
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.gbOutAnimation = New System.Windows.Forms.GroupBox()
+        Me.rdoFedOut = New System.Windows.Forms.RadioButton()
         Me.rdoDownOut = New System.Windows.Forms.RadioButton()
         Me.rdoUpOut = New System.Windows.Forms.RadioButton()
         Me.rdoRightOut = New System.Windows.Forms.RadioButton()
         Me.rdoleftOut = New System.Windows.Forms.RadioButton()
         Me.gbINAnimation = New System.Windows.Forms.GroupBox()
+        Me.rdoFedIN = New System.Windows.Forms.RadioButton()
         Me.rdoDownIN = New System.Windows.Forms.RadioButton()
         Me.rdoUpIN = New System.Windows.Forms.RadioButton()
         Me.rdoRightIN = New System.Windows.Forms.RadioButton()
@@ -83,13 +85,11 @@ Partial Class ucCG2
         Me.cmdonelinercg2 = New System.Windows.Forms.Button()
         Me.cmdrefreshdatacg2 = New System.Windows.Forms.Button()
         Me.dgvinfocg2 = New System.Windows.Forms.DataGridView()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.rdoFedIN = New System.Windows.Forms.RadioButton()
-        Me.rdoFedOut = New System.Windows.Forms.RadioButton()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Line_no = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbcg2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -208,6 +208,16 @@ Partial Class ucCG2
         Me.gbOutAnimation.TabStop = False
         Me.gbOutAnimation.Text = "Out Animation To"
         '
+        'rdoFedOut
+        '
+        Me.rdoFedOut.AutoSize = True
+        Me.rdoFedOut.Location = New System.Drawing.Point(244, 11)
+        Me.rdoFedOut.Name = "rdoFedOut"
+        Me.rdoFedOut.Size = New System.Drawing.Size(63, 17)
+        Me.rdoFedOut.TabIndex = 1316
+        Me.rdoFedOut.Text = "Fed Out"
+        Me.rdoFedOut.UseVisualStyleBackColor = True
+        '
         'rdoDownOut
         '
         Me.rdoDownOut.AutoSize = True
@@ -264,6 +274,16 @@ Partial Class ucCG2
         Me.gbINAnimation.TabIndex = 1209
         Me.gbINAnimation.TabStop = False
         Me.gbINAnimation.Text = "IN Animation From"
+        '
+        'rdoFedIN
+        '
+        Me.rdoFedIN.AutoSize = True
+        Me.rdoFedIN.Location = New System.Drawing.Point(244, 12)
+        Me.rdoFedIN.Name = "rdoFedIN"
+        Me.rdoFedIN.Size = New System.Drawing.Size(57, 17)
+        Me.rdoFedIN.TabIndex = 1315
+        Me.rdoFedIN.Text = "Fed IN"
+        Me.rdoFedIN.UseVisualStyleBackColor = True
         '
         'rdoDownIN
         '
@@ -740,25 +760,17 @@ Partial Class ucCG2
         Me.dgvinfocg2.Size = New System.Drawing.Size(541, 513)
         Me.dgvinfocg2.TabIndex = 558
         '
-        'rdoFedIN
+        'Column5
         '
-        Me.rdoFedIN.AutoSize = True
-        Me.rdoFedIN.Location = New System.Drawing.Point(244, 12)
-        Me.rdoFedIN.Name = "rdoFedIN"
-        Me.rdoFedIN.Size = New System.Drawing.Size(57, 17)
-        Me.rdoFedIN.TabIndex = 1315
-        Me.rdoFedIN.Text = "Fed IN"
-        Me.rdoFedIN.UseVisualStyleBackColor = True
+        Me.Column5.HeaderText = "Info"
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 400
         '
-        'rdoFedOut
+        'Line_no
         '
-        Me.rdoFedOut.AutoSize = True
-        Me.rdoFedOut.Location = New System.Drawing.Point(244, 11)
-        Me.rdoFedOut.Name = "rdoFedOut"
-        Me.rdoFedOut.Size = New System.Drawing.Size(63, 17)
-        Me.rdoFedOut.TabIndex = 1316
-        Me.rdoFedOut.Text = "Fed Out"
-        Me.rdoFedOut.UseVisualStyleBackColor = True
+        Me.Line_no.HeaderText = "Line"
+        Me.Line_no.Name = "Line_no"
+        Me.Line_no.Width = 30
         '
         'DataGridViewTextBoxColumn1
         '
@@ -772,24 +784,13 @@ Partial Class ucCG2
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Width = 30
         '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Info"
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 400
-        '
-        'Line_no
-        '
-        Me.Line_no.HeaderText = "Line"
-        Me.Line_no.Name = "Line_no"
-        Me.Line_no.Width = 30
-        '
         'ucCG2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(792, 716)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbcg2)
         Me.HideOnClose = True
         Me.Name = "ucCG2"

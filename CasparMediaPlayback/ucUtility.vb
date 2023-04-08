@@ -39,4 +39,8 @@ Public Class ucUtility
             Process.Start("notepad.exe", Replace(dgvutility.CurrentRow.Cells(1).Value, "/", "\") & "caspar_" & DateTime.Now.ToString("yyyy-MM-dd") & ".log")
         End If
     End Sub
+
+    Private Sub gbutility_Enter(sender As Object, e As EventArgs) Handles gbutility.Enter
+
+    End Sub
 End Class

@@ -73,7 +73,7 @@ Public Class ucMAM
         UcTranscodingProfile1.ofdtrimmer.FileName = lstSourceDirectory.SelectedItem.ToString
         UcTranscodingProfile1.osdcutfilename.FileName = txtDestinationDirectoryProxy.Text & getfilenamewithoutdirectotyandExtension(lstSourceDirectory.SelectedItem.ToString) & UcTranscodingProfile1.strFileExtension
         UcTranscodingProfile1.gettranscodingcommand()
-        Process.Start("CMD", UcTranscodingProfile1.cmdtranscodingcommand)
+        Process.Start("CMD", " /K c:\casparcg\mydata\ffmpeg\ffmpeg.exe " & UcTranscodingProfile1.cmdtranscodingcommand)
     End Sub
 
     Function ModifyFilenamewithoutextension(FilenameWithExtension As String) As String
@@ -347,7 +347,8 @@ Public Class ucMAM
             UcTranscodingProfile1.ofdtrimmer.FileName = mediafolder & filename
             UcTranscodingProfile1.osdcutfilename.FileName = (txttranscodedirectory.Text & Path.GetFileNameWithoutExtension(filename)) & UcTranscodingProfile1.strFileExtension
             UcTranscodingProfile1.gettranscodingcommand()
-            Process.Start("CMD", UcTranscodingProfile1.cmdtranscodingcommand)
+            'Process.Start("CMD", UcTranscodingProfile1.cmdtranscodingcommand)
+            Process.Start("CMD", " /K c:\casparcg\mydata\ffmpeg\ffmpeg.exe " & UcTranscodingProfile1.cmdtranscodingcommand)
         End If
 
 
@@ -738,16 +739,16 @@ Public Class ucMAM
 
     Private Sub cmdplayinvlc_Click(sender As Object, e As EventArgs) Handles cmdplayinvlc.Click
         On Error Resume Next
-        Dim PlayerPath As String = ""
-        If System.IO.File.Exists("C:\Program Files\VideoLAN\VLC\vlc.exe") Then
-            PlayerPath = "C:\Program Files\VideoLAN\VLC\vlc.exe"
-        Else
-            PlayerPath = "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"
-        End If
+        'Dim PlayerPath As String = ""
+        'If System.IO.File.Exists("C:\Program Files\VideoLAN\VLC\vlc.exe") Then
+        '    PlayerPath = "C:\Program Files\VideoLAN\VLC\vlc.exe"
+        'Else
+        '    PlayerPath = "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"
+        'End If
 
 
         Dim process As Process = New Process
-        process.StartInfo.FileName = PlayerPath
+        process.StartInfo.FileName = vlcplayerpath() 'PlayerPath
         process.StartInfo.Verb = "open"
         process.StartInfo.Arguments = """" & Replace(lblplayinvlc.Text, "/", "\") & """"
 
@@ -777,7 +778,25 @@ Public Class ucMAM
 
     Private Sub cmdsequencetovideomam_Click(sender As Object, e As EventArgs) Handles cmdsequencetovideomam.Click
         On Error Resume Next
-        Dim sequencetovideomamcommand As String = "/K " & txtsequencetovideomam.Text
+        Dim zerocount As Integer
+        Dim bb As String = onlyfilenamewithoutextension(txtfirstfile.Text)
+
+        If Microsoft.VisualBasic.Right(bb, 1) = "1" Then zerocount = 1
+        If Microsoft.VisualBasic.Right(bb, 2) = "01" Then zerocount = 2
+        If Microsoft.VisualBasic.Right(bb, 3) = "001" Then zerocount = 3
+        If Microsoft.VisualBasic.Right(bb, 4) = "0001" Then zerocount = 4
+        If Microsoft.VisualBasic.Right(bb, 5) = "00001" Then zerocount = 5
+        If Microsoft.VisualBasic.Right(bb, 6) = "000001" Then zerocount = 6
+        If Microsoft.VisualBasic.Right(bb, 7) = "0000001" Then zerocount = 7
+        If Microsoft.VisualBasic.Right(bb, 8) = "00000001" Then zerocount = 8
+        If Microsoft.VisualBasic.Right(bb, 9) = "000000001" Then zerocount = 9
+        If Microsoft.VisualBasic.Right(bb, 10) = "0000000001" Then zerocount = 10
+        Dim cc As String = Replace(Path.GetDirectoryName(txtfirstfile.Text), "\", "/")
+        Dim filenamefinal As String = cc & "/" & Mid(bb, 1, Len(bb) - zerocount) & "%" & zerocount & "d" & Path.GetExtension(txtfirstfile.Text)
+
+
+
+        Dim sequencetovideomamcommand As String = "/K c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y -i " & """" & filenamefinal & """" & " -codec:v png " & """" & Replace(txtdistinationalphavideo.Text, "\", "/") & """"
         Process.Start("CMD", sequencetovideomamcommand)
     End Sub
     Private Sub cmdvideotosequencemam_Click(sender As Object, e As EventArgs) Handles cmdvideotosequencemam.Click
@@ -832,9 +851,9 @@ Public Class ucMAM
 
     Private Sub cmdvideoforimage_Click(sender As Object, e As EventArgs) Handles cmdvideoforimage.Click
         On Error Resume Next
-        Dim aa As New OpenFileDialog
-        If aa.ShowDialog = Windows.Forms.DialogResult.OK Then
-            txtsourcefileforalphavideo.Text = aa.FileName
+
+        If ofd2.ShowDialog() = DialogResult.OK Then
+            txtsourcefileforalphavideo.Text = ofd2.FileName
         End If
 
     End Sub
@@ -845,9 +864,9 @@ Public Class ucMAM
 
     Private Sub cmdvideosd_Click(sender As Object, e As EventArgs) Handles cmdvideosd.Click
         On Error Resume Next
-        Dim aa As New OpenFileDialog
-        If aa.ShowDialog = Windows.Forms.DialogResult.OK Then
-            txtsourcefileforalphavideosd.Text = aa.FileName
+
+        If ofd2.ShowDialog() = DialogResult.OK Then
+            txtsourcefileforalphavideosd.Text = ofd2.FileName
         End If
     End Sub
 
@@ -982,6 +1001,50 @@ Public Class ucMAM
         On Error Resume Next
         Dim cmd As String = "/K " & txtOutputToDecklink.Text
         Process.Start("CMD", cmd)
+    End Sub
+
+    Private Sub Chktranscode_CheckedChanged(sender As Object, e As EventArgs) Handles chktranscode.CheckedChanged
+
+    End Sub
+
+    Private Sub Chkmediabackup_CheckedChanged(sender As Object, e As EventArgs) Handles chkmediabackup.CheckedChanged
+
+    End Sub
+
+    Private Sub CmdScreenRecorder_Click(sender As Object, e As EventArgs) Handles cmdScreenRecorderwithMicrophone.Click
+        On Error Resume Next
+        Dim cmdScreenRecorder As String = "/K " & txtScreenRecorderwithmicrophone.Text
+        Process.Start("CMD", cmdScreenRecorder)
+    End Sub
+
+    Private Sub CmdScreenRecorderwithSystemAudio_Click(sender As Object, e As EventArgs) Handles cmdScreenRecorderwithSystemAudio.Click
+        On Error Resume Next
+        Dim cmdScreenRecorder As String = "/K " & txtScreenRecorderwirhSystemAudio.Text
+        Process.Start("CMD", cmdScreenRecorder)
+    End Sub
+
+    Private Sub cmdopenfirstfile_Click(sender As Object, e As EventArgs) Handles cmdopenfirstfile.Click
+
+        If ofd2.ShowDialog() = DialogResult.OK Then
+            txtfirstfile.Text = Replace(ofd2.FileName, "\", "/")
+        End If
+
+
+    End Sub
+
+    Private Sub cdmDesinationDirectoryyt_Click(sender As Object, e As EventArgs) Handles cdmDesinationDirectoryyt.Click
+        On Error Resume Next
+        Dim aa As New FolderBrowserDialog
+        aa.SelectedPath = txtDesinationDirectoryyt.Text
+        If aa.ShowDialog = Windows.Forms.DialogResult.OK Then
+            txtDesinationDirectoryyt.Text = Replace(aa.SelectedPath, "\", "/") & "/"
+        End If
+    End Sub
+
+    Private Sub cmdDownloadyoutubeVideo_Click(sender As Object, e As EventArgs) Handles cmdDownloadyoutubeVideo.Click
+        Dim commandyt As String = "/K c:/casparcg/mydata/ffmpeg/youtube-dl.exe -o " & """" & txtDesinationDirectoryyt.Text & "/%(title)s.%(ext)s" & """" & " " & txtYTurl.Text
+        Process.Start("CMD", commandyt)
+
     End Sub
 
     Sub defaultmetadata()

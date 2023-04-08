@@ -24,11 +24,15 @@ Partial Class ucVisionMixer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucVisionMixer))
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbvisionmixer = New System.Windows.Forms.GroupBox()
+        Me.cmdInitialiseNewNDISources = New System.Windows.Forms.Button()
+        Me.cmdsource9pvw = New System.Windows.Forms.Button()
+        Me.cmdsource9 = New System.Windows.Forms.Button()
+        Me.cmbNDI = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmdStopallFlash = New System.Windows.Forms.Button()
         Me.cmdPlayallflash = New System.Windows.Forms.Button()
@@ -151,6 +155,10 @@ Partial Class ucVisionMixer
         'gbvisionmixer
         '
         Me.gbvisionmixer.BackColor = System.Drawing.Color.LightGreen
+        Me.gbvisionmixer.Controls.Add(Me.cmdInitialiseNewNDISources)
+        Me.gbvisionmixer.Controls.Add(Me.cmdsource9pvw)
+        Me.gbvisionmixer.Controls.Add(Me.cmdsource9)
+        Me.gbvisionmixer.Controls.Add(Me.cmbNDI)
         Me.gbvisionmixer.Controls.Add(Me.GroupBox3)
         Me.gbvisionmixer.Controls.Add(Me.cmdWipe)
         Me.gbvisionmixer.Controls.Add(Me.lblpreviewSource)
@@ -205,10 +213,49 @@ Partial Class ucVisionMixer
         Me.gbvisionmixer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbvisionmixer.Location = New System.Drawing.Point(2, 2)
         Me.gbvisionmixer.Name = "gbvisionmixer"
-        Me.gbvisionmixer.Size = New System.Drawing.Size(663, 606)
+        Me.gbvisionmixer.Size = New System.Drawing.Size(1194, 610)
         Me.gbvisionmixer.TabIndex = 583
         Me.gbvisionmixer.TabStop = False
         Me.gbvisionmixer.Text = " "
+        '
+        'cmdInitialiseNewNDISources
+        '
+        Me.cmdInitialiseNewNDISources.Location = New System.Drawing.Point(707, 409)
+        Me.cmdInitialiseNewNDISources.Name = "cmdInitialiseNewNDISources"
+        Me.cmdInitialiseNewNDISources.Size = New System.Drawing.Size(140, 23)
+        Me.cmdInitialiseNewNDISources.TabIndex = 1228
+        Me.cmdInitialiseNewNDISources.Text = "Initialise new NDI Source"
+        Me.cmdInitialiseNewNDISources.UseVisualStyleBackColor = True
+        '
+        'cmdsource9pvw
+        '
+        Me.cmdsource9pvw.BackgroundImage = CType(resources.GetObject("cmdsource9pvw.BackgroundImage"), System.Drawing.Image)
+        Me.cmdsource9pvw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdsource9pvw.Location = New System.Drawing.Point(686, 347)
+        Me.cmdsource9pvw.Name = "cmdsource9pvw"
+        Me.cmdsource9pvw.Size = New System.Drawing.Size(41, 35)
+        Me.cmdsource9pvw.TabIndex = 1227
+        Me.cmdsource9pvw.UseVisualStyleBackColor = True
+        '
+        'cmdsource9
+        '
+        Me.cmdsource9.BackgroundImage = CType(resources.GetObject("cmdsource9.BackgroundImage"), System.Drawing.Image)
+        Me.cmdsource9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdsource9.Location = New System.Drawing.Point(686, 313)
+        Me.cmdsource9.Name = "cmdsource9"
+        Me.cmdsource9.Size = New System.Drawing.Size(41, 35)
+        Me.cmdsource9.TabIndex = 1226
+        Me.cmdsource9.UseVisualStyleBackColor = True
+        '
+        'cmbNDI
+        '
+        Me.cmbNDI.FormattingEnabled = True
+        Me.cmbNDI.Location = New System.Drawing.Point(586, 382)
+        Me.cmbNDI.Name = "cmbNDI"
+        Me.cmbNDI.Size = New System.Drawing.Size(282, 21)
+        Me.cmbNDI.TabIndex = 1225
+        Me.cmbNDI.Text = "NDI"
+        Me.ToolTip1.SetToolTip(Me.cmbNDI, "Click for Source Listing")
         '
         'GroupBox3
         '
@@ -253,34 +300,34 @@ Partial Class ucVisionMixer
         '
         'dgvchannelinfo
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvchannelinfo.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvchannelinfo.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvchannelinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvchannelinfo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn10, Me.clmStop, Me.cmdStop})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvchannelinfo.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvchannelinfo.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgvchannelinfo.Location = New System.Drawing.Point(2, 36)
         Me.dgvchannelinfo.Name = "dgvchannelinfo"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvchannelinfo.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvchannelinfo.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvchannelinfo.RowHeadersVisible = False
         Me.dgvchannelinfo.Size = New System.Drawing.Size(133, 121)
         Me.dgvchannelinfo.TabIndex = 777
@@ -397,7 +444,7 @@ Partial Class ucVisionMixer
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(582, 378)
+        Me.Label7.Location = New System.Drawing.Point(872, 386)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(66, 20)
         Me.Label7.TabIndex = 765
@@ -603,7 +650,7 @@ Partial Class ucVisionMixer
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(568, 355)
+        Me.Label6.Location = New System.Drawing.Point(872, 359)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(48, 20)
         Me.Label6.TabIndex = 750
@@ -613,7 +660,7 @@ Partial Class ucVisionMixer
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(563, 324)
+        Me.Label5.Location = New System.Drawing.Point(872, 328)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 20)
         Me.Label5.TabIndex = 749
@@ -623,7 +670,7 @@ Partial Class ucVisionMixer
         '
         Me.cmdsource8pvw.BackgroundImage = CType(resources.GetObject("cmdsource8pvw.BackgroundImage"), System.Drawing.Image)
         Me.cmdsource8pvw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.cmdsource8pvw.Location = New System.Drawing.Point(524, 345)
+        Me.cmdsource8pvw.Location = New System.Drawing.Point(521, 345)
         Me.cmdsource8pvw.Name = "cmdsource8pvw"
         Me.cmdsource8pvw.Size = New System.Drawing.Size(41, 35)
         Me.cmdsource8pvw.TabIndex = 748
@@ -1343,8 +1390,9 @@ Partial Class ucVisionMixer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(670, 613)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbvisionmixer)
         Me.HideOnClose = True
         Me.Name = "ucVisionMixer"
@@ -1474,4 +1522,8 @@ Partial Class ucVisionMixer
     Friend WithEvents cmdStopallFlash As Button
     Friend WithEvents cmdPlayallflash As Button
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents cmdsource9pvw As Button
+    Friend WithEvents cmdsource9 As Button
+    Friend WithEvents cmbNDI As ComboBox
+    Friend WithEvents cmdInitialiseNewNDISources As Button
 End Class

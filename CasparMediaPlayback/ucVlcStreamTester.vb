@@ -43,4 +43,12 @@
     Private Sub cmdpreview8_Click(sender As Object, e As EventArgs) Handles cmdpreview8.Click
         PreviewInVlc(txtaddress8.Text)
     End Sub
+
+    Private Sub BtnPreviewcombo_Click(sender As Object, e As EventArgs) Handles btnPreviewcombo.Click
+        PreviewInVlc(cmbAddress.Text)
+    End Sub
+
+    Private Sub CmdPlayinCasparcg_Click(sender As Object, e As EventArgs) Handles cmdPlayinCasparcg.Click
+        CasparDevice.SendString(txtCaspar.Text & " " & cmbAddress.Text)
+    End Sub
 End Class

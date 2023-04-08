@@ -81,4 +81,78 @@ Public Class ucHTML
     Private Sub ucHTML_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub CmdPlayfacebook_Click(sender As Object, e As EventArgs) Handles cmdPlayfacebook.Click
+        On Error Resume Next
+        Dim str As String = txtFacebookvideoURl.Text
+        If chkAutoplay.Checked Then
+            str = str & "/?&autoplay=1"
+        Else
+            str = str & "/?&autoplay=0"
+        End If
+        If chkmute.Checked Then
+            str = str & "&mute=1"
+        Else
+            str = str & "&mute=0"
+        End If
+        CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & cmblayerhtml.Text & " [HTML] " & """" & "https://www.facebook.com/plugins/video.php?href=" & str & """")
+    End Sub
+
+    Private Sub Cmdplayhttpmethod_Click(sender As Object, e As EventArgs) Handles cmdplayhttpmethod.Click
+        CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & cmblayerhtml.Text & " [HTML] " & txthttpfbContainer.Text)
+        Dim str As String = txtfburlhttpmethod.Text
+        If chkautoplayhttp.Checked Then
+            str = str & "/?&autoplay=1"
+        Else
+            str = str & "/?&autoplay=0"
+        End If
+        If chkMutehttp.Checked Then
+            str = str & "&mute=1"
+        Else
+            str = str & "&mute=0"
+        End If
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerhtml.Text & " changehref('" & str & "')")
+
+    End Sub
+
+    Private Sub Cmdpausehttp_Click(sender As Object, e As EventArgs) Handles cmdpausehttp.Click
+        On Error Resume Next
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerhtml.Text & " mypause()")
+
+    End Sub
+
+    Private Sub Cmdmutehttp_Click(sender As Object, e As EventArgs) Handles cmdmutehttp.Click
+        On Error Resume Next
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerhtml.Text & " mymute()")
+    End Sub
+
+    Private Sub Cmdresumehttp_Click(sender As Object, e As EventArgs) Handles cmdresumehttp.Click
+        On Error Resume Next
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerhtml.Text & " myplay()")
+    End Sub
+
+    Private Sub Cmdunmutehttp_Click(sender As Object, e As EventArgs) Handles cmdunmutehttp.Click
+        On Error Resume Next
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerhtml.Text & " myunmute()")
+    End Sub
+
+    Private Sub cmdplayliveyoutube_Click(sender As Object, e As EventArgs) Handles cmdplayliveyoutube.Click
+        On Error Resume Next
+        CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & cmblayerhtml.Text & " " & txtm3u8.Text)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        On Error Resume Next
+        Dim oProcess As New Process()
+        Dim oStartInfo As New ProcessStartInfo("c:/casparcg/mydata/ffmpeg/youtube-dl", " -g " & txtliveyoutubeurl.Text)
+        oStartInfo.UseShellExecute = False
+        oStartInfo.RedirectStandardOutput = True
+        oProcess.StartInfo = oStartInfo
+        oProcess.Start()
+        Dim sOutput As String
+        Using oStreamReader As System.IO.StreamReader = oProcess.StandardOutput
+            sOutput = oStreamReader.ReadToEnd()
+        End Using
+        txtm3u8.Text = Split(sOutput, vbLf)(0)
+    End Sub
 End Class

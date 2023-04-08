@@ -36,6 +36,7 @@ Partial Class Form1
         Me.cmdSaveFileAs = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblFileName = New System.Windows.Forms.Label()
+        Me.chkMuteAudio = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -164,11 +165,22 @@ Partial Class Form1
         Me.lblFileName.TabIndex = 33
         Me.lblFileName.Text = "File Name"
         '
+        'chkMuteAudio
+        '
+        Me.chkMuteAudio.AutoSize = True
+        Me.chkMuteAudio.Location = New System.Drawing.Point(601, 476)
+        Me.chkMuteAudio.Name = "chkMuteAudio"
+        Me.chkMuteAudio.Size = New System.Drawing.Size(80, 17)
+        Me.chkMuteAudio.TabIndex = 34
+        Me.chkMuteAudio.Text = "Mute Audio"
+        Me.chkMuteAudio.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1212, 918)
+        Me.Controls.Add(Me.chkMuteAudio)
         Me.Controls.Add(Me.lblFileName)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cmdSaveFileAs)
@@ -205,4 +217,5 @@ Partial Class Form1
     Friend WithEvents cmdSaveFileAs As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents lblFileName As Label
+    Friend WithEvents chkMuteAudio As CheckBox
 End Class

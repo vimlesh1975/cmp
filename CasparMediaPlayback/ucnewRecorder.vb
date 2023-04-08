@@ -33,7 +33,7 @@ Public Class ucnewRecorder
     End Sub
     Private Sub cmdshowcasparcgwindowrecording_Click(sender As Object, e As EventArgs) Handles cmdshowcasparcgwindowrecording.Click
         On Error Resume Next
-        SetProcessParentrecorder("casparcg", cmbcasparcgwindowtitlerecording, pnlrecording)
+        SetProcessParentrecorder("casparcg", cmbcasparcgwindowtitle, pnlrecording)
     End Sub
 
     Private Sub cmdinput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdinput.Click
@@ -145,10 +145,10 @@ Public Class ucnewRecorder
 
             Dim recoredduration As TimeSpan = Now - startingtimeofrecording
             lblRecordedduration.Text = recoredduration.ToString("hh\:mm\:ss")
-            lblRecordedSize.Text = f.Length / 1000000 & " MB"
+            lblRecordedSize.Text = (f.Length / 1000000) & " MB"
         Else
         End If
-        lblfreespace.Text = My.Computer.FileSystem.GetDriveInfo(Mid(mediafullpath, 1, 2)).TotalFreeSpace / 1000000000 & " GB"
+        lblfreespace.Text = Int(My.Computer.FileSystem.GetDriveInfo(Mid(mediafullpath, 1, 2)).TotalFreeSpace / 1000000000) & " GB"
     End Sub
 
 
@@ -231,6 +231,9 @@ Public Class ucnewRecorder
     End Sub
     Private Sub ucnewRecorder_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         On Error Resume Next
+
+        cmbcasparcgwindowtitle.DataSource = New BindingSource(screenConsumres, "")
+        'cmbcasparcgwindowtitle.Text = "Screen consumer [1|PAL]"
         lblRecordingFolder.Text = mediafullpath
 
     End Sub

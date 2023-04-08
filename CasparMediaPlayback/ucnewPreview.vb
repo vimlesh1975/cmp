@@ -3,11 +3,14 @@
     Dim isplaying As Boolean = False
     Private Sub cmdpreviewkey_Click(sender As Object, e As EventArgs) Handles cmdpreviewkey.Click
         On Error Resume Next
-        CasparDevice.SendString("ADD " & chnumber & " STREAM " & "udp://" & cmbippreview.Text & " " & txtoptionspreview.Text & " -vf alphaextract")
-        ''Threading.Thread.Sleep(2000)
-        'vlcpreview.playlist.items.clear()
-        'vlcpreview.playlist.add("udp://@" & cmbippreview.Text)
-        'vlcpreview.playlist.play()
+        If ServerVersion > 2.1 Then
+            CasparDevice.SendString("ADD " & chnumber & " STREAM " & "udp://" & cmbippreview.Text & " " & txtoptionspreview.Text & " -filter:v alphaextract")
+
+        Else
+            CasparDevice.SendString("ADD " & chnumber & " STREAM " & "udp://" & cmbippreview.Text & " " & txtoptionspreview.Text & " -vf alphaextract")
+
+        End If
+
 
         If isplaying = True Then vlcpreview.VlcMediaPlayer.Stop()
         vlcpreview.VlcMediaPlayer.SetMedia(New Uri("udp://@" & cmbippreview.Text))

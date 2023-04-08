@@ -121,8 +121,9 @@ Partial Class ucWebSocketServer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.SeaShell
-        Me.ClientSize = New System.Drawing.Size(625, 304)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.chkSendtoCasparCG)
         Me.Controls.Add(Me.cmdOpenWebSocketClientPage)
         Me.Controls.Add(Me.Label4)

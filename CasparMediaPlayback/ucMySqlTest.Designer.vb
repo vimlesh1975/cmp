@@ -35,6 +35,10 @@ Partial Class ucMySqlTest
         Me.cmdsetserver = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.chkIntegratedSecurity = New System.Windows.Forms.CheckBox()
+        Me.txtdatabase = New System.Windows.Forms.TextBox()
+        Me.txtpassword = New System.Windows.Forms.TextBox()
+        Me.txtuser = New System.Windows.Forms.TextBox()
+        Me.txtserver = New System.Windows.Forms.TextBox()
         Me.txtInsert = New System.Windows.Forms.TextBox()
         Me.txtUpdate = New System.Windows.Forms.TextBox()
         Me.txtDelete = New System.Windows.Forms.TextBox()
@@ -60,6 +64,7 @@ Partial Class ucMySqlTest
         Me.Label160 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cmdSetServerMySql = New System.Windows.Forms.Button()
+        Me.txtport = New System.Windows.Forms.TextBox()
         Me.txtdatabasemysql = New System.Windows.Forms.TextBox()
         Me.txtpasswordMysql = New System.Windows.Forms.TextBox()
         Me.txtusemysql = New System.Windows.Forms.TextBox()
@@ -68,12 +73,7 @@ Partial Class ucMySqlTest
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtport = New System.Windows.Forms.TextBox()
         Me.cmblayerSqlhtml = New System.Windows.Forms.ComboBox()
-        Me.txtdatabase = New System.Windows.Forms.TextBox()
-        Me.txtpassword = New System.Windows.Forms.TextBox()
-        Me.txtuser = New System.Windows.Forms.TextBox()
-        Me.txtserver = New System.Windows.Forms.TextBox()
         CType(Me.dgvContents, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.nFontSizesql, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -199,6 +199,42 @@ Partial Class ucMySqlTest
         Me.chkIntegratedSecurity.TabIndex = 14
         Me.chkIntegratedSecurity.Text = "Integrated Security"
         Me.chkIntegratedSecurity.UseVisualStyleBackColor = True
+        '
+        'txtdatabase
+        '
+        Me.txtdatabase.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqldatabase", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.txtdatabase.Location = New System.Drawing.Point(59, 93)
+        Me.txtdatabase.Name = "txtdatabase"
+        Me.txtdatabase.Size = New System.Drawing.Size(137, 20)
+        Me.txtdatabase.TabIndex = 8
+        Me.txtdatabase.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqldatabase
+        '
+        'txtpassword
+        '
+        Me.txtpassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqlpassword", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.txtpassword.Location = New System.Drawing.Point(59, 68)
+        Me.txtpassword.Name = "txtpassword"
+        Me.txtpassword.Size = New System.Drawing.Size(137, 20)
+        Me.txtpassword.TabIndex = 7
+        Me.txtpassword.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqlpassword
+        '
+        'txtuser
+        '
+        Me.txtuser.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqluser", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.txtuser.Location = New System.Drawing.Point(59, 42)
+        Me.txtuser.Name = "txtuser"
+        Me.txtuser.Size = New System.Drawing.Size(137, 20)
+        Me.txtuser.TabIndex = 6
+        Me.txtuser.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqluser
+        '
+        'txtserver
+        '
+        Me.txtserver.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqlserver", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.txtserver.Location = New System.Drawing.Point(59, 19)
+        Me.txtserver.Name = "txtserver"
+        Me.txtserver.Size = New System.Drawing.Size(137, 20)
+        Me.txtserver.TabIndex = 5
+        Me.txtserver.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqlserver
         '
         'txtInsert
         '
@@ -447,6 +483,15 @@ Partial Class ucMySqlTest
         Me.cmdSetServerMySql.Text = "Set Server"
         Me.cmdSetServerMySql.UseVisualStyleBackColor = True
         '
+        'txtport
+        '
+        Me.txtport.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqlport", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.txtport.Location = New System.Drawing.Point(60, 118)
+        Me.txtport.Name = "txtport"
+        Me.txtport.Size = New System.Drawing.Size(137, 20)
+        Me.txtport.TabIndex = 13
+        Me.txtport.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqlport
+        '
         'txtdatabasemysql
         '
         Me.txtdatabasemysql.Location = New System.Drawing.Point(60, 92)
@@ -515,15 +560,6 @@ Partial Class ucMySqlTest
         Me.Label10.TabIndex = 13
         Me.Label10.Text = "Server"
         '
-        'txtport
-        '
-        Me.txtport.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqlport", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.txtport.Location = New System.Drawing.Point(60, 118)
-        Me.txtport.Name = "txtport"
-        Me.txtport.Size = New System.Drawing.Size(137, 20)
-        Me.txtport.TabIndex = 13
-        Me.txtport.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqlport
-        '
         'cmblayerSqlhtml
         '
         Me.cmblayerSqlhtml.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "cmblayerSqlhtml", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
@@ -535,48 +571,13 @@ Partial Class ucMySqlTest
         Me.cmblayerSqlhtml.TabIndex = 721
         Me.cmblayerSqlhtml.Text = Global.caspar_media_playback.My.MySettings.Default.cmblayerSqlhtml
         '
-        'txtdatabase
-        '
-        Me.txtdatabase.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqldatabase", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.txtdatabase.Location = New System.Drawing.Point(59, 93)
-        Me.txtdatabase.Name = "txtdatabase"
-        Me.txtdatabase.Size = New System.Drawing.Size(137, 20)
-        Me.txtdatabase.TabIndex = 8
-        Me.txtdatabase.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqldatabase
-        '
-        'txtpassword
-        '
-        Me.txtpassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqlpassword", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.txtpassword.Location = New System.Drawing.Point(59, 68)
-        Me.txtpassword.Name = "txtpassword"
-        Me.txtpassword.Size = New System.Drawing.Size(137, 20)
-        Me.txtpassword.TabIndex = 7
-        Me.txtpassword.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqlpassword
-        '
-        'txtuser
-        '
-        Me.txtuser.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqluser", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.txtuser.Location = New System.Drawing.Point(59, 42)
-        Me.txtuser.Name = "txtuser"
-        Me.txtuser.Size = New System.Drawing.Size(137, 20)
-        Me.txtuser.TabIndex = 6
-        Me.txtuser.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqluser
-        '
-        'txtserver
-        '
-        Me.txtserver.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqlserver", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.txtserver.Location = New System.Drawing.Point(59, 19)
-        Me.txtserver.Name = "txtserver"
-        Me.txtserver.Size = New System.Drawing.Size(137, 20)
-        Me.txtserver.TabIndex = 5
-        Me.txtserver.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqlserver
-        '
         'ucMySqlTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(1202, 884)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.cmbfontsql)
         Me.Controls.Add(Me.Label160)

@@ -51,7 +51,7 @@ Partial Class UcCommandScheduler
         'lblscheduleList
         '
         Me.lblscheduleList.AutoSize = True
-        Me.lblscheduleList.Location = New System.Drawing.Point(217, 68)
+        Me.lblscheduleList.Location = New System.Drawing.Point(213, 131)
         Me.lblscheduleList.Name = "lblscheduleList"
         Me.lblscheduleList.Size = New System.Drawing.Size(0, 13)
         Me.lblscheduleList.TabIndex = 627
@@ -60,7 +60,7 @@ Partial Class UcCommandScheduler
         '
         Me.deleteschedule.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.deleteschedule.Image = Global.caspar_media_playback.My.Resources.Resources.minus
-        Me.deleteschedule.Location = New System.Drawing.Point(248, 62)
+        Me.deleteschedule.Location = New System.Drawing.Point(244, 125)
         Me.deleteschedule.Name = "deleteschedule"
         Me.deleteschedule.Size = New System.Drawing.Size(23, 20)
         Me.deleteschedule.TabIndex = 625
@@ -69,7 +69,7 @@ Partial Class UcCommandScheduler
         'addschedule
         '
         Me.addschedule.Image = CType(resources.GetObject("addschedule.Image"), System.Drawing.Image)
-        Me.addschedule.Location = New System.Drawing.Point(202, 61)
+        Me.addschedule.Location = New System.Drawing.Point(198, 124)
         Me.addschedule.Name = "addschedule"
         Me.addschedule.Size = New System.Drawing.Size(41, 23)
         Me.addschedule.TabIndex = 624
@@ -123,7 +123,7 @@ Partial Class UcCommandScheduler
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvscheduler.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvscheduler.Location = New System.Drawing.Point(10, 85)
+        Me.dgvscheduler.Location = New System.Drawing.Point(24, 151)
         Me.dgvscheduler.Name = "dgvscheduler"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
@@ -133,7 +133,7 @@ Partial Class UcCommandScheduler
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvscheduler.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvscheduler.Size = New System.Drawing.Size(585, 204)
+        Me.dgvscheduler.Size = New System.Drawing.Size(1024, 380)
         Me.dgvscheduler.TabIndex = 620
         '
         'Label127
@@ -161,7 +161,7 @@ Partial Class UcCommandScheduler
         '
         'cmdmanualPlaycmdPlayNoe
         '
-        Me.cmdmanualPlaycmdPlayNoe.Location = New System.Drawing.Point(601, 85)
+        Me.cmdmanualPlaycmdPlayNoe.Location = New System.Drawing.Point(1054, 151)
         Me.cmdmanualPlaycmdPlayNoe.Name = "cmdmanualPlaycmdPlayNoe"
         Me.cmdmanualPlaycmdPlayNoe.Size = New System.Drawing.Size(50, 68)
         Me.cmdmanualPlaycmdPlayNoe.TabIndex = 1178
@@ -207,8 +207,9 @@ Partial Class UcCommandScheduler
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.Bisque
-        Me.ClientSize = New System.Drawing.Size(656, 298)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.cmdmanualPlaycmdPlayNoe)
         Me.Controls.Add(Me.Label1)

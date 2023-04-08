@@ -1,5 +1,5 @@
 ﻿Imports System.IO
-
+Imports System.Net
 Public Class ucHtmlTemplate
     Public brundownrowselectedchanged As Boolean = False
     Private Sub cmdadjusttimeofrundown_Click(sender As Object, e As EventArgs) Handles cmdadjusttimeofrundown.Click
@@ -255,8 +255,8 @@ Public Class ucHtmlTemplate
     Sub clipinsertrundown()
         On Error Resume Next
         dgvrundown.Rows.Insert(dgvrundown.CurrentRow.Index)
-        dgvrundown.Rows(dgvrundown.CurrentRow.Index - 1).Cells(0).Value = Now
-        dgvrundown.Rows(dgvrundown.CurrentRow.Index - 1).Cells(1).Value = 10
+        dgvrundown.Rows(dgvrundown.CurrentRow.Index - 1).Cells(5).Value = Now
+        dgvrundown.Rows(dgvrundown.CurrentRow.Index - 1).Cells(6).Value = 10
     End Sub
     Private Sub removetsrundown_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles removetsrundown.Click
         On Error Resume Next
@@ -311,9 +311,10 @@ Public Class ucHtmlTemplate
         For ianytemplate = 1 To dgvanytemplate.Rows.Count - 2
             If dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 0 Then '
 
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " updatestring('" & replacestring1(dgvanytemplate.Rows(ianytemplate).Cells(0).Value) & "','" & replacestring1(dgvanytemplate.Rows(ianytemplate).Cells(1).Value) & "')")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " " & """" & "updatestring('" & (dgvanytemplate.Rows(ianytemplate).Cells(0).Value) & "','" & replacestring1(dgvanytemplate.Rows(ianytemplate).Cells(1).Value) & "')" & """")
             Else
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " updateimage('" & replacestring1(dgvanytemplate.Rows(ianytemplate).Cells(0).Value) & "','" & replacestring1(dgvanytemplate.Rows(ianytemplate).Cells(1).Value) & "')")
+                'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " updateimage('" & replacestring1(dgvanytemplate.Rows(ianytemplate).Cells(0).Value) & "','" & replacestring1(dgvanytemplate.Rows(ianytemplate).Cells(1).Value) & "')")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " " & """" & "updateimage('" & (dgvanytemplate.Rows(ianytemplate).Cells(0).Value) & "','" & (dgvanytemplate.Rows(ianytemplate).Cells(1).Value) & "')" & """")
             End If
         Next
     End Sub
@@ -495,6 +496,10 @@ Public Class ucHtmlTemplate
         If chkanimatetemplate.Checked Then
             CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " fill 0 0 1 1 50 " & "easeoutexpo")
         End If
+
+        If chkLBand.Checked Then
+            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & frmmediaplayer.cmblayervideo.Text & " " & txtLBand.Text)
+        End If
     End Sub
 
     Private Sub cmdanytemplatestop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdanytemplatestop.Click
@@ -502,6 +507,11 @@ Public Class ucHtmlTemplate
     End Sub
     Sub anytemplatestop()
         On Error Resume Next
+
+        If chkLBand.Checked Then
+            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & frmmediaplayer.cmblayervideo.Text & " fill 0 0 1 1 15 easeinexpo")
+        End If
+
         If chkanimatetemplate.Checked Then
             CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " fill 1 0 1 1 50 easeoutexpo")
             Threading.Thread.Sleep(1000)
@@ -587,11 +597,12 @@ Public Class ucHtmlTemplate
 
         Try
             Dim MyWeb As Object = WB1.ActiveXInstance
-            ' MyWeb.ExecWB(Exec.OLECMDID_OPTICAL_ZOOM, execOpt.OLECMDEXECOPT_PROMPTUSER, 25, IntPtr.Zero)
+            MyWeb.ExecWB(Exec.OLECMDID_OPTICAL_ZOOM, execOpt.OLECMDEXECOPT_PROMPTUSER, 25, IntPtr.Zero)
             MyWeb.ExecWB(Exec.OLECMDID_OPTICAL_ZOOM, execOpt.OLECMDEXECOPT_PROMPTUSER, 75, IntPtr.Zero)
 
         Catch ex As Exception
         End Try
+
         If brundownrowselectedchanged = True Then
             Exit Sub
         End If
@@ -610,8 +621,31 @@ Public Class ucHtmlTemplate
 
                     dgvanytemplate.Rows.Add()
                     dgvanytemplate.Rows(ianytemplate).Cells(0).Value = element.Id
-                    dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.InnerHtml
-                    dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 0 'CheckState.Unchecked
+
+                    If chkRCCTemplate.Checked Then
+                        If ((element.Children(element.Children.Count - 1).TagName = "text")) Then
+                            dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.GetElementsByTagName("text")(0).GetElementsByTagName("tspan")(0).InnerHtml
+                        Else
+                            Dim dd = element.GetElementsByTagName("image")(0).OuterHtml.Split(" ")(7)
+                            If dd.Substring(0, 3) = "xli" Then
+                                dgvanytemplate.Rows(ianytemplate).Cells(1).Value = dd.Split("=")(1).Replace("""", "")
+                                Dim tClient As WebClient = New WebClient
+                                Dim tImage As Bitmap = Bitmap.FromStream(New MemoryStream(tClient.DownloadData(dd.Split("=")(1).Replace("""", ""))))
+                                dgvanytemplate.Rows(ianytemplate).Cells(2).Value = tImage
+                            Else
+                                dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.OuterHtml.Split(New String() {"xlink:href="""}, StringSplitOptions.None)(1).Split("""")(0)
+                                Dim aa = (dgvanytemplate.Rows(ianytemplate).Cells(1).Value).Split(",")(1)
+                                Dim imageBytes As Byte() = Convert.FromBase64String(aa)
+                                Dim ms = New MemoryStream(imageBytes, 0, imageBytes.Length)
+                                dgvanytemplate.Rows(ianytemplate).Cells(2).Value = Image.FromStream(ms, True)
+                            End If
+
+                            dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 1 'CheckState.Unchecked
+                        End If
+                    Else
+                        dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.InnerHtml
+                        dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 0 'CheckState.Unchecked
+                    End If
                     ianytemplate = ianytemplate + 1
                 End If
             End If
@@ -621,6 +655,11 @@ Public Class ucHtmlTemplate
                 If element.TagName = "IMG" Then
                     dgvanytemplate.Rows.Add()
                     dgvanytemplate.Rows(ianytemplate).Cells(0).Value = element.Id
+                    'If chkRCCTemplate.Checked Then
+                    '    dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.GetElementsByTagName("image")(0).GetAttribute("src").ToString
+                    'Else
+                    '    dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.GetAttribute("src").ToString
+                    'End If
                     dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.GetAttribute("src").ToString
 
 
@@ -660,6 +699,10 @@ Public Class ucHtmlTemplate
         anytemplateupdate()
         If chkanimatetemplate.Checked Then
             CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " fill 0 0 1 1 50 " & "easeoutexpo")
+        End If
+
+        If chkLBand.Checked Then
+            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & frmmediaplayer.cmblayervideo.Text & " " & txtLBand.Text)
         End If
     End Sub
     Private Sub cmdPutTestdata_Click(sender As Object, e As EventArgs) Handles cmdPutTestdata.Click
@@ -722,5 +765,21 @@ Public Class ucHtmlTemplate
     End Sub
     Private Sub MenuStrip1_MouseHover(sender As Object, e As EventArgs) Handles MenuStrip1.MouseHover
         MakeMenuDropDownWhenParrented(sender)
+    End Sub
+
+    Private Sub Chkanimatetemplate_CheckedChanged(sender As Object, e As EventArgs) Handles chkanimatetemplate.CheckedChanged
+        If chkanimatetemplate.Checked Then
+            chkLBand.Checked = False
+        End If
+    End Sub
+
+    Private Sub ChkLBand_CheckedChanged(sender As Object, e As EventArgs) Handles chkLBand.CheckedChanged
+        If chkLBand.Checked Then
+            chkanimatetemplate.Checked = False
+        End If
+    End Sub
+
+    Private Sub cmdStopAnimation_Click(sender As Object, e As EventArgs) Handles cmdStopAnimation.Click
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " outAnimation()")
     End Sub
 End Class

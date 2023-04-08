@@ -1,4 +1,7 @@
 ﻿Imports System.IO
+Imports System.Threading
+Imports System.Windows.Controls
+Imports AxShockwaveFlashObjects
 
 Public Class ucTemplate
     Private Sub cmdadjusttimeofrundown_Click(sender As Object, e As EventArgs) Handles cmdadjusttimeofrundown.Click
@@ -257,8 +260,8 @@ Public Class ucTemplate
     Sub clipinsertrundown()
         On Error Resume Next
         dgvrundown.Rows.Insert(dgvrundown.CurrentRow.Index)
-        dgvrundown.Rows(dgvrundown.CurrentRow.Index - 1).Cells(0).Value = Now
-        dgvrundown.Rows(dgvrundown.CurrentRow.Index - 1).Cells(1).Value = 10
+        dgvrundown.Rows(dgvrundown.CurrentRow.Index - 1).Cells(5).Value = Now
+        dgvrundown.Rows(dgvrundown.CurrentRow.Index - 1).Cells(6).Value = 10
     End Sub
 
     Private Sub removetsrundown_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles removetsrundown.Click
@@ -337,13 +340,15 @@ Public Class ucTemplate
         Next
         CasparCGDataCollection.SetData("font", cmbfonttemplate.Text)
         Dim str As String
-        str = "cg " & g_int_ChannelNumber & "-" & cmbvideolayerfortemplate.Text & " UPDATE " & cmblayertemplate.Text & """" & CasparCGDataCollection.ToAMCPEscapedXml & """" & vbCrLf
+        str = "cg " & g_int_ChannelNumber & "-" & cmbvideolayerfortemplate.Text & " UPDATE " & cmblayertemplate.Text & " " & """" & CasparCGDataCollection.ToAMCPEscapedXml & """" & vbCrLf
         SendString(NetStream, str)
     End Sub
 
     Private Sub lsttemplate_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lsttemplate.SelectedIndexChanged
         On Error Resume Next
-        picanytemplate.Movie = Replace(templatefullpath & lsttemplate.SelectedItem.ToString, "/", "\") & ".ft"
+        'picanytemplate.Movie = Replace(templatefullpath & lsttemplate.SelectedItem.ToString, "/", "\") & ".ft"
+        picanytemplate.CtlScale = "ShowAll"
+        picanytemplate.Movie = "file:///" & Replace(templatefullpath & lsttemplate.SelectedItem.ToString, "\", "/") & ".ft"
     End Sub
 
     Private Sub cmdinvoke_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdinvoke.Click
@@ -358,7 +363,7 @@ Public Class ucTemplate
     End Sub
 
 
-    Private Sub cmdclosegbtemplate_Click(sender As Object, e As EventArgs) 
+    Private Sub cmdclosegbtemplate_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
 
@@ -552,7 +557,7 @@ Public Class ucTemplate
     Private Sub lsttemplate_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles lsttemplate.MouseDown
 
         On Error Resume Next
-        picanytemplate.Movie = Replace(templatefullpath & lsttemplate.SelectedItem.ToString, "/", "\") & ".ft"
+        picanytemplate.Movie = "file:///" & Replace(templatefullpath & lsttemplate.SelectedItem.ToString, "\", "/") & ".ft"
 
         Dim str As String
         str = "info template " & """" & lsttemplate.SelectedItem.ToString & """" & vbCrLf
@@ -620,7 +625,9 @@ Public Class ucTemplate
 
     Private Sub cmdanytemplateplay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdanytemplateplay.Click
         On Error Resume Next
+
         anytemplate()
+
     End Sub
 
     Sub anytemplate()
@@ -639,16 +646,25 @@ Public Class ucTemplate
         str = "cg " & g_int_ChannelNumber & "-" & cmbvideolayerfortemplate.Text & " add " & cmblayertemplate.Text & " " & """" & Replace(lsttemplate.SelectedItem.ToString, "\", "/") & """" & " 1 " & """" & CasparCGDataCollection.ToAMCPEscapedXml & """" & vbCrLf
         SendString(NetStream, str)
         If chkanimatetemplate.Checked Then
-            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " fill 0 0 1 1 50 " & "easeoutexpo")
+            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " fill 0 0 1 1 50 easeoutexpo")
         End If
-
+        If chkLBand.Checked Then
+            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & frmmediaplayer.cmblayervideo.Text & " " & txtLBand.Text)
+        End If
     End Sub
 
     Private Sub cmdanytemplatestop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdanytemplatestop.Click
+
         anytemplatestop()
+
     End Sub
     Sub anytemplatestop()
         On Error Resume Next
+
+        If chkLBand.Checked Then
+            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & frmmediaplayer.cmblayervideo.Text & " fill 0 0 1 1 15 easeinexpo")
+        End If
+
         If chkanimatetemplate.Checked Then frmmediaplayer.animation2()
         Dim str As String
         str = "cg " & g_int_ChannelNumber & "-" & cmbvideolayerfortemplate.Text & " STOP " & cmblayertemplate.Text & vbCrLf
@@ -711,6 +727,8 @@ Public Class ucTemplate
         tmrsheduletemplatestart.Enabled = True
         lblsheduleStatus.Text = "Schedule Started"
         lblsheduleStatus.BackColor = Color.Green
+
+
     End Sub
     Sub sortsheduletemplate()
         On Error Resume Next
@@ -720,7 +738,7 @@ Public Class ucTemplate
         dgvrundown.Sort(dgvrundown.Columns(7), System.ComponentModel.ListSortDirection.Ascending)
         dgvrundown.CurrentCell = dgvrundown.Rows(0).Cells(0)
         rundownrowsselectedchanged()
-      
+
     End Sub
     Private Sub tmrsheduletemplatestart_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles tmrsheduletemplatestart.Tick
         On Error Resume Next
@@ -730,8 +748,8 @@ Public Class ucTemplate
         Next
         CasparDevice.SendString("cg " & g_int_ChannelNumber & "-" & dgvrundown.Rows(0).Cells(2).Value & " add " & dgvrundown.Rows(0).Cells(3).Value & " " & """" & dgvrundown.Rows(0).Cells(1).Value & """" & " 1 " & """" & CasparCGDataCollection.ToAMCPEscapedXml & """" & vbCrLf)
 
-        tmrsheduletemplatestart.Enabled = False
 
+        tmrsheduletemplatestart.Enabled = False
         tmrshedultemplateend.Interval = dgvrundown.Rows(0).Cells(6).Value * 1000
         tmrshedultemplateend.Enabled = True
     End Sub
@@ -777,5 +795,133 @@ Public Class ucTemplate
     End Sub
     Private Sub gbtemplate_Enter(sender As Object, e As EventArgs) Handles gbtemplate.Enter
 
+    End Sub
+
+    Private Sub ucTemplate_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        Select Case e.KeyCode
+            Case Keys.F1
+                anytemplatestop()
+            Case Keys.F2
+                anytemplate()
+
+            Case Keys.F5
+                anytemplatenextframe()
+
+            Case Keys.F6
+                anytemplateupdate()
+            Case Keys.F7
+                anytemplateinvoke()
+            Case Keys.F11
+                CasparDevice.SendString("clear " & g_int_ChannelNumber & "-" & cmblayertemplate.Text)
+
+            Case Keys.F12
+                CasparDevice.SendString("clear " & g_int_ChannelNumber)
+                CasparDevice.SendString("mixer " & g_int_ChannelNumber & " clear")
+
+        End Select
+    End Sub
+
+    Private Sub ChkLBand_CheckedChanged(sender As Object, e As EventArgs) Handles chkLBand.CheckedChanged
+        If chkLBand.Checked Then
+            chkanimatetemplate.Checked = False
+        End If
+    End Sub
+
+    Private Sub Chkanimatetemplate_CheckedChanged(sender As Object, e As EventArgs) Handles chkanimatetemplate.CheckedChanged
+        If chkanimatetemplate.Checked Then
+            chkLBand.Checked = False
+        End If
+    End Sub
+    Private Sub cmdUpdatePreview_Click(sender As Object, e As EventArgs) Handles cmdUpdatePreview.Click
+        On Error Resume Next
+        picanytemplate.Movie = "file:///" + "c:/casparcg/cmp/fth/cg20.fth.pal.43"
+        Dim teplateName = Replace(templatefullpath & lsttemplate.SelectedItem.ToString, "\", "/") & ".ft"
+
+        CasparCGDataCollection.Clear()
+        Dim ianytemplate As Integer
+        For ianytemplate = 0 To dgvanytemplate.Rows.Count
+            CasparCGDataCollection.SetData(dgvanytemplate.Rows(ianytemplate).Cells(0).Value, Replace(dgvanytemplate.Rows(ianytemplate).Cells(1).Value, "\", "/"))
+        Next
+        Dim str = "<invoke name='Add' returntype='xml'><arguments><number>8</number><string>" + teplateName + "</string><true/><string></string><string><![CDATA[" + CasparCGDataCollection.ToXml + "]]></string></arguments></invoke>"
+
+        picanytemplate.CallFunction(str)
+
+        If ((CasparDevice.IsConnected = False) Or (ServerVersion = 2.3)) Then
+            Dim str2 = "<invoke name='GetDescription' returntype='xml'><arguments><array><property id='0'><number>8</number></property></array></arguments></invoke>"
+            Thread.Sleep(1000)
+            picanytemplate.CallFunction(str2)
+
+        End If
+
+    End Sub
+    Private Sub picanytemplate_FlashCall(sender As Object, e As _IShockwaveFlashEvents_FlashCallEvent) Handles picanytemplate.FlashCall
+        On Error Resume Next
+
+        If ((CasparDevice.IsConnected = False) Or (ServerVersion = 2.3)) Then
+            If (e.request.Contains("OnTemplateDescription")) Then
+                Dim xmlString As String = (Replace(Replace(Replace(e.request, "&lt;", "<"), "&gt;", ">"), "&quot;", """"))
+
+                Dim xml = XDocument.Parse(xmlString)
+
+                Dim instances = From instance In xml.Descendants("instance")
+                                Select New With {
+                            .Name = instance.Attribute("name").Value,
+                            .Type = instance.Attribute("type").Value
+                        }
+
+                dgvanytemplate.Rows.Clear()
+
+                Dim ianytemplate As Integer = 1
+                dgvanytemplate.Rows.Add()
+                dgvanytemplate.Rows(0).Cells(0).Value = "Label"
+                dgvanytemplate.Rows(0).Cells(1).Value = lsttemplate.SelectedItem.ToString '"Label Name" '250814
+
+                For Each instance In instances
+                    dgvanytemplate.Rows.Add()
+                    dgvanytemplate.Rows(ianytemplate).Cells(0).Value = instance.Name
+                    dgvanytemplate.Rows(ianytemplate).Cells(1).Value = instance.Name
+                    ianytemplate = ianytemplate + 1
+                Next
+
+                dgvanytemplate.Rows.Add(6)
+                dgvanytemplate.Rows(ianytemplate).Cells(0).Value = "loader1"
+                dgvanytemplate.Rows(ianytemplate).Cells(1).Value = "C:\casparcg\mydata\photo\india\anjum.jpeg"
+
+                dgvanytemplate.Rows(ianytemplate + 1).Cells(0).Value = "loader2"
+                dgvanytemplate.Rows(ianytemplate + 1).Cells(1).Value = "C:\casparcg\mydata\photo\india\archana.jpeg"
+
+                dgvanytemplate.Rows(ianytemplate + 2).Cells(0).Value = "loader3"
+                dgvanytemplate.Rows(ianytemplate + 2).Cells(1).Value = "C:\casparcg\mydata\photo\india\ekta.jpeg"
+
+                dgvanytemplate.Rows(ianytemplate + 3).Cells(0).Value = "loader4"
+                dgvanytemplate.Rows(ianytemplate + 3).Cells(1).Value = "C:\casparcg\mydata\photo\india\gauhar.jpeg"
+
+                dgvanytemplate.Rows(ianytemplate + 4).Cells(0).Value = "loader5"
+                dgvanytemplate.Rows(ianytemplate + 4).Cells(1).Value = "C:\casparcg\mydata\photo\india\jhulan.jpeg"
+
+                dgvanytemplate.Rows(ianytemplate + 5).Cells(0).Value = "loader6"
+                dgvanytemplate.Rows(ianytemplate + 5).Cells(1).Value = "C:\casparcg\mydata\photo\india\mamta.jpeg"
+
+                CasparCGDataCollection.Clear()
+                For ianytemplate = 0 To dgvanytemplate.Rows.Count
+                    CasparCGDataCollection.SetData(dgvanytemplate.Rows(ianytemplate).Cells(0).Value, Replace(dgvanytemplate.Rows(ianytemplate).Cells(1).Value, "\", "/"))
+                Next
+                Dim str = "<invoke name='SetData' returntype='xml'><arguments><array><property id='0'><number>8</number></property></array><string><![CDATA[" + CasparCGDataCollection.ToXml + "]]></string></arguments></invoke>"
+                picanytemplate.CallFunction(str)
+
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub cmdOnlyUpdatePreview_Click(sender As Object, e As EventArgs) Handles cmdOnlyUpdatePreview.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        For ianytemplate = 0 To dgvanytemplate.Rows.Count
+            CasparCGDataCollection.SetData(dgvanytemplate.Rows(ianytemplate).Cells(0).Value, Replace(dgvanytemplate.Rows(ianytemplate).Cells(1).Value, "\", "/"))
+        Next
+        Dim str = "<invoke name='SetData' returntype='xml'><arguments><array><property id='0'><number>8</number></property></array><string><![CDATA[" + CasparCGDataCollection.ToXml + "]]></string></arguments></invoke>"
+        picanytemplate.CallFunction(str)
     End Sub
 End Class

@@ -33,6 +33,9 @@ Partial Class ucnewTrimmer1
         Me.lblfilenametrimmer = New System.Windows.Forms.Label()
         Me.cmdopenfiletrimmer = New System.Windows.Forms.Button()
         Me.gbplayertrimmer = New System.Windows.Forms.GroupBox()
+        Me.nforwardFrame = New System.Windows.Forms.NumericUpDown()
+        Me.cmdbackTenframetrimmer = New System.Windows.Forms.Button()
+        Me.cmdforwardtenframetrimmer = New System.Windows.Forms.Button()
         Me.cmdexportmpeg2mov = New System.Windows.Forms.Button()
         Me.lblexportclipinfo = New System.Windows.Forms.Label()
         Me.pbexportclip = New System.Windows.Forms.ProgressBar()
@@ -68,9 +71,12 @@ Partial Class ucnewTrimmer1
         Me.bwforexportclip = New System.ComponentModel.BackgroundWorker()
         Me.tmrtrimmer = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.cmdExportOnlyAudio = New System.Windows.Forms.Button()
+        Me.bwforexportclip1 = New System.ComponentModel.BackgroundWorker()
         Me.gbTrimmer.SuspendLayout()
         CType(Me.vlc1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbplayertrimmer.SuspendLayout()
+        CType(Me.nforwardFrame, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nvlcspeed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBarseektrimmer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -88,10 +94,10 @@ Partial Class ucnewTrimmer1
         Me.gbTrimmer.Controls.Add(Me.gbplayertrimmer)
         Me.gbTrimmer.Location = New System.Drawing.Point(2, 3)
         Me.gbTrimmer.Name = "gbTrimmer"
-        Me.gbTrimmer.Size = New System.Drawing.Size(478, 495)
+        Me.gbTrimmer.Size = New System.Drawing.Size(478, 517)
         Me.gbTrimmer.TabIndex = 1166
         Me.gbTrimmer.TabStop = False
-        Me.gbTrimmer.Text = "Trimmer   Works only with vlc  version 2.2.1 32bit"
+        Me.gbTrimmer.Text = "Trimmer"
         '
         'vlc1
         '
@@ -161,6 +167,10 @@ Partial Class ucnewTrimmer1
         '
         'gbplayertrimmer
         '
+        Me.gbplayertrimmer.Controls.Add(Me.cmdExportOnlyAudio)
+        Me.gbplayertrimmer.Controls.Add(Me.nforwardFrame)
+        Me.gbplayertrimmer.Controls.Add(Me.cmdbackTenframetrimmer)
+        Me.gbplayertrimmer.Controls.Add(Me.cmdforwardtenframetrimmer)
         Me.gbplayertrimmer.Controls.Add(Me.cmdexportmpeg2mov)
         Me.gbplayertrimmer.Controls.Add(Me.lblexportclipinfo)
         Me.gbplayertrimmer.Controls.Add(Me.pbexportclip)
@@ -195,24 +205,53 @@ Partial Class ucnewTrimmer1
         Me.gbplayertrimmer.Controls.Add(Me.TrackBarseektrimmer)
         Me.gbplayertrimmer.Location = New System.Drawing.Point(7, 312)
         Me.gbplayertrimmer.Name = "gbplayertrimmer"
-        Me.gbplayertrimmer.Size = New System.Drawing.Size(463, 177)
+        Me.gbplayertrimmer.Size = New System.Drawing.Size(463, 209)
         Me.gbplayertrimmer.TabIndex = 367
         Me.gbplayertrimmer.TabStop = False
         '
+        'nforwardFrame
+        '
+        Me.nforwardFrame.Location = New System.Drawing.Point(168, 90)
+        Me.nforwardFrame.Name = "nforwardFrame"
+        Me.nforwardFrame.Size = New System.Drawing.Size(44, 20)
+        Me.nforwardFrame.TabIndex = 1333
+        Me.ToolTip1.SetToolTip(Me.nforwardFrame, "No of Frames")
+        Me.nforwardFrame.Value = New Decimal(New Integer() {10, 0, 0, 0})
+        '
+        'cmdbackTenframetrimmer
+        '
+        Me.cmdbackTenframetrimmer.Image = CType(resources.GetObject("cmdbackTenframetrimmer.Image"), System.Drawing.Image)
+        Me.cmdbackTenframetrimmer.Location = New System.Drawing.Point(134, 89)
+        Me.cmdbackTenframetrimmer.Name = "cmdbackTenframetrimmer"
+        Me.cmdbackTenframetrimmer.Size = New System.Drawing.Size(31, 23)
+        Me.cmdbackTenframetrimmer.TabIndex = 1332
+        Me.ToolTip1.SetToolTip(Me.cmdbackTenframetrimmer, "10 Frame Back")
+        Me.cmdbackTenframetrimmer.UseVisualStyleBackColor = True
+        '
+        'cmdforwardtenframetrimmer
+        '
+        Me.cmdforwardtenframetrimmer.Image = CType(resources.GetObject("cmdforwardtenframetrimmer.Image"), System.Drawing.Image)
+        Me.cmdforwardtenframetrimmer.Location = New System.Drawing.Point(216, 89)
+        Me.cmdforwardtenframetrimmer.Name = "cmdforwardtenframetrimmer"
+        Me.cmdforwardtenframetrimmer.Size = New System.Drawing.Size(35, 23)
+        Me.cmdforwardtenframetrimmer.TabIndex = 1331
+        Me.ToolTip1.SetToolTip(Me.cmdforwardtenframetrimmer, "10 Frame Forward")
+        Me.cmdforwardtenframetrimmer.UseVisualStyleBackColor = True
+        '
         'cmdexportmpeg2mov
         '
-        Me.cmdexportmpeg2mov.Location = New System.Drawing.Point(349, 153)
+        Me.cmdexportmpeg2mov.Location = New System.Drawing.Point(300, 179)
         Me.cmdexportmpeg2mov.Name = "cmdexportmpeg2mov"
-        Me.cmdexportmpeg2mov.Size = New System.Drawing.Size(110, 23)
+        Me.cmdexportmpeg2mov.Size = New System.Drawing.Size(166, 23)
         Me.cmdexportmpeg2mov.TabIndex = 737
-        Me.cmdexportmpeg2mov.Text = "Export MPeg2"
+        Me.cmdexportmpeg2mov.Text = "Export MPeg2 for Oasys Server"
         Me.cmdexportmpeg2mov.UseVisualStyleBackColor = True
         '
         'lblexportclipinfo
         '
         Me.lblexportclipinfo.AutoSize = True
         Me.lblexportclipinfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblexportclipinfo.Location = New System.Drawing.Point(154, 113)
+        Me.lblexportclipinfo.Location = New System.Drawing.Point(154, 139)
         Me.lblexportclipinfo.Name = "lblexportclipinfo"
         Me.lblexportclipinfo.Size = New System.Drawing.Size(37, 13)
         Me.lblexportclipinfo.TabIndex = 736
@@ -221,7 +260,7 @@ Partial Class ucnewTrimmer1
         '
         'pbexportclip
         '
-        Me.pbexportclip.Location = New System.Drawing.Point(147, 94)
+        Me.pbexportclip.Location = New System.Drawing.Point(147, 119)
         Me.pbexportclip.Maximum = 268
         Me.pbexportclip.Name = "pbexportclip"
         Me.pbexportclip.Size = New System.Drawing.Size(136, 19)
@@ -229,7 +268,7 @@ Partial Class ucnewTrimmer1
         '
         'txtgototcvlc
         '
-        Me.txtgototcvlc.Location = New System.Drawing.Point(73, 120)
+        Me.txtgototcvlc.Location = New System.Drawing.Point(73, 146)
         Me.txtgototcvlc.Name = "txtgototcvlc"
         Me.txtgototcvlc.Size = New System.Drawing.Size(70, 20)
         Me.txtgototcvlc.TabIndex = 732
@@ -237,7 +276,7 @@ Partial Class ucnewTrimmer1
         '
         'cmdgototcvlc
         '
-        Me.cmdgototcvlc.Location = New System.Drawing.Point(6, 119)
+        Me.cmdgototcvlc.Location = New System.Drawing.Point(6, 145)
         Me.cmdgototcvlc.Name = "cmdgototcvlc"
         Me.cmdgototcvlc.Size = New System.Drawing.Size(60, 23)
         Me.cmdgototcvlc.TabIndex = 731
@@ -248,7 +287,7 @@ Partial Class ucnewTrimmer1
         '
         Me.nvlcspeed.DecimalPlaces = 1
         Me.nvlcspeed.Increment = New Decimal(New Integer() {1, 0, 0, 65536})
-        Me.nvlcspeed.Location = New System.Drawing.Point(157, 147)
+        Me.nvlcspeed.Location = New System.Drawing.Point(157, 173)
         Me.nvlcspeed.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.nvlcspeed.Minimum = New Decimal(New Integer() {10, 0, 0, -2147483648})
         Me.nvlcspeed.Name = "nvlcspeed"
@@ -258,7 +297,7 @@ Partial Class ucnewTrimmer1
         '
         'cmdplaylast5sectrimmer
         '
-        Me.cmdplaylast5sectrimmer.Location = New System.Drawing.Point(285, 90)
+        Me.cmdplaylast5sectrimmer.Location = New System.Drawing.Point(285, 116)
         Me.cmdplaylast5sectrimmer.Name = "cmdplaylast5sectrimmer"
         Me.cmdplaylast5sectrimmer.Size = New System.Drawing.Size(96, 23)
         Me.cmdplaylast5sectrimmer.TabIndex = 729
@@ -280,7 +319,7 @@ Partial Class ucnewTrimmer1
         Me.lbltrimmedduration.AutoSize = True
         Me.lbltrimmedduration.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbltrimmedduration.ForeColor = System.Drawing.Color.Maroon
-        Me.lbltrimmedduration.Location = New System.Drawing.Point(336, 134)
+        Me.lbltrimmedduration.Location = New System.Drawing.Point(336, 160)
         Me.lbltrimmedduration.Name = "lbltrimmedduration"
         Me.lbltrimmedduration.Size = New System.Drawing.Size(131, 16)
         Me.lbltrimmedduration.TabIndex = 727
@@ -291,7 +330,7 @@ Partial Class ucnewTrimmer1
         Me.lbloriginalduration.AutoSize = True
         Me.lbloriginalduration.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbloriginalduration.ForeColor = System.Drawing.Color.Maroon
-        Me.lbloriginalduration.Location = New System.Drawing.Point(336, 115)
+        Me.lbloriginalduration.Location = New System.Drawing.Point(336, 141)
         Me.lbloriginalduration.Name = "lbloriginalduration"
         Me.lbloriginalduration.Size = New System.Drawing.Size(124, 16)
         Me.lbloriginalduration.TabIndex = 726
@@ -300,7 +339,7 @@ Partial Class ucnewTrimmer1
         'Label232
         '
         Me.Label232.AutoSize = True
-        Me.Label232.Location = New System.Drawing.Point(253, 133)
+        Me.Label232.Location = New System.Drawing.Point(253, 159)
         Me.Label232.Name = "Label232"
         Me.Label232.Size = New System.Drawing.Size(90, 13)
         Me.Label232.TabIndex = 725
@@ -309,7 +348,7 @@ Partial Class ucnewTrimmer1
         'Label231
         '
         Me.Label231.AutoSize = True
-        Me.Label231.Location = New System.Drawing.Point(257, 115)
+        Me.Label231.Location = New System.Drawing.Point(257, 141)
         Me.Label231.Name = "Label231"
         Me.Label231.Size = New System.Drawing.Size(85, 13)
         Me.Label231.TabIndex = 724
@@ -317,7 +356,7 @@ Partial Class ucnewTrimmer1
         '
         'cmdexportclipwithoutanychanges
         '
-        Me.cmdexportclipwithoutanychanges.Location = New System.Drawing.Point(74, 91)
+        Me.cmdexportclipwithoutanychanges.Location = New System.Drawing.Point(74, 117)
         Me.cmdexportclipwithoutanychanges.Name = "cmdexportclipwithoutanychanges"
         Me.cmdexportclipwithoutanychanges.Size = New System.Drawing.Size(70, 23)
         Me.cmdexportclipwithoutanychanges.TabIndex = 723
@@ -326,7 +365,7 @@ Partial Class ucnewTrimmer1
         '
         'cmdspeed1trimmer
         '
-        Me.cmdspeed1trimmer.Location = New System.Drawing.Point(96, 146)
+        Me.cmdspeed1trimmer.Location = New System.Drawing.Point(96, 172)
         Me.cmdspeed1trimmer.Name = "cmdspeed1trimmer"
         Me.cmdspeed1trimmer.Size = New System.Drawing.Size(57, 23)
         Me.cmdspeed1trimmer.TabIndex = 638
@@ -379,7 +418,7 @@ Partial Class ucnewTrimmer1
         '
         'cmdclipsavetrimmer
         '
-        Me.cmdclipsavetrimmer.Location = New System.Drawing.Point(5, 146)
+        Me.cmdclipsavetrimmer.Location = New System.Drawing.Point(5, 172)
         Me.cmdclipsavetrimmer.Name = "cmdclipsavetrimmer"
         Me.cmdclipsavetrimmer.Size = New System.Drawing.Size(84, 23)
         Me.cmdclipsavetrimmer.TabIndex = 350
@@ -388,7 +427,7 @@ Partial Class ucnewTrimmer1
         '
         'cmdgotoouttrimmer
         '
-        Me.cmdgotoouttrimmer.Location = New System.Drawing.Point(384, 90)
+        Me.cmdgotoouttrimmer.Location = New System.Drawing.Point(384, 116)
         Me.cmdgotoouttrimmer.Name = "cmdgotoouttrimmer"
         Me.cmdgotoouttrimmer.Size = New System.Drawing.Size(74, 23)
         Me.cmdgotoouttrimmer.TabIndex = 349
@@ -397,7 +436,7 @@ Partial Class ucnewTrimmer1
         '
         'cmdgotointrimmer
         '
-        Me.cmdgotointrimmer.Location = New System.Drawing.Point(6, 90)
+        Me.cmdgotointrimmer.Location = New System.Drawing.Point(6, 116)
         Me.cmdgotointrimmer.Name = "cmdgotointrimmer"
         Me.cmdgotointrimmer.Size = New System.Drawing.Size(60, 23)
         Me.cmdgotointrimmer.TabIndex = 348
@@ -521,6 +560,19 @@ Partial Class ucnewTrimmer1
         '
         Me.tmrtrimmer.Interval = 10
         '
+        'cmdExportOnlyAudio
+        '
+        Me.cmdExportOnlyAudio.Location = New System.Drawing.Point(198, 180)
+        Me.cmdExportOnlyAudio.Name = "cmdExportOnlyAudio"
+        Me.cmdExportOnlyAudio.Size = New System.Drawing.Size(102, 23)
+        Me.cmdExportOnlyAudio.TabIndex = 1334
+        Me.cmdExportOnlyAudio.Text = "Export only Audio"
+        Me.cmdExportOnlyAudio.UseVisualStyleBackColor = True
+        '
+        'bwforexportclip1
+        '
+        Me.bwforexportclip1.WorkerSupportsCancellation = True
+        '
         'ucnewTrimmer1
         '
         Me.AllowDrop = True
@@ -530,12 +582,13 @@ Partial Class ucnewTrimmer1
         Me.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Controls.Add(Me.gbTrimmer)
         Me.Name = "ucnewTrimmer1"
-        Me.Size = New System.Drawing.Size(484, 503)
+        Me.Size = New System.Drawing.Size(484, 523)
         Me.gbTrimmer.ResumeLayout(False)
         Me.gbTrimmer.PerformLayout()
         CType(Me.vlc1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbplayertrimmer.ResumeLayout(False)
         Me.gbplayertrimmer.PerformLayout()
+        CType(Me.nforwardFrame, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nvlcspeed, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBarseektrimmer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -585,4 +638,9 @@ Partial Class ucnewTrimmer1
     Friend WithEvents cmdclosenewTrimmer1 As Button
     Friend WithEvents cmdexportmpeg2mov As Button
     Friend WithEvents vlc1 As Vlc.DotNet.Forms.VlcControl
+    Friend WithEvents cmdbackTenframetrimmer As Button
+    Friend WithEvents cmdforwardtenframetrimmer As Button
+    Friend WithEvents nforwardFrame As NumericUpDown
+    Friend WithEvents cmdExportOnlyAudio As Button
+    Friend WithEvents bwforexportclip1 As System.ComponentModel.BackgroundWorker
 End Class

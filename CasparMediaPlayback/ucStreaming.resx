@@ -117,16 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="txtoptionsIGstreaming.Text" xml:space="preserve">
+    <value>-codec:v libx264 -codec:a aac -strict -2  -b:a 128k -x264opts:v keyint=45 -ar:a 48000 -tune:v zerolatency -preset:v ultrafast -b:v 2500k -minrate:v 2500k -maxrate:v 2500k -bufsize:v 2500k -vf format=pix_fmts=yuv420p,scale=1280:720 -format flv</value>
+  </data>
+  <data name="txtuseinffmpeg.Text" xml:space="preserve">
+    <value>c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y  -r 25 -s 720x576 -f rawvideo -pix_fmt bgra -i \\.\pipe\CasparCGVideo -probesize 128000 -r 25 -sample_fmt s32 -acodec pcm_s32le -f s32le -ar 48000.0 -ac 8 -i \\.\pipe\CasparCGAudio -r 25 -c:v libx264 -crf 23 -pix_fmt yuv420p c:/casparcg/_media/caspar_pipe_test_2.mp4</value>
+  </data>
   <data name="txtoptionshlsstreaming.Text" xml:space="preserve">
-    <value>-codec:v libx264 -codec:a libvo_aacenc -tune:v zerolatency -preset:v ultrafast -crf 25 -vf "scale=768:576,format=yuv420p,setdar=4:3"  -hls_time 10 -hls_list_size 6 -hls_wrap 10 start_number 1  -ar:a 44100 -b:v 1500k -minrate:v 500k -maxrate:v 1000k -bufsize:v 1000k</value>
+    <value>-codec:v libx264 -codec:a libvo_aacenc -tune:v zerolatency -preset:v ultrafast -crf 25 -vf "scale=480:270,format=yuv420p,setdar=16:9"  -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1  -ar:a 44100 -b:v 1000k -minrate:v 1000k -maxrate:v 1000k -bufsize:v 1000k</value>
   </data>
   <data name="txtoptionswsstreaming.Text" xml:space="preserve">
     <value>-codec:v libx264 -codec:a aac -strict -2  -b:a 128k -x264opts:v keyint=45 -ar:a 48000 -tune:v zerolatency -preset:v ultrafast -b:v 750k -minrate:v 500k -maxrate:v 1000k -bufsize:v 1146k -vf format=pix_fmts=yuv420p -format flv</value>
   </data>
   <data name="txtoptionsfbstreaming.Text" xml:space="preserve">
-    <value>-codec:v libx264 -codec:a aac -strict -2  -b:a 128k -x264opts:v keyint=45 -ar:a 48000 -tune:v zerolatency -preset:v ultrafast -b:v 750k -minrate:v 500k -maxrate:v 1000k -bufsize:v 1146k -vf format=pix_fmts=yuv420p -format flv</value>
+    <value>-codec:v libx264 -codec:a aac -strict -2  -b:a 128k -x264opts:v keyint=45 -ar:a 48000 -tune:v zerolatency -preset:v ultrafast -b:v 2500k -minrate:v 2500k -maxrate:v 2500k -bufsize:v 2500k -vf format=pix_fmts=yuv420p,scale=1280:720 -format flv</value>
   </data>
   <data name="txtoptionsytstreaming.Text" xml:space="preserve">
-    <value>-codec:v libx264 -codec:a aac -strict -2  -b:a 128k -x264opts:v keyint=45 -ar:a 48000 -tune:v zerolatency -preset:v ultrafast -b:v 750k -minrate:v 500k -maxrate:v 1000k -bufsize:v 1146k -vf format=pix_fmts=yuv420p -format flv</value>
+    <value>-codec:v libx264 -codec:a aac -strict -2  -b:a 128k -x264opts:v keyint=45 -ar:a 48000 -tune:v zerolatency -preset:v ultrafast -b:v 2500k -minrate:v 2500k -maxrate:v 2500k -bufsize:v 2500k -vf format=pix_fmts=yuv420p,scale=1280:720 -format flv</value>
   </data>
 </root>

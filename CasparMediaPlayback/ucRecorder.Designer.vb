@@ -35,7 +35,7 @@ Partial Class ucRecorder
         Me.cmbRecordingProfile = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlrecording = New System.Windows.Forms.Panel()
-        Me.cmbcasparcgwindowtitlerecording = New System.Windows.Forms.ComboBox()
+        Me.cmbscreenConsumres = New System.Windows.Forms.ComboBox()
         Me.cmdoutcasparcgwindowrecording = New System.Windows.Forms.Button()
         Me.cmdshowcasparcgwindowrecording = New System.Windows.Forms.Button()
         Me.Label233 = New System.Windows.Forms.Label()
@@ -131,7 +131,7 @@ Partial Class ucRecorder
         Me.gbrecording.Controls.Add(Me.cmbRecordingProfile)
         Me.gbrecording.Controls.Add(Me.Label2)
         Me.gbrecording.Controls.Add(Me.pnlrecording)
-        Me.gbrecording.Controls.Add(Me.cmbcasparcgwindowtitlerecording)
+        Me.gbrecording.Controls.Add(Me.cmbscreenConsumres)
         Me.gbrecording.Controls.Add(Me.cmdoutcasparcgwindowrecording)
         Me.gbrecording.Controls.Add(Me.cmdshowcasparcgwindowrecording)
         Me.gbrecording.Controls.Add(Me.Label233)
@@ -252,7 +252,7 @@ Partial Class ucRecorder
         'cmbRecordingProfile
         '
         Me.cmbRecordingProfile.FormattingEnabled = True
-        Me.cmbRecordingProfile.Items.AddRange(New Object() {"dvcam", "dvcpro", "dvcpro50", "dvcproHD", "AlphaVideo", "H264", "H265", "XDCAMHD422", "IMX30", "IMX40", "IMX50", "MP3 Audio only"})
+        Me.cmbRecordingProfile.Items.AddRange(New Object() {"dvcam", "dvcpro", "dvcpro50", "dvcproHD", "AlphaVideo", "AlphaVideo2", "H264", "H265", "XDCAMHD422", "IMX30", "IMX40", "IMX50", "MP3 Audio only"})
         Me.cmbRecordingProfile.Location = New System.Drawing.Point(329, 102)
         Me.cmbRecordingProfile.Name = "cmbRecordingProfile"
         Me.cmbRecordingProfile.Size = New System.Drawing.Size(121, 21)
@@ -275,15 +275,14 @@ Partial Class ucRecorder
         Me.pnlrecording.Size = New System.Drawing.Size(275, 210)
         Me.pnlrecording.TabIndex = 157
         '
-        'cmbcasparcgwindowtitlerecording
+        'cmbscreenConsumres
         '
-        Me.cmbcasparcgwindowtitlerecording.FormattingEnabled = True
-        Me.cmbcasparcgwindowtitlerecording.Items.AddRange(New Object() {"Screen consumer [1|PAL]", "Screen consumer [2|PAL]", "Screen consumer [1|NTSC]", "Screen consumer [1|1080i5000]", "Screen consumer [1|1080i5994]", "Screen consumer [1|1080i6000]", "Screen consumer [1|1080p2398]", "Screen consumer [1|1080p2400]", "Screen consumer [1|1080p2500]", "Screen consumer [1|1080p2997]", "Screen consumer [1|1080p3000]", "Screen consumer [1|1080p5000]", "Screen consumer [1|1080p5994]", "Screen consumer [1|1080p6000]", "Screen consumer [1|1556p2398]", "Screen consumer [1|1556p2400]", "Screen consumer [1|1556p2500]", "Screen consumer [1|2160p2398]", "Screen consumer [1|2160p2400]", "Screen consumer [1|2160p2500]", "Screen consumer [1| 2160p2997]", "Screen consumer [1|2160p3000]", "Screen consumer [1|576p2500]", "Screen consumer [1|720p2398]", "Screen consumer [1|720p2400]", "Screen consumer [1|720p2500]", "Screen consumer [1|720p2997]", "Screen consumer [1|720p3000]", "Screen consumer [1|720p5000]", "Screen consumer [1|720p5994]", "Screen consumer [1|720p6000]"})
-        Me.cmbcasparcgwindowtitlerecording.Location = New System.Drawing.Point(417, 221)
-        Me.cmbcasparcgwindowtitlerecording.Name = "cmbcasparcgwindowtitlerecording"
-        Me.cmbcasparcgwindowtitlerecording.Size = New System.Drawing.Size(150, 21)
-        Me.cmbcasparcgwindowtitlerecording.TabIndex = 733
-        Me.cmbcasparcgwindowtitlerecording.Text = "Screen consumer [1|PAL]"
+        Me.cmbscreenConsumres.FormattingEnabled = True
+        Me.cmbscreenConsumres.Location = New System.Drawing.Point(381, 221)
+        Me.cmbscreenConsumres.Name = "cmbscreenConsumres"
+        Me.cmbscreenConsumres.Size = New System.Drawing.Size(186, 21)
+        Me.cmbscreenConsumres.TabIndex = 733
+        Me.cmbscreenConsumres.Text = " "
         '
         'cmdoutcasparcgwindowrecording
         '
@@ -1041,8 +1040,9 @@ Partial Class ucRecorder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(666, 578)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gbrecording)
         Me.HideOnClose = True
         Me.Name = "ucRecorder"
@@ -1057,7 +1057,7 @@ Partial Class ucRecorder
     End Sub
     Friend WithEvents gbrecording As System.Windows.Forms.GroupBox
     Friend WithEvents pnlrecording As System.Windows.Forms.Panel
-    Friend WithEvents cmbcasparcgwindowtitlerecording As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbscreenConsumres As System.Windows.Forms.ComboBox
     Friend WithEvents cmdoutcasparcgwindowrecording As System.Windows.Forms.Button
     Friend WithEvents cmdshowcasparcgwindowrecording As System.Windows.Forms.Button
     Friend WithEvents Label233 As System.Windows.Forms.Label

@@ -517,6 +517,8 @@ Partial Class ucHS
         'nspeed
         '
         Me.nspeed.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.caspar_media_playback.My.MySettings.Default, "nspeed", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.nspeed.DecimalPlaces = 1
+        Me.nspeed.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.nspeed.Location = New System.Drawing.Point(576, 164)
         Me.nspeed.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.nspeed.Minimum = New Decimal(New Integer() {10, 0, 0, -2147483648})
@@ -606,8 +608,9 @@ Partial Class ucHS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(636, 612)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbhorizontalscroll1)
         Me.HideOnClose = True
         Me.Name = "ucHS"

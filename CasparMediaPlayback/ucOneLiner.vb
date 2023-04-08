@@ -1,10 +1,12 @@
 ﻿Imports System.IO
 Imports System.Net
-
 Imports Google.Cloud.Translation.V2
-Imports System
+Imports Newtonsoft.Json
 Public Class ucOneLiner
     Dim client As TranslationClient
+
+    Dim client1 As New WebClient()
+
     Sub newdgvoneliner()
         On Error Resume Next
         dgvonelinesuper.Rows.Clear()
@@ -418,6 +420,49 @@ Public Class ucOneLiner
             If dgvonelinesuper.Columns(e.ColumnIndex).Name = "colTranslate" Then
                 dgvonelinesuperTranslated.Rows(dgvonelinesuper.CurrentRow.Index).Cells(0).Value = Await translate(dgvonelinesuper.CurrentRow.Cells(0).Value)
             End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub cmdfittextoneliner_Click(sender As Object, e As EventArgs) Handles cmdfittextoneliner.Click
+        On Error Resume Next
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayeronelinesuper.Text) & " fit1()")
+
+    End Sub
+
+    Private Sub cmdRCCPlayer1_Click(sender As Object, e As EventArgs) Handles cmdRCCPlayer1.Click
+        Try
+            Dim data1
+            If chkPlayFromTraslatedGrigRCC.Checked Then
+                data1 = New rccData With {.key = txtvariable1.Text, .value = dgvonelinesuperTranslated.CurrentRow.Cells(0).Value, .type = "text"}
+            Else
+                data1 = New rccData With {.key = txtvariable1.Text, .value = dgvonelinesuper.CurrentRow.Cells(0).Value, .type = "text"}
+            End If
+            Dim allData = {data1}
+            Dim postData As String = "layerNumber=" & cmblayeronelinesuper.Text & "&pageName=" & txtTemplatename.Text & "&data=" & JsonConvert.SerializeObject(allData)
+            Dim data As Byte() = System.Text.Encoding.UTF8.GetBytes(postData)
+            Dim url As String = "http://localhost:8080/recallPage"
+            client1.Headers.Add("Content-Type", "application/x-www-form-urlencoded")
+            client1.UploadData(url, data)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Class rccData
+        Public key As String
+        Public value As String
+        Public type As String
+    End Class
+
+    Private Sub cmdRCCStop1_Click(sender As Object, e As EventArgs) Handles cmdRCCStop1.Click
+        Try
+            Dim postData As String = "layerNumber=" & cmblayeronelinesuper.Text
+            Dim data As Byte() = System.Text.Encoding.UTF8.GetBytes(postData)
+            Dim url As String = "http://localhost:8080/stopGraphics"
+            client1.Headers.Add("Content-Type", "application/x-www-form-urlencoded")
+            client1.UploadData(url, data)
         Catch ex As Exception
 
         End Try

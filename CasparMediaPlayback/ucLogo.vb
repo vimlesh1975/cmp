@@ -48,12 +48,12 @@
         On Error Resume Next
         picofd.InitialDirectory = "c:\casparcg\mydata\logo"
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            piclogo.Movie = picofd.FileName
-            txtlogolocation.Text = picofd.FileName
+            piclogo.Movie = "file:///" + Replace(picofd.FileName, "\", "/")
+            piclogo.CtlScale = "ShowAll"
+            txtlogolocation.Text = "file:///" + Replace(picofd.FileName, "\", "/") ' picofd.FileName
         End If
     End Sub
-    Private Sub opentslogo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    End Sub
+
     Sub readfileforlogo(ByVal str As String)
         On Error Resume Next
         Dim i As Integer

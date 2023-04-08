@@ -24,8 +24,8 @@ Public Class ucHS
     Private Sub cmdleftlogoopen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdleftlogoopen.Click
         On Error Resume Next
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            picleftlogo.Movie = picofd.FileName
-            txtleftlogo.Text = picofd.FileName
+            picleftlogo.Movie = "file:///" & Replace(picofd.FileName, "\", "/")
+            txtleftlogo.Text = "file:///" & Replace(picofd.FileName, "\", "/")
         End If
     End Sub
 
@@ -62,8 +62,8 @@ Public Class ucHS
     Private Sub cmdrightlogoopen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdrightlogoopen.Click
         On Error Resume Next
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            picrightlogo.Movie = picofd.FileName
-            txtrightlogo.Text = picofd.FileName
+            picrightlogo.Movie = "file:///" & Replace(picofd.FileName, "\", "/")
+            txtrightlogo.Text = "file:///" & Replace(picofd.FileName, "\", "/")
         End If
     End Sub
 
@@ -164,24 +164,24 @@ Public Class ucHS
     Private Sub picleftlogo_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles picleftlogo.Enter
         On Error Resume Next
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            picleftlogo.Movie = picofd.FileName
-            txtleftlogo.Text = picofd.FileName
+            picleftlogo.Movie = "file:///" & Replace(picofd.FileName, "\", "/")
+            txtleftlogo.Text = "file:///" & Replace(picofd.FileName, "\", "/")
         End If
     End Sub
 
     Private Sub picmiddle_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles picmiddle.Enter
         On Error Resume Next
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            picmiddle.Movie = picofd.FileName
-            txtmiddle.Text = picofd.FileName
+            picmiddle.Movie = "file:///" & Replace(picofd.FileName, "\", "/")
+            txtmiddle.Text = "file:///" & Replace(picofd.FileName, "\", "/")
         End If
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         On Error Resume Next
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            picmiddle.Movie = picofd.FileName
-            txtmiddle.Text = picofd.FileName
+            picmiddle.Movie = "file:///" & Replace(picofd.FileName, "\", "/")
+            txtmiddle.Text = "file:///" & Replace(picofd.FileName, "\", "/")
         End If
     End Sub
 
@@ -189,8 +189,8 @@ Public Class ucHS
     Private Sub picrightlogo_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles picrightlogo.Enter
         On Error Resume Next
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            picrightlogo.Movie = picofd.FileName
-            txtrightlogo.Text = picofd.FileName
+            picrightlogo.Movie = "file:///" & Replace(picofd.FileName, "\", "/")
+            txtrightlogo.Text = "file:///" & Replace(picofd.FileName, "\", "/")
         End If
     End Sub
 

@@ -183,7 +183,7 @@ Partial Class ucWeightLifting
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(9, 184)
+        Me.TabControl1.Location = New System.Drawing.Point(5, 155)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1010, 505)
@@ -809,9 +809,9 @@ Partial Class ucWeightLifting
         'cmdstopgym
         '
         Me.cmdstopgym.BackColor = System.Drawing.Color.Red
-        Me.cmdstopgym.Location = New System.Drawing.Point(1024, 206)
+        Me.cmdstopgym.Location = New System.Drawing.Point(1019, 172)
         Me.cmdstopgym.Name = "cmdstopgym"
-        Me.cmdstopgym.Size = New System.Drawing.Size(79, 479)
+        Me.cmdstopgym.Size = New System.Drawing.Size(57, 479)
         Me.cmdstopgym.TabIndex = 585
         Me.cmdstopgym.Text = "Stop"
         Me.cmdstopgym.UseVisualStyleBackColor = False
@@ -1196,7 +1196,7 @@ Partial Class ucWeightLifting
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(14, 692)
+        Me.Label10.Location = New System.Drawing.Point(14, 664)
         Me.Label10.MaximumSize = New System.Drawing.Size(300, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(292, 169)
@@ -1344,8 +1344,9 @@ Partial Class ucWeightLifting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1122, 855)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.GroupBox5)
         Me.HideOnClose = True
         Me.Name = "ucWeightLifting"

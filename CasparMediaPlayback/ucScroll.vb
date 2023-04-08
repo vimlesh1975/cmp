@@ -2,7 +2,7 @@
 
 Public Class ucScroll
     Dim tempspeed As Double
-
+    Dim paused As Boolean = False
     Sub newdgvscroll()
         On Error Resume Next
         dgvscroll.Rows.Clear()
@@ -75,7 +75,7 @@ Public Class ucScroll
                     Do Until f = dgvscroll.Rows.Count
                         If dgvscroll.Rows(f).Cells(1).Value = False Then dgvscroll.Rows(f).Cells(1).Value = "0"
                         'sw.WriteLine(dgvscroll.Rows(f).Cells(0).Value & Chr(2) & dgvscroll.Rows(f).Cells(1).Value)
-                        sw.WriteLine(Replace(dgvscroll.Rows(f).Cells(0).Value, Chr(2), " ") & Chr(2) & dgvscroll.Rows(f).Cells(1).Value)
+                        sw.WriteLine(Replace(Replace(dgvscroll.Rows(f).Cells(0).Value, Chr(2), " "), vbNewLine, "") & Chr(2) & dgvscroll.Rows(f).Cells(1).Value)
                         f = f + 1
                     Loop
                 End If
@@ -87,10 +87,7 @@ Public Class ucScroll
 
     Sub savefilescroll()
         On Error Resume Next
-        'osd2.InitialDirectory = "c:\casparcg\mydata\scroll\"
-        'osd2.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
-        'osd2.FileName = ""
-        'If (osd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+
         Using sw As StreamWriter = New StreamWriter(dgvscroll.Columns(0).HeaderText)
                 If dgvscroll.Rows.Count = 0 Then
                     sw.Write("")
@@ -99,7 +96,8 @@ Public Class ucScroll
                     Dim f As Integer = 0
                     Do Until f = dgvscroll.Rows.Count
                         If dgvscroll.Rows(f).Cells(1).Value = False Then dgvscroll.Rows(f).Cells(1).Value = "0"
-                    sw.WriteLine(Replace(dgvscroll.Rows(f).Cells(0).Value, Chr(2), " ") & Chr(2) & dgvscroll.Rows(f).Cells(1).Value)
+                    'sw.WriteLine(Replace(dgvscroll.Rows(f).Cells(0).Value, Chr(2), " ") & Chr(2) & dgvscroll.Rows(f).Cells(1).Value)
+                    sw.WriteLine(Replace(Replace(dgvscroll.Rows(f).Cells(0).Value, Chr(2), " "), vbNewLine, "") & Chr(2) & dgvscroll.Rows(f).Cells(1).Value)
                     f = f + 1
                     Loop
                 End If
@@ -197,30 +195,54 @@ Public Class ucScroll
     Private Sub cmdplayscroll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdplayscroll.Click
         On Error Resume Next
 
+
+
         nspeedscroll.Value = tempspeed
         setdataofscroll()
         CasparCGDataCollection.SetData("speed", nspeedscroll.Value)
+        CasparCGDataCollection.SetData("division", ndivision.Value)
 
+        CasparCGDataCollection.SetData("bordercolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdbordercolor.BackColor.R, cmdbordercolor.BackColor.G, cmdbordercolor.BackColor.B))
+        CasparCGDataCollection.SetData("stripcolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B))
+        CasparCGDataCollection.SetData("fontcolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B))
+
+
+
+        If chkCapitalise.Checked Then
+            CasparCGDataCollection.SetData("scrolldatacapitalised", "")
+        End If
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayerscroll.Text), Int(cmblayerscroll.Text), txtScrollTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
         tmrshowdatascroll.Enabled = True
+        paused = False
+
+        ' below code is important to set font color at start
+        CasparCGDataCollection.Clear() 'cgData.Clear()
+        CasparCGDataCollection.SetData("fontcolor1", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B))
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayerscroll.Text), Int(cmblayerscroll.Text), CasparCGDataCollection)
 
     End Sub
+
     Private Sub cmdpausescroll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdpausescroll.Click
         On Error Resume Next
-        If nspeedscroll.Value <> 0 Then
-            tempspeed = nspeedscroll.Value
+        If paused = False Then
+            If nspeedscroll.Value <> 0 Then
+                tempspeed = nspeedscroll.Value
+            End If
+            nspeedscroll.Value = 0
+            paused = True
+        Else
+            On Error Resume Next
+            nspeedscroll.Value = tempspeed
+
+            CasparCGDataCollection.Clear()
+            CasparCGDataCollection.SetData("speed", nspeedscroll.Value)
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayerscroll.Text), Int(cmblayerscroll.Text), CasparCGDataCollection)
+            paused = False
         End If
 
-        nspeedscroll.Value = 0
     End Sub
 
-    Private Sub cmdresumescroll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdresumescroll.Click
-        On Error Resume Next
-        nspeedscroll.Value = tempspeed
-
-        CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("speed", nspeedscroll.Value)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayerscroll.Text), Int(cmblayerscroll.Text), CasparCGDataCollection)
+    Private Sub cmdresumescroll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
     Private Sub cmdselectallforscroll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdselectallforscroll.Click
@@ -241,19 +263,27 @@ Public Class ucScroll
     Sub setdataofscroll()
         On Error Resume Next
 
-        Dim str As String = ""
-        For jscroll = 0 To dgvscroll.Rows.Count - 1
-            If dgvscroll.Rows(jscroll).Cells(1).Value = 1 Then str = str + Replace(dgvscroll.Rows(jscroll).Cells(0).Value, vbLf, vbNullString) + txtdelemeterforscroll.Text
-        Next
+        'Dim str As String = ""
+        'For jscroll = 0 To dgvscroll.Rows.Count - 1
+        '    If dgvscroll.Rows(jscroll).Cells(1).Value = 1 Then str = str + Replace(dgvscroll.Rows(jscroll).Cells(0).Value, vbLf, vbNullString) + txtdelemeterforscroll.Text
+        'Next
 
         CasparCGDataCollection.Clear()
-        If chkCapitalise.Checked Then
-            CasparCGDataCollection.SetData("scrolldatacapitalised", str)
-        Else
-            CasparCGDataCollection.SetData("scrolldata", str)
-        End If
+
+
+        Dim ff As Integer = 0
+        For jscroll = 0 To dgvscroll.Rows.Count - 1
+            If dgvscroll.Rows(jscroll).Cells(1).Value = 1 And dgvscroll.Rows(jscroll).Cells(0).Value <> "" Then
+                CasparCGDataCollection.SetData("scrolldata" & ff, Replace(dgvscroll.Rows(jscroll).Cells(0).Value, vbNewLine, vbNullString) + txtdelemeterforscroll.Text)
+                ff = ff + 1
+            End If
+        Next
+        CasparCGDataCollection.SetData("n", ff)
 
         CasparCGDataCollection.SetData("loader1", picscrollbullet.ImageLocation)
+        'CasparCGDataCollection.SetData("fontcolor1", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B))
+        'CasparCGDataCollection.SetData("bordercolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdbordercolor.BackColor.R, cmdbordercolor.BackColor.G, cmdbordercolor.BackColor.B))
+
 
     End Sub
 
@@ -361,4 +391,57 @@ Public Class ucScroll
     Private Sub dgvscroll_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvscroll.DataError
         'dont delete it
     End Sub
+
+    Private Sub cmdstripcolor_Click(sender As Object, e As EventArgs) Handles cmdstripcolor.Click
+        On Error Resume Next
+        If (cd1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            cmdstripcolor.BackColor = cd1.Color
+            cmdcolor.BackColor = cd1.Color
+            CasparCGDataCollection.Clear() 'cgData.Clear()
+            CasparCGDataCollection.SetData("stripcolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B))
+
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayerscroll.Text), Int(cmblayerscroll.Text), CasparCGDataCollection)
+        End If
+    End Sub
+
+    Private Sub cmdcolor_Click(sender As Object, e As EventArgs) Handles cmdcolor.Click
+        On Error Resume Next
+        If (cd1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            cmdcolor.ForeColor = cd1.Color
+            cmdstripcolor.ForeColor = cd1.Color
+
+            CasparCGDataCollection.Clear() 'cgData.Clear()
+            CasparCGDataCollection.SetData("fontcolor1", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayerscroll.Text), Int(cmblayerscroll.Text), CasparCGDataCollection)
+
+        End If
+    End Sub
+
+    Private Sub cmdbordercolor_Click(sender As Object, e As EventArgs) Handles cmdbordercolor.Click
+        If (cd1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            'cmdcolor.ForeColor = cd1.Color
+            cmdbordercolor.BackColor = cd1.Color
+
+            CasparCGDataCollection.Clear() 'cgData.Clear()
+            CasparCGDataCollection.SetData("bordercolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cd1.Color.R, cd1.Color.G, cd1.Color.B))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayerscroll.Text), Int(cmblayerscroll.Text), CasparCGDataCollection)
+
+        End If
+    End Sub
+
+
+    Private Sub dgvscroll_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles dgvscroll.RowsAdded
+        updaterownumber()
+    End Sub
+
+    Private Sub dgvscroll_RowsRemoved(sender As Object, e As DataGridViewRowsRemovedEventArgs) Handles dgvscroll.RowsRemoved
+        updaterownumber()
+    End Sub
+    Sub updaterownumber()
+        On Error Resume Next
+        For irownumberupdate = 0 To dgvscroll.Rows.Count - 1
+            dgvscroll.Rows(irownumberupdate).HeaderCell.Value = irownumberupdate.ToString
+        Next
+    End Sub
+
 End Class

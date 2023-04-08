@@ -135,7 +135,7 @@ Partial Class ucSongSubtitling
         Me.gbSongSubtotling.Controls.Add(Me.cmdonelinesuperstop)
         Me.gbSongSubtotling.Location = New System.Drawing.Point(10, 52)
         Me.gbSongSubtotling.Name = "gbSongSubtotling"
-        Me.gbSongSubtotling.Size = New System.Drawing.Size(638, 859)
+        Me.gbSongSubtotling.Size = New System.Drawing.Size(638, 801)
         Me.gbSongSubtotling.TabIndex = 536
         Me.gbSongSubtotling.TabStop = False
         Me.gbSongSubtotling.Text = "OneLiner"
@@ -513,7 +513,7 @@ Partial Class ucSongSubtitling
         DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvonelinesuper.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.dgvonelinesuper.RowHeadersWidth = 25
-        Me.dgvonelinesuper.Size = New System.Drawing.Size(625, 727)
+        Me.dgvonelinesuper.Size = New System.Drawing.Size(625, 668)
         Me.dgvonelinesuper.TabIndex = 510
         '
         'DataGridViewTextBoxColumn3
@@ -678,7 +678,7 @@ Partial Class ucSongSubtitling
         Me.GroupBox4.Controls.Add(Me.cmdgotoin)
         Me.GroupBox4.Location = New System.Drawing.Point(4, 4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(712, 913)
+        Me.GroupBox4.Size = New System.Drawing.Size(712, 862)
         Me.GroupBox4.TabIndex = 637
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = " "
@@ -687,8 +687,9 @@ Partial Class ucSongSubtitling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(722, 922)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.GroupBox4)
         Me.HideOnClose = True
         Me.Name = "ucSongSubtitling"

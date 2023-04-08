@@ -25,9 +25,6 @@ Partial Class ucPowerPoint
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucPowerPoint))
         Me.gbPowerPoint = New System.Windows.Forms.GroupBox()
-        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
-        Me.rdopng = New System.Windows.Forms.RadioButton()
-        Me.rdojpg = New System.Windows.Forms.RadioButton()
         Me.cmdstoppowerpointoutput = New System.Windows.Forms.Button()
         Me.cmdstarPowerPointoutput = New System.Windows.Forms.Button()
         Me.Label123 = New System.Windows.Forms.Label()
@@ -50,7 +47,6 @@ Partial Class ucPowerPoint
         Me.txtpowerpointreame = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.gbPowerPoint.SuspendLayout()
-        Me.GroupBox10.SuspendLayout()
         CType(Me.ntransitiondurationforppt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panelpowerpoint.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,7 +55,6 @@ Partial Class ucPowerPoint
         'gbPowerPoint
         '
         Me.gbPowerPoint.BackColor = System.Drawing.Color.Yellow
-        Me.gbPowerPoint.Controls.Add(Me.GroupBox10)
         Me.gbPowerPoint.Controls.Add(Me.cmdstoppowerpointoutput)
         Me.gbPowerPoint.Controls.Add(Me.cmdstarPowerPointoutput)
         Me.gbPowerPoint.Controls.Add(Me.Label123)
@@ -85,39 +80,6 @@ Partial Class ucPowerPoint
         Me.gbPowerPoint.TabIndex = 538
         Me.gbPowerPoint.TabStop = False
         Me.gbPowerPoint.Text = " "
-        '
-        'GroupBox10
-        '
-        Me.GroupBox10.Controls.Add(Me.rdopng)
-        Me.GroupBox10.Controls.Add(Me.rdojpg)
-        Me.GroupBox10.Location = New System.Drawing.Point(999, -1)
-        Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.Size = New System.Drawing.Size(63, 48)
-        Me.GroupBox10.TabIndex = 716
-        Me.GroupBox10.TabStop = False
-        '
-        'rdopng
-        '
-        Me.rdopng.AutoSize = True
-        Me.rdopng.Location = New System.Drawing.Point(7, 25)
-        Me.rdopng.Name = "rdopng"
-        Me.rdopng.Size = New System.Drawing.Size(43, 17)
-        Me.rdopng.TabIndex = 1
-        Me.rdopng.TabStop = True
-        Me.rdopng.Text = "png"
-        Me.rdopng.UseVisualStyleBackColor = True
-        '
-        'rdojpg
-        '
-        Me.rdojpg.AutoSize = True
-        Me.rdojpg.Checked = True
-        Me.rdojpg.Location = New System.Drawing.Point(7, 7)
-        Me.rdojpg.Name = "rdojpg"
-        Me.rdojpg.Size = New System.Drawing.Size(39, 17)
-        Me.rdojpg.TabIndex = 0
-        Me.rdojpg.TabStop = True
-        Me.rdojpg.Text = "jpg"
-        Me.rdojpg.UseVisualStyleBackColor = True
         '
         'cmdstoppowerpointoutput
         '
@@ -298,6 +260,7 @@ Partial Class ucPowerPoint
         '
         'Panelpowerpoint
         '
+        Me.Panelpowerpoint.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.Panelpowerpoint.Controls.Add(Me.txtpowerpointreame)
         Me.Panelpowerpoint.Controls.Add(Me.PictureBox1)
         Me.Panelpowerpoint.Location = New System.Drawing.Point(11, 49)
@@ -329,16 +292,15 @@ Partial Class ucPowerPoint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1194, 880)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gbPowerPoint)
         Me.HideOnClose = True
         Me.Name = "ucPowerPoint"
         Me.Text = "Power Point to Casparcg"
         Me.gbPowerPoint.ResumeLayout(False)
         Me.gbPowerPoint.PerformLayout()
-        Me.GroupBox10.ResumeLayout(False)
-        Me.GroupBox10.PerformLayout()
         CType(Me.ntransitiondurationforppt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panelpowerpoint.ResumeLayout(False)
         Me.Panelpowerpoint.PerformLayout()
@@ -347,9 +309,6 @@ Partial Class ucPowerPoint
 
     End Sub
     Friend WithEvents gbPowerPoint As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
-    Friend WithEvents rdopng As System.Windows.Forms.RadioButton
-    Friend WithEvents rdojpg As System.Windows.Forms.RadioButton
     Friend WithEvents Label123 As System.Windows.Forms.Label
     Friend WithEvents cmbdirectionforppt As System.Windows.Forms.ComboBox
     Friend WithEvents Label124 As System.Windows.Forms.Label

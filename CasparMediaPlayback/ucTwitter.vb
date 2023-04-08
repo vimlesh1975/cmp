@@ -1,5 +1,6 @@
-﻿Imports LinqToTwitter
+﻿
 Imports System.ComponentModel
+Imports LinqToTwitter
 Imports TweetSharp
 
 Public Class ucTwitter
@@ -33,14 +34,14 @@ Public Class ucTwitter
     Private Sub bwtwitterscreenname_DoWork(sender As Object, e As DoWorkEventArgs) Handles bwtwitterscreenname.DoWork
         ' Try
         dgvtwitter.Rows.Clear()
-            dgvtwitter.RowTemplate.Height = 75
+        dgvtwitter.RowTemplate.Height = 75
 
-            Dim oCredential As New InMemoryCredentials
-            oCredential.ConsumerKey = txtConsumerkey.Text
-            oCredential.ConsumerSecret = txtConsumersecret.Text
+        Dim oCredential As New InMemoryCredentials
+        oCredential.ConsumerKey = txtConsumerkey.Text
+        oCredential.ConsumerSecret = txtConsumersecret.Text
 
         '*** Use application-only authentication to connect to Twitter. ***
-        Dim oAuthorizer As New ApplicationOnlyAuthorizer With {
+        Dim oAuthorizer = New ApplicationOnlyAuthorizer With {
             .Credentials = oCredential
         }
         oAuthorizer.Authorize()

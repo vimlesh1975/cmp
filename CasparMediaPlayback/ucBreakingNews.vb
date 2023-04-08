@@ -1,4 +1,8 @@
 ﻿Imports System.IO
+
+Imports MySql.Data.MySqlClient
+Imports System.Data
+Imports System.Data.SqlClient
 Public Class ucBreakingNews
     Dim ibreakingnews As Integer
     Dim jbreakingnews As Integer
@@ -10,6 +14,15 @@ Public Class ucBreakingNews
     Dim ar4() As String
     Dim ar5() As String
     Dim ar6() As String
+
+    Dim flash As Integer
+    Dim ff As Integer = 1
+
+    Dim conn
+    Dim servertype As String
+
+
+
     Private Sub cmdhidebreakingnews_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
@@ -17,7 +30,12 @@ Public Class ucBreakingNews
         MakeMenuDropDownWhenParrented(sender)
     End Sub
     Private Sub ucBreakingNews_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        initialisebreakingnewsdata()
+        If ff = 1 Then
+            initialisebreakingnewsdata()
+            ff = 2
+        End If
+
+
     End Sub
     Sub initialisebreakingnewsdata()
         On Error Resume Next
@@ -45,11 +63,13 @@ Public Class ucBreakingNews
     End Sub
     Private Sub cmdplaybreakingnews_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdplaybreakingnews.Click
         On Error Resume Next
+        flash = 1
         makearray()
         setdataofbreakingnews()
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), txtbnTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
         tmrshowdata.Interval = Val(txtbreakingnewsupdateinterval.Text)
         tmrshowdata.Enabled = True
+
     End Sub
     Private Sub cmdbreakingnewsselectall_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdbreakingnewsselectall.Click
         On Error Resume Next
@@ -76,14 +96,27 @@ Public Class ucBreakingNews
         Dim ar5(dgvbreakingnews.Rows.Count - 1) As String
 
         For Me.ibreakingnews = 0 To dgvbreakingnews.Rows.Count - 1
-            If dgvbreakingnews.Rows(ibreakingnews).Cells(1).Value = 1 Then
+            If chkusecurrentstory.Checked Then
+                If dgvbreakingnews.Rows(ibreakingnews).Cells(1).Value = 1 And dgvbreakingnews.Rows(ibreakingnews).Cells(4).Value = txtcurrentstory.Text Then
 
-                ar1(jbreakingnews) = dgvbreakingnews.Rows(ibreakingnews).Cells(0).Value
-                ar3(jbreakingnews) = dgvbreakingnews.Rows(ibreakingnews).Cells(2).Value
-                ar5(jbreakingnews) = dgvbreakingnews.Rows(ibreakingnews).Cells(3).Value
+                    ar1(jbreakingnews) = dgvbreakingnews.Rows(ibreakingnews).Cells(0).Value
+                    ar3(jbreakingnews) = dgvbreakingnews.Rows(ibreakingnews).Cells(2).Value
+                    ar5(jbreakingnews) = dgvbreakingnews.Rows(ibreakingnews).Cells(3).Value
 
-                jbreakingnews = jbreakingnews + 1
+                    jbreakingnews = jbreakingnews + 1
+                End If
+            Else
+                If dgvbreakingnews.Rows(ibreakingnews).Cells(1).Value = 1 Then
+
+                    ar1(jbreakingnews) = dgvbreakingnews.Rows(ibreakingnews).Cells(0).Value
+                    ar3(jbreakingnews) = dgvbreakingnews.Rows(ibreakingnews).Cells(2).Value
+                    ar5(jbreakingnews) = dgvbreakingnews.Rows(ibreakingnews).Cells(3).Value
+
+                    jbreakingnews = jbreakingnews + 1
+                End If
             End If
+
+
         Next
         ar2 = ar1
         ar4 = ar3
@@ -94,13 +127,19 @@ Public Class ucBreakingNews
         On Error Resume Next
         setdataofbreakingnews()
         'CasparDevice.Channels(cmbchannel.Text-1).CG.Invoke(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), "loop")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), CasparCGDataCollection)
 
+        If flash = 1 Then
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), CasparCGDataCollection)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerbreakingnews.Text & " gwd.actions.timeline.gotoAndPlay('document.body','loop')")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerbreakingnews.Text & " updatestring('" & replacestring1("ccgf0") & "','" & replacestring1(ar2(kbreakingnews)) & "')")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerbreakingnews.Text & " updatestring('" & replacestring1("ccgf1") & "','" & replacestring1(ar4(kbreakingnews)) & "')")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerbreakingnews.Text & " stf('" & replacestring1("ccgf0") & "')")
+        Else
+
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerbreakingnews.Text & " gwd.actions.timeline.gotoAndPlay('document.body','loop')")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerbreakingnews.Text & " updatestring('" & replacestring1("ccgf0") & "','" & replacestring1(ar2(kbreakingnews)) & "')")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerbreakingnews.Text & " updatestring('" & replacestring1("ccgf1") & "','" & replacestring1(ar4(kbreakingnews)) & "')")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerbreakingnews.Text & " stf('" & replacestring1("ccgf0") & "')")
+
+        End If
+
 
     End Sub
 
@@ -390,6 +429,7 @@ Public Class ucBreakingNews
 
     Private Sub cmdPlayHTML_Click(sender As Object, e As EventArgs) Handles cmdPlayHTML.Click
         On Error Resume Next
+        flash = 0
         makearray()
         setdataofbreakingnews()
         tmrshowdata.Interval = Val(txtbreakingnewsupdateinterval.Text)
@@ -412,5 +452,47 @@ Public Class ucBreakingNews
 
     Private Sub dgvbreakingnews_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvbreakingnews.DataError
         'dont delete
+    End Sub
+
+    Private Sub txtcurrentstory_TextChanged(sender As Object, e As EventArgs) Handles txtcurrentstory.TextChanged
+        On Error Resume Next
+        makearray()
+    End Sub
+
+    Private Sub tmrsn_Tick(sender As Object, e As EventArgs) Handles tmrsn.Tick
+        Try
+            conn = New MySqlConnection With {
+                       .ConnectionString = "server=" & txtservermysql.Text & ";user=" & txtusemysql.Text & ";database=" & txtdatabasemysql.Text & ";port=" & txtport.Text & ";password=" & txtpasswordMysql.Text
+                 }
+            servertype = "MySql"
+            Dim adp
+            conn.Open()
+            adp = New MySqlDataAdapter(txtcommand.Text, CType(conn, MySqlConnection))
+            Dim ds As DataSet = New DataSet()
+            adp.Fill(ds)
+            'dgvContents.DataSource = ds.Tables(0)
+            txtcurrentstory.Text = ds.Tables(0).Rows(0).Item(0)
+            conn.Close()
+        Catch ex As Exception
+            ' MsgBox(ex.ToString())
+        End Try
+
+
+    End Sub
+
+
+    Private Sub cmdSetServerMySql_Click(sender As Object, e As EventArgs)
+
+
+    End Sub
+
+
+    Private Sub chkusecurrentstory_CheckedChanged(sender As Object, e As EventArgs) Handles chkusecurrentstory.CheckedChanged
+        If chkusecurrentstory.Checked Then
+            tmrsn.Enabled = True
+        Else
+            tmrsn.Enabled = False
+        End If
+        makearray()
     End Sub
 End Class

@@ -24,13 +24,13 @@ Partial Class ucPreview
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucPreview))
         Me.gbpreview = New System.Windows.Forms.GroupBox()
+        Me.vlcpreview = New Vlc.DotNet.Forms.VlcControl()
         Me.cmbippreview = New System.Windows.Forms.ComboBox()
         Me.cmdWaveformluma = New System.Windows.Forms.Button()
         Me.cmdpreviewkey = New System.Windows.Forms.Button()
         Me.txtoptionspreview = New System.Windows.Forms.TextBox()
         Me.cmdremovepreview = New System.Windows.Forms.Button()
         Me.cmdpreview = New System.Windows.Forms.Button()
-        Me.vlcpreview = New Vlc.DotNet.Forms.VlcControl()
         Me.gbpreview.SuspendLayout()
         CType(Me.vlcpreview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,6 +50,18 @@ Partial Class ucPreview
         Me.gbpreview.Size = New System.Drawing.Size(596, 446)
         Me.gbpreview.TabIndex = 1168
         Me.gbpreview.TabStop = False
+        '
+        'vlcpreview
+        '
+        Me.vlcpreview.BackColor = System.Drawing.Color.Black
+        Me.vlcpreview.Location = New System.Drawing.Point(3, 47)
+        Me.vlcpreview.Name = "vlcpreview"
+        Me.vlcpreview.Size = New System.Drawing.Size(588, 396)
+        Me.vlcpreview.Spu = -1
+        Me.vlcpreview.TabIndex = 1174
+        Me.vlcpreview.Text = "VlcControl1"
+        Me.vlcpreview.VlcLibDirectory = CType(resources.GetObject("vlcpreview.VlcLibDirectory"), System.IO.DirectoryInfo)
+        Me.vlcpreview.VlcMediaplayerOptions = Nothing
         '
         'cmbippreview
         '
@@ -106,18 +118,6 @@ Partial Class ucPreview
         Me.cmdpreview.TabIndex = 1167
         Me.cmdpreview.Text = "Preview Fill"
         Me.cmdpreview.UseVisualStyleBackColor = True
-        '
-        'vlcpreview
-        '
-        Me.vlcpreview.BackColor = System.Drawing.Color.Black
-        Me.vlcpreview.Location = New System.Drawing.Point(3, 47)
-        Me.vlcpreview.Name = "vlcpreview"
-        Me.vlcpreview.Size = New System.Drawing.Size(588, 396)
-        Me.vlcpreview.Spu = -1
-        Me.vlcpreview.TabIndex = 1174
-        Me.vlcpreview.Text = "VlcControl1"
-        Me.vlcpreview.VlcLibDirectory = CType(resources.GetObject("vlcpreview.VlcLibDirectory"), System.IO.DirectoryInfo)
-        Me.vlcpreview.VlcMediaplayerOptions = Nothing
         '
         'ucPreview
         '

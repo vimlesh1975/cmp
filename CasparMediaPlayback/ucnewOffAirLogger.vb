@@ -165,14 +165,14 @@ Public Class ucnewOffAirLogger
             Dim f As New FileInfo(lblrecordingfilenameoal.Text)
             Dim recoreddurationoal As TimeSpan = Now - startingtimeofrecordingoal
             lblRecordeddurationoal.Text = recoreddurationoal.ToString("hh\:mm\:ss")
-            lblRecordedSizeoal.Text = f.Length / 1000000 & " MB"
+            lblRecordedSizeoal.Text = (f.Length / 1000000) & " MB"
         Else
             lblRecordeddurationoal.Text = "Not Recording"
             lblRecordedSizeoal.Text = "Not Recording"
         End If
-        lblfreespaceoal.Text = My.Computer.FileSystem.GetDriveInfo(Mid(mediafullpath, 1, 2)).TotalFreeSpace / 1000000000 & " GB"
-        lbltotalsizeoal.Text = My.Computer.FileSystem.GetDriveInfo(Mid(mediafullpath, 1, 2)).TotalSize / 1000000000 & " GB"
-        lblEstimateddaysvalueoal.Text = Format(Val(lblfreespaceoal.Text) / (10.8 * Val(txtbitrateofl.Text)), "000.0") & " Days"
+        lblfreespaceoal.Text = Int(My.Computer.FileSystem.GetDriveInfo(Mid(mediafullpath, 1, 2)).TotalFreeSpace / 1000000000) & " GB"
+        lbltotalsizeoal.Text = Int(My.Computer.FileSystem.GetDriveInfo(Mid(mediafullpath, 1, 2)).TotalSize / 1000000000) & " GB"
+        lblEstimateddaysvalueoal.Text = (Format(Val(lblfreespaceoal.Text) / (10.8 * Val(txtbitrateofl.Text)), "000.0")) & " Days"
     End Sub
     Dim startingtimeofrecordingoal As DateTime
     Sub recordoal()
@@ -243,10 +243,11 @@ Public Class ucnewOffAirLogger
     Private Sub chkshowtimeofl_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkshowtimeofl.CheckedChanged
         On Error Resume Next
         If chkshowtimeofl.Checked Then
-            Dim str As String = "cg " & ichannel & " add 21 " & "CMP/off_air_logger_clock/off_air_logger_clock 1"
+            ' Dim str As String = "cg " & ichannel & " add 21 " & "CMP/off_air_logger_clock/off_air_logger_clock 1"
+            Dim str As String = "play " & ichannel & "-21 [html] " & "c:/casparcg/CMP/off_air_logger_clock/clock_html.html"
             CasparDevice.SendString(str)
         Else
-            Dim str As String = "cg " & ichannel & " stop 21"
+            Dim str As String = "stop " & ichannel & "-21"
             CasparDevice.SendString(str)
         End If
 
@@ -322,7 +323,7 @@ Public Class ucnewOffAirLogger
 
     Private Sub cmdshowcasparcgwindowrecording_Click(sender As Object, e As EventArgs) Handles cmdshowcasparcgwindowrecording.Click
         On Error Resume Next
-        SetProcessParentrecorder("casparcg", cmbcasparcgwindowtitlerecording, pnlrecording)
+        SetProcessParentrecorder("casparcg", cmbscreenConsumres, pnlrecording)
 
     End Sub
     Public parentedProcess1 As Process
@@ -347,6 +348,9 @@ Public Class ucnewOffAirLogger
     End Sub
 
     Private Sub ucnewOffAirLogger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        cmbscreenConsumres.DataSource = New BindingSource(screenConsumres, "")
+
         initialisedataforshedulerecording()
         Me.dtpoal.CustomFormat = "yyyyMMddHHmmss"
         Me.dtpdeleteoal.CustomFormat = "yyyyMMddHHmmss"
@@ -415,5 +419,9 @@ Public Class ucnewOffAirLogger
     Private Sub CmdShowInfo_Click(sender As Object, e As EventArgs) Handles cmdShowInfo.Click
         On Error Resume Next
         showfileinformation(lblrecordingfilenameoal.Text)
+    End Sub
+
+    Private Sub gboffairlogger_Enter(sender As Object, e As EventArgs) Handles gboffairlogger.Enter
+
     End Sub
 End Class

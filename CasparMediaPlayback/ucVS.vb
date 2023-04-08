@@ -338,4 +338,49 @@ Public Class ucVS
         CasparCGDataCollection.SetData("bordercolor", lblcolorborderV.Text)
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayervs.Text), Int(cmblayervs.Text), CasparCGDataCollection)
     End Sub
+
+    Private Sub ucVS_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+
+        If e.KeyCode = Keys.F1 Then
+            If nspeedV.Value > 0 Then nspeedV.Value = 0
+            nspeedV.Value = nspeedV.Value - Val(txtspeedchangevalue.Text)
+        End If
+            If e.KeyCode = Keys.F2 Then
+            If nspeedV.Value < 0 Then nspeedV.Value = 0
+            nspeedV.Value = nspeedV.Value + Val(txtspeedchangevalue.Text)
+        End If
+            If e.KeyCode = Keys.F5 Then
+            vsnextitem()
+        End If
+            If e.KeyCode = Keys.F6 Then
+            vspreviousitem()
+        End If
+            If e.KeyCode = Keys.F7 Then
+                CasparCGDataCollection.Clear() 'cgData.Clear()
+                CasparCGDataCollection.SetData("speed", "0") 'pause
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayervs.Text), Int(cmblayervs.Text), CasparCGDataCollection)
+        End If
+            If e.KeyCode = Keys.F11 Then
+            vsfirstitem()
+        End If
+            If e.KeyCode = Keys.F13 Then
+            vslastitem()
+        End If
+            If e.KeyCode = Keys.F14 Then
+            crawlv() ' start
+        End If
+            If e.KeyCode = Keys.F15 Then
+                CasparCGDataCollection.Clear() 'cgData.Clear()
+            CasparCGDataCollection.SetData("speed", nspeedV.Value) ' resume
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayervs.Text), Int(cmblayervs.Text), CasparCGDataCollection)
+        End If
+
+            If e.KeyCode = Keys.Up Then
+            nspeedV.Value = nspeedV.Value + Val(txtspeedchangevalue.Text)
+        End If
+            If e.KeyCode = Keys.Down Then
+            nspeedV.Value = nspeedV.Value - Val(txtspeedchangevalue.Text)
+        End If
+
+    End Sub
 End Class

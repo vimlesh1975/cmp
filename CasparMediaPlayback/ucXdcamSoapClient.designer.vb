@@ -168,14 +168,14 @@ Partial Class ucXdcamSoapClient
         Me.cdmEject = New System.Windows.Forms.Button()
         Me.cmdShutDown = New System.Windows.Forms.Button()
         Me.Settings = New System.Windows.Forms.TabPage()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.txtipaddress = New System.Windows.Forms.TextBox()
         Me.cmbMappedDriveName = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.txtipaddress = New System.Windows.Forms.TextBox()
         Me.Help = New System.Windows.Forms.TabPage()
         Me.MoreInfo = New System.Windows.Forms.TabPage()
         Me.Recorder = New System.Windows.Forms.TabPage()
@@ -226,7 +226,7 @@ Partial Class ucXdcamSoapClient
         '
         'cmdgetclipnames
         '
-        Me.cmdgetclipnames.Location = New System.Drawing.Point(112, 491)
+        Me.cmdgetclipnames.Location = New System.Drawing.Point(112, 457)
         Me.cmdgetclipnames.Name = "cmdgetclipnames"
         Me.cmdgetclipnames.Size = New System.Drawing.Size(75, 23)
         Me.cmdgetclipnames.TabIndex = 5
@@ -254,14 +254,13 @@ Partial Class ucXdcamSoapClient
         '
         'tmrGetTC
         '
-        Me.tmrGetTC.Enabled = True
         '
         'dgvclips
         '
         Me.dgvclips.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvclips.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClipName, Me.Duration, Me.UMMID, Me.StartTimeCode, Me.Thumbnail})
         Me.dgvclips.ContextMenuStrip = Me.cmsdgvclips
-        Me.dgvclips.Location = New System.Drawing.Point(3, 517)
+        Me.dgvclips.Location = New System.Drawing.Point(3, 483)
         Me.dgvclips.Name = "dgvclips"
         Me.dgvclips.Size = New System.Drawing.Size(577, 211)
         Me.dgvclips.TabIndex = 1281
@@ -411,7 +410,7 @@ Partial Class ucXdcamSoapClient
         '
         Me.cmbClipDrive.FormattingEnabled = True
         Me.cmbClipDrive.Items.AddRange(New Object() {"InternalDrive", "SxS_A", "SxS_B", "PD_ProAV", "PD_BPAV", "PD_XDROOT", "USBDrive"})
-        Me.cmbClipDrive.Location = New System.Drawing.Point(190, 493)
+        Me.cmbClipDrive.Location = New System.Drawing.Point(190, 459)
         Me.cmbClipDrive.Name = "cmbClipDrive"
         Me.cmbClipDrive.Size = New System.Drawing.Size(86, 21)
         Me.cmbClipDrive.TabIndex = 1294
@@ -601,7 +600,7 @@ Partial Class ucXdcamSoapClient
         Me.dgv1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.dgv1.Location = New System.Drawing.Point(5, 136)
         Me.dgv1.Name = "dgv1"
-        Me.dgv1.Size = New System.Drawing.Size(575, 331)
+        Me.dgv1.Size = New System.Drawing.Size(575, 318)
         Me.dgv1.TabIndex = 1317
         '
         'DataGridViewTextBoxColumn1
@@ -898,7 +897,7 @@ Partial Class ucXdcamSoapClient
         'cmdCueFromClipGrid
         '
         Me.cmdCueFromClipGrid.Image = CType(resources.GetObject("cmdCueFromClipGrid.Image"), System.Drawing.Image)
-        Me.cmdCueFromClipGrid.Location = New System.Drawing.Point(541, 734)
+        Me.cmdCueFromClipGrid.Location = New System.Drawing.Point(541, 697)
         Me.cmdCueFromClipGrid.Name = "cmdCueFromClipGrid"
         Me.cmdCueFromClipGrid.Size = New System.Drawing.Size(39, 30)
         Me.cmdCueFromClipGrid.TabIndex = 1327
@@ -918,7 +917,7 @@ Partial Class ucXdcamSoapClient
         'chkThumbnail
         '
         Me.chkThumbnail.AutoSize = True
-        Me.chkThumbnail.Location = New System.Drawing.Point(413, 496)
+        Me.chkThumbnail.Location = New System.Drawing.Point(413, 462)
         Me.chkThumbnail.Name = "chkThumbnail"
         Me.chkThumbnail.Size = New System.Drawing.Size(75, 17)
         Me.chkThumbnail.TabIndex = 1323
@@ -939,7 +938,7 @@ Partial Class ucXdcamSoapClient
         'lblClips
         '
         Me.lblClips.AutoSize = True
-        Me.lblClips.Location = New System.Drawing.Point(331, 497)
+        Me.lblClips.Location = New System.Drawing.Point(331, 463)
         Me.lblClips.Name = "lblClips"
         Me.lblClips.Size = New System.Drawing.Size(58, 13)
         Me.lblClips.TabIndex = 1328
@@ -1299,7 +1298,7 @@ Partial Class ucXdcamSoapClient
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(277, 497)
+        Me.Label3.Location = New System.Drawing.Point(277, 463)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 13)
         Me.Label3.TabIndex = 1338
@@ -1501,6 +1500,9 @@ Partial Class ucXdcamSoapClient
         '
         'Settings
         '
+        Me.Settings.Controls.Add(Me.txtPassword)
+        Me.Settings.Controls.Add(Me.txtUsername)
+        Me.Settings.Controls.Add(Me.txtipaddress)
         Me.Settings.Controls.Add(Me.chkTimeLinePlayBackMethod)
         Me.Settings.Controls.Add(Me.cmbMappedDriveName)
         Me.Settings.Controls.Add(Me.Label10)
@@ -1509,9 +1511,6 @@ Partial Class ucXdcamSoapClient
         Me.Settings.Controls.Add(Me.Label8)
         Me.Settings.Controls.Add(Me.Label7)
         Me.Settings.Controls.Add(Me.cmdSetXdcam)
-        Me.Settings.Controls.Add(Me.txtPassword)
-        Me.Settings.Controls.Add(Me.txtUsername)
-        Me.Settings.Controls.Add(Me.txtipaddress)
         Me.Settings.Location = New System.Drawing.Point(4, 22)
         Me.Settings.Name = "Settings"
         Me.Settings.Padding = New System.Windows.Forms.Padding(3)
@@ -1519,6 +1518,33 @@ Partial Class ucXdcamSoapClient
         Me.Settings.TabIndex = 1
         Me.Settings.Text = "Settings"
         Me.Settings.UseVisualStyleBackColor = True
+        '
+        'txtPassword
+        '
+        Me.txtPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "xdcampassword", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.txtPassword.Location = New System.Drawing.Point(112, 79)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(208, 20)
+        Me.txtPassword.TabIndex = 1356
+        Me.txtPassword.Text = Global.caspar_media_playback.My.MySettings.Default.xdcampassword
+        '
+        'txtUsername
+        '
+        Me.txtUsername.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "xdcamusername", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.txtUsername.Location = New System.Drawing.Point(110, 53)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(208, 20)
+        Me.txtUsername.TabIndex = 1355
+        Me.txtUsername.Text = Global.caspar_media_playback.My.MySettings.Default.xdcamusername
+        '
+        'txtipaddress
+        '
+        Me.txtipaddress.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "xdcamaddress1", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.txtipaddress.Location = New System.Drawing.Point(110, 27)
+        Me.txtipaddress.Name = "txtipaddress"
+        Me.txtipaddress.Size = New System.Drawing.Size(208, 20)
+        Me.txtipaddress.TabIndex = 1354
+        Me.txtipaddress.Text = Global.caspar_media_playback.My.MySettings.Default.xdcamaddress1
         '
         'cmbMappedDriveName
         '
@@ -1566,33 +1592,6 @@ Partial Class ucXdcamSoapClient
         Me.Label7.TabIndex = 1348
         Me.Label7.Text = "Xdcam Address"
         '
-        'txtPassword
-        '
-        Me.txtPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "xdcampassword", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.txtPassword.Location = New System.Drawing.Point(110, 76)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(208, 20)
-        Me.txtPassword.TabIndex = 1343
-        Me.txtPassword.Text = Global.caspar_media_playback.My.MySettings.Default.xdcampassword
-        '
-        'txtUsername
-        '
-        Me.txtUsername.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "xdcamusername", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.txtUsername.Location = New System.Drawing.Point(108, 50)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(208, 20)
-        Me.txtUsername.TabIndex = 1342
-        Me.txtUsername.Text = Global.caspar_media_playback.My.MySettings.Default.xdcamusername
-        '
-        'txtipaddress
-        '
-        Me.txtipaddress.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "xdcamaddress", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.txtipaddress.Location = New System.Drawing.Point(108, 24)
-        Me.txtipaddress.Name = "txtipaddress"
-        Me.txtipaddress.Size = New System.Drawing.Size(208, 20)
-        Me.txtipaddress.TabIndex = 1341
-        Me.txtipaddress.Text = Global.caspar_media_playback.My.MySettings.Default.xdcamaddress
-        '
         'Help
         '
         Me.Help.Controls.Add(Me.lblnote)
@@ -1628,7 +1627,7 @@ Partial Class ucXdcamSoapClient
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(9, 493)
+        Me.txtSearch.Location = New System.Drawing.Point(9, 459)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(100, 20)
         Me.txtSearch.TabIndex = 1346
@@ -1639,7 +1638,7 @@ Partial Class ucXdcamSoapClient
         '
         'cmdGetThumbNail
         '
-        Me.cmdGetThumbNail.Location = New System.Drawing.Point(494, 492)
+        Me.cmdGetThumbNail.Location = New System.Drawing.Point(494, 458)
         Me.cmdGetThumbNail.Name = "cmdGetThumbNail"
         Me.cmdGetThumbNail.Size = New System.Drawing.Size(86, 23)
         Me.cmdGetThumbNail.TabIndex = 1347
@@ -1762,7 +1761,7 @@ Partial Class ucXdcamSoapClient
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1228, 777)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.GroupBox1)
         Me.HideOnClose = True
         Me.Name = "ucXdcamSoapClient"
@@ -1900,9 +1899,6 @@ Partial Class ucXdcamSoapClient
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents lblMoreInfo As System.Windows.Forms.Label
     Friend WithEvents lblMoreInfo2 As System.Windows.Forms.Label
-    Friend WithEvents txtipaddress As System.Windows.Forms.TextBox
-    Friend WithEvents txtUsername As System.Windows.Forms.TextBox
-    Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents cmdSetXdcam As System.Windows.Forms.Button
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents Trimmer As System.Windows.Forms.TabPage
@@ -1968,4 +1964,7 @@ Partial Class ucXdcamSoapClient
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents txtipaddress As TextBox
 End Class

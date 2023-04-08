@@ -72,6 +72,8 @@ Public Class frmmediaplayer
     'ucVlcStreamTester1.DockAreas = WeifenLuo.WinFormsUI.Docking.DockAreas.Document
 
     Friend WithEvents UcCommandScheduler1 As DockContent = UcCommandScheduler
+    Friend WithEvents UcCommandSchedulerDateWise1 As DockContent = UcCommandSchedulerDateWise
+
     Friend WithEvents ucOSD1 As DockContent = ucOSD
     Friend WithEvents ucdBFSMeter1 As DockContent = ucdBFSMeter
     Friend WithEvents ucMySqlTest1 As DockContent = ucMySqlTest
@@ -95,9 +97,13 @@ Public Class frmmediaplayer
     Friend WithEvents ucMAM1 As DockContent = ucMAM
     Friend WithEvents ucSongSubtitling1 As DockContent = ucSongSubtitling
     Friend WithEvents Form11 As DockContent = Form1
+    Friend WithEvents ucTemplatePlaylist1 As DockContent = ucTemplatePlaylist
+    Friend WithEvents ucytlive1 As DockContent = ucytlive
+    Friend WithEvents ucRCCAutomation1 As DockContent = ucRCCAutomation
+    Friend WithEvents ucRccBall1 As DockContent = ucRccBall
 
     Public Sub animation1()
-        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & ucTemplate.cmblayertemplate.Text & " fill -1 0 1 1 50 " & "easeoutexpo")
+        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & ucTemplate.cmblayertemplate.Text & " fill -1 0 1 1")
     End Sub
     Public Sub animationtoscreen()
         If ucCG2.chkanimationforhdvancg2.Checked Then
@@ -133,7 +139,7 @@ Public Class frmmediaplayer
     End Sub
     Sub connecttocasparcg()
         On Error Resume Next
-        CasparDevice.Settings.Hostname = cmbhost.Text
+        CasparDevice.Settings.Hostname = Trim(cmbhost.Text)
         CasparDevice.Settings.Port = txtport.Text  '
         Dim client As New TcpClient
         If CasparDevice.IsConnected = False Then
@@ -185,7 +191,7 @@ Public Class frmmediaplayer
 
         Dim returndata As String = ""
         'If Mid(lblserverversion.Text, 1, 3) = "2.2" Or Mid(lblserverversion.Text, 1, 3) = "2.3" Then
-        If ServerVersion > 2.1 Then
+        If ServerVersion = 2.2 Then
             Dim xmldoc As New System.Xml.XmlDocument()
             Dim xmlnode As System.Xml.XmlNodeList
             Dim fs As New FileStream(Path.GetDirectoryName(GetPathToApp(System.Diagnostics.Process.GetProcessesByName("casparcg")(0))) & "\" & "casparcg.config", FileMode.Open, FileAccess.Read)
@@ -203,13 +209,13 @@ Public Class frmmediaplayer
 
         Dim a As Array = Split(returndata, "<media-path>")
         Dim b As Array = Split(a(1), "</media-path>")
-        mediapath = b(0)
+        mediapath = Replace(b(0), "\/", "/")
 
         Dim c As Array = Split(returndata, "<template-path>")
         Dim d As Array = Split(c(1), "</template-path>")
-        templatepath = d(0)
+        templatepath = Replace(d(0), "\/", "/")
 
-        If Mid(lblserverversion.Text, 1, 3) = "2.2" Or Mid(lblserverversion.Text, 1, 3) = "2.3" Then
+        If ServerVersion = 2.2 Then
             initialpath = Path.GetDirectoryName(GetPathToApp(System.Diagnostics.Process.GetProcessesByName("casparcg")(0))) & "/"
         Else
             Dim e As Array = Split(returndata, "<initial-path>")
@@ -294,16 +300,6 @@ Public Class frmmediaplayer
         uc4ChannelRecorderAndTrimmer.UcnewRecorder3.lblRecordingFolder.Text = mediafullpath
         uc4ChannelRecorderAndTrimmer.UcnewRecorder4.lblRecordingFolder.Text = mediafullpath
 
-
-
-        'ucUtility1.dgvutility.Rows(0).Cells(1).Value = mediafullpath
-        'ucUtility1.dgvutility.Rows(1).Cells(1).Value = templatefullpath
-        'ucUtility1.dgvutility.Rows(2).Cells(1).Value = thumbnailsfullpath
-        'ucUtility1.dgvutility.Rows(3).Cells(1).Value = initialpath
-        'ucUtility1.dgvutility.Rows(4).Cells(1).Value = logpath
-        'ucUtility1.dgvutility.Rows(5).Cells(1).Value = datapath
-
-        'ucUtility1.dgvutility.Rows(7).Cells(1).Value = fontpath
         With ucTab1
             .UcUtility1.dgvutility.Rows(0).Cells(1).Value = mediafullpath
             .UcUtility1.dgvutility.Rows(1).Cells(1).Value = templatefullpath
@@ -387,7 +383,7 @@ Public Class frmmediaplayer
         End If
         Control.CheckForIllegalCrossThreadCalls = False
         AddHandler CasparDevice.ConnectionStatusChanged, AddressOf connectionhandler
-        'AddHandler CasparDevice.UpdatedTemplates, AddressOf CasparDevice_UpdatedTemplates
+
         Try
             connecttocasparcg()
             LoadModuleAtStartTime()
@@ -420,9 +416,13 @@ Public Class frmmediaplayer
             ucTab1.UcChannelInfo1.getchannelinfo()
             'LoadLayout()
 
+            EnsureBrowserEmulationEnabled("caspar_media_playback.exe")
+
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
+
+
 
     End Sub
 
@@ -440,12 +440,12 @@ Public Class frmmediaplayer
 
     Public Sub SB_StringOK(ByVal Result As String) Handles BS.StringOK
         If Result = "move" Then
-            'Me.Size = New Size(1370, 740) ' Me.WindowState = FormWindowState.Maximized
+
             Me.Left = -20 ' -12
             Me.Top = -27
             'Me.Refresh()
         Else
-            'ucPlaylistSetting1.setchannelnumber(Int(Result))
+
             ucPlaylistSetting1.setchannelnumber(CType(Result, Integer))
         End If
 
@@ -473,6 +473,7 @@ Public Class frmmediaplayer
 
         'This is important! If you have a child process on your form, it will terminate along with your form if you do not set its parent to Nothing
         ucCasparcgWindow1.outcasparcgwindown()
+        ucTab1.UcScreenConsumer1.cmdoutcasparcgwindowrecording.PerformClick()
         ucPowerPoint.outpptorexcell()
 
 
@@ -537,6 +538,7 @@ Public Class frmmediaplayer
         ucPlaylist.tmrfornotskiping.Enabled = False
 
         ucSrtPlayer.tmrsrt.Enabled = False
+
 
     End Sub
 
@@ -686,7 +688,7 @@ Public Class frmmediaplayer
             FileCopy("c:/casparcg/_media/CG1080i50.mp4", mediafullpath & "/CG1080i50.mp4")
             FileCopy("c:/casparcg/_media/CG1080i50_A.mp4", mediafullpath & "/CG1080i50_A.mp4")
             FileCopy("c:/casparcg/_media/WIPE.mov", mediafullpath & "/WIPE.mov")
-
+            FileCopy("c:/casparcg/_media/cricket2.mp4", mediafullpath & "/cricket2.mp4")
         End With
 
     End Sub
@@ -721,157 +723,6 @@ Public Class frmmediaplayer
         'DUMMY CODE
     End Sub
 
-    Sub keypresshandeler(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
-        On Error Resume Next
-        If ucPlaylist.chkplaylistlock.Checked = False Then
-
-            If rdoplaylist.Checked Then
-                Select Case e.KeyCode
-                    Case Keys.F1
-                        ucPlaylist.clipstop()
-                    Case Keys.F2
-                        ucPlaylist.PlaySingleClip()
-                    Case Keys.F3
-                        ucPlaylist.cueclip()
-                    Case Keys.F4
-                        ucPlaylist.clipresume()
-                    Case Keys.F5
-                        ucPlaylist.nextclip()
-
-                    Case Keys.F6
-                        ucPlaylist.nextclipplay()
-
-                    Case Keys.F11
-                        CasparDevice.SendString("clear " & cmbchannel.Text & "-" & cmblayervideo.Text)
-
-                    Case Keys.F12
-                        CasparDevice.SendString("clear " & cmbchannel.Text)
-                        CasparDevice.SendString("mixer " & cmbchannel.Text & " clear")
-
-                End Select
-            End If
-
-        End If
-
-        If rdotemplate.Checked Then
-            Select Case e.KeyCode
-                Case Keys.F1
-                    ucTemplate.anytemplatestop()
-                Case Keys.F2
-                    ucTemplate.anytemplate()
-
-                Case Keys.F5
-                    ucTemplate.anytemplatenextframe()
-
-                Case Keys.F6
-                    ucTemplate.anytemplateupdate()
-                Case Keys.F7
-                    ucTemplate.anytemplateinvoke()
-                Case Keys.F11
-                    CasparDevice.SendString("clear " & cmbchannel.Text & "-" & ucTemplate.cmblayertemplate.Text)
-
-                Case Keys.F12
-                    CasparDevice.SendString("clear " & cmbchannel.Text)
-                    CasparDevice.SendString("mixer " & cmbchannel.Text & " clear")
-
-            End Select
-        End If
-
-        If rdoverticalscroll.Checked Then
-            With ucVS
-                If e.KeyCode = Keys.F1 Then
-                    If .nspeedV.Value > 0 Then .nspeedV.Value = 0
-                    .nspeedV.Value = .nspeedV.Value - Val(.txtspeedchangevalue.Text)
-                End If
-                If e.KeyCode = Keys.F2 Then
-                    If .nspeedV.Value < 0 Then .nspeedV.Value = 0
-                    .nspeedV.Value = .nspeedV.Value + Val(.txtspeedchangevalue.Text)
-                End If
-                If e.KeyCode = Keys.F5 Then
-                    .vsnextitem()
-                End If
-                If e.KeyCode = Keys.F6 Then
-                    .vspreviousitem()
-                End If
-                If e.KeyCode = Keys.F7 Then
-                    CasparCGDataCollection.Clear() 'cgData.Clear()
-                    CasparCGDataCollection.SetData("speed", "0") 'pause
-                    CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(.cmblayervs.Text), Int(.cmblayervs.Text), CasparCGDataCollection)
-                End If
-                If e.KeyCode = Keys.F11 Then
-                    .vsfirstitem()
-                End If
-                If e.KeyCode = Keys.F13 Then
-                    .vslastitem()
-                End If
-                If e.KeyCode = Keys.F14 Then
-                    .crawlv() ' start
-                End If
-                If e.KeyCode = Keys.F15 Then
-                    CasparCGDataCollection.Clear() 'cgData.Clear()
-                    CasparCGDataCollection.SetData("speed", .nspeedV.Value) ' resume
-                    CasparDevice.Channels(cmbchannel.Text - 1).CG.Update(Int(.cmblayervs.Text), Int(.cmblayervs.Text), CasparCGDataCollection)
-                End If
-
-                If e.KeyCode = Keys.Up Then
-                    .nspeedV.Value = .nspeedV.Value + Val(.txtspeedchangevalue.Text)
-                End If
-                If e.KeyCode = Keys.Down Then
-                    .nspeedV.Value = .nspeedV.Value - Val(.txtspeedchangevalue.Text)
-                End If
-            End With
-
-        End If
-
-        If rdohtmlscroller.Checked Then
-            With ucHtmlScroller
-
-                If .chkShuttlePro.Checked Then
-                    If e.KeyCode = Keys.F7 Then 'speed 0
-                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & .cmblayerhtmlscroll.Text & " speed('" & 0 & "')")
-                    End If
-                    If e.KeyCode = Keys.F14 Then
-                        .cmdCueFromMiddle.PerformClick()  ' start
-                    End If
-                    If e.KeyCode = Keys.F15 Then
-                        .pauseresumev()
-                    End If
-
-                    If e.KeyCode = Keys.F16 Then
-                        .nspeedhtmlscroll.Value = 3
-                    End If
-                    If e.KeyCode = Keys.F17 Then
-                        .nspeedhtmlscroll.Value = 4
-                    End If
-                    If e.KeyCode = Keys.F18 Then
-                        .nspeedhtmlscroll.Value = 5
-                    End If
-                    If e.KeyCode = Keys.F19 Then
-                        .nspeedhtmlscroll.Value = 6
-                    End If
-                    If e.KeyCode = Keys.F20 Then
-                        .nspeedhtmlscroll.Value = 10
-                    End If
-
-                    If e.KeyCode = Keys.F21 Then
-                        .nspeedhtmlscroll.Value = -3
-                    End If
-                    If e.KeyCode = Keys.F22 Then
-                        .nspeedhtmlscroll.Value = -4
-                    End If
-                    If e.KeyCode = Keys.F23 Then
-                        .nspeedhtmlscroll.Value = -5
-                    End If
-                    If e.KeyCode = Keys.F24 Then
-                        .nspeedhtmlscroll.Value = -10
-                    End If
-
-                End If
-
-            End With
-        End If
-
-    End Sub
     Sub Modifychannelname()
         On Error Resume Next
         If Me.Text <> "" Then
@@ -1005,7 +856,7 @@ Public Class frmmediaplayer
 
     Private Sub mnuCMPAddScreen_Click(sender As Object, e As EventArgs) Handles mnuCMPAddScreen.Click
         On Error Resume Next
-        CasparDevice.SendString("add " & cmbchannel.Text & " screen")
+        'CasparDevice.SendString("add " & cmbchannel.Text & " screen")
         'Threading.Thread.Sleep(1000)
         'ucCasparcgWindow1.SetProcessParent("casparcg")  ' Removed in support of multichannel recoder
 
@@ -1079,6 +930,9 @@ Public Class frmmediaplayer
     Private Sub CommandSchedulerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CommandSchedulerToolStripMenuItem.Click
         UcCommandScheduler1.Show(DockPanel1, DockState.Document)
     End Sub
+    Private Sub CommandSchedulerDateWiseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CommandSchedulerDateWiseToolStripMenuItem.Click
+        UcCommandSchedulerDateWise1.Show(DockPanel1, DockState.Document)
+    End Sub
     Private Sub NewInstanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewInstanceToolStripMenuItem.Click
         System.Diagnostics.Process.Start("caspar_media_playback.exe")
     End Sub
@@ -1121,6 +975,8 @@ Public Class frmmediaplayer
         Me.Controls.Add(ucPositionAndSize1)
         Dim rs1 As New clsResizeableControlnew(ucPositionAndSize1)
         ucPositionAndSize1.BringToFront()
+
+        ucPositionAndSize1.Location = PointToClient(cmsCustomeModules.Location)
     End Sub
 
     Private Sub SystemAudioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SystemAudioToolStripMenuItem.Click
@@ -1128,6 +984,7 @@ Public Class frmmediaplayer
         Me.Controls.Add(ucSystemAudio1)
         Dim rs3 As New clsResizeableControlnew(ucSystemAudio1)
         ucSystemAudio1.BringToFront()
+        ucSystemAudio1.Location = PointToClient(cmsCustomeModules.Location)
     End Sub
 
     Private Sub DifferentConfigFilesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DifferentConfigFilesToolStripMenuItem.Click
@@ -1281,6 +1138,7 @@ Public Class frmmediaplayer
     Private Sub FlashTemplateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FlashTemplateToolStripMenuItem.Click
         On Error Resume Next
         ucTemplate1.Show(DockPanel1, DockState.Document)
+        rdotemplate.Checked = True
     End Sub
     Private Sub ChannelRecorderAndTrimmerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChannelRecorderAndTrimmerToolStripMenuItem.Click
         'FourChannelRecorder.Show()
@@ -1305,6 +1163,7 @@ Public Class frmmediaplayer
     Private Sub VideoServerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VideoServerToolStripMenuItem.Click
         ucPlaylist1.Show(DockPanel1, DockState.Document)
         ucPlaylist.cmdSmallScreen.PerformClick() '  
+
     End Sub
 
     Private Sub PlayFromAnywhreToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlayFromAnywhreToolStripMenuItem.Click
@@ -1333,13 +1192,13 @@ Public Class frmmediaplayer
     End Sub
 
     Private Sub WeightLiftingToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        'ucWeightLifting.Show()
+
         rdoWeightLifting.Select()
     End Sub
 
     Private Sub CCTVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CCTVToolStripMenuItem.Click
         On Error Resume Next
-        'System.Diagnostics.Process.Start("CCTV.exe")
+
         ucCCTV1.Show(DockPanel1, DockState.Document)
 
     End Sub
@@ -1351,10 +1210,14 @@ Public Class frmmediaplayer
     Private Sub tmrGeneralInfo_Tick(sender As Object, e As EventArgs) Handles tmrGeneralInfo.Tick
         On Error Resume Next
         lbltime.Text = Format(Now, "H:mm:ss").ToString
-        Label2.Text = CInt(m_PerformanceCounter.NextValue()) & "%"
+        CpBarCPU.CPB_Text_2 = CInt(m_PerformanceCounter.NextValue())
         lblcasparMemoryValue.Text = GetProcessMemory("casparcg")
         lblCMPMemory.Text = GetProcessMemory("caspar_media_playback")
     End Sub
+    Function GetProcessMemory(processname As String) As String
+        On Error Resume Next
+        Return Int(FormatNumber((Process.GetProcessesByName(processname)(0).WorkingSet64 / 1024) / 1024)) & "MB"
+    End Function
     Private Sub FullPageCaptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullPageCaptionToolStripMenuItem.Click
         On Error Resume Next
         ucFullPageCaption1.Show(DockPanel1, DockState.Document)
@@ -1430,6 +1293,7 @@ Public Class frmmediaplayer
 
     Private Sub VerticalScroll1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerticalScroll1ToolStripMenuItem.Click
         ucVS1.Show(DockPanel1, DockState.Document)
+
     End Sub
 
     Private Sub VerticalScroll2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerticalScroll2ToolStripMenuItem.Click
@@ -1446,6 +1310,7 @@ Public Class frmmediaplayer
 
     Private Sub HTMLScrollerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HTMLScrollerToolStripMenuItem.Click
         ucHtmlScroller1.Show(DockPanel1, DockState.Document)
+
     End Sub
 
     Private Sub MultiBulletScrollerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MultiBulletScrollerToolStripMenuItem.Click
@@ -1671,8 +1536,17 @@ Public Class frmmediaplayer
             Return ucPowerPoint1
         ElseIf persistString = GetType(form1).ToString() Then
             Return Form11
-
+        ElseIf persistString = GetType(ucTemplatePlaylist).ToString() Then
+            Return ucTemplatePlaylist1
+        ElseIf persistString = GetType(ucytlive).ToString() Then
+            Return ucytlive1
+        ElseIf persistString = GetType(ucRCCAutomation).ToString() Then
+            Return ucRCCAutomation1
+        ElseIf persistString = GetType(ucRccBall).ToString() Then
+            Return ucRccBall1
         End If
+
+
     End Function
     Private Sub CloseAllContents()
         ucCG1.DockPanel = Nothing
@@ -1739,6 +1613,12 @@ Public Class frmmediaplayer
         ucPlayFromAnyWhere1.DockPanel = Nothing
         ucPowerPoint1.DockPanel = Nothing
         Form11.DockPanel = Nothing
+        ucTemplatePlaylist1.DockPanel = Nothing
+        UcCommandSchedulerDateWise1.DockPanel = Nothing
+        ucytlive1.DockPanel = Nothing
+        ucRCCAutomation1 = Nothing
+        ucRccBall1 = Nothing
+
         CloseAllDocuments()
         For Each window In DockPanel1.FloatWindows.ToList()
             window.Dispose()
@@ -1751,5 +1631,140 @@ Public Class frmmediaplayer
     Private Sub CompositionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CompositionToolStripMenuItem.Click
         Form1.Show(DockPanel1, DockState.Document)
         Form1.DockAreas = DockAreas.Document
+    End Sub
+    ' Clear temp file and recycle bin code starts--------------
+    Private Declare Function SHEmptyRecycleBin Lib "shell32.dll" Alias "SHEmptyRecycleBinA" (ByVal hWnd As Int32, ByVal pszRootPath As String, ByVal dwFlags As Int32) As Int32
+    Private Declare Function SHUpdateRecycleBinIcon Lib "shell32.dll" () As Int32
+
+    Private Const SHERB_NOCONFIRMATION = &H1
+    Private Const SHERB_NOPROGRESSUI = &H2
+    Private Const SHERB_NOSOUND = &H4
+    Private Sub ClearTempFileAndRecycleBinToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearTempFileAndRecycleBinToolStripMenuItem.Click
+        DeleteDirectory(System.IO.Path.GetTempPath)
+        DeleteDirectory("c:\windows\temp\")
+        EmptyRecycleBin()
+    End Sub
+    Private Sub DeleteDirectory(path As String)
+        On Error Resume Next
+        If Directory.Exists(path) Then
+            'Delete all files from the Directory
+            For Each filepath As String In Directory.GetFiles(path)
+                File.Delete(filepath)
+            Next
+            'Delete all child Directories
+            For Each dir As String In Directory.GetDirectories(path)
+                DeleteDirectory(dir)
+            Next
+            'Delete a Directory
+            Directory.Delete(path)
+        End If
+    End Sub
+
+    Private Sub EmptyRecycleBin()
+        On Error Resume Next
+        SHEmptyRecycleBin(Me.Handle.ToInt32, vbNullString, SHERB_NOCONFIRMATION + SHERB_NOSOUND)
+        SHUpdateRecycleBinIcon()
+    End Sub
+    ' Clear temp file and recycle bin code ends--------------
+    Private Sub TemplatePlaylistToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TemplatePlaylistToolStripMenuItem.Click
+        ucTemplatePlaylist1.Show(DockPanel1, DockState.Document)
+    End Sub
+
+    Private Sub YouTubeLInkOfHelpVideosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles YouTubeLInkOfHelpVideosToolStripMenuItem.Click
+        On Error Resume Next
+        System.Diagnostics.Process.Start("https://www.youtube.com/playlist?list=PLeBXICFOkFQtPK7MoKWgHAQJQMTW4Zu6r")
+    End Sub
+
+    Private Sub Channel1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Channel1ToolStripMenuItem.Click
+        On Error Resume Next
+        CasparDevice.SendString("add 1 screen")
+    End Sub
+
+    Private Sub Channel2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Channel2ToolStripMenuItem.Click
+        On Error Resume Next
+        CasparDevice.SendString("add 2 screen")
+    End Sub
+
+    Private Sub Channel3ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Channel3ToolStripMenuItem.Click
+        On Error Resume Next
+        CasparDevice.SendString("add 3 screen")
+    End Sub
+
+    Private Sub Channel4ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Channel4ToolStripMenuItem.Click
+        On Error Resume Next
+        CasparDevice.SendString("add 4 screen")
+    End Sub
+
+    Private Sub XDCamControllersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles XDCamControllersToolStripMenuItem.Click
+        frmXDCamContoller.Show()
+    End Sub
+    Dim aa() As String
+    Private Sub MakeThumbnailForServer23ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MakeThumbnailForServer23ToolStripMenuItem.Click
+        On Error Resume Next
+        Dim alreadyRunning As Integer
+        Dim dd As New Process
+        If ServerVersion > 2.1 Then
+            If IfRunning("scanner") = False Then
+                alreadyRunning = 5
+                dd.StartInfo.FileName = initialpath & "\scanner.exe" '"C:\Users\vimlesh\Downloads\casparcg-server-050620\scanner.exe"
+                dd.StartInfo.WorkingDirectory = initialpath ' "C:\Users\vimlesh\Downloads\casparcg-server-050620\"
+                dd.Start()
+                Threading.Thread.Sleep(5000)
+            Else
+                alreadyRunning = 2
+            End If
+
+
+            Dim webClient As New System.Net.WebClient
+            Dim result As String = webClient.DownloadString("http://" & cmbhost.Text & ":8000/thumbnail")
+            Dim bb() = Split(result, vbNewLine)
+            ReDim aa(bb.Count)
+
+            For iclips = 0 To bb.Count - 3
+                Dim foldername As String = ""
+                Dim clipname As String = Replace(Split(bb(iclips), "  ")(0), "\", "/")
+                clipname = Split(clipname, """" & " ")(0)
+                clipname = Replace(clipname, """", "")
+                aa(iclips) = clipname
+            Next
+            aa = aa.Skip(1).ToArray
+
+            For Each item As String In aa
+                'Dim webClient As New System.Net.WebClient
+                result = webClient.DownloadString("http://" & cmbhost.Text & ":8000/thumbnail/" & Replace(item, "/", "%2F"))
+                bb = Split(result, vbNewLine)
+                Dim filename As String = thumbnailsfullpath & "/" & item & ".png"
+                Dim fi As New FileInfo(filename)
+
+                Dim path As String = fi.DirectoryName
+                If (Not System.IO.Directory.Exists(path)) Then
+                    System.IO.Directory.CreateDirectory(path)
+                End If
+                ss(bb(1)).Save(filename)
+            Next
+            If alreadyRunning = 5 Then dd.Kill()
+        End If
+    End Sub
+    Function ss(ff As String) As Image
+        On Error Resume Next
+        Dim gg As Image = Image.FromStream(New MemoryStream(Convert.FromBase64String(ff)))
+        Return gg
+    End Function
+
+    Private Sub YouTubeLiveManagemnetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles YouTubeLiveManagemnetToolStripMenuItem.Click
+        On Error Resume Next
+        ucytlive1.Show(DockPanel1, DockState.Document)
+    End Sub
+
+
+    Private Sub RCCAutomationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RCCAutomationToolStripMenuItem.Click
+        On Error Resume Next
+        ucRCCAutomation1.Show(DockPanel1, DockState.Document)
+
+    End Sub
+
+    Private Sub RCCBallToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RCCBallToolStripMenuItem.Click
+        On Error Resume Next
+        ucRccBall1.Show(DockPanel1, DockState.Document)
     End Sub
 End Class

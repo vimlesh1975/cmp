@@ -93,7 +93,7 @@ Partial Class ucOSC
         '
         Me.cmboscport.FormattingEnabled = True
         Me.cmboscport.Items.AddRange(New Object() {"6250", "6251", "6252", "6253", "5253"})
-        Me.cmboscport.Location = New System.Drawing.Point(242, 11)
+        Me.cmboscport.Location = New System.Drawing.Point(198, 8)
         Me.cmboscport.Name = "cmboscport"
         Me.cmboscport.Size = New System.Drawing.Size(56, 21)
         Me.cmboscport.TabIndex = 613
@@ -102,7 +102,7 @@ Partial Class ucOSC
         'lbloscport
         '
         Me.lbloscport.AutoSize = True
-        Me.lbloscport.Location = New System.Drawing.Point(215, 14)
+        Me.lbloscport.Location = New System.Drawing.Point(166, 8)
         Me.lbloscport.Name = "lbloscport"
         Me.lbloscport.Size = New System.Drawing.Size(26, 13)
         Me.lbloscport.TabIndex = 321
@@ -110,12 +110,15 @@ Partial Class ucOSC
         '
         'cmdoscstop
         '
-        Me.cmdoscstop.Location = New System.Drawing.Point(343, 11)
+        Me.cmdoscstop.BackColor = System.Drawing.Color.Red
+        Me.cmdoscstop.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdoscstop.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdoscstop.Location = New System.Drawing.Point(350, 4)
         Me.cmdoscstop.Name = "cmdoscstop"
-        Me.cmdoscstop.Size = New System.Drawing.Size(50, 23)
+        Me.cmdoscstop.Size = New System.Drawing.Size(74, 28)
         Me.cmdoscstop.TabIndex = 610
         Me.cmdoscstop.Text = "Stop"
-        Me.cmdoscstop.UseVisualStyleBackColor = True
+        Me.cmdoscstop.UseVisualStyleBackColor = False
         '
         'dgvosc
         '
@@ -244,12 +247,15 @@ Partial Class ucOSC
         '
         'cmdoscconnect
         '
-        Me.cmdoscconnect.Location = New System.Drawing.Point(298, 10)
+        Me.cmdoscconnect.BackColor = System.Drawing.Color.SeaGreen
+        Me.cmdoscconnect.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdoscconnect.ForeColor = System.Drawing.SystemColors.Control
+        Me.cmdoscconnect.Location = New System.Drawing.Point(270, 6)
         Me.cmdoscconnect.Name = "cmdoscconnect"
-        Me.cmdoscconnect.Size = New System.Drawing.Size(46, 23)
+        Me.cmdoscconnect.Size = New System.Drawing.Size(74, 26)
         Me.cmdoscconnect.TabIndex = 603
         Me.cmdoscconnect.Text = "Start"
-        Me.cmdoscconnect.UseVisualStyleBackColor = True
+        Me.cmdoscconnect.UseVisualStyleBackColor = False
         '
         'lbloscbackgroundFile
         '
@@ -363,8 +369,9 @@ Partial Class ucOSC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(651, 935)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gbosc)
         Me.HideOnClose = True
         Me.Name = "ucOSC"

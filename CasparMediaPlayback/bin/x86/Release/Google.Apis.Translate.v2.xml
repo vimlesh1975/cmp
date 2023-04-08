@@ -88,7 +88,6 @@
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Alt">
             <summary>Data format for response.</summary>
-            [default: json]
         </member>
         <member name="T:Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.AltEnum">
             <summary>Data format for response.</summary>
@@ -112,23 +111,25 @@
             <summary>Selector specifying which fields to include in a partial response.</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Key">
-            <summary>API key. Your API key identifies your project and provides you with API access, quota, and reports.
-            Required unless you provide an OAuth 2.0 token.</summary>
+            <summary>
+            API key. Your API key identifies your project and provides you with API access, quota, and reports. Required
+            unless you provide an OAuth 2.0 token.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.OauthToken">
             <summary>OAuth 2.0 token for the current user.</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Pp">
             <summary>Pretty-print response.</summary>
-            [default: true]
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.PrettyPrint">
             <summary>Returns response with indentations and line breaks.</summary>
-            [default: true]
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.QuotaUser">
-            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary string
-            assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.</summary>
+            <summary>
+            Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a
+            user, but should not exceed 40 characters. Overrides userIp if both are provided.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.UploadType">
             <summary>Legacy upload protocol for media (e.g. "media", "multipart").</summary>
@@ -178,8 +179,10 @@
         </member>
         <member name="M:Google.Apis.Translate.v2.DetectionsResource.List(Google.Apis.Util.Repeatable{System.String})">
             <summary>Detects the language of text within a request.</summary>
-            <param name="q">The input text upon which to perform language detection. Repeat this parameter to perform language
-            detection on multiple text inputs.</param>
+            <param name="q">
+            The input text upon which to perform language detection. Repeat this parameter to perform language detection
+            on multiple text inputs.
+            </param>
         </member>
         <member name="T:Google.Apis.Translate.v2.DetectionsResource.ListRequest">
             <summary>Detects the language of text within a request.</summary>
@@ -188,8 +191,10 @@
             <summary>Constructs a new List request.</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.DetectionsResource.ListRequest.Q">
-            <summary>The input text upon which to perform language detection. Repeat this parameter to perform
-            language detection on multiple text inputs.</summary>
+            <summary>
+            The input text upon which to perform language detection. Repeat this parameter to perform language
+            detection on multiple text inputs.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.DetectionsResource.ListRequest.MethodName">
             <summary>Gets the method name.</summary>
@@ -250,10 +255,14 @@
         </member>
         <member name="M:Google.Apis.Translate.v2.TranslationsResource.List(Google.Apis.Util.Repeatable{System.String},System.String)">
             <summary>Translates input text, returning translated text.</summary>
-            <param name="q">The input text to translate. Repeat this parameter to perform translation operations on multiple
-            text inputs.</param>
-            <param name="target">The language to use for translation of the input text, set to one
-            of the language codes listed in Language Support.</param>
+            <param name="q">
+            The input text to translate. Repeat this parameter to perform translation operations on multiple text
+            inputs.
+            </param>
+            <param name="target">
+            The language to use for translation of the input text, set to one of the language codes listed in Language
+            Support.
+            </param>
         </member>
         <member name="T:Google.Apis.Translate.v2.TranslationsResource.ListRequest">
             <summary>Translates input text, returning translated text.</summary>
@@ -262,28 +271,31 @@
             <summary>Constructs a new List request.</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslationsResource.ListRequest.Q">
-            <summary>The input text to translate. Repeat this parameter to perform translation operations on
-            multiple text inputs.</summary>
+            <summary>
+            The input text to translate. Repeat this parameter to perform translation operations on multiple text
+            inputs.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslationsResource.ListRequest.Target">
-            <summary>The language to use for translation of the input text, set to one of the language codes listed
-            in Language Support.</summary>
-        </member>
-        <member name="P:Google.Apis.Translate.v2.TranslationsResource.ListRequest.Source">
-            <summary>The language of the source text, set to one of the language codes listed in Language Support.
-            If the source language is not specified, the API will attempt to identify the source language
-            automatically and return it within the response.</summary>
+            <summary>
+            The language to use for translation of the input text, set to one of the language codes listed in
+            Language Support.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslationsResource.ListRequest.Cid">
             <summary>The customization id for translate</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslationsResource.ListRequest.Format">
-            <summary>The format of the source text, in either HTML (default) or plain-text. A value of "html"
-            indicates HTML and a value of "text" indicates plain-text.</summary>
+            <summary>
+            The format of the source text, in either HTML (default) or plain-text. A value of "html" indicates HTML
+            and a value of "text" indicates plain-text.
+            </summary>
         </member>
         <member name="T:Google.Apis.Translate.v2.TranslationsResource.ListRequest.FormatEnum">
-            <summary>The format of the source text, in either HTML (default) or plain-text. A value of "html"
-            indicates HTML and a value of "text" indicates plain-text.</summary>
+            <summary>
+            The format of the source text, in either HTML (default) or plain-text. A value of "html" indicates HTML
+            and a value of "text" indicates plain-text.
+            </summary>
         </member>
         <member name="F:Google.Apis.Translate.v2.TranslationsResource.ListRequest.FormatEnum.Html">
             <summary>Specifies the input is in HTML</summary>
@@ -292,8 +304,16 @@
             <summary>Specifies the input is in plain textual format</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslationsResource.ListRequest.Model">
-            <summary>The `model` type requested for this translation. Valid values are listed in public
-            documentation.</summary>
+            <summary>
+            The `model` type requested for this translation. Valid values are listed in public documentation.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.Translate.v2.TranslationsResource.ListRequest.Source">
+            <summary>
+            The language of the source text, set to one of the language codes listed in Language Support. If the
+            source language is not specified, the API will attempt to identify the source language automatically and
+            return it within the response.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.TranslationsResource.ListRequest.MethodName">
             <summary>Gets the method name.</summary>
@@ -339,8 +359,10 @@
             <summary>The request message for language detection.</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.DetectLanguageRequest.Q">
-            <summary>The input text upon which to perform language detection. Repeat this parameter to perform language
-            detection on multiple text inputs.</summary>
+            <summary>
+            The input text upon which to perform language detection. Repeat this parameter to perform language detection
+            on multiple text inputs.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.DetectLanguageRequest.ETag">
             <summary>The ETag of the item.</summary>
@@ -350,6 +372,9 @@
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.DetectionsListResponse.ETag">
             <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Translate.v2.Data.DetectionsResourceItems">
+            <summary>An array of languages which we detect for the given text The most likely language list first.</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.DetectionsResourceItems.Confidence">
             <summary>The confidence of the detection result of this language.</summary>
@@ -373,17 +398,20 @@
             <summary>The ETag of the item.</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.LanguagesListResponse.Languages">
-            <summary>List of source/target languages supported by the translation API. If target parameter is
-            unspecified, the list is sorted by the ASCII code point order of the language code. If target parameter is
-            specified, the list is sorted by the collation order of the language name in the target language.</summary>
+            <summary>
+            List of source/target languages supported by the translation API. If target parameter is unspecified, the
+            list is sorted by the ASCII code point order of the language code. If target parameter is specified, the
+            list is sorted by the collation order of the language name in the target language.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.LanguagesListResponse.ETag">
             <summary>The ETag of the item.</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.LanguagesResource.Language">
-            <summary>Supported language code, generally consisting of its ISO 639-1 identifier. (E.g. 'en', 'ja'). In
-            certain cases, BCP-47 codes including language + region identifiers are returned (e.g. 'zh-TW' and 'zh-
-            CH')</summary>
+            <summary>
+            Supported language code, generally consisting of its ISO 639-1 identifier. (E.g. 'en', 'ja'). In certain
+            cases, BCP-47 codes including language + region identifiers are returned (e.g. 'zh-TW' and 'zh-CH')
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.LanguagesResource.Name">
             <summary>Human readable name of the language localized to the target language.</summary>
@@ -395,25 +423,34 @@
             <summary>The main translation request message for the Cloud Translation API.</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.TranslateTextRequest.Format">
-            <summary>The format of the source text, in either HTML (default) or plain-text. A value of "html" indicates
-            HTML and a value of "text" indicates plain-text.</summary>
+            <summary>
+            The format of the source text, in either HTML (default) or plain-text. A value of "html" indicates HTML and
+            a value of "text" indicates plain-text.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.TranslateTextRequest.Model">
-            <summary>The `model` type requested for this translation. Valid values are listed in public
-            documentation.</summary>
+            <summary>
+            The `model` type requested for this translation. Valid values are listed in public documentation.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.TranslateTextRequest.Q">
-            <summary>The input text to translate. Repeat this parameter to perform translation operations on multiple
-            text inputs.</summary>
+            <summary>
+            The input text to translate. Repeat this parameter to perform translation operations on multiple text
+            inputs.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.TranslateTextRequest.Source">
-            <summary>The language of the source text, set to one of the language codes listed in Language Support. If
-            the source language is not specified, the API will attempt to identify the source language automatically and
-            return it within the response.</summary>
+            <summary>
+            The language of the source text, set to one of the language codes listed in Language Support. If the source
+            language is not specified, the API will attempt to identify the source language automatically and return it
+            within the response.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.TranslateTextRequest.Target">
-            <summary>The language to use for translation of the input text, set to one of the language codes listed in
-            Language Support.</summary>
+            <summary>
+            The language to use for translation of the input text, set to one of the language codes listed in Language
+            Support.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.TranslateTextRequest.ETag">
             <summary>The ETag of the item.</summary>
@@ -428,13 +465,17 @@
             <summary>The ETag of the item.</summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.TranslationsResource.DetectedSourceLanguage">
-            <summary>The source language of the initial request, detected automatically, if no source language was
-            passed within the initial request. If the source language was passed, auto-detection of the language will
-            not occur and this field will be empty.</summary>
+            <summary>
+            The source language of the initial request, detected automatically, if no source language was passed within
+            the initial request. If the source language was passed, auto-detection of the language will not occur and
+            this field will be empty.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.TranslationsResource.Model">
-            <summary>The `model` type used for this translation. Valid values are listed in public documentation. Can be
-            different from requested `model`. Present only if specific model type was explicitly requested.</summary>
+            <summary>
+            The `model` type used for this translation. Valid values are listed in public documentation. Can be
+            different from requested `model`. Present only if specific model type was explicitly requested.
+            </summary>
         </member>
         <member name="P:Google.Apis.Translate.v2.Data.TranslationsResource.TranslatedText">
             <summary>Text translated into the target language.</summary>

@@ -19,7 +19,7 @@ Public Class ucRecorder
     End Sub
     Private Sub cmdshowcasparcgwindowrecording_Click(sender As Object, e As EventArgs) Handles cmdshowcasparcgwindowrecording.Click
         On Error Resume Next
-        SetProcessParent("casparcg", cmbcasparcgwindowtitlerecording, pnlrecording)
+        SetProcessParent("casparcg", cmbscreenConsumres, pnlrecording)
     End Sub
 
     Private Sub cmdinput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdinput.Click
@@ -70,7 +70,7 @@ Public Class ucRecorder
         End If
     End Sub
 
-    Private Sub cmdhidegbrecording_Click(sender As Object, e As EventArgs) 
+    Private Sub cmdhidegbrecording_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
 
@@ -155,7 +155,7 @@ Public Class ucRecorder
         On Error Resume Next
 
         Dim aa As Array = Split(dgvcuepointsvtr.CurrentRow.Cells(0).Value, ":")
-        Dim bb As String = Chr(36) & Chr(49) & Chr(System.Convert.ToInt32(aa(3), 16)) & Chr(System.Convert.ToInt32(aa(2), 16)) & Chr(System.Convert.ToInt32(aa(1), 16)) & Chr(System.Convert.ToInt32(aa(0), 16)) & _
+        Dim bb As String = Chr(36) & Chr(49) & Chr(System.Convert.ToInt32(aa(3), 16)) & Chr(System.Convert.ToInt32(aa(2), 16)) & Chr(System.Convert.ToInt32(aa(1), 16)) & Chr(System.Convert.ToInt32(aa(0), 16)) &
          Chr(36 + 49 + System.Convert.ToInt32(aa(3), 16) + System.Convert.ToInt32(aa(2), 16) + System.Convert.ToInt32(aa(1), 16) + System.Convert.ToInt32(aa(0), 16))
         sp.WriteLine(bb)
     End Sub
@@ -230,7 +230,7 @@ Public Class ucRecorder
         On Error Resume Next
 
         Dim aa As Array = Split(lbltimecode.Text, ":")
-        Dim bb As String = Chr(36) & Chr(49) & Chr(System.Convert.ToInt32(aa(3), 16) + 1) & Chr(System.Convert.ToInt32(aa(2), 16)) & Chr(System.Convert.ToInt32(aa(1), 16)) & Chr(System.Convert.ToInt32(aa(0), 16)) & _
+        Dim bb As String = Chr(36) & Chr(49) & Chr(System.Convert.ToInt32(aa(3), 16) + 1) & Chr(System.Convert.ToInt32(aa(2), 16)) & Chr(System.Convert.ToInt32(aa(1), 16)) & Chr(System.Convert.ToInt32(aa(0), 16)) &
          Chr(36 + 49 + System.Convert.ToInt32(aa(3), 16) + 1 + System.Convert.ToInt32(aa(2), 16) + System.Convert.ToInt32(aa(1), 16) + System.Convert.ToInt32(aa(0), 16))
         sp.WriteLine(bb)
     End Sub
@@ -240,7 +240,7 @@ Public Class ucRecorder
 
         Dim aa As Array = Split(lbltimecode.Text, ":")
 
-        Dim bb As String = Chr(36) & Chr(49) & Chr(System.Convert.ToInt32(aa(3) - 1, 16)) & Chr(System.Convert.ToInt32(aa(2), 16)) & Chr(System.Convert.ToInt32(aa(1), 16)) & Chr(System.Convert.ToInt32(aa(0), 16)) & _
+        Dim bb As String = Chr(36) & Chr(49) & Chr(System.Convert.ToInt32(aa(3) - 1, 16)) & Chr(System.Convert.ToInt32(aa(2), 16)) & Chr(System.Convert.ToInt32(aa(1), 16)) & Chr(System.Convert.ToInt32(aa(0), 16)) &
          Chr(36 + 49 + System.Convert.ToInt32(aa(3) - 1, 16) + System.Convert.ToInt32(aa(2), 16) + System.Convert.ToInt32(aa(1), 16) + System.Convert.ToInt32(aa(0), 16))
         sp.WriteLine(bb)
     End Sub
@@ -264,7 +264,7 @@ Public Class ucRecorder
         tmrrecordedfileinfo.Enabled = False
 
     End Sub
-  
+
     Sub record()
         On Error Resume Next
         lblRecordedduration.Text = ""
@@ -328,7 +328,7 @@ Public Class ucRecorder
 
     Private Sub tmrrecorder_Tick(sender As Object, e As EventArgs) Handles tmrrecorder.Tick
 
-       On Error Resume Next
+        On Error Resume Next
 
         stoprecord()
         If chksinglecliprecord.Checked = False Then
@@ -341,7 +341,7 @@ Public Class ucRecorder
         End If
     End Sub
 
-   
+
     Private Sub tmrrecordedfileinfo_Tick(sender As Object, e As EventArgs) Handles tmrrecordedfileinfo.Tick
 
         On Error Resume Next
@@ -357,7 +357,7 @@ Public Class ucRecorder
         End If
 
 
-        lblfreespace.Text = My.Computer.FileSystem.GetDriveInfo(Mid(mediafullpath, 1, 2)).TotalFreeSpace / 1000000000 & " GB"
+        lblfreespace.Text = Int(My.Computer.FileSystem.GetDriveInfo(Mid(mediafullpath, 1, 2)).TotalFreeSpace / 1000000000) & " GB"
     End Sub
     'vtr code---------------
 
@@ -383,7 +383,7 @@ Public Class ucRecorder
 
 
     Private Sub tmrgettc_Tick(sender As Object, e As EventArgs) Handles tmrgettc.Tick
-       On Error Resume Next
+        On Error Resume Next
         sp.WriteLine(Chr(97) & Chr(12) & Chr(1) & Chr(110))
         Threading.Thread.Sleep(15)
 
@@ -405,7 +405,8 @@ Public Class ucRecorder
 
 
     Private Sub ucRecorder_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        cmbscreenConsumres.DataSource = screenConsumres
+        cmbscreenConsumres.Text = "Screen consumer [1|PAL]"
         GetSerialPortNames()
         initialisedatafordgvcuepointsvtr()
 
@@ -439,6 +440,12 @@ Public Class ucRecorder
         End If
 
         If cmbRecordingProfile.Text = "AlphaVideo" Then
+            txtextrarecordoptions.Text = "-codec:v prores_ks -pix_fmt yuva444p10le"
+            txtbitrate.Text = 50
+            mp4.Text = "mov"
+        End If
+
+        If cmbRecordingProfile.Text = "AlphaVideo2" Then
             txtextrarecordoptions.Text = "-codec:v qtrle"
             txtbitrate.Text = 50
             mp4.Text = "mov"

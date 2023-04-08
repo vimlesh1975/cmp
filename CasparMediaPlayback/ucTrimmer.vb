@@ -1,10 +1,11 @@
 ﻿Imports System.IO
 Imports System.ComponentModel
+Imports System.Drawing.Text
 
 Public Class ucTrimmer
 
     Dim iclipsavetrimer As Integer = 1
-
+    Dim openlogoforexport As New OpenFileDialog
     Private Sub cmdffmbcexport_Click(sender As Object, e As EventArgs) Handles cmdffmbcexport.Click
         On Error Resume Next
         Dim strinout = " -ss " & FToHMSms(UcnewTrimmer11.txtmarkintrimmer.Text) & " -t " & FToHMSms(UcnewTrimmer11.txtmarkouttrimmer.Text - UcnewTrimmer11.txtmarkintrimmer.Text)
@@ -307,20 +308,6 @@ Public Class ucTrimmer
 
 
 
-
-
-
-
-
-    Private Sub piclogoforexport_Click(sender As Object, e As EventArgs) Handles piclogoforexport.Click
-        On Error Resume Next
-        Dim openlogoforexport As New OpenFileDialog
-        If openlogoforexport.ShowDialog = Windows.Forms.DialogResult.OK Then
-            piclogoforexport.ImageLocation = openlogoforexport.FileName
-        End If
-
-    End Sub
-
     Private Sub cmdlogoexport_Click(sender As Object, e As EventArgs) Handles cmdlogoexport.Click
         On Error Resume Next
 
@@ -330,14 +317,57 @@ Public Class ucTrimmer
         UcnewTrimmer11.osdcutfilename.FilterIndex = 2
         UcnewTrimmer11.osdcutfilename.Filter = "original wrapper (*" & System.IO.Path.GetExtension(UcnewTrimmer11.ofdtrimmer.FileName) & ")|*" & System.IO.Path.GetExtension(UcnewTrimmer11.ofdtrimmer.FileName) & "|mp4 files (*.mp4)|*.mp4|mxf files (*.mxf)|*.mxf|avi files (*.avi)|*.avi|All files (*.*)|*.*"
         If (UcnewTrimmer11.osdcutfilename.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            Dim str1 As String = "c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y " & strinout & " -i " &
-                                 """" & UcnewTrimmer11.ofdtrimmer.FileName & """" & " -i " & """" & piclogoforexport.ImageLocation & """" & " -filter_complex " &
-                                  """" & "[1:v]scale=" & nlogowidthforexport.Value & ":" & nlogoheightforexport.Value & " [ovrl],[0:v][ovrl]overlay=" &
-                                  nlogoxposition.Value & ":" & nlogoyposition.Value & """" &
-                                  " -vcodec " & cmbvideocodec5.Text & " -acodec " & cmbaudiocodec5.Text & " -b:v " & (Val(cmbbitrate5.Text) * 1000000) & " " &
-                                  """" & UcnewTrimmer11.osdcutfilename.FileName & """"
+
+            Dim str1 As String
+
+            If rdoOnlyLogo.Checked Then
+                str1 = "c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y " & strinout & " -i " &
+                              """" & UcnewTrimmer11.ofdtrimmer.FileName & """" & " -stream_loop -1 -i " & """" & openlogoforexport.FileName & """" & " -filter_complex " &
+                               """" & "[1:v]scale=" & nlogowidthforexport.Value & ":" & nlogoheightforexport.Value & " [ovrl],[0:v][ovrl]overlay=shortest=1:x=" &
+                               nlogoxposition.Value & ":y=" & nlogoyposition.Value & """" &
+                               " -vcodec " & cmbvideocodec5.Text & " -acodec " & cmbaudiocodec5.Text & " -b:v " & (Val(cmbbitrate5.Text) * 1000000) & " " &
+                               """" & UcnewTrimmer11.osdcutfilename.FileName & """"
+
+            End If
+
+            Dim aa As String
+            If chkrtl.Checked Then
+                aa = ":x='if(gt(x,-tw),w-mod(" & nSpeedScroll.Value & "*n,w+tw),w)':fontcolor="
+            Else
+                aa = ":x='if(lt(x,w),mod(" & nSpeedScroll.Value & "*n,w+tw)-tw,tw)':fontcolor="
+            End If
+
+            If rdoOnlyScroll.Checked Then
 
 
+
+                str1 = "c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y " & strinout & " -i " &
+                          """" & UcnewTrimmer11.ofdtrimmer.FileName & """" & " -filter_complex drawbox=x=0:y=ih-3-" & cmbfontsizescroll.Text & "-" & nYPositionScroll.Value & ":w=iw:h=" & cmbfontsizescroll.Text & "+6:color=" & ColorTranslator.ToHtml(cmdstripcolor1.BackColor) & "@" & nstripopacity.Value & ":t=fill,drawtext=" & """" & "text=" & cmbScrollText.Text & ":fontfile='c\:/windows/fonts/" & cmbfontscroll.Text & "':y=h-line_h-3-" & nYPositionScroll.Value & aa & ColorTranslator.ToHtml(cmdfontcolor1.ForeColor) & "@" & nopacity.Value & ":fontsize=" & cmbfontsizescroll.Text & """" &
+                           " -vcodec " & cmbvideocodec5.Text & " -acodec " & cmbaudiocodec5.Text & " -b:v " & (Val(cmbbitrate5.Text) * 1000000) & " " &
+                           """" & UcnewTrimmer11.osdcutfilename.FileName & """"
+            End If
+
+            If rdoLogoAndScroll.Checked Then
+
+                'str1 = "c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y " & strinout & " -i " &
+                '"""" & UcnewTrimmer11.ofdtrimmer.FileName & """" & " -stream_loop -1 -i " & """" & openlogoforexport.FileName & """" & " -filter_complex " &
+                ' """" & "[1:v]scale=" & nlogowidthforexport.Value & ":" & nlogoheightforexport.Value & " [ovrl],[0:v][ovrl]overlay=shortest=1:x=" &
+                'nlogoxposition.Value & ":y=" & nlogoyposition.Value & " [v2],[v2]drawtext=text=" & cmbScrollText.Text & ":fontfile='c\:/windows/fonts/" & cmbfontscroll.Text & "':y=h-line_h-" & nYPositionScroll.Value & ":x=w-w/" & nSpeedScroll.Value & "*mod(t\," & "" & "):fontcolor=white@" & nopacity.Value & ":fontsize=" & cmbfontsizescroll.Text & """" &
+                '  " -vcodec " & cmbvideocodec5.Text & " -acodec " & cmbaudiocodec5.Text & " -b:v " & (Val(cmbbitrate5.Text) * 1000000) & " " &
+                ' """" & UcnewTrimmer11.osdcutfilename.FileName & """"
+
+
+                str1 = "c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y " & strinout & " -i " &
+                                """" & UcnewTrimmer11.ofdtrimmer.FileName & """" & " -stream_loop -1 -i " & """" & openlogoforexport.FileName & """" & " -filter_complex " &
+                                 """" & "[1:v]scale=" & nlogowidthforexport.Value & ":" & nlogoheightforexport.Value & " [ovrl],[0:v][ovrl]overlay=shortest=1:x=" &
+                                 nlogoxposition.Value & ":y=" & nlogoyposition.Value & " [v2],[v2]drawbox=x=0:y=ih-3-" & cmbfontsizescroll.Text & "-" & nYPositionScroll.Value & ":w=iw:h=" & cmbfontsizescroll.Text & "+6:color=" & ColorTranslator.ToHtml(cmdstripcolor1.BackColor) & "@" & nstripopacity.Value & ":t=fill " & "[v3],[v3]drawtext=text=" & cmbScrollText.Text & ":fontfile='c\:/windows/fonts/" & cmbfontscroll.Text & "':y=h-line_h-3-" & nYPositionScroll.Value & aa & ColorTranslator.ToHtml(cmdfontcolor1.ForeColor) & "@" & nopacity.Value & ":fontsize=" & cmbfontsizescroll.Text & """" &
+                                 " -vcodec " & cmbvideocodec5.Text & " -acodec " & cmbaudiocodec5.Text & " -b:v " & (Val(cmbbitrate5.Text) * 1000000) & " " &
+                                 """" & UcnewTrimmer11.osdcutfilename.FileName & """"
+
+
+
+            End If
+            'Dim MyValue = InputBox("", "", str1)
             Process.Start("CMD", "/K " & str1)
         End If
     End Sub
@@ -361,40 +391,7 @@ Public Class ucTrimmer
         End If
     End Sub
 
-    Private Sub cmdfileopenforjoin1_Click(sender As Object, e As EventArgs) Handles cmdfileopenforjoin1.Click
-        On Error Resume Next
-        Dim ofdjoin1 As New OpenFileDialog
 
-        ofdjoin1.InitialDirectory = Replace(mediafullpath, "/", "\")  '"c:\casparcg\_media\"
-        ofdjoin1.FileName = "joned1" ' System.IO.Path.GetFileNameWithoutExtension(ofdtrimmer.FileName) & "_Trimmed"
-        ofdjoin1.Filter = "mpeg files (*.mpg)|*.mpg|mp4 files (*.mp4)|*.mp4|avi files (*.avi)|*.avi|All files (*.*)|*.*"
-        If (ofdjoin1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            txtclip1forjoin.Text = ofdjoin1.FileName
-            'Process.Start("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe -i " & """" & ofdtrimmer.FileName & """" & " -ss " & FToHMSms(txtmarkintrimmer.Text) & " -to " & FToHMSms(txtmarkouttrimmer.Text) & " -vcodec " & cmbvideocodec.Text & " -acodec " & cmbaudiocodec.Text & " " & txtoptionstrimmer.Text & " " & """" & osdcutfilename.FileName & """")
-        End If
-    End Sub
-    Private Sub cmdfileopenforjoin2_Click(sender As Object, e As EventArgs) Handles cmdfileopenforjoin2.Click
-        On Error Resume Next
-        Dim ofdjoin1 As New OpenFileDialog
-
-        ofdjoin1.InitialDirectory = Replace(mediafullpath, "/", "\")  '"c:\casparcg\_media\"
-        ofdjoin1.Filter = "mpeg files (*.mpg)|*.mpg|mp4 files (*.mp4)|*.mp4|avi files (*.avi)|*.avi|All files (*.*)|*.*"
-        If (ofdjoin1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            txtclip2forjoin.Text = ofdjoin1.FileName
-            'Process.Start("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe -i " & """" & ofdtrimmer.FileName & """" & " -ss " & FToHMSms(txtmarkintrimmer.Text) & " -to " & FToHMSms(txtmarkouttrimmer.Text) & " -vcodec " & cmbvideocodec.Text & " -acodec " & cmbaudiocodec.Text & " " & txtoptionstrimmer.Text & " " & """" & osdcutfilename.FileName & """")
-        End If
-    End Sub
-    Private Sub cmdfileopenforjoin3_Click(sender As Object, e As EventArgs) Handles cmdfileopenforjoin3.Click
-        On Error Resume Next
-        Dim ofdjoin1 As New OpenFileDialog
-
-        ofdjoin1.InitialDirectory = Replace(mediafullpath, "/", "\")  '"c:\casparcg\_media\"
-        ofdjoin1.Filter = "mpeg files (*.mpg)|*.mpg|mp4 files (*.mp4)|*.mp4|avi files (*.avi)|*.avi|All files (*.*)|*.*"
-        If (ofdjoin1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            txtclip3forjoin.Text = ofdjoin1.FileName
-            'Process.Start("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe -i " & """" & ofdtrimmer.FileName & """" & " -ss " & FToHMSms(txtmarkintrimmer.Text) & " -to " & FToHMSms(txtmarkouttrimmer.Text) & " -vcodec " & cmbvideocodec.Text & " -acodec " & cmbaudiocodec.Text & " " & txtoptionstrimmer.Text & " " & """" & osdcutfilename.FileName & """")
-        End If
-    End Sub
 
     Private Sub chkvideocodeccopyjoin_CheckedChanged(sender As Object, e As EventArgs) Handles chkvideocodeccopyjoin.CheckedChanged
         On Error Resume Next
@@ -423,16 +420,26 @@ Public Class ucTrimmer
         Dim osdjoin1 As New SaveFileDialog
 
         osdjoin1.InitialDirectory = Replace(mediafullpath, "/", "\")  '"c:\casparcg\_media\"
-        osdjoin1.FileName = "joned1" ' System.IO.Path.GetFileNameWithoutExtension(ofdtrimmer.FileName) & "_Trimmed"
-        osdjoin1.Filter = "mpeg files (*.mpg)|*.mpg|mp4 files (*.mp4)|*.mp4|avi files (*.avi)|*.avi|All files (*.*)|*.*"
+        osdjoin1.FileName = "joned1.mp4" ' System.IO.Path.GetFileNameWithoutExtension(ofdtrimmer.FileName) & "_Trimmed"
+        osdjoin1.Filter = "All files (*.*)|*.*|mpg files (*.mpg)|*.mpg|avi files (*.avi)|*.avi|mp4 files (*.mp4)|*.mp4"
         If (osdjoin1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            Dim aa As New StreamWriter("c:/casparcg/mydata/joiner/f.txt")
 
-            Process.Start("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe -y -i concat:" & """" & txtclip1forjoin.Text & "|" & txtclip2forjoin.Text & "|" & txtclip3forjoin.Text & """" & " -vcodec " & cmbvideocodecjoin.Text & " -acodec " & cmbaudiocodecjoin.Text & " " & txtoptionstrimmer.Text & " " & """" & osdjoin1.FileName & """")
+            For i = 0 To dgvjoiner.RowCount - 1
+                If (dgvjoiner.Rows(i).Cells("File").Value <> "" And IO.File.Exists(dgvjoiner.Rows(i).Cells("File").Value)) Then aa.WriteLine("file '" & Replace(dgvjoiner.Rows(i).Cells("File").Value, "\", "/") & "'")
+            Next
+
+            aa.Close()
+            Threading.Thread.Sleep(1000)
+            Process.Start("CMD", "/K c: & cd C:/casparcg/mydata/joiner & C:/casparcg/mydata/ffmpeg/ffmpeg.exe -y -f concat -safe 0 -i f.txt " & " -vcodec " & cmbvideocodecjoin.Text & " -acodec " & cmbaudiocodecjoin.Text & " " & txtoptionstrimmerjoin.Text & " " & """" & osdjoin1.FileName & """")
         End If
+
+
     End Sub
 
 
     Private Sub ucTrimmer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        On Error Resume Next
         Control.CheckForIllegalCrossThreadCalls = False
         dgvsegmentation.Rows.Add(5)
         UcnewTrimmer11.cmdclosenewTrimmer1.Visible = False
@@ -464,6 +471,54 @@ Public Class ucTrimmer
 
         cmbvideocodecjoin.Items.AddRange(System.IO.File.ReadAllLines("C:\casparcg\mydata\ffmpeg\video_codecs.txt"))
         cmbaudiocodecjoin.Items.AddRange(System.IO.File.ReadAllLines("C:\casparcg\mydata\ffmpeg\audio_codecs.txt"))
+
+
+        dgvjoiner.Rows.Add(10)
+
+
+        vlcLogo.VlcMediaPlayer.SetMedia(New Uri("c:\casparcg\_media\sd_frame.png"))
+        vlcLogo.VlcMediaPlayer.Play()
+        openlogoforexport.FileName = "c:\casparcg\_media\sd_frame.png"
+
+
+        UcnewTrimmer11.ofdtrimmer.FileName = "c:/casparcg/_media/kabhi_kabhi.mp4"
+        UcnewTrimmer11.openfileintrimmer(UcnewTrimmer11.ofdtrimmer.FileName)
+
+        dgvgraphics.Rows.Add(5)
+        dgvgraphics.Rows(0).Cells(0).Value = "C:\casparcg\_media\K D Prasad.png"
+        dgvgraphics.Rows(0).Cells(2).Value = 1
+        dgvgraphics.Rows(0).Cells(3).Value = 3
+
+        dgvgraphics.Rows(1).Cells(0).Value = "C:\casparcg\_media\vimlesh kumar.png"
+        dgvgraphics.Rows(1).Cells(2).Value = 4
+        dgvgraphics.Rows(1).Cells(3).Value = 6
+
+        dgvgraphics.Rows(2).Cells(0).Value = "C:\casparcg\_media\logo1.png"
+        dgvgraphics.Rows(2).Cells(2).Value = 7
+        dgvgraphics.Rows(2).Cells(3).Value = 9
+
+        dgvgraphics2.Rows.Add(5)
+        dgvgraphics2.Rows(0).Cells(0).Value = "Vimlesh Kumar"
+        dgvgraphics2.Rows(0).Cells(1).Value = 1
+        dgvgraphics2.Rows(0).Cells(2).Value = 3
+
+        dgvgraphics2.Rows(1).Cells(0).Value = "K D Prasad"
+        dgvgraphics2.Rows(1).Cells(1).Value = 4
+        dgvgraphics2.Rows(1).Cells(2).Value = 6
+
+        dgvgraphics2.Rows(2).Cells(0).Value = "K G Rajeev"
+        dgvgraphics2.Rows(2).Cells(1).Value = 7
+        dgvgraphics2.Rows(2).Cells(2).Value = 9
+
+        Dim diInfo As New DirectoryInfo("C:\windows\Fonts\")
+        For Each fiInfo As FileInfo In diInfo.GetFiles("*.*", SearchOption.TopDirectoryOnly)
+            Dim sFile As Microsoft.WindowsAPICodePack.Shell.ShellFile = Microsoft.WindowsAPICodePack.Shell.ShellFile.FromFilePath(fiInfo.FullName)
+            If (fiInfo.Name).Contains(".fon") = False Then
+                cmbfont.Items.Add(fiInfo.Name)
+                cmbfontscroll.Items.Add(fiInfo.Name)
+            End If
+
+        Next
 
     End Sub
 
@@ -527,14 +582,14 @@ Public Class ucTrimmer
             MsgBox("Sub Clips are created in " & bb.SelectedPath)
         End If
 
-      
+
     End Sub
 
     Private Sub gbsegmentation_Enter(sender As Object, e As EventArgs) Handles gbsegmentation.Enter
 
     End Sub
 
-  
+
     Private Sub cmdPlayFromCurrentPosition_Click(sender As Object, e As EventArgs) Handles cmdPlayFromCurrentPosition.Click
         On Error Resume Next
         If System.IO.Path.GetExtension(UcnewTrimmer11.lblfilenametrimmer.Text) = ".txt" Then
@@ -557,7 +612,7 @@ Public Class ucTrimmer
             SendString(NetStream, "load " & g_int_ChannelNumber & "-" & g_int_PlaylistLayer & " " & """" & Replace(Replace(UcnewTrimmer11.lblfilenametrimmer.Text, ":", ":\"), "\", "/") & """" & " seek " & UcnewTrimmer11.lblcurrentframetrimmer.Text & vbCrLf)
 
         End If
-      
+
     End Sub
 
     Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs)
@@ -870,6 +925,233 @@ Public Class ucTrimmer
     Private Sub cmdFreezeDetect_Click(sender As Object, e As EventArgs) Handles cmdFreezeDetect.Click
         On Error Resume Next
         Process.Start("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe -i " & """" & UcnewTrimmer11.ofdtrimmer.FileName & """" & " -vf freezedetect -an -f null -")
+    End Sub
+
+    Private Sub dgvjoiner_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvjoiner.CellContentClick
+        On Error Resume Next
+        If dgvjoiner.Columns(e.ColumnIndex).Name = "Openfile" Then
+
+            Dim ofdjoin1 As New OpenFileDialog
+            ofdjoin1.InitialDirectory = Replace(mediafullpath, "/", "\")  '"c:\casparcg\_media\"
+            ofdjoin1.Filter = "All files (*.*)|*.*|mpg files (*.mpg)|*.mpg|avi files (*.avi)|*.avi|mp4 files (*.mp4)|*.mp4"
+            If (ofdjoin1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+                dgvjoiner.CurrentRow.Cells("File").Value = ofdjoin1.FileName
+            End If
+        End If
+    End Sub
+
+    Private Sub VlcLogo_Click(sender As Object, e As EventArgs) Handles vlcLogo.Click
+
+
+    End Sub
+
+    Private Sub CmdOpenLogo_Click(sender As Object, e As EventArgs) Handles cmdOpenLogo.Click
+        On Error Resume Next
+        'Dim openlogoforexport As New OpenFileDialog
+        If openlogoforexport.ShowDialog = Windows.Forms.DialogResult.OK Then
+            'piclogoforexport.ImageLocation = openlogoforexport.FileName
+            vlcLogo.VlcMediaPlayer.SetMedia(New Uri(openlogoforexport.FileName))
+            vlcLogo.VlcMediaPlayer.Play()
+        End If
+
+    End Sub
+
+    Private Sub MarkInGraphics_Click(sender As Object, e As EventArgs) Handles markInGraphics.Click
+        dgvgraphics.CurrentRow.Cells(2).Value = (UcnewTrimmer11.lblcurrentframetrimmer.Text) / fps
+    End Sub
+
+    Private Sub CmdExportGrapchics_Click(sender As Object, e As EventArgs) Handles cmdExportGrapchics.Click
+        'On Error Resume Next
+        Dim strinputfiles As String = ""
+        Dim strfiltercomplex As String = ""
+        Dim j As Integer = -1
+
+        Dim intmaxcount As Integer = -1
+        For kk = 0 To dgvgraphics.RowCount - 1
+            If dgvgraphics.Rows(kk).Cells(0).Value <> "" Then
+                If dgvgraphics.Rows(kk).Cells(2).Value IsNot Nothing Then
+                    If dgvgraphics.Rows(kk).Cells(3) IsNot Nothing Then
+                        If (dgvgraphics.Rows(kk).Cells(2).Value < dgvgraphics.Rows(kk).Cells(3).Value) Then
+                            intmaxcount += 1
+                        End If
+                    End If
+                End If
+            End If
+        Next
+
+        For ii = 0 To dgvgraphics.RowCount - 1
+            If dgvgraphics.Rows(ii).Cells(0).Value <> "" Then
+                If dgvgraphics.Rows(ii).Cells(2).Value IsNot Nothing Then
+                    If dgvgraphics.Rows(ii).Cells(3).Value IsNot Nothing Then
+                        If (dgvgraphics.Rows(ii).Cells(2).Value < dgvgraphics.Rows(ii).Cells(3).Value) Then
+
+                            j = j + 1
+                            strinputfiles &= " -i " & """" & dgvgraphics.Rows(ii).Cells(0).Value & """"
+                            If j = 0 Then
+                                If j = intmaxcount Then
+                                    strfiltercomplex &= "[" & j & "][" & (j + 1) & "]overlay=x=0:y=0:enable='between(t," & dgvgraphics.Rows(ii).Cells(2).Value & "," & dgvgraphics.Rows(ii).Cells(3).Value & ")'[v" & (j + 1) & "]"
+                                Else
+                                    strfiltercomplex &= "[" & j & "][" & (j + 1) & "]overlay=x=0:y=0:enable='between(t," & dgvgraphics.Rows(ii).Cells(2).Value & "," & dgvgraphics.Rows(ii).Cells(3).Value & ")'[v" & (j + 1) & "];"
+                                End If
+                            Else
+                                If j = intmaxcount Then
+                                    strfiltercomplex &= "[v" & j & "][" & (j + 1) & "]overlay=x=0:y=0:enable='between(t," & dgvgraphics.Rows(ii).Cells(2).Value & "," & dgvgraphics.Rows(ii).Cells(3).Value & ")'[v" & (j + 1) & "]"
+                                Else
+                                    strfiltercomplex &= "[v" & j & "][" & (j + 1) & "]overlay=x=0:y=0:enable='between(t," & dgvgraphics.Rows(ii).Cells(2).Value & "," & dgvgraphics.Rows(ii).Cells(3).Value & ")'[v" & (j + 1) & "];"
+                                End If
+                            End If
+
+                        End If
+                    End If
+                End If
+            End If
+        Next
+
+
+        'Process.Start("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe -y  -i " & """" & ofdtrimmer.FileName & """" & " -i " & """" & dgvjoiner.Rows(0).Cells(0).Value & """" & " -i " & """" & dgvjoiner.Rows(1).Cells(0).Value & """" & " -i " & """" & dgvjoiner.Rows(2).Cells(0).Value & """" & " -filter_complex " & """" & " [0][1]overlay=x=0:y=0:enable='between(t," & dgvjoiner.Rows(0).Cells(2).Value & "," & dgvjoiner.Rows(0).Cells(3).Value & ")'[v1];[v1][2]overlay=x=0:y=0:enable='between(t," & dgvjoiner.Rows(1).Cells(2).Value & "," & dgvjoiner.Rows(1).Cells(3).Value & ")'[v2];[v2][3]overlay=x=0:y=0:enable='between(t," & dgvjoiner.Rows(2).Cells(2).Value & "," & dgvjoiner.Rows(2).Cells(3).Value & ")'[v3]" & """" & " -map " & """" & "[v3]" & """" & " -map 0:a d:/test2.mp4")
+        'Process.Start("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe -y  -i " & """" & ofdtrimmer.FileName & """" & strinputfiles & " -filter_complex " & """" & "[0][1]overlay=x=0:y=0:enable='between(t," & dgvjoiner.Rows(0).Cells(2).Value & "," & dgvjoiner.Rows(0).Cells(3).Value & ")'[v1];[v1][2]overlay=x=0:y=0:enable='between(t," & dgvjoiner.Rows(1).Cells(2).Value & "," & dgvjoiner.Rows(1).Cells(3).Value & ")'[v2];[v2][3]overlay=x=0:y=0:enable='between(t," & dgvjoiner.Rows(2).Cells(2).Value & "," & dgvjoiner.Rows(2).Cells(3).Value & ")'[v3]" & """" & " -map " & """" & "[v3]" & """" & " -map 0:a d:/test2.mp4")
+
+
+        UcnewTrimmer11.osdcutfilename.InitialDirectory = Replace(mediafullpath, "/", "\")  '"c:\casparcg\_media\"
+        UcnewTrimmer11.osdcutfilename.FileName = System.IO.Path.GetFileNameWithoutExtension(UcnewTrimmer11.ofdtrimmer.FileName) & "_WithGraphics"
+        UcnewTrimmer11.osdcutfilename.FilterIndex = 1
+        UcnewTrimmer11.osdcutfilename.Filter = "original wrapper (*" & System.IO.Path.GetExtension(UcnewTrimmer11.ofdtrimmer.FileName) & ")|*" & System.IO.Path.GetExtension(UcnewTrimmer11.ofdtrimmer.FileName) & "|mp4 files (*.mp4)|*.mp4|mxf files (*.mxf)|*.mxf|avi files (*.avi)|*.avi|All files (*.*)|*.*"
+
+        If (UcnewTrimmer11.osdcutfilename.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            Process.Start("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe -y  -i " & """" & UcnewTrimmer11.ofdtrimmer.FileName & """" & strinputfiles & " -filter_complex " & """" & strfiltercomplex & """" & " -map " & """" & "[v" & (intmaxcount + 1) & "]" & """" & " -map 0:a " & """" & UcnewTrimmer11.osdcutfilename.FileName & """")
+
+        End If
+
+    End Sub
+
+    Private Sub MarkOutGraphics_Click(sender As Object, e As EventArgs) Handles markOutGraphics.Click
+        dgvgraphics.CurrentRow.Cells(3).Value = (UcnewTrimmer11.lblcurrentframetrimmer.Text) / fps
+    End Sub
+
+    Private Sub GotoInGraphics_Click(sender As Object, e As EventArgs) Handles GotoInGraphics.Click
+        UcnewTrimmer11.vlc1.VlcMediaPlayer.Time = (dgvgraphics.CurrentRow.Cells(2).Value) * 1000
+    End Sub
+
+    Private Sub GotoOutGraphics_Click(sender As Object, e As EventArgs) Handles gotoOutGraphics.Click
+        UcnewTrimmer11.vlc1.VlcMediaPlayer.Time = (dgvgraphics.CurrentRow.Cells(3).Value) * 1000
+    End Sub
+
+    Private Sub Dgvgraphics_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvgraphics.CellContentClick
+        On Error Resume Next
+        If dgvgraphics.Columns(e.ColumnIndex).Name = "pngOpen" Then
+
+            Dim ofdjoin1 As New OpenFileDialog
+            ofdjoin1.InitialDirectory = Replace(mediafullpath, "/", "\")  '"c:\casparcg\_media\"
+            ofdjoin1.Filter = "png files (*.png)|*.png|All files (*.*)|*.*|jpg files (*.jpg)|*.jpg|jpeg files (*.jpeg)|*.jpeg"
+            ofdjoin1.Title = "Open a PNG file"
+            If (ofdjoin1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+                dgvgraphics.CurrentRow.Cells(0).Value = ofdjoin1.FileName
+            End If
+        End If
+    End Sub
+    Private Sub CmdFontColor_Click(sender As Object, e As EventArgs) Handles cmdFontColor.Click
+        Dim aa As New ColorDialog
+        If aa.ShowDialog = DialogResult.OK Then
+            cmdStripColor.ForeColor = aa.Color
+            cmdFontColor.ForeColor = aa.Color
+        End If
+    End Sub
+    Private Sub CmdStripColor_Click(sender As Object, e As EventArgs) Handles cmdStripColor.Click
+        Dim aa As New ColorDialog
+        If aa.ShowDialog = DialogResult.OK Then
+            cmdStripColor.BackColor = aa.Color
+            cmdFontColor.BackColor = aa.Color
+        End If
+    End Sub
+    Private Sub MarkInGraphics2_Click(sender As Object, e As EventArgs) Handles markInGraphics2.Click
+        dgvgraphics2.CurrentRow.Cells(1).Value = (UcnewTrimmer11.lblcurrentframetrimmer.Text) / fps
+    End Sub
+    Private Sub MarkOutGraphics2_Click(sender As Object, e As EventArgs) Handles markOutGraphics2.Click
+        dgvgraphics2.CurrentRow.Cells(2).Value = (UcnewTrimmer11.lblcurrentframetrimmer.Text) / fps
+    End Sub
+
+    Private Sub GotoInGraphics2_Click(sender As Object, e As EventArgs) Handles GotoInGraphics2.Click
+        UcnewTrimmer11.vlc1.VlcMediaPlayer.Time = (dgvgraphics2.CurrentRow.Cells(1).Value) * 1000
+    End Sub
+
+    Private Sub GotoOutGraphics2_Click(sender As Object, e As EventArgs) Handles gotoOutGraphics2.Click
+        UcnewTrimmer11.vlc1.VlcMediaPlayer.Time = (dgvgraphics2.CurrentRow.Cells(2).Value) * 1000
+    End Sub
+
+    Private Sub CmdExportGrapchics2_Click(sender As Object, e As EventArgs) Handles cmdExportGrapchics2.Click
+        On Error Resume Next
+        Dim strinputfiles As String = ""
+        Dim strfiltercomplex As String = ""
+        Dim j As Integer = -1
+
+        Dim intmaxcount As Integer = -1
+        For kk = 0 To dgvgraphics2.RowCount - 1
+            If dgvgraphics2.Rows(kk).Cells(0).Value <> "" Then
+                If dgvgraphics2.Rows(kk).Cells(1).Value IsNot Nothing Then
+                    If dgvgraphics2.Rows(kk).Cells(2) IsNot Nothing Then
+                        If (dgvgraphics2.Rows(kk).Cells(1).Value < dgvgraphics2.Rows(kk).Cells(2).Value) Then
+                            intmaxcount += 1
+                        End If
+                    End If
+                End If
+            End If
+        Next
+
+        For ii = 0 To dgvgraphics2.RowCount - 1
+            If dgvgraphics2.Rows(ii).Cells(0).Value <> "" Then
+                If dgvgraphics2.Rows(ii).Cells(1).Value IsNot Nothing Then
+                    If dgvgraphics2.Rows(ii).Cells(2).Value IsNot Nothing Then
+                        If (dgvgraphics2.Rows(ii).Cells(1).Value < dgvgraphics2.Rows(ii).Cells(2).Value) Then
+
+                            j = j + 1
+                            If j = intmaxcount Then
+                                strfiltercomplex += "drawtext=text='" & dgvgraphics2.Rows(ii).Cells(0).Value & "':x=(w-tw)/2:y=(h-50):fontcolor=" & ColorTranslator.ToHtml(cmdStripColor.ForeColor) & ":fontsize=" & cmbFontSize.Text & ":box=1:boxcolor=" & ColorTranslator.ToHtml(cmdStripColor.BackColor) & ":boxborderw=6:borderw=1:fontfile='c\:/windows/fonts/" & cmbfont.Text & "':enable='between(t," & dgvgraphics2.Rows(ii).Cells(1).Value & "," & dgvgraphics2.Rows(ii).Cells(2).Value & ")'"
+
+                            Else
+                                strfiltercomplex += "drawtext=text='" & dgvgraphics2.Rows(ii).Cells(0).Value & "':x=(w-tw)/2:y=(h-50):fontcolor=" & ColorTranslator.ToHtml(cmdStripColor.ForeColor) & ":fontsize=" & cmbFontSize.Text & ":box=1:boxcolor=" & ColorTranslator.ToHtml(cmdStripColor.BackColor) & ":boxborderw=6:borderw=1:fontfile='c\:/windows/fonts/" & cmbfont.Text & "':enable='between(t," & dgvgraphics2.Rows(ii).Cells(1).Value & "," & dgvgraphics2.Rows(ii).Cells(2).Value & ")',"
+
+                            End If
+
+                        End If
+                    End If
+                End If
+            End If
+        Next
+
+        UcnewTrimmer11.osdcutfilename.InitialDirectory = Replace(mediafullpath, "/", "\")  '"c:\casparcg\_media\"
+        UcnewTrimmer11.osdcutfilename.FileName = System.IO.Path.GetFileNameWithoutExtension(UcnewTrimmer11.ofdtrimmer.FileName) & "_WithGraphics"
+        UcnewTrimmer11.osdcutfilename.FilterIndex = 1
+        UcnewTrimmer11.osdcutfilename.Filter = "original wrapper (*" & System.IO.Path.GetExtension(UcnewTrimmer11.ofdtrimmer.FileName) & ")|*" & System.IO.Path.GetExtension(UcnewTrimmer11.ofdtrimmer.FileName) & "|mp4 files (*.mp4)|*.mp4|mxf files (*.mxf)|*.mxf|avi files (*.avi)|*.avi|All files (*.*)|*.*"
+
+        If (UcnewTrimmer11.osdcutfilename.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            Process.Start("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe -y  -i " & """" & UcnewTrimmer11.ofdtrimmer.FileName & """" & " -vf " & """" & "[in]" & strfiltercomplex & """" & " " & """" & UcnewTrimmer11.osdcutfilename.FileName & """")
+            'MsgBox("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe -y  -i " & """" & UcnewTrimmer11.ofdtrimmer.FileName & """" & " -vf " & """" & "[in]" & strfiltercomplex & """" & " " & """" & UcnewTrimmer11.osdcutfilename.FileName & """")
+        End If
+    End Sub
+
+    Private Sub Cmbfont_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbfont.SelectedIndexChanged
+        On Error Resume Next
+        Dim fontCol As PrivateFontCollection = New PrivateFontCollection()
+        fontCol.AddFontFile("c:/windows/fonts/" & cmbfont.SelectedItem.ToString)
+        Dim myfont As New Font(fontCol.Families(0).Name, 10, FontStyle.Bold)
+        dgvgraphics2.Columns(0).DefaultCellStyle.Font = myfont
+
+    End Sub
+
+    Private Sub cmdstripcolor1_Click(sender As Object, e As EventArgs) Handles cmdstripcolor1.Click
+        Dim ss As New ColorDialog
+        If ss.ShowDialog = DialogResult.OK Then
+            cmdstripcolor1.BackColor = ss.Color
+            cmdfontcolor1.BackColor = ss.Color
+        End If
+    End Sub
+
+    Private Sub cmdfontcolor1_Click(sender As Object, e As EventArgs) Handles cmdfontcolor1.Click
+        Dim ss As New ColorDialog
+        If ss.ShowDialog = DialogResult.OK Then
+            cmdstripcolor1.ForeColor = ss.Color
+            cmdfontcolor1.ForeColor = ss.Color
+        End If
     End Sub
 End Class
 

@@ -23,6 +23,8 @@ Partial Class frmmediaplayer
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim Alert1 As ALERT = New ALERT()
+        Dim Critical1 As CRITICAL = New CRITICAL()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmmediaplayer))
         Me.lblport = New System.Windows.Forms.Label()
         Me.lblhost = New System.Windows.Forms.Label()
@@ -30,7 +32,6 @@ Partial Class frmmediaplayer
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.cmdstopall = New System.Windows.Forms.Button()
         Me.nfontsizeforall = New System.Windows.Forms.NumericUpDown()
-        Me.cmbfontsforall = New System.Windows.Forms.ComboBox()
         Me.cmbhost = New System.Windows.Forms.ComboBox()
         Me.txtport = New System.Windows.Forms.TextBox()
         Me.cmdyadif10 = New System.Windows.Forms.Button()
@@ -42,6 +43,7 @@ Partial Class frmmediaplayer
         Me.lbltime = New System.Windows.Forms.Label()
         Me.cmdScreenConsumer = New System.Windows.Forms.Button()
         Me.cmdVLCPreview = New System.Windows.Forms.Button()
+        Me.cmbfontsforall = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.rdoRecording = New System.Windows.Forms.RadioButton()
@@ -142,6 +144,7 @@ Partial Class frmmediaplayer
         Me.WaterMarkingToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuizeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WeatherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RCCAutomationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScrollersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HTMLScrollerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -160,12 +163,15 @@ Partial Class frmmediaplayer
         Me.DaviceCupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OnScreenDrawingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WeightLiftingToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RCCBallToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExternalSoftwaresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MediaAssetManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.XDCamSoapClientToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.VDCPControllerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UDPChatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MetadataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.XDCamControllersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.YouTubeLiveManagemnetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCMPModules = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCMPStreaming = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuStreamPlayer = New System.Windows.Forms.ToolStripMenuItem()
@@ -188,18 +194,23 @@ Partial Class frmmediaplayer
         Me.SilenceDetectorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCMPElection = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCMPTimers = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CasparcgWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DBFSMeter16ChannelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CCTVToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CommandSchedulerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CommandSchedulerDateWiseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MySqlTestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WebSocketServerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FullPageCaptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCMPRemoteLogging = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabPagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CompositionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TemplatePlaylistToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCMPTools = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCMPAddScreen = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Channel1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Channel2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Channel3ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Channel4ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddOutput = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddputputFill = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddOutputFillDecklink = New System.Windows.Forms.ToolStripMenuItem()
@@ -285,9 +296,12 @@ Partial Class frmmediaplayer
         Me.DifferentConfigFilesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoadLastLayoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveLayoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearTempFileAndRecycleBinToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MakeThumbnailForServer23ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCMPHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCMPUpdatedSoftwareLink = New System.Windows.Forms.ToolStripMenuItem()
+        Me.YouTubeLInkOfHelpVideosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tmrGC = New System.Windows.Forms.Timer(Me.components)
         Me.RecordingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OffAirLoggerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -299,16 +313,15 @@ Partial Class frmmediaplayer
         Me.SystemAudioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.pnlServer = New System.Windows.Forms.Panel()
-        Me.lblcasparMemoryValue = New System.Windows.Forms.Label()
-        Me.lblcasparMemory = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.gbPannel = New System.Windows.Forms.Panel()
         Me.tmrGeneralInfo = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblCMPMemory = New System.Windows.Forms.Label()
+        Me.lblcasparMemory = New System.Windows.Forms.Label()
+        Me.lblcasparMemoryValue = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.CpBarCPU = New CPBar()
         Me.DockPanel1 = New WeifenLuo.WinFormsUI.Docking.DockPanel()
         Me.VS2015BlueTheme1 = New WeifenLuo.WinFormsUI.Docking.VS2015BlueTheme()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -385,17 +398,6 @@ Partial Class frmmediaplayer
         Me.nfontsizeforall.TabIndex = 539
         Me.ToolTip1.SetToolTip(Me.nfontsizeforall, "Only for this client; not for template")
         Me.nfontsizeforall.Value = New Decimal(New Integer() {10, 0, 0, 0})
-        '
-        'cmbfontsforall
-        '
-        Me.cmbfontsforall.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "cmbfontsforall", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.cmbfontsforall.FormattingEnabled = True
-        Me.cmbfontsforall.Location = New System.Drawing.Point(700, 31)
-        Me.cmbfontsforall.Name = "cmbfontsforall"
-        Me.cmbfontsforall.Size = New System.Drawing.Size(157, 21)
-        Me.cmbfontsforall.TabIndex = 538
-        Me.cmbfontsforall.Text = Global.caspar_media_playback.My.MySettings.Default.cmbfontsforall
-        Me.ToolTip1.SetToolTip(Me.cmbfontsforall, "Fonts of module which do not have font selection of their own.")
         '
         'cmbhost
         '
@@ -517,6 +519,17 @@ Partial Class frmmediaplayer
         Me.cmdVLCPreview.Text = "VLC Preview"
         Me.ToolTip1.SetToolTip(Me.cmdVLCPreview, "Apply Yadif Filter on running clip")
         Me.cmdVLCPreview.UseVisualStyleBackColor = True
+        '
+        'cmbfontsforall
+        '
+        Me.cmbfontsforall.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "cmbfontsforall", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.cmbfontsforall.FormattingEnabled = True
+        Me.cmbfontsforall.Location = New System.Drawing.Point(700, 31)
+        Me.cmbfontsforall.Name = "cmbfontsforall"
+        Me.cmbfontsforall.Size = New System.Drawing.Size(157, 21)
+        Me.cmbfontsforall.TabIndex = 538
+        Me.cmbfontsforall.Text = Global.caspar_media_playback.My.MySettings.Default.cmbfontsforall
+        Me.ToolTip1.SetToolTip(Me.cmbfontsforall, "Fonts of module which do not have font selection of their own.")
         '
         'Label15
         '
@@ -1454,7 +1467,7 @@ Partial Class frmmediaplayer
         '
         'CGToolStripMenuItem
         '
-        Me.CGToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CG1ToolStripMenuItem, Me.CG2ToolStripMenuItem, Me.OnelinerToolStripMenuItem, Me.TwolinerToolStripMenuItem1, Me.PPTEXcellToolStripMenuItem1, Me.WaterMarkingToolStripMenuItem1, Me.QuizeToolStripMenuItem, Me.WeatherToolStripMenuItem})
+        Me.CGToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CG1ToolStripMenuItem, Me.CG2ToolStripMenuItem, Me.OnelinerToolStripMenuItem, Me.TwolinerToolStripMenuItem1, Me.PPTEXcellToolStripMenuItem1, Me.WaterMarkingToolStripMenuItem1, Me.QuizeToolStripMenuItem, Me.WeatherToolStripMenuItem, Me.RCCAutomationToolStripMenuItem})
         Me.CGToolStripMenuItem.Name = "CGToolStripMenuItem"
         Me.CGToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
         Me.CGToolStripMenuItem.Text = "CG"
@@ -1462,50 +1475,56 @@ Partial Class frmmediaplayer
         'CG1ToolStripMenuItem
         '
         Me.CG1ToolStripMenuItem.Name = "CG1ToolStripMenuItem"
-        Me.CG1ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CG1ToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.CG1ToolStripMenuItem.Text = "CG1"
         '
         'CG2ToolStripMenuItem
         '
         Me.CG2ToolStripMenuItem.Name = "CG2ToolStripMenuItem"
-        Me.CG2ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CG2ToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.CG2ToolStripMenuItem.Text = "CG2"
         '
         'OnelinerToolStripMenuItem
         '
         Me.OnelinerToolStripMenuItem.Name = "OnelinerToolStripMenuItem"
-        Me.OnelinerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OnelinerToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.OnelinerToolStripMenuItem.Text = "Oneliner"
         '
         'TwolinerToolStripMenuItem1
         '
         Me.TwolinerToolStripMenuItem1.Name = "TwolinerToolStripMenuItem1"
-        Me.TwolinerToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.TwolinerToolStripMenuItem1.Size = New System.Drawing.Size(164, 22)
         Me.TwolinerToolStripMenuItem1.Text = "Twoliner"
         '
         'PPTEXcellToolStripMenuItem1
         '
         Me.PPTEXcellToolStripMenuItem1.Name = "PPTEXcellToolStripMenuItem1"
-        Me.PPTEXcellToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.PPTEXcellToolStripMenuItem1.Size = New System.Drawing.Size(164, 22)
         Me.PPTEXcellToolStripMenuItem1.Text = "PPT/EXcell"
         '
         'WaterMarkingToolStripMenuItem1
         '
         Me.WaterMarkingToolStripMenuItem1.Name = "WaterMarkingToolStripMenuItem1"
-        Me.WaterMarkingToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.WaterMarkingToolStripMenuItem1.Size = New System.Drawing.Size(164, 22)
         Me.WaterMarkingToolStripMenuItem1.Text = "Water Marking"
         '
         'QuizeToolStripMenuItem
         '
         Me.QuizeToolStripMenuItem.Name = "QuizeToolStripMenuItem"
-        Me.QuizeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.QuizeToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.QuizeToolStripMenuItem.Text = "Quiz"
         '
         'WeatherToolStripMenuItem
         '
         Me.WeatherToolStripMenuItem.Name = "WeatherToolStripMenuItem"
-        Me.WeatherToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WeatherToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.WeatherToolStripMenuItem.Text = "Weather"
+        '
+        'RCCAutomationToolStripMenuItem
+        '
+        Me.RCCAutomationToolStripMenuItem.Name = "RCCAutomationToolStripMenuItem"
+        Me.RCCAutomationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.RCCAutomationToolStripMenuItem.Text = "RCC Automation"
         '
         'ScrollersToolStripMenuItem
         '
@@ -1576,7 +1595,7 @@ Partial Class frmmediaplayer
         '
         'GamesToolStripMenuItem
         '
-        Me.GamesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NationalGamesKerlaToolStripMenuItem, Me.SouthAsianGamesGuwahati2016ToolStripMenuItem, Me.CricketToolStripMenuItem1, Me.DaviceCupToolStripMenuItem, Me.OnScreenDrawingToolStripMenuItem, Me.WeightLiftingToolStripMenuItem1})
+        Me.GamesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NationalGamesKerlaToolStripMenuItem, Me.SouthAsianGamesGuwahati2016ToolStripMenuItem, Me.CricketToolStripMenuItem1, Me.DaviceCupToolStripMenuItem, Me.OnScreenDrawingToolStripMenuItem, Me.WeightLiftingToolStripMenuItem1, Me.RCCBallToolStripMenuItem})
         Me.GamesToolStripMenuItem.Name = "GamesToolStripMenuItem"
         Me.GamesToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.GamesToolStripMenuItem.Text = "Games"
@@ -1617,9 +1636,15 @@ Partial Class frmmediaplayer
         Me.WeightLiftingToolStripMenuItem1.Size = New System.Drawing.Size(256, 22)
         Me.WeightLiftingToolStripMenuItem1.Text = "Weight Lifting"
         '
+        'RCCBallToolStripMenuItem
+        '
+        Me.RCCBallToolStripMenuItem.Name = "RCCBallToolStripMenuItem"
+        Me.RCCBallToolStripMenuItem.Size = New System.Drawing.Size(256, 22)
+        Me.RCCBallToolStripMenuItem.Text = "RCCBall"
+        '
         'ExternalSoftwaresToolStripMenuItem
         '
-        Me.ExternalSoftwaresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MediaAssetManagementToolStripMenuItem, Me.XDCamSoapClientToolStripMenuItem1, Me.VDCPControllerToolStripMenuItem, Me.UDPChatToolStripMenuItem, Me.MetadataToolStripMenuItem})
+        Me.ExternalSoftwaresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MediaAssetManagementToolStripMenuItem, Me.XDCamSoapClientToolStripMenuItem1, Me.VDCPControllerToolStripMenuItem, Me.UDPChatToolStripMenuItem, Me.MetadataToolStripMenuItem, Me.XDCamControllersToolStripMenuItem, Me.YouTubeLiveManagemnetToolStripMenuItem})
         Me.ExternalSoftwaresToolStripMenuItem.Name = "ExternalSoftwaresToolStripMenuItem"
         Me.ExternalSoftwaresToolStripMenuItem.Size = New System.Drawing.Size(115, 20)
         Me.ExternalSoftwaresToolStripMenuItem.Text = "External Softwares"
@@ -1627,36 +1652,48 @@ Partial Class frmmediaplayer
         'MediaAssetManagementToolStripMenuItem
         '
         Me.MediaAssetManagementToolStripMenuItem.Name = "MediaAssetManagementToolStripMenuItem"
-        Me.MediaAssetManagementToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.MediaAssetManagementToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
         Me.MediaAssetManagementToolStripMenuItem.Text = "Media Asset Management"
         '
         'XDCamSoapClientToolStripMenuItem1
         '
         Me.XDCamSoapClientToolStripMenuItem1.Name = "XDCamSoapClientToolStripMenuItem1"
-        Me.XDCamSoapClientToolStripMenuItem1.Size = New System.Drawing.Size(212, 22)
+        Me.XDCamSoapClientToolStripMenuItem1.Size = New System.Drawing.Size(221, 22)
         Me.XDCamSoapClientToolStripMenuItem1.Text = "XDCamSoapClient"
         '
         'VDCPControllerToolStripMenuItem
         '
         Me.VDCPControllerToolStripMenuItem.Name = "VDCPControllerToolStripMenuItem"
-        Me.VDCPControllerToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.VDCPControllerToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
         Me.VDCPControllerToolStripMenuItem.Text = "VDCP Controller"
         '
         'UDPChatToolStripMenuItem
         '
         Me.UDPChatToolStripMenuItem.Name = "UDPChatToolStripMenuItem"
-        Me.UDPChatToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.UDPChatToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
         Me.UDPChatToolStripMenuItem.Text = "UDP Chat"
         '
         'MetadataToolStripMenuItem
         '
         Me.MetadataToolStripMenuItem.Name = "MetadataToolStripMenuItem"
-        Me.MetadataToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.MetadataToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
         Me.MetadataToolStripMenuItem.Text = "Metadata"
+        '
+        'XDCamControllersToolStripMenuItem
+        '
+        Me.XDCamControllersToolStripMenuItem.Name = "XDCamControllersToolStripMenuItem"
+        Me.XDCamControllersToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.XDCamControllersToolStripMenuItem.Text = "XDCamControllers"
+        '
+        'YouTubeLiveManagemnetToolStripMenuItem
+        '
+        Me.YouTubeLiveManagemnetToolStripMenuItem.Name = "YouTubeLiveManagemnetToolStripMenuItem"
+        Me.YouTubeLiveManagemnetToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.YouTubeLiveManagemnetToolStripMenuItem.Text = "You Tube Live Managemnet"
         '
         'mnuCMPModules
         '
-        Me.mnuCMPModules.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCMPStreaming, Me.mnuStreamPlayer, Me.mnuCMPSubTitling, Me.mnuCMPSlowMotion, Me.mnuCMPSocialMedia, Me.VLCToolStripMenuItem, Me.mnuCMPMixer, Me.mnuCMPVisionMixer, Me.mnuCMPOSC, Me.SilenceDetectorToolStripMenuItem, Me.mnuCMPElection, Me.mnuCMPTimers, Me.CasparcgWindowToolStripMenuItem, Me.DBFSMeter16ChannelToolStripMenuItem, Me.CCTVToolStripMenuItem, Me.CommandSchedulerToolStripMenuItem, Me.MySqlTestToolStripMenuItem, Me.WebSocketServerToolStripMenuItem, Me.FullPageCaptionToolStripMenuItem, Me.mnuCMPRemoteLogging, Me.TabPagesToolStripMenuItem, Me.CompositionToolStripMenuItem})
+        Me.mnuCMPModules.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCMPStreaming, Me.mnuStreamPlayer, Me.mnuCMPSubTitling, Me.mnuCMPSlowMotion, Me.mnuCMPSocialMedia, Me.VLCToolStripMenuItem, Me.mnuCMPMixer, Me.mnuCMPVisionMixer, Me.mnuCMPOSC, Me.SilenceDetectorToolStripMenuItem, Me.mnuCMPElection, Me.mnuCMPTimers, Me.DBFSMeter16ChannelToolStripMenuItem, Me.CCTVToolStripMenuItem, Me.CommandSchedulerToolStripMenuItem, Me.CommandSchedulerDateWiseToolStripMenuItem, Me.MySqlTestToolStripMenuItem, Me.WebSocketServerToolStripMenuItem, Me.FullPageCaptionToolStripMenuItem, Me.mnuCMPRemoteLogging, Me.TabPagesToolStripMenuItem, Me.CompositionToolStripMenuItem, Me.TemplatePlaylistToolStripMenuItem})
         Me.mnuCMPModules.Name = "mnuCMPModules"
         Me.mnuCMPModules.Size = New System.Drawing.Size(98, 20)
         Me.mnuCMPModules.Text = "&Other Modules"
@@ -1664,20 +1701,20 @@ Partial Class frmmediaplayer
         'mnuCMPStreaming
         '
         Me.mnuCMPStreaming.Name = "mnuCMPStreaming"
-        Me.mnuCMPStreaming.Size = New System.Drawing.Size(196, 22)
+        Me.mnuCMPStreaming.Size = New System.Drawing.Size(238, 22)
         Me.mnuCMPStreaming.Text = "Streaming"
         '
         'mnuStreamPlayer
         '
         Me.mnuStreamPlayer.Name = "mnuStreamPlayer"
-        Me.mnuStreamPlayer.Size = New System.Drawing.Size(196, 22)
+        Me.mnuStreamPlayer.Size = New System.Drawing.Size(238, 22)
         Me.mnuStreamPlayer.Text = "Stream Player"
         '
         'mnuCMPSubTitling
         '
         Me.mnuCMPSubTitling.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCMPSRTPlayer, Me.mnuCMPSongSubTitling})
         Me.mnuCMPSubTitling.Name = "mnuCMPSubTitling"
-        Me.mnuCMPSubTitling.Size = New System.Drawing.Size(196, 22)
+        Me.mnuCMPSubTitling.Size = New System.Drawing.Size(238, 22)
         Me.mnuCMPSubTitling.Text = "SubTitling"
         '
         'mnuCMPSRTPlayer
@@ -1696,7 +1733,7 @@ Partial Class frmmediaplayer
         '
         Me.mnuCMPSlowMotion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCMPSlowMotionInServer21, Me.mnuCMPSlowMotionInJStarServer})
         Me.mnuCMPSlowMotion.Name = "mnuCMPSlowMotion"
-        Me.mnuCMPSlowMotion.Size = New System.Drawing.Size(196, 22)
+        Me.mnuCMPSlowMotion.Size = New System.Drawing.Size(238, 22)
         Me.mnuCMPSlowMotion.Text = "Slow Motion"
         '
         'mnuCMPSlowMotionInServer21
@@ -1715,7 +1752,7 @@ Partial Class frmmediaplayer
         '
         Me.mnuCMPSocialMedia.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCMPFacebook, Me.mnuCMPTwitter, Me.mnuCMPHTMLorInternet})
         Me.mnuCMPSocialMedia.Name = "mnuCMPSocialMedia"
-        Me.mnuCMPSocialMedia.Size = New System.Drawing.Size(196, 22)
+        Me.mnuCMPSocialMedia.Size = New System.Drawing.Size(238, 22)
         Me.mnuCMPSocialMedia.Text = "Social Media"
         '
         'mnuCMPFacebook
@@ -1740,7 +1777,7 @@ Partial Class frmmediaplayer
         '
         Me.VLCToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StreamTesterToolStripMenuItem, Me.FourChannelPreviewToolStripMenuItem})
         Me.VLCToolStripMenuItem.Name = "VLCToolStripMenuItem"
-        Me.VLCToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.VLCToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
         Me.VLCToolStripMenuItem.Text = "VLC"
         '
         'StreamTesterToolStripMenuItem
@@ -1758,117 +1795,148 @@ Partial Class frmmediaplayer
         'mnuCMPMixer
         '
         Me.mnuCMPMixer.Name = "mnuCMPMixer"
-        Me.mnuCMPMixer.Size = New System.Drawing.Size(196, 22)
+        Me.mnuCMPMixer.Size = New System.Drawing.Size(238, 22)
         Me.mnuCMPMixer.Text = "Mixer"
         '
         'mnuCMPVisionMixer
         '
         Me.mnuCMPVisionMixer.Name = "mnuCMPVisionMixer"
-        Me.mnuCMPVisionMixer.Size = New System.Drawing.Size(196, 22)
+        Me.mnuCMPVisionMixer.Size = New System.Drawing.Size(238, 22)
         Me.mnuCMPVisionMixer.Text = "Vision Mixer"
         '
         'mnuCMPOSC
         '
         Me.mnuCMPOSC.Name = "mnuCMPOSC"
-        Me.mnuCMPOSC.Size = New System.Drawing.Size(196, 22)
+        Me.mnuCMPOSC.Size = New System.Drawing.Size(238, 22)
         Me.mnuCMPOSC.Text = "OSC"
         '
         'SilenceDetectorToolStripMenuItem
         '
         Me.SilenceDetectorToolStripMenuItem.Name = "SilenceDetectorToolStripMenuItem"
-        Me.SilenceDetectorToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.SilenceDetectorToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
         Me.SilenceDetectorToolStripMenuItem.Text = "Silence Detector"
         '
         'mnuCMPElection
         '
         Me.mnuCMPElection.Name = "mnuCMPElection"
-        Me.mnuCMPElection.Size = New System.Drawing.Size(196, 22)
+        Me.mnuCMPElection.Size = New System.Drawing.Size(238, 22)
         Me.mnuCMPElection.Text = "Election"
         '
         'mnuCMPTimers
         '
         Me.mnuCMPTimers.Name = "mnuCMPTimers"
-        Me.mnuCMPTimers.Size = New System.Drawing.Size(196, 22)
+        Me.mnuCMPTimers.Size = New System.Drawing.Size(238, 22)
         Me.mnuCMPTimers.Text = "Timers"
-        '
-        'CasparcgWindowToolStripMenuItem
-        '
-        Me.CasparcgWindowToolStripMenuItem.Name = "CasparcgWindowToolStripMenuItem"
-        Me.CasparcgWindowToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.CasparcgWindowToolStripMenuItem.Text = "Casparcg Window"
         '
         'DBFSMeter16ChannelToolStripMenuItem
         '
         Me.DBFSMeter16ChannelToolStripMenuItem.Name = "DBFSMeter16ChannelToolStripMenuItem"
-        Me.DBFSMeter16ChannelToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.DBFSMeter16ChannelToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
         Me.DBFSMeter16ChannelToolStripMenuItem.Text = "dBFS Meter 16 Channel"
         '
         'CCTVToolStripMenuItem
         '
         Me.CCTVToolStripMenuItem.Name = "CCTVToolStripMenuItem"
-        Me.CCTVToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.CCTVToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
         Me.CCTVToolStripMenuItem.Text = "CCTV"
         '
         'CommandSchedulerToolStripMenuItem
         '
         Me.CommandSchedulerToolStripMenuItem.Name = "CommandSchedulerToolStripMenuItem"
-        Me.CommandSchedulerToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.CommandSchedulerToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
         Me.CommandSchedulerToolStripMenuItem.Text = "Command Scheduler"
+        '
+        'CommandSchedulerDateWiseToolStripMenuItem
+        '
+        Me.CommandSchedulerDateWiseToolStripMenuItem.Name = "CommandSchedulerDateWiseToolStripMenuItem"
+        Me.CommandSchedulerDateWiseToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
+        Me.CommandSchedulerDateWiseToolStripMenuItem.Text = "Command Scheduler DateWise"
         '
         'MySqlTestToolStripMenuItem
         '
         Me.MySqlTestToolStripMenuItem.Name = "MySqlTestToolStripMenuItem"
-        Me.MySqlTestToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.MySqlTestToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
         Me.MySqlTestToolStripMenuItem.Text = "SqlTest"
         '
         'WebSocketServerToolStripMenuItem
         '
         Me.WebSocketServerToolStripMenuItem.Name = "WebSocketServerToolStripMenuItem"
-        Me.WebSocketServerToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.WebSocketServerToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
         Me.WebSocketServerToolStripMenuItem.Text = "Web Socket Server"
         '
         'FullPageCaptionToolStripMenuItem
         '
         Me.FullPageCaptionToolStripMenuItem.Name = "FullPageCaptionToolStripMenuItem"
-        Me.FullPageCaptionToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.FullPageCaptionToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
         Me.FullPageCaptionToolStripMenuItem.Text = "FullPageCaption"
         '
         'mnuCMPRemoteLogging
         '
         Me.mnuCMPRemoteLogging.Name = "mnuCMPRemoteLogging"
-        Me.mnuCMPRemoteLogging.Size = New System.Drawing.Size(196, 22)
+        Me.mnuCMPRemoteLogging.Size = New System.Drawing.Size(238, 22)
         Me.mnuCMPRemoteLogging.Text = "Remote Logging"
         '
         'TabPagesToolStripMenuItem
         '
         Me.TabPagesToolStripMenuItem.Name = "TabPagesToolStripMenuItem"
-        Me.TabPagesToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.TabPagesToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
         Me.TabPagesToolStripMenuItem.Text = "Tab Pages"
         '
         'CompositionToolStripMenuItem
         '
         Me.CompositionToolStripMenuItem.Name = "CompositionToolStripMenuItem"
-        Me.CompositionToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.CompositionToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
         Me.CompositionToolStripMenuItem.Text = "Composition"
+        '
+        'TemplatePlaylistToolStripMenuItem
+        '
+        Me.TemplatePlaylistToolStripMenuItem.Name = "TemplatePlaylistToolStripMenuItem"
+        Me.TemplatePlaylistToolStripMenuItem.Size = New System.Drawing.Size(238, 22)
+        Me.TemplatePlaylistToolStripMenuItem.Text = "Template Playlist"
         '
         'mnuCMPTools
         '
-        Me.mnuCMPTools.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCMPAddScreen, Me.AddOutput, Me.RemoveOutput, Me.Play_Input, Me.mnuCMPRemoveScreen, Me.mnuCMPResetSettings, Me.mnuCMPEditConfigFile, Me.mnuCMPRestartCasparcgServer, Me.mnuCMPRestartwithConfigFile, Me.mnuCMPQuitCasparcgServer, Me.mnuCMPCopyExampleTemplates, Me.mnuCMPCopyExampleMedia, Me.mnuCMPCasparcgDiagnosisWndow, Me.mnuCMPClearTypeSwitch, Me.mnuCMPPALSD, Me.mnuCMPHD108050i, Me.NewInstanceToolStripMenuItem, Me.ExitApplicationToolStripMenuItem, Me.DifferentConfigFilesToolStripMenuItem, Me.LoadLastLayoutToolStripMenuItem, Me.SaveLayoutToolStripMenuItem})
+        Me.mnuCMPTools.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCMPAddScreen, Me.AddOutput, Me.RemoveOutput, Me.Play_Input, Me.mnuCMPRemoveScreen, Me.mnuCMPResetSettings, Me.mnuCMPEditConfigFile, Me.mnuCMPRestartCasparcgServer, Me.mnuCMPRestartwithConfigFile, Me.mnuCMPQuitCasparcgServer, Me.mnuCMPCopyExampleTemplates, Me.mnuCMPCopyExampleMedia, Me.mnuCMPCasparcgDiagnosisWndow, Me.mnuCMPClearTypeSwitch, Me.mnuCMPPALSD, Me.mnuCMPHD108050i, Me.NewInstanceToolStripMenuItem, Me.ExitApplicationToolStripMenuItem, Me.DifferentConfigFilesToolStripMenuItem, Me.LoadLastLayoutToolStripMenuItem, Me.SaveLayoutToolStripMenuItem, Me.ClearTempFileAndRecycleBinToolStripMenuItem, Me.MakeThumbnailForServer23ToolStripMenuItem})
         Me.mnuCMPTools.Name = "mnuCMPTools"
         Me.mnuCMPTools.Size = New System.Drawing.Size(46, 20)
         Me.mnuCMPTools.Text = "&Tools"
         '
         'mnuCMPAddScreen
         '
+        Me.mnuCMPAddScreen.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Channel1ToolStripMenuItem, Me.Channel2ToolStripMenuItem, Me.Channel3ToolStripMenuItem, Me.Channel4ToolStripMenuItem})
         Me.mnuCMPAddScreen.Name = "mnuCMPAddScreen"
-        Me.mnuCMPAddScreen.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPAddScreen.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPAddScreen.Text = "Add Screen"
+        '
+        'Channel1ToolStripMenuItem
+        '
+        Me.Channel1ToolStripMenuItem.Name = "Channel1ToolStripMenuItem"
+        Me.Channel1ToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.Channel1ToolStripMenuItem.Text = "Channel 1"
+        '
+        'Channel2ToolStripMenuItem
+        '
+        Me.Channel2ToolStripMenuItem.Name = "Channel2ToolStripMenuItem"
+        Me.Channel2ToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.Channel2ToolStripMenuItem.Text = "Channel 2"
+        '
+        'Channel3ToolStripMenuItem
+        '
+        Me.Channel3ToolStripMenuItem.Name = "Channel3ToolStripMenuItem"
+        Me.Channel3ToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.Channel3ToolStripMenuItem.Text = "Channel 3"
+        '
+        'Channel4ToolStripMenuItem
+        '
+        Me.Channel4ToolStripMenuItem.Name = "Channel4ToolStripMenuItem"
+        Me.Channel4ToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.Channel4ToolStripMenuItem.Text = "Channel 4"
         '
         'AddOutput
         '
         Me.AddOutput.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddputputFill, Me.AddputputKey})
         Me.AddOutput.Name = "AddOutput"
-        Me.AddOutput.Size = New System.Drawing.Size(221, 22)
+        Me.AddOutput.Size = New System.Drawing.Size(242, 22)
         Me.AddOutput.Text = "Add output"
         '
         'AddputputFill
@@ -2109,7 +2177,7 @@ Partial Class frmmediaplayer
         '
         Me.RemoveOutput.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoveOutputDecklink, Me.RemoveOutputBluefish})
         Me.RemoveOutput.Name = "RemoveOutput"
-        Me.RemoveOutput.Size = New System.Drawing.Size(221, 22)
+        Me.RemoveOutput.Size = New System.Drawing.Size(242, 22)
         Me.RemoveOutput.Text = "Remove output"
         '
         'RemoveOutputDecklink
@@ -2226,7 +2294,7 @@ Partial Class frmmediaplayer
         '
         Me.Play_Input.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Play_Input__decklink})
         Me.Play_Input.Name = "Play_Input"
-        Me.Play_Input.Size = New System.Drawing.Size(221, 22)
+        Me.Play_Input.Size = New System.Drawing.Size(242, 22)
         Me.Play_Input.Text = "Play Input"
         '
         'Play_Input__decklink
@@ -2287,108 +2355,120 @@ Partial Class frmmediaplayer
         'mnuCMPRemoveScreen
         '
         Me.mnuCMPRemoveScreen.Name = "mnuCMPRemoveScreen"
-        Me.mnuCMPRemoveScreen.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPRemoveScreen.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPRemoveScreen.Text = "Remove Screen"
         '
         'mnuCMPResetSettings
         '
         Me.mnuCMPResetSettings.Name = "mnuCMPResetSettings"
-        Me.mnuCMPResetSettings.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPResetSettings.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPResetSettings.Text = "Reset Settings"
         '
         'mnuCMPEditConfigFile
         '
         Me.mnuCMPEditConfigFile.Name = "mnuCMPEditConfigFile"
-        Me.mnuCMPEditConfigFile.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPEditConfigFile.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPEditConfigFile.Text = "Edit Config File"
         '
         'mnuCMPRestartCasparcgServer
         '
         Me.mnuCMPRestartCasparcgServer.Name = "mnuCMPRestartCasparcgServer"
-        Me.mnuCMPRestartCasparcgServer.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPRestartCasparcgServer.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPRestartCasparcgServer.Text = "Restart Casparcg Server"
         '
         'mnuCMPRestartwithConfigFile
         '
         Me.mnuCMPRestartwithConfigFile.Name = "mnuCMPRestartwithConfigFile"
-        Me.mnuCMPRestartwithConfigFile.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPRestartwithConfigFile.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPRestartwithConfigFile.Text = "Restart with Config file"
         '
         'mnuCMPQuitCasparcgServer
         '
         Me.mnuCMPQuitCasparcgServer.Name = "mnuCMPQuitCasparcgServer"
-        Me.mnuCMPQuitCasparcgServer.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPQuitCasparcgServer.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPQuitCasparcgServer.Text = "Quit Casparcg Server"
         '
         'mnuCMPCopyExampleTemplates
         '
         Me.mnuCMPCopyExampleTemplates.Name = "mnuCMPCopyExampleTemplates"
-        Me.mnuCMPCopyExampleTemplates.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPCopyExampleTemplates.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPCopyExampleTemplates.Text = "Copy Example Templates"
         '
         'mnuCMPCopyExampleMedia
         '
         Me.mnuCMPCopyExampleMedia.Name = "mnuCMPCopyExampleMedia"
-        Me.mnuCMPCopyExampleMedia.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPCopyExampleMedia.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPCopyExampleMedia.Text = "Copy Example Media"
         '
         'mnuCMPCasparcgDiagnosisWndow
         '
         Me.mnuCMPCasparcgDiagnosisWndow.Name = "mnuCMPCasparcgDiagnosisWndow"
-        Me.mnuCMPCasparcgDiagnosisWndow.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPCasparcgDiagnosisWndow.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPCasparcgDiagnosisWndow.Text = "Casparcg Diagnosis Wndow"
         '
         'mnuCMPClearTypeSwitch
         '
         Me.mnuCMPClearTypeSwitch.Name = "mnuCMPClearTypeSwitch"
-        Me.mnuCMPClearTypeSwitch.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPClearTypeSwitch.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPClearTypeSwitch.Text = "Clear Type Switch"
         '
         'mnuCMPPALSD
         '
         Me.mnuCMPPALSD.Name = "mnuCMPPALSD"
-        Me.mnuCMPPALSD.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPPALSD.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPPALSD.Text = "PAL SD"
         '
         'mnuCMPHD108050i
         '
         Me.mnuCMPHD108050i.Name = "mnuCMPHD108050i"
-        Me.mnuCMPHD108050i.Size = New System.Drawing.Size(221, 22)
+        Me.mnuCMPHD108050i.Size = New System.Drawing.Size(242, 22)
         Me.mnuCMPHD108050i.Text = "HD 108050i"
         '
         'NewInstanceToolStripMenuItem
         '
         Me.NewInstanceToolStripMenuItem.Name = "NewInstanceToolStripMenuItem"
-        Me.NewInstanceToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.NewInstanceToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
         Me.NewInstanceToolStripMenuItem.Text = "New Instance"
         '
         'ExitApplicationToolStripMenuItem
         '
         Me.ExitApplicationToolStripMenuItem.Name = "ExitApplicationToolStripMenuItem"
-        Me.ExitApplicationToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ExitApplicationToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
         Me.ExitApplicationToolStripMenuItem.Text = "Exit Application"
         '
         'DifferentConfigFilesToolStripMenuItem
         '
         Me.DifferentConfigFilesToolStripMenuItem.Name = "DifferentConfigFilesToolStripMenuItem"
-        Me.DifferentConfigFilesToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.DifferentConfigFilesToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
         Me.DifferentConfigFilesToolStripMenuItem.Text = "Different Config files"
         '
         'LoadLastLayoutToolStripMenuItem
         '
         Me.LoadLastLayoutToolStripMenuItem.Name = "LoadLastLayoutToolStripMenuItem"
-        Me.LoadLastLayoutToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.LoadLastLayoutToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
         Me.LoadLastLayoutToolStripMenuItem.Text = "Load Last Layout"
         '
         'SaveLayoutToolStripMenuItem
         '
         Me.SaveLayoutToolStripMenuItem.Name = "SaveLayoutToolStripMenuItem"
-        Me.SaveLayoutToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.SaveLayoutToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
         Me.SaveLayoutToolStripMenuItem.Text = "Save Layout"
+        '
+        'ClearTempFileAndRecycleBinToolStripMenuItem
+        '
+        Me.ClearTempFileAndRecycleBinToolStripMenuItem.Name = "ClearTempFileAndRecycleBinToolStripMenuItem"
+        Me.ClearTempFileAndRecycleBinToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.ClearTempFileAndRecycleBinToolStripMenuItem.Text = "Clear temp files and Recycle Bin"
+        '
+        'MakeThumbnailForServer23ToolStripMenuItem
+        '
+        Me.MakeThumbnailForServer23ToolStripMenuItem.Name = "MakeThumbnailForServer23ToolStripMenuItem"
+        Me.MakeThumbnailForServer23ToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.MakeThumbnailForServer23ToolStripMenuItem.Text = "Make Thumbnail for Server 2.3"
         '
         'mnuCMPHelp
         '
-        Me.mnuCMPHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HelpToolStripMenuItem, Me.mnuCMPUpdatedSoftwareLink})
+        Me.mnuCMPHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HelpToolStripMenuItem, Me.mnuCMPUpdatedSoftwareLink, Me.YouTubeLInkOfHelpVideosToolStripMenuItem})
         Me.mnuCMPHelp.Name = "mnuCMPHelp"
         Me.mnuCMPHelp.Size = New System.Drawing.Size(44, 20)
         Me.mnuCMPHelp.Text = "&Help"
@@ -2404,6 +2484,12 @@ Partial Class frmmediaplayer
         Me.mnuCMPUpdatedSoftwareLink.Name = "mnuCMPUpdatedSoftwareLink"
         Me.mnuCMPUpdatedSoftwareLink.Size = New System.Drawing.Size(263, 22)
         Me.mnuCMPUpdatedSoftwareLink.Text = "Download Location of latest Version"
+        '
+        'YouTubeLInkOfHelpVideosToolStripMenuItem
+        '
+        Me.YouTubeLInkOfHelpVideosToolStripMenuItem.Name = "YouTubeLInkOfHelpVideosToolStripMenuItem"
+        Me.YouTubeLInkOfHelpVideosToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.YouTubeLInkOfHelpVideosToolStripMenuItem.Text = "YouTube LInk of Help Videos"
         '
         'tmrGC
         '
@@ -2437,7 +2523,7 @@ Partial Class frmmediaplayer
         Me.lblProcessID2.AutoSize = True
         Me.lblProcessID2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProcessID2.ForeColor = System.Drawing.Color.Maroon
-        Me.lblProcessID2.Location = New System.Drawing.Point(97, 23)
+        Me.lblProcessID2.Location = New System.Drawing.Point(101, 23)
         Me.lblProcessID2.Name = "lblProcessID2"
         Me.lblProcessID2.Size = New System.Drawing.Size(42, 13)
         Me.lblProcessID2.TabIndex = 1167
@@ -2490,48 +2576,6 @@ Partial Class frmmediaplayer
         Me.pnlServer.Size = New System.Drawing.Size(688, 60)
         Me.pnlServer.TabIndex = 1170
         '
-        'lblcasparMemoryValue
-        '
-        Me.lblcasparMemoryValue.AutoSize = True
-        Me.lblcasparMemoryValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblcasparMemoryValue.ForeColor = System.Drawing.Color.Maroon
-        Me.lblcasparMemoryValue.Location = New System.Drawing.Point(97, 39)
-        Me.lblcasparMemoryValue.Name = "lblcasparMemoryValue"
-        Me.lblcasparMemoryValue.Size = New System.Drawing.Size(50, 13)
-        Me.lblcasparMemoryValue.TabIndex = 1173
-        Me.lblcasparMemoryValue.Text = "Memory"
-        '
-        'lblcasparMemory
-        '
-        Me.lblcasparMemory.AutoSize = True
-        Me.lblcasparMemory.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblcasparMemory.Location = New System.Drawing.Point(1, 39)
-        Me.lblcasparMemory.Name = "lblcasparMemory"
-        Me.lblcasparMemory.Size = New System.Drawing.Size(93, 13)
-        Me.lblcasparMemory.TabIndex = 1172
-        Me.lblcasparMemory.Text = "Caspar Memory"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Maroon
-        Me.Label2.Location = New System.Drawing.Point(97, 4)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(32, 13)
-        Me.Label2.TabIndex = 1171
-        Me.Label2.Text = "CPU"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 4)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 13)
-        Me.Label3.TabIndex = 1170
-        Me.Label3.Text = "CPU Uses"
-        '
         'gbPannel
         '
         Me.gbPannel.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -2564,32 +2608,21 @@ Partial Class frmmediaplayer
         Me.Panel1.BackColor = System.Drawing.Color.Wheat
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.lblProcessID2)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.lblCMPMemory)
         Me.Panel1.Controls.Add(Me.lblProcessID1)
-        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.lblcasparMemory)
         Me.Panel1.Controls.Add(Me.lblcasparMemoryValue)
         Me.Panel1.Location = New System.Drawing.Point(916, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(171, 60)
+        Me.Panel1.Size = New System.Drawing.Size(150, 60)
         Me.Panel1.TabIndex = 1174
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.OldLace
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.lblCMPMemory)
-        Me.Panel2.Location = New System.Drawing.Point(1090, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(136, 60)
-        Me.Panel2.TabIndex = 1175
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(21, 12)
+        Me.Label4.Location = New System.Drawing.Point(2, 4)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(80, 13)
         Me.Label4.TabIndex = 1174
@@ -2600,11 +2633,66 @@ Partial Class frmmediaplayer
         Me.lblCMPMemory.AutoSize = True
         Me.lblCMPMemory.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCMPMemory.ForeColor = System.Drawing.Color.Maroon
-        Me.lblCMPMemory.Location = New System.Drawing.Point(38, 33)
+        Me.lblCMPMemory.Location = New System.Drawing.Point(93, 4)
         Me.lblCMPMemory.Name = "lblCMPMemory"
         Me.lblCMPMemory.Size = New System.Drawing.Size(50, 13)
         Me.lblCMPMemory.TabIndex = 1175
         Me.lblCMPMemory.Text = "Memory"
+        '
+        'lblcasparMemory
+        '
+        Me.lblcasparMemory.AutoSize = True
+        Me.lblcasparMemory.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblcasparMemory.Location = New System.Drawing.Point(2, 39)
+        Me.lblcasparMemory.Name = "lblcasparMemory"
+        Me.lblcasparMemory.Size = New System.Drawing.Size(93, 13)
+        Me.lblcasparMemory.TabIndex = 1172
+        Me.lblcasparMemory.Text = "Caspar Memory"
+        '
+        'lblcasparMemoryValue
+        '
+        Me.lblcasparMemoryValue.AutoSize = True
+        Me.lblcasparMemoryValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblcasparMemoryValue.ForeColor = System.Drawing.Color.Maroon
+        Me.lblcasparMemoryValue.Location = New System.Drawing.Point(93, 39)
+        Me.lblcasparMemoryValue.Name = "lblcasparMemoryValue"
+        Me.lblcasparMemoryValue.Size = New System.Drawing.Size(50, 13)
+        Me.lblcasparMemoryValue.TabIndex = 1173
+        Me.lblcasparMemoryValue.Text = "Memory"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.OldLace
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel2.Controls.Add(Me.CpBarCPU)
+        Me.Panel2.Location = New System.Drawing.Point(1071, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(155, 60)
+        Me.Panel2.TabIndex = 1175
+        '
+        'CpBarCPU
+        '
+        Me.CpBarCPU.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.CpBarCPU.BackColor = System.Drawing.Color.Transparent
+        Alert1.From_Value = 61
+        Alert1.To_Value = 75
+        Me.CpBarCPU.CPB_Alert_Range = Alert1
+        Me.CpBarCPU.CPB_AlertColor = System.Drawing.Color.Gold
+        Me.CpBarCPU.CPB_BackColor = System.Drawing.Color.Black
+        Critical1.From_Value = 76
+        Critical1.To_Value = 100
+        Me.CpBarCPU.CPB_Critical_Range = Critical1
+        Me.CpBarCPU.CPB_CriticalColor = System.Drawing.Color.Red
+        Me.CpBarCPU.CPB_SweepColor = System.Drawing.Color.Aqua
+        Me.CpBarCPU.CPB_SweepMaximum = 260
+        Me.CpBarCPU.CPB_SweepStartAngle = 140
+        Me.CpBarCPU.CPB_Text_1 = "CPU"
+        Me.CpBarCPU.CPB_Text_2 = "60"
+        Me.CpBarCPU.CPB_Text_3 = "%"
+        Me.CpBarCPU.Location = New System.Drawing.Point(38, -1)
+        Me.CpBarCPU.Name = "CpBarCPU"
+        Me.CpBarCPU.Size = New System.Drawing.Size(75, 75)
+        Me.CpBarCPU.TabIndex = 1176
         '
         'DockPanel1
         '
@@ -2688,9 +2776,8 @@ Partial Class frmmediaplayer
         '
         'frmmediaplayer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1839, 1025)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
+        Me.ClientSize = New System.Drawing.Size(1364, 749)
         Me.ContextMenuStrip = Me.cmsCustomeModules
         Me.Controls.Add(Me.DockPanel1)
         Me.Controls.Add(Me.Panel2)
@@ -2701,10 +2788,9 @@ Partial Class frmmediaplayer
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
-        Me.KeyPreview = True
         Me.MaximumSize = New System.Drawing.Size(1920, 1080)
         Me.Name = "frmmediaplayer"
-        Me.Text = "CasparMediaPlayback090220_1"
+        Me.Text = "CasparMediaPlayback070423_2"
         CType(Me.nfontsizeforall, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbmodules.ResumeLayout(False)
         Me.gbmodules.PerformLayout()
@@ -2718,7 +2804,6 @@ Partial Class frmmediaplayer
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         CType(Me.DockPanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -2930,8 +3015,6 @@ Partial Class frmmediaplayer
     Friend WithEvents PlayFromAnywhreToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents rdoStreamPlayer As RadioButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents mnuCMPModules As ToolStripMenuItem
     Friend WithEvents mnuCMPSlowMotion As ToolStripMenuItem
     Friend WithEvents mnuCMPSlowMotionInServer21 As ToolStripMenuItem
@@ -2957,13 +3040,10 @@ Partial Class frmmediaplayer
     Friend WithEvents FourChannelPreviewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DBFSMeter16ChannelToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MySqlTestToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CasparcgWindowToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents WebSocketServerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CCTVToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SilenceDetectorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents rdoSilenceDetector As RadioButton
-    Friend WithEvents lblcasparMemoryValue As Label
-    Friend WithEvents lblcasparMemory As Label
     Friend WithEvents tmrGeneralInfo As Timer
     Friend WithEvents FullPageCaptionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents rdoFullPageCaption As RadioButton
@@ -3019,7 +3099,23 @@ Partial Class frmmediaplayer
     Friend WithEvents VS2015BlueTheme1 As WeifenLuo.WinFormsUI.Docking.VS2015BlueTheme
     Friend WithEvents LoadLastLayoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveLayoutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label4 As Label
-    Friend WithEvents lblCMPMemory As Label
     Friend WithEvents CompositionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearTempFileAndRecycleBinToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TemplatePlaylistToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents YouTubeLInkOfHelpVideosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Channel1ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Channel2ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Channel3ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Channel4ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CommandSchedulerDateWiseToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents XDCamControllersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MakeThumbnailForServer23ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents YouTubeLiveManagemnetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CpBarCPU As CPBar
+    Friend WithEvents lblCMPMemory As Label
+    Friend WithEvents lblcasparMemoryValue As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents lblcasparMemory As Label
+    Friend WithEvents RCCAutomationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RCCBallToolStripMenuItem As ToolStripMenuItem
 End Class

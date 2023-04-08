@@ -3,7 +3,7 @@ Public Class ucOffAirLogger
     Private Sub ucOffAirLogger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         With UcnewOffAirLogger1
             .ichannel = g_int_ChannelNumber
-            .cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & .ichannel & "|PAL]"
+            .cmbscreenConsumres.Text = "Screen consumer [" & .ichannel & "|PAL]"
             .oscstartandregister(.ichannel, 6250 + .ichannel)
             .txtmediadirectoryoal.Text = mediafullpath & "ch" & .ichannel & "/"
             .cmbliveoal.Text = .ichannel

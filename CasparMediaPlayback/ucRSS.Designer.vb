@@ -36,6 +36,8 @@ Partial Class ucRssFeed
         Me.cmdplaybreakingnews = New System.Windows.Forms.Button()
         Me.cmdstopbrekingnews = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtclockTemplate = New System.Windows.Forms.TextBox()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.cmblayertimerss = New System.Windows.Forms.ComboBox()
         Me.cmdhidetime = New System.Windows.Forms.Button()
@@ -55,7 +57,6 @@ Partial Class ucRssFeed
         Me.lblrsstimerinterval = New System.Windows.Forms.Label()
         Me.txtrssdelemeter = New System.Windows.Forms.TextBox()
         Me.lblrssdelimeter = New System.Windows.Forms.Label()
-        Me.cmdrssresume = New System.Windows.Forms.Button()
         Me.cmdrsspause = New System.Windows.Forms.Button()
         Me.cmdrssplay = New System.Windows.Forms.Button()
         Me.cmdrssstop = New System.Windows.Forms.Button()
@@ -97,7 +98,6 @@ Partial Class ucRssFeed
         Me.gbrss.Controls.Add(Me.lblrsstimerinterval)
         Me.gbrss.Controls.Add(Me.txtrssdelemeter)
         Me.gbrss.Controls.Add(Me.lblrssdelimeter)
-        Me.gbrss.Controls.Add(Me.cmdrssresume)
         Me.gbrss.Controls.Add(Me.cmdrsspause)
         Me.gbrss.Controls.Add(Me.cmdrssplay)
         Me.gbrss.Controls.Add(Me.cmdrssstop)
@@ -127,7 +127,7 @@ Partial Class ucRssFeed
         Me.GroupBox1.Controls.Add(Me.cmdstopbrekingnews)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 524)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(352, 70)
+        Me.GroupBox1.Size = New System.Drawing.Size(352, 75)
         Me.GroupBox1.TabIndex = 729
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Show as Breaking news"
@@ -198,6 +198,8 @@ Partial Class ucRssFeed
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Coral
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.txtclockTemplate)
         Me.GroupBox2.Controls.Add(Me.Label50)
         Me.GroupBox2.Controls.Add(Me.cmblayertimerss)
         Me.GroupBox2.Controls.Add(Me.cmdhidetime)
@@ -205,15 +207,32 @@ Partial Class ucRssFeed
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(364, 524)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(283, 70)
+        Me.GroupBox2.Size = New System.Drawing.Size(283, 75)
         Me.GroupBox2.TabIndex = 728
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Time Day Date Month"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(7, 20)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(59, 15)
+        Me.Label3.TabIndex = 720
+        Me.Label3.Text = "Template"
+        '
+        'txtclockTemplate
+        '
+        Me.txtclockTemplate.Location = New System.Drawing.Point(77, 16)
+        Me.txtclockTemplate.Name = "txtclockTemplate"
+        Me.txtclockTemplate.Size = New System.Drawing.Size(200, 21)
+        Me.txtclockTemplate.TabIndex = 719
+        Me.txtclockTemplate.Text = "CMP/time2/time"
+        '
         'Label50
         '
         Me.Label50.AutoSize = True
-        Me.Label50.Location = New System.Drawing.Point(3, 20)
+        Me.Label50.Location = New System.Drawing.Point(4, 46)
         Me.Label50.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(124, 15)
@@ -224,7 +243,7 @@ Partial Class ucRssFeed
         '
         Me.cmblayertimerss.FormattingEnabled = True
         Me.cmblayertimerss.Items.AddRange(New Object() {"56", "57", "58", "59", "60"})
-        Me.cmblayertimerss.Location = New System.Drawing.Point(127, 17)
+        Me.cmblayertimerss.Location = New System.Drawing.Point(128, 43)
         Me.cmblayertimerss.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmblayertimerss.Name = "cmblayertimerss"
         Me.cmblayertimerss.Size = New System.Drawing.Size(40, 23)
@@ -236,7 +255,7 @@ Partial Class ucRssFeed
         Me.cmdhidetime.BackColor = System.Drawing.Color.Red
         Me.cmdhidetime.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdhidetime.ForeColor = System.Drawing.Color.White
-        Me.cmdhidetime.Location = New System.Drawing.Point(232, 14)
+        Me.cmdhidetime.Location = New System.Drawing.Point(233, 40)
         Me.cmdhidetime.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdhidetime.Name = "cmdhidetime"
         Me.cmdhidetime.Size = New System.Drawing.Size(47, 31)
@@ -249,7 +268,7 @@ Partial Class ucRssFeed
         Me.cmdshowtime.BackColor = System.Drawing.Color.Green
         Me.cmdshowtime.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdshowtime.ForeColor = System.Drawing.Color.White
-        Me.cmdshowtime.Location = New System.Drawing.Point(171, 14)
+        Me.cmdshowtime.Location = New System.Drawing.Point(172, 40)
         Me.cmdshowtime.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdshowtime.Name = "cmdshowtime"
         Me.cmdshowtime.Size = New System.Drawing.Size(59, 29)
@@ -410,18 +429,6 @@ Partial Class ucRssFeed
         Me.lblrssdelimeter.TabIndex = 626
         Me.lblrssdelimeter.Text = "Delimeter between items"
         '
-        'cmdrssresume
-        '
-        Me.cmdrssresume.BackColor = System.Drawing.Color.Yellow
-        Me.cmdrssresume.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdrssresume.Location = New System.Drawing.Point(367, 134)
-        Me.cmdrssresume.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.cmdrssresume.Name = "cmdrssresume"
-        Me.cmdrssresume.Size = New System.Drawing.Size(79, 30)
-        Me.cmdrssresume.TabIndex = 625
-        Me.cmdrssresume.Text = "Resume"
-        Me.cmdrssresume.UseVisualStyleBackColor = False
-        '
         'cmdrsspause
         '
         Me.cmdrsspause.BackColor = System.Drawing.Color.Yellow
@@ -429,9 +436,9 @@ Partial Class ucRssFeed
         Me.cmdrsspause.Location = New System.Drawing.Point(295, 133)
         Me.cmdrsspause.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdrsspause.Name = "cmdrsspause"
-        Me.cmdrsspause.Size = New System.Drawing.Size(64, 30)
+        Me.cmdrsspause.Size = New System.Drawing.Size(123, 30)
         Me.cmdrsspause.TabIndex = 624
-        Me.cmdrsspause.Text = "Pause"
+        Me.cmdrsspause.Text = "Pause/Resume"
         Me.cmdrsspause.UseVisualStyleBackColor = False
         '
         'cmdrssplay
@@ -452,7 +459,7 @@ Partial Class ucRssFeed
         Me.cmdrssstop.BackColor = System.Drawing.Color.Red
         Me.cmdrssstop.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdrssstop.ForeColor = System.Drawing.Color.White
-        Me.cmdrssstop.Location = New System.Drawing.Point(454, 134)
+        Me.cmdrssstop.Location = New System.Drawing.Point(426, 134)
         Me.cmdrssstop.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdrssstop.Name = "cmdrssstop"
         Me.cmdrssstop.Size = New System.Drawing.Size(55, 30)
@@ -463,14 +470,16 @@ Partial Class ucRssFeed
         'nrssspeed
         '
         Me.nrssspeed.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.caspar_media_playback.My.MySettings.Default, "nrssspeed", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.nrssspeed.DecimalPlaces = 1
+        Me.nrssspeed.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.nrssspeed.Location = New System.Drawing.Point(282, 105)
         Me.nrssspeed.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.nrssspeed.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.nrssspeed.Minimum = New Decimal(New Integer() {10, 0, 0, -2147483648})
         Me.nrssspeed.Name = "nrssspeed"
-        Me.nrssspeed.Size = New System.Drawing.Size(32, 20)
+        Me.nrssspeed.Size = New System.Drawing.Size(40, 20)
         Me.nrssspeed.TabIndex = 621
-        Me.nrssspeed.Value = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.nrssspeed.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
         'lblrssspeed
         '
@@ -575,8 +584,9 @@ Partial Class ucRssFeed
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(667, 612)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gbrss)
         Me.HideOnClose = True
         Me.Name = "ucRssFeed"
@@ -607,7 +617,6 @@ Partial Class ucRssFeed
     Friend WithEvents lblrsstimerinterval As System.Windows.Forms.Label
     Friend WithEvents txtrssdelemeter As System.Windows.Forms.TextBox
     Friend WithEvents lblrssdelimeter As System.Windows.Forms.Label
-    Friend WithEvents cmdrssresume As System.Windows.Forms.Button
     Friend WithEvents cmdrsspause As System.Windows.Forms.Button
     Friend WithEvents cmdrssplay As System.Windows.Forms.Button
     Friend WithEvents cmdrssstop As System.Windows.Forms.Button
@@ -635,4 +644,6 @@ Partial Class ucRssFeed
     Friend WithEvents cmdhidetime As Button
     Friend WithEvents cmdshowtime As Button
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtclockTemplate As TextBox
 End Class

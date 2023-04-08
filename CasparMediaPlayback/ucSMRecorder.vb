@@ -9,6 +9,8 @@ Public Class ucSMRecorder
     Dim filename As String
     Dim irecorder As Integer = 0
     Dim startingtimeofrecording As DateTime
+
+    Dim WithEvents spv As clsShuttleProV2.clsShuttleProV2
     Private Sub cmdoutcasparcgwindowrecording_Click(sender As Object, e As EventArgs) Handles cmdoutcasparcgwindowrecording.Click
         On Error Resume Next
         If Not parentedProcess1 Is Nothing Then
@@ -30,7 +32,7 @@ Public Class ucSMRecorder
     End Sub
     Private Sub cmdshowcasparcgwindowrecording_Click(sender As Object, e As EventArgs) Handles cmdshowcasparcgwindowrecording.Click
         On Error Resume Next
-        SetProcessParentrecorder("casparcg", cmbcasparcgwindowtitlerecording, pnlrecording)
+        SetProcessParentrecorder("casparcg", cmbscreenConsumres, pnlrecording)
     End Sub
     Private Sub cmdinput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdinput.Click
         On Error Resume Next
@@ -79,22 +81,27 @@ Public Class ucSMRecorder
 
 
     Private Sub cmdlooprecord_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdlooprecord.Click
+
+        record1()
+    End Sub
+    Sub record1()
         On Error Resume Next
-        If frmmediaplayer.cmdconnect.BackColor = Color.Green And sender.BackColor = Color.Red Then
-            record()
+        'If frmmediaplayer.cmdconnect.BackColor = Color.Green And sender.BackColor = Color.Red Then
+        record()
             tmrrecorder.Interval = (txtinterval.Text) * 1000
             tmrrecorder.Enabled = True
             tmrrecordedfileinfo.Enabled = True
 
-        End If
+        'End If
         lengthfilename = Len(txtfilename.Text)
         filename = txtfilename.Text
         irecorder = 0
-
     End Sub
 
-
     Private Sub cmdstoplooprecord_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstoplooprecord.Click
+        stoprecord1()
+    End Sub
+    Sub stoprecord1()
         On Error Resume Next
         stoprecord()
         irecorder = irecorder + 1
@@ -108,7 +115,6 @@ Public Class ucSMRecorder
         tmrrecorder.Enabled = False
         tmrrecordedfileinfo.Enabled = False '  recordingfileblank()
     End Sub
-
     Sub record()
         On Error Resume Next
         lblRecordedduration.Text = ""
@@ -159,6 +165,8 @@ Public Class ucSMRecorder
 
     Private Sub ucnewRecorder_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         On Error Resume Next
+        cmbscreenConsumres.DataSource = New BindingSource(screenConsumres, "")
+        cmbscreenConsumres.Text = "Screen consumer [1|PAL]"
         lblRecordingFolder.Text = mediafullpath & "Ch" & chnumber & "/"
 
     End Sub
@@ -175,7 +183,7 @@ Public Class ucSMRecorder
         lblRecordingFolder.Text = "c:\casparcg\_media\ch" & chnumber & "\"
         txtfilename.Text = "test" & chnumber
         Label2.Text = "Channel " & cmbChannel.Text
-        cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & cmbChannel.Text & "|PAL]"
+        cmbscreenConsumres.Text = "Screen consumer [" & cmbChannel.Text & "|PAL]"
 
     End Sub
 
@@ -184,7 +192,7 @@ Public Class ucSMRecorder
     End Sub
     Sub loadinsm()
         On Error Resume Next
-
+        'MsgBox("gfg")
         With ucSlowMotion21
             If cmbChannelDestination.Text = .UcnewSM21.cmbChannel.Text Then
                 CasparDevice.SendString("load " & cmbChannelDestination.Text & "-" & 1 & " " & """" & Replace(Replace(lblrecordingfilename.Text, ":", ":\"), "\", "/") & """")
@@ -203,6 +211,44 @@ Public Class ucSMRecorder
         End With
     End Sub
 
+    Private Sub chkUseShuttleProV2_CheckedChanged(sender As Object, e As EventArgs) Handles chkUseShuttleProV2.CheckedChanged
+        If chkUseShuttleProV2.Checked Then
+            spv = New clsShuttleProV2.clsShuttleProV2
+        Else
+            spv = Nothing
+        End If
+    End Sub
+
+    Private Sub spv_b1() Handles spv.b1
+        'cmdlooprecord.PerformClick()
+
+        If Me.InvokeRequired Then
+            Me.Invoke(New MethodInvoker(AddressOf record1))
+        Else
+            record1()
+        End If
+
+    End Sub
+
+    Private Sub spv_b2() Handles spv.b2
+        'cmdstoplooprecord.PerformClick()
+        If Me.InvokeRequired Then
+            Me.Invoke(New MethodInvoker(AddressOf stoprecord1))
+        Else
+            stoprecord1()
+        End If
+
+    End Sub
+
+    Private Sub spv_b3() Handles spv.b3
+        'cmdPlay.PerformClick()
+        If Me.InvokeRequired Then
+            Me.Invoke(New MethodInvoker(AddressOf loadinsm))
+        Else
+            loadinsm()
+        End If
+
+    End Sub
 End Class
 
 

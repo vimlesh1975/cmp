@@ -1,14 +1,13 @@
 ﻿Imports System.Xml
 Imports System.IO
 Imports caspar_media_playback.xdCamWebReference
-
 Public Class ucXdcamSoapClient
-    Public WithEvents aa As New MediaStationService
-    Public WithEvents aa1 As New xdCamWebReference.FileOperationEvent
-    Public str_SessionId As String
-    Public dd() As ClipInfo
-    Public int_TotalFrame As Integer
-    Public thumbnailRowindex As Integer = 0
+    Dim WithEvents aa As New MediaStationService
+    Dim WithEvents aa1 As New xdCamWebReference.FileOperationEvent
+    Dim str_SessionId As String
+    Dim dd() As ClipInfo
+    Dim int_TotalFrame As Integer
+    Dim thumbnailRowindex As Integer = 0
     Dim tempRow As DataGridViewRow
 
     Dim appdate As String
@@ -1230,7 +1229,8 @@ Public Class ucXdcamSoapClient
 
         appdate = Me.Text
 
-        setxdcam()
+
+        'setxdcam()
 
         getMappedDrives()
         ' getsystemeventrequest()
@@ -1240,13 +1240,17 @@ Public Class ucXdcamSoapClient
 
     Private Sub cmdSetXdcam_Click(sender As Object, e As EventArgs) Handles cmdSetXdcam.Click
         On Error Resume Next
+
         setxdcam()
+        tmrGetTC.Enabled = True
     End Sub
+
+
     Sub setxdcam()
         On Error Resume Next
         aa.Credentials = New System.Net.NetworkCredential(txtUsername.Text, txtPassword.Text)
-        aa.Url = txtipaddress.Text
-        Me.Text = appdate & "       " & txtipaddress.Text
+        aa.Url = (txtipaddress.Text).ToString
+
     End Sub
 
 
@@ -1308,14 +1312,14 @@ Public Class ucXdcamSoapClient
     End Function
     Public Sub playinvlc(filename As String)
         On Error Resume Next
-        Dim PlayerPath As String = ""
-        If System.IO.File.Exists("C:\Program Files\VideoLAN\VLC\vlc.exe") Then
-            PlayerPath = "C:\Program Files\VideoLAN\VLC\vlc.exe"
-        Else
-            PlayerPath = "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"
-        End If
+        'Dim PlayerPath As String = ""
+        'If System.IO.File.Exists("C:\Program Files\VideoLAN\VLC\vlc.exe") Then
+        '    PlayerPath = "C:\Program Files\VideoLAN\VLC\vlc.exe"
+        'Else
+        '    PlayerPath = "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"
+        'End If
         Dim process As Process = New Process
-        process.StartInfo.FileName = PlayerPath
+        process.StartInfo.FileName = vlcplayerpath() ' PlayerPath
         process.StartInfo.Verb = "open"
 
         If System.IO.Path.GetExtension(filename) = ".SMI" Then
@@ -1595,6 +1599,7 @@ Public Class ucXdcamSoapClient
         Return HMS
 
     End Function
+
 
 End Class
 

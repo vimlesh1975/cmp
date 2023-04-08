@@ -32,6 +32,15 @@ Partial Class ucScroll
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbscroll = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cmdbordercolor = New System.Windows.Forms.Button()
+        Me.cmdcolor = New System.Windows.Forms.Button()
+        Me.cmdstripcolor = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ndivision = New System.Windows.Forms.NumericUpDown()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,7 +62,6 @@ Partial Class ucScroll
         Me.cmddeselectallforscroll = New System.Windows.Forms.Button()
         Me.txtdelemeterforscroll = New System.Windows.Forms.TextBox()
         Me.Label114 = New System.Windows.Forms.Label()
-        Me.cmdresumescroll = New System.Windows.Forms.Button()
         Me.cmdpausescroll = New System.Windows.Forms.Button()
         Me.cmdplayscroll = New System.Windows.Forms.Button()
         Me.cmdstopscroll = New System.Windows.Forms.Button()
@@ -69,9 +77,11 @@ Partial Class ucScroll
         Me.cmblayerscroll = New System.Windows.Forms.ComboBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.tmrshowdatascroll = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UcBreakingNews1 = New caspar_media_playback.ucBreakingNews()
         Me.gbscroll.SuspendLayout()
+        CType(Me.ndivision, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.picscrollbullet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvscroll, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,6 +91,15 @@ Partial Class ucScroll
         'gbscroll
         '
         Me.gbscroll.BackColor = System.Drawing.Color.Bisque
+        Me.gbscroll.Controls.Add(Me.Label6)
+        Me.gbscroll.Controls.Add(Me.Label5)
+        Me.gbscroll.Controls.Add(Me.Label4)
+        Me.gbscroll.Controls.Add(Me.cmdbordercolor)
+        Me.gbscroll.Controls.Add(Me.cmdcolor)
+        Me.gbscroll.Controls.Add(Me.cmdstripcolor)
+        Me.gbscroll.Controls.Add(Me.Label3)
+        Me.gbscroll.Controls.Add(Me.Label1)
+        Me.gbscroll.Controls.Add(Me.ndivision)
         Me.gbscroll.Controls.Add(Me.MenuStrip1)
         Me.gbscroll.Controls.Add(Me.Label2)
         Me.gbscroll.Controls.Add(Me.txtScrollTemplate)
@@ -92,7 +111,6 @@ Partial Class ucScroll
         Me.gbscroll.Controls.Add(Me.cmddeselectallforscroll)
         Me.gbscroll.Controls.Add(Me.txtdelemeterforscroll)
         Me.gbscroll.Controls.Add(Me.Label114)
-        Me.gbscroll.Controls.Add(Me.cmdresumescroll)
         Me.gbscroll.Controls.Add(Me.cmdpausescroll)
         Me.gbscroll.Controls.Add(Me.cmdplayscroll)
         Me.gbscroll.Controls.Add(Me.cmdstopscroll)
@@ -107,10 +125,105 @@ Partial Class ucScroll
         Me.gbscroll.Controls.Add(Me.Label21)
         Me.gbscroll.Location = New System.Drawing.Point(5, 456)
         Me.gbscroll.Name = "gbscroll"
-        Me.gbscroll.Size = New System.Drawing.Size(1209, 465)
+        Me.gbscroll.Size = New System.Drawing.Size(1187, 465)
         Me.gbscroll.TabIndex = 533
         Me.gbscroll.TabStop = False
         Me.gbscroll.Text = "Scroll And Clock"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(669, 22)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(55, 13)
+        Me.Label6.TabIndex = 1180
+        Me.Label6.Text = "Strip Color"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(669, 53)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(55, 13)
+        Me.Label5.TabIndex = 1179
+        Me.Label5.Text = "Font Color"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(879, 25)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(83, 13)
+        Me.Label4.TabIndex = 1178
+        Me.Label4.Text = "Font Edge Color"
+        '
+        'cmdbordercolor
+        '
+        Me.cmdbordercolor.BackColor = System.Drawing.Color.Black
+        Me.cmdbordercolor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdbordercolor.ForeColor = System.Drawing.Color.Black
+        Me.cmdbordercolor.Location = New System.Drawing.Point(872, 41)
+        Me.cmdbordercolor.Name = "cmdbordercolor"
+        Me.cmdbordercolor.Size = New System.Drawing.Size(95, 29)
+        Me.cmdbordercolor.TabIndex = 1177
+        Me.cmdbordercolor.UseVisualStyleBackColor = False
+        '
+        'cmdcolor
+        '
+        Me.cmdcolor.BackColor = System.Drawing.Color.White
+        Me.cmdcolor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdcolor.ForeColor = System.Drawing.Color.Black
+        Me.cmdcolor.Location = New System.Drawing.Point(731, 41)
+        Me.cmdcolor.Name = "cmdcolor"
+        Me.cmdcolor.Size = New System.Drawing.Size(130, 29)
+        Me.cmdcolor.TabIndex = 1176
+        Me.cmdcolor.Text = "Font Color"
+        Me.cmdcolor.UseVisualStyleBackColor = False
+        '
+        'cmdstripcolor
+        '
+        Me.cmdstripcolor.BackColor = System.Drawing.Color.White
+        Me.cmdstripcolor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdstripcolor.ForeColor = System.Drawing.Color.Black
+        Me.cmdstripcolor.Location = New System.Drawing.Point(731, 14)
+        Me.cmdstripcolor.Name = "cmdstripcolor"
+        Me.cmdstripcolor.Size = New System.Drawing.Size(130, 27)
+        Me.cmdstripcolor.TabIndex = 1175
+        Me.cmdstripcolor.Text = "Strip color"
+        Me.cmdstripcolor.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(267, 75)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(340, 26)
+        Me.Label3.TabIndex = 1173
+        Me.Label3.Text = "Increase this for Smooth Scroll, It will decrease numer of scroll line at a " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "tim" &
+    "e"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(619, 79)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(49, 13)
+        Me.Label1.TabIndex = 1172
+        Me.Label1.Text = "Divisions"
+        '
+        'ndivision
+        '
+        Me.ndivision.Location = New System.Drawing.Point(672, 76)
+        Me.ndivision.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.ndivision.Name = "ndivision"
+        Me.ndivision.Size = New System.Drawing.Size(43, 20)
+        Me.ndivision.TabIndex = 1171
+        Me.ToolTip1.SetToolTip(Me.ndivision, "Increase this for Smooth Scroll, It will decrease numer of scroll line at a time")
+        Me.ndivision.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
         'MenuStrip1
         '
@@ -225,7 +338,7 @@ Partial Class ucScroll
         'cmdhidegbscrollandclock
         '
         Me.cmdhidegbscrollandclock.Image = CType(resources.GetObject("cmdhidegbscrollandclock.Image"), System.Drawing.Image)
-        Me.cmdhidegbscrollandclock.Location = New System.Drawing.Point(1175, 8)
+        Me.cmdhidegbscrollandclock.Location = New System.Drawing.Point(1129, 8)
         Me.cmdhidegbscrollandclock.Name = "cmdhidegbscrollandclock"
         Me.cmdhidegbscrollandclock.Size = New System.Drawing.Size(28, 27)
         Me.cmdhidegbscrollandclock.TabIndex = 712
@@ -244,7 +357,7 @@ Partial Class ucScroll
         '
         'cmdselectallforscroll
         '
-        Me.cmdselectallforscroll.Location = New System.Drawing.Point(1106, 49)
+        Me.cmdselectallforscroll.Location = New System.Drawing.Point(1077, 49)
         Me.cmdselectallforscroll.Name = "cmdselectallforscroll"
         Me.cmdselectallforscroll.Size = New System.Drawing.Size(76, 23)
         Me.cmdselectallforscroll.TabIndex = 513
@@ -253,7 +366,7 @@ Partial Class ucScroll
         '
         'cmddeselectallforscroll
         '
-        Me.cmddeselectallforscroll.Location = New System.Drawing.Point(1103, 76)
+        Me.cmddeselectallforscroll.Location = New System.Drawing.Point(1077, 76)
         Me.cmddeselectallforscroll.Name = "cmddeselectallforscroll"
         Me.cmddeselectallforscroll.Size = New System.Drawing.Size(79, 23)
         Me.cmddeselectallforscroll.TabIndex = 512
@@ -281,28 +394,16 @@ Partial Class ucScroll
         Me.Label114.TabIndex = 510
         Me.Label114.Text = "Delimeter between items"
         '
-        'cmdresumescroll
-        '
-        Me.cmdresumescroll.BackColor = System.Drawing.Color.Yellow
-        Me.cmdresumescroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdresumescroll.Location = New System.Drawing.Point(968, 72)
-        Me.cmdresumescroll.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.cmdresumescroll.Name = "cmdresumescroll"
-        Me.cmdresumescroll.Size = New System.Drawing.Size(63, 30)
-        Me.cmdresumescroll.TabIndex = 509
-        Me.cmdresumescroll.Text = "Resume"
-        Me.cmdresumescroll.UseVisualStyleBackColor = False
-        '
         'cmdpausescroll
         '
         Me.cmdpausescroll.BackColor = System.Drawing.Color.Yellow
         Me.cmdpausescroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdpausescroll.Location = New System.Drawing.Point(902, 72)
+        Me.cmdpausescroll.Location = New System.Drawing.Point(876, 72)
         Me.cmdpausescroll.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdpausescroll.Name = "cmdpausescroll"
-        Me.cmdpausescroll.Size = New System.Drawing.Size(58, 30)
+        Me.cmdpausescroll.Size = New System.Drawing.Size(128, 30)
         Me.cmdpausescroll.TabIndex = 508
-        Me.cmdpausescroll.Text = "Pause"
+        Me.cmdpausescroll.Text = "Pause/Resume"
         Me.cmdpausescroll.UseVisualStyleBackColor = False
         '
         'cmdplayscroll
@@ -310,7 +411,7 @@ Partial Class ucScroll
         Me.cmdplayscroll.BackColor = System.Drawing.Color.Green
         Me.cmdplayscroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdplayscroll.ForeColor = System.Drawing.Color.White
-        Me.cmdplayscroll.Location = New System.Drawing.Point(850, 72)
+        Me.cmdplayscroll.Location = New System.Drawing.Point(824, 72)
         Me.cmdplayscroll.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdplayscroll.Name = "cmdplayscroll"
         Me.cmdplayscroll.Size = New System.Drawing.Size(48, 30)
@@ -323,7 +424,7 @@ Partial Class ucScroll
         Me.cmdstopscroll.BackColor = System.Drawing.Color.Red
         Me.cmdstopscroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdstopscroll.ForeColor = System.Drawing.Color.White
-        Me.cmdstopscroll.Location = New System.Drawing.Point(1038, 72)
+        Me.cmdstopscroll.Location = New System.Drawing.Point(1012, 72)
         Me.cmdstopscroll.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdstopscroll.Name = "cmdstopscroll"
         Me.cmdstopscroll.Size = New System.Drawing.Size(58, 30)
@@ -404,9 +505,9 @@ Partial Class ucScroll
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvscroll.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.dgvscroll.RowHeadersWidth = 25
+        Me.dgvscroll.RowHeadersWidth = 60
         Me.dgvscroll.RowTemplate.Height = 30
-        Me.dgvscroll.Size = New System.Drawing.Size(1199, 353)
+        Me.dgvscroll.Size = New System.Drawing.Size(1179, 347)
         Me.dgvscroll.TabIndex = 492
         '
         'DataGridViewTextBoxColumn2
@@ -415,11 +516,11 @@ Partial Class ucScroll
         Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridViewTextBoxColumn2.Frozen = True
         Me.DataGridViewTextBoxColumn2.HeaderText = "Scroll"
-        Me.DataGridViewTextBoxColumn2.MinimumWidth = 550
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 540
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DataGridViewTextBoxColumn2.Width = 1100
+        Me.DataGridViewTextBoxColumn2.Width = 1070
         '
         'DataGridViewCheckBoxColumn2
         '
@@ -436,7 +537,7 @@ Partial Class ucScroll
         Me.nspeedscroll.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.caspar_media_playback.My.MySettings.Default, "nnewspeed", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.nspeedscroll.DecimalPlaces = 1
         Me.nspeedscroll.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
-        Me.nspeedscroll.Location = New System.Drawing.Point(796, 72)
+        Me.nspeedscroll.Location = New System.Drawing.Point(765, 78)
         Me.nspeedscroll.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.nspeedscroll.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.nspeedscroll.Minimum = New Decimal(New Integer() {10, 0, 0, -2147483648})
@@ -448,7 +549,7 @@ Partial Class ucScroll
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(758, 72)
+        Me.Label20.Location = New System.Drawing.Point(724, 81)
         Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(36, 13)
@@ -498,15 +599,16 @@ Partial Class ucScroll
         Me.UcBreakingNews1.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.UcBreakingNews1.Location = New System.Drawing.Point(1, -1)
         Me.UcBreakingNews1.Name = "UcBreakingNews1"
-        Me.UcBreakingNews1.Size = New System.Drawing.Size(1217, 452)
+        Me.UcBreakingNews1.Size = New System.Drawing.Size(1187, 452)
         Me.UcBreakingNews1.TabIndex = 534
         '
         'ucScroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1221, 924)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.UcBreakingNews1)
         Me.Controls.Add(Me.gbscroll)
         Me.HideOnClose = True
@@ -514,6 +616,7 @@ Partial Class ucScroll
         Me.Text = "Scroll"
         Me.gbscroll.ResumeLayout(False)
         Me.gbscroll.PerformLayout()
+        CType(Me.ndivision, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.picscrollbullet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -530,7 +633,6 @@ Partial Class ucScroll
     Friend WithEvents cmddeselectallforscroll As System.Windows.Forms.Button
     Friend WithEvents txtdelemeterforscroll As System.Windows.Forms.TextBox
     Friend WithEvents Label114 As System.Windows.Forms.Label
-    Friend WithEvents cmdresumescroll As System.Windows.Forms.Button
     Friend WithEvents cmdpausescroll As System.Windows.Forms.Button
     Friend WithEvents cmdplayscroll As System.Windows.Forms.Button
     Friend WithEvents cmdstopscroll As System.Windows.Forms.Button
@@ -558,8 +660,18 @@ Partial Class ucScroll
     Friend WithEvents PasteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UcBreakingNews1 As ucBreakingNews
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
     Friend WithEvents SaveAsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InsertToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ndivision As NumericUpDown
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents cmdstripcolor As Button
+    Friend WithEvents cmdcolor As Button
+    Friend WithEvents cmdbordercolor As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
 End Class

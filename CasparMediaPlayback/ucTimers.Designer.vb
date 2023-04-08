@@ -24,6 +24,10 @@ Partial Class ucTimers
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.gbtimers = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtInitialValueofBackinTimer = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cmdplayBackinTimer = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cmdStopBoth = New System.Windows.Forms.Button()
         Me.cmdStoploop = New System.Windows.Forms.Button()
@@ -60,11 +64,8 @@ Partial Class ucTimers
         Me.Label204 = New System.Windows.Forms.Label()
         Me.cmdplaycountdowntimer = New System.Windows.Forms.Button()
         Me.tmrclipcountdown = New System.Windows.Forms.Timer(Me.components)
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.cmdplayBackinTimer = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtInitialValueofBackinTimer = New System.Windows.Forms.TextBox()
         Me.gbtimers.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
@@ -72,7 +73,6 @@ Partial Class ucTimers
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.gb.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbtimers
@@ -97,6 +97,49 @@ Partial Class ucTimers
         Me.gbtimers.TabIndex = 1162
         Me.gbtimers.TabStop = False
         Me.gbtimers.Text = " "
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.BackColor = System.Drawing.Color.Moccasin
+        Me.GroupBox3.Controls.Add(Me.txtInitialValueofBackinTimer)
+        Me.GroupBox3.Controls.Add(Me.Label5)
+        Me.GroupBox3.Controls.Add(Me.cmdplayBackinTimer)
+        Me.GroupBox3.Location = New System.Drawing.Point(19, 277)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(200, 58)
+        Me.GroupBox3.TabIndex = 7
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Back in Timer"
+        '
+        'txtInitialValueofBackinTimer
+        '
+        Me.txtInitialValueofBackinTimer.Location = New System.Drawing.Point(24, 35)
+        Me.txtInitialValueofBackinTimer.Name = "txtInitialValueofBackinTimer"
+        Me.txtInitialValueofBackinTimer.Size = New System.Drawing.Size(50, 20)
+        Me.txtInitialValueofBackinTimer.TabIndex = 17
+        Me.txtInitialValueofBackinTimer.Text = "20"
+        Me.txtInitialValueofBackinTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(6, 19)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(109, 13)
+        Me.Label5.TabIndex = 726
+        Me.Label5.Text = "InitialValue in Second"
+        '
+        'cmdplayBackinTimer
+        '
+        Me.cmdplayBackinTimer.BackColor = System.Drawing.Color.Green
+        Me.cmdplayBackinTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdplayBackinTimer.ForeColor = System.Drawing.Color.White
+        Me.cmdplayBackinTimer.Location = New System.Drawing.Point(127, 19)
+        Me.cmdplayBackinTimer.Name = "cmdplayBackinTimer"
+        Me.cmdplayBackinTimer.Size = New System.Drawing.Size(57, 33)
+        Me.cmdplayBackinTimer.TabIndex = 6
+        Me.cmdplayBackinTimer.Text = "Play"
+        Me.cmdplayBackinTimer.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
@@ -478,61 +521,21 @@ Partial Class ucTimers
         '
         Me.tmrclipcountdown.Interval = 1000
         '
-        'GroupBox3
-        '
-        Me.GroupBox3.BackColor = System.Drawing.Color.Moccasin
-        Me.GroupBox3.Controls.Add(Me.txtInitialValueofBackinTimer)
-        Me.GroupBox3.Controls.Add(Me.Label5)
-        Me.GroupBox3.Controls.Add(Me.cmdplayBackinTimer)
-        Me.GroupBox3.Location = New System.Drawing.Point(19, 277)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(200, 58)
-        Me.GroupBox3.TabIndex = 7
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Back in Timer"
-        '
-        'cmdplayBackinTimer
-        '
-        Me.cmdplayBackinTimer.BackColor = System.Drawing.Color.Green
-        Me.cmdplayBackinTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdplayBackinTimer.ForeColor = System.Drawing.Color.White
-        Me.cmdplayBackinTimer.Location = New System.Drawing.Point(127, 19)
-        Me.cmdplayBackinTimer.Name = "cmdplayBackinTimer"
-        Me.cmdplayBackinTimer.Size = New System.Drawing.Size(57, 33)
-        Me.cmdplayBackinTimer.TabIndex = 6
-        Me.cmdplayBackinTimer.Text = "Play"
-        Me.cmdplayBackinTimer.UseVisualStyleBackColor = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 19)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(109, 13)
-        Me.Label5.TabIndex = 726
-        Me.Label5.Text = "InitialValue in Second"
-        '
-        'txtInitialValueofBackinTimer
-        '
-        Me.txtInitialValueofBackinTimer.Location = New System.Drawing.Point(24, 35)
-        Me.txtInitialValueofBackinTimer.Name = "txtInitialValueofBackinTimer"
-        Me.txtInitialValueofBackinTimer.Size = New System.Drawing.Size(50, 20)
-        Me.txtInitialValueofBackinTimer.TabIndex = 17
-        Me.txtInitialValueofBackinTimer.Text = "20"
-        Me.txtInitialValueofBackinTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'ucTimers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(602, 528)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gbtimers)
         Me.HideOnClose = True
         Me.Name = "ucTimers"
         Me.Text = "Timers"
         Me.gbtimers.ResumeLayout(False)
         Me.gbtimers.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -543,8 +546,6 @@ Partial Class ucTimers
         Me.GroupBox9.PerformLayout()
         Me.gb.ResumeLayout(False)
         Me.gb.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

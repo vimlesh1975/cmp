@@ -28,6 +28,15 @@ Partial Class ucnewOffAirLogger
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gboffairlogger = New System.Windows.Forms.GroupBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmdShowInfo = New System.Windows.Forms.Button()
         Me.cmdPlayinvlc = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -37,7 +46,7 @@ Partial Class ucnewOffAirLogger
         Me.ProgressBar2 = New VerticalProgressBar.VerticalProgressBar()
         Me.ProgressBar1 = New VerticalProgressBar.VerticalProgressBar()
         Me.pnlrecording = New System.Windows.Forms.Panel()
-        Me.cmbcasparcgwindowtitlerecording = New System.Windows.Forms.ComboBox()
+        Me.cmbscreenConsumres = New System.Windows.Forms.ComboBox()
         Me.cmdoutcasparcgwindowrecording = New System.Windows.Forms.Button()
         Me.cmdshowcasparcgwindowrecording = New System.Windows.Forms.Button()
         Me.lblEstimateddaysvalueoal = New System.Windows.Forms.Label()
@@ -89,18 +98,9 @@ Partial Class ucnewOffAirLogger
         Me.Label72 = New System.Windows.Forms.Label()
         Me.tmrrecordedfileinfooal = New System.Windows.Forms.Timer(Me.components)
         Me.tmroal = New System.Windows.Forms.Timer(Me.components)
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.gboffairlogger.SuspendLayout()
-        CType(Me.dgvshedulerecording, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.dgvshedulerecording, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gboffairlogger
@@ -116,7 +116,7 @@ Partial Class ucnewOffAirLogger
         Me.gboffairlogger.Controls.Add(Me.ProgressBar2)
         Me.gboffairlogger.Controls.Add(Me.ProgressBar1)
         Me.gboffairlogger.Controls.Add(Me.pnlrecording)
-        Me.gboffairlogger.Controls.Add(Me.cmbcasparcgwindowtitlerecording)
+        Me.gboffairlogger.Controls.Add(Me.cmbscreenConsumres)
         Me.gboffairlogger.Controls.Add(Me.cmdoutcasparcgwindowrecording)
         Me.gboffairlogger.Controls.Add(Me.cmdshowcasparcgwindowrecording)
         Me.gboffairlogger.Controls.Add(Me.lblEstimateddaysvalueoal)
@@ -173,6 +173,66 @@ Partial Class ucnewOffAirLogger
         Me.gboffairlogger.TabIndex = 586
         Me.gboffairlogger.TabStop = False
         Me.gboffairlogger.Text = "Off Air Logger"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(178, 265)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(84, 24)
+        Me.MenuStrip1.TabIndex = 744
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.SaveToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'NewToolStripMenuItem
+        '
+        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.NewToolStripMenuItem.Text = "New"
+        '
+        'OpenToolStripMenuItem
+        '
+        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.OpenToolStripMenuItem.Text = "Open"
+        '
+        'SaveToolStripMenuItem
+        '
+        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.SaveToolStripMenuItem.Text = "Save"
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem})
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'CutToolStripMenuItem
+        '
+        Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
+        Me.CutToolStripMenuItem.Text = "Cut"
+        '
+        'CopyToolStripMenuItem
+        '
+        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
+        Me.CopyToolStripMenuItem.Text = "Copy"
+        '
+        'PasteToolStripMenuItem
+        '
+        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
+        Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'cmdShowInfo
         '
@@ -270,19 +330,17 @@ Partial Class ucnewOffAirLogger
         Me.pnlrecording.Size = New System.Drawing.Size(235, 176)
         Me.pnlrecording.TabIndex = 737
         '
-        'cmbcasparcgwindowtitlerecording
+        'cmbscreenConsumres
         '
-        Me.cmbcasparcgwindowtitlerecording.FormattingEnabled = True
-        Me.cmbcasparcgwindowtitlerecording.Items.AddRange(New Object() {"Screen consumer [1|PAL]", "Screen consumer [2|PAL]", "Screen consumer [3|PAL]", "Screen consumer [4|PAL]", "Screen consumer [1|NTSC]", "Screen consumer [1|1080i5000]", "Screen consumer [2|1080i5000]", "Screen consumer [3|1080i5000]", "Screen consumer [4|1080i5000]", "Screen consumer [1|1080i5994]", "Screen consumer [1|1080i6000]", "Screen consumer [1|1080p2398]", "Screen consumer [1|1080p2400]", "Screen consumer [1|1080p2500]", "Screen consumer [1|1080p2997]", "Screen consumer [1|1080p3000]", "Screen consumer [1|1080p5000]", "Screen consumer [1|1080p5994]", "Screen consumer [1|1080p6000]", "Screen consumer [1|1556p2398]", "Screen consumer [1|1556p2400]", "Screen consumer [1|1556p2500]", "Screen consumer [1|2160p2398]", "Screen consumer [1|2160p2400]", "Screen consumer [1|2160p2500]", "Screen consumer [1| 2160p2997]", "Screen consumer [1|2160p3000]", "Screen consumer [1|576p2500]", "Screen consumer [1|720p2398]", "Screen consumer [1|720p2400]", "Screen consumer [1|720p2500]", "Screen consumer [1|720p2997]", "Screen consumer [1|720p3000]", "Screen consumer [1|720p5000]", "Screen consumer [1|720p5994]", "Screen consumer [1|720p6000]"})
-        Me.cmbcasparcgwindowtitlerecording.Location = New System.Drawing.Point(322, 12)
-        Me.cmbcasparcgwindowtitlerecording.Name = "cmbcasparcgwindowtitlerecording"
-        Me.cmbcasparcgwindowtitlerecording.Size = New System.Drawing.Size(150, 21)
-        Me.cmbcasparcgwindowtitlerecording.TabIndex = 740
-        Me.cmbcasparcgwindowtitlerecording.Text = "Screen consumer [1|PAL]"
+        Me.cmbscreenConsumres.FormattingEnabled = True
+        Me.cmbscreenConsumres.Location = New System.Drawing.Point(320, 12)
+        Me.cmbscreenConsumres.Name = "cmbscreenConsumres"
+        Me.cmbscreenConsumres.Size = New System.Drawing.Size(163, 21)
+        Me.cmbscreenConsumres.TabIndex = 740
         '
         'cmdoutcasparcgwindowrecording
         '
-        Me.cmdoutcasparcgwindowrecording.Location = New System.Drawing.Point(513, 11)
+        Me.cmdoutcasparcgwindowrecording.Location = New System.Drawing.Point(520, 11)
         Me.cmdoutcasparcgwindowrecording.Name = "cmdoutcasparcgwindowrecording"
         Me.cmdoutcasparcgwindowrecording.Size = New System.Drawing.Size(43, 23)
         Me.cmdoutcasparcgwindowrecording.TabIndex = 739
@@ -291,7 +349,7 @@ Partial Class ucnewOffAirLogger
         '
         'cmdshowcasparcgwindowrecording
         '
-        Me.cmdshowcasparcgwindowrecording.Location = New System.Drawing.Point(480, 11)
+        Me.cmdshowcasparcgwindowrecording.Location = New System.Drawing.Point(487, 11)
         Me.cmdshowcasparcgwindowrecording.Name = "cmdshowcasparcgwindowrecording"
         Me.cmdshowcasparcgwindowrecording.Size = New System.Drawing.Size(32, 23)
         Me.cmdshowcasparcgwindowrecording.TabIndex = 738
@@ -428,17 +486,17 @@ Partial Class ucnewOffAirLogger
         Me.lblRecordeddurationoal.ForeColor = System.Drawing.Color.Maroon
         Me.lblRecordeddurationoal.Location = New System.Drawing.Point(223, 69)
         Me.lblRecordeddurationoal.Name = "lblRecordeddurationoal"
-        Me.lblRecordeddurationoal.Size = New System.Drawing.Size(67, 16)
+        Me.lblRecordeddurationoal.Size = New System.Drawing.Size(66, 16)
         Me.lblRecordeddurationoal.TabIndex = 622
         Me.lblRecordeddurationoal.Text = "Duration"
         '
         'lblrecordingfilenameoal
         '
-        Me.lblrecordingfilenameoal.Location = New System.Drawing.Point(69, 36)
+        Me.lblrecordingfilenameoal.Location = New System.Drawing.Point(69, 35)
         Me.lblrecordingfilenameoal.Name = "lblrecordingfilenameoal"
-        Me.lblrecordingfilenameoal.Size = New System.Drawing.Size(242, 12)
+        Me.lblrecordingfilenameoal.Size = New System.Drawing.Size(242, 14)
         Me.lblrecordingfilenameoal.TabIndex = 621
-        Me.lblrecordingfilenameoal.Text = "name"
+        Me.lblrecordingfilenameoal.Text = "_name"
         '
         'txtextraoptionoal
         '
@@ -717,7 +775,7 @@ Partial Class ucnewOffAirLogger
         Me.txtbitrateofl.Name = "txtbitrateofl"
         Me.txtbitrateofl.Size = New System.Drawing.Size(53, 20)
         Me.txtbitrateofl.TabIndex = 142
-        Me.txtbitrateofl.Text = "1"
+        Me.txtbitrateofl.Text = "2"
         Me.txtbitrateofl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmdrecordoal
@@ -772,66 +830,6 @@ Partial Class ucnewOffAirLogger
         'tmroal
         '
         '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(178, 265)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(84, 24)
-        Me.MenuStrip1.TabIndex = 744
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.SaveToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
-        '
-        'NewToolStripMenuItem
-        '
-        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
-        Me.NewToolStripMenuItem.Text = "New"
-        '
-        'OpenToolStripMenuItem
-        '
-        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
-        Me.OpenToolStripMenuItem.Text = "Open"
-        '
-        'SaveToolStripMenuItem
-        '
-        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
-        Me.SaveToolStripMenuItem.Text = "Save"
-        '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem})
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
-        Me.EditToolStripMenuItem.Text = "Edit"
-        '
-        'CutToolStripMenuItem
-        '
-        Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
-        Me.CutToolStripMenuItem.Text = "Cut"
-        '
-        'CopyToolStripMenuItem
-        '
-        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
-        Me.CopyToolStripMenuItem.Text = "Copy"
-        '
-        'PasteToolStripMenuItem
-        '
-        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
-        Me.PasteToolStripMenuItem.Text = "Paste"
-        '
         'ucnewOffAirLogger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -843,9 +841,9 @@ Partial Class ucnewOffAirLogger
         Me.Size = New System.Drawing.Size(606, 429)
         Me.gboffairlogger.ResumeLayout(False)
         Me.gboffairlogger.PerformLayout()
-        CType(Me.dgvshedulerecording, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.dgvshedulerecording, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -902,7 +900,7 @@ Partial Class ucnewOffAirLogger
     Friend WithEvents ProgressBar2 As VerticalProgressBar.VerticalProgressBar
     Friend WithEvents ProgressBar1 As VerticalProgressBar.VerticalProgressBar
     Friend WithEvents pnlrecording As Panel
-    Friend WithEvents cmbcasparcgwindowtitlerecording As ComboBox
+    Friend WithEvents cmbscreenConsumres As ComboBox
     Friend WithEvents cmdoutcasparcgwindowrecording As Button
     Friend WithEvents cmdshowcasparcgwindowrecording As Button
     Friend WithEvents lblChannel As Label

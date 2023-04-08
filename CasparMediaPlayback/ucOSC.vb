@@ -158,7 +158,7 @@ Public Class ucOSC
                     dgvosc.Rows(jregisteredmethods).Cells(15).Value = e.Message.Data(14)
                     dgvosc.Rows(jregisteredmethods).Cells(16).Value = e.Message.Data(15)
                     dgvosc.Rows(jregisteredmethods).Cells(17).Value = e.Message.Data(16)
-
+                    Exit For
                 End If
             Next
             If ServerVersion > 2.1 Then
@@ -191,9 +191,14 @@ Public Class ucOSC
                 End If
                 If dgvosc.Rows(6).Cells(0).Value = e.Message.Address Then
                     framesPlayed = (e.Message.Data(0))
-                    framesTotal = (e.Message.Data(1))
+                    If e.Message.Data(1) = 343597384 Then
+                        framesTotal = 90000 '(e.Message.Data(1))
+                    Else
+                        framesTotal = e.Message.Data(1)
+                    End If
+
                 End If
-                If dgvosc.Rows(7).Cells(0).Value = e.Message.Address Then
+                    If dgvosc.Rows(7).Cells(0).Value = e.Message.Address Then
                     fps = e.Message.Data(0)
                 End If
 

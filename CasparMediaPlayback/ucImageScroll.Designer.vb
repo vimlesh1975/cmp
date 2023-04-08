@@ -79,7 +79,7 @@ Partial Class ucImageScroll
         Me.gbimagescroll.Controls.Add(Me.cmdimagescrollplay)
         Me.gbimagescroll.Location = New System.Drawing.Point(3, 3)
         Me.gbimagescroll.Name = "gbimagescroll"
-        Me.gbimagescroll.Size = New System.Drawing.Size(926, 763)
+        Me.gbimagescroll.Size = New System.Drawing.Size(946, 812)
         Me.gbimagescroll.TabIndex = 594
         Me.gbimagescroll.TabStop = False
         Me.gbimagescroll.Text = " "
@@ -317,8 +317,9 @@ Partial Class ucImageScroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(941, 778)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbimagescroll)
         Me.HideOnClose = True
         Me.Name = "ucImageScroll"

@@ -24,6 +24,7 @@ Partial Class ucMixer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.gbMixer = New System.Windows.Forms.GroupBox()
+        Me.cmdVerticalMobileToFullScreen = New System.Windows.Forms.Button()
         Me.gbScalefromCenter = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -193,6 +194,7 @@ Partial Class ucMixer
         'gbMixer
         '
         Me.gbMixer.BackColor = System.Drawing.Color.Wheat
+        Me.gbMixer.Controls.Add(Me.cmdVerticalMobileToFullScreen)
         Me.gbMixer.Controls.Add(Me.gbScalefromCenter)
         Me.gbMixer.Controls.Add(Me.nmixermastervolume)
         Me.gbMixer.Controls.Add(Me.gbcropmixer)
@@ -226,6 +228,15 @@ Partial Class ucMixer
         Me.gbMixer.TabIndex = 423
         Me.gbMixer.TabStop = False
         Me.gbMixer.Text = " "
+        '
+        'cmdVerticalMobileToFullScreen
+        '
+        Me.cmdVerticalMobileToFullScreen.Location = New System.Drawing.Point(522, 475)
+        Me.cmdVerticalMobileToFullScreen.Name = "cmdVerticalMobileToFullScreen"
+        Me.cmdVerticalMobileToFullScreen.Size = New System.Drawing.Size(75, 55)
+        Me.cmdVerticalMobileToFullScreen.TabIndex = 714
+        Me.cmdVerticalMobileToFullScreen.Text = "Vertical Mobile To FullScreen"
+        Me.cmdVerticalMobileToFullScreen.UseVisualStyleBackColor = True
         '
         'gbScalefromCenter
         '
@@ -1481,9 +1492,11 @@ Partial Class ucMixer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(665, 612)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbMixer)
+        Me.HideOnClose = True
         Me.Name = "ucMixer"
         Me.Text = "Mixer"
         Me.gbMixer.ResumeLayout(False)
@@ -1664,4 +1677,5 @@ Partial Class ucMixer
     Friend WithEvents nscalexfromCenter As NumericUpDown
     Friend WithEvents nscaleyfromCenter As NumericUpDown
     Friend WithEvents cmdResetScalefromCenter As Button
+    Friend WithEvents cmdVerticalMobileToFullScreen As Button
 End Class

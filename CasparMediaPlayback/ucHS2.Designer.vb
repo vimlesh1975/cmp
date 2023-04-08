@@ -338,6 +338,8 @@ Partial Class ucHS2
         'nspeed2
         '
         Me.nspeed2.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.caspar_media_playback.My.MySettings.Default, "nspeed2", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.nspeed2.DecimalPlaces = 1
+        Me.nspeed2.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.nspeed2.Location = New System.Drawing.Point(599, 109)
         Me.nspeed2.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.nspeed2.Minimum = New Decimal(New Integer() {10, 0, 0, -2147483648})
@@ -409,8 +411,9 @@ Partial Class ucHS2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(664, 612)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbhorizontalscroll2)
         Me.HideOnClose = True
         Me.Name = "ucHS2"

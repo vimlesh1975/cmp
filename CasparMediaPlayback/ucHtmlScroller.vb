@@ -301,6 +301,62 @@ Public Class ucHtmlScroller
 
     Private Sub cmdFlip2ndChannel_Click(sender As Object, e As EventArgs) Handles cmdFlip2ndChannel.Click
         On Error Resume Next
-        CasparDevice.SendString(txtFlip2ndChannel.Text)
+        CasparDevice.SendString("play 2-210 route://1")
+    End Sub
+
+    Private Sub chkFlip_CheckedChanged(sender As Object, e As EventArgs) Handles chkFlip.CheckedChanged
+        On Error Resume Next
+        If chkFlip.Checked Then
+            CasparDevice.SendString("mixer 2-210 fill 1 0 -1 1")
+        Else
+            CasparDevice.SendString("mixer 2-210 fill 0 0 1 1")
+        End If
+    End Sub
+
+    Private Sub chkShuttlePro_CheckedChanged(sender As Object, e As EventArgs) Handles chkShuttlePro.CheckedChanged
+
+    End Sub
+
+    Private Sub ucHtmlScroller_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If chkShuttlePro.Checked Then
+            If e.KeyCode = Keys.F7 Then 'speed 0
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayerhtmlscroll.Text & " speed('" & 0 & "')")
+            End If
+            If e.KeyCode = Keys.F14 Then
+                cmdCueFromMiddle.PerformClick()  ' start
+            End If
+            If e.KeyCode = Keys.F15 Then
+                pauseresumev()
+            End If
+
+            If e.KeyCode = Keys.F16 Then
+                nspeedhtmlscroll.Value = 3
+            End If
+            If e.KeyCode = Keys.F17 Then
+                nspeedhtmlscroll.Value = 4
+            End If
+            If e.KeyCode = Keys.F18 Then
+                nspeedhtmlscroll.Value = 5
+            End If
+            If e.KeyCode = Keys.F19 Then
+                nspeedhtmlscroll.Value = 6
+            End If
+            If e.KeyCode = Keys.F20 Then
+                nspeedhtmlscroll.Value = 10
+            End If
+
+            If e.KeyCode = Keys.F21 Then
+                nspeedhtmlscroll.Value = -3
+            End If
+            If e.KeyCode = Keys.F22 Then
+                nspeedhtmlscroll.Value = -4
+            End If
+            If e.KeyCode = Keys.F23 Then
+                nspeedhtmlscroll.Value = -5
+            End If
+            If e.KeyCode = Keys.F24 Then
+                nspeedhtmlscroll.Value = -10
+            End If
+        End If
     End Sub
 End Class

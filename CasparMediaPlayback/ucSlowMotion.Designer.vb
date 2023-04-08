@@ -173,7 +173,7 @@ Partial Class ucSlowMotion
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(180, 193)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(204, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(84, 24)
         Me.MenuStrip1.TabIndex = 719
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -800,8 +800,9 @@ Partial Class ucSlowMotion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(665, 609)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gbSlowMotion)
         Me.HideOnClose = True
         Me.Name = "ucSlowMotion"

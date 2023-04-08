@@ -1,10 +1,10 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucTemplate
     'Inherits System.Windows.Forms.UserControl
     Inherits WeifenLuo.WinFormsUI.Docking.DockContent
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -21,7 +21,7 @@ Partial Class ucTemplate
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucTemplate))
@@ -35,6 +35,11 @@ Partial Class ucTemplate
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbtemplate = New System.Windows.Forms.GroupBox()
+        Me.cmdUpdatePreview = New System.Windows.Forms.Button()
+        Me.picanytemplate = New AxShockwaveFlashObjects.AxShockwaveFlash()
+        Me.chkLBand = New System.Windows.Forms.CheckBox()
+        Me.txtLBand = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.chkanimatetemplate = New System.Windows.Forms.CheckBox()
         Me.gbrundown = New System.Windows.Forms.GroupBox()
         Me.lblsheduleStatus = New System.Windows.Forms.Label()
@@ -85,7 +90,6 @@ Partial Class ucTemplate
         Me.cmdnextframe = New System.Windows.Forms.Button()
         Me.txtsearchtemplate = New System.Windows.Forms.TextBox()
         Me.lsttemplate = New System.Windows.Forms.ListBox()
-        Me.picanytemplate = New AxShockwaveFlashObjects.AxShockwaveFlash()
         Me.cmdclipsearchtemplate = New System.Windows.Forms.Button()
         Me.cmbfonttemplate = New System.Windows.Forms.ComboBox()
         Me.cmdanytemplatestop = New System.Windows.Forms.Button()
@@ -98,17 +102,24 @@ Partial Class ucTemplate
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cmdOnlyUpdatePreview = New System.Windows.Forms.Button()
         Me.gbtemplate.SuspendLayout()
+        CType(Me.picanytemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbrundown.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvrundown, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvanytemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picanytemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gbtemplate
         '
         Me.gbtemplate.BackColor = System.Drawing.Color.LightGreen
+        Me.gbtemplate.Controls.Add(Me.cmdOnlyUpdatePreview)
+        Me.gbtemplate.Controls.Add(Me.cmdUpdatePreview)
+        Me.gbtemplate.Controls.Add(Me.picanytemplate)
+        Me.gbtemplate.Controls.Add(Me.chkLBand)
+        Me.gbtemplate.Controls.Add(Me.txtLBand)
+        Me.gbtemplate.Controls.Add(Me.Label2)
         Me.gbtemplate.Controls.Add(Me.chkanimatetemplate)
         Me.gbtemplate.Controls.Add(Me.gbrundown)
         Me.gbtemplate.Controls.Add(Me.cmdaddtorundown)
@@ -123,7 +134,6 @@ Partial Class ucTemplate
         Me.gbtemplate.Controls.Add(Me.cmdnextframe)
         Me.gbtemplate.Controls.Add(Me.txtsearchtemplate)
         Me.gbtemplate.Controls.Add(Me.lsttemplate)
-        Me.gbtemplate.Controls.Add(Me.picanytemplate)
         Me.gbtemplate.Controls.Add(Me.cmdclipsearchtemplate)
         Me.gbtemplate.Controls.Add(Me.cmbfonttemplate)
         Me.gbtemplate.Controls.Add(Me.cmdanytemplatestop)
@@ -136,6 +146,52 @@ Partial Class ucTemplate
         Me.gbtemplate.TabIndex = 425
         Me.gbtemplate.TabStop = False
         Me.gbtemplate.Text = " "
+        '
+        'cmdUpdatePreview
+        '
+        Me.cmdUpdatePreview.Location = New System.Drawing.Point(1020, 59)
+        Me.cmdUpdatePreview.Name = "cmdUpdatePreview"
+        Me.cmdUpdatePreview.Size = New System.Drawing.Size(92, 23)
+        Me.cmdUpdatePreview.TabIndex = 646
+        Me.cmdUpdatePreview.Text = "Add to Preview"
+        Me.cmdUpdatePreview.UseVisualStyleBackColor = True
+        '
+        'picanytemplate
+        '
+        Me.picanytemplate.Enabled = True
+        Me.picanytemplate.Location = New System.Drawing.Point(290, 36)
+        Me.picanytemplate.MaximumSize = New System.Drawing.Size(500, 500)
+        Me.picanytemplate.Name = "picanytemplate"
+        Me.picanytemplate.OcxState = CType(resources.GetObject("picanytemplate.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.picanytemplate.Size = New System.Drawing.Size(399, 342)
+        Me.picanytemplate.TabIndex = 644
+        '
+        'chkLBand
+        '
+        Me.chkLBand.AutoSize = True
+        Me.chkLBand.Location = New System.Drawing.Point(888, 56)
+        Me.chkLBand.Name = "chkLBand"
+        Me.chkLBand.Size = New System.Drawing.Size(133, 17)
+        Me.chkLBand.TabIndex = 643
+        Me.chkLBand.Text = "Apply L band Squeeze"
+        Me.chkLBand.UseVisualStyleBackColor = True
+        '
+        'txtLBand
+        '
+        Me.txtLBand.Location = New System.Drawing.Point(695, 56)
+        Me.txtLBand.Name = "txtLBand"
+        Me.txtLBand.Size = New System.Drawing.Size(187, 20)
+        Me.txtLBand.TabIndex = 642
+        Me.txtLBand.Text = "fill 0.18 0 0.82 0.83 25 easeoutexpo"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(696, 40)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(84, 13)
+        Me.Label2.TabIndex = 641
+        Me.Label2.Text = "L Band squeeze"
         '
         'chkanimatetemplate
         '
@@ -175,7 +231,7 @@ Partial Class ucTemplate
         Me.gbrundown.Controls.Add(Me.dgvrundown)
         Me.gbrundown.Location = New System.Drawing.Point(6, 378)
         Me.gbrundown.Name = "gbrundown"
-        Me.gbrundown.Size = New System.Drawing.Size(698, 539)
+        Me.gbrundown.Size = New System.Drawing.Size(684, 502)
         Me.gbrundown.TabIndex = 638
         Me.gbrundown.TabStop = False
         Me.gbrundown.Text = "Rundown"
@@ -440,7 +496,7 @@ Partial Class ucTemplate
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvrundown.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvrundown.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.dgvrundown.Location = New System.Drawing.Point(4, 63)
+        Me.dgvrundown.Location = New System.Drawing.Point(4, 62)
         Me.dgvrundown.Name = "dgvrundown"
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
@@ -451,7 +507,7 @@ Partial Class ucTemplate
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvrundown.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvrundown.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvrundown.Size = New System.Drawing.Size(688, 466)
+        Me.dgvrundown.Size = New System.Drawing.Size(680, 430)
         Me.dgvrundown.TabIndex = 370
         '
         'Label
@@ -519,7 +575,7 @@ Partial Class ucTemplate
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvanytemplate.DefaultCellStyle = DataGridViewCellStyle7
         Me.dgvanytemplate.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.dgvanytemplate.Location = New System.Drawing.Point(711, 59)
+        Me.dgvanytemplate.Location = New System.Drawing.Point(695, 82)
         Me.dgvanytemplate.Name = "dgvanytemplate"
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
@@ -529,14 +585,14 @@ Partial Class ucTemplate
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvanytemplate.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
-        Me.dgvanytemplate.Size = New System.Drawing.Size(503, 858)
+        Me.dgvanytemplate.Size = New System.Drawing.Size(490, 788)
         Me.dgvanytemplate.TabIndex = 369
         '
         'InstanceName
         '
         Me.InstanceName.HeaderText = "Instance/Label Name"
         Me.InstanceName.Name = "InstanceName"
-        Me.InstanceName.Width = 110
+        Me.InstanceName.Width = 105
         '
         'Value
         '
@@ -545,7 +601,7 @@ Partial Class ucTemplate
         Me.Value.DefaultCellStyle = DataGridViewCellStyle6
         Me.Value.HeaderText = "Value"
         Me.Value.Name = "Value"
-        Me.Value.Width = 315
+        Me.Value.Width = 290
         '
         'Column4
         '
@@ -654,16 +710,6 @@ Partial Class ucTemplate
         Me.lsttemplate.Size = New System.Drawing.Size(279, 342)
         Me.lsttemplate.TabIndex = 304
         '
-        'picanytemplate
-        '
-        Me.picanytemplate.Enabled = True
-        Me.picanytemplate.Location = New System.Drawing.Point(291, 35)
-        Me.picanytemplate.MaximumSize = New System.Drawing.Size(500, 500)
-        Me.picanytemplate.Name = "picanytemplate"
-        Me.picanytemplate.OcxState = CType(resources.GetObject("picanytemplate.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.picanytemplate.Size = New System.Drawing.Size(413, 342)
-        Me.picanytemplate.TabIndex = 305
-        '
         'cmdclipsearchtemplate
         '
         Me.cmdclipsearchtemplate.Location = New System.Drawing.Point(185, 13)
@@ -758,25 +804,36 @@ Partial Class ucTemplate
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.Width = 290
         '
+        'cmdOnlyUpdatePreview
+        '
+        Me.cmdOnlyUpdatePreview.Location = New System.Drawing.Point(1112, 59)
+        Me.cmdOnlyUpdatePreview.Name = "cmdOnlyUpdatePreview"
+        Me.cmdOnlyUpdatePreview.Size = New System.Drawing.Size(92, 23)
+        Me.cmdOnlyUpdatePreview.TabIndex = 647
+        Me.cmdOnlyUpdatePreview.Text = "Update Preview"
+        Me.cmdOnlyUpdatePreview.UseVisualStyleBackColor = True
+        '
         'ucTemplate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1226, 928)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbtemplate)
         Me.HideOnClose = True
+        Me.KeyPreview = True
         Me.Name = "ucTemplate"
         Me.Text = "Flash Template"
         Me.gbtemplate.ResumeLayout(False)
         Me.gbtemplate.PerformLayout()
+        CType(Me.picanytemplate, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbrundown.ResumeLayout(False)
         Me.gbrundown.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgvrundown, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvanytemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picanytemplate, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -812,7 +869,6 @@ Partial Class ucTemplate
     Friend WithEvents cmdnextframe As System.Windows.Forms.Button
     Friend WithEvents txtsearchtemplate As System.Windows.Forms.TextBox
     Friend WithEvents lsttemplate As System.Windows.Forms.ListBox
-    Friend WithEvents picanytemplate As AxShockwaveFlashObjects.AxShockwaveFlash
     Friend WithEvents cmdclipsearchtemplate As System.Windows.Forms.Button
     Friend WithEvents cmbfonttemplate As System.Windows.Forms.ComboBox
     Friend WithEvents cmdanytemplatestop As System.Windows.Forms.Button
@@ -844,4 +900,10 @@ Partial Class ucTemplate
     Friend WithEvents InstanceName As DataGridViewTextBoxColumn
     Friend WithEvents Value As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewButtonColumn
+    Friend WithEvents chkLBand As CheckBox
+    Friend WithEvents txtLBand As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents picanytemplate As AxShockwaveFlashObjects.AxShockwaveFlash
+    Friend WithEvents cmdUpdatePreview As Button
+    Friend WithEvents cmdOnlyUpdatePreview As Button
 End Class

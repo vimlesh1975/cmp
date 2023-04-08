@@ -275,6 +275,28 @@
             Dispose of this instance. See the <see cref="T:Google.Cloud.Translation.V2.AdvancedTranslationClient"/> remarks on when this should be called.
             </summary>
         </member>
+        <member name="T:Google.Cloud.Translation.V2.AdvancedTranslationClientBuilder">
+            <summary>
+            A builder for <see cref="T:Google.Cloud.Translation.V2.AdvancedTranslationClient"/>, allowing simple client customization.
+            </summary>
+        </member>
+        <member name="P:Google.Cloud.Translation.V2.AdvancedTranslationClientBuilder.Model">
+            <summary>
+            The translation model to use.
+            </summary>
+        </member>
+        <member name="M:Google.Cloud.Translation.V2.AdvancedTranslationClientBuilder.Build">
+            <inheritdoc />
+        </member>
+        <member name="M:Google.Cloud.Translation.V2.AdvancedTranslationClientBuilder.BuildAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Google.Cloud.Translation.V2.AdvancedTranslationClientBuilder.GetDefaultApplicationName">
+            <inheritdoc />
+        </member>
+        <member name="M:Google.Cloud.Translation.V2.AdvancedTranslationClientBuilder.GetScopedCredentialProvider">
+            <inheritdoc />
+        </member>
         <member name="T:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl">
             <summary>
             Wrapper around <see cref="T:Google.Apis.Translate.v2.TranslateService"/> to provide simpler operations.
@@ -989,6 +1011,28 @@
             <summary>
             Dispose of this instance. See the <see cref="T:Google.Cloud.Translation.V2.TranslationClient"/> remarks on when this should be called.
             </summary>
+        </member>
+        <member name="T:Google.Cloud.Translation.V2.TranslationClientBuilder">
+            <summary>
+            A builder for <see cref="T:Google.Cloud.Translation.V2.TranslationClient"/>, allowing simple client customization.
+            </summary>
+        </member>
+        <member name="P:Google.Cloud.Translation.V2.TranslationClientBuilder.TranslationModel">
+            <summary>
+            The translation model to use, defaulting to <see cref="F:Google.Cloud.Translation.V2.TranslationModel.ServiceDefault"/>.
+            </summary>
+        </member>
+        <member name="M:Google.Cloud.Translation.V2.TranslationClientBuilder.Build">
+            <inheritdoc />
+        </member>
+        <member name="M:Google.Cloud.Translation.V2.TranslationClientBuilder.BuildAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Google.Cloud.Translation.V2.TranslationClientBuilder.GetDefaultApplicationName">
+            <inheritdoc />
+        </member>
+        <member name="M:Google.Cloud.Translation.V2.TranslationClientBuilder.GetScopedCredentialProvider">
+            <inheritdoc />
         </member>
         <member name="T:Google.Cloud.Translation.V2.TranslationClientImpl">
             <summary>

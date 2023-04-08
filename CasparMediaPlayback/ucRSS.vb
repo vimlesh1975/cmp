@@ -8,12 +8,15 @@ Public Class ucRssFeed
     Dim jbreakingnews As Integer
     Dim kbreakingnews As Integer
 
-    Dim ar1() As String
+    'Dim ar1() As String
     Dim ar2() As String
-    Dim ar3() As String
+    'Dim ar3() As String
     Dim ar4() As String
-    Dim ar5() As String
+    'Dim ar5() As String
     Dim ar6() As String
+
+    Dim tempspeed = 2
+    Dim paused As Boolean = False
     Private Sub cmdhidegbrssfeed_Click(sender As Object, e As EventArgs) 
         Me.Hide()
     End Sub
@@ -86,6 +89,7 @@ Public Class ucRssFeed
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmbrssvideoflashlayer.Text), Int(cmbrssvideoflashlayer.Text), txtRSSTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
         tmrshowdatarss.Interval = txtrsstimerinterval.Text
         tmrshowdatarss.Enabled = True
+
     End Sub
     Private Sub dgvrss_DataError(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewDataErrorEventArgs) Handles dgvrss.DataError
         ' dummy code 
@@ -121,7 +125,7 @@ Public Class ucRssFeed
         CasparCGDataCollection.SetData("scrolldata", str)
     End Sub
 
-   
+
 
     Sub updatedatarss()
         On Error Resume Next
@@ -129,14 +133,24 @@ Public Class ucRssFeed
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmbrssvideoflashlayer.Text), Int(cmbrssvideoflashlayer.Text), CasparCGDataCollection)
 
     End Sub
+
     Private Sub cmdrsspause_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdrsspause.Click
         On Error Resume Next
-        nrssspeed.Value = 0
+        If paused = False Then
+            tempspeed = nrssspeed.Value
+            nrssspeed.Value = 0
+            paused = True
+        Else
+            nrssspeed.Value = tempspeed
+            paused = False
+        End If
+
     End Sub
 
-    Private Sub cmdrssresume_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdrssresume.Click
+    Private Sub cmdrssresume_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
-        nrssspeed.Value = 3
+
+
     End Sub
 
     Private Sub cmdrssstop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdrssstop.Click
@@ -230,7 +244,7 @@ Public Class ucRssFeed
 
     Private Sub cmdshowtime_Click(sender As Object, e As EventArgs) Handles cmdshowtime.Click
         On Error Resume Next
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayertimerss.Text), Int(cmblayertimerss.Text), ("CMP/time/time"), True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayertimerss.Text), Int(cmblayertimerss.Text), (txtclockTemplate.Text), True, CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
 

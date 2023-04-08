@@ -33,4 +33,8 @@
     Private Sub CmdCancel_Click(sender As Object, e As EventArgs) Handles cmdCancel.Click
         Me.Parent.Dispose()
     End Sub
+
+    Private Sub UcNDISource_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

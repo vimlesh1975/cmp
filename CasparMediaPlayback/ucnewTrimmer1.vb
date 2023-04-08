@@ -342,4 +342,83 @@ Public Class ucnewTrimmer1
     Private Sub vlc1_Click(sender As Object, e As EventArgs) Handles vlc1.Click
 
     End Sub
+
+    Private Sub GbTrimmer_Enter(sender As Object, e As EventArgs) Handles gbTrimmer.Enter
+
+    End Sub
+
+    Private Sub cmdforwardtenframetrimmer_Click(sender As Object, e As EventArgs) Handles cmdforwardtenframetrimmer.Click
+        On Error Resume Next
+        vlc1.VlcMediaPlayer.Time = vlc1.VlcMediaPlayer.Time + ((nforwardFrame.Value) * 1000 / fps)
+    End Sub
+
+    Private Sub cmdbackTenframetrimmer_Click(sender As Object, e As EventArgs) Handles cmdbackTenframetrimmer.Click
+        On Error Resume Next
+        vlc1.VlcMediaPlayer.Time = vlc1.VlcMediaPlayer.Time - ((nforwardFrame.Value) * 1000 / fps)
+    End Sub
+
+    Private Sub cmdExportOnlyAudio_Click(sender As Object, e As EventArgs) Handles cmdExportOnlyAudio.Click
+
+        On Error Resume Next
+        osdcutfilename.InitialDirectory = Replace(mediafullpath, "/", "\")  '"c:\casparcg\_media\"
+        osdcutfilename.FileName = System.IO.Path.GetFileNameWithoutExtension(ofdtrimmer.FileName) & "_Trimmed"
+        osdcutfilename.FilterIndex = 1
+        osdcutfilename.DereferenceLinks = False
+        'osdcutfilename.Filter = "original wrapper (*" & System.IO.Path.GetExtension(ofdtrimmer.FileName) & ")|*" & System.IO.Path.GetExtension(ofdtrimmer.FileName) & "|mp4 files (*.mp4)|*.mp4|avi files (*.avi)|*.avi|All files (*.*)|*.*"
+        osdcutfilename.Filter = "mp3 (*.mp3)|*.mp3|All files (*.*)|*.*"
+        If (osdcutfilename.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            cmdexportclipwithoutanychanges.Enabled = False
+            bwforexportclip1.RunWorkerAsync()
+        End If
+    End Sub
+
+
+    Sub exportclip1()
+        Dim strinout = " -ss " & FToHMSms(txtmarkintrimmer.Text) & " -t " & FToHMSms(txtmarkouttrimmer.Text - txtmarkintrimmer.Text)
+
+        Control.CheckForIllegalCrossThreadCalls = False
+        Dim proc As New Process
+        Dim startinfo As New System.Diagnostics.ProcessStartInfo
+        Dim sr As StreamReader
+        Dim cmd As String = "-y " & strinout & " -i " & """" & ofdtrimmer.FileName & """" & " -vn -acodec libmp3lame -ar 48k " & " " & """" & osdcutfilename.FileName & """"
+
+        ' Process.Start("CMD", "/K " & "C:/casparcg/mydata/ffmpeg/ffmpeg.exe " & cmd) '-y " & strinout & " -i " & """" & UcnewTrimmer11.ofdtrimmer.FileName & """" & " -vcodec " & cmbvideocodec.Text & " -acodec " & cmbaudiocodec.Text & " -b:v " & Val(cmbbitrate.Text) * 1000000 & " " & txtoptionstrimmer.Text & " " & """" & UcnewTrimmer11.osdcutfilename.FileName & """")
+
+        Dim ffmpegOutput As String
+
+        ' all parameters required to run the process
+        startinfo.FileName = "c:/casparcg/mydata/ffmpeg/ffmpeg.exe"
+        startinfo.Arguments = cmd
+        startinfo.UseShellExecute = False
+        startinfo.WindowStyle = ProcessWindowStyle.Hidden
+        startinfo.RedirectStandardError = True
+        startinfo.RedirectStandardOutput = True
+        startinfo.CreateNoWindow = True
+        proc.StartInfo = startinfo
+        proc.Start() ' start the process
+        sr = proc.StandardError 'standard error is used by ffmpeg
+
+        pbexportclip.Maximum = txtmarkouttrimmer.Text - txtmarkintrimmer.Text
+        lblexportclipinfo.Text = ""
+        Do
+            ffmpegOutput = sr.ReadLine
+            pbexportclip.Value = Val(Mid(Split(ffmpegOutput, "fps")(0), 7))
+            lblexportclipinfo.Text = pbexportclip.Value & " Frames"
+        Loop Until proc.HasExited And ffmpegOutput = Nothing Or ffmpegOutput = ""
+
+    End Sub
+
+    Private Sub bwforexportclip1_DoWork(sender As Object, e As DoWorkEventArgs) Handles bwforexportclip1.DoWork
+        On Error Resume Next
+        exportclip1()
+    End Sub
+
+
+
+    Private Sub bwforexportclip1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwforexportclip1.RunWorkerCompleted
+        On Error Resume Next
+        cmdexportclipwithoutanychanges.Enabled = True
+        pbexportclip.Value = pbexportclip.Maximum
+        lblexportclipinfo.Text = "Completed"
+    End Sub
 End Class

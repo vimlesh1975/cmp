@@ -55,7 +55,7 @@ Partial Class ucOffAirLoggers
         'cmdhideoffairlogger4
         '
         Me.cmdhideoffairlogger4.Image = CType(resources.GetObject("cmdhideoffairlogger4.Image"), System.Drawing.Image)
-        Me.cmdhideoffairlogger4.Location = New System.Drawing.Point(1184, 449)
+        Me.cmdhideoffairlogger4.Location = New System.Drawing.Point(1172, 449)
         Me.cmdhideoffairlogger4.Name = "cmdhideoffairlogger4"
         Me.cmdhideoffairlogger4.Size = New System.Drawing.Size(28, 27)
         Me.cmdhideoffairlogger4.TabIndex = 728
@@ -64,7 +64,7 @@ Partial Class ucOffAirLoggers
         'cmdhideoffairlogger3
         '
         Me.cmdhideoffairlogger3.Image = CType(resources.GetObject("cmdhideoffairlogger3.Image"), System.Drawing.Image)
-        Me.cmdhideoffairlogger3.Location = New System.Drawing.Point(575, 453)
+        Me.cmdhideoffairlogger3.Location = New System.Drawing.Point(565, 446)
         Me.cmdhideoffairlogger3.Name = "cmdhideoffairlogger3"
         Me.cmdhideoffairlogger3.Size = New System.Drawing.Size(28, 27)
         Me.cmdhideoffairlogger3.TabIndex = 727
@@ -73,7 +73,7 @@ Partial Class ucOffAirLoggers
         'cmdhideoffairlogger2
         '
         Me.cmdhideoffairlogger2.Image = CType(resources.GetObject("cmdhideoffairlogger2.Image"), System.Drawing.Image)
-        Me.cmdhideoffairlogger2.Location = New System.Drawing.Point(1188, 16)
+        Me.cmdhideoffairlogger2.Location = New System.Drawing.Point(1171, 16)
         Me.cmdhideoffairlogger2.Name = "cmdhideoffairlogger2"
         Me.cmdhideoffairlogger2.Size = New System.Drawing.Size(28, 27)
         Me.cmdhideoffairlogger2.TabIndex = 726
@@ -92,7 +92,7 @@ Partial Class ucOffAirLoggers
         '
         Me.UcnewOffAirLogger3.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.UcnewOffAirLogger3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.UcnewOffAirLogger3.Location = New System.Drawing.Point(613, 432)
+        Me.UcnewOffAirLogger3.Location = New System.Drawing.Point(602, 432)
         Me.UcnewOffAirLogger3.Name = "UcnewOffAirLogger3"
         Me.UcnewOffAirLogger3.Size = New System.Drawing.Size(606, 429)
         Me.UcnewOffAirLogger3.TabIndex = 3
@@ -101,7 +101,7 @@ Partial Class ucOffAirLoggers
         '
         Me.UcnewOffAirLogger4.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.UcnewOffAirLogger4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.UcnewOffAirLogger4.Location = New System.Drawing.Point(3, 433)
+        Me.UcnewOffAirLogger4.Location = New System.Drawing.Point(-5, 433)
         Me.UcnewOffAirLogger4.Name = "UcnewOffAirLogger4"
         Me.UcnewOffAirLogger4.Size = New System.Drawing.Size(606, 429)
         Me.UcnewOffAirLogger4.TabIndex = 2
@@ -110,7 +110,7 @@ Partial Class ucOffAirLoggers
         '
         Me.UcnewOffAirLogger2.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.UcnewOffAirLogger2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.UcnewOffAirLogger2.Location = New System.Drawing.Point(613, 0)
+        Me.UcnewOffAirLogger2.Location = New System.Drawing.Point(603, 0)
         Me.UcnewOffAirLogger2.Name = "UcnewOffAirLogger2"
         Me.UcnewOffAirLogger2.Size = New System.Drawing.Size(606, 429)
         Me.UcnewOffAirLogger2.TabIndex = 1
@@ -119,7 +119,7 @@ Partial Class ucOffAirLoggers
         '
         Me.UcnewOffAirLogger1.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.UcnewOffAirLogger1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.UcnewOffAirLogger1.Location = New System.Drawing.Point(1, 1)
+        Me.UcnewOffAirLogger1.Location = New System.Drawing.Point(-3, 1)
         Me.UcnewOffAirLogger1.Name = "UcnewOffAirLogger1"
         Me.UcnewOffAirLogger1.Size = New System.Drawing.Size(606, 429)
         Me.UcnewOffAirLogger1.TabIndex = 0
@@ -128,8 +128,9 @@ Partial Class ucOffAirLoggers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1227, 875)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.GroupBox1)
         Me.HideOnClose = True
         Me.Name = "ucOffAirLoggers"

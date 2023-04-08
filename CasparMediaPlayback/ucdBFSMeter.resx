@@ -136,9 +136,33 @@
 &lt;num-channels&gt;2&lt;/num-channels&gt;
 &lt;channels&gt;1 2&lt;/channels&gt;
 &lt;/channel-layout&gt;
+
+ &lt;channel-layout&gt;
+&lt;name&gt;Mix&lt;/name&gt;
+&lt;type&gt;xyz2&lt;/type&gt;
+&lt;num-channels&gt;2&lt;/num-channels&gt;
+&lt;channels&gt;1 2&lt;/channels&gt;
+&lt;/channel-layout&gt;
+
+ &lt;channel-layout&gt;
+&lt;name&gt;Only_L&lt;/name&gt;
+&lt;type&gt;xyz3&lt;/type&gt;
+&lt;num-channels&gt;2&lt;/num-channels&gt;
+&lt;channels&gt;1 2&lt;/channels&gt;
+&lt;/channel-layout&gt;
+
+ &lt;channel-layout&gt;
+&lt;name&gt;Only_R&lt;/name&gt;
+&lt;type&gt;xyz4&lt;/type&gt;
+&lt;num-channels&gt;2&lt;/num-channels&gt;
+&lt;channels&gt;1 2&lt;/channels&gt;
+&lt;/channel-layout&gt;
+
  &lt;/channel-layouts&gt;
 
+
 &lt;mix-configs&gt;
+
 &lt;mix-config&gt;
 &lt;from&gt;xyz&lt;/from&gt;
 &lt;to&gt;2.0&lt;/to&gt;
@@ -158,6 +182,40 @@
 &lt;mapping&gt;1 R 1.0&lt;/mapping&gt;
 &lt;/mappings&gt;
 &lt;/mix-config&gt;
+
+&lt;mix-config&gt;
+&lt;from&gt;xyz2&lt;/from&gt;
+&lt;to&gt;2.0&lt;/to&gt;
+&lt;mix&gt;add&lt;/mix&gt;
+&lt;mappings&gt;
+&lt;mapping&gt;1 L 0.7&lt;/mapping&gt;
+&lt;mapping&gt;2 R 0.7&lt;/mapping&gt;
+&lt;mapping&gt;1 R 0.7&lt;/mapping&gt;
+&lt;mapping&gt;2 L 0.7&lt;/mapping&gt;
+&lt;/mappings&gt;
+&lt;/mix-config&gt;
+
+&lt;mix-config&gt;
+&lt;from&gt;xyz3&lt;/from&gt;
+&lt;to&gt;2.0&lt;/to&gt;
+&lt;mix&gt;add&lt;/mix&gt;
+&lt;mappings&gt;
+&lt;mapping&gt;1 L 1.0&lt;/mapping&gt;
+&lt;mapping&gt;1 R 0.0&lt;/mapping&gt;
+&lt;/mappings&gt;
+&lt;/mix-config&gt;
+
+&lt;mix-config&gt;
+&lt;from&gt;xyz4&lt;/from&gt;
+&lt;to&gt;2.0&lt;/to&gt;
+&lt;mix&gt;add&lt;/mix&gt;
+&lt;mappings&gt;
+&lt;mapping&gt;2 L 0.0&lt;/mapping&gt;
+&lt;mapping&gt;2 R 1.0&lt;/mapping&gt;
+&lt;/mappings&gt;
+&lt;/mix-config&gt;
+
+
 &lt;/mix-configs&gt;
 &lt;/audio&gt;</value>
   </data>
@@ -167,11 +225,17 @@
 
 &lt;channel-layout name="R_to_Both"      type="xyz"      num-channels="2" channel-order="FL FR" /&gt;
 &lt;channel-layout name="L_to_Both"      type="xyz1"      num-channels="2" channel-order="FL FR" /&gt;
+&lt;channel-layout name="Mix"      type="xyz2"      num-channels="2" channel-order="FL FR" /&gt;
+&lt;channel-layout name="Only_L"      type="xyz3"      num-channels="2" channel-order="FL FR" /&gt;
+&lt;channel-layout name="Only_R"      type="xyz4"      num-channels="2" channel-order="FL FR" /&gt;
 &lt;/channel-layouts&gt;
 
 &lt;mix-configs&gt;
 &lt;mix-config from-type="xyz"          to-types="stereo"  mix="FL=FR | FR=FR" /&gt;
-&lt;mix-config from-type="xyz1"         to-types="stereo"  mix="FL=FL | FR=FL" /&gt;		
+&lt;mix-config from-type="xyz1"         to-types="stereo"  mix="FL=FL | FR=FL" /&gt;	
+&lt;mix-config from-type="xyz2"         to-types="stereo"  mix="FL=0.7FL+0.7FR | FR=0.7FL+0.7FR" /&gt;
+&lt;mix-config from-type="xyz3"         to-types="stereo"  mix="FL=FL | FR=0FR" /&gt;	
+&lt;mix-config from-type="xyz4"         to-types="stereo"  mix="FL=0FL | FR=FR" /&gt;		
 &lt;/mix-configs&gt;
 
 &lt;/audio&gt;</value>

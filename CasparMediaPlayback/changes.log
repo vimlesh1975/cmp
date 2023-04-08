@@ -1712,5 +1712,23 @@ Added cliplist in SM
 
 
 
+18.06.21
+1. Flash icons in weather were not showing because of file:/// were not added in code. Now oreected
+
+26.06.21
+1. Added screenconsumers as abject in module.
+
+02.07.21
+1.Transcoding profile for blurrbackground.
+
+06.08.21
+1.off air logger -s 1280:720, bit rate 2
+2.Transcoding profile for blurred video 1280:720=>900:720
+
+
+
+
+
+
 
 

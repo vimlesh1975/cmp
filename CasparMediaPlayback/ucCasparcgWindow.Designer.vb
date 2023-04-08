@@ -25,6 +25,7 @@ Partial Class ucCasparcgWindow
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucCasparcgWindow))
         Me.gbcasparcgwindow = New System.Windows.Forms.GroupBox()
+        Me.lblMasterVolume = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.mdResetAudio = New System.Windows.Forms.Button()
@@ -86,6 +87,7 @@ Partial Class ucCasparcgWindow
         'gbcasparcgwindow
         '
         Me.gbcasparcgwindow.BackColor = System.Drawing.Color.SkyBlue
+        Me.gbcasparcgwindow.Controls.Add(Me.lblMasterVolume)
         Me.gbcasparcgwindow.Controls.Add(Me.Label5)
         Me.gbcasparcgwindow.Controls.Add(Me.Label4)
         Me.gbcasparcgwindow.Controls.Add(Me.mdResetAudio)
@@ -111,6 +113,16 @@ Partial Class ucCasparcgWindow
         Me.gbcasparcgwindow.TabStop = False
         Me.gbcasparcgwindow.Text = "Casparcg Window"
         '
+        'lblMasterVolume
+        '
+        Me.lblMasterVolume.AutoSize = True
+        Me.lblMasterVolume.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMasterVolume.Location = New System.Drawing.Point(0, 506)
+        Me.lblMasterVolume.Name = "lblMasterVolume"
+        Me.lblMasterVolume.Size = New System.Drawing.Size(21, 12)
+        Me.lblMasterVolume.TabIndex = 1181
+        Me.lblMasterVolume.Text = "1.0"
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -133,9 +145,9 @@ Partial Class ucCasparcgWindow
         '
         'mdResetAudio
         '
-        Me.mdResetAudio.Location = New System.Drawing.Point(13, 502)
+        Me.mdResetAudio.Location = New System.Drawing.Point(26, 502)
         Me.mdResetAudio.Name = "mdResetAudio"
-        Me.mdResetAudio.Size = New System.Drawing.Size(23, 18)
+        Me.mdResetAudio.Size = New System.Drawing.Size(18, 18)
         Me.mdResetAudio.TabIndex = 1178
         Me.mdResetAudio.Text = "1"
         Me.mdResetAudio.UseVisualStyleBackColor = True
@@ -196,7 +208,6 @@ Partial Class ucCasparcgWindow
         'cmbcasparcgwindowtitle
         '
         Me.cmbcasparcgwindowtitle.FormattingEnabled = True
-        Me.cmbcasparcgwindowtitle.Items.AddRange(New Object() {"Screen consumer [1|PAL]", "Screen consumer [2|PAL]", "Screen consumer [3|PAL]", "Screen consumer [4|PAL]", "Screen consumer [1|NTSC]", "Screen consumer [1|1080i5000]", "Screen consumer [2|1080i5000]", "Screen consumer [3|1080i5000]", "Screen consumer [4|1080i5000]", "Screen consumer [1|1080i5994]", "Screen consumer [1|1080i6000]", "Screen consumer [1|1080p2398]", "Screen consumer [1|1080p2400]", "Screen consumer [1|1080p2500]", "Screen consumer [1|1080p2997]", "Screen consumer [1|1080p3000]", "Screen consumer [1|1080p5000]", "Screen consumer [1|1080p5994]", "Screen consumer [1|1080p6000]", "Screen consumer [1|1556p2398]", "Screen consumer [1|1556p2400]", "Screen consumer [1|1556p2500]", "Screen consumer [1|2160p2398]", "Screen consumer [1|2160p2400]", "Screen consumer [1|2160p2500]", "Screen consumer [1| 2160p2997]", "Screen consumer [1|2160p3000]", "Screen consumer [1|576p2500]", "Screen consumer [1|720p2398]", "Screen consumer [1|720p2400]", "Screen consumer [1|720p2500]", "Screen consumer [1|720p2997]", "Screen consumer [1|720p3000]", "Screen consumer [1|720p5000]", "Screen consumer [1|720p5994]", "Screen consumer [1|720p6000]", "Screen consumer [1|dci2160p2398]", "Screen consumer [1|dci2160p2400]", "Screen consumer [1|dci2160p2500]", "Screen consumer [1|dci1080p2398]", "Screen consumer [1|dci1080p2400]", "Screen consumer [1|dci1080p2500]"})
         Me.cmbcasparcgwindowtitle.Location = New System.Drawing.Point(50, 11)
         Me.cmbcasparcgwindowtitle.Name = "cmbcasparcgwindowtitle"
         Me.cmbcasparcgwindowtitle.Size = New System.Drawing.Size(164, 21)
@@ -693,4 +704,5 @@ Partial Class ucCasparcgWindow
     Friend WithEvents cmdFastReverse As Button
     Friend WithEvents cmdFastFarward As Button
     Friend WithEvents tmraudio As Timer
+    Friend WithEvents lblMasterVolume As Label
 End Class

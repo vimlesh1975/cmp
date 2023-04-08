@@ -1,6 +1,7 @@
 ﻿
 Imports System.Net
 Public Class ucnewSM2
+    Dim WithEvents spv As clsShuttleProV2.clsShuttleProV2
     Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
         On Error Resume Next
         Process.Start("http://casparcg.com/builds/CasparCG%20Server/2.1.0/")
@@ -49,7 +50,7 @@ Public Class ucnewSM2
 
     Private Sub cmdshowcasparcgwindowrecording_Click(sender As Object, e As EventArgs) Handles cmdshowcasparcgwindowrecording.Click
         On Error Resume Next
-        SetProcessParentrecorder("casparcg", cmbcasparcgwindowtitlerecording, pnlrecording)
+        SetProcessParentrecorder("casparcg", cmbscreenConsumres, pnlrecording)
     End Sub
     Private Sub cmdoutcasparcgwindowrecording_Click(sender As Object, e As EventArgs) Handles cmdoutcasparcgwindowrecording.Click
         On Error Resume Next
@@ -98,11 +99,11 @@ Public Class ucnewSM2
     End Sub
 
     Private Sub ucnewSM2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        cmbscreenConsumres.DataSource = New BindingSource(screenConsumres, "")
     End Sub
     Private Sub cmbChannel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbChannel.SelectedIndexChanged
         Label2.Text = "Channel " & cmbChannel.Text
-        cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & cmbChannel.Text & "|PAL]"
+        cmbscreenConsumres.Text = "Screen consumer [" & cmbChannel.Text & "|PAL]"
     End Sub
 
     Private Sub ucnewSM2_DragDrop(sender As Object, e As DragEventArgs) Handles Me.DragDrop
@@ -148,6 +149,70 @@ Public Class ucnewSM2
         On Error Resume Next
         CasparDevice.SendString("play " & cmbChannel.Text & "-" & 1)
         CasparDevice.SendString("call " & cmbChannel.Text & "-" & 1 & " framerate speed " & txtCustomeSpped2.Text)
+
+    End Sub
+
+    Private Sub chkUseShuttleProV2_CheckedChanged(sender As Object, e As EventArgs) Handles chkUseShuttleProV2.CheckedChanged
+        If chkUseShuttleProV2.Checked Then
+            spv = New clsShuttleProV2.clsShuttleProV2
+        Else
+            spv = Nothing
+        End If
+    End Sub
+
+    Private Sub spv_ShuttleR1() Handles spv.ShuttleR1
+        On Error Resume Next
+        CasparDevice.SendString("play " & cmbChannel.Text & "-" & 1)
+        CasparDevice.SendString("call " & cmbChannel.Text & "-" & 1 & " framerate speed .25")
+    End Sub
+
+    Private Sub spv_ShuttleR2() Handles spv.ShuttleR2
+        CasparDevice.SendString("play " & cmbChannel.Text & "-" & 1)
+        CasparDevice.SendString("call " & cmbChannel.Text & "-" & 1 & " framerate speed .5")
+    End Sub
+
+    Private Sub spv_ShuttleR3() Handles spv.ShuttleR3
+        CasparDevice.SendString("play " & cmbChannel.Text & "-" & 1)
+        CasparDevice.SendString("call " & cmbChannel.Text & "-" & 1 & " framerate speed .75")
+    End Sub
+
+    Private Sub spv_ShuttleR4() Handles spv.ShuttleR4
+        CasparDevice.SendString("play " & cmbChannel.Text & "-" & 1)
+        CasparDevice.SendString("call " & cmbChannel.Text & "-" & 1 & " framerate speed 1.00")
+    End Sub
+
+    Private Sub spv_ShuttleR5() Handles spv.ShuttleR5
+        CasparDevice.SendString("play " & cmbChannel.Text & "-" & 1)
+        CasparDevice.SendString("call " & cmbChannel.Text & "-" & 1 & " framerate speed 1.25")
+    End Sub
+
+    Private Sub spv_ShuttleR6() Handles spv.ShuttleR6
+        CasparDevice.SendString("play " & cmbChannel.Text & "-" & 1)
+        CasparDevice.SendString("call " & cmbChannel.Text & "-" & 1 & " framerate speed 1.50")
+    End Sub
+
+    Private Sub spv_ShuttleR7() Handles spv.ShuttleR7
+        CasparDevice.SendString("play " & cmbChannel.Text & "-" & 1)
+        CasparDevice.SendString("call " & cmbChannel.Text & "-" & 1 & " framerate speed 1.75")
+    End Sub
+
+    Private Sub spv_ShuttleL1() Handles spv.ShuttleL1
+        CasparDevice.SendString("play " & cmbChannel.Text & "-" & 1)
+        CasparDevice.SendString("call " & cmbChannel.Text & "-" & 1 & " framerate speed 0")
+    End Sub
+
+    Private Sub spv_JogR(value As Integer) Handles spv.JogR
+        TrackBarseek.Value += 1
+        CasparDevice.SendString("load " & cmbChannel.Text & "-" & 1 & " " & """" & ModifyFilename(lblplaying.Text) & """" + " seek " & Int(TrackBarseek.Value))
+    End Sub
+
+    Private Sub spv_JogL(value As Integer) Handles spv.JogL
+        TrackBarseek.Value -= 1
+        CasparDevice.SendString("load " & cmbChannel.Text & "-" & 1 & " " & """" & ModifyFilename(lblplaying.Text) & """" + " seek " & Int(TrackBarseek.Value))
+
+    End Sub
+
+    Private Sub gbSm2_Enter(sender As Object, e As EventArgs) Handles gbSm2.Enter
 
     End Sub
 End Class

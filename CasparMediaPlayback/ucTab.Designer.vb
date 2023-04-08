@@ -24,71 +24,69 @@ Partial Class ucTab
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucTab))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ChannelInfo = New System.Windows.Forms.TabPage()
         Me.UcChannelInfo1 = New caspar_media_playback.ucChannelInfo()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.UcSystemAudio1 = New caspar_media_playback.ucSystemAudio()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.UcPositionAndSize1 = New caspar_media_playback.ucPositionAndSize()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.ScreenConsumer = New System.Windows.Forms.TabPage()
+        Me.UcScreenConsumer1 = New caspar_media_playback.ucScreenConsumer()
+        Me.Playlist = New System.Windows.Forms.TabPage()
         Me.UcPlaylistScheduler1 = New caspar_media_playback.UcPlaylistScheduler()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.UcLogo1 = New caspar_media_playback.ucLogo()
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Utility = New System.Windows.Forms.TabPage()
         Me.UcUtility1 = New caspar_media_playback.ucUtility()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.UcCreatePng1 = New caspar_media_playback.ucCreatePng()
-        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.AMCP = New System.Windows.Forms.TabPage()
         Me.UcAMCPcommands1 = New caspar_media_playback.ucAMCPcommands()
-        Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.SwfPlayer = New System.Windows.Forms.TabPage()
         Me.UcSwfPlayer1 = New caspar_media_playback.ucSwfPlayer()
-        Me.TabPage10 = New System.Windows.Forms.TabPage()
+        Me.PlaylistSetting = New System.Windows.Forms.TabPage()
         Me.UcPlaylistSetting1 = New caspar_media_playback.ucPlaylistSetting()
-        Me.cmdhide = New System.Windows.Forms.Button()
+        Me.Logo = New System.Windows.Forms.TabPage()
+        Me.UcLogo1 = New caspar_media_playback.ucLogo()
+        Me.SystemAudioPNGPositionAndSize = New System.Windows.Forms.TabPage()
+        Me.UcPositionAndSize1 = New caspar_media_playback.ucPositionAndSize()
+        Me.UcCreatePng1 = New caspar_media_playback.ucCreatePng()
+        Me.UcSystemAudio1 = New caspar_media_playback.ucSystemAudio()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cmdhide = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        Me.TabPage6.SuspendLayout()
-        Me.TabPage7.SuspendLayout()
-        Me.TabPage8.SuspendLayout()
-        Me.TabPage9.SuspendLayout()
-        Me.TabPage10.SuspendLayout()
+        Me.ChannelInfo.SuspendLayout()
+        Me.ScreenConsumer.SuspendLayout()
+        Me.Playlist.SuspendLayout()
+        Me.Utility.SuspendLayout()
+        Me.AMCP.SuspendLayout()
+        Me.SwfPlayer.SuspendLayout()
+        Me.PlaylistSetting.SuspendLayout()
+        Me.Logo.SuspendLayout()
+        Me.SystemAudioPNGPositionAndSize.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Controls.Add(Me.TabPage5)
-        Me.TabControl1.Controls.Add(Me.TabPage6)
-        Me.TabControl1.Controls.Add(Me.TabPage7)
-        Me.TabControl1.Controls.Add(Me.TabPage8)
-        Me.TabControl1.Controls.Add(Me.TabPage9)
-        Me.TabControl1.Controls.Add(Me.TabPage10)
+        Me.TabControl1.Controls.Add(Me.Utility)
+        Me.TabControl1.Controls.Add(Me.ChannelInfo)
+        Me.TabControl1.Controls.Add(Me.ScreenConsumer)
+        Me.TabControl1.Controls.Add(Me.Playlist)
+        Me.TabControl1.Controls.Add(Me.AMCP)
+        Me.TabControl1.Controls.Add(Me.SwfPlayer)
+        Me.TabControl1.Controls.Add(Me.PlaylistSetting)
+        Me.TabControl1.Controls.Add(Me.Logo)
+        Me.TabControl1.Controls.Add(Me.SystemAudioPNGPositionAndSize)
         Me.TabControl1.Location = New System.Drawing.Point(2, 3)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(681, 338)
         Me.TabControl1.TabIndex = 0
         '
-        'TabPage1
+        'ChannelInfo
         '
-        Me.TabPage1.Controls.Add(Me.UcChannelInfo1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(673, 312)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Channel Info"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.ChannelInfo.Controls.Add(Me.UcChannelInfo1)
+        Me.ChannelInfo.Location = New System.Drawing.Point(4, 22)
+        Me.ChannelInfo.Name = "ChannelInfo"
+        Me.ChannelInfo.Padding = New System.Windows.Forms.Padding(3)
+        Me.ChannelInfo.Size = New System.Drawing.Size(673, 312)
+        Me.ChannelInfo.TabIndex = 0
+        Me.ChannelInfo.Text = "Channel Info"
+        Me.ChannelInfo.UseVisualStyleBackColor = True
         '
         'UcChannelInfo1
         '
@@ -98,55 +96,35 @@ Partial Class ucTab
         Me.UcChannelInfo1.Size = New System.Drawing.Size(664, 300)
         Me.UcChannelInfo1.TabIndex = 0
         '
-        'TabPage2
+        'ScreenConsumer
         '
-        Me.TabPage2.Controls.Add(Me.UcSystemAudio1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(673, 312)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "System Audio"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.ScreenConsumer.Controls.Add(Me.UcScreenConsumer1)
+        Me.ScreenConsumer.Location = New System.Drawing.Point(4, 22)
+        Me.ScreenConsumer.Name = "ScreenConsumer"
+        Me.ScreenConsumer.Padding = New System.Windows.Forms.Padding(3)
+        Me.ScreenConsumer.Size = New System.Drawing.Size(673, 312)
+        Me.ScreenConsumer.TabIndex = 10
+        Me.ScreenConsumer.Text = "Screen Consumer"
+        Me.ScreenConsumer.UseVisualStyleBackColor = True
         '
-        'UcSystemAudio1
+        'UcScreenConsumer1
         '
-        Me.UcSystemAudio1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcSystemAudio1.Location = New System.Drawing.Point(6, 6)
-        Me.UcSystemAudio1.Name = "UcSystemAudio1"
-        Me.UcSystemAudio1.Size = New System.Drawing.Size(137, 102)
-        Me.UcSystemAudio1.TabIndex = 0
+        Me.UcScreenConsumer1.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.UcScreenConsumer1.Location = New System.Drawing.Point(6, 6)
+        Me.UcScreenConsumer1.Name = "UcScreenConsumer1"
+        Me.UcScreenConsumer1.Size = New System.Drawing.Size(663, 306)
+        Me.UcScreenConsumer1.TabIndex = 0
         '
-        'TabPage3
+        'Playlist
         '
-        Me.TabPage3.Controls.Add(Me.UcPositionAndSize1)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(673, 312)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Position And Size"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'UcPositionAndSize1
-        '
-        Me.UcPositionAndSize1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcPositionAndSize1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.UcPositionAndSize1.Location = New System.Drawing.Point(5, 5)
-        Me.UcPositionAndSize1.Name = "UcPositionAndSize1"
-        Me.UcPositionAndSize1.Size = New System.Drawing.Size(153, 133)
-        Me.UcPositionAndSize1.TabIndex = 0
-        '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.UcPlaylistScheduler1)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(673, 312)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Playlist"
-        Me.TabPage4.UseVisualStyleBackColor = True
+        Me.Playlist.Controls.Add(Me.UcPlaylistScheduler1)
+        Me.Playlist.Location = New System.Drawing.Point(4, 22)
+        Me.Playlist.Name = "Playlist"
+        Me.Playlist.Padding = New System.Windows.Forms.Padding(3)
+        Me.Playlist.Size = New System.Drawing.Size(673, 312)
+        Me.Playlist.TabIndex = 3
+        Me.Playlist.Text = "Playlist"
+        Me.Playlist.UseVisualStyleBackColor = True
         '
         'UcPlaylistScheduler1
         '
@@ -156,36 +134,16 @@ Partial Class ucTab
         Me.UcPlaylistScheduler1.Size = New System.Drawing.Size(664, 307)
         Me.UcPlaylistScheduler1.TabIndex = 0
         '
-        'TabPage5
+        'Utility
         '
-        Me.TabPage5.Controls.Add(Me.UcLogo1)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(673, 312)
-        Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "Logo"
-        Me.TabPage5.UseVisualStyleBackColor = True
-        '
-        'UcLogo1
-        '
-        Me.UcLogo1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcLogo1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.UcLogo1.Location = New System.Drawing.Point(6, 3)
-        Me.UcLogo1.Name = "UcLogo1"
-        Me.UcLogo1.Size = New System.Drawing.Size(656, 299)
-        Me.UcLogo1.TabIndex = 0
-        '
-        'TabPage6
-        '
-        Me.TabPage6.Controls.Add(Me.UcUtility1)
-        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(673, 312)
-        Me.TabPage6.TabIndex = 5
-        Me.TabPage6.Text = "Utility"
-        Me.TabPage6.UseVisualStyleBackColor = True
+        Me.Utility.Controls.Add(Me.UcUtility1)
+        Me.Utility.Location = New System.Drawing.Point(4, 22)
+        Me.Utility.Name = "Utility"
+        Me.Utility.Padding = New System.Windows.Forms.Padding(3)
+        Me.Utility.Size = New System.Drawing.Size(673, 312)
+        Me.Utility.TabIndex = 5
+        Me.Utility.Text = "Utility"
+        Me.Utility.UseVisualStyleBackColor = True
         '
         'UcUtility1
         '
@@ -196,35 +154,16 @@ Partial Class ucTab
         Me.UcUtility1.Size = New System.Drawing.Size(653, 247)
         Me.UcUtility1.TabIndex = 0
         '
-        'TabPage7
+        'AMCP
         '
-        Me.TabPage7.Controls.Add(Me.UcCreatePng1)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(673, 312)
-        Me.TabPage7.TabIndex = 6
-        Me.TabPage7.Text = "Create PNG"
-        Me.TabPage7.UseVisualStyleBackColor = True
-        '
-        'UcCreatePng1
-        '
-        Me.UcCreatePng1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcCreatePng1.Location = New System.Drawing.Point(17, 24)
-        Me.UcCreatePng1.Name = "UcCreatePng1"
-        Me.UcCreatePng1.Size = New System.Drawing.Size(145, 85)
-        Me.UcCreatePng1.TabIndex = 0
-        '
-        'TabPage8
-        '
-        Me.TabPage8.Controls.Add(Me.UcAMCPcommands1)
-        Me.TabPage8.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage8.Name = "TabPage8"
-        Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(673, 312)
-        Me.TabPage8.TabIndex = 7
-        Me.TabPage8.Text = "AMCP"
-        Me.TabPage8.UseVisualStyleBackColor = True
+        Me.AMCP.Controls.Add(Me.UcAMCPcommands1)
+        Me.AMCP.Location = New System.Drawing.Point(4, 22)
+        Me.AMCP.Name = "AMCP"
+        Me.AMCP.Padding = New System.Windows.Forms.Padding(3)
+        Me.AMCP.Size = New System.Drawing.Size(673, 312)
+        Me.AMCP.TabIndex = 7
+        Me.AMCP.Text = "AMCP"
+        Me.AMCP.UseVisualStyleBackColor = True
         '
         'UcAMCPcommands1
         '
@@ -234,15 +173,15 @@ Partial Class ucTab
         Me.UcAMCPcommands1.Size = New System.Drawing.Size(514, 283)
         Me.UcAMCPcommands1.TabIndex = 0
         '
-        'TabPage9
+        'SwfPlayer
         '
-        Me.TabPage9.Controls.Add(Me.UcSwfPlayer1)
-        Me.TabPage9.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage9.Name = "TabPage9"
-        Me.TabPage9.Size = New System.Drawing.Size(673, 312)
-        Me.TabPage9.TabIndex = 8
-        Me.TabPage9.Text = "swf player"
-        Me.TabPage9.UseVisualStyleBackColor = True
+        Me.SwfPlayer.Controls.Add(Me.UcSwfPlayer1)
+        Me.SwfPlayer.Location = New System.Drawing.Point(4, 22)
+        Me.SwfPlayer.Name = "SwfPlayer"
+        Me.SwfPlayer.Size = New System.Drawing.Size(673, 312)
+        Me.SwfPlayer.TabIndex = 8
+        Me.SwfPlayer.Text = "swf player"
+        Me.SwfPlayer.UseVisualStyleBackColor = True
         '
         'UcSwfPlayer1
         '
@@ -252,15 +191,15 @@ Partial Class ucTab
         Me.UcSwfPlayer1.Size = New System.Drawing.Size(332, 229)
         Me.UcSwfPlayer1.TabIndex = 0
         '
-        'TabPage10
+        'PlaylistSetting
         '
-        Me.TabPage10.Controls.Add(Me.UcPlaylistSetting1)
-        Me.TabPage10.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage10.Name = "TabPage10"
-        Me.TabPage10.Size = New System.Drawing.Size(673, 312)
-        Me.TabPage10.TabIndex = 9
-        Me.TabPage10.Text = "Playlist Setting"
-        Me.TabPage10.UseVisualStyleBackColor = True
+        Me.PlaylistSetting.Controls.Add(Me.UcPlaylistSetting1)
+        Me.PlaylistSetting.Location = New System.Drawing.Point(4, 22)
+        Me.PlaylistSetting.Name = "PlaylistSetting"
+        Me.PlaylistSetting.Size = New System.Drawing.Size(673, 312)
+        Me.PlaylistSetting.TabIndex = 9
+        Me.PlaylistSetting.Text = "Playlist Setting"
+        Me.PlaylistSetting.UseVisualStyleBackColor = True
         '
         'UcPlaylistSetting1
         '
@@ -270,14 +209,63 @@ Partial Class ucTab
         Me.UcPlaylistSetting1.Size = New System.Drawing.Size(624, 240)
         Me.UcPlaylistSetting1.TabIndex = 0
         '
-        'cmdhide
+        'Logo
         '
-        Me.cmdhide.Image = CType(resources.GetObject("cmdhide.Image"), System.Drawing.Image)
-        Me.cmdhide.Location = New System.Drawing.Point(656, -2)
-        Me.cmdhide.Name = "cmdhide"
-        Me.cmdhide.Size = New System.Drawing.Size(28, 27)
-        Me.cmdhide.TabIndex = 1178
-        Me.cmdhide.UseVisualStyleBackColor = True
+        Me.Logo.Controls.Add(Me.UcLogo1)
+        Me.Logo.Location = New System.Drawing.Point(4, 22)
+        Me.Logo.Name = "Logo"
+        Me.Logo.Padding = New System.Windows.Forms.Padding(3)
+        Me.Logo.Size = New System.Drawing.Size(673, 312)
+        Me.Logo.TabIndex = 4
+        Me.Logo.Text = "Logo"
+        Me.Logo.UseVisualStyleBackColor = True
+        '
+        'UcLogo1
+        '
+        Me.UcLogo1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcLogo1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.UcLogo1.Location = New System.Drawing.Point(6, 3)
+        Me.UcLogo1.Name = "UcLogo1"
+        Me.UcLogo1.Size = New System.Drawing.Size(656, 299)
+        Me.UcLogo1.TabIndex = 0
+        '
+        'SystemAudioPNGPositionAndSize
+        '
+        Me.SystemAudioPNGPositionAndSize.Controls.Add(Me.UcPositionAndSize1)
+        Me.SystemAudioPNGPositionAndSize.Controls.Add(Me.UcCreatePng1)
+        Me.SystemAudioPNGPositionAndSize.Controls.Add(Me.UcSystemAudio1)
+        Me.SystemAudioPNGPositionAndSize.Location = New System.Drawing.Point(4, 22)
+        Me.SystemAudioPNGPositionAndSize.Name = "SystemAudioPNGPositionAndSize"
+        Me.SystemAudioPNGPositionAndSize.Padding = New System.Windows.Forms.Padding(3)
+        Me.SystemAudioPNGPositionAndSize.Size = New System.Drawing.Size(673, 312)
+        Me.SystemAudioPNGPositionAndSize.TabIndex = 1
+        Me.SystemAudioPNGPositionAndSize.Text = "Audio, PNG, Position And Size"
+        Me.SystemAudioPNGPositionAndSize.UseVisualStyleBackColor = True
+        '
+        'UcPositionAndSize1
+        '
+        Me.UcPositionAndSize1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcPositionAndSize1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.UcPositionAndSize1.Location = New System.Drawing.Point(439, 22)
+        Me.UcPositionAndSize1.Name = "UcPositionAndSize1"
+        Me.UcPositionAndSize1.Size = New System.Drawing.Size(153, 133)
+        Me.UcPositionAndSize1.TabIndex = 2
+        '
+        'UcCreatePng1
+        '
+        Me.UcCreatePng1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcCreatePng1.Location = New System.Drawing.Point(227, 22)
+        Me.UcCreatePng1.Name = "UcCreatePng1"
+        Me.UcCreatePng1.Size = New System.Drawing.Size(145, 85)
+        Me.UcCreatePng1.TabIndex = 1
+        '
+        'UcSystemAudio1
+        '
+        Me.UcSystemAudio1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcSystemAudio1.Location = New System.Drawing.Point(17, 22)
+        Me.UcSystemAudio1.Name = "UcSystemAudio1"
+        Me.UcSystemAudio1.Size = New System.Drawing.Size(137, 102)
+        Me.UcSystemAudio1.TabIndex = 0
         '
         'DataGridViewTextBoxColumn1
         '
@@ -297,6 +285,15 @@ Partial Class ucTab
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.Width = 300
         '
+        'cmdhide
+        '
+        Me.cmdhide.Image = CType(resources.GetObject("cmdhide.Image"), System.Drawing.Image)
+        Me.cmdhide.Location = New System.Drawing.Point(656, -2)
+        Me.cmdhide.Name = "cmdhide"
+        Me.cmdhide.Size = New System.Drawing.Size(28, 27)
+        Me.cmdhide.TabIndex = 1178
+        Me.cmdhide.UseVisualStyleBackColor = True
+        '
         'ucTab
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -307,16 +304,15 @@ Partial Class ucTab
         Me.Name = "ucTab"
         Me.Size = New System.Drawing.Size(686, 344)
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage5.ResumeLayout(False)
-        Me.TabPage6.ResumeLayout(False)
-        Me.TabPage7.ResumeLayout(False)
-        Me.TabPage8.ResumeLayout(False)
-        Me.TabPage9.ResumeLayout(False)
-        Me.TabPage10.ResumeLayout(False)
+        Me.ChannelInfo.ResumeLayout(False)
+        Me.ScreenConsumer.ResumeLayout(False)
+        Me.Playlist.ResumeLayout(False)
+        Me.Utility.ResumeLayout(False)
+        Me.AMCP.ResumeLayout(False)
+        Me.SwfPlayer.ResumeLayout(False)
+        Me.PlaylistSetting.ResumeLayout(False)
+        Me.Logo.ResumeLayout(False)
+        Me.SystemAudioPNGPositionAndSize.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -324,25 +320,25 @@ Partial Class ucTab
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents ChannelInfo As TabPage
+    Friend WithEvents SystemAudioPNGPositionAndSize As TabPage
     Friend WithEvents UcChannelInfo1 As ucChannelInfo
     Friend WithEvents UcSystemAudio1 As ucSystemAudio
-    Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents Playlist As TabPage
     Friend WithEvents UcPlaylistScheduler1 As UcPlaylistScheduler
     Friend WithEvents cmdhide As Button
-    Friend WithEvents UcPositionAndSize1 As ucPositionAndSize
-    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents Logo As TabPage
     Friend WithEvents UcLogo1 As ucLogo
-    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents Utility As TabPage
     Friend WithEvents UcUtility1 As ucUtility
-    Friend WithEvents TabPage7 As TabPage
-    Friend WithEvents UcCreatePng1 As ucCreatePng
-    Friend WithEvents TabPage8 As TabPage
-    Friend WithEvents TabPage9 As TabPage
+    Friend WithEvents AMCP As TabPage
+    Friend WithEvents SwfPlayer As TabPage
     Friend WithEvents UcSwfPlayer1 As ucSwfPlayer
     Friend WithEvents UcAMCPcommands1 As ucAMCPcommands
-    Friend WithEvents TabPage10 As TabPage
+    Friend WithEvents PlaylistSetting As TabPage
     Friend WithEvents UcPlaylistSetting1 As ucPlaylistSetting
+    Friend WithEvents UcPositionAndSize1 As ucPositionAndSize
+    Friend WithEvents UcCreatePng1 As ucCreatePng
+    Friend WithEvents ScreenConsumer As TabPage
+    Friend WithEvents UcScreenConsumer1 As ucScreenConsumer
 End Class

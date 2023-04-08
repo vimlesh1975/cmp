@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <!--
+      Full path to the assembly that contains the MSBuild task
+    -->
+    <LargeAddressAwareAssemblyFile Condition=" '$(LargeAddressAwareAssemblyFile)' == '' ">$(MSBuildThisFileDirectory)net46\SetLargeAddressAware.dll</LargeAddressAwareAssemblyFile>
+    <LargeAddressAwareAfterTargets Condition="$(LargeAddressAwareAfterTargets) == ''">CoreCompile</LargeAddressAwareAfterTargets>
+  </PropertyGroup>
+
+  <!--
+    To run this target, set the property LargeAddressAware to true in your project.
+    <PropertyGroup>
+      <LargeAddressAware>true</LargeAddressAware>
+    </PropertyGroup>
+
+    The target only runs after CoreCompile so it is incremental and does not need Inputs/Outputs.
+    If you'd like the target to run after your own target (such as Fody or other IL rewriter),
+    you can set the LargeAddressAwareAfterTargets property.
+
+    Do not execute during design-time builds, because the output assembly won't exist yet even though CoreCompile has "run".
+  -->
+  <Target Name="SetLargeAddressAware"
+          AfterTargets="$(LargeAddressAwareAfterTargets)"
+          Condition="('$(DesignTimeBuild)' != 'true' And '$(BuildingProject)' == 'true') And '$(LargeAddressAware)' == 'true' And Exists('$(LargeAddressAwareAssemblyFile)') And Exists('@(IntermediateAssembly)') And ('$(OutputType)' == 'Exe' Or '$(OutputType)' == 'Winexe') And '$(PlatformTarget)' == 'x86' ">
+
+    <SetLargeAddressAware FilePath="@(IntermediateAssembly)" />
+
+  </Target>
+
+  <UsingTask TaskName="SetLargeAddressAware"
+             AssemblyFile="$(LargeAddressAwareAssemblyFile)" />
+</Project>

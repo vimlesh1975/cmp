@@ -326,7 +326,7 @@ Public Class ucVisionMixer
         CasparDevice.SendString("play 1-6 Vision_Mixer/Source6")
         CasparDevice.SendString("play 1-7 Vision_Mixer/Source7")
         CasparDevice.SendString("play 1-8 Vision_Mixer/Source8")
-
+        CasparDevice.SendString("play 1-9 [ndi] " & cmbNDI.Text)
 
         CasparDevice.SendString("play 3-1 route://1-1")
         CasparDevice.SendString("play 3-2 route://1-2")
@@ -336,6 +336,7 @@ Public Class ucVisionMixer
         CasparDevice.SendString("play 3-6 route://1-6")
         CasparDevice.SendString("play 3-7 route://1-7")
         CasparDevice.SendString("play 3-8 route://1-8")
+        CasparDevice.SendString("play 3-9 route://1-9")
         'CasparDevice.SendString("play 2-9 route://1-21")
 
         CasparDevice.SendString("mixer 1-1 volume 0")
@@ -346,6 +347,7 @@ Public Class ucVisionMixer
         CasparDevice.SendString("mixer 1-6 volume 0")
         CasparDevice.SendString("mixer 1-7 volume 0")
         CasparDevice.SendString("mixer 1-8 volume 0")
+        CasparDevice.SendString("mixer 1-9 volume 0")
 
         CasparDevice.SendString("mixer 3 grid 3")
 
@@ -363,7 +365,7 @@ Public Class ucVisionMixer
         CasparDevice.SendString("play 1-6 " & cmbsource6.Text)
         CasparDevice.SendString("play 1-7 " & cmbsource7.Text)
         CasparDevice.SendString("play 1-8 " & cmbsource8.Text)
-
+        CasparDevice.SendString("play 1-9 [ndi] " & cmbNDI.Text)
 
 
         CasparDevice.SendString("mixer 1-1 volume 0")
@@ -374,6 +376,8 @@ Public Class ucVisionMixer
         CasparDevice.SendString("mixer 1-6 volume 0")
         CasparDevice.SendString("mixer 1-7 volume 0")
         CasparDevice.SendString("mixer 1-8 volume 0")
+        CasparDevice.SendString("mixer 1-9 volume 0")
+
     End Sub
 
     Private Sub cmdshowcasparcgwindowrecording3_Click(sender As Object, e As EventArgs) Handles cmdshowcasparcgwindowrecording3.Click
@@ -523,5 +527,51 @@ Public Class ucVisionMixer
         For ddd = 0 To dgvchannelinfo.RowCount - 1
             CasparDevice.SendString("stop 1-" & dgvchannelinfo.Rows(ddd).Cells(0).Value)
         Next
+    End Sub
+
+    Private Sub CmbNDI_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbNDI.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cmbNDI_Click(sender As Object, e As EventArgs) Handles cmbNDI.Click
+        Dim str As String
+        str = "ndi list"
+        SendString(NetStream, str + vbCrLf)
+        getresponse()
+    End Sub
+    Sub getresponse()
+        On Error Resume Next
+        Threading.Thread.Sleep(250)
+        Dim data(10024) As Byte
+        NetStream.Read(data, 0, 10024)
+        Dim returndata As String = ""
+        returndata = System.Text.Encoding.UTF8.GetString(data)
+        Dim aa = Split(returndata, vbNewLine)
+
+        cmbNDI.Items.Clear()
+
+
+        For i = 1 To aa.Count - 3
+            cmbNDI.Items.Add(Split(Mid(aa(i), 3), ")")(0) & ")" & """")
+        Next
+
+    End Sub
+
+    Private Sub cmdsource9_Click(sender As Object, e As EventArgs) Handles cmdsource9.Click
+        On Error Resume Next
+        CasparDevice.SendString("play 1-21 route://1-9 " & cmbtransition.Text & " " & ntransitionduration.Value & " " & cmbtweentype.Text & " " & cmbdirection.Text)
+
+        lblPGMSource.Text = 9
+    End Sub
+
+    Private Sub Cmdsource9pvw_Click(sender As Object, e As EventArgs) Handles cmdsource9pvw.Click
+        On Error Resume Next
+        CasparDevice.SendString("play 2-21 route://1-9 " & cmbtransition.Text & " " & ntransitionduration.Value & " " & cmbtweentype.Text & " " & cmbdirection.Text & " loop")
+        lblpreviewSource.Text = 9
+    End Sub
+
+    Private Sub cmdInitialiseNewNDISources_Click(sender As Object, e As EventArgs) Handles cmdInitialiseNewNDISources.Click
+        On Error Resume Next
+        CasparDevice.SendString("play 1-9 [ndi] " & cmbNDI.Text)
     End Sub
 End Class

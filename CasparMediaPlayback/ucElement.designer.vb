@@ -78,66 +78,66 @@ Partial Class ucElement
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UriToolStripMenuItem, Me.Decklink2ToolStripMenuItem, Me.BluefishToolStripMenuItem, Me.StreamToolStripMenuItem, Me.HtmlToolStripMenuItem, Me.YoutubeToolStripMenuItem, Me.SendToBackToolStripMenuItem, Me.BringToFrontToolStripMenuItem, Me.AddCaptionToolStripMenuItem, Me.NDIToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 246)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(149, 224)
         '
         'UriToolStripMenuItem
         '
         Me.UriToolStripMenuItem.Name = "UriToolStripMenuItem"
-        Me.UriToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UriToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.UriToolStripMenuItem.Text = "uri"
         '
         'Decklink2ToolStripMenuItem
         '
         Me.Decklink2ToolStripMenuItem.Name = "Decklink2ToolStripMenuItem"
-        Me.Decklink2ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Decklink2ToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.Decklink2ToolStripMenuItem.Text = "Decklink"
         '
         'BluefishToolStripMenuItem
         '
         Me.BluefishToolStripMenuItem.Name = "BluefishToolStripMenuItem"
-        Me.BluefishToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BluefishToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.BluefishToolStripMenuItem.Text = "Bluefish"
         '
         'StreamToolStripMenuItem
         '
         Me.StreamToolStripMenuItem.Name = "StreamToolStripMenuItem"
-        Me.StreamToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StreamToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.StreamToolStripMenuItem.Text = "Stream"
         '
         'HtmlToolStripMenuItem
         '
         Me.HtmlToolStripMenuItem.Name = "HtmlToolStripMenuItem"
-        Me.HtmlToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HtmlToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.HtmlToolStripMenuItem.Text = "html"
         '
         'YoutubeToolStripMenuItem
         '
         Me.YoutubeToolStripMenuItem.Name = "YoutubeToolStripMenuItem"
-        Me.YoutubeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.YoutubeToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.YoutubeToolStripMenuItem.Text = "Youtube"
         '
         'SendToBackToolStripMenuItem
         '
         Me.SendToBackToolStripMenuItem.Name = "SendToBackToolStripMenuItem"
-        Me.SendToBackToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SendToBackToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.SendToBackToolStripMenuItem.Text = "Send To Back"
         '
         'BringToFrontToolStripMenuItem
         '
         Me.BringToFrontToolStripMenuItem.Name = "BringToFrontToolStripMenuItem"
-        Me.BringToFrontToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BringToFrontToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.BringToFrontToolStripMenuItem.Text = "Bring To Front"
         '
         'AddCaptionToolStripMenuItem
         '
         Me.AddCaptionToolStripMenuItem.Name = "AddCaptionToolStripMenuItem"
-        Me.AddCaptionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddCaptionToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.AddCaptionToolStripMenuItem.Text = "Add Caption"
         '
         'NDIToolStripMenuItem
         '
         Me.NDIToolStripMenuItem.Name = "NDIToolStripMenuItem"
-        Me.NDIToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NDIToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.NDIToolStripMenuItem.Text = "NDI"
         '
         'ucElement

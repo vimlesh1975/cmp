@@ -24,10 +24,10 @@ Partial Class ucTwoLiner
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucTwoLiner))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbtwoliner = New System.Windows.Forms.GroupBox()
         Me.txtvariable2 = New System.Windows.Forms.TextBox()
         Me.txtvariable1 = New System.Windows.Forms.TextBox()
@@ -90,11 +90,16 @@ Partial Class ucTwoLiner
         Me.downtstwoliner = New System.Windows.Forms.Button()
         Me.addtstwoliner = New System.Windows.Forms.Button()
         Me.dgvtwolinesuper = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmdtwolinesuperplay = New System.Windows.Forms.Button()
         Me.cmdtwolinesupernext = New System.Windows.Forms.Button()
         Me.cmdtwolinesuperstop = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.cmdRCCPlayer1 = New System.Windows.Forms.Button()
+        Me.cmdRCCStop1 = New System.Windows.Forms.Button()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtTemplatename = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.gbtwoliner.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -110,11 +115,13 @@ Partial Class ucTwoLiner
         CType(Me.nyhtmltextoneliner, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nsizehtmloneliner, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvtwolinesuper, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbtwoliner
         '
         Me.gbtwoliner.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.gbtwoliner.Controls.Add(Me.GroupBox4)
         Me.gbtwoliner.Controls.Add(Me.txtvariable2)
         Me.gbtwoliner.Controls.Add(Me.txtvariable1)
         Me.gbtwoliner.Controls.Add(Me.Label273)
@@ -137,7 +144,7 @@ Partial Class ucTwoLiner
         Me.gbtwoliner.Controls.Add(Me.cmdtwolinesuperstop)
         Me.gbtwoliner.Location = New System.Drawing.Point(5, 4)
         Me.gbtwoliner.Name = "gbtwoliner"
-        Me.gbtwoliner.Size = New System.Drawing.Size(660, 605)
+        Me.gbtwoliner.Size = New System.Drawing.Size(660, 733)
         Me.gbtwoliner.TabIndex = 537
         Me.gbtwoliner.TabStop = False
         Me.gbtwoliner.Text = " "
@@ -755,51 +762,41 @@ Partial Class ucTwoLiner
         '
         Me.dgvtwolinesuper.AllowDrop = True
         Me.dgvtwolinesuper.AllowUserToOrderColumns = True
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.dgvtwolinesuper.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.dgvtwolinesuper.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvtwolinesuper.BackgroundColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvtwolinesuper.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvtwolinesuper.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvtwolinesuper.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvtwolinesuper.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvtwolinesuper.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvtwolinesuper.DefaultCellStyle = DataGridViewCellStyle7
         Me.dgvtwolinesuper.Location = New System.Drawing.Point(6, 99)
         Me.dgvtwolinesuper.MultiSelect = False
         Me.dgvtwolinesuper.Name = "dgvtwolinesuper"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvtwolinesuper.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvtwolinesuper.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvtwolinesuper.RowHeadersWidth = 25
         Me.dgvtwolinesuper.Size = New System.Drawing.Size(649, 263)
         Me.dgvtwolinesuper.TabIndex = 521
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.Frozen = True
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Twoline Super"
-        Me.DataGridViewTextBoxColumn4.MinimumWidth = 600
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DataGridViewTextBoxColumn4.Width = 600
         '
         'cmdtwolinesuperplay
         '
@@ -838,6 +835,44 @@ Partial Class ucTwoLiner
         Me.cmdtwolinesuperstop.Text = "Stop"
         Me.cmdtwolinesuperstop.UseVisualStyleBackColor = False
         '
+        'GroupBox4
+        '
+        Me.GroupBox4.BackColor = System.Drawing.Color.Azure
+        Me.GroupBox4.Controls.Add(Me.txtTemplatename)
+        Me.GroupBox4.Controls.Add(Me.Label10)
+        Me.GroupBox4.Controls.Add(Me.cmdRCCPlayer1)
+        Me.GroupBox4.Controls.Add(Me.cmdRCCStop1)
+        Me.GroupBox4.Location = New System.Drawing.Point(0, 600)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(649, 128)
+        Me.GroupBox4.TabIndex = 751
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "RCC Player"
+        '
+        'cmdRCCPlayer1
+        '
+        Me.cmdRCCPlayer1.BackColor = System.Drawing.Color.Green
+        Me.cmdRCCPlayer1.ForeColor = System.Drawing.Color.White
+        Me.cmdRCCPlayer1.Location = New System.Drawing.Point(7, 18)
+        Me.cmdRCCPlayer1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cmdRCCPlayer1.Name = "cmdRCCPlayer1"
+        Me.cmdRCCPlayer1.Size = New System.Drawing.Size(47, 53)
+        Me.cmdRCCPlayer1.TabIndex = 748
+        Me.cmdRCCPlayer1.Text = "Play"
+        Me.cmdRCCPlayer1.UseVisualStyleBackColor = False
+        '
+        'cmdRCCStop1
+        '
+        Me.cmdRCCStop1.BackColor = System.Drawing.Color.Red
+        Me.cmdRCCStop1.ForeColor = System.Drawing.Color.White
+        Me.cmdRCCStop1.Location = New System.Drawing.Point(5, 73)
+        Me.cmdRCCStop1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cmdRCCStop1.Name = "cmdRCCStop1"
+        Me.cmdRCCStop1.Size = New System.Drawing.Size(47, 49)
+        Me.cmdRCCStop1.TabIndex = 749
+        Me.cmdRCCStop1.Text = "Stop"
+        Me.cmdRCCStop1.UseVisualStyleBackColor = False
+        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.Frozen = True
@@ -848,12 +883,40 @@ Partial Class ucTwoLiner
         Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.DataGridViewTextBoxColumn1.Width = 600
         '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.Frozen = True
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Twoline Super"
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 600
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn4.Width = 600
+        '
+        'txtTemplatename
+        '
+        Me.txtTemplatename.Location = New System.Drawing.Point(205, 19)
+        Me.txtTemplatename.Name = "txtTemplatename"
+        Me.txtTemplatename.Size = New System.Drawing.Size(139, 20)
+        Me.txtTemplatename.TabIndex = 754
+        Me.txtTemplatename.Text = "Twoliner"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(119, 22)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(80, 13)
+        Me.Label10.TabIndex = 753
+        Me.Label10.Text = "Template name"
+        '
         'ucTwoLiner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(671, 613)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gbtwoliner)
         Me.HideOnClose = True
         Me.Name = "ucTwoLiner"
@@ -879,6 +942,8 @@ Partial Class ucTwoLiner
         CType(Me.nyhtmltextoneliner, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nsizehtmloneliner, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvtwolinesuper, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -949,4 +1014,9 @@ Partial Class ucTwoLiner
     Friend WithEvents txtvariable1 As TextBox
     Friend WithEvents Label273 As Label
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents cmdRCCPlayer1 As Button
+    Friend WithEvents cmdRCCStop1 As Button
+    Friend WithEvents txtTemplatename As TextBox
+    Friend WithEvents Label10 As Label
 End Class

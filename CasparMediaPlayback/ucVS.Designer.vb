@@ -536,10 +536,12 @@ Partial Class ucVS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(668, 613)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gbverticalscroll)
         Me.HideOnClose = True
+        Me.KeyPreview = True
         Me.Name = "ucVS"
         Me.Text = "Vertical Scroll1"
         Me.gbverticalscroll.ResumeLayout(False)

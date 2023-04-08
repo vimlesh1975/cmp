@@ -25,6 +25,7 @@ Partial Class ucnewSM2
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucnewSM2))
         Me.gbSm2 = New System.Windows.Forms.GroupBox()
+        Me.chkUseShuttleProV2 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCustomeSpped2 = New System.Windows.Forms.TextBox()
         Me.txtCustomeSpped1 = New System.Windows.Forms.TextBox()
@@ -39,7 +40,7 @@ Partial Class ucnewSM2
         Me.lblmax = New System.Windows.Forms.Label()
         Me.TrackBarseek = New System.Windows.Forms.TrackBar()
         Me.pnlrecording = New System.Windows.Forms.Panel()
-        Me.cmbcasparcgwindowtitlerecording = New System.Windows.Forms.ComboBox()
+        Me.cmbscreenConsumres = New System.Windows.Forms.ComboBox()
         Me.cmdoutcasparcgwindowrecording = New System.Windows.Forms.Button()
         Me.cmdshowcasparcgwindowrecording = New System.Windows.Forms.Button()
         Me.cmdhidesm2 = New System.Windows.Forms.Button()
@@ -62,6 +63,7 @@ Partial Class ucnewSM2
         'gbSm2
         '
         Me.gbSm2.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.gbSm2.Controls.Add(Me.chkUseShuttleProV2)
         Me.gbSm2.Controls.Add(Me.Label1)
         Me.gbSm2.Controls.Add(Me.txtCustomeSpped2)
         Me.gbSm2.Controls.Add(Me.txtCustomeSpped1)
@@ -76,7 +78,7 @@ Partial Class ucnewSM2
         Me.gbSm2.Controls.Add(Me.lblmax)
         Me.gbSm2.Controls.Add(Me.TrackBarseek)
         Me.gbSm2.Controls.Add(Me.pnlrecording)
-        Me.gbSm2.Controls.Add(Me.cmbcasparcgwindowtitlerecording)
+        Me.gbSm2.Controls.Add(Me.cmbscreenConsumres)
         Me.gbSm2.Controls.Add(Me.cmdoutcasparcgwindowrecording)
         Me.gbSm2.Controls.Add(Me.cmdshowcasparcgwindowrecording)
         Me.gbSm2.Controls.Add(Me.cmdhidesm2)
@@ -96,6 +98,16 @@ Partial Class ucnewSM2
         Me.gbSm2.TabStop = False
         Me.gbSm2.Text = "Slow Motion in Server 2.1"
         '
+        'chkUseShuttleProV2
+        '
+        Me.chkUseShuttleProV2.AutoSize = True
+        Me.chkUseShuttleProV2.Location = New System.Drawing.Point(10, 237)
+        Me.chkUseShuttleProV2.Name = "chkUseShuttleProV2"
+        Me.chkUseShuttleProV2.Size = New System.Drawing.Size(112, 17)
+        Me.chkUseShuttleProV2.TabIndex = 1213
+        Me.chkUseShuttleProV2.Text = "Use ShuttlePro v2"
+        Me.chkUseShuttleProV2.UseVisualStyleBackColor = True
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -109,7 +121,7 @@ Partial Class ucnewSM2
         '
         'txtCustomeSpped2
         '
-        Me.txtCustomeSpped2.Location = New System.Drawing.Point(126, 224)
+        Me.txtCustomeSpped2.Location = New System.Drawing.Point(126, 206)
         Me.txtCustomeSpped2.Name = "txtCustomeSpped2"
         Me.txtCustomeSpped2.Size = New System.Drawing.Size(40, 20)
         Me.txtCustomeSpped2.TabIndex = 1211
@@ -118,7 +130,7 @@ Partial Class ucnewSM2
         '
         'txtCustomeSpped1
         '
-        Me.txtCustomeSpped1.Location = New System.Drawing.Point(126, 187)
+        Me.txtCustomeSpped1.Location = New System.Drawing.Point(126, 174)
         Me.txtCustomeSpped1.Name = "txtCustomeSpped1"
         Me.txtCustomeSpped1.Size = New System.Drawing.Size(40, 20)
         Me.txtCustomeSpped1.TabIndex = 1210
@@ -128,7 +140,7 @@ Partial Class ucnewSM2
         'cmdCustomSpeed2
         '
         Me.cmdCustomSpeed2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdCustomSpeed2.Location = New System.Drawing.Point(69, 217)
+        Me.cmdCustomSpeed2.Location = New System.Drawing.Point(69, 201)
         Me.cmdCustomSpeed2.Name = "cmdCustomSpeed2"
         Me.cmdCustomSpeed2.Size = New System.Drawing.Size(55, 34)
         Me.cmdCustomSpeed2.TabIndex = 1209
@@ -138,7 +150,7 @@ Partial Class ucnewSM2
         'cmdCustomSpeed1
         '
         Me.cmdCustomSpeed1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdCustomSpeed1.Location = New System.Drawing.Point(69, 179)
+        Me.cmdCustomSpeed1.Location = New System.Drawing.Point(69, 167)
         Me.cmdCustomSpeed1.Name = "cmdCustomSpeed1"
         Me.cmdCustomSpeed1.Size = New System.Drawing.Size(55, 34)
         Me.cmdCustomSpeed1.TabIndex = 1208
@@ -239,15 +251,14 @@ Partial Class ucnewSM2
         Me.pnlrecording.Size = New System.Drawing.Size(235, 148)
         Me.pnlrecording.TabIndex = 1177
         '
-        'cmbcasparcgwindowtitlerecording
+        'cmbscreenConsumres
         '
-        Me.cmbcasparcgwindowtitlerecording.FormattingEnabled = True
-        Me.cmbcasparcgwindowtitlerecording.Items.AddRange(New Object() {"Screen consumer [1|PAL]", "Screen consumer [2|PAL]", "Screen consumer [3|PAL]", "Screen consumer [4|PAL]", "Screen consumer [1|NTSC]", "Screen consumer [1|1080i5000]", "Screen consumer [2|1080i5000]", "Screen consumer [3|1080i5000]", "Screen consumer [4|1080i5000]", "Screen consumer [1|1080i5994]", "Screen consumer [1|1080i6000]", "Screen consumer [1|1080p2398]", "Screen consumer [1|1080p2400]", "Screen consumer [1|1080p2500]", "Screen consumer [1|1080p2997]", "Screen consumer [1|1080p3000]", "Screen consumer [1|1080p5000]", "Screen consumer [1|1080p5994]", "Screen consumer [1|1080p6000]", "Screen consumer [1|1556p2398]", "Screen consumer [1|1556p2400]", "Screen consumer [1|1556p2500]", "Screen consumer [1|2160p2398]", "Screen consumer [1|2160p2400]", "Screen consumer [1|2160p2500]", "Screen consumer [1| 2160p2997]", "Screen consumer [1|2160p3000]", "Screen consumer [1|576p2500]", "Screen consumer [1|720p2398]", "Screen consumer [1|720p2400]", "Screen consumer [1|720p2500]", "Screen consumer [1|720p2997]", "Screen consumer [1|720p3000]", "Screen consumer [1|720p5000]", "Screen consumer [1|720p5994]", "Screen consumer [1|720p6000]"})
-        Me.cmbcasparcgwindowtitlerecording.Location = New System.Drawing.Point(179, 10)
-        Me.cmbcasparcgwindowtitlerecording.Name = "cmbcasparcgwindowtitlerecording"
-        Me.cmbcasparcgwindowtitlerecording.Size = New System.Drawing.Size(150, 21)
-        Me.cmbcasparcgwindowtitlerecording.TabIndex = 1180
-        Me.cmbcasparcgwindowtitlerecording.Text = "Screen consumer [2|PAL]"
+        Me.cmbscreenConsumres.FormattingEnabled = True
+        Me.cmbscreenConsumres.Location = New System.Drawing.Point(179, 10)
+        Me.cmbscreenConsumres.Name = "cmbscreenConsumres"
+        Me.cmbscreenConsumres.Size = New System.Drawing.Size(150, 21)
+        Me.cmbscreenConsumres.TabIndex = 1180
+        Me.cmbscreenConsumres.Text = "Screen consumer [2|PAL]"
         '
         'cmdoutcasparcgwindowrecording
         '
@@ -312,7 +323,7 @@ Partial Class ucnewSM2
         'cmdspeed100sm2
         '
         Me.cmdspeed100sm2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdspeed100sm2.Location = New System.Drawing.Point(69, 139)
+        Me.cmdspeed100sm2.Location = New System.Drawing.Point(69, 133)
         Me.cmdspeed100sm2.Name = "cmdspeed100sm2"
         Me.cmdspeed100sm2.Size = New System.Drawing.Size(55, 34)
         Me.cmdspeed100sm2.TabIndex = 635
@@ -322,7 +333,7 @@ Partial Class ucnewSM2
         'cmdspeed75sm2
         '
         Me.cmdspeed75sm2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdspeed75sm2.Location = New System.Drawing.Point(8, 171)
+        Me.cmdspeed75sm2.Location = New System.Drawing.Point(8, 167)
         Me.cmdspeed75sm2.Name = "cmdspeed75sm2"
         Me.cmdspeed75sm2.Size = New System.Drawing.Size(55, 34)
         Me.cmdspeed75sm2.TabIndex = 634
@@ -332,7 +343,7 @@ Partial Class ucnewSM2
         'cmdspeed50sm2
         '
         Me.cmdspeed50sm2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdspeed50sm2.Location = New System.Drawing.Point(8, 135)
+        Me.cmdspeed50sm2.Location = New System.Drawing.Point(8, 133)
         Me.cmdspeed50sm2.Name = "cmdspeed50sm2"
         Me.cmdspeed50sm2.Size = New System.Drawing.Size(55, 34)
         Me.cmdspeed50sm2.TabIndex = 633
@@ -407,7 +418,7 @@ Partial Class ucnewSM2
     Friend WithEvents nSm2 As System.Windows.Forms.NumericUpDown
     Friend WithEvents cmdhidesm2 As System.Windows.Forms.Button
     Friend WithEvents pnlrecording As Panel
-    Friend WithEvents cmbcasparcgwindowtitlerecording As ComboBox
+    Friend WithEvents cmbscreenConsumres As ComboBox
     Friend WithEvents cmdoutcasparcgwindowrecording As Button
     Friend WithEvents cmdshowcasparcgwindowrecording As Button
     Friend WithEvents lblcurrentframe As Label
@@ -424,4 +435,5 @@ Partial Class ucnewSM2
     Friend WithEvents cmdCustomSpeed2 As Button
     Friend WithEvents cmdCustomSpeed1 As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents chkUseShuttleProV2 As CheckBox
 End Class

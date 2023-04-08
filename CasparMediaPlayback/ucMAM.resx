@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="txtScreenRecorderwirhSystemAudio.Text" xml:space="preserve">
+    <value>c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y -rtbufsize 1500M -f dshow -i audio="Stereo Mix (Realtek High Definition Audio)" -f -y -rtbufsize 100M -f gdigrab  -framerate 25 -probesize 10M -draw_mouse 1 -i desktop -c:v libx264 -r 25 -preset ultrafast -tune zerolatency -crf 25 -pix_fmt yuv420p   -ar 48000 -g 1  -t 00:00:10  "c:/casparcg/_media/ScreenWithSystemAudio.mp4"</value>
+  </data>
   <data name="txtrecord.Text" xml:space="preserve">
     <value>c:/casparcg/mydata/ffmpeg/ffmpeg.exe -i udp://238.1.1.3:2000?pkt_size=1316  -vcodec libx264 -acodec aac -strict -2 -b:a 384k -flags +global_header -f segment -segment_time 10 -segment_format_options movflags=+faststart -reset_timestamps 1 d:/rec%d.mp4</value>
+  </data>
+  <data name="txtScreenRecorderwithmicrophone.Text" xml:space="preserve">
+    <value>c:/casparcg/mydata/ffmpeg/ffmpeg.exe -y -rtbufsize 1500M -f dshow -i audio="Microphone (Realtek High Definition Audio)" -f -y -rtbufsize 100M -f gdigrab  -framerate 25 -probesize 10M -draw_mouse 1 -i desktop -c:v libx264 -r 25 -preset ultrafast -tune zerolatency -crf 25 -pix_fmt yuv420p   -ar 48000 -g 1 -t 00:00:10  "c:/casparcg/_media/ScreenWithMicrophone.mp4"</value>
   </data>
   <data name="txtFFMpeg.Text" xml:space="preserve">
     <value>c:/casparcg/mydata/ffmpeg/ffmpeg.exe -re  -i http://esdcdn2-lh.akamaihd.net/i/esdcdn2_1@528073/master.m3u8 -re -i http://nondelhi-lh.akamaihd-staging.net/i/airlucknow_1@825824/master.m3u8 -re -i http://airfmgold-lh.akamaihd.net/i/fmgold_1@507591/master.m3u8 -re  -i http://vividhbharati-lh.akamaihd.net/i/vividhbharati_1@507811/master.m3u8  -pcr_period 30 -max_delay 1000    -c:a mp2 -b:a 96k  -ac 2 -ar 48000 -map 1:a:0 -map 1:a:0 -map 3:a:0 -map 3:a:0 -mpegts_start_pid 0x0481 -muxrate 20M -bufsize 4k  -f mpegts udp://238.1.1.3:2000?pkt_size=1316
@@ -155,6 +161,6 @@
     <value>499, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>46</value>
+    <value>25</value>
   </metadata>
 </root>

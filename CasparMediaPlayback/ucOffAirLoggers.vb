@@ -2,7 +2,7 @@
     Private Sub UcOffAirLoggers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         With UcnewOffAirLogger1
             .ichannel = 1
-            .cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & .ichannel & "|PAL]"
+            .cmbscreenConsumres.Text = "Screen consumer [" & .ichannel & "|PAL]"
             .oscstartandregister(.ichannel, 6250 + .ichannel)
             .txtmediadirectoryoal.Text = mediafullpath & "ch" & .ichannel & "/"
             .cmbliveoal.Text = .ichannel
@@ -11,7 +11,7 @@
 
         With UcnewOffAirLogger2
             .ichannel = 2
-            .cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & .ichannel & "|PAL]"
+            .cmbscreenConsumres.Text = "Screen consumer [" & .ichannel & "|PAL]"
             .oscstartandregister(.ichannel, 6250 + .ichannel)
             .txtmediadirectoryoal.Text = mediafullpath & "ch" & .ichannel & "/"
             .cmbliveoal.Text = .ichannel
@@ -20,7 +20,7 @@
 
         With UcnewOffAirLogger3
             .ichannel = 3
-            .cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & .ichannel & "|PAL]"
+            .cmbscreenConsumres.Text = "Screen consumer [" & .ichannel & "|PAL]"
             .oscstartandregister(.ichannel, 6250 + .ichannel)
             .txtmediadirectoryoal.Text = mediafullpath & "ch" & .ichannel & "/"
             .cmbliveoal.Text = .ichannel
@@ -29,7 +29,7 @@
 
         With UcnewOffAirLogger4
             .ichannel = 4
-            .cmbcasparcgwindowtitlerecording.Text = "Screen consumer [" & .ichannel & "|PAL]"
+            .cmbscreenConsumres.Text = "Screen consumer [" & .ichannel & "|PAL]"
             .oscstartandregister(.ichannel, 6250 + .ichannel)
             .txtmediadirectoryoal.Text = mediafullpath & "ch" & .ichannel & "/"
             .cmbliveoal.Text = .ichannel

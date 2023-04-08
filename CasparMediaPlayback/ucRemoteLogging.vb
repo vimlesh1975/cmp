@@ -62,5 +62,7 @@ Public Class ucRemoteLogging
 
     End Sub
 
-
+    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+        Process.Start(LinkLabel3.Text)
+    End Sub
 End Class

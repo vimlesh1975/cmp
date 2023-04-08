@@ -131,10 +131,10 @@ Public Class ucWeather
     Private Sub cmbweathericonchange(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbweathericon1.SelectedIndexChanged, cmbweathericon2.SelectedIndexChanged, cmbweathericon3.SelectedIndexChanged, cmbweathericon4.SelectedIndexChanged
 
         On Error Resume Next
-        weathericon1.Movie = "c:/casparcg/mydata/weather/" & cmbweathericon1.Text
-        weathericon2.Movie = "c:/casparcg/mydata/weather/" & cmbweathericon2.Text
-        weathericon3.Movie = "c:/casparcg/mydata/weather/" & cmbweathericon3.Text
-        weathericon4.Movie = "c:/casparcg/mydata/weather/" & cmbweathericon4.Text
+        weathericon1.Movie = "file:///c:/casparcg/mydata/weather/" & cmbweathericon1.Text
+        weathericon2.Movie = "file:///c:/casparcg/mydata/weather/" & cmbweathericon2.Text
+        weathericon3.Movie = "file:///c:/casparcg/mydata/weather/" & cmbweathericon3.Text
+        weathericon4.Movie = "file:///c:/casparcg/mydata/weather/" & cmbweathericon4.Text
 
     End Sub
 

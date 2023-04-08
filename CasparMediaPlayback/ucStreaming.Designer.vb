@@ -25,6 +25,42 @@ Partial Class ucStreaming
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucStreaming))
         Me.gbstreaming = New System.Windows.Forms.GroupBox()
+        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.cmduseinffmpeg = New System.Windows.Forms.Button()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtremovepipe = New System.Windows.Forms.TextBox()
+        Me.txtuseinffmpeg = New System.Windows.Forms.RichTextBox()
+        Me.cmdstoppipe = New System.Windows.Forms.Button()
+        Me.txtcommandpipe = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.cmdsendpipe = New System.Windows.Forms.Button()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.cmdstopfbstreaming23 = New System.Windows.Forms.Button()
+        Me.txtcommandfbstreaming23 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtaddressfbstreaming23 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtstreamnamefbstreaming23 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtoptionsfbstreaming23 = New System.Windows.Forms.RichTextBox()
+        Me.cmdsendfbstreaming23 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.cmdstopytstreaming23 = New System.Windows.Forms.Button()
+        Me.txtcommandytstreaming23 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtaddressytstreaming23 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtstreamnameytstreaming23 = New System.Windows.Forms.TextBox()
+        Me.txtapplicationameytstreaming23 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtoptionsytstreaming23 = New System.Windows.Forms.RichTextBox()
+        Me.cmdsendytstreaming23 = New System.Windows.Forms.Button()
         Me.txtStopTestSignal = New System.Windows.Forms.TextBox()
         Me.txtPlayTestSignal = New System.Windows.Forms.TextBox()
         Me.cmdStopTestSignal = New System.Windows.Forms.Button()
@@ -91,18 +127,38 @@ Partial Class ucStreaming
         Me.Label205 = New System.Windows.Forms.Label()
         Me.txtoptionsytstreaming = New System.Windows.Forms.RichTextBox()
         Me.cmdsendytstreaming = New System.Windows.Forms.Button()
+        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.cmdstopIGstreaming = New System.Windows.Forms.Button()
+        Me.txtcommandIGstreaming = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.txtaddressIGstreaming = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.txtstreamnameIGstreaming = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.txtoptionsIGstreaming = New System.Windows.Forms.RichTextBox()
+        Me.cmdsendIGstreaming = New System.Windows.Forms.Button()
         Me.gbstreaming.SuspendLayout()
+        Me.GroupBox9.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox10.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbstreaming
         '
         Me.gbstreaming.BackColor = System.Drawing.Color.NavajoWhite
+        Me.gbstreaming.Controls.Add(Me.GroupBox10)
+        Me.gbstreaming.Controls.Add(Me.GroupBox9)
+        Me.gbstreaming.Controls.Add(Me.GroupBox8)
+        Me.gbstreaming.Controls.Add(Me.Label11)
+        Me.gbstreaming.Controls.Add(Me.GroupBox7)
         Me.gbstreaming.Controls.Add(Me.txtStopTestSignal)
         Me.gbstreaming.Controls.Add(Me.txtPlayTestSignal)
         Me.gbstreaming.Controls.Add(Me.cmdStopTestSignal)
@@ -120,14 +176,388 @@ Partial Class ucStreaming
         Me.gbstreaming.Controls.Add(Me.GroupBox1)
         Me.gbstreaming.Location = New System.Drawing.Point(2, 3)
         Me.gbstreaming.Name = "gbstreaming"
-        Me.gbstreaming.Size = New System.Drawing.Size(1121, 829)
+        Me.gbstreaming.Size = New System.Drawing.Size(1197, 906)
         Me.gbstreaming.TabIndex = 1169
         Me.gbstreaming.TabStop = False
         Me.gbstreaming.Text = " "
         '
+        'GroupBox9
+        '
+        Me.GroupBox9.BackColor = System.Drawing.Color.SandyBrown
+        Me.GroupBox9.Controls.Add(Me.Label18)
+        Me.GroupBox9.Controls.Add(Me.LinkLabel1)
+        Me.GroupBox9.Controls.Add(Me.cmduseinffmpeg)
+        Me.GroupBox9.Controls.Add(Me.Label17)
+        Me.GroupBox9.Controls.Add(Me.txtremovepipe)
+        Me.GroupBox9.Controls.Add(Me.txtuseinffmpeg)
+        Me.GroupBox9.Controls.Add(Me.cmdstoppipe)
+        Me.GroupBox9.Controls.Add(Me.txtcommandpipe)
+        Me.GroupBox9.Controls.Add(Me.Label16)
+        Me.GroupBox9.Controls.Add(Me.cmdsendpipe)
+        Me.GroupBox9.Location = New System.Drawing.Point(686, 592)
+        Me.GroupBox9.Name = "GroupBox9"
+        Me.GroupBox9.Size = New System.Drawing.Size(508, 230)
+        Me.GroupBox9.TabIndex = 1203
+        Me.GroupBox9.TabStop = False
+        Me.GroupBox9.Text = "Named pipe consumer"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(9, 20)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(62, 13)
+        Me.Label18.TabIndex = 31
+        Me.Label18.Text = "Pipe Server"
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(87, 20)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(350, 13)
+        Me.LinkLabel1.TabIndex = 30
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "https://github.com/philipstarkey/CasparCGServer/releases/tag/PR1335"
+        '
+        'cmduseinffmpeg
+        '
+        Me.cmduseinffmpeg.BackColor = System.Drawing.Color.Green
+        Me.cmduseinffmpeg.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmduseinffmpeg.ForeColor = System.Drawing.Color.White
+        Me.cmduseinffmpeg.Location = New System.Drawing.Point(452, 150)
+        Me.cmduseinffmpeg.Name = "cmduseinffmpeg"
+        Me.cmduseinffmpeg.Size = New System.Drawing.Size(50, 62)
+        Me.cmduseinffmpeg.TabIndex = 29
+        Me.cmduseinffmpeg.Text = "Use"
+        Me.cmduseinffmpeg.UseVisualStyleBackColor = False
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(12, 136)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(79, 13)
+        Me.Label17.TabIndex = 28
+        Me.Label17.Text = "Use in FFMpeg"
+        '
+        'txtremovepipe
+        '
+        Me.txtremovepipe.Location = New System.Drawing.Point(12, 101)
+        Me.txtremovepipe.Name = "txtremovepipe"
+        Me.txtremovepipe.Size = New System.Drawing.Size(275, 20)
+        Me.txtremovepipe.TabIndex = 27
+        Me.txtremovepipe.Text = "Remove 1 PIPE 1"
+        '
+        'txtuseinffmpeg
+        '
+        Me.txtuseinffmpeg.Location = New System.Drawing.Point(12, 150)
+        Me.txtuseinffmpeg.Name = "txtuseinffmpeg"
+        Me.txtuseinffmpeg.Size = New System.Drawing.Size(427, 62)
+        Me.txtuseinffmpeg.TabIndex = 27
+        Me.txtuseinffmpeg.Text = resources.GetString("txtuseinffmpeg.Text")
+        '
+        'cmdstoppipe
+        '
+        Me.cmdstoppipe.BackColor = System.Drawing.Color.Red
+        Me.cmdstoppipe.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdstoppipe.ForeColor = System.Drawing.Color.White
+        Me.cmdstoppipe.Location = New System.Drawing.Point(453, 85)
+        Me.cmdstoppipe.Name = "cmdstoppipe"
+        Me.cmdstoppipe.Size = New System.Drawing.Size(50, 51)
+        Me.cmdstoppipe.TabIndex = 26
+        Me.cmdstoppipe.Text = "Stop"
+        Me.cmdstoppipe.UseVisualStyleBackColor = False
+        '
+        'txtcommandpipe
+        '
+        Me.txtcommandpipe.Location = New System.Drawing.Point(9, 59)
+        Me.txtcommandpipe.Name = "txtcommandpipe"
+        Me.txtcommandpipe.Size = New System.Drawing.Size(496, 20)
+        Me.txtcommandpipe.TabIndex = 18
+        Me.txtcommandpipe.Text = "ADD 1 PIPE 1 VIDEO_PIPE \\\\.\\pipe\\CasparCGVideo AUDIO_PIPE \\\\.\\pipe\\Caspar" &
+    "CGAudio"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(9, 43)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(54, 13)
+        Me.Label16.TabIndex = 17
+        Me.Label16.Text = "Command"
+        '
+        'cmdsendpipe
+        '
+        Me.cmdsendpipe.BackColor = System.Drawing.Color.Green
+        Me.cmdsendpipe.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdsendpipe.ForeColor = System.Drawing.Color.White
+        Me.cmdsendpipe.Location = New System.Drawing.Point(453, 6)
+        Me.cmdsendpipe.Name = "cmdsendpipe"
+        Me.cmdsendpipe.Size = New System.Drawing.Size(50, 51)
+        Me.cmdsendpipe.TabIndex = 0
+        Me.cmdsendpipe.Text = "Send"
+        Me.cmdsendpipe.UseVisualStyleBackColor = False
+        '
+        'GroupBox8
+        '
+        Me.GroupBox8.BackColor = System.Drawing.Color.SandyBrown
+        Me.GroupBox8.Controls.Add(Me.cmdstopfbstreaming23)
+        Me.GroupBox8.Controls.Add(Me.txtcommandfbstreaming23)
+        Me.GroupBox8.Controls.Add(Me.Label12)
+        Me.GroupBox8.Controls.Add(Me.Label13)
+        Me.GroupBox8.Controls.Add(Me.txtaddressfbstreaming23)
+        Me.GroupBox8.Controls.Add(Me.Label14)
+        Me.GroupBox8.Controls.Add(Me.txtstreamnamefbstreaming23)
+        Me.GroupBox8.Controls.Add(Me.Label15)
+        Me.GroupBox8.Controls.Add(Me.txtoptionsfbstreaming23)
+        Me.GroupBox8.Controls.Add(Me.cmdsendfbstreaming23)
+        Me.GroupBox8.Location = New System.Drawing.Point(681, 426)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Size = New System.Drawing.Size(508, 140)
+        Me.GroupBox8.TabIndex = 1202
+        Me.GroupBox8.TabStop = False
+        Me.GroupBox8.Text = "Facebook"
+        '
+        'cmdstopfbstreaming23
+        '
+        Me.cmdstopfbstreaming23.BackColor = System.Drawing.Color.Red
+        Me.cmdstopfbstreaming23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdstopfbstreaming23.ForeColor = System.Drawing.Color.White
+        Me.cmdstopfbstreaming23.Location = New System.Drawing.Point(448, 79)
+        Me.cmdstopfbstreaming23.Name = "cmdstopfbstreaming23"
+        Me.cmdstopfbstreaming23.Size = New System.Drawing.Size(50, 51)
+        Me.cmdstopfbstreaming23.TabIndex = 26
+        Me.cmdstopfbstreaming23.Text = "Stop"
+        Me.cmdstopfbstreaming23.UseVisualStyleBackColor = False
+        '
+        'txtcommandfbstreaming23
+        '
+        Me.txtcommandfbstreaming23.Location = New System.Drawing.Point(9, 39)
+        Me.txtcommandfbstreaming23.Name = "txtcommandfbstreaming23"
+        Me.txtcommandfbstreaming23.Size = New System.Drawing.Size(94, 20)
+        Me.txtcommandfbstreaming23.TabIndex = 18
+        Me.txtcommandfbstreaming23.Text = "ADD 1 STREAM"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(9, 25)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(54, 13)
+        Me.Label12.TabIndex = 17
+        Me.Label12.Text = "Command"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(9, 60)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(43, 13)
+        Me.Label13.TabIndex = 16
+        Me.Label13.Text = "Options"
+        '
+        'txtaddressfbstreaming23
+        '
+        Me.txtaddressfbstreaming23.Location = New System.Drawing.Point(109, 39)
+        Me.txtaddressfbstreaming23.Name = "txtaddressfbstreaming23"
+        Me.txtaddressfbstreaming23.Size = New System.Drawing.Size(171, 20)
+        Me.txtaddressfbstreaming23.TabIndex = 15
+        Me.txtaddressfbstreaming23.Text = "rtmps://live-api-s.facebook.com:443/rtmp/"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(106, 25)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(45, 13)
+        Me.Label14.TabIndex = 14
+        Me.Label14.Text = "Address"
+        '
+        'txtstreamnamefbstreaming23
+        '
+        Me.txtstreamnamefbstreaming23.Location = New System.Drawing.Point(283, 39)
+        Me.txtstreamnamefbstreaming23.Name = "txtstreamnamefbstreaming23"
+        Me.txtstreamnamefbstreaming23.Size = New System.Drawing.Size(215, 20)
+        Me.txtstreamnamefbstreaming23.TabIndex = 11
+        Me.txtstreamnamefbstreaming23.Text = "943597992503642?ds=1&s_sw=0&s_vt=api-s&a=AbxLVBHuJ9Oys2YH"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(390, 23)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(71, 13)
+        Me.Label15.TabIndex = 9
+        Me.Label15.Text = "Stream Name"
+        '
+        'txtoptionsfbstreaming23
+        '
+        Me.txtoptionsfbstreaming23.Location = New System.Drawing.Point(9, 74)
+        Me.txtoptionsfbstreaming23.Name = "txtoptionsfbstreaming23"
+        Me.txtoptionsfbstreaming23.Size = New System.Drawing.Size(361, 56)
+        Me.txtoptionsfbstreaming23.TabIndex = 1
+        Me.txtoptionsfbstreaming23.Text = "-codec:v libx264 -codec:a aac -strict -2  -b:a 128k -ar:a 48000 -b:v 2750k -filte" &
+    "r:v format=pix_fmts=yuv422p,scale=1024x576,fps=25 -filter:a pan=stereo|c0=c0|c1=" &
+    "c1 -format flv"
+        '
+        'cmdsendfbstreaming23
+        '
+        Me.cmdsendfbstreaming23.BackColor = System.Drawing.Color.Green
+        Me.cmdsendfbstreaming23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdsendfbstreaming23.ForeColor = System.Drawing.Color.White
+        Me.cmdsendfbstreaming23.Location = New System.Drawing.Point(383, 79)
+        Me.cmdsendfbstreaming23.Name = "cmdsendfbstreaming23"
+        Me.cmdsendfbstreaming23.Size = New System.Drawing.Size(50, 51)
+        Me.cmdsendfbstreaming23.TabIndex = 0
+        Me.cmdsendfbstreaming23.Text = "Send"
+        Me.cmdsendfbstreaming23.UseVisualStyleBackColor = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(691, 232)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(91, 20)
+        Me.Label11.TabIndex = 1192
+        Me.Label11.Text = "Server 2.3"
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.BackColor = System.Drawing.Color.SandyBrown
+        Me.GroupBox7.Controls.Add(Me.cmdstopytstreaming23)
+        Me.GroupBox7.Controls.Add(Me.txtcommandytstreaming23)
+        Me.GroupBox7.Controls.Add(Me.Label5)
+        Me.GroupBox7.Controls.Add(Me.Label6)
+        Me.GroupBox7.Controls.Add(Me.txtaddressytstreaming23)
+        Me.GroupBox7.Controls.Add(Me.Label8)
+        Me.GroupBox7.Controls.Add(Me.txtstreamnameytstreaming23)
+        Me.GroupBox7.Controls.Add(Me.txtapplicationameytstreaming23)
+        Me.GroupBox7.Controls.Add(Me.Label9)
+        Me.GroupBox7.Controls.Add(Me.Label10)
+        Me.GroupBox7.Controls.Add(Me.txtoptionsytstreaming23)
+        Me.GroupBox7.Controls.Add(Me.cmdsendytstreaming23)
+        Me.GroupBox7.Location = New System.Drawing.Point(681, 268)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(508, 140)
+        Me.GroupBox7.TabIndex = 1201
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "YouTube"
+        '
+        'cmdstopytstreaming23
+        '
+        Me.cmdstopytstreaming23.BackColor = System.Drawing.Color.Red
+        Me.cmdstopytstreaming23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdstopytstreaming23.ForeColor = System.Drawing.Color.White
+        Me.cmdstopytstreaming23.Location = New System.Drawing.Point(448, 79)
+        Me.cmdstopytstreaming23.Name = "cmdstopytstreaming23"
+        Me.cmdstopytstreaming23.Size = New System.Drawing.Size(50, 51)
+        Me.cmdstopytstreaming23.TabIndex = 26
+        Me.cmdstopytstreaming23.Text = "Stop"
+        Me.cmdstopytstreaming23.UseVisualStyleBackColor = False
+        '
+        'txtcommandytstreaming23
+        '
+        Me.txtcommandytstreaming23.Location = New System.Drawing.Point(9, 39)
+        Me.txtcommandytstreaming23.Name = "txtcommandytstreaming23"
+        Me.txtcommandytstreaming23.Size = New System.Drawing.Size(94, 20)
+        Me.txtcommandytstreaming23.TabIndex = 18
+        Me.txtcommandytstreaming23.Text = "ADD 1 STREAM"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(9, 25)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(54, 13)
+        Me.Label5.TabIndex = 17
+        Me.Label5.Text = "Command"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(9, 60)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(43, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Options"
+        '
+        'txtaddressytstreaming23
+        '
+        Me.txtaddressytstreaming23.Location = New System.Drawing.Point(109, 39)
+        Me.txtaddressytstreaming23.Name = "txtaddressytstreaming23"
+        Me.txtaddressytstreaming23.Size = New System.Drawing.Size(171, 20)
+        Me.txtaddressytstreaming23.TabIndex = 15
+        Me.txtaddressytstreaming23.Text = "rtmp://a.rtmp.youtube.com"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(106, 25)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(45, 13)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "Address"
+        '
+        'txtstreamnameytstreaming23
+        '
+        Me.txtstreamnameytstreaming23.Location = New System.Drawing.Point(357, 39)
+        Me.txtstreamnameytstreaming23.Name = "txtstreamnameytstreaming23"
+        Me.txtstreamnameytstreaming23.Size = New System.Drawing.Size(141, 20)
+        Me.txtstreamnameytstreaming23.TabIndex = 11
+        Me.txtstreamnameytstreaming23.Text = "yeuh-c3wm-x3j0-7gdz"
+        '
+        'txtapplicationameytstreaming23
+        '
+        Me.txtapplicationameytstreaming23.Location = New System.Drawing.Point(283, 39)
+        Me.txtapplicationameytstreaming23.Name = "txtapplicationameytstreaming23"
+        Me.txtapplicationameytstreaming23.Size = New System.Drawing.Size(68, 20)
+        Me.txtapplicationameytstreaming23.TabIndex = 10
+        Me.txtapplicationameytstreaming23.Text = "live2"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(390, 23)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(71, 13)
+        Me.Label9.TabIndex = 9
+        Me.Label9.Text = "Stream Name"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(269, 23)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(90, 13)
+        Me.Label10.TabIndex = 8
+        Me.Label10.Text = "Application Name"
+        '
+        'txtoptionsytstreaming23
+        '
+        Me.txtoptionsytstreaming23.Location = New System.Drawing.Point(9, 74)
+        Me.txtoptionsytstreaming23.Name = "txtoptionsytstreaming23"
+        Me.txtoptionsytstreaming23.Size = New System.Drawing.Size(361, 56)
+        Me.txtoptionsytstreaming23.TabIndex = 1
+        Me.txtoptionsytstreaming23.Text = "-codec:a aac -strict -2  -b:a 128k -ar:a 48000 -b:v 2750k -filter:v format=pix_fm" &
+    "ts=yuv422p,scale=1024x576,fps=25 -filter:a pan=stereo|c0=c0|c1=c1 -format flv"
+        '
+        'cmdsendytstreaming23
+        '
+        Me.cmdsendytstreaming23.BackColor = System.Drawing.Color.Green
+        Me.cmdsendytstreaming23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdsendytstreaming23.ForeColor = System.Drawing.Color.White
+        Me.cmdsendytstreaming23.Location = New System.Drawing.Point(383, 79)
+        Me.cmdsendytstreaming23.Name = "cmdsendytstreaming23"
+        Me.cmdsendytstreaming23.Size = New System.Drawing.Size(50, 51)
+        Me.cmdsendytstreaming23.TabIndex = 0
+        Me.cmdsendytstreaming23.Text = "Send"
+        Me.cmdsendytstreaming23.UseVisualStyleBackColor = False
+        '
         'txtStopTestSignal
         '
-        Me.txtStopTestSignal.Location = New System.Drawing.Point(705, 117)
+        Me.txtStopTestSignal.Location = New System.Drawing.Point(695, 117)
         Me.txtStopTestSignal.Multiline = True
         Me.txtStopTestSignal.Name = "txtStopTestSignal"
         Me.txtStopTestSignal.Size = New System.Drawing.Size(344, 59)
@@ -136,16 +566,16 @@ Partial Class ucStreaming
         '
         'txtPlayTestSignal
         '
-        Me.txtPlayTestSignal.Location = New System.Drawing.Point(705, 52)
+        Me.txtPlayTestSignal.Location = New System.Drawing.Point(695, 52)
         Me.txtPlayTestSignal.Multiline = True
         Me.txtPlayTestSignal.Name = "txtPlayTestSignal"
         Me.txtPlayTestSignal.Size = New System.Drawing.Size(344, 59)
         Me.txtPlayTestSignal.TabIndex = 1213
-        Me.txtPlayTestSignal.Text = "Play 1-1 go1080p25 loop" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cg 1-2 add 2 cmp/cg_template/clock 1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "play 1-2 2"
+        Me.txtPlayTestSignal.Text = "Play 1-1 go1080p25 loop" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cg 1-2 add 2 cmp/cg_template/clock 1"
         '
         'cmdStopTestSignal
         '
-        Me.cmdStopTestSignal.Location = New System.Drawing.Point(1055, 117)
+        Me.cmdStopTestSignal.Location = New System.Drawing.Point(1045, 117)
         Me.cmdStopTestSignal.Name = "cmdStopTestSignal"
         Me.cmdStopTestSignal.Size = New System.Drawing.Size(63, 59)
         Me.cmdStopTestSignal.TabIndex = 1212
@@ -154,7 +584,7 @@ Partial Class ucStreaming
         '
         'cmdPlayTestSignal
         '
-        Me.cmdPlayTestSignal.Location = New System.Drawing.Point(1055, 55)
+        Me.cmdPlayTestSignal.Location = New System.Drawing.Point(1045, 55)
         Me.cmdPlayTestSignal.Name = "cmdPlayTestSignal"
         Me.cmdPlayTestSignal.Size = New System.Drawing.Size(63, 56)
         Me.cmdPlayTestSignal.TabIndex = 1210
@@ -164,7 +594,7 @@ Partial Class ucStreaming
         'Label233
         '
         Me.Label233.AutoSize = True
-        Me.Label233.Location = New System.Drawing.Point(702, 5)
+        Me.Label233.Location = New System.Drawing.Point(692, 5)
         Me.Label233.Name = "Label233"
         Me.Label233.Size = New System.Drawing.Size(49, 13)
         Me.Label233.TabIndex = 1209
@@ -175,7 +605,7 @@ Partial Class ucStreaming
         Me.cmbdecklinkforrecording.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "cmbliveoal", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.cmbdecklinkforrecording.FormattingEnabled = True
         Me.cmbdecklinkforrecording.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.cmbdecklinkforrecording.Location = New System.Drawing.Point(705, 23)
+        Me.cmbdecklinkforrecording.Location = New System.Drawing.Point(695, 23)
         Me.cmbdecklinkforrecording.Name = "cmbdecklinkforrecording"
         Me.cmbdecklinkforrecording.Size = New System.Drawing.Size(39, 21)
         Me.cmbdecklinkforrecording.TabIndex = 1208
@@ -183,7 +613,7 @@ Partial Class ucStreaming
         '
         'cmdremove_input
         '
-        Me.cmdremove_input.Location = New System.Drawing.Point(831, 19)
+        Me.cmdremove_input.Location = New System.Drawing.Point(821, 19)
         Me.cmdremove_input.Name = "cmdremove_input"
         Me.cmdremove_input.Size = New System.Drawing.Size(92, 27)
         Me.cmdremove_input.TabIndex = 1207
@@ -192,7 +622,7 @@ Partial Class ucStreaming
         '
         'cmdinput
         '
-        Me.cmdinput.Location = New System.Drawing.Point(757, 19)
+        Me.cmdinput.Location = New System.Drawing.Point(747, 19)
         Me.cmdinput.Name = "cmdinput"
         Me.cmdinput.Size = New System.Drawing.Size(70, 27)
         Me.cmdinput.TabIndex = 1206
@@ -205,7 +635,7 @@ Partial Class ucStreaming
         Me.GroupBox6.Controls.Add(Me.txtndi)
         Me.GroupBox6.Controls.Add(Me.cmdRemoveNDI)
         Me.GroupBox6.Controls.Add(Me.cmdAddNDI)
-        Me.GroupBox6.Location = New System.Drawing.Point(6, 744)
+        Me.GroupBox6.Location = New System.Drawing.Point(6, 818)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(670, 60)
         Me.GroupBox6.TabIndex = 1205
@@ -250,7 +680,7 @@ Partial Class ucStreaming
         Me.GroupBox5.Controls.Add(Me.cmdStopUDP)
         Me.GroupBox5.Controls.Add(Me.cmdplaystreamingcosumer)
         Me.GroupBox5.Controls.Add(Me.txtudp)
-        Me.GroupBox5.Location = New System.Drawing.Point(6, 654)
+        Me.GroupBox5.Location = New System.Drawing.Point(6, 740)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(670, 68)
         Me.GroupBox5.TabIndex = 1204
@@ -305,7 +735,7 @@ Partial Class ucStreaming
         Me.GroupBox4.Controls.Add(Me.txtapplicationamehlsstreaming)
         Me.GroupBox4.Controls.Add(Me.Label259)
         Me.GroupBox4.Controls.Add(Me.Label260)
-        Me.GroupBox4.Location = New System.Drawing.Point(6, 497)
+        Me.GroupBox4.Location = New System.Drawing.Point(4, 442)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(670, 136)
         Me.GroupBox4.TabIndex = 1203
@@ -319,7 +749,7 @@ Partial Class ucStreaming
         Me.cmdstophlsstreaming.ForeColor = System.Drawing.Color.White
         Me.cmdstophlsstreaming.Location = New System.Drawing.Point(614, 30)
         Me.cmdstophlsstreaming.Name = "cmdstophlsstreaming"
-        Me.cmdstophlsstreaming.Size = New System.Drawing.Size(50, 76)
+        Me.cmdstophlsstreaming.Size = New System.Drawing.Size(50, 89)
         Me.cmdstophlsstreaming.TabIndex = 39
         Me.cmdstophlsstreaming.Text = "Stop"
         Me.cmdstophlsstreaming.UseVisualStyleBackColor = False
@@ -384,7 +814,7 @@ Partial Class ucStreaming
         Me.txtstreamnamehlsstreaming.Name = "txtstreamnamehlsstreaming"
         Me.txtstreamnamehlsstreaming.Size = New System.Drawing.Size(145, 20)
         Me.txtstreamnamehlsstreaming.TabIndex = 31
-        Me.txtstreamnamehlsstreaming.Text = "myStream.m3u8"
+        Me.txtstreamnamehlsstreaming.Text = "playlist.m3u8"
         '
         'txtapplicationamehlsstreaming
         '
@@ -427,9 +857,9 @@ Partial Class ucStreaming
         Me.GroupBox3.Controls.Add(Me.txtapplicationamewsstreaming)
         Me.GroupBox3.Controls.Add(Me.Label166)
         Me.GroupBox3.Controls.Add(Me.Label165)
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 338)
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 585)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(670, 144)
+        Me.GroupBox3.Size = New System.Drawing.Size(668, 147)
         Me.GroupBox3.TabIndex = 1202
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "WowzaStreamingEngine"
@@ -556,9 +986,9 @@ Partial Class ucStreaming
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.txtoptionsfbstreaming)
         Me.GroupBox2.Controls.Add(Me.cmdsendfbstreaming)
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 183)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 155)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(670, 149)
+        Me.GroupBox2.Size = New System.Drawing.Size(670, 135)
         Me.GroupBox2.TabIndex = 1201
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Facebook"
@@ -570,7 +1000,7 @@ Partial Class ucStreaming
         Me.cmdstopfbstreaming.ForeColor = System.Drawing.Color.White
         Me.cmdstopfbstreaming.Location = New System.Drawing.Point(618, 70)
         Me.cmdstopfbstreaming.Name = "cmdstopfbstreaming"
-        Me.cmdstopfbstreaming.Size = New System.Drawing.Size(50, 73)
+        Me.cmdstopfbstreaming.Size = New System.Drawing.Size(50, 53)
         Me.cmdstopfbstreaming.TabIndex = 1191
         Me.cmdstopfbstreaming.Text = "Stop"
         Me.cmdstopfbstreaming.UseVisualStyleBackColor = False
@@ -640,7 +1070,7 @@ Partial Class ucStreaming
         '
         Me.txtoptionsfbstreaming.Location = New System.Drawing.Point(16, 68)
         Me.txtoptionsfbstreaming.Name = "txtoptionsfbstreaming"
-        Me.txtoptionsfbstreaming.Size = New System.Drawing.Size(538, 75)
+        Me.txtoptionsfbstreaming.Size = New System.Drawing.Size(538, 55)
         Me.txtoptionsfbstreaming.TabIndex = 1180
         Me.txtoptionsfbstreaming.Text = resources.GetString("txtoptionsfbstreaming.Text")
         '
@@ -651,7 +1081,7 @@ Partial Class ucStreaming
         Me.cmdsendfbstreaming.ForeColor = System.Drawing.Color.White
         Me.cmdsendfbstreaming.Location = New System.Drawing.Point(560, 70)
         Me.cmdsendfbstreaming.Name = "cmdsendfbstreaming"
-        Me.cmdsendfbstreaming.Size = New System.Drawing.Size(50, 73)
+        Me.cmdsendfbstreaming.Size = New System.Drawing.Size(50, 53)
         Me.cmdsendfbstreaming.TabIndex = 1179
         Me.cmdsendfbstreaming.Text = "Send"
         Me.cmdsendfbstreaming.UseVisualStyleBackColor = False
@@ -660,7 +1090,7 @@ Partial Class ucStreaming
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(7, 809)
+        Me.Label7.Location = New System.Drawing.Point(7, 883)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(598, 13)
         Me.Label7.TabIndex = 1194
@@ -682,9 +1112,9 @@ Partial Class ucStreaming
         Me.GroupBox1.Controls.Add(Me.Label205)
         Me.GroupBox1.Controls.Add(Me.txtoptionsytstreaming)
         Me.GroupBox1.Controls.Add(Me.cmdsendytstreaming)
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 27)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(670, 149)
+        Me.GroupBox1.Size = New System.Drawing.Size(670, 139)
         Me.GroupBox1.TabIndex = 1200
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "YouTube"
@@ -694,16 +1124,16 @@ Partial Class ucStreaming
         Me.cmdstopytstreaming.BackColor = System.Drawing.Color.Red
         Me.cmdstopytstreaming.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdstopytstreaming.ForeColor = System.Drawing.Color.White
-        Me.cmdstopytstreaming.Location = New System.Drawing.Point(618, 39)
+        Me.cmdstopytstreaming.Location = New System.Drawing.Point(618, 31)
         Me.cmdstopytstreaming.Name = "cmdstopytstreaming"
-        Me.cmdstopytstreaming.Size = New System.Drawing.Size(50, 104)
+        Me.cmdstopytstreaming.Size = New System.Drawing.Size(50, 94)
         Me.cmdstopytstreaming.TabIndex = 26
         Me.cmdstopytstreaming.Text = "Stop"
         Me.cmdstopytstreaming.UseVisualStyleBackColor = False
         '
         'txtcommandytstreaming
         '
-        Me.txtcommandytstreaming.Location = New System.Drawing.Point(9, 39)
+        Me.txtcommandytstreaming.Location = New System.Drawing.Point(9, 31)
         Me.txtcommandytstreaming.Name = "txtcommandytstreaming"
         Me.txtcommandytstreaming.Size = New System.Drawing.Size(94, 20)
         Me.txtcommandytstreaming.TabIndex = 18
@@ -712,7 +1142,7 @@ Partial Class ucStreaming
         'Label211
         '
         Me.Label211.AutoSize = True
-        Me.Label211.Location = New System.Drawing.Point(9, 25)
+        Me.Label211.Location = New System.Drawing.Point(9, 17)
         Me.Label211.Name = "Label211"
         Me.Label211.Size = New System.Drawing.Size(54, 13)
         Me.Label211.TabIndex = 17
@@ -721,7 +1151,7 @@ Partial Class ucStreaming
         'Label210
         '
         Me.Label210.AutoSize = True
-        Me.Label210.Location = New System.Drawing.Point(9, 60)
+        Me.Label210.Location = New System.Drawing.Point(9, 52)
         Me.Label210.Name = "Label210"
         Me.Label210.Size = New System.Drawing.Size(43, 13)
         Me.Label210.TabIndex = 16
@@ -729,7 +1159,7 @@ Partial Class ucStreaming
         '
         'txtaddressytstreaming
         '
-        Me.txtaddressytstreaming.Location = New System.Drawing.Point(109, 39)
+        Me.txtaddressytstreaming.Location = New System.Drawing.Point(109, 31)
         Me.txtaddressytstreaming.Name = "txtaddressytstreaming"
         Me.txtaddressytstreaming.Size = New System.Drawing.Size(171, 20)
         Me.txtaddressytstreaming.TabIndex = 15
@@ -738,7 +1168,7 @@ Partial Class ucStreaming
         'Label207
         '
         Me.Label207.AutoSize = True
-        Me.Label207.Location = New System.Drawing.Point(106, 25)
+        Me.Label207.Location = New System.Drawing.Point(106, 17)
         Me.Label207.Name = "Label207"
         Me.Label207.Size = New System.Drawing.Size(45, 13)
         Me.Label207.TabIndex = 14
@@ -746,7 +1176,7 @@ Partial Class ucStreaming
         '
         'txtstreamnameytstreaming
         '
-        Me.txtstreamnameytstreaming.Location = New System.Drawing.Point(357, 39)
+        Me.txtstreamnameytstreaming.Location = New System.Drawing.Point(357, 31)
         Me.txtstreamnameytstreaming.Name = "txtstreamnameytstreaming"
         Me.txtstreamnameytstreaming.Size = New System.Drawing.Size(190, 20)
         Me.txtstreamnameytstreaming.TabIndex = 11
@@ -754,7 +1184,7 @@ Partial Class ucStreaming
         '
         'txtapplicationameytstreaming
         '
-        Me.txtapplicationameytstreaming.Location = New System.Drawing.Point(283, 39)
+        Me.txtapplicationameytstreaming.Location = New System.Drawing.Point(283, 31)
         Me.txtapplicationameytstreaming.Name = "txtapplicationameytstreaming"
         Me.txtapplicationameytstreaming.Size = New System.Drawing.Size(68, 20)
         Me.txtapplicationameytstreaming.TabIndex = 10
@@ -763,7 +1193,7 @@ Partial Class ucStreaming
         'Label175
         '
         Me.Label175.AutoSize = True
-        Me.Label175.Location = New System.Drawing.Point(413, 19)
+        Me.Label175.Location = New System.Drawing.Point(413, 11)
         Me.Label175.Name = "Label175"
         Me.Label175.Size = New System.Drawing.Size(71, 13)
         Me.Label175.TabIndex = 9
@@ -772,7 +1202,7 @@ Partial Class ucStreaming
         'Label205
         '
         Me.Label205.AutoSize = True
-        Me.Label205.Location = New System.Drawing.Point(280, 23)
+        Me.Label205.Location = New System.Drawing.Point(280, 15)
         Me.Label205.Name = "Label205"
         Me.Label205.Size = New System.Drawing.Size(90, 13)
         Me.Label205.TabIndex = 8
@@ -780,9 +1210,9 @@ Partial Class ucStreaming
         '
         'txtoptionsytstreaming
         '
-        Me.txtoptionsytstreaming.Location = New System.Drawing.Point(9, 74)
+        Me.txtoptionsytstreaming.Location = New System.Drawing.Point(9, 66)
         Me.txtoptionsytstreaming.Name = "txtoptionsytstreaming"
-        Me.txtoptionsytstreaming.Size = New System.Drawing.Size(538, 69)
+        Me.txtoptionsytstreaming.Size = New System.Drawing.Size(538, 59)
         Me.txtoptionsytstreaming.TabIndex = 1
         Me.txtoptionsytstreaming.Text = resources.GetString("txtoptionsytstreaming.Text")
         '
@@ -791,25 +1221,145 @@ Partial Class ucStreaming
         Me.cmdsendytstreaming.BackColor = System.Drawing.Color.Green
         Me.cmdsendytstreaming.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdsendytstreaming.ForeColor = System.Drawing.Color.White
-        Me.cmdsendytstreaming.Location = New System.Drawing.Point(553, 39)
+        Me.cmdsendytstreaming.Location = New System.Drawing.Point(553, 31)
         Me.cmdsendytstreaming.Name = "cmdsendytstreaming"
-        Me.cmdsendytstreaming.Size = New System.Drawing.Size(50, 104)
+        Me.cmdsendytstreaming.Size = New System.Drawing.Size(50, 94)
         Me.cmdsendytstreaming.TabIndex = 0
         Me.cmdsendytstreaming.Text = "Send"
         Me.cmdsendytstreaming.UseVisualStyleBackColor = False
+        '
+        'GroupBox10
+        '
+        Me.GroupBox10.BackColor = System.Drawing.Color.SandyBrown
+        Me.GroupBox10.Controls.Add(Me.cmdstopIGstreaming)
+        Me.GroupBox10.Controls.Add(Me.txtcommandIGstreaming)
+        Me.GroupBox10.Controls.Add(Me.Label19)
+        Me.GroupBox10.Controls.Add(Me.Label20)
+        Me.GroupBox10.Controls.Add(Me.txtaddressIGstreaming)
+        Me.GroupBox10.Controls.Add(Me.Label21)
+        Me.GroupBox10.Controls.Add(Me.txtstreamnameIGstreaming)
+        Me.GroupBox10.Controls.Add(Me.Label22)
+        Me.GroupBox10.Controls.Add(Me.txtoptionsIGstreaming)
+        Me.GroupBox10.Controls.Add(Me.cmdsendIGstreaming)
+        Me.GroupBox10.Location = New System.Drawing.Point(6, 299)
+        Me.GroupBox10.Name = "GroupBox10"
+        Me.GroupBox10.Size = New System.Drawing.Size(670, 135)
+        Me.GroupBox10.TabIndex = 1202
+        Me.GroupBox10.TabStop = False
+        Me.GroupBox10.Text = "Instagram"
+        '
+        'cmdstopIGstreaming
+        '
+        Me.cmdstopIGstreaming.BackColor = System.Drawing.Color.Red
+        Me.cmdstopIGstreaming.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdstopIGstreaming.ForeColor = System.Drawing.Color.White
+        Me.cmdstopIGstreaming.Location = New System.Drawing.Point(618, 70)
+        Me.cmdstopIGstreaming.Name = "cmdstopIGstreaming"
+        Me.cmdstopIGstreaming.Size = New System.Drawing.Size(50, 53)
+        Me.cmdstopIGstreaming.TabIndex = 1191
+        Me.cmdstopIGstreaming.Text = "Stop"
+        Me.cmdstopIGstreaming.UseVisualStyleBackColor = False
+        '
+        'txtcommandIGstreaming
+        '
+        Me.txtcommandIGstreaming.Location = New System.Drawing.Point(16, 33)
+        Me.txtcommandIGstreaming.Name = "txtcommandIGstreaming"
+        Me.txtcommandIGstreaming.Size = New System.Drawing.Size(94, 20)
+        Me.txtcommandIGstreaming.TabIndex = 1190
+        Me.txtcommandIGstreaming.Text = "ADD 1 STREAM"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(16, 19)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(54, 13)
+        Me.Label19.TabIndex = 1189
+        Me.Label19.Text = "Command"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(16, 54)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(43, 13)
+        Me.Label20.TabIndex = 1188
+        Me.Label20.Text = "Options"
+        '
+        'txtaddressIGstreaming
+        '
+        Me.txtaddressIGstreaming.Location = New System.Drawing.Point(114, 33)
+        Me.txtaddressIGstreaming.Name = "txtaddressIGstreaming"
+        Me.txtaddressIGstreaming.Size = New System.Drawing.Size(230, 20)
+        Me.txtaddressIGstreaming.TabIndex = 1187
+        Me.txtaddressIGstreaming.Text = "rtmps://live-upload.instagram.com:443/rtmp/"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(113, 19)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(45, 13)
+        Me.Label21.TabIndex = 1186
+        Me.Label21.Text = "Address"
+        '
+        'txtstreamnameIGstreaming
+        '
+        Me.txtstreamnameIGstreaming.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtstreamnameIGstreaming.Location = New System.Drawing.Point(350, 33)
+        Me.txtstreamnameIGstreaming.Name = "txtstreamnameIGstreaming"
+        Me.txtstreamnameIGstreaming.Size = New System.Drawing.Size(315, 18)
+        Me.txtstreamnameIGstreaming.TabIndex = 1185
+        Me.txtstreamnameIGstreaming.Text = "17963323864397049?s_sw=0&s_vt=ig&a=AbwjD78_Hr_oPPPh"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(512, 17)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(61, 13)
+        Me.Label22.TabIndex = 1183
+        Me.Label22.Text = "Stream Key"
+        '
+        'txtoptionsIGstreaming
+        '
+        Me.txtoptionsIGstreaming.Location = New System.Drawing.Point(16, 68)
+        Me.txtoptionsIGstreaming.Name = "txtoptionsIGstreaming"
+        Me.txtoptionsIGstreaming.Size = New System.Drawing.Size(538, 55)
+        Me.txtoptionsIGstreaming.TabIndex = 1180
+        Me.txtoptionsIGstreaming.Text = resources.GetString("txtoptionsIGstreaming.Text")
+        '
+        'cmdsendIGstreaming
+        '
+        Me.cmdsendIGstreaming.BackColor = System.Drawing.Color.Green
+        Me.cmdsendIGstreaming.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdsendIGstreaming.ForeColor = System.Drawing.Color.White
+        Me.cmdsendIGstreaming.Location = New System.Drawing.Point(560, 70)
+        Me.cmdsendIGstreaming.Name = "cmdsendIGstreaming"
+        Me.cmdsendIGstreaming.Size = New System.Drawing.Size(50, 53)
+        Me.cmdsendIGstreaming.TabIndex = 1179
+        Me.cmdsendIGstreaming.Text = "Send"
+        Me.cmdsendIGstreaming.UseVisualStyleBackColor = False
         '
         'ucStreaming
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1127, 839)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbstreaming)
         Me.HideOnClose = True
         Me.Name = "ucStreaming"
         Me.Text = "Streaming"
         Me.gbstreaming.ResumeLayout(False)
         Me.gbstreaming.PerformLayout()
+        Me.GroupBox9.ResumeLayout(False)
+        Me.GroupBox9.PerformLayout()
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
@@ -822,6 +1372,8 @@ Partial Class ucStreaming
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox10.ResumeLayout(False)
+        Me.GroupBox10.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -892,4 +1444,51 @@ Partial Class ucStreaming
     Friend WithEvents cmdPlayTestSignal As Button
     Friend WithEvents txtPlayTestSignal As TextBox
     Friend WithEvents txtStopTestSignal As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents GroupBox7 As GroupBox
+    Friend WithEvents cmdstopytstreaming23 As Button
+    Friend WithEvents txtcommandytstreaming23 As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtaddressytstreaming23 As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtstreamnameytstreaming23 As TextBox
+    Friend WithEvents txtapplicationameytstreaming23 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txtoptionsytstreaming23 As RichTextBox
+    Friend WithEvents cmdsendytstreaming23 As Button
+    Friend WithEvents GroupBox8 As GroupBox
+    Friend WithEvents cmdstopfbstreaming23 As Button
+    Friend WithEvents txtcommandfbstreaming23 As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents txtaddressfbstreaming23 As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents txtstreamnamefbstreaming23 As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents txtoptionsfbstreaming23 As RichTextBox
+    Friend WithEvents cmdsendfbstreaming23 As Button
+    Friend WithEvents GroupBox9 As GroupBox
+    Friend WithEvents cmdstoppipe As Button
+    Friend WithEvents txtcommandpipe As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents cmdsendpipe As Button
+    Friend WithEvents txtremovepipe As TextBox
+    Friend WithEvents cmduseinffmpeg As Button
+    Friend WithEvents Label17 As Label
+    Friend WithEvents txtuseinffmpeg As RichTextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents GroupBox10 As GroupBox
+    Friend WithEvents cmdstopIGstreaming As Button
+    Friend WithEvents txtcommandIGstreaming As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents txtaddressIGstreaming As TextBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents txtstreamnameIGstreaming As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents txtoptionsIGstreaming As RichTextBox
+    Friend WithEvents cmdsendIGstreaming As Button
 End Class

@@ -28,12 +28,12 @@ Partial Class ucPlaylist
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucPlaylist))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbplaylist = New System.Windows.Forms.GroupBox()
         Me.chktemplatewithplaylist = New System.Windows.Forms.CheckBox()
         Me.chkcheckfilesinplaylist = New System.Windows.Forms.CheckBox()
@@ -56,6 +56,22 @@ Partial Class ucPlaylist
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.dgv1 = New System.Windows.Forms.DataGridView()
+        Me.File_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Start_Time = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.x = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Clip_Duration = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Conversion = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.FileType = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.LoopVideo = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Transition = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.T_Duration = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.AudioLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.clmFilter = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Template_File = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BackIn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.AMCPCommands = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.StopF1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PlayToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -99,6 +115,16 @@ Partial Class ucPlaylist
         Me.SetStartTimeAcoordingToCurrentRowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InserPlaylistToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertFilterForIMXFile = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForIMXFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AudioChannelLayoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LToBothToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RToBothToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MixToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OnlyLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OnlyRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeInterlaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Yadif10ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Yadif11ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeAllTransitionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MIXToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -167,22 +193,11 @@ Partial Class ucPlaylist
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.File_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Start_Time = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.x = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Clip_Duration = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Conversion = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.FileType = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.LoopVideo = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Transition = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.T_Duration = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.AudioLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.clmFilter = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Template_File = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BackIn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.AMCPCommands = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ScaleModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.STRETCHToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FITToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FILLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ORIGINALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.gbplaylist.SuspendLayout()
         Me.gbnowplaing.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -271,7 +286,7 @@ Partial Class ucPlaylist
         Me.gbnowplaing.Controls.Add(Me.txtcommingupnext)
         Me.gbnowplaing.Controls.Add(Me.cmdnowplaying)
         Me.gbnowplaing.Controls.Add(Me.cmdcommingupnext)
-        Me.gbnowplaing.Location = New System.Drawing.Point(826, 0)
+        Me.gbnowplaing.Location = New System.Drawing.Point(806, 0)
         Me.gbnowplaing.Name = "gbnowplaing"
         Me.gbnowplaing.Size = New System.Drawing.Size(170, 63)
         Me.gbnowplaing.TabIndex = 724
@@ -348,7 +363,7 @@ Partial Class ucPlaylist
         'cmdremainingdurationofplaylist
         '
         Me.cmdremainingdurationofplaylist.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdremainingdurationofplaylist.Location = New System.Drawing.Point(1019, 32)
+        Me.cmdremainingdurationofplaylist.Location = New System.Drawing.Point(980, 32)
         Me.cmdremainingdurationofplaylist.Name = "cmdremainingdurationofplaylist"
         Me.cmdremainingdurationofplaylist.Size = New System.Drawing.Size(135, 21)
         Me.cmdremainingdurationofplaylist.TabIndex = 645
@@ -359,7 +374,7 @@ Partial Class ucPlaylist
         'txtremaingdurationofplaylist
         '
         Me.txtremaingdurationofplaylist.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtremaingdurationofplaylist.Location = New System.Drawing.Point(1156, 32)
+        Me.txtremaingdurationofplaylist.Location = New System.Drawing.Point(1115, 32)
         Me.txtremaingdurationofplaylist.Name = "txtremaingdurationofplaylist"
         Me.txtremaingdurationofplaylist.Size = New System.Drawing.Size(56, 20)
         Me.txtremaingdurationofplaylist.TabIndex = 644
@@ -367,7 +382,7 @@ Partial Class ucPlaylist
         'cmddurationofplaylist
         '
         Me.cmddurationofplaylist.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmddurationofplaylist.Location = New System.Drawing.Point(1019, 10)
+        Me.cmddurationofplaylist.Location = New System.Drawing.Point(979, 10)
         Me.cmddurationofplaylist.Name = "cmddurationofplaylist"
         Me.cmddurationofplaylist.Size = New System.Drawing.Size(135, 21)
         Me.cmddurationofplaylist.TabIndex = 643
@@ -378,7 +393,7 @@ Partial Class ucPlaylist
         'txtdurationofplalist
         '
         Me.txtdurationofplalist.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtdurationofplalist.Location = New System.Drawing.Point(1156, 10)
+        Me.txtdurationofplalist.Location = New System.Drawing.Point(1115, 10)
         Me.txtdurationofplalist.Name = "txtdurationofplalist"
         Me.txtdurationofplalist.Size = New System.Drawing.Size(56, 20)
         Me.txtdurationofplalist.TabIndex = 642
@@ -465,119 +480,249 @@ Partial Class ucPlaylist
         Me.dgv1.Size = New System.Drawing.Size(1209, 497)
         Me.dgv1.TabIndex = 634
         '
+        'File_Name
+        '
+        Me.File_Name.Frozen = True
+        Me.File_Name.HeaderText = "File_Name"
+        Me.File_Name.MinimumWidth = 280
+        Me.File_Name.Name = "File_Name"
+        Me.File_Name.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.File_Name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.File_Name.Width = 655
+        '
+        'Start_Time
+        '
+        Me.Start_Time.HeaderText = "Start_Time"
+        Me.Start_Time.MinimumWidth = 10
+        Me.Start_Time.Name = "Start_Time"
+        Me.Start_Time.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Start_Time.Width = 120
+        '
+        'x
+        '
+        Me.x.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.x.DefaultCellStyle = DataGridViewCellStyle3
+        Me.x.FalseValue = "0"
+        Me.x.FillWeight = 20.0!
+        Me.x.HeaderText = "Play"
+        Me.x.Name = "x"
+        Me.x.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.x.TrueValue = "1"
+        Me.x.Width = 30
+        '
+        'Clip_Duration
+        '
+        Me.Clip_Duration.HeaderText = "Duration"
+        Me.Clip_Duration.MinimumWidth = 10
+        Me.Clip_Duration.Name = "Clip_Duration"
+        Me.Clip_Duration.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Clip_Duration.Width = 120
+        '
+        'Conversion
+        '
+        Me.Conversion.FalseValue = "0"
+        Me.Conversion.HeaderText = "Cnvrsn"
+        Me.Conversion.MinimumWidth = 45
+        Me.Conversion.Name = "Conversion"
+        Me.Conversion.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Conversion.TrueValue = "1"
+        Me.Conversion.Width = 45
+        '
+        'FileType
+        '
+        Me.FileType.HeaderText = "FileType"
+        Me.FileType.Items.AddRange(New Object() {"Program", "Promo", "Commercial", "Others"})
+        Me.FileType.Name = "FileType"
+        Me.FileType.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.FileType.Width = 90
+        '
+        'LoopVideo
+        '
+        Me.LoopVideo.HeaderText = "Loop"
+        Me.LoopVideo.Name = "LoopVideo"
+        Me.LoopVideo.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.LoopVideo.TrueValue = "loop"
+        Me.LoopVideo.Width = 35
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Thumbnail"
+        Me.Column3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
+        Me.Column3.MinimumWidth = 70
+        Me.Column3.Name = "Column3"
+        Me.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column3.Width = 70
+        '
+        'Transition
+        '
+        Me.Transition.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Transition.HeaderText = "Transition"
+        Me.Transition.Items.AddRange(New Object() {"CUT", "MIX", "PUSH", "WIPE", "SLIDE"})
+        Me.Transition.Name = "Transition"
+        Me.Transition.Width = 60
+        '
+        'T_Duration
+        '
+        Me.T_Duration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.T_Duration.HeaderText = "frame"
+        Me.T_Duration.Items.AddRange(New Object() {"10", "15", "20", "25", "30", "35", "40", "45", "50"})
+        Me.T_Duration.Name = "T_Duration"
+        Me.T_Duration.Width = 50
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "Follow Duration"
+        Me.Column11.Name = "Column11"
+        Me.Column11.Width = 50
+        '
+        'AudioLevel
+        '
+        Me.AudioLevel.HeaderText = "Audio Level"
+        Me.AudioLevel.Name = "AudioLevel"
+        Me.AudioLevel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.AudioLevel.Width = 40
+        '
+        'clmFilter
+        '
+        Me.clmFilter.HeaderText = "Filter"
+        Me.clmFilter.Name = "clmFilter"
+        Me.clmFilter.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Template_File
+        '
+        Me.Template_File.HeaderText = "Template File"
+        Me.Template_File.Name = "Template_File"
+        Me.Template_File.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Template_File.Width = 200
+        '
+        'BackIn
+        '
+        Me.BackIn.FalseValue = "0"
+        Me.BackIn.HeaderText = "Back In"
+        Me.BackIn.Name = "BackIn"
+        Me.BackIn.TrueValue = "1"
+        Me.BackIn.Width = 35
+        '
+        'AMCPCommands
+        '
+        Me.AMCPCommands.HeaderText = "AMCP Commands"
+        Me.AMCPCommands.Name = "AMCPCommands"
+        Me.AMCPCommands.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StopF1ToolStripMenuItem, Me.PlayToolStripMenuItem1, Me.CueToolStripMenuItem1, Me.PauseToolStripMenuItem1, Me.ResumeToolStripMenuItem1, Me.NextToolStripMenuItem1, Me.PlayNextF6ToolStripMenuItem, Me.InsertBlankToolStripMenuItem, Me.DeleteToolStripMenuItem1, Me.CopyToolStripMenuItem1, Me.PasteToolStripMenuItem1, Me.MoveUpToolStripMenuItem1, Me.MoveDownToolStripMenuItem1, Me.PlayInVLCToolStripMenuItem, Me.CheckFilesToolStripMenuItem, Me.OpenInTrimmerToolStripMenuItem, Me.FileInformationToolStripMenuItem, Me.InsertDecklinkToolStripMenuItem, Me.ShowLiveToolStripMenuItem, Me.RefreshThumbnailToolStripMenuItem, Me.InserEndToolStripMenuItem, Me.SelectAllToolStripMenuItem, Me.DeSelectAllToolStripMenuItem, Me.SetStartTimeAcoordingToCurrentRowToolStripMenuItem, Me.InserPlaylistToolStripMenuItem, Me.InsertFilterForIMXFile, Me.ChangeAllTransitionToolStripMenuItem, Me.mnuPlayinffplay})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(289, 620)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(287, 620)
         '
         'StopF1ToolStripMenuItem
         '
         Me.StopF1ToolStripMenuItem.Name = "StopF1ToolStripMenuItem"
-        Me.StopF1ToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.StopF1ToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.StopF1ToolStripMenuItem.Text = "Stop F1"
         '
         'PlayToolStripMenuItem1
         '
         Me.PlayToolStripMenuItem1.Name = "PlayToolStripMenuItem1"
-        Me.PlayToolStripMenuItem1.Size = New System.Drawing.Size(288, 22)
+        Me.PlayToolStripMenuItem1.Size = New System.Drawing.Size(286, 22)
         Me.PlayToolStripMenuItem1.Text = "Play F2"
         '
         'CueToolStripMenuItem1
         '
         Me.CueToolStripMenuItem1.Name = "CueToolStripMenuItem1"
-        Me.CueToolStripMenuItem1.Size = New System.Drawing.Size(288, 22)
+        Me.CueToolStripMenuItem1.Size = New System.Drawing.Size(286, 22)
         Me.CueToolStripMenuItem1.Text = "Cue F3"
         '
         'PauseToolStripMenuItem1
         '
         Me.PauseToolStripMenuItem1.Name = "PauseToolStripMenuItem1"
-        Me.PauseToolStripMenuItem1.Size = New System.Drawing.Size(288, 22)
+        Me.PauseToolStripMenuItem1.Size = New System.Drawing.Size(286, 22)
         Me.PauseToolStripMenuItem1.Text = "Pause F4"
         '
         'ResumeToolStripMenuItem1
         '
         Me.ResumeToolStripMenuItem1.Name = "ResumeToolStripMenuItem1"
-        Me.ResumeToolStripMenuItem1.Size = New System.Drawing.Size(288, 22)
+        Me.ResumeToolStripMenuItem1.Size = New System.Drawing.Size(286, 22)
         Me.ResumeToolStripMenuItem1.Text = "Resume F4"
         '
         'NextToolStripMenuItem1
         '
         Me.NextToolStripMenuItem1.Name = "NextToolStripMenuItem1"
-        Me.NextToolStripMenuItem1.Size = New System.Drawing.Size(288, 22)
+        Me.NextToolStripMenuItem1.Size = New System.Drawing.Size(286, 22)
         Me.NextToolStripMenuItem1.Text = "Cue Next F5"
         '
         'PlayNextF6ToolStripMenuItem
         '
         Me.PlayNextF6ToolStripMenuItem.Name = "PlayNextF6ToolStripMenuItem"
-        Me.PlayNextF6ToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.PlayNextF6ToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.PlayNextF6ToolStripMenuItem.Text = "Play Next F6"
         '
         'InsertBlankToolStripMenuItem
         '
         Me.InsertBlankToolStripMenuItem.Name = "InsertBlankToolStripMenuItem"
-        Me.InsertBlankToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.InsertBlankToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.InsertBlankToolStripMenuItem.Text = "Insert Blank"
         '
         'DeleteToolStripMenuItem1
         '
         Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
-        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(288, 22)
+        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(286, 22)
         Me.DeleteToolStripMenuItem1.Text = "Delete"
         '
         'CopyToolStripMenuItem1
         '
         Me.CopyToolStripMenuItem1.Name = "CopyToolStripMenuItem1"
-        Me.CopyToolStripMenuItem1.Size = New System.Drawing.Size(288, 22)
+        Me.CopyToolStripMenuItem1.Size = New System.Drawing.Size(286, 22)
         Me.CopyToolStripMenuItem1.Text = "Copy"
         '
         'PasteToolStripMenuItem1
         '
         Me.PasteToolStripMenuItem1.Name = "PasteToolStripMenuItem1"
-        Me.PasteToolStripMenuItem1.Size = New System.Drawing.Size(288, 22)
+        Me.PasteToolStripMenuItem1.Size = New System.Drawing.Size(286, 22)
         Me.PasteToolStripMenuItem1.Text = "Paste"
         '
         'MoveUpToolStripMenuItem1
         '
         Me.MoveUpToolStripMenuItem1.Name = "MoveUpToolStripMenuItem1"
-        Me.MoveUpToolStripMenuItem1.Size = New System.Drawing.Size(288, 22)
+        Me.MoveUpToolStripMenuItem1.Size = New System.Drawing.Size(286, 22)
         Me.MoveUpToolStripMenuItem1.Text = "Move Up"
         '
         'MoveDownToolStripMenuItem1
         '
         Me.MoveDownToolStripMenuItem1.Name = "MoveDownToolStripMenuItem1"
-        Me.MoveDownToolStripMenuItem1.Size = New System.Drawing.Size(288, 22)
+        Me.MoveDownToolStripMenuItem1.Size = New System.Drawing.Size(286, 22)
         Me.MoveDownToolStripMenuItem1.Text = "Move Down"
         '
         'PlayInVLCToolStripMenuItem
         '
         Me.PlayInVLCToolStripMenuItem.Name = "PlayInVLCToolStripMenuItem"
-        Me.PlayInVLCToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.PlayInVLCToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.PlayInVLCToolStripMenuItem.Text = "Play in VLC"
         '
         'CheckFilesToolStripMenuItem
         '
         Me.CheckFilesToolStripMenuItem.Name = "CheckFilesToolStripMenuItem"
-        Me.CheckFilesToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.CheckFilesToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.CheckFilesToolStripMenuItem.Text = "Check Files"
         '
         'OpenInTrimmerToolStripMenuItem
         '
         Me.OpenInTrimmerToolStripMenuItem.Name = "OpenInTrimmerToolStripMenuItem"
-        Me.OpenInTrimmerToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.OpenInTrimmerToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.OpenInTrimmerToolStripMenuItem.Text = "Open in Trimmer"
         '
         'FileInformationToolStripMenuItem
         '
         Me.FileInformationToolStripMenuItem.Name = "FileInformationToolStripMenuItem"
-        Me.FileInformationToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.FileInformationToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.FileInformationToolStripMenuItem.Text = "File information"
         '
         'InsertDecklinkToolStripMenuItem
         '
         Me.InsertDecklinkToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsertDecklinkToolStripMenuItem1, Me.InsertDecklinkToolStripMenuItem2, Me.InsertDecklinkToolStripMenuItem3, Me.InsertDecklinkToolStripMenuItem4, Me.InsertDecklinkToolStripMenuItem5, Me.InsertDecklinkToolStripMenuItem6, Me.InsertDecklinkToolStripMenuItem7, Me.InsertDecklinkToolStripMenuItem8})
         Me.InsertDecklinkToolStripMenuItem.Name = "InsertDecklinkToolStripMenuItem"
-        Me.InsertDecklinkToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.InsertDecklinkToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.InsertDecklinkToolStripMenuItem.Text = "Insert Decklink"
         '
         'InsertDecklinkToolStripMenuItem1
@@ -632,7 +777,7 @@ Partial Class ucPlaylist
         '
         Me.ShowLiveToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowLiveToolStripMenuItem1, Me.ShowLiveToolStripMenuItem2, Me.ShowLiveToolStripMenuItem3, Me.ShowLiveToolStripMenuItem4, Me.ShowLiveToolStripMenuItem5, Me.ShowLiveToolStripMenuItem6, Me.ShowLiveToolStripMenuItem7, Me.ShowLiveToolStripMenuItem8})
         Me.ShowLiveToolStripMenuItem.Name = "ShowLiveToolStripMenuItem"
-        Me.ShowLiveToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.ShowLiveToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.ShowLiveToolStripMenuItem.Text = "Show Live Decklink"
         '
         'ShowLiveToolStripMenuItem1
@@ -686,50 +831,113 @@ Partial Class ucPlaylist
         'RefreshThumbnailToolStripMenuItem
         '
         Me.RefreshThumbnailToolStripMenuItem.Name = "RefreshThumbnailToolStripMenuItem"
-        Me.RefreshThumbnailToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.RefreshThumbnailToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.RefreshThumbnailToolStripMenuItem.Text = "Refresh Thumbnail"
         '
         'InserEndToolStripMenuItem
         '
         Me.InserEndToolStripMenuItem.Name = "InserEndToolStripMenuItem"
-        Me.InserEndToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.InserEndToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.InserEndToolStripMenuItem.Text = "Inser End"
         '
         'SelectAllToolStripMenuItem
         '
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select All"
         '
         'DeSelectAllToolStripMenuItem
         '
         Me.DeSelectAllToolStripMenuItem.Name = "DeSelectAllToolStripMenuItem"
-        Me.DeSelectAllToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.DeSelectAllToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.DeSelectAllToolStripMenuItem.Text = "De Select All"
         '
         'SetStartTimeAcoordingToCurrentRowToolStripMenuItem
         '
         Me.SetStartTimeAcoordingToCurrentRowToolStripMenuItem.Name = "SetStartTimeAcoordingToCurrentRowToolStripMenuItem"
-        Me.SetStartTimeAcoordingToCurrentRowToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.SetStartTimeAcoordingToCurrentRowToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.SetStartTimeAcoordingToCurrentRowToolStripMenuItem.Text = "Set Start Time Acoording To CurrentRow"
         '
         'InserPlaylistToolStripMenuItem
         '
         Me.InserPlaylistToolStripMenuItem.Name = "InserPlaylistToolStripMenuItem"
-        Me.InserPlaylistToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.InserPlaylistToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.InserPlaylistToolStripMenuItem.Text = "Insert Playlist"
         '
         'InsertFilterForIMXFile
         '
+        Me.InsertFilterForIMXFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ForIMXFileToolStripMenuItem, Me.AudioChannelLayoutToolStripMenuItem, Me.DeInterlaceToolStripMenuItem, Me.ScaleModeToolStripMenuItem})
         Me.InsertFilterForIMXFile.Name = "InsertFilterForIMXFile"
-        Me.InsertFilterForIMXFile.Size = New System.Drawing.Size(288, 22)
-        Me.InsertFilterForIMXFile.Text = "Insert Filter for IMX file"
+        Me.InsertFilterForIMXFile.Size = New System.Drawing.Size(286, 22)
+        Me.InsertFilterForIMXFile.Text = "Insert Filter"
+        '
+        'ForIMXFileToolStripMenuItem
+        '
+        Me.ForIMXFileToolStripMenuItem.Name = "ForIMXFileToolStripMenuItem"
+        Me.ForIMXFileToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.ForIMXFileToolStripMenuItem.Text = "For IMX File"
+        '
+        'AudioChannelLayoutToolStripMenuItem
+        '
+        Me.AudioChannelLayoutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LToBothToolStripMenuItem, Me.RToBothToolStripMenuItem, Me.MixToolStripMenuItem1, Me.OnlyLToolStripMenuItem, Me.OnlyRToolStripMenuItem})
+        Me.AudioChannelLayoutToolStripMenuItem.Name = "AudioChannelLayoutToolStripMenuItem"
+        Me.AudioChannelLayoutToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.AudioChannelLayoutToolStripMenuItem.Text = "Audio Channel Layout"
+        '
+        'LToBothToolStripMenuItem
+        '
+        Me.LToBothToolStripMenuItem.Name = "LToBothToolStripMenuItem"
+        Me.LToBothToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.LToBothToolStripMenuItem.Text = "L_To_Both"
+        '
+        'RToBothToolStripMenuItem
+        '
+        Me.RToBothToolStripMenuItem.Name = "RToBothToolStripMenuItem"
+        Me.RToBothToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.RToBothToolStripMenuItem.Text = "R_To_Both"
+        '
+        'MixToolStripMenuItem1
+        '
+        Me.MixToolStripMenuItem1.Name = "MixToolStripMenuItem1"
+        Me.MixToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.MixToolStripMenuItem1.Text = "Mix"
+        '
+        'OnlyLToolStripMenuItem
+        '
+        Me.OnlyLToolStripMenuItem.Name = "OnlyLToolStripMenuItem"
+        Me.OnlyLToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.OnlyLToolStripMenuItem.Text = "Only_L"
+        '
+        'OnlyRToolStripMenuItem
+        '
+        Me.OnlyRToolStripMenuItem.Name = "OnlyRToolStripMenuItem"
+        Me.OnlyRToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.OnlyRToolStripMenuItem.Text = "Only_R"
+        '
+        'DeInterlaceToolStripMenuItem
+        '
+        Me.DeInterlaceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Yadif10ToolStripMenuItem, Me.Yadif11ToolStripMenuItem})
+        Me.DeInterlaceToolStripMenuItem.Name = "DeInterlaceToolStripMenuItem"
+        Me.DeInterlaceToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.DeInterlaceToolStripMenuItem.Text = "DeInterlace"
+        '
+        'Yadif10ToolStripMenuItem
+        '
+        Me.Yadif10ToolStripMenuItem.Name = "Yadif10ToolStripMenuItem"
+        Me.Yadif10ToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
+        Me.Yadif10ToolStripMenuItem.Text = "yadif=1:0"
+        '
+        'Yadif11ToolStripMenuItem
+        '
+        Me.Yadif11ToolStripMenuItem.Name = "Yadif11ToolStripMenuItem"
+        Me.Yadif11ToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
+        Me.Yadif11ToolStripMenuItem.Text = "yadif=1:1"
         '
         'ChangeAllTransitionToolStripMenuItem
         '
         Me.ChangeAllTransitionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MIXToolStripMenuItem, Me.CutToolStripMenuItem, Me.WIPEToolStripMenuItem, Me.PUSHToolStripMenuItem, Me.SLIDEToolStripMenuItem})
         Me.ChangeAllTransitionToolStripMenuItem.Name = "ChangeAllTransitionToolStripMenuItem"
-        Me.ChangeAllTransitionToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.ChangeAllTransitionToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
         Me.ChangeAllTransitionToolStripMenuItem.Text = "Change All Transition"
         '
         'MIXToolStripMenuItem
@@ -765,7 +973,7 @@ Partial Class ucPlaylist
         'mnuPlayinffplay
         '
         Me.mnuPlayinffplay.Name = "mnuPlayinffplay"
-        Me.mnuPlayinffplay.Size = New System.Drawing.Size(288, 22)
+        Me.mnuPlayinffplay.Size = New System.Drawing.Size(286, 22)
         Me.mnuPlayinffplay.Text = "Play in ffplay"
         '
         'txtfps
@@ -911,14 +1119,14 @@ Partial Class ucPlaylist
         Me.gbcliplist.Controls.Add(Me.gbplayerforclipgrid)
         Me.gbcliplist.Location = New System.Drawing.Point(8, 565)
         Me.gbcliplist.Name = "gbcliplist"
-        Me.gbcliplist.Size = New System.Drawing.Size(1206, 373)
+        Me.gbcliplist.Size = New System.Drawing.Size(1189, 373)
         Me.gbcliplist.TabIndex = 1171
         Me.gbcliplist.TabStop = False
         Me.gbcliplist.Text = "ClipGrid"
         '
         'cmdSmallScreen
         '
-        Me.cmdSmallScreen.Location = New System.Drawing.Point(1124, 10)
+        Me.cmdSmallScreen.Location = New System.Drawing.Point(1096, 10)
         Me.cmdSmallScreen.Name = "cmdSmallScreen"
         Me.cmdSmallScreen.Size = New System.Drawing.Size(83, 23)
         Me.cmdSmallScreen.TabIndex = 1172
@@ -927,7 +1135,7 @@ Partial Class ucPlaylist
         '
         'cmdFullScreen
         '
-        Me.cmdFullScreen.Location = New System.Drawing.Point(1041, 9)
+        Me.cmdFullScreen.Location = New System.Drawing.Point(1015, 9)
         Me.cmdFullScreen.Name = "cmdFullScreen"
         Me.cmdFullScreen.Size = New System.Drawing.Size(75, 23)
         Me.cmdFullScreen.TabIndex = 1171
@@ -1033,7 +1241,7 @@ Partial Class ucPlaylist
         Me.dgvclips.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.dgvclips.RowHeadersWidth = 25
         Me.dgvclips.RowTemplate.Height = 30
-        Me.dgvclips.Size = New System.Drawing.Size(905, 219)
+        Me.dgvclips.Size = New System.Drawing.Size(878, 219)
         Me.dgvclips.TabIndex = 177
         '
         'cmsdgvclips
@@ -1105,14 +1313,14 @@ Partial Class ucPlaylist
         Me.gbplayerforclipgrid.Controls.Add(Me.Label222)
         Me.gbplayerforclipgrid.Location = New System.Drawing.Point(301, 261)
         Me.gbplayerforclipgrid.Name = "gbplayerforclipgrid"
-        Me.gbplayerforclipgrid.Size = New System.Drawing.Size(906, 70)
+        Me.gbplayerforclipgrid.Size = New System.Drawing.Size(878, 70)
         Me.gbplayerforclipgrid.TabIndex = 1170
         Me.gbplayerforclipgrid.TabStop = False
         '
         'cmdplaynextforclipgrid
         '
         Me.cmdplaynextforclipgrid.Image = CType(resources.GetObject("cmdplaynextforclipgrid.Image"), System.Drawing.Image)
-        Me.cmdplaynextforclipgrid.Location = New System.Drawing.Point(849, 16)
+        Me.cmdplaynextforclipgrid.Location = New System.Drawing.Point(804, 16)
         Me.cmdplaynextforclipgrid.Name = "cmdplaynextforclipgrid"
         Me.cmdplaynextforclipgrid.Size = New System.Drawing.Size(47, 37)
         Me.cmdplaynextforclipgrid.TabIndex = 1188
@@ -1122,7 +1330,7 @@ Partial Class ucPlaylist
         'cmdcuenextforclipgrid
         '
         Me.cmdcuenextforclipgrid.Image = CType(resources.GetObject("cmdcuenextforclipgrid.Image"), System.Drawing.Image)
-        Me.cmdcuenextforclipgrid.Location = New System.Drawing.Point(779, 16)
+        Me.cmdcuenextforclipgrid.Location = New System.Drawing.Point(739, 16)
         Me.cmdcuenextforclipgrid.Name = "cmdcuenextforclipgrid"
         Me.cmdcuenextforclipgrid.Size = New System.Drawing.Size(47, 37)
         Me.cmdcuenextforclipgrid.TabIndex = 1187
@@ -1132,7 +1340,7 @@ Partial Class ucPlaylist
         'cmdstopforclipgrid
         '
         Me.cmdstopforclipgrid.Image = CType(resources.GetObject("cmdstopforclipgrid.Image"), System.Drawing.Image)
-        Me.cmdstopforclipgrid.Location = New System.Drawing.Point(711, 16)
+        Me.cmdstopforclipgrid.Location = New System.Drawing.Point(667, 16)
         Me.cmdstopforclipgrid.Name = "cmdstopforclipgrid"
         Me.cmdstopforclipgrid.Size = New System.Drawing.Size(47, 37)
         Me.cmdstopforclipgrid.TabIndex = 1186
@@ -1142,7 +1350,7 @@ Partial Class ucPlaylist
         'cmdresumeforclipgrid
         '
         Me.cmdresumeforclipgrid.Image = CType(resources.GetObject("cmdresumeforclipgrid.Image"), System.Drawing.Image)
-        Me.cmdresumeforclipgrid.Location = New System.Drawing.Point(640, 16)
+        Me.cmdresumeforclipgrid.Location = New System.Drawing.Point(600, 16)
         Me.cmdresumeforclipgrid.Name = "cmdresumeforclipgrid"
         Me.cmdresumeforclipgrid.Size = New System.Drawing.Size(47, 37)
         Me.cmdresumeforclipgrid.TabIndex = 1185
@@ -1152,7 +1360,7 @@ Partial Class ucPlaylist
         'cmdforwardoneframeforclipgrid
         '
         Me.cmdforwardoneframeforclipgrid.Image = CType(resources.GetObject("cmdforwardoneframeforclipgrid.Image"), System.Drawing.Image)
-        Me.cmdforwardoneframeforclipgrid.Location = New System.Drawing.Point(502, 16)
+        Me.cmdforwardoneframeforclipgrid.Location = New System.Drawing.Point(477, 16)
         Me.cmdforwardoneframeforclipgrid.Name = "cmdforwardoneframeforclipgrid"
         Me.cmdforwardoneframeforclipgrid.Size = New System.Drawing.Size(47, 37)
         Me.cmdforwardoneframeforclipgrid.TabIndex = 1184
@@ -1162,7 +1370,7 @@ Partial Class ucPlaylist
         'cmdplayforclipgrid
         '
         Me.cmdplayforclipgrid.Image = CType(resources.GetObject("cmdplayforclipgrid.Image"), System.Drawing.Image)
-        Me.cmdplayforclipgrid.Location = New System.Drawing.Point(435, 16)
+        Me.cmdplayforclipgrid.Location = New System.Drawing.Point(422, 16)
         Me.cmdplayforclipgrid.Name = "cmdplayforclipgrid"
         Me.cmdplayforclipgrid.Size = New System.Drawing.Size(47, 37)
         Me.cmdplayforclipgrid.TabIndex = 1183
@@ -1172,7 +1380,7 @@ Partial Class ucPlaylist
         'cmdbackoneframeforclipgrid
         '
         Me.cmdbackoneframeforclipgrid.Image = CType(resources.GetObject("cmdbackoneframeforclipgrid.Image"), System.Drawing.Image)
-        Me.cmdbackoneframeforclipgrid.Location = New System.Drawing.Point(366, 16)
+        Me.cmdbackoneframeforclipgrid.Location = New System.Drawing.Point(358, 16)
         Me.cmdbackoneframeforclipgrid.Name = "cmdbackoneframeforclipgrid"
         Me.cmdbackoneframeforclipgrid.Size = New System.Drawing.Size(47, 37)
         Me.cmdbackoneframeforclipgrid.TabIndex = 1182
@@ -1194,7 +1402,7 @@ Partial Class ucPlaylist
         Me.cmdpauseforclipgrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdpauseforclipgrid.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdpauseforclipgrid.Image = Global.caspar_media_playback.My.Resources.Resources.pause3
-        Me.cmdpauseforclipgrid.Location = New System.Drawing.Point(561, 16)
+        Me.cmdpauseforclipgrid.Location = New System.Drawing.Point(541, 16)
         Me.cmdpauseforclipgrid.Name = "cmdpauseforclipgrid"
         Me.cmdpauseforclipgrid.Size = New System.Drawing.Size(47, 37)
         Me.cmdpauseforclipgrid.TabIndex = 159
@@ -1358,144 +1566,47 @@ Partial Class ucPlaylist
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
-        'File_Name
+        'ScaleModeToolStripMenuItem
         '
-        Me.File_Name.Frozen = True
-        Me.File_Name.HeaderText = "File_Name"
-        Me.File_Name.MinimumWidth = 280
-        Me.File_Name.Name = "File_Name"
-        Me.File_Name.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.File_Name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.File_Name.Width = 710
+        Me.ScaleModeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STRETCHToolStripMenuItem, Me.FITToolStripMenuItem, Me.FILLToolStripMenuItem, Me.ORIGINALToolStripMenuItem})
+        Me.ScaleModeToolStripMenuItem.Name = "ScaleModeToolStripMenuItem"
+        Me.ScaleModeToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.ScaleModeToolStripMenuItem.Text = "Scale Mode in NRK Build"
         '
-        'Start_Time
+        'STRETCHToolStripMenuItem
         '
-        Me.Start_Time.HeaderText = "Start_Time"
-        Me.Start_Time.MinimumWidth = 10
-        Me.Start_Time.Name = "Start_Time"
-        Me.Start_Time.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Start_Time.Width = 120
+        Me.STRETCHToolStripMenuItem.Name = "STRETCHToolStripMenuItem"
+        Me.STRETCHToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.STRETCHToolStripMenuItem.Text = "STRETCH"
         '
-        'x
+        'FITToolStripMenuItem
         '
-        Me.x.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.x.DefaultCellStyle = DataGridViewCellStyle3
-        Me.x.FalseValue = "0"
-        Me.x.FillWeight = 20.0!
-        Me.x.HeaderText = "Play"
-        Me.x.Name = "x"
-        Me.x.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.x.TrueValue = "1"
-        Me.x.Width = 30
+        Me.FITToolStripMenuItem.Name = "FITToolStripMenuItem"
+        Me.FITToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FITToolStripMenuItem.Text = "FIT"
         '
-        'Clip_Duration
+        'FILLToolStripMenuItem
         '
-        Me.Clip_Duration.HeaderText = "Duration"
-        Me.Clip_Duration.MinimumWidth = 10
-        Me.Clip_Duration.Name = "Clip_Duration"
-        Me.Clip_Duration.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Clip_Duration.Width = 120
+        Me.FILLToolStripMenuItem.Name = "FILLToolStripMenuItem"
+        Me.FILLToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FILLToolStripMenuItem.Text = "FILL"
         '
-        'Conversion
+        'ORIGINALToolStripMenuItem
         '
-        Me.Conversion.FalseValue = "0"
-        Me.Conversion.HeaderText = "Cnvrsn"
-        Me.Conversion.MinimumWidth = 45
-        Me.Conversion.Name = "Conversion"
-        Me.Conversion.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Conversion.TrueValue = "1"
-        Me.Conversion.Width = 45
-        '
-        'FileType
-        '
-        Me.FileType.HeaderText = "FileType"
-        Me.FileType.Items.AddRange(New Object() {"Program", "Promo", "Commercial", "Others"})
-        Me.FileType.Name = "FileType"
-        Me.FileType.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.FileType.Width = 90
-        '
-        'LoopVideo
-        '
-        Me.LoopVideo.HeaderText = "Loop"
-        Me.LoopVideo.Name = "LoopVideo"
-        Me.LoopVideo.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.LoopVideo.TrueValue = "loop"
-        Me.LoopVideo.Width = 35
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Thumbnail"
-        Me.Column3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
-        Me.Column3.MinimumWidth = 70
-        Me.Column3.Name = "Column3"
-        Me.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column3.Width = 70
-        '
-        'Transition
-        '
-        Me.Transition.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Transition.HeaderText = "Transition"
-        Me.Transition.Items.AddRange(New Object() {"CUT", "MIX", "PUSH", "WIPE", "SLIDE"})
-        Me.Transition.Name = "Transition"
-        Me.Transition.Width = 60
-        '
-        'T_Duration
-        '
-        Me.T_Duration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.T_Duration.HeaderText = "frame"
-        Me.T_Duration.Items.AddRange(New Object() {"10", "15", "20", "25", "30", "35", "40", "45", "50"})
-        Me.T_Duration.Name = "T_Duration"
-        Me.T_Duration.Width = 50
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "Follow Duration"
-        Me.Column11.Name = "Column11"
-        Me.Column11.Width = 50
-        '
-        'AudioLevel
-        '
-        Me.AudioLevel.HeaderText = "Audio Level"
-        Me.AudioLevel.Name = "AudioLevel"
-        Me.AudioLevel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.AudioLevel.Width = 40
-        '
-        'clmFilter
-        '
-        Me.clmFilter.HeaderText = "Filter"
-        Me.clmFilter.Name = "clmFilter"
-        Me.clmFilter.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Template_File
-        '
-        Me.Template_File.HeaderText = "Template File"
-        Me.Template_File.Name = "Template_File"
-        Me.Template_File.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Template_File.Width = 200
-        '
-        'BackIn
-        '
-        Me.BackIn.FalseValue = "0"
-        Me.BackIn.HeaderText = "Back In"
-        Me.BackIn.Name = "BackIn"
-        Me.BackIn.TrueValue = "1"
-        Me.BackIn.Width = 35
-        '
-        'AMCPCommands
-        '
-        Me.AMCPCommands.HeaderText = "AMCP Commands"
-        Me.AMCPCommands.Name = "AMCPCommands"
-        Me.AMCPCommands.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ORIGINALToolStripMenuItem.Name = "ORIGINALToolStripMenuItem"
+        Me.ORIGINALToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ORIGINALToolStripMenuItem.Text = "ORIGINAL"
         '
         'ucPlaylist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1221, 918)
+        Me.ClientSize = New System.Drawing.Size(1222, 921)
         Me.Controls.Add(Me.gbplaylist)
         Me.HideOnClose = True
+        Me.KeyPreview = True
         Me.Name = "ucPlaylist"
         Me.Text = "Playlist"
         Me.gbplaylist.ResumeLayout(False)
@@ -1648,6 +1759,13 @@ Partial Class ucPlaylist
     Friend WithEvents cmdstopforclipgrid As Button
     Friend WithEvents cmdcuenextforclipgrid As Button
     Friend WithEvents cmdplaynextforclipgrid As Button
+    Friend WithEvents ForIMXFileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AudioChannelLayoutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LToBothToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RToBothToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MixToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents OnlyLToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OnlyRToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents File_Name As DataGridViewTextBoxColumn
     Friend WithEvents Start_Time As DataGridViewTextBoxColumn
     Friend WithEvents x As DataGridViewCheckBoxColumn
@@ -1664,4 +1782,12 @@ Partial Class ucPlaylist
     Friend WithEvents Template_File As DataGridViewTextBoxColumn
     Friend WithEvents BackIn As DataGridViewCheckBoxColumn
     Friend WithEvents AMCPCommands As DataGridViewTextBoxColumn
+    Friend WithEvents DeInterlaceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Yadif10ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Yadif11ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ScaleModeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents STRETCHToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FITToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FILLToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ORIGINALToolStripMenuItem As ToolStripMenuItem
 End Class

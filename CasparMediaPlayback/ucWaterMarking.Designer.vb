@@ -267,7 +267,7 @@ Partial Class ucWaterMarking
         'cmbwm
         '
         Me.cmbwm.FormattingEnabled = True
-        Me.cmbwm.Items.AddRange(New Object() {"DD EXCLUSIVE", "SAHYADRI ONLY", "DD SPORTS ONLY"})
+        Me.cmbwm.Items.AddRange(New Object() {"DD EXCLUSIVE", "SAHYADRI ONLY", "DD SPORTS ONLY", "DD ARCHIVES"})
         Me.cmbwm.Location = New System.Drawing.Point(13, 113)
         Me.cmbwm.Name = "cmbwm"
         Me.cmbwm.Size = New System.Drawing.Size(153, 21)
@@ -466,8 +466,9 @@ Partial Class ucWaterMarking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(373, 329)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gbWaterMarking)
         Me.HideOnClose = True
         Me.Name = "ucWaterMarking"

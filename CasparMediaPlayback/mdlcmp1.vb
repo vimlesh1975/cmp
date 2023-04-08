@@ -4,6 +4,7 @@ Imports System.Text
 Imports System.Text.RegularExpressions
 Imports System.Threading.Tasks
 Imports MediaInfoLib
+'Imports Microsoft.Win32
 Imports Svt.Caspar
 
 Module mdlcmp1
@@ -107,6 +108,55 @@ Module mdlcmp1
     'for osc end
 
     'for composition end---------------------------------------------------------
+
+    Public screenConsumres = (New Object() {
+    "Screen consumer [1|PAL]",
+     "Screen consumer [2|PAL]",
+     "Screen consumer [3|PAL]",
+     "Screen consumer [4|PAL]",
+     "Screen consumer [1|1080i5000]",
+     "Screen consumer [2|1080i5000]",
+     "Screen consumer [3|1080i5000]",
+     "Screen consumer [4|1080i5000]",
+     "Screen consumer [1|NTSC]",
+     "Screen consumer [2|NTSC]",
+     "Screen consumer [600|PAL]",
+     "Screen consumer [600|1080I5000]",
+     "Screen consumer [1|1080I5994]",
+     "Screen consumer [1|1080I6000]",
+     "Screen consumer [1|1080p2398]",
+     "Screen consumer [1|1080p2400]",
+     "Screen consumer [1|1080p2500]",
+     "Screen consumer [1|1080p2997]",
+     "Screen consumer [1|1080p3000]",
+     "Screen consumer [1|1080p5000]",
+     "Screen consumer [1|1080p5994]",
+     "Screen consumer [1|1080p6000]",
+     "Screen consumer [1|1556p2398]",
+     "Screen consumer [1|1556p2400]",
+     "Screen consumer [1|1556p2500]",
+     "Screen consumer [1|2160p2398]",
+     "Screen consumer [1|2160p2400]",
+     "Screen consumer [1|2160p2500]",
+     "Screen consumer [1| 2160p2997]",
+     "Screen consumer [1|2160p3000]",
+     "Screen consumer [1|576p2500]",
+     "Screen consumer [1|720p2398]",
+     "Screen consumer [1|720p2400]",
+     "Screen consumer [1|720p2500]",
+     "Screen consumer [1|720p2997]",
+     "Screen consumer [1|720p3000]",
+     "Screen consumer [1|720p5000]",
+     "Screen consumer [1|720p5994]",
+     "Screen consumer [1|720p6000]",
+     "Screen consumer [1|dci2160p2398]",
+     "Screen consumer [1|dci2160p2400]",
+     "Screen consumer [1|dci2160p2500]",
+     "Screen consumer [1|dci1080p2398]",
+     "Screen consumer [1|dci1080p2400]",
+     "Screen consumer [1|dci1080p2500]"
+    })
+
     Public Function fillcommand(aaa As Control) As String()
 
         On Error Resume Next
@@ -158,8 +208,7 @@ Module mdlcmp1
         Next
         Return bResult
     End Function
-
-    Public Sub playinvlc(filename As String)
+    Public Function vlcplayerpath() As String
         On Error Resume Next
         Dim PlayerPath As String = ""
         If System.IO.File.Exists("C:\Program Files\VideoLAN\VLC\vlc.exe") Then
@@ -169,15 +218,28 @@ Module mdlcmp1
         Else
             PlayerPath = "C:\casparcg\mydata\vlc\vlc-2.2.1-win32\vlc-2.2.1\vlc.exe"
         End If
+        Return PlayerPath
+    End Function
+
+    Public Sub playinvlc(filename As String)
+        On Error Resume Next
+
         Dim process As Process = New Process
-        process.StartInfo.FileName = PlayerPath
+        process.StartInfo.FileName = vlcplayerpath() 'PlayerPath
         process.StartInfo.Verb = "open"
+
+        If filename.ToLower.Contains("p://") Then
+            process.StartInfo.Arguments = """" & filename & """"
+            GoTo 20
+        End If
+
         If System.IO.Path.GetExtension(filename) = ".txt" Then
             readsubclip(filename)
             process.StartInfo.Arguments = """" & Replace(mediafullpath & masterfilename, "/", "\") & """"
         Else
             process.StartInfo.Arguments = """" & Replace(filename, "/", "\") & """"
         End If
+20:
         process.Start()
     End Sub
     Public Sub playinffplay(filename As String)
@@ -187,12 +249,20 @@ Module mdlcmp1
         Dim process As Process = New Process
         process.StartInfo.FileName = PlayerPath
         process.StartInfo.Verb = "open"
+
+        If filename.ToLower.Contains("p://") Then
+            process.StartInfo.Arguments = """" & filename & """"
+            GoTo 20
+        End If
+
         If System.IO.Path.GetExtension(filename) = ".txt" Then
             readsubclip(filename)
             process.StartInfo.Arguments = """" & Replace(mediafullpath & masterfilename, "/", "\") & """"
         Else
             process.StartInfo.Arguments = """" & Replace(filename, "/", "\") & """"
         End If
+
+20:
         process.Start()
     End Sub
 
@@ -235,6 +305,7 @@ Module mdlcmp1
 
         Dim obj As New frmfileinformation
         With obj
+            obj.Text = filename
             '.dgvfileinformation.Rows.Clear()
             For iii = 0 To aa.Length
                 .dgvfileinformation.Rows.Add()
@@ -311,7 +382,20 @@ Module mdlcmp1
         Stream.Write(Bytes, 0, Bytes.Length)
         Return
     End Sub
-
+    Function onlyfilename(ss As String) As String
+        Dim aa1 As Array = Split(Replace(ss, "\", "/"), "/")
+        ss = aa1(aa1.Length - 1)
+        Return ss
+    End Function
+    Function onlyfilenamewithoutextension(ss As String) As String
+        ss = onlyfilename(ss)
+        Dim fileExtPos As Integer = ss.LastIndexOf(".")
+        If (fileExtPos >= 0) Then
+            Return ss.Substring(0, fileExtPos)
+        Else
+            Return ss
+        End If
+    End Function
     Function ModifyFilename(FilenameWithExtension As String) As String
         On Error Resume Next
 
@@ -483,8 +567,9 @@ Module mdlcmp1
         If aa.ShowDialog = Windows.Forms.DialogResult.OK Then
             sender.ImageLocation = aa.FileName
             txt.Text = UCase(Split(aa.SafeFileName, ".")(0))
-            aa.Dispose()
+
         End If
+        aa.Dispose()
     End Sub
     Sub insert(ByVal dgv As DataGridView)
         On Error Resume Next
@@ -646,8 +731,9 @@ Module mdlcmp1
         If aa.ShowDialog = Windows.Forms.DialogResult.OK Then
             sender.ImageLocation = aa.FileName
             txt.Text = UCase(Split(aa.SafeFileName, ".")(0))
-            aa.Dispose()
+
         End If
+        aa.Dispose()
     End Sub
 
     Sub insertsg(ByVal dgv As DataGridView)
@@ -780,15 +866,19 @@ Module mdlcmp1
         str = Replace(str, """", "&#34;")
         str = Replace(str, "<", "&#60;")
         str = Replace(str, "\", "&#92;")
+        str = Replace(str, vbCrLf, "<br/>") ' shuld be placed last so that it is not replaced.
         str = Replace(str, vbCr, "<br/>")
         str = Replace(str, vbLf, "<br/>")
-        str = Replace(str, vbCrLf, "<br/>") ' shuld be placed last so that it is not replaced.
+
         Return str
     End Function
-    Function GetProcessMemory(processname As String) As String
-        On Error Resume Next
-        Return Int(FormatNumber((Process.GetProcessesByName(processname)(0).WorkingSet64 / 1024) / 1024)) & "MB"
+    Public Function replacestring(str As String) As String ' funtion is important for image location
+        str = Replace(str, " ", "xxx")
+        str = Replace(str, "'", "yyy") '&apos not working
+        str = Replace(str, """", "zzz")
+        Return str
     End Function
+
 
     Function IsValidImage(filename As String) As Boolean
         Try
@@ -803,4 +893,30 @@ Module mdlcmp1
         Dim pointResult As Point = New Point(Integer.Parse(g(0)), Integer.Parse(g(1)))
         Return pointResult
     End Function
+    Function IfRunning(processName As String) As Boolean
+        Dim p = Process.GetProcessesByName(processName)
+        If p.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Public Sub EnsureBrowserEmulationEnabled(ByVal Optional exename As String = "xyz.exe", ByVal Optional uninstall As Boolean = False)
+        Try
+
+            Using rk = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION", True)
+
+                If Not uninstall Then
+                    Dim value = rk.GetValue(exename)
+                    If value Is Nothing Then rk.SetValue(exename, CUInt(11001), Microsoft.Win32.RegistryValueKind.DWord)
+                Else
+                    rk.DeleteValue(exename)
+                End If
+            End Using
+
+        Catch
+        End Try
+    End Sub
+
 End Module

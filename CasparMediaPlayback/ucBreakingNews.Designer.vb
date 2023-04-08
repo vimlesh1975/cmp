@@ -29,6 +29,22 @@ Partial Class ucBreakingNews
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbbreakingnews = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.chkusecurrentstory = New System.Windows.Forms.CheckBox()
+        Me.txtcommand = New System.Windows.Forms.TextBox()
+        Me.txtcurrentstory = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtport = New System.Windows.Forms.TextBox()
+        Me.txtdatabasemysql = New System.Windows.Forms.TextBox()
+        Me.txtpasswordMysql = New System.Windows.Forms.TextBox()
+        Me.txtusemysql = New System.Windows.Forms.TextBox()
+        Me.txtservermysql = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.cmdPlayHTML = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,15 +80,19 @@ Partial Class ucBreakingNews
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmdplaybreakingnews = New System.Windows.Forms.Button()
         Me.cmdstopbrekingnews = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.cmblayerbreakingnews = New System.Windows.Forms.ComboBox()
         Me.tmrshowdata = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.tmrsn = New System.Windows.Forms.Timer(Me.components)
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbbreakingnews.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvbreakingnews, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,6 +101,7 @@ Partial Class ucBreakingNews
         'gbbreakingnews
         '
         Me.gbbreakingnews.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gbbreakingnews.Controls.Add(Me.GroupBox1)
         Me.gbbreakingnews.Controls.Add(Me.cmdPlayHTML)
         Me.gbbreakingnews.Controls.Add(Me.MenuStrip1)
         Me.gbbreakingnews.Controls.Add(Me.GroupBox2)
@@ -102,10 +123,168 @@ Partial Class ucBreakingNews
         Me.gbbreakingnews.Controls.Add(Me.cmblayerbreakingnews)
         Me.gbbreakingnews.Location = New System.Drawing.Point(3, 4)
         Me.gbbreakingnews.Name = "gbbreakingnews"
-        Me.gbbreakingnews.Size = New System.Drawing.Size(1209, 450)
+        Me.gbbreakingnews.Size = New System.Drawing.Size(1083, 450)
         Me.gbbreakingnews.TabIndex = 532
         Me.gbbreakingnews.TabStop = False
         Me.gbbreakingnews.Text = "BreakingNews"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.PeachPuff
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Controls.Add(Me.chkusecurrentstory)
+        Me.GroupBox1.Controls.Add(Me.txtcommand)
+        Me.GroupBox1.Controls.Add(Me.txtcurrentstory)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.txtport)
+        Me.GroupBox1.Controls.Add(Me.txtdatabasemysql)
+        Me.GroupBox1.Controls.Add(Me.txtpasswordMysql)
+        Me.GroupBox1.Controls.Add(Me.txtusemysql)
+        Me.GroupBox1.Controls.Add(Me.txtservermysql)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Location = New System.Drawing.Point(767, 108)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(310, 226)
+        Me.GroupBox1.TabIndex = 752
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "MySql Setting for getting Current strory number"
+        Me.GroupBox1.Visible = False
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(42, 203)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(106, 13)
+        Me.Label13.TabIndex = 753
+        Me.Label13.Text = "Current story Number"
+        '
+        'chkusecurrentstory
+        '
+        Me.chkusecurrentstory.AutoSize = True
+        Me.chkusecurrentstory.Location = New System.Drawing.Point(51, 180)
+        Me.chkusecurrentstory.Name = "chkusecurrentstory"
+        Me.chkusecurrentstory.Size = New System.Drawing.Size(106, 17)
+        Me.chkusecurrentstory.TabIndex = 754
+        Me.chkusecurrentstory.Text = "Use CurrentStory"
+        Me.chkusecurrentstory.UseVisualStyleBackColor = True
+        '
+        'txtcommand
+        '
+        Me.txtcommand.Location = New System.Drawing.Point(60, 144)
+        Me.txtcommand.Name = "txtcommand"
+        Me.txtcommand.Size = New System.Drawing.Size(209, 20)
+        Me.txtcommand.TabIndex = 24
+        Me.txtcommand.Text = "SELECT curstory FROM `currentstory`;"
+        '
+        'txtcurrentstory
+        '
+        Me.txtcurrentstory.Location = New System.Drawing.Point(152, 203)
+        Me.txtcurrentstory.Name = "txtcurrentstory"
+        Me.txtcurrentstory.Size = New System.Drawing.Size(36, 20)
+        Me.txtcurrentstory.TabIndex = 718
+        Me.txtcurrentstory.Text = "1"
+        Me.txtcurrentstory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(1, 147)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 13)
+        Me.Label4.TabIndex = 23
+        Me.Label4.Text = "command"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(28, 121)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(26, 13)
+        Me.Label5.TabIndex = 14
+        Me.Label5.Text = "Port"
+        '
+        'txtport
+        '
+        Me.txtport.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "txtsqlport", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.txtport.Location = New System.Drawing.Point(60, 118)
+        Me.txtport.Name = "txtport"
+        Me.txtport.Size = New System.Drawing.Size(137, 20)
+        Me.txtport.TabIndex = 13
+        Me.txtport.Text = Global.caspar_media_playback.My.MySettings.Default.txtsqlport
+        '
+        'txtdatabasemysql
+        '
+        Me.txtdatabasemysql.Location = New System.Drawing.Point(60, 92)
+        Me.txtdatabasemysql.Name = "txtdatabasemysql"
+        Me.txtdatabasemysql.Size = New System.Drawing.Size(137, 20)
+        Me.txtdatabasemysql.TabIndex = 22
+        Me.txtdatabasemysql.Text = "c1news"
+        '
+        'txtpasswordMysql
+        '
+        Me.txtpasswordMysql.Location = New System.Drawing.Point(60, 66)
+        Me.txtpasswordMysql.Name = "txtpasswordMysql"
+        Me.txtpasswordMysql.Size = New System.Drawing.Size(137, 20)
+        Me.txtpasswordMysql.TabIndex = 21
+        Me.txtpasswordMysql.Text = "itddkchn"
+        '
+        'txtusemysql
+        '
+        Me.txtusemysql.Location = New System.Drawing.Point(60, 41)
+        Me.txtusemysql.Name = "txtusemysql"
+        Me.txtusemysql.Size = New System.Drawing.Size(137, 20)
+        Me.txtusemysql.TabIndex = 20
+        Me.txtusemysql.Text = "itmaint"
+        '
+        'txtservermysql
+        '
+        Me.txtservermysql.Location = New System.Drawing.Point(60, 18)
+        Me.txtservermysql.Name = "txtservermysql"
+        Me.txtservermysql.Size = New System.Drawing.Size(137, 20)
+        Me.txtservermysql.TabIndex = 19
+        Me.txtservermysql.Text = "localhost"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 48)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(29, 13)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "User"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(4, 99)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(53, 13)
+        Me.Label8.TabIndex = 15
+        Me.Label8.Text = "Database"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(4, 70)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(53, 13)
+        Me.Label9.TabIndex = 14
+        Me.Label9.Text = "Password"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(6, 25)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(38, 13)
+        Me.Label10.TabIndex = 13
+        Me.Label10.Text = "Server"
         '
         'cmdPlayHTML
         '
@@ -203,7 +382,7 @@ Partial Class ucBreakingNews
         Me.GroupBox2.Controls.Add(Me.cmdhidetime)
         Me.GroupBox2.Controls.Add(Me.cmdshowtime)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(767, 104)
+        Me.GroupBox2.Location = New System.Drawing.Point(767, 8)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(310, 94)
         Me.GroupBox2.TabIndex = 715
@@ -343,7 +522,7 @@ Partial Class ucBreakingNews
         'cmddeleteclipbreakingnews
         '
         Me.cmddeleteclipbreakingnews.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmddeleteclipbreakingnews.Image = Global.caspar_media_playback.My.Resources.Resources.minus
+        Me.cmddeleteclipbreakingnews.Image = CType(resources.GetObject("cmddeleteclipbreakingnews.Image"), System.Drawing.Image)
         Me.cmddeleteclipbreakingnews.Location = New System.Drawing.Point(213, 74)
         Me.cmddeleteclipbreakingnews.Name = "cmddeleteclipbreakingnews"
         Me.cmddeleteclipbreakingnews.Size = New System.Drawing.Size(33, 22)
@@ -393,7 +572,7 @@ Partial Class ucBreakingNews
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvbreakingnews.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvbreakingnews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvbreakingnews.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewCheckBoxColumn1, Me.Column9, Me.Column10})
+        Me.dgvbreakingnews.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewCheckBoxColumn1, Me.Column9, Me.Column10, Me.sn})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -416,7 +595,7 @@ Partial Class ucBreakingNews
         Me.dgvbreakingnews.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvbreakingnews.RowHeadersWidth = 25
         Me.dgvbreakingnews.RowTemplate.Height = 30
-        Me.dgvbreakingnews.Size = New System.Drawing.Size(754, 341)
+        Me.dgvbreakingnews.Size = New System.Drawing.Size(738, 341)
         Me.dgvbreakingnews.TabIndex = 486
         '
         'DataGridViewTextBoxColumn1
@@ -427,7 +606,7 @@ Partial Class ucBreakingNews
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DataGridViewTextBoxColumn1.Width = 440
+        Me.DataGridViewTextBoxColumn1.Width = 375
         '
         'DataGridViewCheckBoxColumn1
         '
@@ -443,13 +622,18 @@ Partial Class ucBreakingNews
         '
         Me.Column9.HeaderText = "xf0"
         Me.Column9.Name = "Column9"
-        Me.Column9.Width = 125
         '
         'Column10
         '
         Me.Column10.HeaderText = "xf1"
         Me.Column10.Name = "Column10"
-        Me.Column10.Width = 125
+        '
+        'sn
+        '
+        Me.sn.FillWeight = 30.0!
+        Me.sn.HeaderText = "StoryNumber"
+        Me.sn.Name = "sn"
+        Me.sn.Width = 75
         '
         'cmdplaybreakingnews
         '
@@ -503,6 +687,10 @@ Partial Class ucBreakingNews
         '
         Me.tmrshowdata.Interval = 4000
         '
+        'tmrsn
+        '
+        Me.tmrsn.Interval = 1000
+        '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.HeaderText = "xf0"
@@ -515,6 +703,13 @@ Partial Class ucBreakingNews
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.Width = 125
         '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.FillWeight = 30.0!
+        Me.DataGridViewTextBoxColumn4.HeaderText = "StoryNu"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 30
+        '
         'ucBreakingNews
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -522,9 +717,11 @@ Partial Class ucBreakingNews
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Controls.Add(Me.gbbreakingnews)
         Me.Name = "ucBreakingNews"
-        Me.Size = New System.Drawing.Size(1216, 458)
+        Me.Size = New System.Drawing.Size(1091, 458)
         Me.gbbreakingnews.ResumeLayout(False)
         Me.gbbreakingnews.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -571,10 +768,29 @@ Partial Class ucBreakingNews
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents SaveAsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InsertToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents txtcurrentstory As TextBox
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents tmrsn As Timer
+    Friend WithEvents Label13 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtport As TextBox
+    Friend WithEvents txtdatabasemysql As TextBox
+    Friend WithEvents txtpasswordMysql As TextBox
+    Friend WithEvents txtusemysql As TextBox
+    Friend WithEvents txtservermysql As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txtcommand As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents chkusecurrentstory As CheckBox
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents SaveAsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents InsertToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents sn As DataGridViewTextBoxColumn
 End Class

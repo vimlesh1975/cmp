@@ -24,6 +24,8 @@ Partial Class ucRemoteLogging
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.gbRemoteLogging = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label274 = New System.Windows.Forms.Label()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.Label276 = New System.Windows.Forms.Label()
@@ -37,6 +39,8 @@ Partial Class ucRemoteLogging
         'gbRemoteLogging
         '
         Me.gbRemoteLogging.BackColor = System.Drawing.Color.Wheat
+        Me.gbRemoteLogging.Controls.Add(Me.Label1)
+        Me.gbRemoteLogging.Controls.Add(Me.TextBox1)
         Me.gbRemoteLogging.Controls.Add(Me.Label274)
         Me.gbRemoteLogging.Controls.Add(Me.LinkLabel3)
         Me.gbRemoteLogging.Controls.Add(Me.Label276)
@@ -46,15 +50,37 @@ Partial Class ucRemoteLogging
         Me.gbRemoteLogging.Controls.Add(Me.cmdConnectRemoteLogging)
         Me.gbRemoteLogging.Location = New System.Drawing.Point(2, 3)
         Me.gbRemoteLogging.Name = "gbRemoteLogging"
-        Me.gbRemoteLogging.Size = New System.Drawing.Size(660, 605)
+        Me.gbRemoteLogging.Size = New System.Drawing.Size(559, 730)
         Me.gbRemoteLogging.TabIndex = 1175
         Me.gbRemoteLogging.TabStop = False
         Me.gbRemoteLogging.Text = "Remote Logging for Server 2.1 ( Useful when server is on rempte PC)"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(351, 4)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(134, 13)
+        Me.Label1.TabIndex = 1180
+        Me.Label1.Text = "Put a configuration like this"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(345, 22)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.TextBox1.Size = New System.Drawing.Size(206, 139)
+        Me.TextBox1.TabIndex = 1179
+        Me.TextBox1.Text = "<controllers>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    <tcp>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "      <port>5250</port>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "      <protocol>AMCP</protocol" &
+    ">" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    </tcp>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    <tcp>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "      <port>3250</port>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "      <protocol>LOG</protocol" &
+    ">" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    </tcp>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  </controllers>"
+        '
         'Label274
         '
         Me.Label274.AutoSize = True
-        Me.Label274.Location = New System.Drawing.Point(397, 9)
+        Me.Label274.Location = New System.Drawing.Point(25, 60)
         Me.Label274.Name = "Label274"
         Me.Label274.Size = New System.Drawing.Size(137, 13)
         Me.Label274.TabIndex = 1178
@@ -63,7 +89,7 @@ Partial Class ucRemoteLogging
         'LinkLabel3
         '
         Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Location = New System.Drawing.Point(397, 26)
+        Me.LinkLabel3.Location = New System.Drawing.Point(25, 77)
         Me.LinkLabel3.Name = "LinkLabel3"
         Me.LinkLabel3.Size = New System.Drawing.Size(140, 13)
         Me.LinkLabel3.TabIndex = 1177
@@ -90,11 +116,11 @@ Partial Class ucRemoteLogging
         '
         'txtgbRemoteLogging
         '
-        Me.txtgbRemoteLogging.Location = New System.Drawing.Point(12, 48)
+        Me.txtgbRemoteLogging.Location = New System.Drawing.Point(12, 165)
         Me.txtgbRemoteLogging.Multiline = True
         Me.txtgbRemoteLogging.Name = "txtgbRemoteLogging"
         Me.txtgbRemoteLogging.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtgbRemoteLogging.Size = New System.Drawing.Size(636, 551)
+        Me.txtgbRemoteLogging.Size = New System.Drawing.Size(539, 540)
         Me.txtgbRemoteLogging.TabIndex = 8
         '
         'cmddisConnectRemoteLogging
@@ -120,8 +146,9 @@ Partial Class ucRemoteLogging
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(666, 613)
+        Me.ClientSize = New System.Drawing.Size(1221, 749)
         Me.Controls.Add(Me.gbRemoteLogging)
         Me.HideOnClose = True
         Me.Name = "ucRemoteLogging"
@@ -139,5 +166,6 @@ Partial Class ucRemoteLogging
     Friend WithEvents cmdConnectRemoteLogging As System.Windows.Forms.Button
     Friend WithEvents Label274 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
-
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox1 As TextBox
 End Class

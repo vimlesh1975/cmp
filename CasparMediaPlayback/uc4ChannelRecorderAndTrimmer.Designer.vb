@@ -51,7 +51,7 @@ Partial Class uc4ChannelRecorderAndTrimmer
         'UcSystemAudio1
         '
         Me.UcSystemAudio1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcSystemAudio1.Location = New System.Drawing.Point(840, 802)
+        Me.UcSystemAudio1.Location = New System.Drawing.Point(840, 826)
         Me.UcSystemAudio1.Name = "UcSystemAudio1"
         Me.UcSystemAudio1.Size = New System.Drawing.Size(137, 102)
         Me.UcSystemAudio1.TabIndex = 5
@@ -63,7 +63,7 @@ Partial Class uc4ChannelRecorderAndTrimmer
         Me.UcnewTrimmer11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.UcnewTrimmer11.Location = New System.Drawing.Point(634, 296)
         Me.UcnewTrimmer11.Name = "UcnewTrimmer11"
-        Me.UcnewTrimmer11.Size = New System.Drawing.Size(484, 503)
+        Me.UcnewTrimmer11.Size = New System.Drawing.Size(484, 524)
         Me.UcnewTrimmer11.TabIndex = 4
         '
         'UcnewRecorder4
@@ -106,8 +106,9 @@ Partial Class uc4ChannelRecorderAndTrimmer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1171, 945)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gb4ChannelRecorderAndTrimmer)
         Me.HideOnClose = True
         Me.Name = "uc4ChannelRecorderAndTrimmer"

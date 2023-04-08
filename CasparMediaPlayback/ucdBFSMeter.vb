@@ -210,8 +210,8 @@
     Private Sub cmdL_to_Both_Click(sender As Object, e As EventArgs) Handles cmdL_to_Both.Click
         On Error Resume Next
         With frmmediaplayer
-            If Mid(.lblserverversion.Text, 1, 3) = "2.2" Or Mid(.lblserverversion.Text, 1, 3) = "2.3" Then
-                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(56).Cells(1).Value) & """" & " seek " & (ucOSC.dgvosc.Rows(6).Cells(1).Value + 3) * 2 & " channel_layout L_to_Both")
+            If ServerVersion > 2.1 Then
+                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(56).Cells(1).Value) & """" & " seek " & (ucOSC.dgvosc.Rows(6).Cells(1).Value + 3) * 2 & " af pan=stereo|c0=c0|c1=c0")
 
             Else
                 CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(8).Cells(1).Value) & """" & " seek " & ucOSC.dgvosc.Rows(6).Cells(1).Value + 12 & " channel_layout L_to_Both")
@@ -223,8 +223,8 @@
     Private Sub cmdR_to_Both_Click(sender As Object, e As EventArgs) Handles cmdR_to_Both.Click
         On Error Resume Next
         With frmmediaplayer
-            If Mid(.lblserverversion.Text, 1, 3) = "2.2" Or Mid(.lblserverversion.Text, 1, 3) = "2.3" Then
-                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(56).Cells(1).Value) & """" & " seek " & (ucOSC.dgvosc.Rows(6).Cells(1).Value + 3) * 2 & " channel_layout R_to_Both")
+            If ServerVersion > 2.1 Then
+                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(56).Cells(1).Value) & """" & " seek " & (ucOSC.dgvosc.Rows(6).Cells(1).Value + 3) * 2 & " af pan=stereo|c0=c1|c1=c1")
             Else
                 CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(8).Cells(1).Value) & """" & " seek " & ucOSC.dgvosc.Rows(6).Cells(1).Value + 12 & " channel_layout R_to_Both")
 
@@ -241,4 +241,52 @@
         CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & g_int_PlaylistLayer & " " & """" & cmbmediaforaudiotest.Text & """" & " CHANNEL_LAYOUT " & """" & cmbchannel_layout.Text & """" & " loop")
 
     End Sub
+
+    Private Sub CmdMix_Click(sender As Object, e As EventArgs) Handles cmdMix.Click
+        On Error Resume Next
+        With frmmediaplayer
+            If ServerVersion > 2.1 Then
+                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(56).Cells(1).Value) & """" & " seek " & (ucOSC.dgvosc.Rows(6).Cells(1).Value + 3) * 2 & " af pan=stereo|c0=0.7c0+0.7c1|c1=0.7c0+0.7c1")
+            Else
+                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(8).Cells(1).Value) & """" & " seek " & ucOSC.dgvosc.Rows(6).Cells(1).Value + 12 & " channel_layout Mix")
+
+            End If
+        End With
+    End Sub
+
+    Private Sub CmdOnly_L_Click(sender As Object, e As EventArgs) Handles cmdOnly_L.Click
+        On Error Resume Next
+        With frmmediaplayer
+            If ServerVersion > 2.1 Then
+                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(56).Cells(1).Value) & """" & " seek " & (ucOSC.dgvosc.Rows(6).Cells(1).Value + 3) * 2 & " af pan=stereo|c0=c0|c1=0c1")
+            Else
+                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(8).Cells(1).Value) & """" & " seek " & ucOSC.dgvosc.Rows(6).Cells(1).Value + 12 & " channel_layout Only_L")
+
+            End If
+        End With
+    End Sub
+
+    Private Sub CmdOnly_R_Click(sender As Object, e As EventArgs) Handles cmdOnly_R.Click
+        On Error Resume Next
+        With frmmediaplayer
+            If ServerVersion > 2.1 Then
+                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(56).Cells(1).Value) & """" & " seek " & (ucOSC.dgvosc.Rows(6).Cells(1).Value + 3) * 2 & " af pan=stereo|c0=0c0|c1=c1")
+            Else
+                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(8).Cells(1).Value) & """" & " seek " & ucOSC.dgvosc.Rows(6).Cells(1).Value + 12 & " channel_layout Only_R")
+
+            End If
+        End With
+    End Sub
+
+    Private Sub TbAudioControl_Scroll(sender As Object, e As EventArgs) Handles tbAudioControl0.Scroll, tbAudioControl1.Scroll, tbAudioControl2.Scroll, tbAudioControl3.Scroll, tbAudioControl4.Scroll, tbAudioControl5.Scroll, tbAudioControl6.Scroll, tbAudioControl7.Scroll, cmbAudioControl0.SelectedIndexChanged, cmbAudioControl1.SelectedIndexChanged, cmbAudioControl2.SelectedIndexChanged, cmbAudioControl3.SelectedIndexChanged, cmbAudioControl4.SelectedIndexChanged, cmbAudioControl5.SelectedIndexChanged, cmbAudioControl6.SelectedIndexChanged, cmbAudioControl7.SelectedIndexChanged
+        On Error Resume Next
+        With frmmediaplayer
+            If ServerVersion > 2.1 Then
+                CasparDevice.SendString("play " & .cmbchannel.Text & "-" & .cmblayervideo.Text & " " & """" & ModifyFilename(ucOSC.dgvosc.Rows(56).Cells(1).Value) & """" & " seek " & (ucOSC.dgvosc.Rows(6).Cells(1).Value + 3) * 2 & " af pan=octagonal|c0=" & (tbAudioControl0.Value / 10) & cmbAudioControl0.Text & "|c1=" & (tbAudioControl1.Value / 10) & cmbAudioControl1.Text & "|c2=" & (tbAudioControl2.Value / 10) & cmbAudioControl2.Text & "|c3=" & (tbAudioControl3.Value / 10) & cmbAudioControl3.Text & "|c4=" & (tbAudioControl4.Value / 10) & cmbAudioControl4.Text & "|c5=" & (tbAudioControl5.Value / 10) & cmbAudioControl5.Text & "|c6=" & (tbAudioControl6.Value / 10) & cmbAudioControl6.Text & "|c7=" & (tbAudioControl7.Value / 10) & cmbAudioControl7.Text)
+
+            End If
+        End With
+    End Sub
+
+
 End Class

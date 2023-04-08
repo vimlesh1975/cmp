@@ -145,7 +145,7 @@ Public Class ucPlaylist
         Dim i As Integer
         For i = 0 To dgv1.Rows.Count - 1
             dgv1.Item("x", i).Value = 1
-            dgv1.Item("Transition", i).Value = "CUT"
+            dgv1.Item("Transition", i).Value = "MIX"
             dgv1.Item("T_Duration", i).Value = 10
             dgv1.Item("AudioLevel", i).Value = 1.0
 
@@ -903,7 +903,7 @@ Public Class ucPlaylist
 
         dgv1.Rows(dgv1.CurrentRow.Index).Cells("File_Name").Value = "end"
         dgv1.Rows(dgv1.CurrentRow.Index).Cells("x").Value = 1
-        dgv1.Rows(dgv1.CurrentRow.Index).Cells("Transition").Value = "CUT"
+        dgv1.Rows(dgv1.CurrentRow.Index).Cells("Transition").Value = "MIX"
         dgv1.Rows(dgv1.CurrentRow.Index).Cells("T_Duration").Value = 10
     End Sub
     Sub insertlivedecklink(devicenumber As Integer)
@@ -913,7 +913,7 @@ Public Class ucPlaylist
 
         dgv1.Rows(dgv1.CurrentRow.Index).Cells("File_Name").Value = "decklink " & devicenumber
         dgv1.Rows(dgv1.CurrentRow.Index).Cells("x").Value = 1
-        dgv1.Rows(dgv1.CurrentRow.Index).Cells("Transition").Value = "CUT"
+        dgv1.Rows(dgv1.CurrentRow.Index).Cells("Transition").Value = "MIX"
         dgv1.Rows(dgv1.CurrentRow.Index).Cells("T_Duration").Value = 10
 
         dgv1.Rows(dgv1.CurrentRow.Index).Cells("Clip_Duration").Value = "00:30:00"
@@ -936,7 +936,7 @@ Public Class ucPlaylist
 
         dgv1.Rows.Insert(dgv1.CurrentRow.Index + 1)
         dgv1.Rows(dgv1.CurrentRow.Index + 1).Cells("x").Value = 1
-        dgv1.Rows(dgv1.CurrentRow.Index + 1).Cells("Transition").Value = "CUT"
+        dgv1.Rows(dgv1.CurrentRow.Index + 1).Cells("Transition").Value = "MIX"
         dgv1.Rows(dgv1.CurrentRow.Index + 1).Cells("T_Duration").Value = 10
 
         dgv1.Rows(dgv1.CurrentRow.Index + 1).Cells("AudioLevel").Value = 1.0
@@ -1479,9 +1479,11 @@ Public Class ucPlaylist
         If chkplaylistlock.Checked = True Then
             dgv1.Enabled = False
             frmmediaplayer.ucCasparcgWindow1.gbplayer.Enabled = False
+            cmdstartplaylist.Enabled = False
         Else
             dgv1.Enabled = True
             frmmediaplayer.ucCasparcgWindow1.gbplayer.Enabled = True
+            cmdstartplaylist.Enabled = True
         End If
     End Sub
     Sub selectAll()
@@ -1542,7 +1544,7 @@ Public Class ucPlaylist
                     dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex + xx).Cells("Column3").Value = ""
 
                     dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex + xx).Cells("x").Value = 1
-                    dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex + xx).Cells("Transition").Value = "CUT"
+                    dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex + xx).Cells("Transition").Value = "MIX"
                     dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex).Cells("T_Duration").Value = 10
 
                     dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex + xx).Cells("Column11").Value = 0 'follow duration
@@ -1570,7 +1572,7 @@ Public Class ucPlaylist
                     dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex + xx).Cells("Column3").Value = ""
 
                     dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex + xx).Cells("x").Value = 1
-                    dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex + xx).Cells("Transition").Value = "CUT"
+                    dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex + xx).Cells("Transition").Value = "MIX"
                     dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex).Cells("T_Duration").Value = 10
 
                     dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex + xx).Cells("Column11").Value = 0 'follow duration
@@ -1624,7 +1626,7 @@ Public Class ucPlaylist
 
 
         dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex).Cells("x").Value = 1
-        dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex).Cells("Transition").Value = "CUT"
+        dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex).Cells("Transition").Value = "MIX"
         dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex).Cells("T_Duration").Value = 10
 
         dgv1.Rows(dgv1.HitTest(clientPoint.X, clientPoint.Y).RowIndex).Cells("Column11").Value = 0 'follow duration
@@ -1673,7 +1675,7 @@ Public Class ucPlaylist
             End If
             dgv1.CurrentRow.Cells("File_Name").Value = dgvclips.CurrentRow.Cells("File_Name").Value
             dgv1.CurrentRow.Cells("x").Value = 1
-            dgv1.CurrentRow.Cells("Transition").Value = "CUT"
+            dgv1.CurrentRow.Cells("Transition").Value = "MIX"
             dgv1.CurrentRow.Cells("T_Duration").Value = 10
             dgv1.CurrentRow.Cells("AudioLevel").Value = 1.0
             dgv1.CurrentRow.Cells("FileType").Value = "Others"
@@ -1762,6 +1764,12 @@ Public Class ucPlaylist
 
     Private Sub PlayInVLCToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PlayInVLCToolStripMenuItem.Click
         On Error Resume Next
+
+        If (dgv1.CurrentRow.Cells("File_Name").Value.ToString.ToLower).Contains("p://") Then
+            playinvlc(dgv1.CurrentRow.Cells("File_Name").Value.ToString)
+            Exit Sub
+        End If
+
         If dgv1.CurrentRow.Cells("File_Name").Value.ToString.Contains("://") Then
 
             playinvlc(Replace(dgv1.CurrentRow.Cells("File_Name").Value.ToString, "://", ":/"))
@@ -1798,11 +1806,14 @@ Public Class ucPlaylist
     End Sub
 
     Sub palyloopinsecondchannel()
+        seconndchannelloopvideoname = ""
         If chknextcuefor2ndchannel.Checked Then
             CasparDevice.SendString("play " & g_int_ChannelNumber + 1 & "-" & g_int_PlaylistLayer & " " & """" & ModifyFilename(dgvclips.Rows(dgvclips.CurrentRow.Index + 1).Cells("File_Name").Value) & """" & " length 250 loop ")
             seconndchannelloopvideoname = ModifyFilename(dgvclips.Rows(dgvclips.CurrentRow.Index + 1).Cells("File_Name").Value)
         End If
     End Sub
+
+
 
     Private Sub tmrcheckfilesinplaylist_Tick(sender As Object, e As EventArgs) Handles tmrcheckfilesinplaylist.Tick
         checkfilesinpaylist()
@@ -2005,18 +2016,22 @@ Public Class ucPlaylist
         'dummy code Don't delete.
     End Sub
 
-
-
     Private Sub chkclipcountdown_CheckedChanged(sender As Object, e As EventArgs) Handles chkclipcountdown.CheckedChanged
         On Error Resume Next
         If chkclipcountdown.Checked Then
 
-            CasparCGDataCollection.Clear()
-            CasparCGDataCollection.SetData("f0", mstohms(clipsleftduration * 1000))
-            CasparDevice.Channels(g_int_ChannelNumber).CG.Add(12, 12, "cmp/clipcountdown/clipcountdown1", True, CasparCGDataCollection.ToAMCPEscapedXml)
+            'CasparCGDataCollection.Clear()
+            'CasparCGDataCollection.SetData("f0", mstohms(clipsleftduration * 1000))
+            'CasparDevice.Channels(g_int_ChannelNumber).CG.Add(12, 12, "cmp/clipcountdown/clipcountdown1", True, CasparCGDataCollection.ToAMCPEscapedXml)
+            Dim str As String = "play " & g_int_ChannelNumber + 1 & "-12 [html] " & "c:/casparcg/CMP/clipcountdown/ClipCountDown1_html.html"
+            CasparDevice.SendString(str)
+
             tmrclipcountdown.Enabled = True
         Else
-            CasparDevice.Channels(g_int_ChannelNumber).CG.Stop(12, 12)
+            'CasparDevice.Channels(g_int_ChannelNumber).CG.Stop(12, 12)
+            Dim str As String = "stop " & g_int_ChannelNumber + 1 & "-12"
+            CasparDevice.SendString(str)
+
             tmrclipcountdown.Enabled = False
         End If
     End Sub
@@ -2025,6 +2040,7 @@ Public Class ucPlaylist
         If chknextcuefor2ndchannel.Checked Then
         Else
             CasparDevice.SendString("stop " & g_int_ChannelNumber + 1 & "-" & g_int_PlaylistLayer)
+            seconndchannelloopvideoname = ""
         End If
     End Sub
     Private Sub cmdplaylistfullscreen_Click(sender As Object, e As EventArgs)
@@ -2058,7 +2074,7 @@ Public Class ucPlaylist
     Private Sub dgv1_DefaultValuesNeeded(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewRowEventArgs)
         On Error Resume Next
         e.Row.Cells("x").Value = 1
-        e.Row.Cells("Transition").Value = "CUT"
+        e.Row.Cells("Transition").Value = "MIX"
         e.Row.Cells("T_Duration").Value = 10
 
         e.Row.Cells("AudioLevel").Value = 1.0
@@ -2103,16 +2119,14 @@ Public Class ucPlaylist
 
     Private Sub tmrclipcountdown_Tick(sender As Object, e As EventArgs) Handles tmrclipcountdown.Tick
         On Error Resume Next
-        CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f0", mstohms(clipsleftduration * 1000))
+        'CasparCGDataCollection.Clear()
+        'CasparCGDataCollection.SetData("f0", mstohms(clipsleftduration * 1000))
+        'CasparCGDataCollection.SetData("f1", onlyfilenamewithoutextension(playingfilename))
+        'CasparCGDataCollection.SetData("f2", onlyfilename(seconndchannelloopvideoname))
+        'CasparDevice.Channels(g_int_ChannelNumber).CG.Update(12, 12, CasparCGDataCollection)
+        Dim str = "call " & g_int_ChannelNumber + 1 & "-12 " & """" & "document.getElementById('ccgf0').innerText='" + onlyfilenamewithoutextension(playingfilename) + "';document.getElementById('ccgf1').innerText='" + mstohms(clipsleftduration * 1000) + "';document.getElementById('ccgf2').innerText='" + onlyfilename(seconndchannelloopvideoname) + "'" + """"
+        CasparDevice.SendString(str)
 
-        Dim aa1 As Array = Split(Replace(dgvclips.CurrentRow.Cells("File_Name").Value, "\", "/"), "/")
-        CasparCGDataCollection.SetData("f1", Split((aa1(aa1.Length - 1)), ".")(0))
-
-        Dim aa2 As Array = Split(Replace(seconndchannelloopvideoname, "\", "/"), "/")
-        CasparCGDataCollection.SetData("f2", Split((aa2(aa2.Length - 1)), ".")(0))
-
-        CasparDevice.Channels(g_int_ChannelNumber).CG.Update(12, 12, CasparCGDataCollection)
     End Sub
 
     Private Sub tmrfornotskiping_Tick(sender As Object, e As EventArgs) Handles tmrfornotskiping.Tick
@@ -2203,22 +2217,20 @@ Public Class ucPlaylist
 
     End Sub
     Private Sub InsertFilterForIMXFile_Click(sender As Object, e As EventArgs) Handles InsertFilterForIMXFile.Click
-        If ServerVersion > 2.1 Then
-            dgv1.CurrentRow.Cells("clmFilter").Value = "vf crop=720:576:0:32"
-        Else
-            dgv1.CurrentRow.Cells("clmFilter").Value = "filter crop=720:576:0:32"
-        End If
+
     End Sub
     Private Sub gbplaylist_DoubleClick(sender As Object, e As EventArgs) Handles gbplaylist.DoubleClick
         Changebackcolor(sender)
     End Sub
 
     Private Sub chkDeinterlace_CheckedChanged(sender As Object, e As EventArgs) Handles chkDeinterlace.CheckedChanged
+        On Error Resume Next
         If ServerVersion > 2.1 Then
             If sender.checked = True Then
                 deinterlaced = " vf yadif=1:0"
             Else
                 deinterlaced = ""
+
             End If
         Else
             If sender.checked = True Then
@@ -2284,7 +2296,20 @@ Public Class ucPlaylist
 
     Private Sub MnuPlayinffplay_Click(sender As Object, e As EventArgs) Handles mnuPlayinffplay.Click
         On Error Resume Next
-        playinffplay(mediafullpath & dgv1.CurrentRow.Cells("File_Name").Value.ToString)
+
+
+        If (dgv1.CurrentRow.Cells("File_Name").Value.ToString.ToLower).Contains("p://") Then
+            playinffplay(dgv1.CurrentRow.Cells("File_Name").Value.ToString)
+            Exit Sub
+        End If
+        If dgv1.CurrentRow.Cells("File_Name").Value.ToString.Contains("://") Then
+
+            playinffplay(Replace(dgv1.CurrentRow.Cells("File_Name").Value.ToString, "://", ":/"))
+        Else
+            playinffplay(mediafullpath & dgv1.CurrentRow.Cells("File_Name").Value.ToString)
+        End If
+
+
     End Sub
     Private Sub Txtsearch_TextChanged(sender As Object, e As EventArgs) Handles txtsearch.TextChanged
     End Sub
@@ -2383,5 +2408,122 @@ Public Class ucPlaylist
     Private Sub dgvclips_DragEnter(sender As Object, e As DragEventArgs) Handles dgvclips.DragEnter
     End Sub
     Private Sub dgvclips_DragDrop(sender As Object, e As DragEventArgs) Handles dgvclips.DragDrop
+    End Sub
+
+    Private Sub ucPlaylist_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If chkplaylistlock.Checked = False Then
+            Select Case e.KeyCode
+                Case Keys.F1
+                    clipstop()
+                Case Keys.F2
+                    PlaySingleClip()
+                Case Keys.F3
+                    cueclip()
+                Case Keys.F4
+                    clipresume()
+                Case Keys.F5
+                    nextclip()
+
+                Case Keys.F6
+                    nextclipplay()
+
+                Case Keys.F11
+                    CasparDevice.SendString("clear " & g_int_ChannelNumber & "-" & g_int_PlaylistLayer)
+
+                Case Keys.F12
+                    CasparDevice.SendString("clear " & g_int_ChannelNumber)
+                    CasparDevice.SendString("mixer " & g_int_ChannelNumber & " clear")
+
+            End Select
+        End If
+    End Sub
+
+    Private Sub ForIMXFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForIMXFileToolStripMenuItem.Click
+        If ServerVersion > 2.1 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "vf crop=720:576:0:32"
+        Else
+            dgv1.CurrentRow.Cells("clmFilter").Value = "filter crop=720:576:0:32"
+        End If
+    End Sub
+
+    Private Sub LToBothToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LToBothToolStripMenuItem.Click
+        If ServerVersion > 2.1 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "af pan=stereo|c0=c0|c1=c0"
+        Else
+            dgv1.CurrentRow.Cells("clmFilter").Value = "Channel_Layout L_To_Both"
+        End If
+    End Sub
+
+    Private Sub RToBothToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RToBothToolStripMenuItem.Click
+        If ServerVersion > 2.1 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "af pan=stereo|c0=c1|c1=c1"
+        Else
+            dgv1.CurrentRow.Cells("clmFilter").Value = "Channel_Layout R_To_Both"
+        End If
+    End Sub
+
+    Private Sub MixToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MixToolStripMenuItem1.Click
+        If ServerVersion > 2.1 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "af pan=stereo|c0=0.7c0+0.7c1|c1=0.7c0+0.7c1"
+        Else
+            dgv1.CurrentRow.Cells("clmFilter").Value = "Channel_Layout Mix"
+        End If
+    End Sub
+
+    Private Sub OnlyLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OnlyLToolStripMenuItem.Click
+        If ServerVersion > 2.1 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "af pan=stereo|c0=c0|c1=0c1"
+        Else
+            dgv1.CurrentRow.Cells("clmFilter").Value = "Channel_Layout Only_L"
+        End If
+    End Sub
+
+    Private Sub OnlyRToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OnlyRToolStripMenuItem.Click
+        If ServerVersion > 2.1 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "af pan=stereo|c0=0c0|c1=c1"
+        Else
+            dgv1.CurrentRow.Cells("clmFilter").Value = "Channel_Layout Only_R"
+        End If
+    End Sub
+
+    Private Sub Yadif10ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Yadif10ToolStripMenuItem.Click
+        If ServerVersion > 2.1 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "vf yadif=1:0"
+        Else
+            dgv1.CurrentRow.Cells("clmFilter").Value = "filter yadif=1:0"
+        End If
+    End Sub
+
+    Private Sub Yadif11ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Yadif11ToolStripMenuItem.Click
+        If ServerVersion > 2.1 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "vf yadif=1:1"
+        Else
+            dgv1.CurrentRow.Cells("clmFilter").Value = "filter yadif=1:1"
+        End If
+    End Sub
+
+    Private Sub STRETCHToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles STRETCHToolStripMenuItem.Click
+        If ServerVersion > 2.0 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "SCALE_MODE STRETCH"
+        End If
+
+    End Sub
+
+    Private Sub FITToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FITToolStripMenuItem.Click
+        If ServerVersion > 2.0 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "SCALE_MODE FIT"
+        End If
+    End Sub
+
+    Private Sub FILLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FILLToolStripMenuItem.Click
+        If ServerVersion > 2.0 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "SCALE_MODE FILL"
+        End If
+    End Sub
+
+    Private Sub ORIGINALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ORIGINALToolStripMenuItem.Click
+        If ServerVersion > 2.0 Then
+            dgv1.CurrentRow.Cells("clmFilter").Value = "SCALE_MODE ORIGINAL"
+        End If
     End Sub
 End Class

@@ -597,4 +597,11 @@ Public Class ucMixernew
     Private Sub GbMixer_Enter(sender As Object, e As EventArgs) Handles gbMixer.Enter
 
     End Sub
+    Private Sub cmdVerticalMobileToFullScreen_Click(sender As Object, e As EventArgs) Handles cmdVerticalMobileToFullScreen.Click
+        On Error Resume Next
+        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmbvideolayerformixer.Text & " fill 0.5 0.5 0.57 1.78")
+        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmbvideolayerformixer.Text & " anchor 0.5 0.5")
+        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmbvideolayerformixer.Text & " rotation 90")
+
+    End Sub
 End Class

@@ -202,11 +202,13 @@
     End Sub
 
     Private Sub ucCasparcgWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        cmbcasparcgwindowtitle.DataSource = New BindingSource(screenConsumres, "")
+        cmbcasparcgwindowtitle.Text = "Screen consumer [1|PAL]"
     End Sub
     Private Sub tbAudioConytrol_Scroll(sender As Object, e As EventArgs) Handles tbAudioConytrol.Scroll
         On Error Resume Next
         CasparDevice.SendString("mixer " & g_int_ChannelNumber & " mastervolume " & tbAudioConytrol.Value / 100)
+
 
     End Sub
     Private Sub mdResetAudio_Click(sender As Object, e As EventArgs) Handles mdResetAudio.Click
@@ -358,5 +360,9 @@
         ElseIf ProgressBar2.Value < 34 Then
             ProgressBar2.Color = Color.Green
         End If
+    End Sub
+
+    Private Sub tbAudioConytrol_ValueChanged(sender As Object, e As EventArgs) Handles tbAudioConytrol.ValueChanged
+        lblMasterVolume.Text = (tbAudioConytrol.Value) / 100
     End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucMultiBulletScroll
     'Inherits System.Windows.Forms.UserControl
     Inherits WeifenLuo.WinFormsUI.Docking.DockContent
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ucMultiBulletScroll
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucMultiBulletScroll))
@@ -32,6 +32,7 @@ Partial Class ucMultiBulletScroll
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbscroll = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.chkAutoUpdate = New System.Windows.Forms.CheckBox()
         Me.cmdstopcrawlhtmlscroll = New System.Windows.Forms.Button()
         Me.cmdpauseresumehtmlscroller = New System.Windows.Forms.Button()
         Me.Label156 = New System.Windows.Forms.Label()
@@ -67,9 +68,10 @@ Partial Class ucMultiBulletScroll
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmdselectallforscroll = New System.Windows.Forms.Button()
         Me.cmddeselectallforscroll = New System.Windows.Forms.Button()
-        Me.cmdresumescroll = New System.Windows.Forms.Button()
         Me.cmdpausescroll = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtclockTemplate = New System.Windows.Forms.TextBox()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.cmblayertime = New System.Windows.Forms.ComboBox()
         Me.cmdhidetime = New System.Windows.Forms.Button()
@@ -89,6 +91,7 @@ Partial Class ucMultiBulletScroll
         Me.cmblayerscroll = New System.Windows.Forms.ComboBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.tmrshowdatascroll = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrshowdatascrollHtml = New System.Windows.Forms.Timer(Me.components)
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbscroll.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -114,7 +117,6 @@ Partial Class ucMultiBulletScroll
         Me.gbscroll.Controls.Add(Me.Label1)
         Me.gbscroll.Controls.Add(Me.cmdselectallforscroll)
         Me.gbscroll.Controls.Add(Me.cmddeselectallforscroll)
-        Me.gbscroll.Controls.Add(Me.cmdresumescroll)
         Me.gbscroll.Controls.Add(Me.cmdpausescroll)
         Me.gbscroll.Controls.Add(Me.GroupBox2)
         Me.gbscroll.Controls.Add(Me.cmdplayscroll)
@@ -138,6 +140,7 @@ Partial Class ucMultiBulletScroll
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Peru
+        Me.GroupBox1.Controls.Add(Me.chkAutoUpdate)
         Me.GroupBox1.Controls.Add(Me.cmdstopcrawlhtmlscroll)
         Me.GroupBox1.Controls.Add(Me.cmdpauseresumehtmlscroller)
         Me.GroupBox1.Controls.Add(Me.Label156)
@@ -164,6 +167,16 @@ Partial Class ucMultiBulletScroll
         Me.GroupBox1.TabIndex = 750
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "HTML Template"
+        '
+        'chkAutoUpdate
+        '
+        Me.chkAutoUpdate.AutoSize = True
+        Me.chkAutoUpdate.Location = New System.Drawing.Point(8, 78)
+        Me.chkAutoUpdate.Name = "chkAutoUpdate"
+        Me.chkAutoUpdate.Size = New System.Drawing.Size(83, 17)
+        Me.chkAutoUpdate.TabIndex = 753
+        Me.chkAutoUpdate.Text = "AutoUpdate"
+        Me.chkAutoUpdate.UseVisualStyleBackColor = True
         '
         'cmdstopcrawlhtmlscroll
         '
@@ -263,7 +276,7 @@ Partial Class ucMultiBulletScroll
         'chkbase64htmlscroller
         '
         Me.chkbase64htmlscroller.AutoSize = True
-        Me.chkbase64htmlscroller.Location = New System.Drawing.Point(25, 104)
+        Me.chkbase64htmlscroller.Location = New System.Drawing.Point(6, 106)
         Me.chkbase64htmlscroller.Name = "chkbase64htmlscroller"
         Me.chkbase64htmlscroller.Size = New System.Drawing.Size(62, 17)
         Me.chkbase64htmlscroller.TabIndex = 740
@@ -278,7 +291,7 @@ Partial Class ucMultiBulletScroll
         Me.nyhtmlscrollticker.Name = "nyhtmlscrollticker"
         Me.nyhtmlscrollticker.Size = New System.Drawing.Size(54, 20)
         Me.nyhtmlscrollticker.TabIndex = 739
-        Me.nyhtmlscrollticker.Value = New Decimal(New Integer() {87, 0, 0, 0})
+        Me.nyhtmlscrollticker.Value = New Decimal(New Integer() {89, 0, 0, 0})
         '
         'Label190
         '
@@ -303,7 +316,7 @@ Partial Class ucMultiBulletScroll
         'chkltrhtmlscroll
         '
         Me.chkltrhtmlscroll.AutoSize = True
-        Me.chkltrhtmlscroll.Location = New System.Drawing.Point(25, 127)
+        Me.chkltrhtmlscroll.Location = New System.Drawing.Point(6, 129)
         Me.chkltrhtmlscroll.Name = "chkltrhtmlscroll"
         Me.chkltrhtmlscroll.Size = New System.Drawing.Size(88, 17)
         Me.chkltrhtmlscroll.TabIndex = 734
@@ -335,7 +348,7 @@ Partial Class ucMultiBulletScroll
         Me.nyhtmlscroll.Name = "nyhtmlscroll"
         Me.nyhtmlscroll.Size = New System.Drawing.Size(54, 20)
         Me.nyhtmlscroll.TabIndex = 731
-        Me.nyhtmlscroll.Value = New Decimal(New Integer() {87, 0, 0, 0})
+        Me.nyhtmlscroll.Value = New Decimal(New Integer() {89, 0, 0, 0})
         '
         'Label163
         '
@@ -472,16 +485,6 @@ Partial Class ucMultiBulletScroll
         Me.cmddeselectallforscroll.Text = "Deselect All"
         Me.cmddeselectallforscroll.UseVisualStyleBackColor = True
         '
-        'cmdresumescroll
-        '
-        Me.cmdresumescroll.Location = New System.Drawing.Point(453, 95)
-        Me.cmdresumescroll.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.cmdresumescroll.Name = "cmdresumescroll"
-        Me.cmdresumescroll.Size = New System.Drawing.Size(58, 30)
-        Me.cmdresumescroll.TabIndex = 509
-        Me.cmdresumescroll.Text = "Resume"
-        Me.cmdresumescroll.UseVisualStyleBackColor = True
-        '
         'cmdpausescroll
         '
         Me.cmdpausescroll.BackColor = System.Drawing.Color.Yellow
@@ -489,30 +492,49 @@ Partial Class ucMultiBulletScroll
         Me.cmdpausescroll.Location = New System.Drawing.Point(386, 94)
         Me.cmdpausescroll.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdpausescroll.Name = "cmdpausescroll"
-        Me.cmdpausescroll.Size = New System.Drawing.Size(63, 30)
+        Me.cmdpausescroll.Size = New System.Drawing.Size(117, 30)
         Me.cmdpausescroll.TabIndex = 508
-        Me.cmdpausescroll.Text = "Pause"
+        Me.cmdpausescroll.Text = "Pause/Resume"
         Me.cmdpausescroll.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.SandyBrown
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.txtclockTemplate)
         Me.GroupBox2.Controls.Add(Me.Label50)
         Me.GroupBox2.Controls.Add(Me.cmblayertime)
         Me.GroupBox2.Controls.Add(Me.cmdhidetime)
         Me.GroupBox2.Controls.Add(Me.cmdshowtime)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 538)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 508)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(354, 61)
+        Me.GroupBox2.Size = New System.Drawing.Size(354, 91)
         Me.GroupBox2.TabIndex = 507
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Time Day Date Month"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(9, 33)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(59, 15)
+        Me.Label3.TabIndex = 720
+        Me.Label3.Text = "Template"
+        '
+        'txtclockTemplate
+        '
+        Me.txtclockTemplate.Location = New System.Drawing.Point(79, 29)
+        Me.txtclockTemplate.Name = "txtclockTemplate"
+        Me.txtclockTemplate.Size = New System.Drawing.Size(219, 21)
+        Me.txtclockTemplate.TabIndex = 719
+        Me.txtclockTemplate.Text = "CMP/time2/time"
+        '
         'Label50
         '
         Me.Label50.AutoSize = True
-        Me.Label50.Location = New System.Drawing.Point(10, 24)
+        Me.Label50.Location = New System.Drawing.Point(12, 60)
         Me.Label50.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(124, 15)
@@ -524,7 +546,7 @@ Partial Class ucMultiBulletScroll
         Me.cmblayertime.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.caspar_media_playback.My.MySettings.Default, "cmblayertime", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.cmblayertime.FormattingEnabled = True
         Me.cmblayertime.Items.AddRange(New Object() {"56", "57", "58", "59", "60"})
-        Me.cmblayertime.Location = New System.Drawing.Point(138, 21)
+        Me.cmblayertime.Location = New System.Drawing.Point(140, 57)
         Me.cmblayertime.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmblayertime.Name = "cmblayertime"
         Me.cmblayertime.Size = New System.Drawing.Size(40, 23)
@@ -533,7 +555,7 @@ Partial Class ucMultiBulletScroll
         '
         'cmdhidetime
         '
-        Me.cmdhidetime.Location = New System.Drawing.Point(238, 21)
+        Me.cmdhidetime.Location = New System.Drawing.Point(240, 57)
         Me.cmdhidetime.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdhidetime.Name = "cmdhidetime"
         Me.cmdhidetime.Size = New System.Drawing.Size(45, 28)
@@ -543,7 +565,7 @@ Partial Class ucMultiBulletScroll
         '
         'cmdshowtime
         '
-        Me.cmdshowtime.Location = New System.Drawing.Point(186, 20)
+        Me.cmdshowtime.Location = New System.Drawing.Point(188, 56)
         Me.cmdshowtime.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdshowtime.Name = "cmdshowtime"
         Me.cmdshowtime.Size = New System.Drawing.Size(44, 29)
@@ -686,6 +708,8 @@ Partial Class ucMultiBulletScroll
         'nspeedscroll
         '
         Me.nspeedscroll.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.caspar_media_playback.My.MySettings.Default, "nspeedscroll", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.nspeedscroll.DecimalPlaces = 1
+        Me.nspeedscroll.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.nspeedscroll.Location = New System.Drawing.Point(258, 96)
         Me.nspeedscroll.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.nspeedscroll.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
@@ -693,7 +717,7 @@ Partial Class ucMultiBulletScroll
         Me.nspeedscroll.Name = "nspeedscroll"
         Me.nspeedscroll.Size = New System.Drawing.Size(46, 20)
         Me.nspeedscroll.TabIndex = 452
-        Me.nspeedscroll.Value = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.nspeedscroll.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
         'Label20
         '
@@ -731,6 +755,10 @@ Partial Class ucMultiBulletScroll
         '
         Me.tmrshowdatascroll.Interval = 4000
         '
+        'tmrshowdatascrollHtml
+        '
+        Me.tmrshowdatascrollHtml.Interval = 4000
+        '
         'DataGridViewTextBoxColumn1
         '
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
@@ -746,8 +774,9 @@ Partial Class ucMultiBulletScroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(668, 612)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.gbscroll)
         Me.HideOnClose = True
         Me.Name = "ucMultiBulletScroll"
@@ -773,7 +802,6 @@ Partial Class ucMultiBulletScroll
     Friend WithEvents gbscroll As System.Windows.Forms.GroupBox
     Friend WithEvents cmdselectallforscroll As System.Windows.Forms.Button
     Friend WithEvents cmddeselectallforscroll As System.Windows.Forms.Button
-    Friend WithEvents cmdresumescroll As System.Windows.Forms.Button
     Friend WithEvents cmdpausescroll As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label50 As System.Windows.Forms.Label
@@ -830,4 +858,8 @@ Partial Class ucMultiBulletScroll
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents cmdstopcrawlhtmlscroll As Button
     Friend WithEvents cmdpauseresumehtmlscroller As Button
+    Friend WithEvents tmrshowdatascrollHtml As Timer
+    Friend WithEvents chkAutoUpdate As CheckBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtclockTemplate As TextBox
 End Class

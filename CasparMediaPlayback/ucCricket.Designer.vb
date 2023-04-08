@@ -356,9 +356,9 @@ Partial Class ucCricket
         'cmdstopgym
         '
         Me.cmdstopgym.BackColor = System.Drawing.Color.Red
-        Me.cmdstopgym.Location = New System.Drawing.Point(1169, 136)
+        Me.cmdstopgym.Location = New System.Drawing.Point(1120, 136)
         Me.cmdstopgym.Name = "cmdstopgym"
-        Me.cmdstopgym.Size = New System.Drawing.Size(47, 743)
+        Me.cmdstopgym.Size = New System.Drawing.Size(47, 759)
         Me.cmdstopgym.TabIndex = 585
         Me.cmdstopgym.Text = "Stop"
         Me.cmdstopgym.UseVisualStyleBackColor = False
@@ -568,7 +568,7 @@ Partial Class ucCricket
         Me.Cricket.Controls.Add(Me.cmdscore)
         Me.Cricket.Location = New System.Drawing.Point(4, 22)
         Me.Cricket.Name = "Cricket"
-        Me.Cricket.Size = New System.Drawing.Size(1149, 805)
+        Me.Cricket.Size = New System.Drawing.Size(1103, 755)
         Me.Cricket.TabIndex = 7
         Me.Cricket.Text = "Cricket"
         Me.Cricket.UseVisualStyleBackColor = True
@@ -665,7 +665,7 @@ Partial Class ucCricket
         '
         'cmbinfo7
         '
-        Me.cmbinfo7.Location = New System.Drawing.Point(756, 85)
+        Me.cmbinfo7.Location = New System.Drawing.Point(714, 85)
         Me.cmbinfo7.Name = "cmbinfo7"
         Me.cmbinfo7.Size = New System.Drawing.Size(133, 20)
         Me.cmbinfo7.TabIndex = 725
@@ -673,7 +673,7 @@ Partial Class ucCricket
         'cmdscore7update
         '
         Me.cmdscore7update.BackColor = System.Drawing.Color.Yellow
-        Me.cmdscore7update.Location = New System.Drawing.Point(1084, 82)
+        Me.cmdscore7update.Location = New System.Drawing.Point(1042, 82)
         Me.cmdscore7update.Name = "cmdscore7update"
         Me.cmdscore7update.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore7update.TabIndex = 724
@@ -682,7 +682,7 @@ Partial Class ucCricket
         '
         'txtinfo7
         '
-        Me.txtinfo7.Location = New System.Drawing.Point(895, 85)
+        Me.txtinfo7.Location = New System.Drawing.Point(853, 85)
         Me.txtinfo7.Name = "txtinfo7"
         Me.txtinfo7.Size = New System.Drawing.Size(120, 20)
         Me.txtinfo7.TabIndex = 723
@@ -692,7 +692,7 @@ Partial Class ucCricket
         Me.cmdscore7.BackColor = System.Drawing.Color.Green
         Me.cmdscore7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdscore7.ForeColor = System.Drawing.Color.White
-        Me.cmdscore7.Location = New System.Drawing.Point(1021, 83)
+        Me.cmdscore7.Location = New System.Drawing.Point(979, 83)
         Me.cmdscore7.Name = "cmdscore7"
         Me.cmdscore7.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore7.TabIndex = 722
@@ -701,7 +701,7 @@ Partial Class ucCricket
         '
         'cmbinfo6
         '
-        Me.cmbinfo6.Location = New System.Drawing.Point(756, 61)
+        Me.cmbinfo6.Location = New System.Drawing.Point(714, 61)
         Me.cmbinfo6.Name = "cmbinfo6"
         Me.cmbinfo6.Size = New System.Drawing.Size(133, 20)
         Me.cmbinfo6.TabIndex = 721
@@ -709,7 +709,7 @@ Partial Class ucCricket
         'cmdscore6update
         '
         Me.cmdscore6update.BackColor = System.Drawing.Color.Yellow
-        Me.cmdscore6update.Location = New System.Drawing.Point(1084, 55)
+        Me.cmdscore6update.Location = New System.Drawing.Point(1042, 55)
         Me.cmdscore6update.Name = "cmdscore6update"
         Me.cmdscore6update.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore6update.TabIndex = 720
@@ -718,7 +718,7 @@ Partial Class ucCricket
         '
         'txtinfo6
         '
-        Me.txtinfo6.Location = New System.Drawing.Point(895, 58)
+        Me.txtinfo6.Location = New System.Drawing.Point(853, 58)
         Me.txtinfo6.Name = "txtinfo6"
         Me.txtinfo6.Size = New System.Drawing.Size(120, 20)
         Me.txtinfo6.TabIndex = 719
@@ -728,7 +728,7 @@ Partial Class ucCricket
         Me.cmdscore6.BackColor = System.Drawing.Color.Green
         Me.cmdscore6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdscore6.ForeColor = System.Drawing.Color.White
-        Me.cmdscore6.Location = New System.Drawing.Point(1021, 56)
+        Me.cmdscore6.Location = New System.Drawing.Point(979, 56)
         Me.cmdscore6.Name = "cmdscore6"
         Me.cmdscore6.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore6.TabIndex = 718
@@ -737,7 +737,7 @@ Partial Class ucCricket
         '
         'cmbinfo5
         '
-        Me.cmbinfo5.Location = New System.Drawing.Point(756, 32)
+        Me.cmbinfo5.Location = New System.Drawing.Point(714, 32)
         Me.cmbinfo5.Name = "cmbinfo5"
         Me.cmbinfo5.Size = New System.Drawing.Size(133, 20)
         Me.cmbinfo5.TabIndex = 717
@@ -746,7 +746,7 @@ Partial Class ucCricket
         'cmdscore5update
         '
         Me.cmdscore5update.BackColor = System.Drawing.Color.Yellow
-        Me.cmdscore5update.Location = New System.Drawing.Point(1084, 29)
+        Me.cmdscore5update.Location = New System.Drawing.Point(1042, 29)
         Me.cmdscore5update.Name = "cmdscore5update"
         Me.cmdscore5update.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore5update.TabIndex = 716
@@ -755,7 +755,7 @@ Partial Class ucCricket
         '
         'txtinfo5
         '
-        Me.txtinfo5.Location = New System.Drawing.Point(895, 32)
+        Me.txtinfo5.Location = New System.Drawing.Point(853, 32)
         Me.txtinfo5.Name = "txtinfo5"
         Me.txtinfo5.Size = New System.Drawing.Size(120, 20)
         Me.txtinfo5.TabIndex = 715
@@ -766,7 +766,7 @@ Partial Class ucCricket
         Me.cmdscore5.BackColor = System.Drawing.Color.Green
         Me.cmdscore5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdscore5.ForeColor = System.Drawing.Color.White
-        Me.cmdscore5.Location = New System.Drawing.Point(1021, 30)
+        Me.cmdscore5.Location = New System.Drawing.Point(979, 30)
         Me.cmdscore5.Name = "cmdscore5"
         Me.cmdscore5.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore5.TabIndex = 714
@@ -775,7 +775,7 @@ Partial Class ucCricket
         '
         'cmbinfo4
         '
-        Me.cmbinfo4.Location = New System.Drawing.Point(756, 6)
+        Me.cmbinfo4.Location = New System.Drawing.Point(714, 6)
         Me.cmbinfo4.Name = "cmbinfo4"
         Me.cmbinfo4.Size = New System.Drawing.Size(133, 20)
         Me.cmbinfo4.TabIndex = 713
@@ -784,7 +784,7 @@ Partial Class ucCricket
         'cmdscore4update
         '
         Me.cmdscore4update.BackColor = System.Drawing.Color.Yellow
-        Me.cmdscore4update.Location = New System.Drawing.Point(1084, 3)
+        Me.cmdscore4update.Location = New System.Drawing.Point(1042, 3)
         Me.cmdscore4update.Name = "cmdscore4update"
         Me.cmdscore4update.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore4update.TabIndex = 712
@@ -793,7 +793,7 @@ Partial Class ucCricket
         '
         'txtinfo4
         '
-        Me.txtinfo4.Location = New System.Drawing.Point(895, 6)
+        Me.txtinfo4.Location = New System.Drawing.Point(853, 6)
         Me.txtinfo4.Name = "txtinfo4"
         Me.txtinfo4.Size = New System.Drawing.Size(120, 20)
         Me.txtinfo4.TabIndex = 711
@@ -804,7 +804,7 @@ Partial Class ucCricket
         Me.cmdscore4.BackColor = System.Drawing.Color.Green
         Me.cmdscore4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdscore4.ForeColor = System.Drawing.Color.White
-        Me.cmdscore4.Location = New System.Drawing.Point(1021, 4)
+        Me.cmdscore4.Location = New System.Drawing.Point(979, 4)
         Me.cmdscore4.Name = "cmdscore4"
         Me.cmdscore4.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore4.TabIndex = 710
@@ -813,7 +813,7 @@ Partial Class ucCricket
         '
         'cmbinfo3
         '
-        Me.cmbinfo3.Location = New System.Drawing.Point(358, 30)
+        Me.cmbinfo3.Location = New System.Drawing.Point(316, 30)
         Me.cmbinfo3.Name = "cmbinfo3"
         Me.cmbinfo3.Size = New System.Drawing.Size(133, 20)
         Me.cmbinfo3.TabIndex = 709
@@ -821,7 +821,7 @@ Partial Class ucCricket
         'cmdscore3update
         '
         Me.cmdscore3update.BackColor = System.Drawing.Color.Yellow
-        Me.cmdscore3update.Location = New System.Drawing.Point(686, 27)
+        Me.cmdscore3update.Location = New System.Drawing.Point(644, 27)
         Me.cmdscore3update.Name = "cmdscore3update"
         Me.cmdscore3update.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore3update.TabIndex = 708
@@ -830,7 +830,7 @@ Partial Class ucCricket
         '
         'txtinfo3
         '
-        Me.txtinfo3.Location = New System.Drawing.Point(497, 30)
+        Me.txtinfo3.Location = New System.Drawing.Point(455, 30)
         Me.txtinfo3.Name = "txtinfo3"
         Me.txtinfo3.Size = New System.Drawing.Size(120, 20)
         Me.txtinfo3.TabIndex = 706
@@ -840,7 +840,7 @@ Partial Class ucCricket
         Me.cmdscore3.BackColor = System.Drawing.Color.Green
         Me.cmdscore3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdscore3.ForeColor = System.Drawing.Color.White
-        Me.cmdscore3.Location = New System.Drawing.Point(623, 28)
+        Me.cmdscore3.Location = New System.Drawing.Point(581, 28)
         Me.cmdscore3.Name = "cmdscore3"
         Me.cmdscore3.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore3.TabIndex = 705
@@ -852,7 +852,7 @@ Partial Class ucCricket
         Me.dgvFOW.AllowUserToAddRows = False
         Me.dgvFOW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvFOW.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FOW1, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        Me.dgvFOW.Location = New System.Drawing.Point(574, 507)
+        Me.dgvFOW.Location = New System.Drawing.Point(550, 507)
         Me.dgvFOW.Name = "dgvFOW"
         Me.dgvFOW.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.dgvFOW.Size = New System.Drawing.Size(546, 46)
@@ -1253,7 +1253,7 @@ Partial Class ucCricket
         'cmdscore2update
         '
         Me.cmdscore2update.BackColor = System.Drawing.Color.Yellow
-        Me.cmdscore2update.Location = New System.Drawing.Point(686, 80)
+        Me.cmdscore2update.Location = New System.Drawing.Point(644, 80)
         Me.cmdscore2update.Name = "cmdscore2update"
         Me.cmdscore2update.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore2update.TabIndex = 688
@@ -1263,7 +1263,7 @@ Partial Class ucCricket
         'cmdscore1update
         '
         Me.cmdscore1update.BackColor = System.Drawing.Color.Yellow
-        Me.cmdscore1update.Location = New System.Drawing.Point(686, 54)
+        Me.cmdscore1update.Location = New System.Drawing.Point(644, 54)
         Me.cmdscore1update.Name = "cmdscore1update"
         Me.cmdscore1update.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore1update.TabIndex = 687
@@ -1273,7 +1273,7 @@ Partial Class ucCricket
         'cmdscoreupdate
         '
         Me.cmdscoreupdate.BackColor = System.Drawing.Color.Yellow
-        Me.cmdscoreupdate.Location = New System.Drawing.Point(685, 0)
+        Me.cmdscoreupdate.Location = New System.Drawing.Point(643, 0)
         Me.cmdscoreupdate.Name = "cmdscoreupdate"
         Me.cmdscoreupdate.Size = New System.Drawing.Size(57, 25)
         Me.cmdscoreupdate.TabIndex = 686
@@ -1407,7 +1407,7 @@ Partial Class ucCricket
         '
         'txtinfo1
         '
-        Me.txtinfo1.Location = New System.Drawing.Point(497, 54)
+        Me.txtinfo1.Location = New System.Drawing.Point(455, 54)
         Me.txtinfo1.Name = "txtinfo1"
         Me.txtinfo1.Size = New System.Drawing.Size(120, 20)
         Me.txtinfo1.TabIndex = 641
@@ -1415,7 +1415,7 @@ Partial Class ucCricket
         '
         'txtinfo2
         '
-        Me.txtinfo2.Location = New System.Drawing.Point(497, 79)
+        Me.txtinfo2.Location = New System.Drawing.Point(455, 79)
         Me.txtinfo2.Name = "txtinfo2"
         Me.txtinfo2.Size = New System.Drawing.Size(120, 20)
         Me.txtinfo2.TabIndex = 644
@@ -1423,7 +1423,7 @@ Partial Class ucCricket
         '
         'cmbinfo2
         '
-        Me.cmbinfo2.Location = New System.Drawing.Point(358, 79)
+        Me.cmbinfo2.Location = New System.Drawing.Point(316, 79)
         Me.cmbinfo2.Name = "cmbinfo2"
         Me.cmbinfo2.Size = New System.Drawing.Size(133, 20)
         Me.cmbinfo2.TabIndex = 643
@@ -1431,7 +1431,7 @@ Partial Class ucCricket
         '
         'cmbinfo1
         '
-        Me.cmbinfo1.Location = New System.Drawing.Point(358, 54)
+        Me.cmbinfo1.Location = New System.Drawing.Point(316, 54)
         Me.cmbinfo1.Name = "cmbinfo1"
         Me.cmbinfo1.Size = New System.Drawing.Size(133, 20)
         Me.cmbinfo1.TabIndex = 640
@@ -1551,7 +1551,7 @@ Partial Class ucCricket
         '
         'txtthisover
         '
-        Me.txtthisover.Location = New System.Drawing.Point(1008, 644)
+        Me.txtthisover.Location = New System.Drawing.Point(974, 644)
         Me.txtthisover.Name = "txtthisover"
         Me.txtthisover.Size = New System.Drawing.Size(121, 20)
         Me.txtthisover.TabIndex = 599
@@ -1559,7 +1559,7 @@ Partial Class ucCricket
         '
         'txtlastwicketat
         '
-        Me.txtlastwicketat.Location = New System.Drawing.Point(1092, 717)
+        Me.txtlastwicketat.Location = New System.Drawing.Point(1058, 717)
         Me.txtlastwicketat.Name = "txtlastwicketat"
         Me.txtlastwicketat.Size = New System.Drawing.Size(40, 20)
         Me.txtlastwicketat.TabIndex = 598
@@ -1567,7 +1567,7 @@ Partial Class ucCricket
         '
         'txtmatchover
         '
-        Me.txtmatchover.Location = New System.Drawing.Point(1092, 696)
+        Me.txtmatchover.Location = New System.Drawing.Point(1058, 696)
         Me.txtmatchover.Name = "txtmatchover"
         Me.txtmatchover.Size = New System.Drawing.Size(40, 20)
         Me.txtmatchover.TabIndex = 597
@@ -1575,7 +1575,7 @@ Partial Class ucCricket
         '
         'txt1stinningscore
         '
-        Me.txt1stinningscore.Location = New System.Drawing.Point(1092, 670)
+        Me.txt1stinningscore.Location = New System.Drawing.Point(1058, 670)
         Me.txt1stinningscore.Name = "txt1stinningscore"
         Me.txt1stinningscore.Size = New System.Drawing.Size(40, 20)
         Me.txt1stinningscore.TabIndex = 596
@@ -1583,7 +1583,7 @@ Partial Class ucCricket
         '
         'txtover
         '
-        Me.txtover.Location = New System.Drawing.Point(291, 26)
+        Me.txtover.Location = New System.Drawing.Point(267, 26)
         Me.txtover.Name = "txtover"
         Me.txtover.Size = New System.Drawing.Size(38, 20)
         Me.txtover.TabIndex = 591
@@ -1591,14 +1591,14 @@ Partial Class ucCricket
         '
         'txtinfo
         '
-        Me.txtinfo.Location = New System.Drawing.Point(496, 5)
+        Me.txtinfo.Location = New System.Drawing.Point(454, 5)
         Me.txtinfo.Name = "txtinfo"
         Me.txtinfo.Size = New System.Drawing.Size(120, 20)
         Me.txtinfo.TabIndex = 590
         '
         'txtwicket
         '
-        Me.txtwicket.Location = New System.Drawing.Point(168, 28)
+        Me.txtwicket.Location = New System.Drawing.Point(153, 28)
         Me.txtwicket.Name = "txtwicket"
         Me.txtwicket.Size = New System.Drawing.Size(29, 20)
         Me.txtwicket.TabIndex = 589
@@ -1606,7 +1606,7 @@ Partial Class ucCricket
         '
         'txtovers
         '
-        Me.txtovers.Location = New System.Drawing.Point(216, 27)
+        Me.txtovers.Location = New System.Drawing.Point(201, 27)
         Me.txtovers.Name = "txtovers"
         Me.txtovers.Size = New System.Drawing.Size(60, 20)
         Me.txtovers.TabIndex = 588
@@ -1614,7 +1614,7 @@ Partial Class ucCricket
         '
         'txtrun
         '
-        Me.txtrun.Location = New System.Drawing.Point(89, 26)
+        Me.txtrun.Location = New System.Drawing.Point(74, 26)
         Me.txtrun.Name = "txtrun"
         Me.txtrun.Size = New System.Drawing.Size(45, 20)
         Me.txtrun.TabIndex = 587
@@ -1622,7 +1622,7 @@ Partial Class ucCricket
         '
         'txtteamname
         '
-        Me.txtteamname.Location = New System.Drawing.Point(20, 27)
+        Me.txtteamname.Location = New System.Drawing.Point(5, 27)
         Me.txtteamname.Name = "txtteamname"
         Me.txtteamname.Size = New System.Drawing.Size(52, 20)
         Me.txtteamname.TabIndex = 586
@@ -1747,7 +1747,7 @@ Partial Class ucCricket
         Me.cmdscore2.BackColor = System.Drawing.Color.Green
         Me.cmdscore2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdscore2.ForeColor = System.Drawing.Color.White
-        Me.cmdscore2.Location = New System.Drawing.Point(623, 79)
+        Me.cmdscore2.Location = New System.Drawing.Point(581, 79)
         Me.cmdscore2.Name = "cmdscore2"
         Me.cmdscore2.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore2.TabIndex = 645
@@ -1759,7 +1759,7 @@ Partial Class ucCricket
         Me.cmdscore1.BackColor = System.Drawing.Color.Green
         Me.cmdscore1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdscore1.ForeColor = System.Drawing.Color.White
-        Me.cmdscore1.Location = New System.Drawing.Point(623, 54)
+        Me.cmdscore1.Location = New System.Drawing.Point(581, 54)
         Me.cmdscore1.Name = "cmdscore1"
         Me.cmdscore1.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore1.TabIndex = 642
@@ -1768,7 +1768,7 @@ Partial Class ucCricket
         '
         'cmdcleardatascore
         '
-        Me.cmdcleardatascore.Location = New System.Drawing.Point(104, 59)
+        Me.cmdcleardatascore.Location = New System.Drawing.Point(89, 59)
         Me.cmdcleardatascore.Name = "cmdcleardatascore"
         Me.cmdcleardatascore.Size = New System.Drawing.Size(134, 23)
         Me.cmdcleardatascore.TabIndex = 676
@@ -2040,7 +2040,7 @@ Partial Class ucCricket
         'lbllastwicketat
         '
         Me.lbllastwicketat.AutoSize = True
-        Me.lbllastwicketat.Location = New System.Drawing.Point(984, 724)
+        Me.lbllastwicketat.Location = New System.Drawing.Point(950, 724)
         Me.lbllastwicketat.Name = "lbllastwicketat"
         Me.lbllastwicketat.Size = New System.Drawing.Size(100, 13)
         Me.lbllastwicketat.TabIndex = 603
@@ -2049,7 +2049,7 @@ Partial Class ucCricket
         'lblthisover
         '
         Me.lblthisover.AutoSize = True
-        Me.lblthisover.Location = New System.Drawing.Point(949, 647)
+        Me.lblthisover.Location = New System.Drawing.Point(915, 647)
         Me.lblthisover.Name = "lblthisover"
         Me.lblthisover.Size = New System.Drawing.Size(53, 13)
         Me.lblthisover.TabIndex = 602
@@ -2058,7 +2058,7 @@ Partial Class ucCricket
         'lblmatchover
         '
         Me.lblmatchover.AutoSize = True
-        Me.lblmatchover.Location = New System.Drawing.Point(1005, 697)
+        Me.lblmatchover.Location = New System.Drawing.Point(971, 697)
         Me.lblmatchover.Name = "lblmatchover"
         Me.lblmatchover.Size = New System.Drawing.Size(78, 13)
         Me.lblmatchover.TabIndex = 601
@@ -2067,7 +2067,7 @@ Partial Class ucCricket
         'lbl1stinningscore
         '
         Me.lbl1stinningscore.AutoSize = True
-        Me.lbl1stinningscore.Location = New System.Drawing.Point(1005, 673)
+        Me.lbl1stinningscore.Location = New System.Drawing.Point(971, 673)
         Me.lbl1stinningscore.Name = "lbl1stinningscore"
         Me.lbl1stinningscore.Size = New System.Drawing.Size(81, 13)
         Me.lbl1stinningscore.TabIndex = 600
@@ -2077,23 +2077,23 @@ Partial Class ucCricket
         '
         Me.cmbinfo.FormattingEnabled = True
         Me.cmbinfo.Items.AddRange(New Object() {"Run Rate", "Required Run Rate", "", "Target", "To Win", "Last Wicket At", "Overs Remaining", "Balls Remaining", "Wickets At Hand", "This Over", "Free Hit", "Equation"})
-        Me.cmbinfo.Location = New System.Drawing.Point(357, 5)
+        Me.cmbinfo.Location = New System.Drawing.Point(315, 5)
         Me.cmbinfo.Name = "cmbinfo"
         Me.cmbinfo.Size = New System.Drawing.Size(133, 21)
         Me.cmbinfo.TabIndex = 595
         '
         'cmdover
         '
-        Me.cmdover.Location = New System.Drawing.Point(277, 2)
+        Me.cmdover.Location = New System.Drawing.Point(259, 1)
         Me.cmdover.Name = "cmdover"
-        Me.cmdover.Size = New System.Drawing.Size(75, 23)
+        Me.cmdover.Size = New System.Drawing.Size(52, 23)
         Me.cmdover.TabIndex = 594
         Me.cmdover.Text = "Over"
         Me.cmdover.UseVisualStyleBackColor = True
         '
         'cmdwicket
         '
-        Me.cmdwicket.Location = New System.Drawing.Point(157, 2)
+        Me.cmdwicket.Location = New System.Drawing.Point(142, 2)
         Me.cmdwicket.Name = "cmdwicket"
         Me.cmdwicket.Size = New System.Drawing.Size(54, 23)
         Me.cmdwicket.TabIndex = 593
@@ -2102,7 +2102,7 @@ Partial Class ucCricket
         '
         'cmdrun
         '
-        Me.cmdrun.Location = New System.Drawing.Point(76, 2)
+        Me.cmdrun.Location = New System.Drawing.Point(61, 2)
         Me.cmdrun.Name = "cmdrun"
         Me.cmdrun.Size = New System.Drawing.Size(75, 23)
         Me.cmdrun.TabIndex = 592
@@ -2114,7 +2114,7 @@ Partial Class ucCricket
         Me.cmdscore.BackColor = System.Drawing.Color.Green
         Me.cmdscore.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdscore.ForeColor = System.Drawing.Color.White
-        Me.cmdscore.Location = New System.Drawing.Point(622, 1)
+        Me.cmdscore.Location = New System.Drawing.Point(580, 1)
         Me.cmdscore.Name = "cmdscore"
         Me.cmdscore.Size = New System.Drawing.Size(57, 25)
         Me.cmdscore.TabIndex = 585
@@ -2127,7 +2127,7 @@ Partial Class ucCricket
         Me.TabControl1.Location = New System.Drawing.Point(6, 114)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1157, 831)
+        Me.TabControl1.Size = New System.Drawing.Size(1111, 781)
         Me.TabControl1.TabIndex = 0
         '
         'txthtmlupdateDelay
@@ -2314,7 +2314,7 @@ Partial Class ucCricket
         Me.GroupBox2.Controls.Add(Me.cmdremoveoutput)
         Me.GroupBox2.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1222, 951)
+        Me.GroupBox2.Size = New System.Drawing.Size(1210, 915)
         Me.GroupBox2.TabIndex = 1265
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = " "
@@ -2323,8 +2323,9 @@ Partial Class ucCricket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1231, 955)
+        Me.ClientSize = New System.Drawing.Size(1208, 921)
         Me.Controls.Add(Me.GroupBox2)
         Me.HideOnClose = True
         Me.Name = "ucCricket"
