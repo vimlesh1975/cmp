@@ -1,4 +1,6 @@
 ﻿Public Class ucElement
+    Dim border As String = "vf drawbox=x=y:w=h:color=white:t=20"
+
     Private Sub UserControl1_DoubleClick(sender As Object, e As EventArgs) Handles Me.DoubleClick
         On Error Resume Next
         Dim ss As New OpenFileDialog
@@ -210,11 +212,41 @@
         'ndi1 = bb.cmbNDI.Text
         Form1.ElementInfo1.Type1 = "ndi"
         Form1.ElementInfo1.url1 = ndi1
-            Form1.ElementInfo1.url2 = ""
-            Me.Tag = Form1.ElementInfo1.Type1 & Chr(3) & Form1.ElementInfo1.url1 & Chr(3) & Form1.ElementInfo1.url2
+        Form1.ElementInfo1.url2 = ""
+        Me.Tag = Form1.ElementInfo1.Type1 & Chr(3) & Form1.ElementInfo1.url1 & Chr(3) & Form1.ElementInfo1.url2
         VlcControl1.Play(New Uri("c:/casparcg/_media/ndi.jpg"), params)
         CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & Me.Label1.Text & " [ndi] " & ndi1)
         'End If
+
+    End Sub
+
+    Private Sub ucElement_Click(sender As Object, e As EventArgs) Handles Me.Click
+        Label2.Text = Me.Tag.split(Chr(3))(1)
+    End Sub
+
+    Private Sub AddBorderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddBorderToolStripMenuItem.Click
+        CasparDevice.SendString("stop " & g_int_ChannelNumber & "-" & Me.Label1.Text)
+        If Me.Tag.split(Chr(3))(0) = "file" Then
+            CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & Me.Label1.Text & " " & """" & Replace(Replace(Me.Tag.split(Chr(3))(1), "\", "/"), ":/", "://") & """" & " " & border)
+
+        ElseIf Me.Tag.split(Chr(3))(0) = "ndi" Then
+            CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & Me.Label1.Text & " [ndi] " & (Me.Tag.split(Chr(3))(1) & " " & border))
+
+        ElseIf Me.Tag.split(Chr(3))(0) = "html" Then
+            CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & Me.Label1.Text & " [html] " & (Me.Tag.split(Chr(3))(1) & " " & border))
+
+        ElseIf Me.Tag.split(Chr(3))(0) = "youtube" Then
+
+            CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & Label1.Text & " [HTML]  file:///C:/casparcg/mydata/youtube/youtube.html" & " " & border)
+            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & Label1.Text & " opacity 0")
+            Threading.Thread.Sleep(1000)
+            CasparDevice.SendString("Call " & g_int_ChannelNumber & "-" & Label1.Text & " player.loadVideoById('" & Me.Tag.split(Chr(3))(1) & "')")
+            CasparDevice.SendString("Call " & g_int_ChannelNumber & "-" & Label1.Text & " player.setSize('" & Split(Me.Tag.split(Chr(3))(2), "x")(0) & "','" & Split(Me.Tag.split(Chr(3))(2), "x")(1) & "')")
+            Threading.Thread.Sleep(1000)
+            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & Label1.Text & " opacity 1")
+        Else
+            CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & Me.Label1.Text & " " & (Me.Tag.split(Chr(3))(1) & " " & border))
+        End If
 
     End Sub
 End Class

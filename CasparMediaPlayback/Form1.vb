@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Runtime.InteropServices
 Public Class Form1
+
     Dim savefilename As String = "C:\casparcg\mydata\composition\test1.txt"
     <DllImport("winmm.dll")> Private Shared Function waveOutSetVolume(ByVal hwo As IntPtr, ByVal dwVolume As UInteger) As UInteger
     End Function
@@ -46,7 +47,7 @@ Public Class Form1
 
         media.VlcControl1.Play(New Uri("c:/casparcg/_media/kabhi_kabhi.mp4"), params)
         'CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & media.Label1.Text & " " & """" & Replace(Replace(Split(media.VlcControl1.VlcMediaPlayer.GetMedia.Mrl, "///")(1), ":/", "://"), "%20", " ") & """" & " loop")
-        CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & media.Label1.Text & " " & """" & Replace(Replace(Split(media.VlcControl1.VlcMediaPlayer.GetMedia.Mrl, "///")(1), ":/", "://"), "%20", " ") & """" & " loop vf drawbox=x=y:w=h:color=white:t=20")
+        CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & media.Label1.Text & " " & """" & Replace(Replace(Split(media.VlcControl1.VlcMediaPlayer.GetMedia.Mrl, "///")(1), ":/", "://"), "%20", " ") & """" & " loop ")
         CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & media.Label1.Text & " fill " & fillcommand(media)(0))
 
         media.BringToFront()

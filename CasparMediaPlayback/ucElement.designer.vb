@@ -38,6 +38,8 @@ Partial Class ucElement
         Me.BringToFrontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddCaptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NDIToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.AddBorderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.VlcControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -76,69 +78,84 @@ Partial Class ucElement
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UriToolStripMenuItem, Me.Decklink2ToolStripMenuItem, Me.BluefishToolStripMenuItem, Me.StreamToolStripMenuItem, Me.HtmlToolStripMenuItem, Me.YoutubeToolStripMenuItem, Me.SendToBackToolStripMenuItem, Me.BringToFrontToolStripMenuItem, Me.AddCaptionToolStripMenuItem, Me.NDIToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UriToolStripMenuItem, Me.Decklink2ToolStripMenuItem, Me.BluefishToolStripMenuItem, Me.StreamToolStripMenuItem, Me.HtmlToolStripMenuItem, Me.YoutubeToolStripMenuItem, Me.SendToBackToolStripMenuItem, Me.BringToFrontToolStripMenuItem, Me.AddCaptionToolStripMenuItem, Me.NDIToolStripMenuItem, Me.AddBorderToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(149, 224)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 268)
         '
         'UriToolStripMenuItem
         '
         Me.UriToolStripMenuItem.Name = "UriToolStripMenuItem"
-        Me.UriToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.UriToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UriToolStripMenuItem.Text = "uri"
         '
         'Decklink2ToolStripMenuItem
         '
         Me.Decklink2ToolStripMenuItem.Name = "Decklink2ToolStripMenuItem"
-        Me.Decklink2ToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.Decklink2ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.Decklink2ToolStripMenuItem.Text = "Decklink"
         '
         'BluefishToolStripMenuItem
         '
         Me.BluefishToolStripMenuItem.Name = "BluefishToolStripMenuItem"
-        Me.BluefishToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.BluefishToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BluefishToolStripMenuItem.Text = "Bluefish"
         '
         'StreamToolStripMenuItem
         '
         Me.StreamToolStripMenuItem.Name = "StreamToolStripMenuItem"
-        Me.StreamToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.StreamToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StreamToolStripMenuItem.Text = "Stream"
         '
         'HtmlToolStripMenuItem
         '
         Me.HtmlToolStripMenuItem.Name = "HtmlToolStripMenuItem"
-        Me.HtmlToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.HtmlToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.HtmlToolStripMenuItem.Text = "html"
         '
         'YoutubeToolStripMenuItem
         '
         Me.YoutubeToolStripMenuItem.Name = "YoutubeToolStripMenuItem"
-        Me.YoutubeToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.YoutubeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.YoutubeToolStripMenuItem.Text = "Youtube"
         '
         'SendToBackToolStripMenuItem
         '
         Me.SendToBackToolStripMenuItem.Name = "SendToBackToolStripMenuItem"
-        Me.SendToBackToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.SendToBackToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SendToBackToolStripMenuItem.Text = "Send To Back"
         '
         'BringToFrontToolStripMenuItem
         '
         Me.BringToFrontToolStripMenuItem.Name = "BringToFrontToolStripMenuItem"
-        Me.BringToFrontToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.BringToFrontToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BringToFrontToolStripMenuItem.Text = "Bring To Front"
         '
         'AddCaptionToolStripMenuItem
         '
         Me.AddCaptionToolStripMenuItem.Name = "AddCaptionToolStripMenuItem"
-        Me.AddCaptionToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.AddCaptionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AddCaptionToolStripMenuItem.Text = "Add Caption"
         '
         'NDIToolStripMenuItem
         '
         Me.NDIToolStripMenuItem.Name = "NDIToolStripMenuItem"
-        Me.NDIToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.NDIToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NDIToolStripMenuItem.Text = "NDI"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(3, 156)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(25, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "456"
+        '
+        'AddBorderToolStripMenuItem
+        '
+        Me.AddBorderToolStripMenuItem.Name = "AddBorderToolStripMenuItem"
+        Me.AddBorderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddBorderToolStripMenuItem.Text = "Add Border"
         '
         'ucElement
         '
@@ -148,11 +165,12 @@ Partial Class ucElement
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cmdClose)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.VlcControl1)
         Me.Name = "ucElement"
-        Me.Size = New System.Drawing.Size(216, 167)
+        Me.Size = New System.Drawing.Size(216, 169)
         CType(Me.VlcControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -174,4 +192,6 @@ Partial Class ucElement
     Friend WithEvents BringToFrontToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddCaptionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NDIToolStripMenuItem As ToolStripMenuItem
+    Public WithEvents Label2 As Label
+    Friend WithEvents AddBorderToolStripMenuItem As ToolStripMenuItem
 End Class
