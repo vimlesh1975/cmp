@@ -58,17 +58,6 @@
         sender.Hide()
     End Sub
 
-    Private Sub cmdhideoffairlogger3_Click(sender As Object, e As EventArgs) Handles cmdhideoffairlogger3.Click
-        On Error Resume Next
-        UcnewOffAirLogger3.stoprecordoal()
-        UcnewOffAirLogger3.cmdoutcasparcgwindowrecording.PerformClick()
-        UcnewOffAirLogger3.stoposcserver()
-
-        UcnewOffAirLogger3.Hide()
-        sender.Hide()
-
-    End Sub
-
     Private Sub cmdhideoffairlogger4_Click(sender As Object, e As EventArgs) Handles cmdhideoffairlogger4.Click
         On Error Resume Next
         UcnewOffAirLogger4.stoprecordoal()
@@ -76,6 +65,17 @@
         UcnewOffAirLogger4.stoposcserver()
 
         UcnewOffAirLogger4.Hide()
+        sender.Hide()
+
+    End Sub
+
+    Private Sub cmdhideoffairlogger3_Click(sender As Object, e As EventArgs) Handles cmdhideoffairlogger3.Click
+        On Error Resume Next
+        UcnewOffAirLogger3.stoprecordoal()
+        UcnewOffAirLogger3.cmdoutcasparcgwindowrecording.PerformClick()
+        UcnewOffAirLogger3.stoposcserver()
+
+        UcnewOffAirLogger3.Hide()
         sender.Hide()
     End Sub
 
@@ -89,17 +89,17 @@
             SetParent(UcnewOffAirLogger2.parentedProcess1.MainWindowHandle, Nothing)
         End If
 
-        If Not UcnewOffAirLogger3.parentedProcess1 Is Nothing Then
-            SetParent(UcnewOffAirLogger3.parentedProcess1.MainWindowHandle, Nothing)
-        End If
         If Not UcnewOffAirLogger4.parentedProcess1 Is Nothing Then
             SetParent(UcnewOffAirLogger4.parentedProcess1.MainWindowHandle, Nothing)
+        End If
+        If Not UcnewOffAirLogger3.parentedProcess1 Is Nothing Then
+            SetParent(UcnewOffAirLogger3.parentedProcess1.MainWindowHandle, Nothing)
         End If
 
         UcnewOffAirLogger1.stoposcserver()
         UcnewOffAirLogger2.stoposcserver()
-        UcnewOffAirLogger3.stoposcserver()
         UcnewOffAirLogger4.stoposcserver()
+        UcnewOffAirLogger3.stoposcserver()
 
         Me.Parent.Controls("ucOffAirLoggers1").Dispose()
     End Sub

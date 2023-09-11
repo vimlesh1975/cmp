@@ -144,7 +144,7 @@ Partial Class frmmediaplayer
         Me.WaterMarkingToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuizeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WeatherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RCCAutomationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewCgSoftwareDownloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScrollersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HTMLScrollerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -164,6 +164,7 @@ Partial Class frmmediaplayer
         Me.OnScreenDrawingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WeightLiftingToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RCCBallToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewGameClientDownloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExternalSoftwaresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MediaAssetManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.XDCamSoapClientToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -324,6 +325,7 @@ Partial Class frmmediaplayer
         Me.CpBarCPU = New CPBar()
         Me.DockPanel1 = New WeifenLuo.WinFormsUI.Docking.DockPanel()
         Me.VS2015BlueTheme1 = New WeifenLuo.WinFormsUI.Docking.VS2015BlueTheme()
+        Me.OnlineCGToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -1385,7 +1387,7 @@ Partial Class frmmediaplayer
         Me.mnuCMP.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCMPPlayList, Me.mnuCMPTemplate, Me.mnuCMP4ChannelRecordingAndTrimming, Me.TrimmerToolStripMenuItem, Me.CGToolStripMenuItem, Me.ScrollersToolStripMenuItem, Me.GamesToolStripMenuItem, Me.ExternalSoftwaresToolStripMenuItem, Me.mnuCMPModules, Me.mnuCMPTools, Me.mnuCMPHelp})
         Me.mnuCMP.Location = New System.Drawing.Point(0, 0)
         Me.mnuCMP.Name = "mnuCMP"
-        Me.mnuCMP.Size = New System.Drawing.Size(909, 24)
+        Me.mnuCMP.Size = New System.Drawing.Size(1029, 24)
         Me.mnuCMP.TabIndex = 0
         Me.mnuCMP.TabStop = True
         Me.mnuCMP.Text = "mnuCMP"
@@ -1467,7 +1469,7 @@ Partial Class frmmediaplayer
         '
         'CGToolStripMenuItem
         '
-        Me.CGToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CG1ToolStripMenuItem, Me.CG2ToolStripMenuItem, Me.OnelinerToolStripMenuItem, Me.TwolinerToolStripMenuItem1, Me.PPTEXcellToolStripMenuItem1, Me.WaterMarkingToolStripMenuItem1, Me.QuizeToolStripMenuItem, Me.WeatherToolStripMenuItem, Me.RCCAutomationToolStripMenuItem})
+        Me.CGToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OnlineCGToolStripMenuItem, Me.CG1ToolStripMenuItem, Me.CG2ToolStripMenuItem, Me.OnelinerToolStripMenuItem, Me.TwolinerToolStripMenuItem1, Me.PPTEXcellToolStripMenuItem1, Me.WaterMarkingToolStripMenuItem1, Me.QuizeToolStripMenuItem, Me.WeatherToolStripMenuItem, Me.NewCgSoftwareDownloadToolStripMenuItem})
         Me.CGToolStripMenuItem.Name = "CGToolStripMenuItem"
         Me.CGToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
         Me.CGToolStripMenuItem.Text = "CG"
@@ -1475,56 +1477,56 @@ Partial Class frmmediaplayer
         'CG1ToolStripMenuItem
         '
         Me.CG1ToolStripMenuItem.Name = "CG1ToolStripMenuItem"
-        Me.CG1ToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.CG1ToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
         Me.CG1ToolStripMenuItem.Text = "CG1"
         '
         'CG2ToolStripMenuItem
         '
         Me.CG2ToolStripMenuItem.Name = "CG2ToolStripMenuItem"
-        Me.CG2ToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.CG2ToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
         Me.CG2ToolStripMenuItem.Text = "CG2"
         '
         'OnelinerToolStripMenuItem
         '
         Me.OnelinerToolStripMenuItem.Name = "OnelinerToolStripMenuItem"
-        Me.OnelinerToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.OnelinerToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
         Me.OnelinerToolStripMenuItem.Text = "Oneliner"
         '
         'TwolinerToolStripMenuItem1
         '
         Me.TwolinerToolStripMenuItem1.Name = "TwolinerToolStripMenuItem1"
-        Me.TwolinerToolStripMenuItem1.Size = New System.Drawing.Size(164, 22)
+        Me.TwolinerToolStripMenuItem1.Size = New System.Drawing.Size(222, 22)
         Me.TwolinerToolStripMenuItem1.Text = "Twoliner"
         '
         'PPTEXcellToolStripMenuItem1
         '
         Me.PPTEXcellToolStripMenuItem1.Name = "PPTEXcellToolStripMenuItem1"
-        Me.PPTEXcellToolStripMenuItem1.Size = New System.Drawing.Size(164, 22)
+        Me.PPTEXcellToolStripMenuItem1.Size = New System.Drawing.Size(222, 22)
         Me.PPTEXcellToolStripMenuItem1.Text = "PPT/EXcell"
         '
         'WaterMarkingToolStripMenuItem1
         '
         Me.WaterMarkingToolStripMenuItem1.Name = "WaterMarkingToolStripMenuItem1"
-        Me.WaterMarkingToolStripMenuItem1.Size = New System.Drawing.Size(164, 22)
+        Me.WaterMarkingToolStripMenuItem1.Size = New System.Drawing.Size(222, 22)
         Me.WaterMarkingToolStripMenuItem1.Text = "Water Marking"
         '
         'QuizeToolStripMenuItem
         '
         Me.QuizeToolStripMenuItem.Name = "QuizeToolStripMenuItem"
-        Me.QuizeToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.QuizeToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
         Me.QuizeToolStripMenuItem.Text = "Quiz"
         '
         'WeatherToolStripMenuItem
         '
         Me.WeatherToolStripMenuItem.Name = "WeatherToolStripMenuItem"
-        Me.WeatherToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.WeatherToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
         Me.WeatherToolStripMenuItem.Text = "Weather"
         '
-        'RCCAutomationToolStripMenuItem
+        'NewCgSoftwareDownloadToolStripMenuItem
         '
-        Me.RCCAutomationToolStripMenuItem.Name = "RCCAutomationToolStripMenuItem"
-        Me.RCCAutomationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.RCCAutomationToolStripMenuItem.Text = "RCC Automation"
+        Me.NewCgSoftwareDownloadToolStripMenuItem.Name = "NewCgSoftwareDownloadToolStripMenuItem"
+        Me.NewCgSoftwareDownloadToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
+        Me.NewCgSoftwareDownloadToolStripMenuItem.Text = "New Cg Software Download"
         '
         'ScrollersToolStripMenuItem
         '
@@ -1595,7 +1597,7 @@ Partial Class frmmediaplayer
         '
         'GamesToolStripMenuItem
         '
-        Me.GamesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NationalGamesKerlaToolStripMenuItem, Me.SouthAsianGamesGuwahati2016ToolStripMenuItem, Me.CricketToolStripMenuItem1, Me.DaviceCupToolStripMenuItem, Me.OnScreenDrawingToolStripMenuItem, Me.WeightLiftingToolStripMenuItem1, Me.RCCBallToolStripMenuItem})
+        Me.GamesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NationalGamesKerlaToolStripMenuItem, Me.SouthAsianGamesGuwahati2016ToolStripMenuItem, Me.CricketToolStripMenuItem1, Me.DaviceCupToolStripMenuItem, Me.OnScreenDrawingToolStripMenuItem, Me.WeightLiftingToolStripMenuItem1, Me.RCCBallToolStripMenuItem, Me.NewGameClientDownloadToolStripMenuItem})
         Me.GamesToolStripMenuItem.Name = "GamesToolStripMenuItem"
         Me.GamesToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.GamesToolStripMenuItem.Text = "Games"
@@ -1641,6 +1643,12 @@ Partial Class frmmediaplayer
         Me.RCCBallToolStripMenuItem.Name = "RCCBallToolStripMenuItem"
         Me.RCCBallToolStripMenuItem.Size = New System.Drawing.Size(256, 22)
         Me.RCCBallToolStripMenuItem.Text = "RCCBall"
+        '
+        'NewGameClientDownloadToolStripMenuItem
+        '
+        Me.NewGameClientDownloadToolStripMenuItem.Name = "NewGameClientDownloadToolStripMenuItem"
+        Me.NewGameClientDownloadToolStripMenuItem.Size = New System.Drawing.Size(256, 22)
+        Me.NewGameClientDownloadToolStripMenuItem.Text = "New Game Client Download"
         '
         'ExternalSoftwaresToolStripMenuItem
         '
@@ -2691,7 +2699,7 @@ Partial Class frmmediaplayer
         Me.CpBarCPU.CPB_Text_3 = "%"
         Me.CpBarCPU.Location = New System.Drawing.Point(38, -1)
         Me.CpBarCPU.Name = "CpBarCPU"
-        Me.CpBarCPU.Size = New System.Drawing.Size(76, 76)
+        Me.CpBarCPU.Size = New System.Drawing.Size(81, 81)
         Me.CpBarCPU.TabIndex = 1176
         '
         'DockPanel1
@@ -2705,6 +2713,12 @@ Partial Class frmmediaplayer
         Me.DockPanel1.Size = New System.Drawing.Size(1224, 960)
         Me.DockPanel1.TabIndex = 1176
         Me.DockPanel1.Theme = Me.VS2015BlueTheme1
+        '
+        'OnlineCGToolStripMenuItem
+        '
+        Me.OnlineCGToolStripMenuItem.Name = "OnlineCGToolStripMenuItem"
+        Me.OnlineCGToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
+        Me.OnlineCGToolStripMenuItem.Text = "Online CG"
         '
         'DataGridViewTextBoxColumn1
         '
@@ -2790,7 +2804,7 @@ Partial Class frmmediaplayer
         Me.IsMdiContainer = True
         Me.MaximumSize = New System.Drawing.Size(1920, 1080)
         Me.Name = "frmmediaplayer"
-        Me.Text = "CasparMediaPlayback080423_1"
+        Me.Text = "CasparMediaPlayback110923_1"
         CType(Me.nfontsizeforall, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbmodules.ResumeLayout(False)
         Me.gbmodules.PerformLayout()
@@ -3116,6 +3130,8 @@ Partial Class frmmediaplayer
     Friend WithEvents lblcasparMemoryValue As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents lblcasparMemory As Label
-    Friend WithEvents RCCAutomationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RCCBallToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NewGameClientDownloadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NewCgSoftwareDownloadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OnlineCGToolStripMenuItem As ToolStripMenuItem
 End Class

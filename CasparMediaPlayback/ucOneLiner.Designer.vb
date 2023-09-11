@@ -35,6 +35,8 @@ Partial Class ucOneLiner
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gboneliner = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtTemplatename = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.chkPlayFromTraslatedGrigRCC = New System.Windows.Forms.CheckBox()
         Me.cmdRCCPlayer1 = New System.Windows.Forms.Button()
         Me.cmdRCCStop1 = New System.Windows.Forms.Button()
@@ -44,6 +46,7 @@ Partial Class ucOneLiner
         Me.cmblanguage = New System.Windows.Forms.ComboBox()
         Me.cmdTranslate = New System.Windows.Forms.Button()
         Me.dgvonelinesuperTranslated = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtvariable1 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -87,15 +90,12 @@ Partial Class ucOneLiner
         Me.downtsoneliner = New System.Windows.Forms.Button()
         Me.addtsoneliner = New System.Windows.Forms.Button()
         Me.dgvonelinesuper = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colTranslate = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.cmdonelinesuperplay = New System.Windows.Forms.Button()
         Me.cmdonelinesupernext = New System.Windows.Forms.Button()
         Me.cmdonelinesuperstop = New System.Windows.Forms.Button()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtTemplatename = New System.Windows.Forms.TextBox()
         Me.gboneliner.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvonelinesuperTranslated, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,6 +156,23 @@ Partial Class ucOneLiner
         Me.GroupBox2.TabIndex = 750
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "RCC Player"
+        '
+        'txtTemplatename
+        '
+        Me.txtTemplatename.Location = New System.Drawing.Point(165, 55)
+        Me.txtTemplatename.Name = "txtTemplatename"
+        Me.txtTemplatename.Size = New System.Drawing.Size(204, 20)
+        Me.txtTemplatename.TabIndex = 752
+        Me.txtTemplatename.Text = "cmp/oneliner/RCConeliner"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(79, 58)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(80, 13)
+        Me.Label4.TabIndex = 751
+        Me.Label4.Text = "Template name"
         '
         'chkPlayFromTraslatedGrigRCC
         '
@@ -277,6 +294,16 @@ Partial Class ucOneLiner
         Me.dgvonelinesuperTranslated.RowHeadersWidth = 25
         Me.dgvonelinesuperTranslated.Size = New System.Drawing.Size(545, 191)
         Me.dgvonelinesuperTranslated.TabIndex = 726
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.Frozen = True
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Oneline Super"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 600
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn1.Width = 600
         '
         'txtvariable1
         '
@@ -731,6 +758,16 @@ Partial Class ucOneLiner
         Me.dgvonelinesuper.Size = New System.Drawing.Size(547, 187)
         Me.dgvonelinesuper.TabIndex = 510
         '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.Frozen = True
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Oneline Super"
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 400
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn3.Width = 400
+        '
         'colTranslate
         '
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -780,16 +817,6 @@ Partial Class ucOneLiner
         Me.cmdonelinesuperstop.Text = "Stop"
         Me.cmdonelinesuperstop.UseVisualStyleBackColor = False
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.Frozen = True
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Oneline Super"
-        Me.DataGridViewTextBoxColumn1.MinimumWidth = 600
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DataGridViewTextBoxColumn1.Width = 600
-        '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.Frozen = True
@@ -799,33 +826,6 @@ Partial Class ucOneLiner
         Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.DataGridViewTextBoxColumn2.Width = 600
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.Frozen = True
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Oneline Super"
-        Me.DataGridViewTextBoxColumn3.MinimumWidth = 400
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DataGridViewTextBoxColumn3.Width = 400
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(79, 58)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(80, 13)
-        Me.Label4.TabIndex = 751
-        Me.Label4.Text = "Template name"
-        '
-        'txtTemplatename
-        '
-        Me.txtTemplatename.Location = New System.Drawing.Point(165, 55)
-        Me.txtTemplatename.Name = "txtTemplatename"
-        Me.txtTemplatename.Size = New System.Drawing.Size(139, 20)
-        Me.txtTemplatename.TabIndex = 752
-        Me.txtTemplatename.Text = "oneliner"
         '
         'ucOneLiner
         '

@@ -101,6 +101,9 @@ Public Class frmmediaplayer
     Friend WithEvents ucytlive1 As DockContent = ucytlive
     Friend WithEvents ucRCCAutomation1 As DockContent = ucRCCAutomation
     Friend WithEvents ucRccBall1 As DockContent = ucRccBall
+    Friend WithEvents ucOnLineCG1 As DockContent = ucOnLineCG
+
+
 
     Public Sub animation1()
         CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & ucTemplate.cmblayertemplate.Text & " fill -1 0 1 1")
@@ -290,8 +293,8 @@ Public Class frmmediaplayer
 
         ucOffAirLoggers.UcnewOffAirLogger1.txtmediadirectoryoal.Text = mediafullpath
         ucOffAirLoggers.UcnewOffAirLogger2.txtmediadirectoryoal.Text = mediafullpath
-        ucOffAirLoggers.UcnewOffAirLogger3.txtmediadirectoryoal.Text = mediafullpath
         ucOffAirLoggers.UcnewOffAirLogger4.txtmediadirectoryoal.Text = mediafullpath
+        ucOffAirLoggers.UcnewOffAirLogger3.txtmediadirectoryoal.Text = mediafullpath
 
         ucRecorder.lblRecordingFolder.Text = mediafullpath
 
@@ -1757,14 +1760,22 @@ Public Class frmmediaplayer
     End Sub
 
 
-    Private Sub RCCAutomationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RCCAutomationToolStripMenuItem.Click
-        On Error Resume Next
-        ucRCCAutomation1.Show(DockPanel1, DockState.Document)
-
-    End Sub
 
     Private Sub RCCBallToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RCCBallToolStripMenuItem.Click
         On Error Resume Next
         ucRccBall1.Show(DockPanel1, DockState.Document)
+    End Sub
+
+    Private Sub NewGameClientDownloadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewGameClientDownloadToolStripMenuItem.Click
+        System.Diagnostics.Process.Start("http://bit.ly/3PCcHP6")
+    End Sub
+
+    Private Sub NewCgSoftwareDownloadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewCgSoftwareDownloadToolStripMenuItem.Click
+        System.Diagnostics.Process.Start("https://casparcgforum.org/t/react-caspar-client/4375")
+    End Sub
+
+    Private Sub OnlineCGToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OnlineCGToolStripMenuItem.Click
+        ucOnLineCG1.Show(DockPanel1, DockState.Document)
+
     End Sub
 End Class

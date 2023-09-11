@@ -432,39 +432,22 @@ Public Class ucOneLiner
     End Sub
 
     Private Sub cmdRCCPlayer1_Click(sender As Object, e As EventArgs) Handles cmdRCCPlayer1.Click
-        Try
-            Dim data1
-            If chkPlayFromTraslatedGrigRCC.Checked Then
-                data1 = New rccData With {.key = txtvariable1.Text, .value = dgvonelinesuperTranslated.CurrentRow.Cells(0).Value, .type = "text"}
-            Else
-                data1 = New rccData With {.key = txtvariable1.Text, .value = dgvonelinesuper.CurrentRow.Cells(0).Value, .type = "text"}
-            End If
-            Dim allData = {data1}
-            Dim postData As String = "layerNumber=" & cmblayeronelinesuper.Text & "&pageName=" & txtTemplatename.Text & "&data=" & JsonConvert.SerializeObject(allData)
-            Dim data As Byte() = System.Text.Encoding.UTF8.GetBytes(postData)
-            Dim url As String = "http://localhost:8080/recallPage"
-            client1.Headers.Add("Content-Type", "application/x-www-form-urlencoded")
-            client1.UploadData(url, data)
-        Catch ex As Exception
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        If chkPlayFromTraslatedGrigRCC.Checked Then
+            CasparCGDataCollection.SetData("f0", dgvonelinesuperTranslated.CurrentRow.Cells(0).Value)
+        Else
+            CasparCGDataCollection.SetData("f0", dgvonelinesuper.CurrentRow.Cells(0).Value)
+        End If
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayeronelinesuper.Text), Int(cmblayeronelinesuper.Text), txtTemplatename.Text, False, CasparCGDataCollection)
+        CasparDevice.SendString("call " & (g_int_ChannelNumber) & "-" & Int(cmblayeronelinesuper.Text) & " " & """" & "sheet.sequence.play({ range: [0,0.5] })" & """")
 
-        End Try
     End Sub
 
-    Private Class rccData
-        Public key As String
-        Public value As String
-        Public type As String
-    End Class
 
     Private Sub cmdRCCStop1_Click(sender As Object, e As EventArgs) Handles cmdRCCStop1.Click
-        Try
-            Dim postData As String = "layerNumber=" & cmblayeronelinesuper.Text
-            Dim data As Byte() = System.Text.Encoding.UTF8.GetBytes(postData)
-            Dim url As String = "http://localhost:8080/stopGraphics"
-            client1.Headers.Add("Content-Type", "application/x-www-form-urlencoded")
-            client1.UploadData(url, data)
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayeronelinesuper.Text), Int(cmblayeronelinesuper.Text))
+        CasparDevice.SendString("call " & (g_int_ChannelNumber) & "-" & Int(cmblayeronelinesuper.Text) & " " & """" & "sheet.sequence.play({ direction: 'reverse' })" & """")
     End Sub
 End Class

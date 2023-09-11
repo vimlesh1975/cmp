@@ -212,7 +212,7 @@ Partial Class ucCasparcgWindow
         Me.cmbcasparcgwindowtitle.Name = "cmbcasparcgwindowtitle"
         Me.cmbcasparcgwindowtitle.Size = New System.Drawing.Size(164, 21)
         Me.cmbcasparcgwindowtitle.TabIndex = 727
-        Me.cmbcasparcgwindowtitle.Text = "Screen consumer [1|PAL]"
+        Me.cmbcasparcgwindowtitle.Text = "Screen consumer [1|1080i5000]"
         '
         'gbplayer
         '

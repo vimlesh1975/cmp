@@ -45,7 +45,8 @@ Public Class Form1
         Panel1.Controls.Add(media)
 
         media.VlcControl1.Play(New Uri("c:/casparcg/_media/kabhi_kabhi.mp4"), params)
-        CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & media.Label1.Text & " " & """" & Replace(Replace(Split(media.VlcControl1.VlcMediaPlayer.GetMedia.Mrl, "///")(1), ":/", "://"), "%20", " ") & """" & " loop")
+        'CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & media.Label1.Text & " " & """" & Replace(Replace(Split(media.VlcControl1.VlcMediaPlayer.GetMedia.Mrl, "///")(1), ":/", "://"), "%20", " ") & """" & " loop")
+        CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & media.Label1.Text & " " & """" & Replace(Replace(Split(media.VlcControl1.VlcMediaPlayer.GetMedia.Mrl, "///")(1), ":/", "://"), "%20", " ") & """" & " loop vf drawbox=x=y:w=h:color=white:t=20")
         CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & media.Label1.Text & " fill " & fillcommand(media)(0))
 
         media.BringToFront()

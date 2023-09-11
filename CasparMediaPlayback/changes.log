@@ -1725,6 +1725,12 @@ Added cliplist in SM
 1.off air logger -s 1280:720, bit rate 2
 2.Transcoding profile for blurred video 1280:720=>900:720
 
+27.07.23
+1. Added flashInstaller and Cfgwriter in folder.
+2. Default casparcg window video mode Screen consumer [1|1080i5000]
+3. Capital I is elaced with small i in some video mode.
+
+
 
 
 

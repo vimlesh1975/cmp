@@ -203,7 +203,7 @@
 
     Private Sub ucCasparcgWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbcasparcgwindowtitle.DataSource = New BindingSource(screenConsumres, "")
-        cmbcasparcgwindowtitle.Text = "Screen consumer [1|PAL]"
+        cmbcasparcgwindowtitle.Text = "Screen consumer [1|1080i5000]"
     End Sub
     Private Sub tbAudioConytrol_Scroll(sender As Object, e As EventArgs) Handles tbAudioConytrol.Scroll
         On Error Resume Next
@@ -364,5 +364,9 @@
 
     Private Sub tbAudioConytrol_ValueChanged(sender As Object, e As EventArgs) Handles tbAudioConytrol.ValueChanged
         lblMasterVolume.Text = (tbAudioConytrol.Value) / 100
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

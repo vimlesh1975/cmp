@@ -351,6 +351,12 @@
     <Compile Include="ucElement.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ucOnLineCG.Designer.vb">
+      <DependentUpon>ucOnLineCG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucOnLineCG.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ucRCCAutomation.designer.vb">
       <DependentUpon>ucRCCAutomation.vb</DependentUpon>
     </Compile>
@@ -963,6 +969,9 @@
     <EmbeddedResource Include="ucElement.resx">
       <DependentUpon>ucElement.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucOnLineCG.resx">
+      <DependentUpon>ucOnLineCG.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucRCCAutomation.resx">
       <DependentUpon>ucRCCAutomation.vb</DependentUpon>
     </EmbeddedResource>
@@ -1255,6 +1264,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\RCC.jpg" />
     <None Include="Resources\Untitled3.png" />
     <None Include="Resources\Untitled2.png" />
     <None Include="Resources\Untitled1.png" />
