@@ -36,15 +36,12 @@ Partial Class ucHtmlTemplate
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbtemplate = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmdStopAnimation = New System.Windows.Forms.Button()
         Me.chkRCCTemplate = New System.Windows.Forms.CheckBox()
         Me.chkLBand = New System.Windows.Forms.CheckBox()
         Me.txtLBand = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.chkanimatetemplate = New System.Windows.Forms.CheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtupdatedelay = New System.Windows.Forms.TextBox()
         Me.cmdPutTestdata = New System.Windows.Forms.Button()
-        Me.cmdPlayandUpdate = New System.Windows.Forms.Button()
         Me.cmdanytemplatePause = New System.Windows.Forms.Button()
         Me.WB1 = New System.Windows.Forms.WebBrowser()
         Me.gbrundown = New System.Windows.Forms.GroupBox()
@@ -88,7 +85,6 @@ Partial Class ucHtmlTemplate
         Me.Label10 = New System.Windows.Forms.Label()
         Me.cmbinvoke = New System.Windows.Forms.ComboBox()
         Me.cmdinvoke = New System.Windows.Forms.Button()
-        Me.cmdupdatetemplate = New System.Windows.Forms.Button()
         Me.cmblayertemplate = New System.Windows.Forms.ComboBox()
         Me.cmdnextframe = New System.Windows.Forms.Button()
         Me.txtsearchtemplate = New System.Windows.Forms.TextBox()
@@ -104,18 +100,26 @@ Partial Class ucHtmlTemplate
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cmdStopAnimation = New System.Windows.Forms.Button()
+        Me.chkRCWebAnimatorTemplate = New System.Windows.Forms.CheckBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cmdupdatetemplate = New System.Windows.Forms.Button()
+        Me.cmdPlayandUpdate = New System.Windows.Forms.Button()
+        Me.txtupdatedelay = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.chkanimatetemplate = New System.Windows.Forms.CheckBox()
         Me.gbtemplate.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.gbrundown.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvrundown, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvanytemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbtemplate
         '
         Me.gbtemplate.BackColor = System.Drawing.Color.LightGreen
+        Me.gbtemplate.Controls.Add(Me.GroupBox2)
         Me.gbtemplate.Controls.Add(Me.GroupBox1)
         Me.gbtemplate.Controls.Add(Me.chkLBand)
         Me.gbtemplate.Controls.Add(Me.txtLBand)
@@ -155,12 +159,24 @@ Partial Class ucHtmlTemplate
         Me.GroupBox1.BackColor = System.Drawing.Color.LimeGreen
         Me.GroupBox1.Controls.Add(Me.cmdStopAnimation)
         Me.GroupBox1.Controls.Add(Me.chkRCCTemplate)
-        Me.GroupBox1.Location = New System.Drawing.Point(1049, 80)
+        Me.GroupBox1.Location = New System.Drawing.Point(1049, 76)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(121, 65)
         Me.GroupBox1.TabIndex = 1179
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "RCC Template"
+        '
+        'cmdStopAnimation
+        '
+        Me.cmdStopAnimation.BackColor = System.Drawing.Color.Red
+        Me.cmdStopAnimation.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdStopAnimation.ForeColor = System.Drawing.Color.White
+        Me.cmdStopAnimation.Location = New System.Drawing.Point(6, 35)
+        Me.cmdStopAnimation.Name = "cmdStopAnimation"
+        Me.cmdStopAnimation.Size = New System.Drawing.Size(109, 24)
+        Me.cmdStopAnimation.TabIndex = 1180
+        Me.cmdStopAnimation.Text = "Stop Animation"
+        Me.cmdStopAnimation.UseVisualStyleBackColor = False
         '
         'chkRCCTemplate
         '
@@ -199,36 +215,6 @@ Partial Class ucHtmlTemplate
         Me.Label3.TabIndex = 1176
         Me.Label3.Text = "L Band squeeze"
         '
-        'chkanimatetemplate
-        '
-        Me.chkanimatetemplate.AutoSize = True
-        Me.chkanimatetemplate.Checked = True
-        Me.chkanimatetemplate.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkanimatetemplate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkanimatetemplate.Location = New System.Drawing.Point(1010, 51)
-        Me.chkanimatetemplate.Name = "chkanimatetemplate"
-        Me.chkanimatetemplate.Size = New System.Drawing.Size(64, 17)
-        Me.chkanimatetemplate.TabIndex = 1175
-        Me.chkanimatetemplate.Text = "Animate"
-        Me.chkanimatetemplate.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(720, 55)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 13)
-        Me.Label1.TabIndex = 1174
-        Me.Label1.Text = "Update Delay ms"
-        '
-        'txtupdatedelay
-        '
-        Me.txtupdatedelay.Location = New System.Drawing.Point(816, 52)
-        Me.txtupdatedelay.Name = "txtupdatedelay"
-        Me.txtupdatedelay.Size = New System.Drawing.Size(39, 20)
-        Me.txtupdatedelay.TabIndex = 1173
-        Me.txtupdatedelay.Text = "0"
-        '
         'cmdPutTestdata
         '
         Me.cmdPutTestdata.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -238,18 +224,6 @@ Partial Class ucHtmlTemplate
         Me.cmdPutTestdata.TabIndex = 1172
         Me.cmdPutTestdata.Text = "Put Test data"
         Me.cmdPutTestdata.UseVisualStyleBackColor = True
-        '
-        'cmdPlayandUpdate
-        '
-        Me.cmdPlayandUpdate.BackColor = System.Drawing.Color.Green
-        Me.cmdPlayandUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdPlayandUpdate.ForeColor = System.Drawing.Color.White
-        Me.cmdPlayandUpdate.Location = New System.Drawing.Point(861, 51)
-        Me.cmdPlayandUpdate.Name = "cmdPlayandUpdate"
-        Me.cmdPlayandUpdate.Size = New System.Drawing.Size(124, 25)
-        Me.cmdPlayandUpdate.TabIndex = 1171
-        Me.cmdPlayandUpdate.Text = "Play + Update"
-        Me.cmdPlayandUpdate.UseVisualStyleBackColor = False
         '
         'cmdanytemplatePause
         '
@@ -693,16 +667,6 @@ Partial Class ucHtmlTemplate
         Me.cmdinvoke.Text = "Call Function"
         Me.cmdinvoke.UseVisualStyleBackColor = True
         '
-        'cmdupdatetemplate
-        '
-        Me.cmdupdatetemplate.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdupdatetemplate.Location = New System.Drawing.Point(1076, 45)
-        Me.cmdupdatetemplate.Name = "cmdupdatetemplate"
-        Me.cmdupdatetemplate.Size = New System.Drawing.Size(61, 29)
-        Me.cmdupdatetemplate.TabIndex = 358
-        Me.cmdupdatetemplate.Text = "Update"
-        Me.cmdupdatetemplate.UseVisualStyleBackColor = True
-        '
         'cmblayertemplate
         '
         Me.cmblayertemplate.FormattingEnabled = True
@@ -827,17 +791,78 @@ Partial Class ucHtmlTemplate
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.Width = 290
         '
-        'cmdStopAnimation
+        'chkRCWebAnimatorTemplate
         '
-        Me.cmdStopAnimation.BackColor = System.Drawing.Color.Red
-        Me.cmdStopAnimation.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdStopAnimation.ForeColor = System.Drawing.Color.White
-        Me.cmdStopAnimation.Location = New System.Drawing.Point(6, 35)
-        Me.cmdStopAnimation.Name = "cmdStopAnimation"
-        Me.cmdStopAnimation.Size = New System.Drawing.Size(109, 24)
-        Me.cmdStopAnimation.TabIndex = 1180
-        Me.cmdStopAnimation.Text = "Stop Animation"
-        Me.cmdStopAnimation.UseVisualStyleBackColor = False
+        Me.chkRCWebAnimatorTemplate.AutoSize = True
+        Me.chkRCWebAnimatorTemplate.Location = New System.Drawing.Point(6, 19)
+        Me.chkRCWebAnimatorTemplate.Name = "chkRCWebAnimatorTemplate"
+        Me.chkRCWebAnimatorTemplate.Size = New System.Drawing.Size(165, 17)
+        Me.chkRCWebAnimatorTemplate.TabIndex = 1180
+        Me.chkRCWebAnimatorTemplate.Text = "RCC Web Animator Template"
+        Me.chkRCWebAnimatorTemplate.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.LimeGreen
+        Me.GroupBox2.Controls.Add(Me.chkRCWebAnimatorTemplate)
+        Me.GroupBox2.Location = New System.Drawing.Point(861, 77)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(182, 40)
+        Me.GroupBox2.TabIndex = 1181
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "RCC Web Animator Template"
+        '
+        'cmdupdatetemplate
+        '
+        Me.cmdupdatetemplate.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdupdatetemplate.Location = New System.Drawing.Point(1076, 34)
+        Me.cmdupdatetemplate.Name = "cmdupdatetemplate"
+        Me.cmdupdatetemplate.Size = New System.Drawing.Size(61, 29)
+        Me.cmdupdatetemplate.TabIndex = 358
+        Me.cmdupdatetemplate.Text = "Update"
+        Me.cmdupdatetemplate.UseVisualStyleBackColor = True
+        '
+        'cmdPlayandUpdate
+        '
+        Me.cmdPlayandUpdate.BackColor = System.Drawing.Color.Green
+        Me.cmdPlayandUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdPlayandUpdate.ForeColor = System.Drawing.Color.White
+        Me.cmdPlayandUpdate.Location = New System.Drawing.Point(861, 40)
+        Me.cmdPlayandUpdate.Name = "cmdPlayandUpdate"
+        Me.cmdPlayandUpdate.Size = New System.Drawing.Size(124, 25)
+        Me.cmdPlayandUpdate.TabIndex = 1171
+        Me.cmdPlayandUpdate.Text = "Play + Update"
+        Me.cmdPlayandUpdate.UseVisualStyleBackColor = False
+        '
+        'txtupdatedelay
+        '
+        Me.txtupdatedelay.Location = New System.Drawing.Point(816, 41)
+        Me.txtupdatedelay.Name = "txtupdatedelay"
+        Me.txtupdatedelay.Size = New System.Drawing.Size(39, 20)
+        Me.txtupdatedelay.TabIndex = 1173
+        Me.txtupdatedelay.Text = "0"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(720, 44)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(88, 13)
+        Me.Label1.TabIndex = 1174
+        Me.Label1.Text = "Update Delay ms"
+        '
+        'chkanimatetemplate
+        '
+        Me.chkanimatetemplate.AutoSize = True
+        Me.chkanimatetemplate.Checked = True
+        Me.chkanimatetemplate.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkanimatetemplate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkanimatetemplate.Location = New System.Drawing.Point(1010, 40)
+        Me.chkanimatetemplate.Name = "chkanimatetemplate"
+        Me.chkanimatetemplate.Size = New System.Drawing.Size(64, 17)
+        Me.chkanimatetemplate.TabIndex = 1175
+        Me.chkanimatetemplate.Text = "Animate"
+        Me.chkanimatetemplate.UseVisualStyleBackColor = True
         '
         'ucHtmlTemplate
         '
@@ -860,6 +885,8 @@ Partial Class ucHtmlTemplate
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgvrundown, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvanytemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -887,7 +914,6 @@ Partial Class ucHtmlTemplate
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents cmbinvoke As System.Windows.Forms.ComboBox
     Friend WithEvents cmdinvoke As System.Windows.Forms.Button
-    Friend WithEvents cmdupdatetemplate As System.Windows.Forms.Button
     Friend WithEvents cmdnextframe As System.Windows.Forms.Button
     Friend WithEvents txtsearchtemplate As System.Windows.Forms.TextBox
     Friend WithEvents lsttemplate As System.Windows.Forms.ListBox
@@ -905,11 +931,7 @@ Partial Class ucHtmlTemplate
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents cmdPlayandUpdate As Button
     Friend WithEvents cmdPutTestdata As Button
-    Friend WithEvents txtupdatedelay As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents chkanimatetemplate As CheckBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
@@ -934,4 +956,11 @@ Partial Class ucHtmlTemplate
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents chkRCCTemplate As CheckBox
     Friend WithEvents cmdStopAnimation As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents chkRCWebAnimatorTemplate As CheckBox
+    Friend WithEvents chkanimatetemplate As CheckBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtupdatedelay As TextBox
+    Friend WithEvents cmdPlayandUpdate As Button
+    Friend WithEvents cmdupdatetemplate As Button
 End Class

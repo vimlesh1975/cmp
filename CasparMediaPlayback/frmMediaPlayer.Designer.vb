@@ -136,6 +136,7 @@ Partial Class frmmediaplayer
         Me.ChannelOffAirLoggerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TrimmerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CGToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OnlineCGToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CG1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CG2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OnelinerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -325,7 +326,6 @@ Partial Class frmmediaplayer
         Me.CpBarCPU = New CPBar()
         Me.DockPanel1 = New WeifenLuo.WinFormsUI.Docking.DockPanel()
         Me.VS2015BlueTheme1 = New WeifenLuo.WinFormsUI.Docking.VS2015BlueTheme()
-        Me.OnlineCGToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -1387,7 +1387,7 @@ Partial Class frmmediaplayer
         Me.mnuCMP.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCMPPlayList, Me.mnuCMPTemplate, Me.mnuCMP4ChannelRecordingAndTrimming, Me.TrimmerToolStripMenuItem, Me.CGToolStripMenuItem, Me.ScrollersToolStripMenuItem, Me.GamesToolStripMenuItem, Me.ExternalSoftwaresToolStripMenuItem, Me.mnuCMPModules, Me.mnuCMPTools, Me.mnuCMPHelp})
         Me.mnuCMP.Location = New System.Drawing.Point(0, 0)
         Me.mnuCMP.Name = "mnuCMP"
-        Me.mnuCMP.Size = New System.Drawing.Size(1029, 24)
+        Me.mnuCMP.Size = New System.Drawing.Size(909, 24)
         Me.mnuCMP.TabIndex = 0
         Me.mnuCMP.TabStop = True
         Me.mnuCMP.Text = "mnuCMP"
@@ -1473,6 +1473,12 @@ Partial Class frmmediaplayer
         Me.CGToolStripMenuItem.Name = "CGToolStripMenuItem"
         Me.CGToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
         Me.CGToolStripMenuItem.Text = "CG"
+        '
+        'OnlineCGToolStripMenuItem
+        '
+        Me.OnlineCGToolStripMenuItem.Name = "OnlineCGToolStripMenuItem"
+        Me.OnlineCGToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
+        Me.OnlineCGToolStripMenuItem.Text = "Online CG"
         '
         'CG1ToolStripMenuItem
         '
@@ -2699,7 +2705,7 @@ Partial Class frmmediaplayer
         Me.CpBarCPU.CPB_Text_3 = "%"
         Me.CpBarCPU.Location = New System.Drawing.Point(38, -1)
         Me.CpBarCPU.Name = "CpBarCPU"
-        Me.CpBarCPU.Size = New System.Drawing.Size(81, 81)
+        Me.CpBarCPU.Size = New System.Drawing.Size(82, 82)
         Me.CpBarCPU.TabIndex = 1176
         '
         'DockPanel1
@@ -2713,12 +2719,6 @@ Partial Class frmmediaplayer
         Me.DockPanel1.Size = New System.Drawing.Size(1224, 960)
         Me.DockPanel1.TabIndex = 1176
         Me.DockPanel1.Theme = Me.VS2015BlueTheme1
-        '
-        'OnlineCGToolStripMenuItem
-        '
-        Me.OnlineCGToolStripMenuItem.Name = "OnlineCGToolStripMenuItem"
-        Me.OnlineCGToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
-        Me.OnlineCGToolStripMenuItem.Text = "Online CG"
         '
         'DataGridViewTextBoxColumn1
         '
@@ -2804,7 +2804,7 @@ Partial Class frmmediaplayer
         Me.IsMdiContainer = True
         Me.MaximumSize = New System.Drawing.Size(1920, 1080)
         Me.Name = "frmmediaplayer"
-        Me.Text = "CasparMediaPlayback110923_1"
+        Me.Text = "CasparMediaPlayback290923_1"
         CType(Me.nfontsizeforall, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbmodules.ResumeLayout(False)
         Me.gbmodules.PerformLayout()

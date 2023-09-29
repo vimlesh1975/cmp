@@ -1,5 +1,10 @@
 ﻿Imports System.IO
 Imports System.Net
+'Imports System.Security.Cryptography
+Imports System.Windows
+Imports System.Windows.Controls
+'Imports Newtonsoft.Json.Linq
+'Imports System.Drawing
 Public Class ucHtmlTemplate
     Public brundownrowselectedchanged As Boolean = False
     Private Sub cmdadjusttimeofrundown_Click(sender As Object, e As EventArgs) Handles cmdadjusttimeofrundown.Click
@@ -50,9 +55,9 @@ Public Class ucHtmlTemplate
 
         CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & dgvrundown.CurrentRow.Cells(3).Value & " [HTML] " & """" & Replace(templatefullpath, "\", "/") & dgvrundown.CurrentRow.Cells(1).Value & """")
 
-        Threading.Thread.Sleep(Val(txtupdatedelay.Text))
+        System.Threading.Thread.Sleep(Val(txtupdatedelay.Text))
         anytemplateupdatefromrundown()
-        Threading.Thread.Sleep(Val(txtupdatedelay.Text))
+        System.Threading.Thread.Sleep(Val(txtupdatedelay.Text))
         CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " opacity 1")
     End Sub
     Sub playrundownforvideo()
@@ -296,7 +301,7 @@ Public Class ucHtmlTemplate
 
             Dim str11 = dgvanytemplate.Rows(ianytemplate).Cells(1).Value
             If str11.Contains("file") Then str11 = Mid(str11, 9)
-            dgvanytemplate.Rows(ianytemplate).Cells(2).Value = Image.FromFile(str11)
+            dgvanytemplate.Rows(ianytemplate).Cells(2).Value = System.Drawing.Image.FromFile(str11)
             dgvanytemplate.Rows(ianytemplate).Cells(3).Value = CType((Split(instance.getAttribute("value"), "ddddd")(1)), Integer)
             ianytemplate = ianytemplate + 1
         Next
@@ -308,15 +313,24 @@ Public Class ucHtmlTemplate
 
     Sub anytemplateupdate()
         On Error Resume Next
+        If chkRCWebAnimatorTemplate.Checked Then
+            For ianytemplate = 1 To dgvanytemplate.Rows.Count - 2
+                If dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 0 Then '
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " " & """" & "updatestring('" & (dgvanytemplate.Rows(ianytemplate).Cells(0).Value) & "','" & dgvanytemplate.Rows(ianytemplate).Cells(1).Value & "')" & """")
+                Else
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " " & """" & "updateimage('" & (dgvanytemplate.Rows(ianytemplate).Cells(0).Value) & "','" & (dgvanytemplate.Rows(ianytemplate).Cells(1).Value) & "')" & """")
+                End If
+            Next
+            GoTo 20
+        End If
         For ianytemplate = 1 To dgvanytemplate.Rows.Count - 2
             If dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 0 Then '
-
                 CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " " & """" & "updatestring('" & (dgvanytemplate.Rows(ianytemplate).Cells(0).Value) & "','" & replacestring1(dgvanytemplate.Rows(ianytemplate).Cells(1).Value) & "')" & """")
             Else
-                'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " updateimage('" & replacestring1(dgvanytemplate.Rows(ianytemplate).Cells(0).Value) & "','" & replacestring1(dgvanytemplate.Rows(ianytemplate).Cells(1).Value) & "')")
                 CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " " & """" & "updateimage('" & (dgvanytemplate.Rows(ianytemplate).Cells(0).Value) & "','" & (dgvanytemplate.Rows(ianytemplate).Cells(1).Value) & "')" & """")
             End If
         Next
+20:
     End Sub
 
     Sub anytemplateupdatefromrundown()
@@ -348,7 +362,7 @@ Public Class ucHtmlTemplate
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " " & cmbinvoke.Text)
     End Sub
 
-    Private Sub cmdclosegbtemplate_Click(sender As Object, e As EventArgs) 
+    Private Sub cmdclosegbtemplate_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
 
@@ -370,7 +384,7 @@ Public Class ucHtmlTemplate
             ofdanytemplate.InitialDirectory = "c:/casparcg/mydata/flag/"
             If (ofdanytemplate.ShowDialog() = Windows.Forms.DialogResult.OK) Then
                 dgvanytemplate.CurrentRow.Cells(1).Value = Replace(ofdanytemplate.FileName, "\", "/")
-                dgvanytemplate.CurrentRow.Cells(2).Value = Image.FromFile(dgvanytemplate.CurrentRow.Cells(1).Value)
+                dgvanytemplate.CurrentRow.Cells(2).Value = System.Drawing.Image.FromFile(dgvanytemplate.CurrentRow.Cells(1).Value)
 
 
             End If
@@ -429,7 +443,7 @@ Public Class ucHtmlTemplate
             templatefromServer22()
         Else
             CasparDevice.RefreshTemplates()
-            Threading.Thread.Sleep(500)
+            System.Threading.Thread.Sleep(500)
             subfortemplateupdate()
         End If
 
@@ -514,7 +528,7 @@ Public Class ucHtmlTemplate
 
         If chkanimatetemplate.Checked Then
             CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " fill 1 0 1 1 50 easeoutexpo")
-            Threading.Thread.Sleep(1000)
+            System.Threading.Thread.Sleep(1000)
         End If
         CasparDevice.SendString("stop " & g_int_ChannelNumber & "-" & cmblayertemplate.Text)
 
@@ -614,14 +628,67 @@ Public Class ucHtmlTemplate
         dgvanytemplate.Rows(0).Cells(1).Value = lsttemplate.SelectedItem.ToString
         dgvanytemplate.Rows(0).Cells(3).Value = 0
 
-        For Each element As HtmlElement In Me.WB1.Document.All
+        If chkRCWebAnimatorTemplate.Checked Then
+            Try
+                Dim scriptElements As HtmlElementCollection = WB1.Document.GetElementsByTagName("script")
+                Dim thirdScriptContent As String = scriptElements(3).InnerText
+                Dim splitContent As String() = thirdScriptContent.Split(New String() {"const content ="}, StringSplitOptions.None)
+                Dim splitContent2 As String() = splitContent(1).Split(New String() {"; const { core, studio } ="}, StringSplitOptions.None)
+                'TextBox1.Text = splitContent2(0)
+                'TextBox1.Text = ""
 
+                Dim jsonString As String = splitContent2(0) ' Your JSON string goes here
+
+                ' Parse the JSON string
+                Dim jsonObject As Newtonsoft.Json.Linq.JObject = Newtonsoft.Json.Linq.JObject.Parse(jsonString)
+
+                ' Access the "objects" array
+                Dim objects As Newtonsoft.Json.Linq.JArray = jsonObject("objects")
+
+                ' Iterate through the "objects" array and retrieve the "id" and "type" values
+                For Each obj As Newtonsoft.Json.Linq.JObject In objects
+                    Dim id As String = obj("id").ToString()
+                    If Mid(id, 1, 3) = "ccg" Then
+                        dgvanytemplate.Rows.Add()
+                        dgvanytemplate.Rows(ianytemplate).Cells(0).Value = id
+
+
+
+                        Dim type As String = obj("type").ToString()
+                        If type = "image" Then
+                            dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 1
+
+                            Dim src As String = obj("src").ToString()
+                            dgvanytemplate.Rows(ianytemplate).Cells(1).Value = src
+                            Dim aa = (dgvanytemplate.Rows(ianytemplate).Cells(1).Value).Split(",")(1)
+                            Dim imageBytes As Byte() = Convert.FromBase64String(aa)
+                            Dim ms = New MemoryStream(imageBytes, 0, imageBytes.Length)
+                            dgvanytemplate.Rows(ianytemplate).Cells(2).Value = System.Drawing.Image.FromStream(ms, True)
+                        Else
+                            Dim text As String = obj("text").ToString()
+                            dgvanytemplate.Rows(ianytemplate).Cells(1).Value = text
+                        End If
+                            'dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.InnerHtml
+                            'dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 0 'CheckState.Unchecked
+                            ianytemplate = ianytemplate + 1
+                    End If
+
+
+
+                Next
+
+            Catch ex As Exception
+
+            End Try
+
+            GoTo 20
+        End If
+
+        For Each element As HtmlElement In Me.WB1.Document.All
             If element.Id <> "" And Mid(element.Id, 1, 3) = "ccg" Then
                 If element.TagName <> "IMG" Then
-
                     dgvanytemplate.Rows.Add()
                     dgvanytemplate.Rows(ianytemplate).Cells(0).Value = element.Id
-
                     If chkRCCTemplate.Checked Then
                         If ((element.Children(element.Children.Count - 1).TagName = "text")) Then
                             dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.GetElementsByTagName("text")(0).GetElementsByTagName("tspan")(0).InnerHtml
@@ -637,9 +704,8 @@ Public Class ucHtmlTemplate
                                 Dim aa = (dgvanytemplate.Rows(ianytemplate).Cells(1).Value).Split(",")(1)
                                 Dim imageBytes As Byte() = Convert.FromBase64String(aa)
                                 Dim ms = New MemoryStream(imageBytes, 0, imageBytes.Length)
-                                dgvanytemplate.Rows(ianytemplate).Cells(2).Value = Image.FromStream(ms, True)
+                                dgvanytemplate.Rows(ianytemplate).Cells(2).Value = System.Drawing.Image.FromStream(ms, True)
                             End If
-
                             dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 1 'CheckState.Unchecked
                         End If
                     Else
@@ -661,11 +727,9 @@ Public Class ucHtmlTemplate
                     '    dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.GetAttribute("src").ToString
                     'End If
                     dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.GetAttribute("src").ToString
-
-
                     Dim str11 = dgvanytemplate.Rows(ianytemplate).Cells(1).Value
                     If str11.Contains("file") Then str11 = Mid(str11, 9)
-                    dgvanytemplate.Rows(ianytemplate).Cells(2).Value = Image.FromFile(str11)
+                    dgvanytemplate.Rows(ianytemplate).Cells(2).Value = System.Drawing.Image.FromFile(str11)
                     dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 1 'CheckState.Checked
 
                     ianytemplate = ianytemplate + 1
@@ -673,9 +737,8 @@ Public Class ucHtmlTemplate
                 'element.
             End If
         Next
-        brundownrowselectedchanged = False
+20:     brundownrowselectedchanged = False
     End Sub
-
     Private Enum Exec
         OLECMDID_OPTICAL_ZOOM = 63
     End Enum
@@ -686,16 +749,14 @@ Public Class ucHtmlTemplate
         OLECMDEXECOPT_DONTPROMPTUSER = 2
         OLECMDEXECOPT_SHOWHELP = 3
     End Enum
-
     Private Sub cmdPlayandUpdate_Click(sender As Object, e As EventArgs) Handles cmdPlayandUpdate.Click
         On Error Resume Next
-
         Dim ianytemplate As Integer
         If chkanimatetemplate.Checked Then
             CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " fill -1 0 1 1")
         End If
         CasparDevice.SendString("play " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " [HTML] " & """" & Replace(templatefullpath, "\", "/") & lsttemplate.SelectedItem.ToString & """")
-        Threading.Thread.Sleep(Val(txtupdatedelay.Text))
+        System.Threading.Thread.Sleep(Val(txtupdatedelay.Text))
         anytemplateupdate()
         If chkanimatetemplate.Checked Then
             CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " fill 0 0 1 1 50 " & "easeoutexpo")
@@ -712,7 +773,7 @@ Public Class ucHtmlTemplate
         For ii = 1 To dgvanytemplate.Rows.Count - 2
             If dgvanytemplate.Rows(ii).Cells(3).Value = 1 Then
                 dgvanytemplate.Rows(ii).Cells(1).Value = Replace(eachFileInMydirectory(ii), "\", "/")
-                dgvanytemplate.Rows(ii).Cells(2).Value = Image.FromFile(dgvanytemplate.Rows(ii).Cells(1).Value)
+                dgvanytemplate.Rows(ii).Cells(2).Value = System.Drawing.Image.FromFile(dgvanytemplate.Rows(ii).Cells(1).Value)
             Else
                 dgvanytemplate.Rows(ii).Cells(1).Value = dgvanytemplate.Rows(ii).Cells(0).Value
             End If
