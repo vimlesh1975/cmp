@@ -23,14 +23,15 @@ Partial Class ucVideoPlayer
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucVideoPlayer))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbcliplist = New System.Windows.Forms.GroupBox()
         Me.ProgressBar2 = New VerticalProgressBar.VerticalProgressBar()
         Me.ProgressBar1 = New VerticalProgressBar.VerticalProgressBar()
         Me.gbplayerforclipgrid = New System.Windows.Forms.GroupBox()
+        Me.lblChannel = New System.Windows.Forms.Label()
         Me.cmdplaynextforclipgrid = New System.Windows.Forms.Button()
         Me.cmdcuenextforclipgrid = New System.Windows.Forms.Button()
         Me.cmdstopforclipgrid = New System.Windows.Forms.Button()
@@ -55,7 +56,7 @@ Partial Class ucVideoPlayer
         Me.dgvclips = New System.Windows.Forms.DataGridView()
         Me.cmdclipsearch = New System.Windows.Forms.Button()
         Me.txtsearch = New System.Windows.Forms.TextBox()
-        Me.lblChannel = New System.Windows.Forms.Label()
+        Me.cmdLoopPlay = New System.Windows.Forms.Button()
         Me.gbcliplist.SuspendLayout()
         Me.gbplayerforclipgrid.SuspendLayout()
         CType(Me.dgvclips, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,6 +122,7 @@ Partial Class ucVideoPlayer
         'gbplayerforclipgrid
         '
         Me.gbplayerforclipgrid.BackColor = System.Drawing.Color.Turquoise
+        Me.gbplayerforclipgrid.Controls.Add(Me.cmdLoopPlay)
         Me.gbplayerforclipgrid.Controls.Add(Me.lblChannel)
         Me.gbplayerforclipgrid.Controls.Add(Me.cmdplaynextforclipgrid)
         Me.gbplayerforclipgrid.Controls.Add(Me.cmdcuenextforclipgrid)
@@ -137,6 +139,17 @@ Partial Class ucVideoPlayer
         Me.gbplayerforclipgrid.Size = New System.Drawing.Size(586, 55)
         Me.gbplayerforclipgrid.TabIndex = 1171
         Me.gbplayerforclipgrid.TabStop = False
+        '
+        'lblChannel
+        '
+        Me.lblChannel.AutoSize = True
+        Me.lblChannel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblChannel.ForeColor = System.Drawing.Color.DarkRed
+        Me.lblChannel.Location = New System.Drawing.Point(440, 17)
+        Me.lblChannel.Name = "lblChannel"
+        Me.lblChannel.Size = New System.Drawing.Size(105, 24)
+        Me.lblChannel.TabIndex = 1189
+        Me.lblChannel.Text = "Channel 1"
         '
         'cmdplaynextforclipgrid
         '
@@ -334,37 +347,37 @@ Partial Class ucVideoPlayer
         '
         'dgvclips
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.dgvclips.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvclips.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.dgvclips.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvclips.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvclips.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvclips.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvclips.DefaultCellStyle = DataGridViewCellStyle7
         Me.dgvclips.Location = New System.Drawing.Point(109, 41)
         Me.dgvclips.MultiSelect = False
         Me.dgvclips.Name = "dgvclips"
         Me.dgvclips.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvclips.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvclips.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvclips.RowHeadersWidth = 25
         Me.dgvclips.Size = New System.Drawing.Size(295, 213)
         Me.dgvclips.TabIndex = 177
@@ -385,16 +398,15 @@ Partial Class ucVideoPlayer
         Me.txtsearch.Size = New System.Drawing.Size(70, 20)
         Me.txtsearch.TabIndex = 175
         '
-        'lblChannel
+        'cmdLoopPlay
         '
-        Me.lblChannel.AutoSize = True
-        Me.lblChannel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblChannel.ForeColor = System.Drawing.Color.DarkRed
-        Me.lblChannel.Location = New System.Drawing.Point(440, 17)
-        Me.lblChannel.Name = "lblChannel"
-        Me.lblChannel.Size = New System.Drawing.Size(105, 24)
-        Me.lblChannel.TabIndex = 1189
-        Me.lblChannel.Text = "Channel 1"
+        Me.cmdLoopPlay.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdLoopPlay.Location = New System.Drawing.Point(369, 13)
+        Me.cmdLoopPlay.Name = "cmdLoopPlay"
+        Me.cmdLoopPlay.Size = New System.Drawing.Size(47, 37)
+        Me.cmdLoopPlay.TabIndex = 1190
+        Me.cmdLoopPlay.Text = "Loop Play"
+        Me.cmdLoopPlay.UseVisualStyleBackColor = True
         '
         'ucVideoPlayer
         '
@@ -442,4 +454,5 @@ Partial Class ucVideoPlayer
     Friend WithEvents ProgressBar1 As VerticalProgressBar.VerticalProgressBar
     Friend WithEvents ProgressBar2 As VerticalProgressBar.VerticalProgressBar
     Friend WithEvents lblChannel As Label
+    Friend WithEvents cmdLoopPlay As Button
 End Class

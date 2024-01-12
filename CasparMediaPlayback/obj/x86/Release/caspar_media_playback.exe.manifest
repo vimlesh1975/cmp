@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="caspar_media_playback.exe" size="7091712">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="caspar_media_playback.exe" size="7093248">
       <assemblyIdentity name="caspar_media_playback" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>se43TdlbgCcYMld2kSRQz+lHpZCJ0gEv9d540jb/msE=</dsig:DigestValue>
+        <dsig:DigestValue>33ykz+QvW64JnxdLoBSbOykSoIU/XqfS+rKvLV3JBAE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -122,7 +122,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7cRPJJwYuJMKB3q0YQYfE5X+U7yo6eya1FgL4mG5Nfw=</dsig:DigestValue>
+        <dsig:DigestValue>zoD8Ty11bg6G/cdhbwqnd5V85JIL2F2UNTwV7cxXiB8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -441,6 +441,10 @@ Public Class ucVideoPlayer
         cmdpauseforclipgrid.BackColor = SystemColors.Control
         cmdpauseforclipgrid.ForeColor = Color.Black
 
+        cmdLoopPlay.BackColor = SystemColors.Control
+        cmdLoopPlay.ForeColor = Color.Black
+
+
         sender.BackColor = Color.Green
         sender.ForeColor = Color.White
     End Sub
@@ -568,5 +572,24 @@ Public Class ucVideoPlayer
 
     Private Sub ucVideoPlayer_DockChanged(sender As Object, e As EventArgs) Handles Me.DockChanged
         Me.cmdoutcasparcgwindowrecording.PerformClick()
+    End Sub
+
+    Private Sub cmdLoopPlay_Click(sender As Object, e As EventArgs) Handles cmdLoopPlay.Click
+        On Error Resume Next
+
+        If dgvclips.CurrentRow.Cells("File_Name").Value = "" Then Exit Sub
+        If System.IO.Path.GetExtension(mediafullpath & dgvclips.CurrentRow.Cells("File_Name").Value.ToString) = ".txt" Then
+            readsubclip(mediafullpath & dgvclips.CurrentRow.Cells("File_Name").Value.ToString)
+            If ServerVersion > 2.1 Then
+                CasparDevice.SendString("play " & channelNumber & "-" & layerNumber & " " & """" & ModifyFilename(masterfilename) & """" + " loop seek " & clipseek * 2 & " length " & cliplength * 2 & deinterlaced)
+            Else
+                CasparDevice.SendString("play " & channelNumber & "-" & layerNumber & " " & """" & ModifyFilename(masterfilename) & """" + " loop seek " & clipseek & " length " & cliplength & deinterlaced)
+            End If
+        Else
+            CasparDevice.SendString("play " & channelNumber & "-" & layerNumber & " " & """" & ModifyFilename(dgvclips.CurrentRow.Cells("File_Name").Value) & """" & " loop " & deinterlaced)
+        End If
+
+        'tmrduration.Enabled = True
+        lastclickedbutton(cmdLoopPlay)
     End Sub
 End Class
