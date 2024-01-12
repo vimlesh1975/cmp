@@ -102,6 +102,7 @@ Public Class frmmediaplayer
     Friend WithEvents ucRCCAutomation1 As DockContent = ucRCCAutomation
     Friend WithEvents ucRccBall1 As DockContent = ucRccBall
     Friend WithEvents ucOnLineCG1 As DockContent = ucOnLineCG
+    Friend WithEvents uc4ChannelPlayer1 As DockContent = uc4ChannelPlayer
 
 
 
@@ -1776,6 +1777,12 @@ Public Class frmmediaplayer
 
     Private Sub OnlineCGToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OnlineCGToolStripMenuItem.Click
         ucOnLineCG1.Show(DockPanel1, DockState.Document)
+
+    End Sub
+
+    Private Sub ChannelPlayerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChannelPlayerToolStripMenuItem.Click
+        On Error Resume Next
+        uc4ChannelPlayer1.Show(DockPanel1, DockState.Document)
 
     End Sub
 End Class

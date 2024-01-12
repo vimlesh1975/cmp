@@ -7,8 +7,9 @@ Public Class ucnewOffAirLogger
     Dim WithEvents tmrshedulerecordingstart As New Timer
     Dim WithEvents tmrshedulerecordingend As New Timer
 
-    Dim WithEvents sOscServer As OscServer 'for osc
+
     Public ichannel As Integer
+    Dim WithEvents sOscServer As OscServer 'for osc
     Dim iport As Integer
 
     Sub oscstartandregister(aa As Integer, bb As Integer)

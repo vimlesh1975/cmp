@@ -1,2 +1,5 @@
 # Ignore .msi files
 *.msi
+cef.redist.x86.118.6.8.nupkg
+libcef.dll
+cef.redist.x64.118.6.8.nupkg

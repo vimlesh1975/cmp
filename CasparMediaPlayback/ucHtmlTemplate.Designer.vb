@@ -25,23 +25,30 @@ Partial Class ucHtmlTemplate
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucHtmlTemplate))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbtemplate = New System.Windows.Forms.GroupBox()
+        Me.ChromiumWebBrowser1 = New CefSharp.WinForms.ChromiumWebBrowser()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.chkRCWebAnimatorTemplate = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmdStopAnimation = New System.Windows.Forms.Button()
         Me.chkRCCTemplate = New System.Windows.Forms.CheckBox()
         Me.chkLBand = New System.Windows.Forms.CheckBox()
         Me.txtLBand = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.chkanimatetemplate = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtupdatedelay = New System.Windows.Forms.TextBox()
         Me.cmdPutTestdata = New System.Windows.Forms.Button()
+        Me.cmdPlayandUpdate = New System.Windows.Forms.Button()
         Me.cmdanytemplatePause = New System.Windows.Forms.Button()
         Me.WB1 = New System.Windows.Forms.WebBrowser()
         Me.gbrundown = New System.Windows.Forms.GroupBox()
@@ -72,19 +79,13 @@ Partial Class ucHtmlTemplate
         Me.playtsrundown = New System.Windows.Forms.Button()
         Me.stoptsrundown = New System.Windows.Forms.Button()
         Me.dgvrundown = New System.Windows.Forms.DataGridView()
-        Me.Label = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.V = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.T = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Data = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmdaddtorundown = New System.Windows.Forms.Button()
         Me.dgvanytemplate = New System.Windows.Forms.DataGridView()
-        Me.InstanceName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Value = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.cmbinvoke = New System.Windows.Forms.ComboBox()
         Me.cmdinvoke = New System.Windows.Forms.Button()
+        Me.cmdupdatetemplate = New System.Windows.Forms.Button()
         Me.cmblayertemplate = New System.Windows.Forms.ComboBox()
         Me.cmdnextframe = New System.Windows.Forms.Button()
         Me.txtsearchtemplate = New System.Windows.Forms.TextBox()
@@ -98,27 +99,28 @@ Partial Class ucHtmlTemplate
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.chkRCWebAnimatorTemplate = New System.Windows.Forms.CheckBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.cmdupdatetemplate = New System.Windows.Forms.Button()
-        Me.cmdPlayandUpdate = New System.Windows.Forms.Button()
-        Me.txtupdatedelay = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.chkanimatetemplate = New System.Windows.Forms.CheckBox()
+        Me.Label = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.V = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.T = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Data = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InstanceName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Value = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbtemplate.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.gbrundown.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvrundown, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvanytemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbtemplate
         '
         Me.gbtemplate.BackColor = System.Drawing.Color.LightGreen
+        Me.gbtemplate.Controls.Add(Me.ChromiumWebBrowser1)
         Me.gbtemplate.Controls.Add(Me.GroupBox2)
         Me.gbtemplate.Controls.Add(Me.GroupBox1)
         Me.gbtemplate.Controls.Add(Me.chkLBand)
@@ -153,6 +155,35 @@ Partial Class ucHtmlTemplate
         Me.gbtemplate.TabIndex = 425
         Me.gbtemplate.TabStop = False
         Me.gbtemplate.Text = " "
+        '
+        'ChromiumWebBrowser1
+        '
+        Me.ChromiumWebBrowser1.ActivateBrowserOnCreation = False
+        Me.ChromiumWebBrowser1.Location = New System.Drawing.Point(277, 35)
+        Me.ChromiumWebBrowser1.Name = "ChromiumWebBrowser1"
+        Me.ChromiumWebBrowser1.Size = New System.Drawing.Size(428, 342)
+        Me.ChromiumWebBrowser1.TabIndex = 1182
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.LimeGreen
+        Me.GroupBox2.Controls.Add(Me.chkRCWebAnimatorTemplate)
+        Me.GroupBox2.Location = New System.Drawing.Point(861, 77)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(182, 40)
+        Me.GroupBox2.TabIndex = 1181
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "RCC Web Animator Template"
+        '
+        'chkRCWebAnimatorTemplate
+        '
+        Me.chkRCWebAnimatorTemplate.AutoSize = True
+        Me.chkRCWebAnimatorTemplate.Location = New System.Drawing.Point(6, 19)
+        Me.chkRCWebAnimatorTemplate.Name = "chkRCWebAnimatorTemplate"
+        Me.chkRCWebAnimatorTemplate.Size = New System.Drawing.Size(165, 17)
+        Me.chkRCWebAnimatorTemplate.TabIndex = 1180
+        Me.chkRCWebAnimatorTemplate.Text = "RCC Web Animator Template"
+        Me.chkRCWebAnimatorTemplate.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -215,6 +246,36 @@ Partial Class ucHtmlTemplate
         Me.Label3.TabIndex = 1176
         Me.Label3.Text = "L Band squeeze"
         '
+        'chkanimatetemplate
+        '
+        Me.chkanimatetemplate.AutoSize = True
+        Me.chkanimatetemplate.Checked = True
+        Me.chkanimatetemplate.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkanimatetemplate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkanimatetemplate.Location = New System.Drawing.Point(1010, 40)
+        Me.chkanimatetemplate.Name = "chkanimatetemplate"
+        Me.chkanimatetemplate.Size = New System.Drawing.Size(64, 17)
+        Me.chkanimatetemplate.TabIndex = 1175
+        Me.chkanimatetemplate.Text = "Animate"
+        Me.chkanimatetemplate.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(720, 44)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(88, 13)
+        Me.Label1.TabIndex = 1174
+        Me.Label1.Text = "Update Delay ms"
+        '
+        'txtupdatedelay
+        '
+        Me.txtupdatedelay.Location = New System.Drawing.Point(816, 41)
+        Me.txtupdatedelay.Name = "txtupdatedelay"
+        Me.txtupdatedelay.Size = New System.Drawing.Size(39, 20)
+        Me.txtupdatedelay.TabIndex = 1173
+        Me.txtupdatedelay.Text = "0"
+        '
         'cmdPutTestdata
         '
         Me.cmdPutTestdata.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -224,6 +285,18 @@ Partial Class ucHtmlTemplate
         Me.cmdPutTestdata.TabIndex = 1172
         Me.cmdPutTestdata.Text = "Put Test data"
         Me.cmdPutTestdata.UseVisualStyleBackColor = True
+        '
+        'cmdPlayandUpdate
+        '
+        Me.cmdPlayandUpdate.BackColor = System.Drawing.Color.Green
+        Me.cmdPlayandUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdPlayandUpdate.ForeColor = System.Drawing.Color.White
+        Me.cmdPlayandUpdate.Location = New System.Drawing.Point(861, 40)
+        Me.cmdPlayandUpdate.Name = "cmdPlayandUpdate"
+        Me.cmdPlayandUpdate.Size = New System.Drawing.Size(124, 25)
+        Me.cmdPlayandUpdate.TabIndex = 1171
+        Me.cmdPlayandUpdate.Text = "Play + Update"
+        Me.cmdPlayandUpdate.UseVisualStyleBackColor = False
         '
         'cmdanytemplatePause
         '
@@ -503,73 +576,40 @@ Partial Class ucHtmlTemplate
         '
         'dgvrundown
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.dgvrundown.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvrundown.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.dgvrundown.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvrundown.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle33
         Me.dgvrundown.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvrundown.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Label, Me.DataGridViewTextBoxColumn5, Me.V, Me.T, Me.Data})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvrundown.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvrundown.DefaultCellStyle = DataGridViewCellStyle34
         Me.dgvrundown.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvrundown.Location = New System.Drawing.Point(6, 70)
         Me.dgvrundown.Name = "dgvrundown"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvrundown.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvrundown.RowHeadersDefaultCellStyle = DataGridViewCellStyle35
         Me.dgvrundown.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvrundown.Size = New System.Drawing.Size(685, 455)
         Me.dgvrundown.TabIndex = 370
-        '
-        'Label
-        '
-        Me.Label.HeaderText = "Label"
-        Me.Label.Name = "Label"
-        Me.Label.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Label.Width = 180
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Template"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'V
-        '
-        Me.V.HeaderText = "V"
-        Me.V.Name = "V"
-        Me.V.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.V.Width = 30
-        '
-        'T
-        '
-        Me.T.HeaderText = "T"
-        Me.T.Name = "T"
-        Me.T.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.T.Width = 30
-        '
-        'Data
-        '
-        Me.Data.HeaderText = "Data"
-        Me.Data.Name = "Data"
-        Me.Data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'cmdaddtorundown
         '
@@ -584,52 +624,37 @@ Partial Class ucHtmlTemplate
         '
         'dgvanytemplate
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvanytemplate.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvanytemplate.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle28
         Me.dgvanytemplate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvanytemplate.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.InstanceName, Me.Value, Me.Column4})
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvanytemplate.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvanytemplate.DefaultCellStyle = DataGridViewCellStyle30
         Me.dgvanytemplate.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvanytemplate.Location = New System.Drawing.Point(711, 148)
         Me.dgvanytemplate.Name = "dgvanytemplate"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvanytemplate.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvanytemplate.RowHeadersDefaultCellStyle = DataGridViewCellStyle31
         Me.dgvanytemplate.Size = New System.Drawing.Size(493, 760)
         Me.dgvanytemplate.TabIndex = 369
-        '
-        'InstanceName
-        '
-        Me.InstanceName.HeaderText = "Instance/Label Name"
-        Me.InstanceName.Name = "InstanceName"
-        Me.InstanceName.Width = 90
-        '
-        'Value
-        '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Value.DefaultCellStyle = DataGridViewCellStyle6
-        Me.Value.HeaderText = "Value"
-        Me.Value.Name = "Value"
-        Me.Value.Width = 270
         '
         'Column4
         '
@@ -666,6 +691,16 @@ Partial Class ucHtmlTemplate
         Me.cmdinvoke.TabIndex = 365
         Me.cmdinvoke.Text = "Call Function"
         Me.cmdinvoke.UseVisualStyleBackColor = True
+        '
+        'cmdupdatetemplate
+        '
+        Me.cmdupdatetemplate.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdupdatetemplate.Location = New System.Drawing.Point(1076, 34)
+        Me.cmdupdatetemplate.Name = "cmdupdatetemplate"
+        Me.cmdupdatetemplate.Size = New System.Drawing.Size(61, 29)
+        Me.cmdupdatetemplate.TabIndex = 358
+        Me.cmdupdatetemplate.Text = "Update"
+        Me.cmdupdatetemplate.UseVisualStyleBackColor = True
         '
         'cmblayertemplate
         '
@@ -776,6 +811,12 @@ Partial Class ucHtmlTemplate
         Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.DataGridViewTextBoxColumn4.Width = 30
         '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Template"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.HeaderText = "Instance/Label Name"
@@ -784,85 +825,54 @@ Partial Class ucHtmlTemplate
         '
         'DataGridViewTextBoxColumn7
         '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle36
         Me.DataGridViewTextBoxColumn7.HeaderText = "Value"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.Width = 290
         '
-        'chkRCWebAnimatorTemplate
+        'Label
         '
-        Me.chkRCWebAnimatorTemplate.AutoSize = True
-        Me.chkRCWebAnimatorTemplate.Location = New System.Drawing.Point(6, 19)
-        Me.chkRCWebAnimatorTemplate.Name = "chkRCWebAnimatorTemplate"
-        Me.chkRCWebAnimatorTemplate.Size = New System.Drawing.Size(165, 17)
-        Me.chkRCWebAnimatorTemplate.TabIndex = 1180
-        Me.chkRCWebAnimatorTemplate.Text = "RCC Web Animator Template"
-        Me.chkRCWebAnimatorTemplate.UseVisualStyleBackColor = True
+        Me.Label.HeaderText = "Label"
+        Me.Label.Name = "Label"
+        Me.Label.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Label.Width = 180
         '
-        'GroupBox2
+        'V
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.LimeGreen
-        Me.GroupBox2.Controls.Add(Me.chkRCWebAnimatorTemplate)
-        Me.GroupBox2.Location = New System.Drawing.Point(861, 77)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(182, 40)
-        Me.GroupBox2.TabIndex = 1181
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "RCC Web Animator Template"
+        Me.V.HeaderText = "V"
+        Me.V.Name = "V"
+        Me.V.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.V.Width = 30
         '
-        'cmdupdatetemplate
+        'T
         '
-        Me.cmdupdatetemplate.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdupdatetemplate.Location = New System.Drawing.Point(1076, 34)
-        Me.cmdupdatetemplate.Name = "cmdupdatetemplate"
-        Me.cmdupdatetemplate.Size = New System.Drawing.Size(61, 29)
-        Me.cmdupdatetemplate.TabIndex = 358
-        Me.cmdupdatetemplate.Text = "Update"
-        Me.cmdupdatetemplate.UseVisualStyleBackColor = True
+        Me.T.HeaderText = "T"
+        Me.T.Name = "T"
+        Me.T.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.T.Width = 30
         '
-        'cmdPlayandUpdate
+        'Data
         '
-        Me.cmdPlayandUpdate.BackColor = System.Drawing.Color.Green
-        Me.cmdPlayandUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdPlayandUpdate.ForeColor = System.Drawing.Color.White
-        Me.cmdPlayandUpdate.Location = New System.Drawing.Point(861, 40)
-        Me.cmdPlayandUpdate.Name = "cmdPlayandUpdate"
-        Me.cmdPlayandUpdate.Size = New System.Drawing.Size(124, 25)
-        Me.cmdPlayandUpdate.TabIndex = 1171
-        Me.cmdPlayandUpdate.Text = "Play + Update"
-        Me.cmdPlayandUpdate.UseVisualStyleBackColor = False
+        Me.Data.HeaderText = "Data"
+        Me.Data.Name = "Data"
+        Me.Data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
-        'txtupdatedelay
+        'InstanceName
         '
-        Me.txtupdatedelay.Location = New System.Drawing.Point(816, 41)
-        Me.txtupdatedelay.Name = "txtupdatedelay"
-        Me.txtupdatedelay.Size = New System.Drawing.Size(39, 20)
-        Me.txtupdatedelay.TabIndex = 1173
-        Me.txtupdatedelay.Text = "0"
+        Me.InstanceName.HeaderText = "Instance/Label Name"
+        Me.InstanceName.Name = "InstanceName"
+        Me.InstanceName.Width = 90
         '
-        'Label1
+        'Value
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(720, 44)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 13)
-        Me.Label1.TabIndex = 1174
-        Me.Label1.Text = "Update Delay ms"
-        '
-        'chkanimatetemplate
-        '
-        Me.chkanimatetemplate.AutoSize = True
-        Me.chkanimatetemplate.Checked = True
-        Me.chkanimatetemplate.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkanimatetemplate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkanimatetemplate.Location = New System.Drawing.Point(1010, 40)
-        Me.chkanimatetemplate.Name = "chkanimatetemplate"
-        Me.chkanimatetemplate.Size = New System.Drawing.Size(64, 17)
-        Me.chkanimatetemplate.TabIndex = 1175
-        Me.chkanimatetemplate.Text = "Animate"
-        Me.chkanimatetemplate.UseVisualStyleBackColor = True
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Value.DefaultCellStyle = DataGridViewCellStyle29
+        Me.Value.HeaderText = "Value"
+        Me.Value.Name = "Value"
+        Me.Value.Width = 270
         '
         'ucHtmlTemplate
         '
@@ -877,6 +887,8 @@ Partial Class ucHtmlTemplate
         Me.Text = "HTML Template"
         Me.gbtemplate.ResumeLayout(False)
         Me.gbtemplate.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.gbrundown.ResumeLayout(False)
@@ -885,8 +897,6 @@ Partial Class ucHtmlTemplate
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgvrundown, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvanytemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -963,4 +973,5 @@ Partial Class ucHtmlTemplate
     Friend WithEvents txtupdatedelay As TextBox
     Friend WithEvents cmdPlayandUpdate As Button
     Friend WithEvents cmdupdatetemplate As Button
+    Friend WithEvents ChromiumWebBrowser1 As CefSharp.WinForms.ChromiumWebBrowser
 End Class

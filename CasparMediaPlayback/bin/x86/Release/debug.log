@@ -1,0 +1,179 @@
+[1030/151413.178:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1030/151432.343:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1030/151432.417:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1030/151432.470:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1030/151441.893:INFO:CONSOLE(680)] "initResin", source: file:///C:/casparcg/CMP/cg_template/html/clock/gwd_preview_clock/preview_polymer.js (680)
+[1030/151444.786:INFO:CONSOLE(33)] "Rendering started", source: file:///C:/casparcg/NG_Lowerthird_R2.html (33)
+[1030/151446.751:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/test1.html (28999)
+[1030/151446.812:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/test1.html (62950)
+[1030/151446.849:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/test1.html (54882)
+[1030/151456.190:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/test1.html (28999)
+[1030/151456.220:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/test1.html (62950)
+[1030/151456.244:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/test1.html (54882)
+[1030/151603.655:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1030/151616.761:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1030/151616.827:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1030/151616.880:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1030/151641.804:INFO:CONSOLE(33)] "Rendering started", source: file:///C:/casparcg/NG_Lowerthird_R2.html (33)
+[1030/151644.190:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/test1.html (28999)
+[1030/151644.246:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/test1.html (62950)
+[1030/151644.304:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/test1.html (54882)
+[1030/151645.480:INFO:CONSOLE(33)] "Rendering started", source: file:///C:/casparcg/NG_Lowerthird_R2.html (33)
+[1030/151648.343:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/aa.html (28999)
+[1030/151648.405:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/aa.html (62950)
+[1030/151648.444:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/aa.html (54882)
+[1030/151701.846:WARNING:angle_platform_impl.cc(49)] HLSLCompiler.cpp:244 (compileToBinary): 
+C:\fakepath(157,3-70): warning X3557: loop only executes for 1 iteration(s), forcing loop to unroll
+
+[1030/151757.338:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Boxing/main.js (1)
+[1030/151759.156:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Boxing/main.js (1)
+[1030/151802.247:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Boxing/main.js (1)
+[1030/151803.778:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Boxing/main.js (1)
+[1030/151806.322:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Boxing/main.js (1)
+[1030/151820.112:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Boxing/main.js (1)
+[1030/152128.777:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1030/152214.992:INFO:CONSOLE(21)] "Rendering started", source: file:///C:/casparcg/loopic/Tennis%20Template/NG_Lowerthird_R1/NG_Lowerthird_R1.html (21)
+[1030/152215.017:INFO:CONSOLE(21)] "Rendering duration: 0.02 seconds", source: file:///C:/casparcg/loopic/Tennis%20Template/NG_Lowerthird_R1/NG_Lowerthird_R1.html (21)
+[1030/152216.123:INFO:CONSOLE(21)] "Rendering started", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_ScoreBoardA_S1_P2/Tennis_ScoreBoardA_S1_P2.html (21)
+[1030/152216.151:INFO:CONSOLE(21)] "Rendering duration: 0.02 seconds", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_ScoreBoardA_S1_P2/Tennis_ScoreBoardA_S1_P2.html (21)
+[1030/152216.819:INFO:CONSOLE(21)] "Rendering started", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_ScoreBoardA_S3_P1/Tennis_ScoreBoardA_S3_P1.html (21)
+[1030/152216.846:INFO:CONSOLE(21)] "Rendering duration: 0.02 seconds", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_ScoreBoardA_S3_P1/Tennis_ScoreBoardA_S3_P1.html (21)
+[1030/152217.527:INFO:CONSOLE(21)] "Rendering started", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_ScoreBoardA_S2_P2/Tennis_ScoreBoardA_S2_P2.html (21)
+[1030/152217.556:INFO:CONSOLE(21)] "Rendering duration: 0.02 seconds", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_ScoreBoardA_S2_P2/Tennis_ScoreBoardA_S2_P2.html (21)
+[1030/152219.754:INFO:CONSOLE(21)] "Rendering started", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_ScoreBoard_S4_P1/Tennis_ScoreBoard_S4_P1.html (21)
+[1030/152219.782:INFO:CONSOLE(21)] "Rendering duration: 0.02 seconds", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_ScoreBoard_S4_P1/Tennis_ScoreBoard_S4_P1.html (21)
+[1030/152435.738:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1030/152508.138:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1030/152508.203:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1030/152508.248:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1030/152534.729:WARNING:angle_platform_impl.cc(49)] HLSLCompiler.cpp:244 (compileToBinary): 
+C:\fakepath(143,3-70): warning X3557: loop only executes for 1 iteration(s), forcing loop to unroll
+
+[1030/152534.793:WARNING:angle_platform_impl.cc(49)] HLSLCompiler.cpp:244 (compileToBinary): 
+C:\fakepath(78,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4_int)
+
+[1030/152535.788:WARNING:spdy_session.cc(2984)] Received HEADERS for invalid stream 5
+[1030/152542.131:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Shooting/main.js (1)
+[1030/152548.530:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Shooting/main.js (1)
+[1030/152551.675:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Shooting/main.js (1)
+[1030/153026.551:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1030/153318.366:ERROR:shared_image_manager.cc(220)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[1030/153318.366:ERROR:shared_image_manager.cc(220)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[1030/153515.694:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1030/153555.960:INFO:CONSOLE(20660)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/CMP/OneLiner/RCConeliner.html (20660)
+[1030/153556.075:INFO:CONSOLE(47523)] "Theatre Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/CMP/OneLiner/RCConeliner.html (47523)
+[1030/153556.164:WARNING:angle_platform_impl.cc(49)] HLSLCompiler.cpp:244 (compileToBinary): 
+C:\fakepath(155,3-70): warning X3557: loop only executes for 1 iteration(s), forcing loop to unroll
+
+[1030/153600.366:INFO:CONSOLE(21)] "Rendering started", source: file:///C:/casparcg/loopic/Tennis%20Template/NG_Lowerthird_R1/NG_Lowerthird_R1.html (21)
+[1030/153600.391:INFO:CONSOLE(21)] "Rendering duration: 0.02 seconds", source: file:///C:/casparcg/loopic/Tennis%20Template/NG_Lowerthird_R1/NG_Lowerthird_R1.html (21)
+[1030/153601.729:INFO:CONSOLE(21)] "Rendering started", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_Match_Statistics/Tennis_Match_Statistics.html (21)
+[1030/153601.792:INFO:CONSOLE(21)] "Rendering duration: 0.06 seconds", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_Match_Statistics/Tennis_Match_Statistics.html (21)
+[1030/153603.020:INFO:CONSOLE(21)] "Rendering started", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_ScoreBoardA_S4_P2/Tennis_ScoreBoardA_S4_P2.html (21)
+[1030/153603.057:INFO:CONSOLE(21)] "Rendering duration: 0.03 seconds", source: file:///C:/casparcg/loopic/Tennis%20Template/Tennis_ScoreBoardA_S4_P2/Tennis_ScoreBoardA_S4_P2.html (21)
+[1030/153730.911:INFO:CONSOLE(20660)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/testprojects/WebAnimator/datatest/datatest.html (20660)
+[1030/153731.004:INFO:CONSOLE(47523)] "Theatre Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/testprojects/WebAnimator/datatest/datatest.html (47523)
+[1030/153732.221:INFO:CONSOLE(20660)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/testprojects/WebAnimator/changeprops/changeprops.html (20660)
+[1030/153732.278:INFO:CONSOLE(3)] "f1", source: file:///C:/casparcg/testprojects/WebAnimator/changeprops/main.js (3)
+[1030/153732.278:INFO:CONSOLE(3)] "f0", source: file:///C:/casparcg/testprojects/WebAnimator/changeprops/main.js (3)
+[1030/153732.324:INFO:CONSOLE(47523)] "Theatre Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/testprojects/WebAnimator/changeprops/changeprops.html (47523)
+[1030/153740.045:INFO:CONSOLE(106)] "Nummer of Lines Having Content= 2", source: file:///C:/casparcg/testprojects/RCC/scrollbymanytext/main.js (106)
+[1030/153745.845:INFO:CONSOLE(106)] "Nummer of Lines Having Content= 3", source: file:///C:/casparcg/testprojects/RCC/scrollbymanytext/main.js (106)
+[1030/153751.178:INFO:CONSOLE(106)] "Nummer of Lines Having Content= 4", source: file:///C:/casparcg/testprojects/RCC/scrollbymanytext/main.js (106)
+[1030/153831.610:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1030/153831.674:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1030/153831.734:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1030/153844.903:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1030/153844.937:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1030/153844.969:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1030/153950.555:WARNING:angle_platform_impl.cc(49)] HLSLCompiler.cpp:244 (compileToBinary): 
+C:\fakepath(79,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4_int)
+
+[1030/154009.520:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/test1.html (28999)
+[1030/154009.575:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/test1.html (62950)
+[1030/154009.625:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/test1.html (54882)
+[1030/154010.113:INFO:CONSOLE(33)] "Rendering started", source: file:///C:/casparcg/NG_Lowerthird_R2.html (33)
+[1030/154011.275:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1030/154011.321:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1030/154011.350:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1030/154630.816:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1030/154641.840:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1030/154641.923:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1030/154641.973:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1030/154648.227:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1030/154648.260:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1030/154648.283:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1030/154917.439:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1030/154929.514:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1030/154929.584:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1030/154929.639:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1030/160017.941:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1030/160028.944:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh2.html (28999)
+[1030/160029.060:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh2.html (62950)
+[1030/160029.073:INFO:CONSOLE(8)] "max texture size: 16384", source: file:///C:/casparcg/vimlesh2.html (8)
+[1030/160029.325:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh2.html (54882)
+[1030/160037.691:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1030/160037.749:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1030/160037.792:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1030/160046.346:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh2.html (28999)
+[1030/160046.451:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh2.html (62950)
+[1030/160046.461:INFO:CONSOLE(8)] "max texture size: 16384", source: file:///C:/casparcg/vimlesh2.html (8)
+[1030/160046.721:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh2.html (54882)
+[1030/160305.409:INFO:CONSOLE(680)] "initResin", source: file:///C:/casparcg/CMP/twitter/twitter1/gwd_preview_twitter1/preview_polymer.js (680)
+[1030/160306.041:INFO:CONSOLE(680)] "initResin", source: file:///C:/casparcg/CMP/twitter/twitter1FullPage/gwd_preview_twitter1/preview_polymer.js (680)
+[1030/160328.892:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Boxing/main.js (1)
+[1030/160330.772:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Boxing/main.js (1)
+[1030/160331.916:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Boxing/main.js (1)
+[1030/160333.332:INFO:CONSOLE(1)] "Uncaught SyntaxError: Identifier 'scriptgsap' has already been declared", source: file:///C:/casparcg/NG2022/template/Boxing/main.js (1)
+[1101/172036.089:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1102/132632.421:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[1102/132645.244:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh.html (28999)
+[1102/132645.313:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh.html (62950)
+[1102/132645.389:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh.html (54882)
+[1102/132646.835:INFO:CONSOLE(28999)] "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://reactjs.org/link/react-devtools-faq font-weight:bold", source: file:///C:/casparcg/vimlesh2.html (28999)
+[1102/132646.947:INFO:CONSOLE(62950)] "ReferenceError: process is not defined", source: file:///C:/casparcg/vimlesh2.html (62950)
+[1102/132646.961:INFO:CONSOLE(8)] "max texture size: 16384", source: file:///C:/casparcg/vimlesh2.html (8)
+[1102/132647.203:INFO:CONSOLE(54882)] "Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \' to restore the studio, or call studio.ui.restore().", source: file:///C:/casparcg/vimlesh2.html (54882)
+[1102/165618.465:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/104313.133:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/105822.635:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/111556.668:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/112017.142:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/112837.577:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/114620.984:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/115635.789:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/115635.815:INFO:component_installer.cc(297)] Failed to verify installation for Widevine Content Decryption Module (C:\Users\Administrator\AppData\Local\CEF\User Data\WidevineCdm\4.10.2710.0).: The system cannot find the path specified. (0x3)
+[0111/122925.381:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/122925.412:INFO:component_installer.cc(297)] Failed to verify installation for Widevine Content Decryption Module (C:\Users\Administrator\AppData\Local\CEF\User Data\WidevineCdm\4.10.2710.0).: The system cannot find the path specified. (0x3)
+[0111/123343.253:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/124430.563:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/130213.172:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/130855.682:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/131422.689:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/131519.493:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/131741.016:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/131741.041:INFO:component_installer.cc(297)] Failed to verify installation for Widevine Content Decryption Module (C:\Users\Administrator\AppData\Local\CEF\User Data\WidevineCdm\4.10.2710.0).: The system cannot find the path specified. (0x3)
+[0111/131912.075:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.
+[0111/132221.216:WARNING:policy_logger.cc(148)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(88) Could not create policy manager as CBCM is not enabled.

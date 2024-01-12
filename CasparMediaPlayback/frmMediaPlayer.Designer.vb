@@ -335,6 +335,7 @@ Partial Class frmmediaplayer
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ChannelPlayerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.nfontsizeforall, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbmodules.SuspendLayout()
         Me.mnuCMP.SuspendLayout()
@@ -1387,14 +1388,14 @@ Partial Class frmmediaplayer
         Me.mnuCMP.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCMPPlayList, Me.mnuCMPTemplate, Me.mnuCMP4ChannelRecordingAndTrimming, Me.TrimmerToolStripMenuItem, Me.CGToolStripMenuItem, Me.ScrollersToolStripMenuItem, Me.GamesToolStripMenuItem, Me.ExternalSoftwaresToolStripMenuItem, Me.mnuCMPModules, Me.mnuCMPTools, Me.mnuCMPHelp})
         Me.mnuCMP.Location = New System.Drawing.Point(0, 0)
         Me.mnuCMP.Name = "mnuCMP"
-        Me.mnuCMP.Size = New System.Drawing.Size(909, 24)
+        Me.mnuCMP.Size = New System.Drawing.Size(1029, 24)
         Me.mnuCMP.TabIndex = 0
         Me.mnuCMP.TabStop = True
         Me.mnuCMP.Text = "mnuCMP"
         '
         'mnuCMPPlayList
         '
-        Me.mnuCMPPlayList.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VideoServerToolStripMenuItem, Me.PlayFromAnywhreToolStripMenuItem})
+        Me.mnuCMPPlayList.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VideoServerToolStripMenuItem, Me.PlayFromAnywhreToolStripMenuItem, Me.ChannelPlayerToolStripMenuItem})
         Me.mnuCMPPlayList.Name = "mnuCMPPlayList"
         Me.mnuCMPPlayList.Size = New System.Drawing.Size(84, 20)
         Me.mnuCMPPlayList.Text = "Video Player"
@@ -1402,13 +1403,13 @@ Partial Class frmmediaplayer
         'VideoServerToolStripMenuItem
         '
         Me.VideoServerToolStripMenuItem.Name = "VideoServerToolStripMenuItem"
-        Me.VideoServerToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.VideoServerToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.VideoServerToolStripMenuItem.Text = "Video Server"
         '
         'PlayFromAnywhreToolStripMenuItem
         '
         Me.PlayFromAnywhreToolStripMenuItem.Name = "PlayFromAnywhreToolStripMenuItem"
-        Me.PlayFromAnywhreToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.PlayFromAnywhreToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PlayFromAnywhreToolStripMenuItem.Text = "Play From Anywhre"
         '
         'mnuCMPTemplate
@@ -2705,7 +2706,7 @@ Partial Class frmmediaplayer
         Me.CpBarCPU.CPB_Text_3 = "%"
         Me.CpBarCPU.Location = New System.Drawing.Point(38, -1)
         Me.CpBarCPU.Name = "CpBarCPU"
-        Me.CpBarCPU.Size = New System.Drawing.Size(82, 82)
+        Me.CpBarCPU.Size = New System.Drawing.Size(85, 85)
         Me.CpBarCPU.TabIndex = 1176
         '
         'DockPanel1
@@ -2788,6 +2789,12 @@ Partial Class frmmediaplayer
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         Me.DataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
+        'ChannelPlayerToolStripMenuItem
+        '
+        Me.ChannelPlayerToolStripMenuItem.Name = "ChannelPlayerToolStripMenuItem"
+        Me.ChannelPlayerToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ChannelPlayerToolStripMenuItem.Text = "4 Channel Player"
+        '
         'frmmediaplayer
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -2804,7 +2811,7 @@ Partial Class frmmediaplayer
         Me.IsMdiContainer = True
         Me.MaximumSize = New System.Drawing.Size(1920, 1080)
         Me.Name = "frmmediaplayer"
-        Me.Text = "CasparMediaPlayback290923_1"
+        Me.Text = "CasparMediaPlayback110124_1"
         CType(Me.nfontsizeforall, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbmodules.ResumeLayout(False)
         Me.gbmodules.PerformLayout()
@@ -3134,4 +3141,5 @@ Partial Class frmmediaplayer
     Friend WithEvents NewGameClientDownloadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewCgSoftwareDownloadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OnlineCGToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ChannelPlayerToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -3,6 +3,7 @@ Imports System.Net
 'Imports System.Security.Cryptography
 Imports System.Windows
 Imports System.Windows.Controls
+Imports CefSharp
 'Imports Newtonsoft.Json.Linq
 'Imports System.Drawing
 Public Class ucHtmlTemplate
@@ -517,6 +518,10 @@ Public Class ucHtmlTemplate
     End Sub
 
     Private Sub cmdanytemplatestop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdanytemplatestop.Click
+        If chkRCWebAnimatorTemplate.Checked Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " " + """" & "sheet.sequence.play({direction:'reverse'})" & """")
+            Exit Sub
+        End If
         anytemplatestop()
     End Sub
     Sub anytemplatestop()
@@ -538,6 +543,10 @@ Public Class ucHtmlTemplate
         End If
     End Sub
     Private Sub cmdnextframe_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdnextframe.Click
+        If chkRCWebAnimatorTemplate.Checked Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " " + """" & "sheet.sequence.play()" & """")
+            Exit Sub
+        End If
         anytemplatenextframe()
     End Sub
     Sub anytemplatenextframe()
@@ -599,11 +608,22 @@ Public Class ucHtmlTemplate
     End Sub
     Private Sub cmdanytemplatePause_Click(sender As Object, e As EventArgs) Handles cmdanytemplatePause.Click
         On Error Resume Next
+        If chkRCWebAnimatorTemplate.Checked Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " " & """" & "sheet.sequence.pause()" & """")
+            Exit Sub
+        End If
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " pause()")
+
     End Sub
     Private Sub lsttemplate_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lsttemplate.SelectedIndexChanged
 
         On Error Resume Next
+        ' If chkRCWebAnimatorTemplate.Checked Then
+        Dim filePath As String = templatefullpath & lsttemplate.SelectedItem.ToString
+            Dim fileUrl As String = "file:///" & filePath.Replace("\", "/")
+            ChromiumWebBrowser1.LoadUrl(fileUrl)
+        'Exit Sub
+        'End If
 
         WB1.Navigate(templatefullpath & lsttemplate.SelectedItem.ToString)
     End Sub
@@ -668,9 +688,9 @@ Public Class ucHtmlTemplate
                             Dim text As String = obj("text").ToString()
                             dgvanytemplate.Rows(ianytemplate).Cells(1).Value = text
                         End If
-                            'dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.InnerHtml
-                            'dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 0 'CheckState.Unchecked
-                            ianytemplate = ianytemplate + 1
+                        'dgvanytemplate.Rows(ianytemplate).Cells(1).Value = element.InnerHtml
+                        'dgvanytemplate.Rows(ianytemplate).Cells(3).Value = 0 'CheckState.Unchecked
+                        ianytemplate = ianytemplate + 1
                     End If
 
 
@@ -793,6 +813,7 @@ Public Class ucHtmlTemplate
         aa1.HeaderText = "Image?"
         aa1.Width = 50
         dgvanytemplate.Columns.Add(aa1)
+
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
@@ -842,5 +863,21 @@ Public Class ucHtmlTemplate
 
     Private Sub cmdStopAnimation_Click(sender As Object, e As EventArgs) Handles cmdStopAnimation.Click
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & cmblayertemplate.Text & " outAnimation()")
+    End Sub
+
+    Private Sub chkRCWebAnimatorTemplate_CheckedChanged(sender As Object, e As EventArgs) Handles chkRCWebAnimatorTemplate.CheckedChanged
+        'If chkRCWebAnimatorTemplate.Checked Or chkRCCTemplate.Checked Then
+        '    ChromiumWebBrowser1.Visible = True
+        'Else
+        '    ChromiumWebBrowser1.Visible = False
+        'End If
+    End Sub
+
+    Private Sub ChromiumWebBrowser1_LoadingStateChanged(sender As Object, e As CefSharp.LoadingStateChangedEventArgs) Handles ChromiumWebBrowser1.LoadingStateChanged
+
+    End Sub
+
+    Private Sub ChromiumWebBrowser1_FrameLoadEnd(sender As Object, e As FrameLoadEndEventArgs) Handles ChromiumWebBrowser1.FrameLoadEnd
+        ChromiumWebBrowser1.SetZoomLevel(-8)
     End Sub
 End Class

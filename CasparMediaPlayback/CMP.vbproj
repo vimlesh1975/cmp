@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Common.118.6.80\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.118.6.80\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.118.6.8\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.118.6.8\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.118.6.8\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.118.6.8\build\cef.redist.x64.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -121,6 +124,15 @@
     <Reference Include="Bespoke.Common.Osc, Version=0.0.0.0, Culture=neutral, PublicKeyToken=843a094264521388, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\HP\Downloads\Tools-master\Tools-master\csharp\OSC\trunk\Source Code\Framework\Bespoke.Common.Osc\src\bin\x86\Debug\Bespoke.Common.Osc.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp, Version=118.6.80.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.118.6.80\lib\net462\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core, Version=118.6.80.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.118.6.80\lib\net462\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=118.6.80.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.WinForms.118.6.80\lib\net462\CefSharp.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="CircularProgressBar">
       <HintPath>C:\casparcg\_media\NDMS_Share_1\CircularProgressBar.dll</HintPath>
@@ -313,10 +325,22 @@
     <Compile Include="frmROI.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="uc4ChannelPlayer.Designer.vb">
+      <DependentUpon>uc4ChannelPlayer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uc4ChannelPlayer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UcCaption.Designer.vb">
       <DependentUpon>UcCaption.vb</DependentUpon>
     </Compile>
     <Compile Include="UcCaption.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucVideoPlayer.Designer.vb">
+      <DependentUpon>ucVideoPlayer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucVideoPlayer.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UcCommandSchedulerDateWise.designer.vb">
@@ -950,8 +974,14 @@
     <EmbeddedResource Include="frmROI.resx">
       <DependentUpon>frmROI.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uc4ChannelPlayer.resx">
+      <DependentUpon>uc4ChannelPlayer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcCaption.resx">
       <DependentUpon>UcCaption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucVideoPlayer.resx">
+      <DependentUpon>ucVideoPlayer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcCommandSchedulerDateWise.resx">
       <DependentUpon>UcCommandSchedulerDateWise.vb</DependentUpon>
@@ -1598,7 +1628,12 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\LargeAddressAware.1.0.5\build\LargeAddressAware.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LargeAddressAware.1.0.5\build\LargeAddressAware.targets'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x64.118.6.8\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.118.6.8\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.118.6.8\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.118.6.8\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.118.6.80\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.118.6.80\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.118.6.80\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.118.6.80\build\CefSharp.Common.targets'))" />
   </Target>
+  <Import Project="..\packages\CefSharp.Common.118.6.80\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.118.6.80\build\CefSharp.Common.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

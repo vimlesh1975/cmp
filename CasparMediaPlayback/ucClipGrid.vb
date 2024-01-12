@@ -77,7 +77,7 @@ Public Class ucClipGrid
             Next
 
 
-        ElseIf frmmediaplayer.uctab1.UcPlaylistSetting1.rdoclipfromserver.Checked = True Then
+        ElseIf frmmediaplayer.ucTab1.UcPlaylistSetting1.rdoclipfromserver.Checked = True Then
             If ServerVersion > 2.1 Then
                 'MsgBox("from 2.2 or 2.3")
                 Dim webClient As New System.Net.WebClient
@@ -169,7 +169,7 @@ Public Class ucClipGrid
         If frmmediaplayer.ucTab1.UcPlaylistSetting1.rdoclipfromfilesystem.Checked Then
             tvclips.Nodes.Add(mediafullpath)
             PopulateTreeView(mediafullpath, tvclips.Nodes(0))
-        ElseIf frmmediaplayer.uctab1.UcPlaylistSetting1.rdoclipfromserver.Checked Then
+        ElseIf frmmediaplayer.ucTab1.UcPlaylistSetting1.rdoclipfromserver.Checked Then
             Dim aa() As String
             If Mid(frmmediaplayer.lblserverversion.Text, 1, 3) = "2.1" Then 'added because server 2.1 sends each files as indivisual , no folder name. 150119
                 'MsgBox("from 2.1")
@@ -254,7 +254,7 @@ Public Class ucClipGrid
         On Error Resume Next
         If frmmediaplayer.ucTab1.UcPlaylistSetting1.rdoclipfromfilesystem.Checked Then
             lblsearch.Text = Replace(Mid(tvclips.SelectedNode.FullPath, Len(mediafullpath) + 2), "\", "/") & "/"
-        ElseIf frmmediaplayer.uctab1.UcPlaylistSetting1.rdoclipfromserver.Checked Then
+        ElseIf frmmediaplayer.ucTab1.UcPlaylistSetting1.rdoclipfromserver.Checked Then
             lblsearch.Text = Replace(Mid(tvclips.SelectedNode.FullPath, 5 + 2), "\", "/") & "/"
         End If
         If lblsearch.Text = "/" Then lblsearch.Text = ""
@@ -327,13 +327,13 @@ Public Class ucClipGrid
 
                 Dim cellX, cellY As Integer
 
-                    Dim grvScreenLocation As Point = dgvclips.PointToScreen(dgvclips.Location)
-                    Dim tempX As Integer = DataGridView.MousePosition.X - grvScreenLocation.X + dgvclips.Left
-                    Dim tempY As Integer = DataGridView.MousePosition.Y - grvScreenLocation.Y + dgvclips.Top
-                    Dim hit As DataGridView.HitTestInfo = dgvclips.HitTest(tempX, tempY)
-                    cellX = hit.RowIndex
-                    cellY = hit.ColumnIndex
-                    dgvclips.CurrentCell = dgvclips.Rows(cellX).Cells(0)
+                Dim grvScreenLocation As Point = dgvclips.PointToScreen(dgvclips.Location)
+                Dim tempX As Integer = DataGridView.MousePosition.X - grvScreenLocation.X + dgvclips.Left
+                Dim tempY As Integer = DataGridView.MousePosition.Y - grvScreenLocation.Y + dgvclips.Top
+                Dim hit As DataGridView.HitTestInfo = dgvclips.HitTest(tempX, tempY)
+                cellX = hit.RowIndex
+                cellY = hit.ColumnIndex
+                dgvclips.CurrentCell = dgvclips.Rows(cellX).Cells(0)
 
 
                 If MouseIsDown = True Then 'And dgv1.Cursor <> System.Windows.Forms.Cursors.SizeWE Then
