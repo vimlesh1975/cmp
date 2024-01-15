@@ -6,16 +6,31 @@ Public Class UcPlaylistScheduler
     Dim ofd2 As New OpenFileDialog
     Dim osd2 As New SaveFileDialog
     Public Function IntervalTill(ByVal d As DateTime) As Integer
+        'On Error Resume Next
+        'Dim TodayTickTime As DateTime = Today.Add(d.Subtract(#12:00:00 AM#))
+        'Dim TomorrowTickTime As DateTime = TodayTickTime.AddHours(24)
+        'Dim Difference As TimeSpan
+        'If DateTime.op_LessThan(Now, TodayTickTime) Then
+        '    Difference = TodayTickTime.Subtract(Now)
+        'Else
+        '    Difference = TomorrowTickTime.Subtract(Now)
+        'End If
+        'Return Difference.TotalMilliseconds
+
         On Error Resume Next
-        Dim TodayTickTime As DateTime = Today.Add(d.Subtract(#12:00:00 AM#))
-        Dim TomorrowTickTime As DateTime = TodayTickTime.AddHours(24)
+        'Dim TodayTickTime As DateTime = Today.Add(d.Subtract(#12:00:00 AM#))
+        'Dim TomorrowTickTime As DateTime = TodayTickTime.AddHours(24)
         Dim Difference As TimeSpan
-        If DateTime.op_LessThan(Now, TodayTickTime) Then
-            Difference = TodayTickTime.Subtract(Now)
-        Else
-            Difference = TomorrowTickTime.Subtract(Now)
-        End If
+        'If DateTime.op_LessThan(Now, TodayTickTime) Then
+        '    Difference = TodayTickTime.Subtract(Now)
+        'Else
+        '    Difference = TomorrowTickTime.Subtract(Now)
+        'End If
+
+        Difference = d.Subtract(Now)
+
         Return Difference.TotalMilliseconds
+
     End Function
     Dim startingtimeofrecordingoal As DateTime
 
@@ -23,8 +38,16 @@ Public Class UcPlaylistScheduler
         On Error Resume Next
         With dgvscheduler
             For iticktime = 0 To .Rows.Count - 1
-                .Rows(iticktime).Cells(1).Value = IntervalTill(CType(.Rows(iticktime).Cells(0).Value, Date).TimeOfDay.ToString)
+                '.Rows(iticktime).Cells(1).Value = IntervalTill(CType(.Rows(iticktime).Cells(0).Value, Date).TimeOfDay.ToString)
+                .Rows(iticktime).Cells(1).Value = IntervalTill(CType(.Rows(iticktime).Cells(0).Value, DateTime))
             Next
+
+            For iticktime = .Rows.Count - 1 To 0 Step -1
+                If .Rows(iticktime).Cells(1).Value < 0 Then
+                    .Rows.RemoveAt(iticktime)
+                End If
+            Next
+
             .Sort(.Columns(1), System.ComponentModel.ListSortDirection.Ascending)
             .CurrentCell = .Rows(0).Cells(0)
         End With
@@ -35,7 +58,7 @@ Public Class UcPlaylistScheduler
     End Sub
     Sub initialisedataforscheduler()
         On Error Resume Next
-        Dim col1 As New CalendarColumn()
+        Dim col1 As New CalendarColumnDateWise()
 
         Dim col3 As New DataGridViewTextBoxColumn
         Dim col4 As New DataGridViewTextBoxColumn
@@ -46,7 +69,7 @@ Public Class UcPlaylistScheduler
 
         col4.HeaderText = "Playlist_Location"
 
-        col1.Width = 75
+        col1.Width = 150
         col4.Width = 500
 
         With dgvscheduler
@@ -59,12 +82,13 @@ Public Class UcPlaylistScheduler
             col3.Width = 0
             .Rows.Add(2)
             .Rows(0).Cells(0).Value = Now.AddSeconds(10)
-            '.Rows(0).Cells(2).Value = "play 1-1 amb loop,,mixer 1-2 fill .5 .2 .3 .6,, play 1-2 red,, mixer 1-2 opacity 0.5"
-            .Rows(0).Cells(2).Value = "C:\casparcg\mydata\playlist\Playlist_with_sample_files.txt"
+            .Rows(0).Cells(2).Value = "C:\casparcg\mydata\playlist\aa.txt"
 
             .Rows(1).Cells(0).Value = Now.AddSeconds(30)
-            .Rows(1).Cells(2).Value = "C:\casparcg\mydata\playlist\Playlist_with_different_logo_with_every_file.txt"
+            .Rows(1).Cells(2).Value = "C:\casparcg\mydata\playlist\bb.txt"
 
+            .Rows(2).Cells(0).Value = Now.AddSeconds(50)
+            .Rows(2).Cells(2).Value = "C:\casparcg\mydata\playlist\cc.txt"
 
         End With
 
@@ -73,7 +97,8 @@ Public Class UcPlaylistScheduler
     Private Sub cmdStartSchedule_Click(sender As Object, e As EventArgs) Handles cmdStartSchedule.Click
         On Error Resume Next
         sortschedule()
-        tmrcommandschedulestart.Interval = IntervalTill(CType(dgvscheduler.Rows(0).Cells(0).Value, Date).TimeOfDay.ToString)
+        'tmrcommandschedulestart.Interval = IntervalTill(CType(dgvscheduler.Rows(0).Cells(0).Value, Date).TimeOfDay.ToString)
+        tmrcommandschedulestart.Interval = IntervalTill(CType(dgvscheduler.Rows(0).Cells(0).Value, DateTime))
         tmrcommandschedulestart.Enabled = True
         lbltestshedulerecording.Text = "Sheduled Started"
         lbltestshedulerecording.BackColor = Color.Green
@@ -84,12 +109,14 @@ Public Class UcPlaylistScheduler
 
         If dgvscheduler.CurrentRow.Cells(2).Value <> "" Then
             ucPlaylist.openfile(dgvscheduler.Rows(0).Cells(2).Value)
-            ucPlaylist.cmdstartplaylist.PerformClick()
+            Threading.Thread.Sleep(1000)
+            'ucPlaylist.cmdstartplaylist.PerformClick()
+            ucPlaylist.startPlaylist()
         End If
         startingtimeofrecordingoal = Now
         sortschedule()
-        tmrcommandschedulestart.Interval = IntervalTill(CType(dgvscheduler.Rows(0).Cells(0).Value, Date).TimeOfDay.ToString)
-
+        'tmrcommandschedulestart.Interval = IntervalTill(CType(dgvscheduler.Rows(0).Cells(0).Value, Date).TimeOfDay.ToString)
+        tmrcommandschedulestart.Interval = IntervalTill(CType(dgvscheduler.Rows(0).Cells(0).Value, DateTime))
     End Sub
 
     Private Sub cmdStopSchedule_Click(sender As Object, e As EventArgs) Handles cmdStopSchedule.Click
@@ -172,7 +199,7 @@ Public Class UcPlaylistScheduler
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
         On Error Resume Next
         ofd2.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
-        ofd2.InitialDirectory = "c:\casparcg\mydata\scheduler\"
+        ofd2.InitialDirectory = "c:\casparcg\mydata\Playlist_Scheduler\"
         If (ofd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
             Using sr As StreamReader = New StreamReader(ofd2.FileName)
                 'clear list
@@ -200,7 +227,7 @@ Public Class UcPlaylistScheduler
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
         On Error Resume Next
         osd2.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
-        osd2.InitialDirectory = "c:\casparcg\mydata\scheduler\"
+        osd2.InitialDirectory = "c:\casparcg\mydata\Playlist_Scheduler\"
         osd2.FileName = ""
         If (osd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
             Using sw As StreamWriter = New StreamWriter(osd2.FileName)
@@ -210,7 +237,7 @@ Public Class UcPlaylistScheduler
                     'Loop through and add list to the file.
                     Dim f As Integer = 0
                     Do Until f = dgvscheduler.Rows.Count
-                        sw.WriteLine(Format(CType(dgvscheduler.Rows(f).Cells(0).Value, DateTime), "H:mm:ss") & Chr(2) & dgvscheduler.Rows(f).Cells(2).Value)
+                        sw.WriteLine(Format(CType(dgvscheduler.Rows(f).Cells(0).Value, DateTime), "dd-MM-yyyy HH:mm:ss") & Chr(2) & dgvscheduler.Rows(f).Cells(2).Value)
                         f = f + 1
                     Loop
                 End If

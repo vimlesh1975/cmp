@@ -170,7 +170,12 @@ Public Class ucPlaylist
         chkplaylistlock.Checked = True
     End Sub
 
-    Private Sub cmdstartplaylist_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstartplaylist.Click
+    Public Sub cmdstartplaylist_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstartplaylist.Click
+        On Error Resume Next
+        startPlaylist()
+    End Sub
+
+    Public Sub startPlaylist()
         On Error Resume Next
         'if nothing is selected
         Dim bbb As Integer = 0

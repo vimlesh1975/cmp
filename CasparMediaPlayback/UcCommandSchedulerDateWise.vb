@@ -183,7 +183,7 @@ Public Class UcCommandSchedulerDateWise
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
         On Error Resume Next
         ofd2.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
-        ofd2.InitialDirectory = "c:\casparcg\mydata\scheduler\"
+        ofd2.InitialDirectory = "c:\casparcg\mydata\scheduler_datewise\"
         If (ofd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
             Using sr As StreamReader = New StreamReader(ofd2.FileName)
                 'clear list
@@ -211,7 +211,7 @@ Public Class UcCommandSchedulerDateWise
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
         On Error Resume Next
         osd2.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
-        osd2.InitialDirectory = "c:\casparcg\mydata\scheduler\"
+        osd2.InitialDirectory = "c:\casparcg\mydata\scheduler_datewise\"
         osd2.FileName = ""
         If (osd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
             Using sw As StreamWriter = New StreamWriter(osd2.FileName)
@@ -221,7 +221,7 @@ Public Class UcCommandSchedulerDateWise
                     'Loop through and add list to the file.
                     Dim f As Integer = 0
                     Do Until f = dgvscheduler.Rows.Count
-                        sw.WriteLine(Format(CType(dgvscheduler.Rows(f).Cells(0).Value, DateTime), "H:mm:ss") & Chr(2) & dgvscheduler.Rows(f).Cells(2).Value)
+                        sw.WriteLine(Format(CType(dgvscheduler.Rows(f).Cells(0).Value, DateTime), "dd-MM-yyyy HH:mm:ss") & Chr(2) & dgvscheduler.Rows(f).Cells(2).Value)
                         f = f + 1
                     Loop
                 End If

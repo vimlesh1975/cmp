@@ -2712,7 +2712,7 @@ Partial Class frmmediaplayer
         Me.CpBarCPU.CPB_Text_3 = "%"
         Me.CpBarCPU.Location = New System.Drawing.Point(38, -1)
         Me.CpBarCPU.Name = "CpBarCPU"
-        Me.CpBarCPU.Size = New System.Drawing.Size(86, 86)
+        Me.CpBarCPU.Size = New System.Drawing.Size(87, 87)
         Me.CpBarCPU.TabIndex = 1176
         '
         'DockPanel1
@@ -2811,7 +2811,7 @@ Partial Class frmmediaplayer
         Me.IsMdiContainer = True
         Me.MaximumSize = New System.Drawing.Size(1920, 1080)
         Me.Name = "frmmediaplayer"
-        Me.Text = "CasparMediaPlayback120124_1"
+        Me.Text = "CasparMediaPlayback150124_1"
         CType(Me.nfontsizeforall, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbmodules.ResumeLayout(False)
         Me.gbmodules.PerformLayout()
