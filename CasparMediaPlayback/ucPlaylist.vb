@@ -425,7 +425,7 @@ Public Class ucPlaylist
             Loop
             sr.Close()
         End Using
-        Me.lblplalistname.Text = "playlist=  " & ofd2.FileName
+        Me.lblplalistname.Text = "playlist=  " & filename
 
     End Sub
 
